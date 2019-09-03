@@ -1,0 +1,38 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "func-names": ["error", "never"],
+    "import/no-unresolved": 0, // because the project uses aliases
+    "indent": ["error", "tab"],
+    "max-len": ["warn", {"code": 150}],
+    "no-console": 0,
+    "no-irregular-whitespace": 0,
+    "no-tabs": 0,
+    "no-unused-vars": 1,
+    "react/destructuring-assignment": [1, "always", {
+      "ignoreClassFields": true
+    }],
+    "react/button-has-type": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-indent": [1, "tab"],
+    "react/jsx-indent-props": [1, "tab"],
+    "react/jsx-one-expression-per-line": 0,
+    "react/require-default-props": 0,
+    "react/sort-comp": [1, {
+      "order": [
+        "static-methods",
+        "lifecycle",
+        "render",
+        "everything-else"
+      ]}
+    ],
+
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0
+  },
+  "globals": {
+    "document": false,
+    "fetch": false
+  }
+}

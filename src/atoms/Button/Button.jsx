@@ -1,0 +1,40 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Button = ({
+	danger, disabled, icon, negative, onClick, primary, text, type,
+}) => (
+	<button
+		type={type}
+		className={
+			`container ${negative ? 'negative' : 'regular'} ${primary ? 'primary' : 'secondary'} ${danger && 'danger'}`
+		}
+		onClick={onClick}
+		disabled={disabled}
+	>
+		{icon && <i />}
+		<span className="button-text">{text}</span>
+	</button>
+);
+
+Button.defaultProps = {
+	danger: false,
+	disabled: false,
+	icon: false,
+	negative: false,
+	primary: false,
+	type: 'button',
+};
+
+Button.propTypes = {
+	danger: PropTypes.bool,
+	disabled: PropTypes.bool,
+	icon: PropTypes.bool,
+	negative: PropTypes.bool,
+	onClick: PropTypes.func,
+	primary: PropTypes.bool,
+	text: PropTypes.string.isRequired,
+	type: PropTypes.string,
+};
+
+export default Button;

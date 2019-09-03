@@ -1,0 +1,23 @@
+{
+  "rules": {
+    "block-no-empty": null,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "color-named": "never",
+    "color-no-invalid-hex": true,
+
+    "comment-empty-line-before": [ "always", {
+      "ignore": ["stylelint-commands", "after-comment"]
+    } ],
+    "declaration-colon-space-after": "always",
+    "length-zero-no-unit": true,
+    "max-empty-lines": 2,
+    "number-leading-zero": "never",
+    "number-no-trailing-zeros": true,
+    "rule-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    } ],
+    "unit-whitelist": ["em", "rem", "%", "s", "px", "deg", "vh", "vw"]
+  }
+}

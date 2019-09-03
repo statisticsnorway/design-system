@@ -3,6 +3,7 @@ $negative-disable-color: #4b7272;
 
 .container {
   border-radius: 2px;
+  margin-right: 20px;
   padding: 8px 13px;
 
   &:hover, &:active {
@@ -14,104 +15,51 @@ $negative-disable-color: #4b7272;
   }
 }
 
-.regular {
-  &.secondary {
-    background: $ssb-white;
-    border: 1px solid $ssb-green-4;
-    color: $ssb-green-4;
+.secondary {
+  background: $ssb-white;
+  border: 1px solid $ssb-green-4;
+  color: $ssb-green-4;
 
-    &:hover, &:active {
-      color: $ssb-white;
+  &:hover, &:active {
+    color: $ssb-white;
 
-      span {
-        border-bottom: 1px solid $ssb-white;
-      }
-    }
-
-    &:hover {background: $ssb-green-4;}
-    &:active {background: $ssb-green-5;}
-
-    &:disabled {
-      background: $ssb-white;
-      color: $regular-disable-color;
-      border: 1px solid $regular-disable-color;
+    span {
+      border-bottom: 1px solid $ssb-white;
     }
   }
 
-  &.primary {
-    background: $ssb-green-4;
-    color: $ssb-white;
+  &:hover {background: $ssb-green-4;}
+  &:active {background: $ssb-green-5;}
 
-    &:hover {
-      background: $ssb-green-5;
-
-      span {
-        border-bottom: 1px solid $ssb-white;
-      }
-    }
-
-    &:disabled {
-      background: $regular-disable-color;
-      border: none;
-
-      span {
-        border-bottom: none;
-      }
-    }
-
-    &.danger {
-      background: $ssb-red-4;
-    }
+  &:disabled {
+    background: $ssb-white;
+    color: $regular-disable-color;
+    border: 1px solid $regular-disable-color;
   }
 }
 
-.negative {
-  &.secondary {
-    background: $ssb-dark-5;
-    border: 1px solid $ssb-white;
-    color: $ssb-white;
+.primary {
+  background: $ssb-green-4;
+  color: $ssb-white;
 
-    &:hover, &:active {
-      color: $ssb-dark-5;
+  &:hover {
+    background: $ssb-green-5;
 
-      span {
-        border-bottom: 1px solid $ssb-dark-5;
-      }
-    }
-
-    &:hover {background: $ssb-white;}
-    &:active {background: $ssb-green-2;}
-
-    &:disabled {
-      background: $ssb-dark-5;
-      color: $negative-disable-color;
-      border: 1px solid $negative-disable-color;
+    span {
+      border-bottom: 1px solid $ssb-white;
     }
   }
 
-  &.primary {
-    background: $ssb-white;
-    color: $ssb-dark-5;
+  &:disabled {
+    background: $regular-disable-color;
+    border: none;
 
-    &:hover {
-      background: $ssb-green-2;
-
-      span {
-        border-bottom: 1px solid $ssb-dark-5;
-      }
+    span {
+      border-bottom: none;
     }
+  }
 
-    &:disabled {
-      background: $negative-disable-color;
-      border: none;
-
-      span {
-        border-bottom: none;
-      }
-    }
-
-    &.danger {
-      background: $ssb-red-4;
-    }
+  &.danger {
+    background: $ssb-red-4;
   }
 }

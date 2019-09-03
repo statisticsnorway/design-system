@@ -84,7 +84,7 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new HtmlWebpackPlugin({template: './src/index.html'}),
+		new HtmlWebpackPlugin({ template: './src/index.html' }),
 		// new StyleLintPlugin(stylelint),
 	],
 	devtool: 'cheap-module-eval-source-map',

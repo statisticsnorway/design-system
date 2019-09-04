@@ -10,6 +10,7 @@
     "no-irregular-whitespace": 0,
     "no-tabs": 0,
     "no-unused-vars": 1,
+    "object-curly-newline": "off",
     "react/destructuring-assignment": [1, "always", {
       "ignoreClassFields": true
     }],

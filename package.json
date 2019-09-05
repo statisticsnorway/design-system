@@ -18,6 +18,7 @@
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "core-js": "^3.2.1",
+    "feather-icons": "^4.24.1",
     "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
@@ -59,7 +60,7 @@
     "style-loader": "^1.0.0",
     "stylelint": "^10.1.0",
     "stylelint-webpack-plugin": "^0.10.5",
-    "svg-url-loader": "^3.0.1",
+    "svg-url-loader": "^3.0.2",
     "terser-webpack-plugin": "^1.4.1",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",

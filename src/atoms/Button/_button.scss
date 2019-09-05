@@ -1,7 +1,7 @@
 $regular-disable-color: #a2baba;
 $negative-disable-color: #4b7272;
 
-.container {
+.button-container {
   border-radius: 2px;
   margin-right: 20px;
   padding: 8px 13px;
@@ -23,7 +23,7 @@ $negative-disable-color: #4b7272;
   &:hover, &:active {
     color: $ssb-white;
 
-    span {
+    .button-text {
       border-bottom: 1px solid $ssb-white;
     }
   }
@@ -45,7 +45,7 @@ $negative-disable-color: #4b7272;
   &:hover {
     background: $ssb-green-5;
 
-    span {
+    .button-text {
       border-bottom: 1px solid $ssb-white;
     }
   }
@@ -54,7 +54,7 @@ $negative-disable-color: #4b7272;
     background: $regular-disable-color;
     border: none;
 
-    span {
+    .button-text {
       border-bottom: none;
     }
   }

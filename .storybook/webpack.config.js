@@ -16,6 +16,15 @@ module.exports = async ({ config, mode }) => {
 			},
 		],
 		include: path.resolve(__dirname, '../'),
+		resolve: {
+			alias: {
+				'@atoms': path.resolve(__dirname, '../../src/atoms/'),
+				'@organisms': path.resolve(__dirname, '../src/organisms/'),
+				'@pages': path.resolve(__dirname, '../src/pages/'),
+				'@templates': path.resolve(__dirname, '../src/templates/'),
+			},
+			extensions: ['.jsx', '.js'],
+		},
 	});
 
 	return config;

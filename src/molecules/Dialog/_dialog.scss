@@ -1,0 +1,37 @@
+$content-padding: 20px;
+$icon-bar-width: 78px;
+
+.dialog-container {
+  display: flex;
+  margin: 20px;
+  min-height: 95px;
+
+  .icon-bar {
+    flex-shrink: 0;
+    width: $icon-bar-width;
+  }
+
+  &.info {
+    border: 2px solid $ssb-blue-3;
+
+    .icon-bar {
+      background: $ssb-blue-3;
+    }
+  }
+
+  &.warning {
+    border: 2px solid $ssb-red-4;
+
+    .icon-bar {
+      background: $ssb-red-4;
+    }
+  }
+
+  .info-content {
+    padding: 0 $content-padding $content-padding $content-padding;
+
+    .dialog-text {
+      font-size: 14px;
+    }
+  }
+}

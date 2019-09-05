@@ -7,7 +7,7 @@ const Button = ({
 	<button
 		type={type}
 		className={
-			`container ${primary ? 'primary' : 'secondary'} ${danger && 'danger'}`
+			`button-container ${primary ? 'primary' : 'secondary'} ${danger && 'danger'}`
 		}
 		onClick={onClick}
 		disabled={disabled}

@@ -11,8 +11,7 @@ const Button = ({
 		}
 		onClick={onClick}
 		disabled={disabled}
-	>
-		{icon && <i />}
+	>	{icon}
 		<span className="button-text">{text}</span>
 	</button>
 );
@@ -20,7 +19,6 @@ const Button = ({
 Button.defaultProps = {
 	danger: false,
 	disabled: false,
-	icon: false,
 	primary: false,
 	type: 'button',
 };
@@ -28,7 +26,7 @@ Button.defaultProps = {
 Button.propTypes = {
 	danger: PropTypes.bool,
 	disabled: PropTypes.bool,
-	icon: PropTypes.bool,
+	icon: PropTypes.element,
 	onClick: PropTypes.func,
 	primary: PropTypes.bool,
 	text: PropTypes.string.isRequired,

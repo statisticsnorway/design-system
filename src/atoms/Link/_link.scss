@@ -1,0 +1,53 @@
+$profiled-font-size: 18px;
+$header-font-size: 18px;
+
+.link {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+
+  .link-text {
+    transition-delay: .1s;
+
+    &.with-icon {
+      color: $ssb-dark-6;
+      text-decoration: none;
+    }
+  }
+
+  .regular {
+    color: $ssb-green-4;
+
+  }
+  .profiled {
+    color: $ssb-green-4;
+    font-size: $profiled-font-size;
+    font-weight: bold;
+    transition-delay: .1s;
+  }
+  .header {
+    color: $ssb-dark-6;
+    font-size: $header-font-size;
+    text-decoration-color: $ssb-green-4;
+  }
+
+  .animate-background {
+    bottom: 0;
+    background: $ssb-green-4;
+    height: 0;
+    left: -2px;
+    position: absolute;
+    transition: height .2s;
+    width: calc(100% + 4px);
+    z-index: -1;
+  }
+
+  &:hover {
+    .animate-background {
+      height: 100%;
+    }
+    .link-text {
+      color: $ssb-white;
+    }
+  }
+}

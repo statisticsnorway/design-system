@@ -7,6 +7,8 @@
 
 # testing
 /coverage
+# Note: snapshot folders should not be ignored.
+# Read more here: https://jestjs.io/docs/en/snapshot-testing.html#should-snapshot-files-be-committed
 
 # production
 /build

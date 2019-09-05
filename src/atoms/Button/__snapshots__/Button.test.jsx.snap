@@ -6,6 +6,7 @@ exports[`Button component Matches the snapshot 1`] = `
   disabled={false}
   type="button"
 >
+   
   <span
     className="button-text"
   >

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link component Matches the snapshot 1`] = `
+<div
+  className="link"
+>
+  <a
+    className="link-text regular undefined"
+    href=" "
+  >
+    <span
+      className="link-text"
+    >
+      A link
+    </span>
+  </a>
+  <div
+    className="animate-background"
+  />
+</div>
+`;

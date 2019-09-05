@@ -4,12 +4,16 @@
   "private": true,
   "homepage": "https://statisticsnorway.github.io/design-system/",
   "scripts": {
-    "start": "webpack-dev-server --mode development --config webpack/dev.config.js --open",
-    "build": "webpack --mode production --config webpack/prod.config.js --progress",
+    "start": "ENV=development webpack-dev-server --mode development --config webpack/dev.config.js --open",
+    "build": "ENV=production webpack --mode production --config webpack/prod.config.js --progress",
     "sb": "start-storybook -p 6006",
     "build-sb": "build-storybook",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test": "ENV=test jest --coverage",
+    "test-watch": "ENV=test jest --watch",
+    "clean-test": "ENV=test jest --no-cache --coverage",
+    "clear-tests": "jest --clear-cache"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
@@ -44,8 +48,10 @@
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "i": "^0.3.6",
+    "jest": "^24.9.0",
     "node-sass": "^4.12.0",
     "path": "^0.12.7",
+    "react-test-renderer": "^16.9.0",
     "sass": "^1.22.10",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",

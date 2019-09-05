@@ -5,7 +5,7 @@ const base = require('./base.config');
 const TerserPlugin = require('terser-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 
-const babelConf = path.resolve(__dirname, './babel.config.js');
+const babelConf = path.resolve(__dirname, '../babel.config.js');
 console.log('Starting production build');
 
 module.exports = merge(base, {
@@ -15,15 +15,6 @@ module.exports = merge(base, {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, '../build'),
 		publicPath: '/design-system', // To ensure proper path for GH-Pages
-	},
-	resolve: {
-		alias: {
-			'@atoms': path.resolve(__dirname, '../src/atoms/'),
-			'@organisms': path.resolve(__dirname, '../src/organisms/'),
-			'@pages': path.resolve(__dirname, '../src/pages/'),
-			'@templates': path.resolve(__dirname, '../src/templates/'),
-		},
-		extensions: ['.jsx', '.js'],
 	},
 	module: {
 		rules: [
@@ -107,10 +98,3 @@ module.exports = merge(base, {
 		},
 	},
 });
-
-exports.aliases = {
-	'@atoms': path.resolve(__dirname, '../src/atoms/'),
-	'@organisms': path.resolve(__dirname, '../src/organisms/'),
-	'@pages': path.resolve(__dirname, '../src/pages/'),
-	'@templates': path.resolve(__dirname, '../src/templates/'),
-};

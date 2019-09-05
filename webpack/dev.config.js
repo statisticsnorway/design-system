@@ -3,7 +3,7 @@ const path = require('path');
 const sass = require('sass');
 const base = require('./base.config');
 
-const babelConf = path.resolve(__dirname, './babel.config.js');
+const babelConf = path.resolve(__dirname, '../babel.config.js');
 
 module.exports = merge(base, {
 	mode: 'development',
@@ -20,16 +20,6 @@ module.exports = merge(base, {
 		watchContentBase: true,
 		port: 3000,
 		publicPath: '/',
-	},
-
-	resolve: {
-		alias: {
-			'@atoms': path.resolve(__dirname, '../src/atoms/'),
-			'@organisms': path.resolve(__dirname, '../src/organisms/'),
-			'@pages': path.resolve(__dirname, '../src/pages/'),
-			'@templates': path.resolve(__dirname, '../src/templates/'),
-		},
-		extensions: ['.jsx', '.js'],
 	},
 
 	module: {
@@ -69,10 +59,3 @@ module.exports = merge(base, {
 		],
 	},
 });
-
-exports.aliases = {
-	'@atoms': path.resolve(__dirname, '../src/atoms/'),
-	'@organisms': path.resolve(__dirname, '../src/organisms/'),
-	'@pages': path.resolve(__dirname, '../src/pages/'),
-	'@templates': path.resolve(__dirname, '../src/templates/'),
-};

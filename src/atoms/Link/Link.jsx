@@ -8,7 +8,7 @@ const Link = ({
 		<a
 			className={`link-text ${linkType} ${icon && 'with-icon'}`}
 			href={href}
-		>{icon}{text}
+		>{icon}<span className="link-text">{text}</span>
 		</a>
 		<div className="animate-background" />
 	</div>

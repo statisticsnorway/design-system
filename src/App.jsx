@@ -10,7 +10,7 @@ function App() {
 					SSB Design System
 				</p>
 				<Button text="Button" primary />
-				<Link text="A useful link" href="" linkType="header" />
+				<Link text="A useful link" href=" " linkType="header" />
 			</header>
 		</div>
 	);

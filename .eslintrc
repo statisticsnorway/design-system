@@ -3,6 +3,7 @@
   "parser": "babel-eslint",
   "rules": {
     "func-names": ["error", "never"],
+    "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0, // because the project uses aliases
     "indent": ["error", "tab"],
     "max-len": ["warn", {"code": 150}],

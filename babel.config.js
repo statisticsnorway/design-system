@@ -48,5 +48,5 @@ module.exports = (api) => {
 		return production;
 	}
 
-	return null;
+	return development;
 };

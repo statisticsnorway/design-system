@@ -3,8 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
 import Button from './Button';
 
-storiesOf('Button', module)
-	.addDecorator(centered)
+storiesOf('Button', module).addDecorator(centered)
 	.add('Primary', () => (
 		<div>
 			<Button text="Primary" primary />

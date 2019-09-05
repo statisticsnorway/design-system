@@ -10,7 +10,7 @@ exports[`Button component Matches the snapshot 1`] = `
   <span
     className="button-text"
   >
-    button
+    Button
   </span>
 </button>
 `;

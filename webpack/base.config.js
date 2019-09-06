@@ -2,25 +2,19 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const paths = {
+	APP_DIR: path.resolve(__dirname, '..', 'src'),
+};
+
 module.exports = {
 	entry: ['./src/index.jsx'],
-	module: {
-		// rules: [
-		// 	{
-		// 		test: /\.(woff|woff2|eot|ttf|otf)$/,
-		// 		use: [
-		// 			'file-loader',
-		// 		],
-		// 	},
-		// ],
-	},
 	resolve: {
 		alias: {
-			'@atoms': path.resolve(__dirname, '../src/atoms/'),
-			'@molecules': path.resolve(__dirname, '../src/molecules/'),
-			'@organisms': path.resolve(__dirname, '../src/organisms/'),
-			'@pages': path.resolve(__dirname, '../src/pages/'),
-			'@templates': path.resolve(__dirname, '../src/templates/'),
+			'@atoms': path.resolve(paths.APP_DIR, 'atoms/'),
+			'@molecules': path.resolve(paths.APP_DIR, 'molecules/'),
+			'@organisms': path.resolve(paths.APP_DIR, 'organisms/'),
+			'@pages': path.resolve(paths.APP_DIR, 'pages/'),
+			'@templates': path.resolve(paths.APP_DIR, 'templates/'),
 		},
 		extensions: ['.jsx', '.js'],
 	},
@@ -30,9 +24,9 @@ module.exports = {
 };
 
 exports.aliases = {
-	'@atoms': path.resolve(__dirname, '../src/atoms/'),
-	'@molecules': path.resolve(__dirname, '../src/molecules/'),
-	'@organisms': path.resolve(__dirname, '../src/organisms/'),
-	'@pages': path.resolve(__dirname, '../src/pages/'),
-	'@templates': path.resolve(__dirname, '../src/templates/'),
+	'@atoms': path.resolve(paths.APP_DIR, 'atoms/'),
+	'@molecules': path.resolve(paths.APP_DIR, 'molecules/'),
+	'@organisms': path.resolve(paths.APP_DIR, 'organisms/'),
+	'@pages': path.resolve(paths.APP_DIR, 'pages/'),
+	'@templates': path.resolve(paths.APP_DIR, 'templates/'),
 };

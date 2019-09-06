@@ -9,11 +9,6 @@ module.exports = {
 		'!<rootDir>/path/to/dir/',
 	],
 	moduleFileExtensions: ['js', 'jsx'],
-	moduleDirectories: [
-		'.',
-		'src',
-		'node_modules',
-	],
 	moduleNameMapper: {
 		'^atoms(.*)$': '<rootDir>/src/scripts/atoms$1',
 		'^molecules(.*)$': '<rootDir>/src/molecules/$1',
@@ -22,6 +17,12 @@ module.exports = {
 		'\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/config/jest/fileMock.js',
 		'\\.(css|scss)$': 'identity-obj-proxy',
 	},
+	modulePaths: [
+		'<rootDir>/src/scripts/atoms',
+	],
 	snapshotSerializers: ['enzyme-to-json/serializer'],
 	setupFiles: ['<rootDir>/src/setupTests.js'],
+	testMatch: ['**/*.test.jsx'],
+	transform: { '^.+\\.jsx?$': 'babel-jest' },
+	transformIgnorePatterns: ['<rootDir>/node_modules/'],
 };

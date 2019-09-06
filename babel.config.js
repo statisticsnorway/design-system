@@ -25,6 +25,7 @@ module.exports = (api) => {
 		],
 		plugins: [
 			['@babel/plugin-transform-modules-commonjs', {}],
+			'transform-es2015-modules-commonjs',
 		],
 	};
 

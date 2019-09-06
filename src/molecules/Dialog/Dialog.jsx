@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import Link from '@atoms/Link/Link';
 
 const Dialog = ({
-	href,
-	linkText,
-	text,
-	title,
-	type,
+	href, linkText, text, title, type,
 }) => (
 	<div className={`dialog-container ${type}`}>
 		<div className="icon-bar">

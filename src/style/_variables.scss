@@ -10,3 +10,12 @@ $ssb-dark-6: #162327;
 $ssb-white: #ffffff;
 $ice-cold-grey: #ecf8f9;
 $ssb-purple-3: #9575ff;
+
+$mobile: 'screen and (min-width: 768px)';
+$tablet: 'screen and (min-width: 992px)';
+$desktop: 'screen and (min-width: 1200px)';
+
+// Use media queries like this:
+@media #{$mobile} {
+
+}

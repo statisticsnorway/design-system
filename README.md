@@ -81,3 +81,18 @@ Styling is done with with the [Sass](https://sass-lang.com/) language, using the
 a couple of global stylesheets as well. [Variables](./src/style/_variables.scss) stores global variables, like colors 
 approved by the style guide. Please refrain from using custom colors. Using variables makes it much easier if they 
 change at any point. 
+
+There are media queries for responsive design. They look like this: 
+```scss
+$mobile: 'screen and (min-width: 768px)';
+$tablet: 'screen and (min-width: 992px)';
+$desktop: 'screen and (min-width: 1200px)';
+```
+
+Use them like this in your components: 
+```scss
+@media #{$mobile} {
+  // mobile style
+}
+```
+Go from smallest to largest to ensure that styles are being overwritten in the correct order. 

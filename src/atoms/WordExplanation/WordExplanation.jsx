@@ -1,6 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
+/*
+Two ways to make this component:
+Like now, where the highlighted text has to be singled out in the input.
+
+Or you can input the whole string and in addition the word you want explained.
+This means you have to search for the word and highlight it from there, which might cause complications.
+ */
+
 const WordExplanation = ({
 	explanation, children,
 }) => {
@@ -8,7 +16,6 @@ const WordExplanation = ({
 	const [open, setOpen] = useState(false);
 
 	const handleClickOutside = (e) => {
-		console.log('Clicking anywhere');
 		if (node.current.contains(e.target)) {
 			return;
 		}
@@ -32,7 +39,12 @@ const WordExplanation = ({
 			{children}<i />
 			<div className="animate-background" />
 
-			{open && <div className="info-box">Look here!</div>}
+			{open && (
+				<div className="info-box">
+					<span className="close-button">x</span>
+					<span className="info-text">{explanation}</span>
+				</div>
+			)}
 		</div>
 	);
 };

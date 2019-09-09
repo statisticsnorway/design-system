@@ -24,5 +24,19 @@
   .info-box {
     background: $ssb-green-5;
     color: $ssb-white;
+    max-width: 250px;
+    padding: 18px;
+    position: absolute;
+
+    .close-button {
+      right: 4px;
+      position: absolute;
+      top: 4px;
+    }
+
+    .info-text {
+      color: $ssb-white;
+      font-size: 12px;
+    }
   }
 }

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
 import Link from './Link';
 
-storiesOf('Link', module).addDecorator(centered)
+storiesOf('Atoms|Link', module).addDecorator(centered)
 	.add('Regular', () => (
 		<div>
 			<Link href=" " text="A regular link" />

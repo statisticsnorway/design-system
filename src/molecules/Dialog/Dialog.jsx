@@ -26,7 +26,10 @@ Dialog.propTypes = {
 	linkText: PropTypes.string,
 	text: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	type: PropTypes.string,
+	type: PropTypes.oneOf([
+		'info',
+		'warning',
+	]),
 };
 
 export default Dialog;

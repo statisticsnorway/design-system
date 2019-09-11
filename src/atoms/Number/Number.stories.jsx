@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
 import Number from './Number';
 
-storiesOf('Number', module).addDecorator(centered)
+storiesOf('Atoms|Number', module).addDecorator(centered)
 	.add('Small', () => (
 		<div>
 			<Number number="599246391" size="small" />

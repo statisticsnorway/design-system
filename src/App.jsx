@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@atoms/Button/Button';
 import Link from '@atoms/Link/Link';
 import Dialog from '@molecules/Dialog/Dialog';
+import ReferenceLink from '@molecules/ReferenceLink/ReferenceLink';
 
 const placeholderText = `
 Here you can write a informative text and inform the user of what has happened.
@@ -25,6 +26,7 @@ function App() {
 				href=" "
 				type="warning"
 			/>
+			<ReferenceLink text="Some kinda reference link" href=" " />
 		</div>
 	);
 }

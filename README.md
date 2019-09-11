@@ -58,7 +58,7 @@ import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
 import Button from './Button';
 
-storiesOf('Button', module)
+storiesOf('Atoms|Button', module)
   .addDecorator(centered)
   .add('Primary button', () => (
     <div>

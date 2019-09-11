@@ -7,7 +7,7 @@
     "start": "ENV=development webpack-dev-server --mode development --config webpack/dev.config.js --open",
     "build": "ENV=production webpack --mode production --config webpack/prod.config.js --progress",
     "sb": "start-storybook -p 6006",
-    "build-sb": "build-storybook",
+    "build-sb": "build-storybook -c .storybook -o .out",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "ENV=test jest --coverage",

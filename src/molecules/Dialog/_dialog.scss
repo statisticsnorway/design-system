@@ -4,6 +4,7 @@ $icon-bar-width: 78px;
 .dialog-container {
   display: flex;
   margin: 20px;
+  max-width: 880px;
   min-height: 95px;
 
   .icon-bar {

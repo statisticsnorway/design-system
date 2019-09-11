@@ -16,6 +16,7 @@ const WordExplanation = ({
 	const [open, setOpen] = useState(false);
 
 	const handleClickOutside = (e) => {
+		console.log(e);
 		if (node.current.contains(e.target)) {
 			return;
 		}
@@ -35,17 +36,23 @@ const WordExplanation = ({
 	}, [open]);
 
 	return (
-		<div ref={node} onClick={(e) => setOpen(!open)} className="word-explanation-wrap">
-			{children}<i />
+		<span ref={node} onClick={(e) => setOpen(!open)} className="word-explanation-wrap">
+			{children}<i />&nbsp;
 			<div className="animate-background" />
-
+			{open && (
+				<div className="arrow">
+					<svg width="16" height="16">
+						<rect width="16" height="16" rotate="45deg" />
+					</svg>
+				</div>
+			)}
 			{open && (
 				<div className="info-box">
-					<span className="close-button">x</span>
+					<i className="close-button">x</i>
 					<span className="info-text">{explanation}</span>
 				</div>
 			)}
-		</div>
+		</span>
 	);
 };
 

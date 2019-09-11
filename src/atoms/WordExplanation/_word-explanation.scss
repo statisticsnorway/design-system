@@ -24,12 +24,16 @@
   .info-box {
     background: $ssb-green-5;
     color: $ssb-white;
+    left: -50%;
     max-width: 250px;
-    padding: 18px;
+    min-width: 200px;
+    padding: 18px 24px 18px 18px;
     position: absolute;
+    right: -50%;
+    top: 32px;
 
     .close-button {
-      right: 4px;
+      right: 10px;
       position: absolute;
       top: 4px;
     }
@@ -38,5 +42,25 @@
       color: $ssb-white;
       font-size: 12px;
     }
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    left: -50%;
+    position: absolute;
+    right: -50%;
+    top: 25px;
+
+    svg {
+      display: flex;
+      justify-content: center;
+      top: 26px;
+      transform: rotate(45deg);
+    }
+  }
+
+  rect {
+    fill: $ssb-green-5;
   }
 }

@@ -1,4 +1,5 @@
 {
+  "ignoreFiles": ["src/style/_grid.scss"],
   "rules": {
     "block-no-empty": null,
     "color-hex-case": "lower",

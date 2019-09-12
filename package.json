@@ -14,7 +14,8 @@
     "test:watch": "ENV=test jest --watch",
     "clean-test": "ENV=test jest --no-cache --updateSnapshot --coverage",
     "clear-tests": "jest --clear-cache -- -u",
-    "lint": "eslint src/**/*.jsx"
+    "lint:js": "eslint src/**/*.jsx",
+    "lint:style": "stylelint '**/*.scss'"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",

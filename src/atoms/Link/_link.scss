@@ -25,12 +25,14 @@ $icon-padding: 8px;
     color: $ssb-green-4;
 
   }
+
   .profiled {
     color: $ssb-green-4;
     font-size: $profiled-font-size;
     font-weight: bold;
     transition-delay: .1s;
   }
+
   .header {
     color: $ssb-dark-6;
     font-size: $header-font-size;
@@ -52,6 +54,7 @@ $icon-padding: 8px;
     .animate-background {
       height: 100%;
     }
+
     a {
       color: $ssb-white;
     }

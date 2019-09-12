@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component Matches the snapshot 1`] = `
+<div
+  className="input-field-wrapper"
+>
+  <input
+    disabled={false}
+    id="7df9fba2-b72d-472b-9d7b-071e92ee5648"
+    onChange={[Function]}
+    type="text"
+  />
+  <label
+    className="undefined"
+    htmlFor="7df9fba2-b72d-472b-9d7b-071e92ee5648"
+  >
+    Input field
+  </label>
+</div>
+`;

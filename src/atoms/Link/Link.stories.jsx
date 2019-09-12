@@ -4,7 +4,7 @@ import centered from '@storybook/addon-centered/react';
 import Link from './Link';
 
 storiesOf('Atoms|Link', module).addDecorator(centered)
-	.add('Regular', () => (
+	.add('Default', () => (
 		<div>
 			<Link href=" " text="A regular link" />
 			<br />

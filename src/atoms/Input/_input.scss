@@ -1,0 +1,57 @@
+@mixin activate-label {
+  font-size: 12px;
+  padding: 0 2px;
+  top: -8px;
+}
+
+.input-field-wrapper {
+  cursor: text;
+  margin: 10px;
+  position: relative;
+
+  &:hover, &:focus {
+    input {
+      border: 2px solid $ssb-green-4;
+    }
+  }
+
+  input {
+    border: 1px solid $ssb-dark-5;
+    font-size: 14px;
+    height: 36px;
+    padding: 4px 10px;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &:disabled + label {
+      color: rgba($label-color, .5);
+      cursor: not-allowed;
+      user-select: none;
+    }
+
+    &:focus {
+      border: 2px solid $ssb-green-4;
+    }
+
+    &:focus + label {
+      @include activate-label;
+      color: $ssb-green-4;
+    }
+  }
+
+  label {
+    background: $ssb-white;
+    color: $label-color;
+    cursor: text;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    transition: all .2s;
+
+    &.has-value {
+      @include activate-label;
+    }
+  }
+}

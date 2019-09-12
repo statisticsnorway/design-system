@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const formatNumber = (num) => num.toString()
+const formatNumber = num => num.toString()
 	.replace(/\D+/g, '') // remove everything that is not a number
 	.replace(/(\d)(?=(\d{3})+(?!\d))/g, ' '); // add spaces in desired format
 

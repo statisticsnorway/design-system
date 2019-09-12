@@ -13,7 +13,8 @@
     "test": "ENV=test jest --coverage",
     "test:watch": "ENV=test jest --watch",
     "clean-test": "ENV=test jest --no-cache --updateSnapshot --coverage",
-    "clear-tests": "jest --clear-cache -- -u"
+    "clear-tests": "jest --clear-cache -- -u",
+    "lint": "eslint src/**/*.jsx"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",

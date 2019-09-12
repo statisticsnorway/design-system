@@ -16,7 +16,6 @@ const WordExplanation = ({
 	const [open, setOpen] = useState(false);
 
 	const handleClickOutside = (e) => {
-		console.log(e);
 		if (node.current.contains(e.target)) {
 			return;
 		}
@@ -36,7 +35,7 @@ const WordExplanation = ({
 	}, [open]);
 
 	return (
-		<span ref={node} onClick={(e) => setOpen(!open)} className="word-explanation-wrap">
+		<span ref={node} onClick={e => setOpen(!open)} className="word-explanation-wrap">
 			{children}<i />&nbsp;
 			<div className="animate-background" />
 			{open && (
@@ -59,7 +58,10 @@ const WordExplanation = ({
 WordExplanation.defaultProps = {};
 
 WordExplanation.propTypes = {
-	children: PropTypes.element,
+	children: PropTypes.oneOfType([
+		PropTypes.element,
+		PropTypes.string,
+	]),
 	explanation: PropTypes.string.isRequired,
 };
 

@@ -5,6 +5,7 @@
   },
   "parser": "babel-eslint",
   "rules": {
+    "arrow-parens": ["error", "as-needed"],
     "func-names": ["error", "never"],
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0, // because the project uses aliases

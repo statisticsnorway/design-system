@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WordExplanation component Matches the snapshot 1`] = `
+<span
+  className="word-explanation-wrap"
+  onClick={[Function]}
+>
+  Something else
+  <i />
+   
+  <div
+    className="animate-background"
+  />
+</span>
+`;

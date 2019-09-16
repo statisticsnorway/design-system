@@ -9,9 +9,10 @@
   margin: 10px;
   position: relative;
 
-  &:hover, &:focus {
+  &:hover {
     input {
-      border: 2px solid $ssb-green-4;
+      border: 1px solid $ssb-green-4;
+      //outline: $ssb-green-4 auto 5px;
     }
   }
 
@@ -22,6 +23,7 @@
     padding: 4px 10px;
 
     &:disabled {
+      border: 1px solid $ssb-dark-5;
       cursor: not-allowed;
     }
 
@@ -32,7 +34,8 @@
     }
 
     &:focus {
-      border: 2px solid $ssb-green-4;
+      //border: 2px solid $ssb-green-4;
+      outline: $ssb-green-4 auto 5px;
     }
 
     &:focus + label {
@@ -49,6 +52,7 @@
     position: absolute;
     top: 10px;
     transition: all .2s;
+    user-select: none;
 
     &.has-value {
       @include activate-label;

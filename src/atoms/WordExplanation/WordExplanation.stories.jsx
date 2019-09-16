@@ -8,7 +8,7 @@ written in one or more paragraphs depending on the amount of space needed`;
 
 storiesOf('Atoms|WordExplanation', module).addDecorator(centered)
 	.add('As a wrapper', () => (
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			Morbi laoreet rhoncus lorem, eu finibus diam interdum sed.
 			Integer eleifend, nunc nec venenatis lacinia, tortor ex luctus est, sed tincidunt nulla turpis eget quam.
 			Nullam elit nunc, rutrum quis viverra eget, varius vel neque
@@ -16,5 +16,5 @@ storiesOf('Atoms|WordExplanation', module).addDecorator(centered)
 			Ut gravida orci bibendum dolor dictum, id pretium quam bibendum.
 			Vivamus nunc enim, aliquam et risus in, hendrerit pulvinar magna.
 			Aenean tincidunt id est vitae viverra. Maecenas non sem et sapien faucibus accumsan nec ut ipsum.
-		</p>
+		</span>
 	));

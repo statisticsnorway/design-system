@@ -6,13 +6,13 @@ exports[`Input component Matches the snapshot 1`] = `
 >
   <input
     disabled={false}
-    id="81c47a50-10af-4fed-85ae-7bf531b4c755"
+    id="c1c5692e-4e3f-40fc-b4a0-98bd5d50d5e2"
     onChange={[Function]}
     type="text"
   />
   <label
     className="undefined"
-    htmlFor="81c47a50-10af-4fed-85ae-7bf531b4c755"
+    htmlFor="c1c5692e-4e3f-40fc-b4a0-98bd5d50d5e2"
   >
     Input field
   </label>

@@ -19,13 +19,8 @@ const WordExplanation = ({
 	const calculatePosition = (x, y) => {
 		const topMargin = 30;
 		const infoBoxWidth = 300;
-		console.log('Node: ', node);
-		console.log('X: ', x);
-		console.log('Window width: ', window.innerWidth);
-		console.log(infoContainer)
 		if (open && window.innerWidth <= 768) {
 			// Center for mobile devices
-			console.log('New position: ', (window.innerWidth - infoContainer.current.clientWidth) / 2);
 			setPosition({ x: (window.innerWidth - infoContainer.current.clientWidth) / 2, y: y + topMargin });
 		}
 		if (open && window.innerWidth > 768) {

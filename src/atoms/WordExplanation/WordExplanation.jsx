@@ -1,19 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-/*
-Two ways to make this component:
-Like now, where the highlighted text has to be singled out in the input.
-
-Or you can input the whole string and in addition the word you want explained.
-This means you have to search for the word and highlight it from there, which might cause complications.
- */
-
 const WordExplanation = ({
 	explanation, children,
 }) => {
 	const node = useRef();
+	const infoContainer = useRef();
 	const [open, setOpen] = useState(false);
+	const [position, setPosition] = useState({ x: 0, y: 0 });
 
 	const handleClickOutside = e => {
 		if (node.current.contains(e.target)) {
@@ -22,7 +16,24 @@ const WordExplanation = ({
 		setOpen(false);
 	};
 
+	const calculatePosition = (x, y) => {
+		const topMargin = 30;
+		console.log('Node: ', node);
+		console.log('X: ', x);
+		console.log('Window width: ', window.innerWidth);
+		console.log(infoContainer)
+		if (open && window.innerWidth <= 768) {
+			// Center for mobile devices
+			console.log('New position: ', (window.innerWidth - infoContainer.current.clientWidth) / 2);
+			setPosition({ x: (window.innerWidth - infoContainer.current.clientWidth) / 2, y: y + topMargin });
+		}
+		if (open && window.innerWidth > 768) {
+			setPosition({ x, y: y + topMargin });
+		}
+	};
+
 	useEffect(() => {
+		calculatePosition(node.current.offsetLeft, node.current.offsetTop);
 		if (open) {
 			document.addEventListener('mousedown', handleClickOutside);
 		} else {
@@ -39,16 +50,16 @@ const WordExplanation = ({
 			{children}<i />&nbsp;
 			<div className="animate-background" />
 			{open && (
-				<div className="arrow">
-					<svg width="16" height="16">
-						<rect width="16" height="16" rotate="45deg" />
-					</svg>
-				</div>
-			)}
-			{open && (
-				<div className="info-box">
-					<i className="close-button">x</i>
-					<span className="info-text">{explanation}</span>
+				<div className="info-box-wrapper" ref={infoContainer} style={{ top: position.y, left: position.x }}>
+					<div className="arrow">
+						<svg width="16" height="16">
+							<rect width="16" height="16" rotate="45deg" />
+						</svg>
+					</div>
+					<div className="info-box">
+						<i className="close-button">x</i>
+						<span className="info-text">{explanation}</span>
+					</div>
 				</div>
 			)}
 		</span>

@@ -10,7 +10,7 @@ const Dialog = ({
 			<i data-feather="alert-circle" />
 		</div>
 		<div className="info-content">
-			<p><strong>{title}</strong></p>
+			<h5><strong>{title}</strong></h5>
 			<p><span className="dialog-text">{text}</span></p>
 			{href && <Link text={linkText} href={href} />}
 		</div>

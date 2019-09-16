@@ -13,11 +13,9 @@ $ssb-purple-3: #9575ff;
 
 $label-color: #4b7272;
 
-$mobile: 'screen and (min-width: 768px)';
-$tablet: 'screen and (min-width: 992px)';
-$desktop: 'screen and (min-width: 1200px)';
+$mobile: 'screen and (max-width: 768px)';
+$tablet: 'screen and (max-width: 992px)';
+$desktop: 'screen and (min-width: 992px)';
 
 // Use media queries like this:
-@media #{$mobile} {
-
-}
+//@media #{$mobile} { @content }

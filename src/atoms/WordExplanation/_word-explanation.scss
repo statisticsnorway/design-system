@@ -21,16 +21,37 @@
     }
   }
 
+  .info-box-wrapper {
+    max-width: 310px;
+    min-width: 200px;
+    position: fixed;
+
+    //@media #{$desktop}, #{$tablet} {
+    //  left: -50%;
+    //  position: absolute;
+    //  right: -50%;
+    //  top: 32px;
+    //}
+    //
+    //@media #{$mobile} {
+    //  display: flex;
+    //  justify-content: center;
+    //  left: 50%;
+    //  position: fixed;
+    //  width: 100%;
+    //
+    //  .info-box {
+    //    left: -50%;
+    //    position: relative;
+    //  }
+    //}
+
+  }
+
   .info-box {
     background: $ssb-green-5;
     color: $ssb-white;
-    left: -50%;
-    max-width: 250px;
-    min-width: 200px;
     padding: 18px 24px 18px 18px;
-    position: absolute;
-    right: -50%;
-    top: 32px;
 
     .close-button {
       right: 10px;
@@ -50,7 +71,7 @@
     left: -50%;
     position: absolute;
     right: -50%;
-    top: 25px;
+    top: -6px;
 
     svg {
       display: flex;

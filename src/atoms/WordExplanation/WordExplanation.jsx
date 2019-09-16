@@ -18,6 +18,7 @@ const WordExplanation = ({
 
 	const calculatePosition = (x, y) => {
 		const topMargin = 30;
+		const infoBoxWidth = 300;
 		console.log('Node: ', node);
 		console.log('X: ', x);
 		console.log('Window width: ', window.innerWidth);
@@ -28,7 +29,13 @@ const WordExplanation = ({
 			setPosition({ x: (window.innerWidth - infoContainer.current.clientWidth) / 2, y: y + topMargin });
 		}
 		if (open && window.innerWidth > 768) {
-			setPosition({ x, y: y + topMargin });
+			if (x + infoBoxWidth > window.innerWidth) {
+				// Detect if box will go outside of screen
+				const adjustment = x + infoBoxWidth - window.innerWidth;
+				setPosition({ x: x - adjustment, y: y + topMargin });
+			} else {
+				setPosition({ x, y: y + topMargin });
+			}
 		}
 	};
 

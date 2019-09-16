@@ -22,30 +22,8 @@
   }
 
   .info-box-wrapper {
-    max-width: 310px;
-    min-width: 200px;
+    width: 300px;
     position: fixed;
-
-    //@media #{$desktop}, #{$tablet} {
-    //  left: -50%;
-    //  position: absolute;
-    //  right: -50%;
-    //  top: 32px;
-    //}
-    //
-    //@media #{$mobile} {
-    //  display: flex;
-    //  justify-content: center;
-    //  left: 50%;
-    //  position: fixed;
-    //  width: 100%;
-    //
-    //  .info-box {
-    //    left: -50%;
-    //    position: relative;
-    //  }
-    //}
-
   }
 
   .info-box {

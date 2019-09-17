@@ -29,7 +29,9 @@
       }
 
       &:focus, &.focused {
+        border: 1px solid $ssb-green-4;
         outline: $ssb-green-4 auto 5px;
+        outline-offset: -2px;
       }
     }
 
@@ -38,6 +40,7 @@
       left: 0;
       list-style: none;
       //margin: 0;
+      max-width: 300px;
       min-width: 150px;
       padding-left: 0;
       position: absolute;
@@ -47,7 +50,9 @@
         cursor: pointer;
 
         option {
+          overflow: hidden;
           padding: 10px;
+          text-overflow: ellipsis;
         }
 
         &:hover {

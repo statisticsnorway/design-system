@@ -30,7 +30,7 @@ const Input = ({
 
 Input.defaultProps = {
 	disabled: false,
-	// handleChange: e => e,
+	handleChange: () => {},
 	label: 'Input field',
 	type: 'text',
 };

@@ -20,6 +20,7 @@ const Dropdown = ({
 
 	const handleSelection = item => {
 		selectItem({ title: item.title, id: item.id });
+		onSelect(item);
 		setOpen(false);
 		filterOptions(items);
 		updateInputValue('');
@@ -64,6 +65,7 @@ const Dropdown = ({
 								<option
 									onClick={() => handleSelection(it)}
 									value={it.id}
+									id={it.id}
 								>{it.title}
 								</option>
 							</li>
@@ -77,6 +79,8 @@ const Dropdown = ({
 
 Dropdown.defaultProps = {
 	header: '',
+	items: [{ id: '', title: '' }],
+	onSelect: () => {},
 	searchable: false,
 	placeholder: '-- Select --',
 };

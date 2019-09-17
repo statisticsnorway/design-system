@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown component Matches the snapshot 1`] = `
+<div
+  className="dropdown-component-wrapper"
+>
+  <div
+    className="dropdown-interactive-area"
+    onClick={[Function]}
+  >
+    <input
+      className=""
+      disabled={true}
+      id="bd30074c-cf84-4d71-b67e-4ab84cdc435d"
+      onChange={[Function]}
+      placeholder="-- Select --"
+      value=""
+    />
+  </div>
+</div>
+`;

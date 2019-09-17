@@ -83,7 +83,7 @@ module.exports = merge(base, {
 			new TerserPlugin({
 				test: /\.js(\?.*)?$/i,
 				extractComments: true,
-				chunkFilter: (chunk) => chunk.name !== 'vendor',
+				chunkFilter: chunk => chunk.name !== 'vendor',
 			}),
 		],
 		splitChunks: {

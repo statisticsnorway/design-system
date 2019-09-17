@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
 
 const id = uuid();
 
-
 const Dropdown = ({
-	header, items, onSelect, open, searchable, selectedItem,
+	header, items, onSelect, open, placeholder, searchable, selectedItem,
 }) => {
-	const [isOpen, toggleIsOpen] = useState(false);
+	const node = useRef();
+	const [isOpen, setOpen] = useState(false);
 	const [availableOptions, filterOptions] = useState(items);
 	const [selectedOption, selectItem] = useState(selectedItem || { title: '', id: '' });
 	const [inputFieldValue, updateInputValue] = useState('');
@@ -20,20 +20,38 @@ const Dropdown = ({
 
 	const handleSelection = item => {
 		selectItem({ title: item.title, id: item.id });
-		toggleIsOpen(false);
+		setOpen(false);
 		filterOptions(items);
 		updateInputValue('');
 	};
 
+	const handleClickOutside = e => {
+		if (!node.current.contains(e.target)) {
+			setOpen(false);
+		}
+	};
+
+	useEffect(() => {
+		if (isOpen) {
+			document.addEventListener('mousedown', handleClickOutside);
+		} else {
+			document.removeEventListener('mousedown', handleClickOutside);
+		}
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [isOpen]);
+
 	return (
 		<div className="dropdown-component-wrapper">
 			{header && <label htmlFor={id}>{header}</label>}
-			<div className="dropdown-interactive-area" onClick={() => toggleIsOpen(!isOpen)}>
+			<div className="dropdown-interactive-area" ref={node} onClick={() => setOpen(!isOpen)}>
 				<input
+					className={isOpen ? 'focused' : ''}
 					id={id}
 					onChange={e => filterItems(e)}
 					disabled={!searchable}
-					placeholder={selectedOption.title ? selectedOption.title : '-- --'}
+					placeholder={selectedOption.title ? selectedOption.title : placeholder}
 					value={inputFieldValue}
 				/>
 				{isOpen && (
@@ -60,6 +78,7 @@ const Dropdown = ({
 Dropdown.defaultProps = {
 	header: '',
 	searchable: false,
+	placeholder: '-- Select --',
 };
 
 Dropdown.propTypes = {
@@ -70,6 +89,7 @@ Dropdown.propTypes = {
 	})),
 	onSelect: PropTypes.func,
 	open: PropTypes.bool,
+	placeholder: PropTypes.string,
 	searchable: PropTypes.bool,
 	selectedItem: PropTypes.object,
 };

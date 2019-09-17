@@ -5,6 +5,10 @@
   flex-direction: column;
   transition: all .25s ease-in-out;
 
+  label {
+    margin-bottom: 5px;
+  }
+
   .dropdown-interactive-area {
     cursor: pointer;
     position: relative;
@@ -18,6 +22,14 @@
 
       &::placeholder {
         color: $ssb-dark-6;
+      }
+
+      &:hover {
+        border: 1px solid $ssb-green-4;
+      }
+
+      &:focus, &.focused {
+        outline: $ssb-green-4 auto 5px;
       }
     }
 

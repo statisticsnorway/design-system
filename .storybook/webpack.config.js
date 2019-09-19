@@ -3,20 +3,25 @@ const sass = require('sass');
 
 module.exports = {
 	module: {
-		rules: [
-			{
-				include: path.resolve(__dirname, '../'),
-				test: /\.s[ac]ss$/i,
-				use: [
-					'style-loader',
-					'css-loader',
-					{
-						loader: 'sass-loader',
-						options: {
-							implementation: sass,
-						},
+		rules: [{
+			include: path.resolve(__dirname, '../'),
+			test: /\.s[ac]ss$/i,
+			use: [
+				'style-loader',
+				'css-loader',
+				{
+					loader: 'sass-loader',
+					options: {
+						implementation: sass,
 					},
-				],
+				},
+			],
+		},
+		{
+			test: /\.(png|svg|jpg|gif)$/,
+			use: [
+				'file-loader',
+			],
 		}],
 	},
 
@@ -27,6 +32,7 @@ module.exports = {
 			'@organisms': path.resolve(__dirname, '../src/organisms/'),
 			'@pages': path.resolve(__dirname, '../src/pages/'),
 			'@templates': path.resolve(__dirname, '../src/templates/'),
+			'@public': path.resolve(__dirname, '..', 'public'),
 		},
 		extensions: ['.jsx', '.js'],
 	},

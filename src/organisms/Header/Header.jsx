@@ -19,7 +19,7 @@ const Header = () => (
 			<div>
 				Local navigation
 			</div>
-			<div>
+			<div className="links">
 				<Link href=" " text="Github" icon={<span>&gt;</span>} />
 				<Link href=" " text="Download" icon={<span>&gt;</span>} />
 			</div>

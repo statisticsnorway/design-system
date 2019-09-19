@@ -36,5 +36,13 @@
   .lower-section {
     display: flex;
     justify-content: space-between;
+
+    .links {
+      font-weight: bold;
+
+      > div {
+        margin-left: $global-padding-size;
+      }
+    }
   }
 }

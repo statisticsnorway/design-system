@@ -15,6 +15,7 @@ module.exports = {
 			'@organisms': path.resolve(paths.APP_DIR, 'organisms/'),
 			'@pages': path.resolve(paths.APP_DIR, 'pages/'),
 			'@templates': path.resolve(paths.APP_DIR, 'templates/'),
+			'@public': path.resolve(__dirname, '..', 'public'),
 		},
 		extensions: ['.jsx', '.js'],
 	},
@@ -29,4 +30,5 @@ exports.aliases = {
 	'@organisms': path.resolve(paths.APP_DIR, 'organisms/'),
 	'@pages': path.resolve(paths.APP_DIR, 'pages/'),
 	'@templates': path.resolve(paths.APP_DIR, 'templates/'),
+	'@public': path.resolve(__dirname, '..', 'public'),
 };

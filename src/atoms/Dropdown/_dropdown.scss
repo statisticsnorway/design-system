@@ -36,22 +36,24 @@
     }
 
     .list-of-options {
+      background: $ssb-white;
       border: 1px solid $ice-cold-grey;
       left: 0;
       list-style: none;
-      //margin: 0;
+      margin: 0;
       max-width: 300px;
       min-width: 150px;
       padding-left: 0;
       position: absolute;
       top: $input-field-height;
+      z-index: 9999;
 
       .option-list-element {
         cursor: pointer;
 
         option {
           overflow: hidden;
-          padding: 10px;
+          padding: $global-padding-size;
           text-overflow: ellipsis;
         }
 

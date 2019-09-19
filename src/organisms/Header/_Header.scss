@@ -1,0 +1,40 @@
+.header-component-wrapper {
+  border-bottom: 1px solid $ssb-dark-5;
+  display: flex;
+  flex-direction: column;
+  padding: $global-padding-size 0;
+  width: 100%;
+
+  .upper-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .logo-and-title {
+      display: flex;
+      height: 38px;
+      margin: 40px 0;
+
+      img {
+        height: 47px;
+        margin-top: -5px;
+      }
+
+      .diagonal-divider {
+        background: $ssb-dark-6;
+        margin: 0 ($global-padding-size * 2);
+        width: 1px;
+      }
+
+      h3 {
+        color: $ssb-dark-5;
+        margin: 0;
+      }
+    }
+  }
+
+  .lower-section {
+    display: flex;
+    justify-content: space-between;
+  }
+}

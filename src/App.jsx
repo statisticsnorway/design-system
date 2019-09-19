@@ -3,6 +3,7 @@ import Button from '@atoms/Button/Button';
 import Link from '@atoms/Link/Link';
 import Dialog from '@molecules/Dialog/Dialog';
 import ReferenceLink from '@molecules/ReferenceLink/ReferenceLink';
+import Header from '@organisms/Header/Header';
 
 const placeholderText = `
 Here you can write a informative text and inform the user of what has happened.
@@ -13,9 +14,7 @@ function App() {
 	return (
 		<div className="app">
 			<header className="app-header">
-				<p>
-					SSB Design System
-				</p>
+				<Header />
 				<Button text="Button" primary />
 				<Link text="A useful link" href=" " linkType="header" />
 			</header>

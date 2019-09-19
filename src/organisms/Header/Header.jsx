@@ -2,6 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import logo from '@public/ssb-logo.svg';
 import Link from '@atoms/Link/Link';
+import Tabs from '@atoms/Tabs/Tabs';
+
+const items = [
+	{
+		title: 'Get Started',
+		url: 'get-started/',
+	},
+	{
+		title: 'Components',
+		url: 'components/',
+	},
+	{
+		title: 'Templates',
+		url: 'templates/',
+	},
+];
 
 const Header = () => (
 	<div className="header-component-wrapper">
@@ -15,15 +31,15 @@ const Header = () => (
 				<Link href=" " text="Norsk" />
 			</div>
 		</div>
-		<div className="lower-section">
+		<nav className="lower-section">
 			<div>
-				Local navigation
+				<Tabs items={items} />
 			</div>
 			<div className="links">
 				<Link href=" " text="Github" icon={<span>&gt;</span>} />
 				<Link href=" " text="Download" icon={<span>&gt;</span>} />
 			</div>
-		</div>
+		</nav>
 	</div>
 );
 

@@ -1,8 +1,4 @@
 import React from 'react';
-import Button from '@atoms/Button/Button';
-import Link from '@atoms/Link/Link';
-import Dialog from '@molecules/Dialog/Dialog';
-import ReferenceLink from '@molecules/ReferenceLink/ReferenceLink';
 import Header from '@organisms/Header/Header';
 
 const placeholderText = `
@@ -15,17 +11,9 @@ function App() {
 		<div className="app">
 			<header className="app-header">
 				<Header />
-				<Button text="Button" primary />
-				<Link text="A useful link" href=" " linkType="header" />
 			</header>
-			<Dialog
-				text={placeholderText}
-				title="Be aware of the dog"
-				linkText="A place to read more about this"
-				href=" "
-				type="warning"
-			/>
-			<ReferenceLink text="Some kinda reference link" href=" " />
+			<main>Main content</main>
+			<footer>Footer</footer>
 		</div>
 	);
 }

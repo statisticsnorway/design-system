@@ -1,4 +1,26 @@
 body {
   margin: 0 auto;
-  max-width: 1180px;
+
+  .app {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+
+    header {
+      max-width: 1180px;
+      width: 100%;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 1180px;
+      width: 100%;
+    }
+
+    footer {
+      width: 100%;
+    }
+  }
 }

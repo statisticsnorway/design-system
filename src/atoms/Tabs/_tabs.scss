@@ -3,9 +3,13 @@
   flex-direction: row;
 
   .navigation-item {
+    align-items: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
     padding: $global-padding-size;
     position: relative;
+    text-align: center;
     text-decoration: none;
     transition: background .2s;
 

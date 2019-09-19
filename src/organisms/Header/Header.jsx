@@ -7,15 +7,15 @@ import Tabs from '@atoms/Tabs/Tabs';
 const items = [
 	{
 		title: 'Get Started',
-		url: 'get-started/',
+		path: '/get-started',
 	},
 	{
 		title: 'Components',
-		url: 'components/',
+		path: '/components',
 	},
 	{
 		title: 'Templates',
-		url: 'templates/',
+		path: '/templates',
 	},
 ];
 
@@ -36,7 +36,7 @@ const Header = () => (
 				<Tabs items={items} />
 			</div>
 			<div className="links">
-				<Link href=" " text="Github" icon={<span>&gt;</span>} />
+				<Link href="https://github.com/statisticsnorway/design-system" text="Github" icon={<span>&gt;</span>} />
 				<Link href=" " text="Download" icon={<span>&gt;</span>} />
 			</div>
 		</nav>

@@ -1,36 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 const Tabs = ({
 	items,
-}) => {
-	const [activeTab, toggleActiveTab] = useState('get-started/');
+}) => (
+	<div className="tabs-component-wrapper">
+		{items.map(item => (
+			<NavLink
+				className="navigation-item"
+				activeClassName="active"
+				to={item.path}
+				key={item.path}
+			>
+				<span>{item.title}</span>
+				<div className="active-bar" />
+			</NavLink>
+		))}
+	</div>
+);
 
-	return (
-		<div className="tabs-component-wrapper">
-			{items.map(item => (
-				<a
-					className={`navigation-item ${activeTab === item.url ? 'active' : ''}`}
-					href=" "
-					onClick={() => toggleActiveTab(item.url)}
-				>
-					<span>{item.title}</span>
-					<div className="active-bar" />
-				</a>
-			))}
-		</div>
-	);
-};
-
-Tabs.defaultProps = {
-	activeTab: 'get-started/',
-};
+Tabs.defaultProps = {};
 
 Tabs.propTypes = {
-	activeTab: PropTypes.string,
 	items: PropTypes.arrayOf(PropTypes.shape({
 		title: PropTypes.string,
-		url: PropTypes.string,
+		path: PropTypes.string,
 	})),
 };
 

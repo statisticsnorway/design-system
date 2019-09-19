@@ -14,7 +14,9 @@ body {
     }
 
     main {
+      display: grid;
       flex-grow: 1;
+      grid-template-columns: minmax(10%, 390px) 1fr;
       max-width: 1180px;
       width: 100%;
     }

@@ -1,8 +1,43 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '@organisms/Header/Header';
-import Input from '@atoms/Input/Input';
-import ProfileBox from '@molecules/ProfileBox/ProfileBox';
+import Footer from '@organisms/Footer/Footer';
+import SidebarNav from '@organisms/SidebarNav/SidebarNav';
+
+const sidebarItems = [
+	{
+		label: 'Item 1',
+		path: '/item1',
+		items: [{
+			label: 'Item 1',
+			path: '/item1',
+			items: [{
+				label: 'Item 1',
+				path: '/item1',
+			}],
+		}, {
+			label: 'Item 2',
+			path: '/item2',
+		}],
+	}, {
+		label: 'Item 2',
+		path: '/item2',
+		items: [{
+			label: 'Item 1',
+			path: '/item1',
+			items: [{
+				label: 'Item 1',
+				path: '/item1',
+			}],
+		}],
+	}, {
+		label: 'Item 3',
+		path: '/item3',
+	}, {
+		label: 'Item 4',
+		path: '/item4',
+	},
+];
 
 function App() {
 	return (
@@ -13,7 +48,7 @@ function App() {
 				</header>
 				<main>
 					<aside>
-						<Input label="Search for e.g tabs" />
+						<SidebarNav navItems={sidebarItems} />
 					</aside>
 					<section>
 						<Switch>
@@ -26,7 +61,6 @@ function App() {
 								<h2>
 								Get started
 								</h2>
-								<ProfileBox link=" " text="Explaining text about something" title="Look at this and this and this and this" />
 							</Route>
 							<Route path="/components">
 								<h2>
@@ -42,8 +76,8 @@ function App() {
 					</section>
 				</main>
 			</div>
-			<footer>Footer
-				<br /> footer
+			<footer>
+				<Footer />
 			</footer>
 		</div>
 	);

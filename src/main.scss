@@ -14,7 +14,8 @@
 @import 'atoms/Input/input';
 @import 'atoms/Link/link';
 @import 'atoms/Number/number';
-@import 'atoms/Tabs/Tabs';
+@import 'atoms/Tabs/tabs';
+@import 'atoms/TreeMenu/tree-menu';
 @import 'atoms/WordExplanation/word-explanation';
 
 // molecules
@@ -24,4 +25,5 @@
 @import 'molecules/ProfileBox/profile-box';
 
 // organisms
+@import 'organisms/Footer/footer';
 @import 'organisms/Header/header';

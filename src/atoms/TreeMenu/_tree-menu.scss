@@ -1,0 +1,34 @@
+.tree-menu-wrapper {
+  display: flex;
+  position: relative;
+
+  .items-section {
+    background: $ssb-white;
+    position: absolute;
+    width: 100%;
+  }
+
+  .tree-node {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    padding: 0 $global-padding-size;
+    position: relative;
+
+    &:hover {
+      background: $ssb-green-2;
+      cursor: pointer;
+    }
+
+    &.selected {
+      background: $ssb-green-4;
+      color: $ssb-white;
+    }
+
+    .expanded-menu {
+      position: absolute;
+      right: -25px;
+    }
+  }
+}

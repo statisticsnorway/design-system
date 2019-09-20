@@ -9,9 +9,10 @@ body {
 
   .app-content {
     display: grid;
-    grid-template-columns: minmax(320px, 1180px);
+    grid-template-columns: minmax(320px, 1200px);
     grid-template-rows: 182px 1fr;
     justify-content: center;
+    margin: 0 $global-padding-size;
     position: relative;
 
     header {
@@ -21,7 +22,7 @@ body {
     > main {
       display: grid;
       flex-grow: 1;
-      grid-template-columns: minmax(10%, 350px) 1fr;
+      grid-template-columns: minmax(10%, 280px) 1fr;
 
       > aside {
         padding-top: 60px;

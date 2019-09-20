@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '@organisms/Header/Header';
 import Input from '@atoms/Input/Input';
+import ProfileBox from '@molecules/ProfileBox/ProfileBox';
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 								<h2>
 								Get started
 								</h2>
+								<ProfileBox link=" " text="Explaining text about something" title="Look at this and this and this and this" />
 							</Route>
 							<Route path="/components">
 								<h2>

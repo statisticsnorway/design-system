@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
+import { ChevronRight } from 'react-feather';
 
 // TODO: Investigate exactly what kind of links are going into this to make sure we approach it correctly
 
@@ -25,7 +26,7 @@ const TreeMenu = ({
 								key={uuid()}
 								className={`tree-node ${item.path === selectedPath && 'selected'}`}
 								onClick={() => updatePath(item.path)}
-							>{item.label}{item.items && <span>&gt;</span>}
+							>{item.label}{item.items && <ChevronRight className="arrow-icon" size="18" />}
 							</div>
 						) : (
 							<div key={uuid()} className="tree-node">
@@ -39,7 +40,7 @@ const TreeMenu = ({
 					{items.map(item => (
 						item.path === selectedPath && item.items.map(it => (
 							<div className="tree-node" onClick={() => updatePath(selectedPath + it.path)}>
-								{it.label}{it.items && <span>&gt;</span>}
+								{it.label}{it.items && <ChevronRight className="arrow-icon" size="18" />}
 							</div>
 						))
 					))}

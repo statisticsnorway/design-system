@@ -16,6 +16,10 @@
     padding: 0 $global-padding-size;
     position: relative;
 
+    .arrow-icon {
+      color: $ssb-green-4;
+    }
+
     &:hover {
       background: $ssb-green-2;
       cursor: pointer;
@@ -24,6 +28,10 @@
     &.selected {
       background: $ssb-green-4;
       color: $ssb-white;
+
+      .arrow-icon {
+        color: $ssb-white;
+      }
     }
 
     .expanded-menu {

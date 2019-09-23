@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import logo from '@public/ssb-logo.svg';
 import Link from '@atoms/Link/Link';
 import Tabs from '@atoms/Tabs/Tabs';
+import { GitHub } from 'react-feather';
 
 const items = [
 	{
@@ -36,8 +37,12 @@ const Header = () => (
 				<Tabs items={items} />
 			</div>
 			<div className="links">
-				<Link href="https://github.com/statisticsnorway/design-system" text="Github" icon={<span>&gt;</span>} />
-				<Link href=" " text="Download" icon={<span>&gt;</span>} />
+				<Link
+					href="https://github.com/statisticsnorway/design-system"
+					text="Github"
+					isExternal
+					icon={<GitHub size="18" />}
+				/>
 			</div>
 		</nav>
 	</div>

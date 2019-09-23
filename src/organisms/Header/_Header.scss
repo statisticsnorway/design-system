@@ -38,6 +38,8 @@
     justify-content: space-between;
 
     .links {
+      align-items: center;
+      display: flex;
       font-weight: bold;
 
       > div {

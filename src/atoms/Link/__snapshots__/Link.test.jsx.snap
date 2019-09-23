@@ -4,16 +4,23 @@ exports[`Link component Matches the snapshot 1`] = `
 <div
   className="link"
 >
-  <a
-    className="link-text regular undefined"
-    href=" "
+  <div
+    className="index"
   >
-    <span
-      className="link-text"
+    <a
+      className="link-text regular undefined"
+      href=" "
+      rel=""
+      target=""
     >
-      A link
-    </span>
-  </a>
+      <span
+        className="link-text"
+      >
+        A link
+      </span>
+       
+    </a>
+  </div>
   <div
     className="animate-background"
   />

@@ -4,6 +4,7 @@ exports[`Button component Matches the snapshot 1`] = `
 <button
   className="button-container secondary false"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
    

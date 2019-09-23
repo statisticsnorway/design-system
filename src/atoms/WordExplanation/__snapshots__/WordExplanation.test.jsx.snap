@@ -6,8 +6,10 @@ exports[`WordExplanation component Matches the snapshot 1`] = `
   onClick={[Function]}
 >
   Something else
-  <i />
-   
+  <FileText
+    color="currentColor"
+    size="12"
+  />
   <div
     className="animate-background"
   />

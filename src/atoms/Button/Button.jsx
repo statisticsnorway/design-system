@@ -19,6 +19,7 @@ const Button = ({
 Button.defaultProps = {
 	danger: false,
 	disabled: false,
+	onClick: () => {},
 	primary: false,
 	type: 'button',
 };
@@ -29,8 +30,19 @@ Button.propTypes = {
 	icon: PropTypes.element,
 	onClick: PropTypes.func,
 	primary: PropTypes.bool,
-	text: PropTypes.string.isRequired,
+	text: PropTypes.string,
 	type: PropTypes.string,
 };
 
 export default Button;
+
+/*
+options:
+	danger: optional boolean to change button styling
+	disabled: optional boolean to disable button
+	icon: optional element to insert icon into button
+	onClick: optional callback
+	primary: optional boolean to change button styling
+	text: optional string
+	type: optional button type, defaults to 'button'
+ */

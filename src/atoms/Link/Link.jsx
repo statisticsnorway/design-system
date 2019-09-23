@@ -36,6 +36,7 @@ Link.propTypes = {
 };
 
 export default Link;
+
 /*
 options:
 	href: required string for url

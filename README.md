@@ -46,7 +46,6 @@ file, a [test](#testing) file and a [stylesheet](#styling).
 
 #### Components
 
-
 #### Storybook
 [Storybook](https://storybook.js.org/) is an open source tool for developing UI components in an isolated environment.
 It is also a useful tool for demoing components by themselves or put together into a user scenario.

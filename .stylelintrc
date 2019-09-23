@@ -6,7 +6,6 @@
     "color-hex-length": "short",
     "color-named": "never",
     "color-no-invalid-hex": true,
-
     "comment-empty-line-before": [ "always", {
       "ignore": ["stylelint-commands", "after-comment"]
     } ],
@@ -19,6 +18,6 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-whitelist": ["em", "rem", "%", "s", "px", "deg", "vh", "vw"]
+    "unit-whitelist": ["em", "%", "s", "px", "deg", "vh", "vw", "fr"]
   }
 }

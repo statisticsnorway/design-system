@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '@atoms/Link/Link';
+import { AlertCircle, AlertTriangle } from 'react-feather';
 
 const Dialog = ({
 	href, linkText, text, title, type,
 }) => (
 	<div className={`dialog-container ${type}`}>
 		<div className="icon-bar">
-			<i data-feather="alert-circle" />
+			{type === 'warning' && <AlertTriangle size="36" />}
+			{type === 'info' && <AlertCircle size="36" />}
 		</div>
 		<div className="info-content">
 			<h5><strong>{title}</strong></h5>

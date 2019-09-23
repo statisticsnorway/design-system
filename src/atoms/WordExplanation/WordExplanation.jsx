@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import { FileText } from 'react-feather';
 
 const WordExplanation = ({
 	explanation, children,
@@ -49,7 +50,7 @@ const WordExplanation = ({
 
 	return (
 		<span ref={node} onClick={() => setOpen(!open)} className="word-explanation-wrap">
-			{children}<i />&nbsp;
+			{children}<FileText size="12" />
 			<div className="animate-background" />
 			{open && (
 				<div className="info-box-wrapper" ref={infoContainer} style={{ top: position.y, left: position.x }}>

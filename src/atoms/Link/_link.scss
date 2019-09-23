@@ -13,6 +13,10 @@ $icon-padding: 8px;
 
   .link-text {
     z-index: 2;
+
+    svg {
+      z-index: 2;
+    }
   }
 
   a {

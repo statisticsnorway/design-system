@@ -1,32 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RadioButton = ({
+const Checkbox = ({
 	index, children, callback, selected, value,
 }) => (
-	<div tabIndex={index + 1} className="radio-button-wrapper" onClick={() => callback(value)}>
+	<div tabIndex={index + 1} className="checkbox-button-wrapper" onClick={() => callback(value)}>
 		<label htmlFor={value}>
 			{children}
 			<input
 				id={value}
 				value={value}
-				type="radio"
+				type="checkbox"
 				checked={selected}
 				onChange={() => callback(value)}
 			/>
-			<span className="radio-mark" />
+			<span className="check-mark" />
 		</label>
 	</div>
 );
 
-RadioButton.defaultProps = {
-	callback: () => {},
-	index: 1,
-};
+Checkbox.defaultProps = {};
 
-RadioButton.propTypes = {
+Checkbox.propTypes = {
 	callback: PropTypes.func,
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	index: PropTypes.number,
 	selected: PropTypes.bool,
 	value: PropTypes.oneOfType([
@@ -35,7 +32,7 @@ RadioButton.propTypes = {
 	]).isRequired,
 };
 
-export default RadioButton;
+export default Checkbox;
 
 /*
 options:

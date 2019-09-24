@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RadioButton from '@atoms/RadioButton/RadioButton';
 
 const RadioGroup = ({
-	items, onChange, selectedValue,
+	header, items, onChange, selectedValue,
 }) => {
 	const [selected, updateSelected] = useState(selectedValue);
 
@@ -13,6 +13,7 @@ const RadioGroup = ({
 
 	return (
 		<div className="radio-group-wrapper">
+			{header && <h5>{header}</h5>}
 			{items.map((it, index) => (
 				<RadioButton
 					key={it.value}
@@ -32,6 +33,7 @@ RadioGroup.defaultProps = {
 };
 
 RadioGroup.propTypes = {
+	header: PropTypes.string,
 	items: PropTypes.arrayOf(PropTypes.shape({
 		label: PropTypes.string,
 		value: PropTypes.string,

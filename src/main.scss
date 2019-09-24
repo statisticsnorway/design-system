@@ -9,19 +9,23 @@
 
 // atoms
 @import 'atoms/Button/button';
+@import 'atoms/Checkbox/checkbox';
 @import 'atoms/Divider/divider';
 @import 'atoms/Dropdown/dropdown';
 @import 'atoms/Input/input';
 @import 'atoms/Link/link';
 @import 'atoms/Number/number';
-@import 'molecules/RadioGroup/radio-group';
+@import 'atoms/RadioButton/radio-button';
+
 @import 'atoms/Tabs/tabs';
 @import 'atoms/TreeMenu/tree-menu';
 @import 'atoms/WordExplanation/word-explanation';
 
 // molecules
+@import 'molecules/CheckboxGroup/checkbox-group';
 @import 'molecules/Dialog/dialog';
 @import 'molecules/FactBox/fact-box';
+@import 'molecules/RadioGroup/radio-group';
 @import 'molecules/ReferenceLink/reference-link';
 @import 'molecules/ProfileBox/profile-box';
 

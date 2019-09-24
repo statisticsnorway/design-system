@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import RadioGroup from './RadioGroup';
+import CheckboxGroup from './CheckboxGroup';
 
-const radioItems = [
+const checkboxItems = [
 	{
 		label: 'Item 1',
 		value: 'item1',
@@ -16,9 +16,9 @@ const radioItems = [
 	},
 ];
 
-storiesOf('Molecules|RadioGroup', module).addDecorator(centered)
+storiesOf('Molecules|CheckboxGroup', module).addDecorator(centered)
 	.add('Default', () => (
 		<div>
-			<RadioGroup header="Header" items={radioItems} />
+			<CheckboxGroup header="Header" items={checkboxItems} />
 		</div>
 	));

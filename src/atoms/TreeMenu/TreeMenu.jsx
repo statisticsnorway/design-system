@@ -13,9 +13,9 @@ const TreeMenu = ({
 	const [sectionWidth, updateWidth] = useState(0);
 
 	useEffect(() => {
-		console.log('Selected path changed: ', selectedPath);
 		updateWidth(itemsSection.current.offsetWidth);
 	}, [selectedPath]);
+
 	return (
 		<div className="tree-menu-wrapper">
 			<div ref={itemsSection} className="items-section">

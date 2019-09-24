@@ -8,7 +8,7 @@ const Dropdown = ({
 	header, items, onSelect, open, placeholder, searchable, selectedItem,
 }) => {
 	const node = useRef();
-	const [isOpen, setOpen] = useState(false);
+	const [isOpen, setOpen] = useState(open);
 	const [availableOptions, filterOptions] = useState(items);
 	const [selectedOption, selectItem] = useState(selectedItem || { title: '', id: '' });
 	const [inputFieldValue, updateInputValue] = useState('');
@@ -81,6 +81,7 @@ Dropdown.defaultProps = {
 	header: '',
 	items: [{ id: '', title: '' }],
 	onSelect: () => {},
+	open: false,
 	searchable: false,
 	placeholder: '-- Select --',
 };

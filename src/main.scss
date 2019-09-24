@@ -22,9 +22,11 @@
 @import 'atoms/WordExplanation/word-explanation';
 
 // molecules
+@import 'molecules/Accordion/accordion';
 @import 'molecules/CheckboxGroup/checkbox-group';
 @import 'molecules/Dialog/dialog';
 @import 'molecules/FactBox/fact-box';
+@import 'molecules/NestedAccordion/nested-accordion';
 @import 'molecules/RadioGroup/radio-group';
 @import 'molecules/ReferenceLink/reference-link';
 @import 'molecules/ProfileBox/profile-box';

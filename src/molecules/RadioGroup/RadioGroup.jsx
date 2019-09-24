@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import RadioButton from '@atoms/RadioButton/RadioButton';
 
 const RadioGroup = ({
 	items, onChange, selectedValue,
@@ -13,19 +14,14 @@ const RadioGroup = ({
 	return (
 		<div className="radio-group-wrapper">
 			{items.map((it, index) => (
-				<div tabIndex={index + 1} className="radio-button-wrapper" key={it.value} onClick={() => updateSelected(it.value)}>
-					<label htmlFor={it.value}>
-						{it.label}
-						<input
-							id={it.value}
-							value={it.value}
-							type="radio"
-							checked={selected === it.value}
-							onChange={() => updateSelected(it.value)}
-						/>
-						<span className="radio-mark" />
-					</label>
-				</div>
+				<RadioButton
+					key={it.value}
+					index={index}
+					selected={it.value === selected}
+					value={it.value}
+					callback={updateSelected}
+				>{it.label}
+				</RadioButton>
 			))}
 		</div>
 	);
@@ -36,9 +32,19 @@ RadioGroup.defaultProps = {
 };
 
 RadioGroup.propTypes = {
-	items: PropTypes.array,
+	items: PropTypes.arrayOf(PropTypes.shape({
+		label: PropTypes.string,
+		value: PropTypes.string,
+	})).isRequired,
 	onChange: PropTypes.func,
 	selectedValue: PropTypes.string,
 };
 
 export default RadioGroup;
+
+/*
+options:
+	items: required options for radio group
+	onChange: optional callback
+	selectedValue: optional selection on init
+ */

@@ -19,22 +19,6 @@ body {
       display: grid;
     }
 
-    > main {
-      display: grid;
-      flex-grow: 1;
-      grid-template-columns: minmax(10%, 280px) 1fr;
-
-      > aside {
-        padding-top: 60px;
-      }
-
-      > section {
-        border-left: 1px solid $ssb-dark-5;
-        padding-left: $global-padding-size * 2;
-        padding-top: 60px;
-      }
-    }
-
     footer {
       width: 100%;
     }

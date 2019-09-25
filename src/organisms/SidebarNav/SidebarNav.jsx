@@ -7,7 +7,6 @@ const SidebarNav = ({
 	navItems,
 }) => (
 	<div>
-		<Input label="Search for e.g tabs" />
 		<TreeMenu items={navItems} />
 	</div>
 );

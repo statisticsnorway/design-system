@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import logo from '@public/ssb-logo.svg';
 import Link from '@atoms/Link/Link';
 import Tabs from '@atoms/Tabs/Tabs';
@@ -24,7 +25,7 @@ const Header = () => (
 	<div className="header-component-wrapper">
 		<div className="upper-section">
 			<div className="logo-and-title">
-				<img src={logo} alt="logo" />
+				<NavLink to="/"><img src={logo} alt="logo" /></NavLink>
 				<div className="diagonal-divider" />
 				<h3>Design System</h3>
 			</div>

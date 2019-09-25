@@ -1,37 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { MinusCircle, PlusCircle } from 'react-feather';
-
-/*
-props
-  header: required string prop
-  open: optional boolean for opening on init
-  text: required string or element to serve as body content
- */
+import Accordion from '@molecules/Accordion/Accordion';
 
 const FactBox = ({
-	header, open, text,
-}) => {
-	const [isOpen, toggleOpen] = useState(open);
-	return (
-		<div className="fact-box-wrapper">
-			<div className="fact-header" onClick={() => toggleOpen(!isOpen)}>
-				{!isOpen && <PlusCircle className="icon" />}
-				{isOpen && <MinusCircle className="icon" />}
-				<h5>{header}</h5>
-			</div>
-			{isOpen && <div className="fact-body">{text}</div>}
-		</div>
-	);
-};
+	header, openByDefault, text,
+}) => (
+	<div className="fact-box-wrapper">
+		<Accordion primary header={header} openByDefault={openByDefault}>
+			{text}
+		</Accordion>
+	</div>
+);
 
 FactBox.defaultProps = {
-	open: false,
+	openByDefault: false,
 };
 
 FactBox.propTypes = {
 	header: PropTypes.string.isRequired,
-	open: PropTypes.bool,
+	openByDefault: PropTypes.bool,
 	text: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.element,
@@ -39,3 +26,10 @@ FactBox.propTypes = {
 };
 
 export default FactBox;
+
+/*
+props
+  header: required string prop
+  openByDefault: optional boolean for opening on init
+  text: required string or element to serve as body content
+ */

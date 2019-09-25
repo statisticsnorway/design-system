@@ -1,23 +1,6 @@
 .fact-box-wrapper {
   border: 1px solid $ssb-green-4;
-  margin: $global-padding-size 0;
-  max-width: 500px;
+  margin: ($global-padding-size * 2) 0;
+  padding: ($global-padding-size * 2);
   width: 100%;
-
-  .fact-header {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    padding: ($global-padding-size * 2);
-
-    .icon {
-      color: $ssb-green-3;
-      margin-right: $global-padding-size;
-    }
-  }
-
-  .fact-body {
-    padding: 0 57px 20px;
-  }
-
 }

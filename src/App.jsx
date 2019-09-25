@@ -7,35 +7,39 @@ import GetStarted from '@pages/GetStarted/GetStarted';
 import Templates from '@pages/Templates/Templates';
 import Welcome from '@pages/Welcome/Welcome';
 
-function App() {
-	return (
-		<div className="app">
-			<div className="app-content">
-				<header className="app-header">
-					<Header />
-				</header>
-				<main>
-					<Switch>
-						<Route exact path="/">
-							<Welcome />
-						</Route>
-						<Route path="/get-started">
-							<GetStarted />
-						</Route>
-						<Route path="/components">
-							<Components />
-						</Route>
-						<Route path="/templates">
-							<Templates />
-						</Route>
-					</Switch>
-				</main>
-			</div>
-			<footer>
-				<Footer />
-			</footer>
+const NoMatchPage = () => <h3>404 - Not found</h3>;
+
+const App = () => (
+	<div className="app">
+		<div className="app-content">
+			<header className="app-header">
+				<Header />
+			</header>
+			<main>
+				<Switch>
+					<Route exact path="/">
+						<Welcome />
+					</Route>
+					<Route path="/design-system"> {/* For GH pages */}
+						<Welcome />
+					</Route>
+					<Route path="/get-started">
+						<GetStarted />
+					</Route>
+					<Route path="/components" component={Components}>
+						{/*<Components />*/}
+					</Route>
+					<Route path="/templates">
+						<Templates />
+					</Route>
+					<Route component={NoMatchPage} />
+				</Switch>
+			</main>
 		</div>
-	);
-}
+		<footer>
+			<Footer />
+		</footer>
+	</div>
+);
 
 export default App;

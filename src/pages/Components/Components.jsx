@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Route, Switch } from 'react-router-dom';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 
 const sidebarItems = [
@@ -37,17 +38,30 @@ const sidebarItems = [
 	},
 ];
 
-const Components = () => (
+const Components = ({ match }) => (
 	<div className="components page-wrapper">
 		<aside>
-			<TreeMenu items={sidebarItems} />
+			<TreeMenu items={sidebarItems} match={match} />
 		</aside>
-		<section>Main content</section>
+		<section>
+			<Switch>
+				{sidebarItems.map(item => (
+					<Route exact path={match.url + item.path} key={item.path}>
+						<h2>Components/{item.label}</h2>
+					</Route>
+				))}
+				<Route exact path={match.url}>
+					<h2>Main content</h2>
+				</Route>
+			</Switch>
+		</section>
 	</div>
 );
 
 Components.defaultProps = {};
 
-Components.propTypes = {};
+Components.propTypes = {
+	match: PropTypes.object,
+};
 
 export default Components;

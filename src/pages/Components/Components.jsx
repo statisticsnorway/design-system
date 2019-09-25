@@ -38,7 +38,7 @@ const sidebarItems = [
 ];
 
 const Components = () => (
-	<div className="component-page-wrapper">
+	<div className="components page-wrapper">
 		<aside>
 			<TreeMenu items={sidebarItems} />
 		</aside>

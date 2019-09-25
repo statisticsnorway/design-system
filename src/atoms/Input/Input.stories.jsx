@@ -8,13 +8,28 @@ const handleChange = e => {
 	someValue = e;
 };
 
+const handleSubmit = e => {
+	console.log(e);
+};
+
 storiesOf('Atoms|Input', module).addDecorator(centered)
 	.add('Default', () => (
-		<Input value={someValue} handleChange={handleChange} />
+		<div style={{ width: '300px' }}>
+			<Input value={someValue} handleChange={handleChange} />
+		</div>
+	))
+	.add('Search field', () => (
+		<div style={{ width: '300px' }}>
+			<Input searchField submitCallback={handleSubmit} />
+		</div>
 	))
 	.add('With value', () => (
-		<Input value="Already filled" />
+		<div style={{ width: '300px' }}>
+			<Input value="Already filled" />
+		</div>
 	))
 	.add('Disabled', () => (
-		<Input disabled />
+		<div style={{ width: '300px' }}>
+			<Input disabled />
+		</div>
 	));

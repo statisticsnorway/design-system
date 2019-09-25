@@ -5,7 +5,9 @@
 }
 
 .input-field-wrapper {
+  align-items: center;
   cursor: text;
+  display: flex;
   margin: $global-padding-size;
   position: relative;
 
@@ -21,6 +23,7 @@
     font-size: 16px;
     height: $input-field-height;
     padding: 4px $global-padding-size;
+    text-overflow: ellipsis;
     width: 100%;
 
     &:disabled {
@@ -43,6 +46,10 @@
       @include activate-label;
       color: $ssb-green-4;
     }
+
+    &.has-icon {
+      padding-right: $input-field-height;
+    }
   }
 
   label {
@@ -59,4 +66,18 @@
       @include activate-label;
     }
   }
+
+  .clickable-button {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: $input-field-height;
+    margin-left: -$input-field-height;
+    width: $input-field-height;
+
+    .search-icon {
+      color: $ssb-green-3;
+    }
+  }
+
 }

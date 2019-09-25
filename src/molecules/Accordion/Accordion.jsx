@@ -18,7 +18,7 @@ const Accordion = ({
 				<h5 className="header-text">{header}</h5>
 			</div>
 			<div className={`accordion-body ${isOpen ? 'open' : 'closed'}`}>
-				{children}
+				{isOpen && children}
 			</div>
 		</div>
 	);

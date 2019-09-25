@@ -18,7 +18,7 @@ const NestedAccordion = ({
 				<span className="header-text">{header}</span>
 			</div>
 			<div className={`nested-accordion-body ${isOpen ? 'open' : 'closed'}`}>
-				{children}
+				{isOpen && children}
 			</div>
 		</div>
 	);

@@ -17,23 +17,8 @@ const sidebarItems = [
 			path: '/secondary',
 		}],
 	}, {
-		label: 'Item 2',
-		path: '/item2',
-		items: [{
-			label: 'Item 1',
-			path: '/item1',
-			items: [{
-				label: 'Item 1',
-				path: '/item1',
-			}],
-		}],
-	}, {
-		label: 'Item 3',
-		path: '/item3',
-	}, {
 		label: 'Button',
 		path: '/button',
-		component: Button,
 	},
 ];
 
@@ -53,6 +38,7 @@ const Components = ({ match }) => (
 					<h2>Main content</h2>
 				</Route>
 				<Route path={`${match.url}/accordion/:type`} component={AccordionInfo} />
+				{/*<Route path={`${match.url}/button`} component={Button} />*/}
 			</Switch>
 		</section>
 	</div>

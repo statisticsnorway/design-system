@@ -6,7 +6,7 @@ $negative-disable-color: $label-color;
   border-radius: 2px;
   display: flex;
   margin-right: 20px;
-  padding: 8px 13px;
+  padding: $global-padding-size ($global-padding-size * 2);
 
   &:hover, &:active {
     cursor: pointer;

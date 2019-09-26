@@ -1,16 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
-import { NavLink } from 'react-router-dom';
 import { ChevronRight } from 'react-feather';
 
 const TreeMenu = ({
-	items, match,
+	activeItem, items, onSelect,
 }) => {
 	const node = useRef();
-	const [activeSubmenu, changeSubmenu] = useState({});
 	const itemsSection = useRef();
+	const [activeSubmenu, changeSubmenu] = useState({});
 	const [sectionWidth, updateWidth] = useState(0);
+
+	const handleSelection = e => {
+		if (activeSubmenu) {
+			changeSubmenu({});
+		}
+		onSelect(e);
+	};
 
 	const handleClickOutside = e => {
 		if (!node.current.contains(e.target)) {
@@ -39,29 +45,30 @@ const TreeMenu = ({
 						? (
 							<div
 								key={uuid()}
-								className={`tree-node ${item.path === match.url && 'selected'}`}
+								className={`tree-node ${item.path === activeItem && 'selected'}`}
 								onClick={() => changeSubmenu(item)}
 							>{item.label}{item.items && <ChevronRight className="arrow-icon" size="18" />}
 							</div>
 						) : (
-							<NavLink key={uuid()} activeClassName="selected" className="tree-node" to={match.url + item.path}>
-								{item.label}
-							</NavLink>
+							<div
+								key={uuid()}
+								className={`tree-node ${item.path === activeItem && 'selected'}`}
+								onClick={() => handleSelection(item.path)}
+							>{item.label}
+							</div>
 						)
 				))}
 			</div>
 			{Object.keys(activeSubmenu).length > 0 && (
 				<div ref={node} className="items-section sub-menu" style={{ right: `-${sectionWidth}px` }}>
-					{activeSubmenu.items.map(it => (
-						<NavLink
-							key={it.path}
-							activeClassName="selected"
-							className="tree-node"
-							to={match.url + (activeSubmenu.path + it.path)}
-							onClick={() => changeSubmenu({})}
+					{activeSubmenu.items.map(item => (
+						<div
+							key={item.path}
+							className={`tree-node ${(activeSubmenu.path + item.path) === activeItem && 'selected'}`}
+							onClick={() => handleSelection(activeSubmenu.path + item.path)}
 						>
-							{it.label}
-						</NavLink>
+							{item.label}
+						</div>
 					))}
 				</div>
 			)}
@@ -72,8 +79,9 @@ const TreeMenu = ({
 TreeMenu.defaultProps = {};
 
 TreeMenu.propTypes = {
+	activeItem: PropTypes.string,
 	items: PropTypes.arrayOf(PropTypes.object),
-	match: PropTypes.object.isRequired,
+	onSelect: PropTypes.func,
 };
 
 export default TreeMenu;

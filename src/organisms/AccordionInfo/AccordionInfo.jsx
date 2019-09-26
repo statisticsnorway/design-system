@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
 import Accordion from '@molecules/Accordion/Accordion';
@@ -8,7 +9,7 @@ const subHeader = `
 Accordions maximizes efficiency and saves space by expand and collapse sections of content.
 This allows the user to display the content of their choosing,
 therefore accordion components are always closed by default.
-`
+`;
 
 const tabItems = [
 	{
@@ -23,15 +24,19 @@ const tabItems = [
 	},
 ];
 
-const AccordionInfo = ({ match }) => {
+const AccordionInfo = withRouter(({ history, match }) => {
 	console.log(match);
+	const callBack = e => {
+		console.log(e);
+	};
+
 	return (
-		<div>
-			<h1>Accordion</h1>
+		<div className="col-lg-12">
+			<h1 onClick={() => history.push('/')}>Accordion</h1>
 			<LeadParagraph>
 				{subHeader}
 			</LeadParagraph>
-			<Tabs items={tabItems} />
+			<Tabs items={tabItems} onClick={callBack} />
 			<div className="row">
 				<div className="col-lg-6">
 					<h3>{match.params.type}</h3>
@@ -48,7 +53,7 @@ const AccordionInfo = ({ match }) => {
 			</div>
 		</div>
 	);
-}
+});
 
 AccordionInfo.defaultProps = {};
 

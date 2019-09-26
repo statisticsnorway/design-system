@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import logo from '@public/ssb-logo.svg';
 import Link from '@atoms/Link/Link';
 import Tabs from '@atoms/Tabs/Tabs';
@@ -21,11 +21,13 @@ const items = [
 	},
 ];
 
-const Header = () => (
+const Header = withRouter(({ history }) => (
 	<div className="header-component-wrapper">
 		<div className="upper-section">
 			<div className="logo-and-title">
-				<NavLink to="/"><img src={logo} alt="logo" /></NavLink>
+				<div className="home-nav" onClick={() => history.push('/')}>
+					<img src={logo} alt="logo" />
+				</div>
 				<div className="diagonal-divider" />
 				<h3>Design System</h3>
 			</div>
@@ -35,7 +37,7 @@ const Header = () => (
 		</div>
 		<nav className="lower-section">
 			<div>
-				<Tabs items={items} />
+				<Tabs items={items} onClick={e => history.push(e)} />
 			</div>
 			<div className="links">
 				<Link
@@ -47,7 +49,7 @@ const Header = () => (
 			</div>
 		</nav>
 	</div>
-);
+));
 
 Header.defaultProps = {};
 

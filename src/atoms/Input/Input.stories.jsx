@@ -14,7 +14,7 @@ const handleSubmit = e => {
 
 storiesOf('Atoms|Input', module).addDecorator(centered)
 	.add('Default', () => (
-		<div style={{ width: '300px' }}>
+		<div style={{ width: '300px', height: '300px', background: 'black', display: 'flex', alignItems: 'center' }}>
 			<Input value={someValue} handleChange={handleChange} />
 		</div>
 	))

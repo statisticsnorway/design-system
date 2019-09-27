@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+
+  li {
+    float: left;
+    padding: 8px 16px;
+    list-style: none;
+
+    a {
+      color: $ssb-green-4;
+      text-decoration: none;
+    }
+
+    &:hover {
+      border: 1px solid $ssb-green-4;
+      font-weight: bold;
+    }
+  }
+
+  .pagination-item.active {
+    background: $ssb-green-4;
+
+    a {
+      color: $ssb-white;
+      font-weight: bold;
+    }
+  }
+}
+

@@ -42,18 +42,25 @@ module.exports = api => {
 			'@babel/preset-react',
 			['@babel/preset-env', { modules: false }],
 		],
-		plugins: [],
+		plugins: [
+			['prismjs', {
+				languages: ['javascript', 'html', 'css', 'jsx'],
+				plugins: ['line-numbers'],
+				theme: 'coy',
+				css: true,
+			}],
+		],
 	};
 
-	console.log(`Babel registered environment variable: ${process.env['ENV']}`);
+	console.log(`Babel registered environment variable: ${process.env.ENV}`);
 
-	if (process.env['ENV'] === 'development') {
+	if (process.env.ENV === 'development') {
 		return development;
 	}
-	if (process.env['ENV'] === 'test') {
+	if (process.env.ENV === 'test') {
 		return test;
 	}
-	if (process.env['ENV'] === 'production') {
+	if (process.env.ENV === 'production') {
 		return production;
 	}
 

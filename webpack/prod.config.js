@@ -1,9 +1,9 @@
 const merge = require('webpack-merge');
 const path = require('path');
 const sass = require('sass');
-const base = require('./base.config');
 const TerserPlugin = require('terser-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
+const base = require('./base.config');
 
 const babelConf = path.resolve(__dirname, '../babel.config.js');
 console.log('Starting production build');
@@ -31,7 +31,7 @@ module.exports = merge(base, {
 				],
 			},
 			{
-				test: /\.scss$/i,
+				test: /\.(s*)css$/i,
 				use: [
 					'style-loader',
 					'css-loader',

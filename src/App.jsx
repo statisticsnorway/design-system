@@ -27,7 +27,7 @@ const App = () => (
 						<GetStarted />
 					</Route>
 					<Route path="/components" component={Components}>
-						{/*<Components />*/}
+						<Components />
 					</Route>
 					<Route path="/templates">
 						<Templates />

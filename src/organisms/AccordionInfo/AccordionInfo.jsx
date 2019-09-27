@@ -4,6 +4,7 @@ import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
 import Accordion from '@molecules/Accordion/Accordion';
 import Divider from '@atoms/Divider/Divider';
+import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 
 const leadParagraphText = `
 Accordions maximizes efficiency and saves space by expand and collapse sections of content.
@@ -39,6 +40,13 @@ const tabItems = [
 	},
 ];
 
+const codeExample = `
+<Accordion primary header="This is a primary header">
+	This is paragraph text which explains the accordion,
+	the rest of the text is just to fill it out and show the space it takes.
+</Accordion>
+`;
+
 const AccordionInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const tabClicked = e => {
@@ -62,6 +70,9 @@ const AccordionInfo = () => {
 						</div>
 						<div className="col-lg-6">
 							<Accordion primary header="This is a primary header">{accordionFillerText}</Accordion>
+						</div>
+						<div className="col-lg-12 mt-3">
+							<CodeSnippet code={codeExample} language="jsx" />
 						</div>
 					</div>
 					<Divider light className="mb-4" />

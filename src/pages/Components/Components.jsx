@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
-import Button from '@atoms/Button/Button';
 
 const sidebarItems = [
 	{
@@ -57,7 +56,7 @@ const Components = withRouter(({ history, match }) => {
 				</Switch>
 			</section>
 		</div>
-	)
+	);
 });
 
 Components.defaultProps = {};

@@ -5,7 +5,7 @@ module.exports = {
 	module: {
 		rules: [{
 			include: path.resolve(__dirname, '../'),
-			test: /\.s[ac]ss$/i,
+			test: /\.(s*)css$/i,
 			use: [
 				'style-loader',
 				'css-loader',

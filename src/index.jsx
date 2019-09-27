@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 ReactDOM.render(
-	<HashRouter basename={process.env.NODE_ENV === 'production' && process.env.PUBLIC_URL} history={history}>
+	<HashRouter basename={process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : ''} history={history}>
 		<App />
 	</HashRouter>,
 	document.getElementById('root'),

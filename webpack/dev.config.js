@@ -37,7 +37,7 @@ module.exports = merge(base, {
 				],
 			},
 			{
-				test: /\.scss$/i,
+				test: /\.(s*)css$/i,
 				use: [
 					'style-loader',
 					'css-loader',

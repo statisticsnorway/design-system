@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
 import Accordion from '@molecules/Accordion/Accordion';
@@ -92,9 +91,5 @@ const AccordionInfo = () => {
 		</div>
 	);
 };
-
-AccordionInfo.defaultProps = {};
-
-AccordionInfo.propTypes = {};
 
 export default AccordionInfo;

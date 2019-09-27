@@ -5,6 +5,7 @@ $negative-disable-color: $label-color;
   align-items: center;
   border-radius: 2px;
   display: flex;
+  height: fit-content;
   margin-right: 20px;
   padding: $global-padding-size ($global-padding-size * 2);
 

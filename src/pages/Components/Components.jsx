@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
+import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
 
 const sidebarItems = [
 	{
@@ -53,6 +54,7 @@ const Components = withRouter(({ history, match }) => {
 						<h2>Main content</h2>
 					</Route>
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
+					<Route path={`${match.url}/button`} component={ButtonInfo} />
 				</Switch>
 			</section>
 		</div>

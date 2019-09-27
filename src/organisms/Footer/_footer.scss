@@ -1,5 +1,18 @@
 .footer-wrapper {
   background: $ssb-dark-5;
   color: $ssb-white;
-  padding: 40px;
+  column-gap: 100px;
+  display: grid;
+  grid-template-columns: 280px auto;
+  padding: 80px 110px;
+
+  p {
+    color: $ssb-white;
+  }
+
+  .logo {
+    color: $ssb-white;
+    margin-top: -5px;
+    width: 280px;
+  }
 }

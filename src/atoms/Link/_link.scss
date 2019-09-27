@@ -2,6 +2,8 @@ $profiled-font-size: 18px;
 $header-font-size: 18px;
 $icon-padding: 8px;
 
+// TODO: See if this could be more efficient: https://codepen.io/kristoffer-lund/pen/gOYyKYv
+
 .link {
   cursor: pointer;
   display: inline-block;

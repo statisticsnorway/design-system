@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import './main.scss';
-import { Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -15,9 +15,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 ReactDOM.render(
-	<Router history={history}>
+	<HashRouter basename={process.env.NODE_ENV === 'production' && process.env.PUBLIC_URL} history={history}>
 		<App />
-	</Router>,
+	</HashRouter>,
 	document.getElementById('root'),
 );
 

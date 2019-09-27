@@ -47,6 +47,7 @@
     "brotli-webpack-plugin": "^1.1.0",
     "cross-env": "^6.0.0",
     "css-loader": "^3.2.0",
+    "dotenv": "^8.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",

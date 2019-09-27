@@ -11,7 +11,7 @@ const Link = ({
 				href={href}
 				target={isExternal ? '_blank' : ''}
 				rel={isExternal ? 'noopener noreferrer' : ''}
-			>{icon}<span className="link-text">{text}</span> {/* TODO: Add proper icon and give it higher z-index */}
+			>{icon}<span className="link-text">{text}</span>
 			</a>
 		</div>
 		<div className="animate-background" />

@@ -1,4 +1,4 @@
-module.exports = (api) => {
+module.exports = api => {
 	api.cache(false);
 
 	const development = {
@@ -9,7 +9,15 @@ module.exports = (api) => {
 				targets: { node: 'current' },
 			}],
 		],
-		plugins: [['@babel/plugin-transform-modules-commonjs', {}]],
+		plugins: [
+			['@babel/plugin-transform-modules-commonjs', {}],
+			['prismjs', {
+				languages: ['javascript', 'html', 'css', 'jsx'],
+				plugins: ['line-numbers'],
+				theme: 'coy',
+				css: true,
+			}],
+		],
 	};
 
 	const test = {

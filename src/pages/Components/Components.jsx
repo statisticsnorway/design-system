@@ -4,6 +4,7 @@ import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
+import DividerInfo from '@organisms/DividerInfo/DividerInfo';
 import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
 
 const sidebarItems = [
@@ -59,6 +60,7 @@ const Components = withRouter(({ history, match }) => {
 					</Route>
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
 					<Route path={`${match.url}/button`} component={ButtonInfo} />
+					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />
 				</Switch>
 			</section>

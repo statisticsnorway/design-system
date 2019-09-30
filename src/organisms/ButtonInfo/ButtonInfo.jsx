@@ -4,16 +4,8 @@ import Divider from '@atoms/Divider/Divider';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
 import Button from '@atoms/Button/Button';
-import { ChevronDown, X } from 'react-feather';
-
-const leadParagraphText = `
-Buttons make common actions more obvious and help users more easily perform them.
-Buttons use labels and sometimes icons to communicate the action that will occur when the user touches them.
-`;
-
-const primaryButtonText = `
-Primary button is the primary one
-`;
+import Link from '@atoms/Link/Link';
+import { ChevronDown } from 'react-feather';
 
 const tabItems = [
 	{
@@ -30,20 +22,22 @@ const tabItems = [
 
 const codeExamplePrimary = `
 <Button text="Primary" primary />
-<Button text="Primary" primary icon={<ChevronDown size="26" />} />
 <Button text="Primary" primary disabled />
 `;
 
 const codeExampleSecondary = `
 <Button text="Secondary" />
-<Button text="Secondary" icon={<ChevronDown size="26" />} />
 <Button text="Secondary" disabled />
 `;
 
-const codeExampleDanger = `
-<Button text="Primary" primary danger />
-<Button text="Primary" primary danger icon={<ChevronDown size="26" />} />
-<Button danger primary icon={<X size="26" />} />
+const codeExampleIcon = `
+<Button text="Primary" primary icon={<ChevronDown size="26" />} />
+<Button text="Secondary" icon={<ChevronDown size="26" />} />
+`;
+
+const codeExampleDisabled = `
+<Button text="Primary" primary disabled />
+<Button text="Secondary" disabled />
 `;
 
 const ButtonInfo = () => {
@@ -56,22 +50,36 @@ const ButtonInfo = () => {
 		<div className="col-lg-12">
 			<h1>Button</h1>
 			<LeadParagraph>
-				{leadParagraphText}
+				Buttons are used to communicate clear actions and help users to perform these actions.
+				The button component consists of a label and sometimes an icon to communicate the action that the user is able to perform.
+				The label should be as short as possible and not extend to two lines.
 			</LeadParagraph>
+
+			<ul className="mb-3 col-lg-8">
+				<li>
+					Primary and secondary buttons are not used to navigate the user to external pages outside of the solution.
+					Use instead <Link href="/#/components/link" text="links" />.
+				</li>
+				<li>
+					Buttons are generally used for performing actions and not for multiple-choices,
+					try instead to use check box or radios buttons instead if possible.
+				</li>
+			</ul>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider />
+
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
 						<h3 className="col-lg-12">Primary Button</h3>
 						<div className="col-lg-6">
 							<p>
-								Primary button is the primary one and it is super important.
+								The primary button are used to indicate a primary action for the user, an action that is critical in a users workflow.
+								This can be for example a primary action such as ”submit” on a form or ”Login” on the login page.
 							</p>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Primary" primary />
-							<Button text="Primary" primary icon={<ChevronDown size="26" />} />
 							<Button text="Primary" primary disabled />
 						</div>
 						<div className="col-lg-12">
@@ -83,12 +91,14 @@ const ButtonInfo = () => {
 						<h3 className="col-lg-12">Secondary Button</h3>
 						<div className="col-lg-6">
 							<p>
-								Secondary button is also important, but not as much as primary.
+								The secondary button is used to indicate actions that are important,
+								but not as critical to the user as the primary button.
+								It can be used together with a primary button to create hierarchy
+								or together with other secondary buttons to indicate a similar hierarchy.
 							</p>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Secondary" />
-							<Button text="Secondary" icon={<ChevronDown size="26" />} />
 							<Button text="Secondary" disabled />
 						</div>
 						<div className="col-lg-12">
@@ -97,19 +107,75 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Danger Button</h3>
+						<h3 className="col-lg-12">Button with an icon</h3>
 						<div className="col-lg-6">
 							<p>
-								We hope to not cause any danger, so let&apos;s forget about this.
+								Both the primary and secondary button can be implemented with an icon,
+								these buttons can be used when it is needed to use an icon to communicate an action
+								or create further distinctions between the buttons.
 							</p>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
-							<Button text="Secondary" primary danger />
-							<Button text="Secondary" primary danger icon={<ChevronDown size="26" />} />
-							<Button danger primary icon={<X size="26" />} />
+							<Button text="Primary" primary icon={<ChevronDown size="26" />} />
+							<Button text="Secondary" icon={<ChevronDown size="26" />} />
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={codeExampleDanger} language="jsx" />
+							<CodeSnippet code={codeExampleIcon} language="jsx" />
+						</div>
+					</div>
+
+					<div className="row mb-3">
+						<h3 className="col-lg-12">Disabled Button</h3>
+						<div className="col-lg-6">
+							<p>
+								The disabled button is greyed out and can’t be clicked nor does it have a hover animation.
+								This to indicate to the user that there are no actions available with it.
+							</p>
+						</div>
+						<div className="col-lg-6 d-flex flex-row">
+							<Button text="Primary" primary disabled />
+							<Button text="Secondary" disabled />
+						</div>
+						<div className="col-lg-12">
+							<CodeSnippet code={codeExampleDisabled} language="jsx" />
+						</div>
+					</div>
+				</div>
+			)}
+
+			{activeTab === '/rationale' && (
+				<div className="mt-3">
+					<div className="row mb-3">
+						<h3 className="col-lg-4">Rounded corners</h3>
+						<div className="col-lg-8">
+							<span>
+								The choice of going with a slightly rounded corners was based on conveying a more
+								open and friendly branding for ssb.no and to create contrast with the other more squared
+								components within the library to make buttons distinctive and stand out.
+							</span>
+						</div>
+					</div>
+
+					<div className="row mb-3">
+						<h3 className="col-lg-4">Filled background</h3>
+						<div className="col-lg-8">
+							<span>
+								For secondary buttons the background of the button is always filled,
+								the reason behind this is to make sure the label inside of the button always has a
+								good contrast and visible to the user. This way the placement of secondary buttons
+								becomes more flexible and will always fulfill the UU requirements.
+							</span>
+						</div>
+					</div>
+
+					<div className="row mb-3">
+						<h3 className="col-lg-4">Underline on hover</h3>
+						<div className="col-lg-8">
+							<span>
+								All button variants have underline on hover in order to address WCAG2.0 Citerion 1.4.1.
+								”1.4.1 Use of Color: Color is not used as the only visual means of conveying
+								information, indicating an action, prompting a response, or distinguishing a visual element. (Level A)”
+							</span>
 						</div>
 					</div>
 				</div>

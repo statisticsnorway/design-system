@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import logo from '@public/ssb-logo.svg';
+import logo from '@public/ssb-logo-green.svg';
 import Link from '@atoms/Link/Link';
 import Tabs from '@atoms/Tabs/Tabs';
 import { GitHub } from 'react-feather';

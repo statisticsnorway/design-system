@@ -9,13 +9,13 @@ const sidebarItems = [
 	{
 		label: 'Accordion',
 		path: '/accordion',
-		// items: [{
-		// 	label: 'Primary',
-		// 	path: '/primary',
-		// }, {
-		// 	label: 'Secondary',
-		// 	path: '/secondary',
-		// }],
+		items: [{
+			label: 'Primary',
+			path: '/primary',
+		}, {
+			label: 'Secondary',
+			path: '/secondary',
+		}],
 	}, {
 		label: 'Button',
 		path: '/button',

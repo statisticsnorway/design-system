@@ -9,7 +9,7 @@ body {
 
   .app-content {
     display: grid;
-    grid-template-columns: minmax(320px, 1200px);
+    grid-template-columns: minmax(320px, $max-content-size);
     grid-template-rows: 182px 1fr;
     justify-content: center;
     margin: 0 $global-padding-size;

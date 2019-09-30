@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import centered from '@storybook/addon-centered/react';
 import { Facebook, Linkedin, Rss, Twitter } from 'react-feather';
 import Link from '@atoms/Link/Link';
 import logo from '@public/ssb-logo-white.svg';

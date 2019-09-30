@@ -3,7 +3,7 @@
   color: $ssb-white;
   display: grid;
   grid-row-gap: 50px;
-  grid-template-columns: minmax(auto, 1200px);
+  grid-template-columns: minmax(auto, $max-content-size);
   justify-content: center;
   padding: 80px 110px 45px;
   position: relative;

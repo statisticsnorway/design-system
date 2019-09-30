@@ -18,7 +18,7 @@ Number.defaultProps = {
 };
 
 Number.propTypes = {
-	size: PropTypes.string,
+	size: PropTypes.oneOf(['small', 'medium', 'large']),
 	number: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.number,

@@ -64,7 +64,7 @@ const App = () => (
 			</main>
 		</div>
 		<footer>
-			<Footer link={footerLink} logo={logo} slogan={slogan} socialLinks={socialLinks}>
+			<Footer scrollToTop link={footerLink} logo={logo} slogan={slogan} socialLinks={socialLinks}>
 				{/* Insert mega menu */}
 			</Footer>
 		</footer>

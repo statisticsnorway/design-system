@@ -12,18 +12,9 @@ Key numbers comes in 3 different sizes, each made for different type of placemen
 The large key number is displayed in its own row, while the medium and smaller key numbers can be placed in groups of two in the same row.
 `;
 
-const accordionFillerText = `
-This is paragraph text which explains the accordion, the rest of the text is just to fill it out and show the space it takes.
-`;
-
 const overviewText = `
-Key numbers comprises of 5 visual elements, a label describing the key number, the year, the key number, the description of the number and if necessary a text that describes the change number.
-`;
-
-const secondaryAccordionText = `
-Secondary accordion are used when the content is not necessary for the user in order to understand the page but still 
-important information to be available for viewing if needed. This can include authors, definitions,
- background etc and is there to be viewed by the user if they choose to.
+Key numbers comprises of 5 visual elements, a label describing the key number, the year,
+the key number, the description of the number and if necessary a text that describes the change number.
 `;
 
 const tabItems = [
@@ -92,7 +83,9 @@ const AccordionInfo = () => {
 					<div className="row mb-3">
 						<h3 className="col-lg-12">Element sizes</h3>
 						<div className="col-lg-6">
-							As seen in all different sizes of key numbers, only the key number itself changes size while all other elements retains the same size. This choice was made so that a clear design structure could be created and followed.
+							As seen in all different sizes of key numbers, only the key number itself changes
+							size while all other elements retains the same size.
+							This choice was made so that a clear design structure could be created and followed.
 						</div>
 						<div className="col-lg-12 mt-3 mb-3">
 							<KeyNumbers

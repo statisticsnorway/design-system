@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Pagination = ({
@@ -10,18 +10,18 @@ const Pagination = ({
 	function getPager() {
 		let startPage = 1;
 		let endPage = items;
-		if (selected <= 6) {
+		const middelPage = Math.ceil(pageLimit / 2);
+		if (selected <= middelPage) {
 			startPage = 1;
-			endPage = 10;
-		} else if (selected + 4 >= items) {
-			startPage = items - 9;
+			endPage = pageLimit;
+		} else if (selected + middelPage >= items) {
+			startPage = items - pageLimit - 1;
 			endPage = items;
 		} else {
-			startPage = selected - 5;
-			endPage = selected + 4;
+			startPage = selected - middelPage;
+			endPage = selected + middelPage - 1;
 		}
 
-		const startIndex = (selected - 1) * pageLimit;
 		const pageArray = [...Array((endPage + 1) - startPage).keys()].map(i => ({ id: (i + startPage), name: (i + startPage) }));
 
 		return {

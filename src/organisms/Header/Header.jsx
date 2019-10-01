@@ -40,12 +40,9 @@ const Header = withRouter(({ history }) => (
 				<Tabs items={items} onClick={e => history.push(e)} />
 			</div>
 			<div className="links">
-				<Link
-					href="https://github.com/statisticsnorway/design-system"
-					text="Github"
-					isExternal
-					icon={<GitHub size="18" />}
-				/>
+				<Link href="https://github.com/statisticsnorway/design-system" isExternal icon={<GitHub size="18" />}>
+					Github
+				</Link>
 			</div>
 		</nav>
 	</div>

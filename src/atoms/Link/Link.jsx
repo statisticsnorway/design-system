@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Link = ({
-	href, icon, isExternal, linkType, text,
+	children, href, icon, isExternal, linkType,
 }) => (
 	<div className="link">
 		<div className="index">
@@ -11,7 +11,7 @@ const Link = ({
 				href={href}
 				target={isExternal ? '_blank' : ''}
 				rel={isExternal ? 'noopener noreferrer' : ''}
-			>{icon}<span className="link-text">{text}</span>
+			>{icon}<span className="link-text">{children}</span>
 			</a>
 		</div>
 		<div className="animate-background" />
@@ -24,6 +24,7 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
+	children: PropTypes.node.isRequired,
 	href: PropTypes.string.isRequired,
 	icon: PropTypes.element,
 	isExternal: PropTypes.bool,
@@ -32,7 +33,6 @@ Link.propTypes = {
 		'profiled',
 		'header',
 	]),
-	text: PropTypes.string.isRequired,
 };
 
 export default Link;

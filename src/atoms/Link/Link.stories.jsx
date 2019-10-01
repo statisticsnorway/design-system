@@ -7,22 +7,22 @@ import Link from './Link';
 storiesOf('Atoms|Link', module).addDecorator(centered)
 	.add('Default', () => (
 		<div>
-			<Link href=" " text="A regular link" />
+			<Link href=" ">A regular link</Link>
 			<br />
-			<Link href=" " text="A regular link with icon" icon={<ArrowRight />} />
+			<Link href=" " icon={<ArrowRight />}>A regular link with icon</Link>
 		</div>
 	))
 	.add('Profiled', () => (
 		<div>
-			<Link href=" " text="A profiled link" linkType="profiled" />
+			<Link href=" " linkType="profiled">A profiled link</Link>
 			<br />
-			<Link href=" " text="A profiled link with icon" linkType="profiled" icon={<ArrowRight />} />
+			<Link href=" " linkType="profiled" icon={<ArrowRight />}>A profiled link with icon</Link>
 		</div>
 	))
 	.add('Header', () => (
 		<div>
-			<Link href=" " text="A header link" linkType="header" />
+			<Link href=" " linkType="header">A header link</Link>
 			<br />
-			<Link href=" " text="A header link with icon" linkType="header" icon={<ArrowRight />} />
+			<Link href=" " linkType="header" icon={<ArrowRight />}>A header link with icon</Link>
 		</div>
 	));

@@ -6,6 +6,7 @@ import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
 import DividerInfo from '@organisms/DividerInfo/DividerInfo';
 import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
+import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 
 const sidebarItems = [
 	{
@@ -22,14 +23,14 @@ const sidebarItems = [
 		label: 'Button',
 		path: '/button',
 	}, {
-		label: 'Checkbox',
-		path: '/checkbox',
-	}, {
 		label: 'Divider',
 		path: '/divider',
 	}, {
 		label: 'Key Numbers',
 		path: '/key-numbers',
+	}, {
+		label: 'Links',
+		path: '/links',
 	},
 ];
 
@@ -56,12 +57,13 @@ const Components = withRouter(({ history, match }) => {
 			<section>
 				<Switch>
 					<Route exact path={match.url}>
-						<h2>Main content</h2>
+						<h2 className="col-lg-12">Components</h2>
 					</Route>
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
 					<Route path={`${match.url}/button`} component={ButtonInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />
+					<Route path={`${match.url}/links`} component={LinksInfo} />
 				</Switch>
 			</section>
 		</div>

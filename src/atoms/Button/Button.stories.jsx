@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import { ChevronDown, Play, X } from 'react-feather';
+import { ChevronDown, Play } from 'react-feather';
 import Button from './Button';
 
 storiesOf('Atoms|Button', module).addDecorator(centered)
@@ -19,11 +19,5 @@ storiesOf('Atoms|Button', module).addDecorator(centered)
 			<Button text="Primary" icon={<ChevronDown size="26" />} />
 			<Button icon={<Play size="26" />} />
 			<Button text="Disabled" disabled />
-		</div>
-	))
-	.add('Danger', () => (
-		<div style={{ display: 'flex' }}>
-			<Button text="Danger" primary danger />
-			<Button danger primary icon={<X size="26" />} />
 		</div>
 	));

@@ -31,8 +31,8 @@ const codeExampleSecondary = `
 `;
 
 const codeExampleIcon = `
-<Button text="Primary" primary icon={<ChevronDown size="26" />} />
-<Button text="Secondary" icon={<ChevronDown size="26" />} />
+<Button text="Primary" primary icon={<ChevronDown size="18" />} />
+<Button text="Secondary" icon={<ChevronDown size="18" />} />
 `;
 
 const codeExampleDisabled = `
@@ -116,8 +116,8 @@ const ButtonInfo = () => {
 							</p>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
-							<Button text="Primary" primary icon={<ChevronDown size="26" />} />
-							<Button text="Secondary" icon={<ChevronDown size="26" />} />
+							<Button text="Primary" primary icon={<ChevronDown size="18" />} />
+							<Button text="Secondary" icon={<ChevronDown size="18" />} />
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={codeExampleIcon} language="jsx" />
@@ -140,6 +140,57 @@ const ButtonInfo = () => {
 							<CodeSnippet code={codeExampleDisabled} language="jsx" />
 						</div>
 					</div>
+
+					<Divider />
+
+					<div className="row">
+						<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
+						<table className="col-lg-12">
+							<thead style={{ textAlign: 'left' }}>
+								<tr>
+									<th><h5>Prop name</h5></th>
+									<th><h5>Type</h5></th>
+									<th><h5>Description</h5></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>disabled</code></td>
+									<td>bool</td>
+									<td>Decides if the button is disabled</td>
+								</tr>
+								<tr>
+									<td><code>icon</code></td>
+									<td>node</td>
+									<td>Renders an icon</td>
+								</tr>
+								<tr>
+									<td><code>onClick</code></td>
+									<td>function</td>
+									<td>Callback for button click</td>
+								</tr>
+								<tr>
+									<td><code>primary</code></td>
+									<td>bool</td>
+									<td>Changes style to represent a primary button</td>
+								</tr>
+								<tr>
+									<td><code>text</code></td>
+									<td>string</td>
+									<td>Text to be shown inside button</td>
+								</tr>
+								<tr>
+									<td><code>type</code></td>
+									<td>string</td>
+									<td>
+										Button type. Can be &apos;submit&apos;, &apos;reset&apos;, or &apos;button&apos;.
+										Defaults to &apos;button&apos;.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
 				</div>
 			)}
 

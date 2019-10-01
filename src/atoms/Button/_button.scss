@@ -39,6 +39,10 @@ $negative-disable-color: $label-color;
     background: $ssb-white;
     color: $regular-disable-color;
     border: 1px solid $regular-disable-color;
+
+    .button-text {
+      border-bottom: none;
+    }
   }
 }
 
@@ -61,9 +65,5 @@ $negative-disable-color: $label-color;
     .button-text {
       border-bottom: none;
     }
-  }
-
-  &.danger {
-    background: $ssb-red-4;
   }
 }

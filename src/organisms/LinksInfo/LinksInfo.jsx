@@ -21,7 +21,12 @@ const tabItems = [
 
 const profiledLinks = `
 <Link href=" " linkType="profiled">Link text</Link>
-<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+<Link
+	href=" "
+	linkType="profiled"
+	icon={<ArrowRight size="20" />}
+>Link text
+</Link>
 `;
 
 const LinksInfo = () => {
@@ -50,8 +55,13 @@ const LinksInfo = () => {
 								link that can be used to direct the user to another page when clicked.
 							</p>
 						</div>
-						<div className="col-lg-6">
-							<Link href=" ">Link text</Link>
+						<div className="col-lg-6 row">
+							<div className="col-lg-6">
+								<Link href=" ">Link text</Link>
+							</div>
+							<div className="col-lg-6">
+								<Link href=" " negative>Link text</Link>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={'<Link href=" ">Link text</Link>'} language="jsx" />
@@ -67,8 +77,13 @@ const LinksInfo = () => {
 								icons to differentiate and indicate different functionalities.
 							</p>
 						</div>
-						<div className="col-lg-6">
-							<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+						<div className="col-lg-6 row">
+							<div className="col-lg-6">
+								<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+							</div>
+							<div className="col-lg-6">
+								<Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={'<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>'} language="jsx" />
@@ -85,10 +100,12 @@ const LinksInfo = () => {
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-6">
-								<Link href=" " linkType="profiled">Link text</Link>
+								<Link href=" " linkType="profiled">Link text</Link><br />
+								<Link negative href=" " linkType="profiled">Link text</Link>
 							</div>
 							<div className="col-lg-6">
-								<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+								<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link><br />
+								<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -134,6 +151,11 @@ const LinksInfo = () => {
 										Changes the style. Can be &apos;regular&apos;, &apos;profiled&apos;, or &apos;header&apos;.
 										Defaults to &apos;regular&apos;.
 									</td>
+								</tr>
+								<tr>
+									<td><code>negative</code></td>
+									<td>bool</td>
+									<td>Will change component style. Defaults to <code>false</code></td>
 								</tr>
 							</tbody>
 						</table>

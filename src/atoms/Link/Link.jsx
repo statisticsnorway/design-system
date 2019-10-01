@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Link = ({
-	children, href, icon, isExternal, linkType,
+	children, href, icon, isExternal, linkType, negative,
 }) => (
-	<div className="link">
+	<div className={`link ${negative ? 'negative' : 'standard'}`}>
 		<div className="index">
 			<a
 				className={`link-text ${linkType} ${icon && 'with-icon'}`}
@@ -21,6 +21,7 @@ const Link = ({
 Link.defaultProps = {
 	isExternal: false,
 	linkType: 'regular',
+	negative: false,
 };
 
 Link.propTypes = {
@@ -33,6 +34,7 @@ Link.propTypes = {
 		'profiled',
 		'header',
 	]),
+	negative: PropTypes.bool,
 };
 
 export default Link;

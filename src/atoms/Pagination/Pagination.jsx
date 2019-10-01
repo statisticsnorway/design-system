@@ -5,16 +5,33 @@ const Pagination = ({
 	items, selectedPage, pageLimit,
 }) => {
 	const [selected, setSelected] = useState(selectedPage);
-	const itemsArray = Array.from(Array(items).keys());
+	const pager = getPager().pageArray;
 
-	function paginationMaps() {
-		const itemMap = [];
-		itemsArray.forEach(item => itemMap.push({ key: item, value: item + 1 }));
+	function getPager() {
+		let startPage = 1;
+		let endPage = items;
+		if (selected <= 6) {
+			startPage = 1;
+			endPage = 10;
+		} else if (selected + 4 >= items) {
+			startPage = items - 9;
+			endPage = items;
+		} else {
+			startPage = selected - 5;
+			endPage = selected + 4;
+		}
 
-		return itemMap.slice(0, pageLimit);
+		const startIndex = (selected - 1) * pageLimit;
+		const pageArray = [...Array((endPage + 1) - startPage).keys()].map(i => ({ id: (i + startPage), name: (i + startPage) }));
+
+		return {
+			pageArray,
+		};
 	}
 
-	const pages = paginationMaps();
+	function setPage(page) {
+		setSelected(page);
+	}
 
 	return (
 		<nav>
@@ -22,10 +39,10 @@ const Pagination = ({
 				<li className="previous">
 					<a href="#!">Forrige</a>
 				</li>
-				{pages.map(page => (
-					<li index={page.key} className={selected === page.key ? 'active' : ''}>
-						<a href="#!" onClick={() => setSelected(page.key)}>
-							{page.value}
+				{pager.map(page => (
+					<li key={page.id} className={selected === page.id ? 'active' : ''}>
+						<a href="#!" onClick={() => setPage(page.id)}>
+							{page.id}
 						</a>
 					</li>
 				))}
@@ -38,7 +55,7 @@ const Pagination = ({
 };
 
 Pagination.defaultProps = {
-	selectedPage: '',
+	selectedPage: 0,
 };
 
 Pagination.propTypes = {

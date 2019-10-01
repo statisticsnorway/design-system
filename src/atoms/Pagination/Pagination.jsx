@@ -1,20 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Pagination = ({
-	pages, selectedPage,
+	items, selectedPage, pageLimit,
 }) => {
 	const [selected, setSelected] = useState(selectedPage);
+	const itemsArray = Array.from(Array(items).keys());
+
+	function paginationMaps() {
+		const itemMap = [];
+		itemsArray.forEach(item => itemMap.push({ key: item, value: item + 1 }));
+
+		return itemMap.slice(0, pageLimit);
+	}
+
+	const pages = paginationMaps();
+
 	return (
 		<nav>
 			<ul className="pagination">
 				<li className="previous">
 					<a href="#!">Forrige</a>
 				</li>
-				{[...Array(pages)].map((e, index) => (
-					<li index={index} className={`pagination-item ${index === selected && 'active'}`}>
-						<a href="#!" onClick={() => setSelected(index)}>
-							{index + 1}
+				{pages.map(page => (
+					<li index={page.key} className={selected === page.key ? 'active' : ''}>
+						<a href="#!" onClick={() => setSelected(page.key)}>
+							{page.value}
 						</a>
 					</li>
 				))}
@@ -31,8 +42,9 @@ Pagination.defaultProps = {
 };
 
 Pagination.propTypes = {
-	pages: PropTypes.number,
+	items: PropTypes.number,
 	selectedPage: PropTypes.number,
+	pageLimit: PropTypes.number,
 };
 
 export default Pagination;

@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Link = ({
-	href, icon, isExternal, linkType, text,
+	children, href, icon, isExternal, linkType, negative,
 }) => (
-	<div className="link">
+	<div className={`link ${negative ? 'negative' : 'standard'}`}>
 		<div className="index">
 			<a
 				className={`link-text ${linkType} ${icon && 'with-icon'}`}
 				href={href}
 				target={isExternal ? '_blank' : ''}
 				rel={isExternal ? 'noopener noreferrer' : ''}
-			>{icon}<span className="link-text">{text}</span>
+			>{icon}<span className="link-text">{children}</span>
 			</a>
 		</div>
 		<div className="animate-background" />
@@ -21,18 +21,20 @@ const Link = ({
 Link.defaultProps = {
 	isExternal: false,
 	linkType: 'regular',
+	negative: false,
 };
 
 Link.propTypes = {
+	children: PropTypes.node.isRequired,
 	href: PropTypes.string.isRequired,
-	icon: PropTypes.element,
+	icon: PropTypes.node,
 	isExternal: PropTypes.bool,
 	linkType: PropTypes.oneOf([
 		'regular',
 		'profiled',
 		'header',
 	]),
-	text: PropTypes.string.isRequired,
+	negative: PropTypes.bool,
 };
 
 export default Link;

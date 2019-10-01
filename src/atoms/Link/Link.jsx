@@ -26,7 +26,7 @@ Link.defaultProps = {
 Link.propTypes = {
 	children: PropTypes.node.isRequired,
 	href: PropTypes.string.isRequired,
-	icon: PropTypes.element,
+	icon: PropTypes.node,
 	isExternal: PropTypes.bool,
 	linkType: PropTypes.oneOf([
 		'regular',

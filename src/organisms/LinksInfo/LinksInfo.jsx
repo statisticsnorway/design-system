@@ -83,6 +83,21 @@ const LinksInfo = () => {
 				</div>
 			)}
 
+			{activeTab === '/rationale' && (
+				<div className="mt-3">
+					<div className="row mb-3">
+						<h3 className="col-lg-12">Color</h3>
+						<div className="col-lg-6">
+							<p>
+								The chosen color for links is SSB green 4, the reason behind this choice is to fit the theme
+								of the overall design system and at the same time teaching the user about green being a clickable
+								component on our site as the majority of all clickable items are green.
+							</p>
+						</div>
+					</div>
+				</div>
+			)}
+
 		</div>
 	);
 };

@@ -10,16 +10,16 @@ const Pagination = ({
 	function getPager() {
 		let startPage = 1;
 		let endPage = items;
-		const middelPage = Math.ceil(pageLimit / 2);
-		if (selected <= middelPage) {
+		const middlePage = Math.ceil(pageLimit / 2);
+		if (selected <= middlePage) {
 			startPage = 1;
 			endPage = pageLimit;
-		} else if (selected + middelPage >= items) {
+		} else if (selected + middlePage >= items) {
 			startPage = items - pageLimit - 1;
 			endPage = items;
 		} else {
-			startPage = selected - middelPage;
-			endPage = selected + middelPage - 1;
+			startPage = selected - middlePage;
+			endPage = selected + middlePage - 1;
 		}
 
 		const pageArray = [...Array((endPage + 1) - startPage).keys()].map(i => ({ id: (i + startPage), name: (i + startPage) }));

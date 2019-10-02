@@ -6,6 +6,7 @@ import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
 import DividerInfo from '@organisms/DividerInfo/DividerInfo';
 import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
+import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 
 const sidebarItems = [
@@ -25,6 +26,9 @@ const sidebarItems = [
 	}, {
 		label: 'Divider',
 		path: '/divider',
+	}, {
+		label: 'Input',
+		path: '/input',
 	}, {
 		label: 'Key Numbers',
 		path: '/key-numbers',
@@ -62,6 +66,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
 					<Route path={`${match.url}/button`} component={ButtonInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
+					<Route path={`${match.url}/input`} component={InputInfo} />
 					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 				</Switch>

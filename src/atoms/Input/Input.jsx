@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
 import { AlertTriangle, Search } from 'react-feather';
 
-const id = uuid();
-
 const Input = ({
 	disabled, error, errorMessage, handleChange, label, negative, searchField, submitCallback, type, value,
 }) => {
 	const [inputValue, setValue] = useState(value);
-
+	const id = uuid();
 	const handleInputChange = e => {
 		setValue(e.target.value);
 		handleChange(e.target.value);

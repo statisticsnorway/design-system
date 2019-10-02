@@ -34,7 +34,7 @@ const socialLinks = [
 	},
 ];
 
-const footerLink = <Link href="https://www.ssb.no/" text="Statistisk Sentralbyrå © 2019" />;
+const footerLink = <Link href="https://www.ssb.no/">Statistisk Sentralbyrå © 2019</Link>;
 
 const App = () => (
 	<div className="app">

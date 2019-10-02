@@ -58,7 +58,7 @@ const ButtonInfo = () => {
 			<ul className="mb-3 col-lg-8">
 				<li>
 					Primary and secondary buttons are not used to navigate the user to external pages outside of the solution.
-					Use instead <Link href="/#/components/links" text="links" />.
+					Use instead <Link href="/#/components/links">links</Link>.
 				</li>
 				<li>
 					Buttons are generally used for performing actions and not for multiple-choices,

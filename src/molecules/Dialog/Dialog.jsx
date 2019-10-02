@@ -14,7 +14,7 @@ const Dialog = ({
 		<div className="info-content">
 			<h5><strong>{title}</strong></h5>
 			<p><span className="dialog-text">{text}</span></p>
-			{href && <Link text={linkText} href={href} />}
+			{href && <Link href={href}>{linkText}</Link>}
 		</div>
 	</div>
 );

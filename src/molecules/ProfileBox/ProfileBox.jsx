@@ -6,7 +6,7 @@ const ProfileBox = ({
 	link, text, title,
 }) => (
 	<div className="profile-box-wrapper">
-		<Link href={link} text={title} linkType="header" />
+		<Link href={link} linkType="header">{title}</Link>
 		<p>{text}</p>
 	</div>
 );

@@ -7,7 +7,7 @@ const ReferenceLink = ({
 }) => (
 	<div className="reference-link">
 		<span className="reference-link-head">Source</span>
-		<Link href={href} text={text} />
+		<Link href={href}>{text}</Link>
 	</div>
 );
 

@@ -32,7 +32,7 @@ const Header = withRouter(({ history }) => (
 				<h3>Design System</h3>
 			</div>
 			<div>
-				<Link href=" " text="Norsk" />
+				<Link href=" ">Norsk</Link>
 			</div>
 		</div>
 		<nav className="lower-section">

@@ -29,7 +29,7 @@ Offisiell statistikk om det norske
 samfunnet siden 1876
 `;
 
-const footerLink = <Link href="https://www.ssb.no/" text="Statistisk Sentralbyrå © 2019" />;
+const footerLink = <Link href="https://www.ssb.no/">Statistisk Sentralbyrå © 2019</Link>;
 
 storiesOf('Organisms|Footer', module)
 	.add('Standard', () => (

@@ -29,25 +29,21 @@ const Pagination = ({
 		};
 	}
 
-	function setPage(page) {
-		setSelected(page);
-	}
-
 	return (
 		<nav>
 			<ul className="pagination">
 				<li className="previous">
-					<a href="#!">Forrige</a>
+					<a href="#!" onClick={() => setSelected(selected - 1)}>Forrige</a>
 				</li>
 				{pager.map(page => (
 					<li key={page.id} className={selected === page.id ? 'active' : ''}>
-						<a href="#!" onClick={() => setPage(page.id)}>
+						<a href="#!" onClick={() => setSelected(page.id)}>
 							{page.id}
 						</a>
 					</li>
 				))}
 				<li>
-					<a className="next" href="#!">Neste</a>
+					<a className="next" href="#!" onClick={() => setSelected(selected + 1)}>Neste</a>
 				</li>
 			</ul>
 		</nav>

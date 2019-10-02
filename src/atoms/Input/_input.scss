@@ -1,25 +1,11 @@
-@mixin activate-label {
-  font-size: 14px;
-  padding: 0 2px;
-  top: -8px;
-}
-
 .input-field-wrapper {
-  align-items: center;
   cursor: text;
   display: flex;
+  flex-direction: column;
   margin: $global-padding-size;
   position: relative;
 
-  &:hover {
-    input {
-      border: 1px solid $ssb-green-4;
-      //outline: $ssb-green-4 auto 5px;
-    }
-  }
-
   input {
-    border: 1px solid $ssb-dark-5;
     font-size: 16px;
     height: $input-field-height;
     padding: 4px $global-padding-size;
@@ -27,24 +13,11 @@
     width: 100%;
 
     &:disabled {
-      border: 1px solid $ssb-dark-5;
       cursor: not-allowed;
-    }
-
-    &:disabled + label {
-      color: rgba($label-color, .5);
-      cursor: not-allowed;
-      user-select: none;
     }
 
     &:focus {
-      //border: 2px solid $ssb-green-4;
-      outline: $ssb-green-4 auto 5px;
-    }
-
-    &:focus + label {
-      @include activate-label;
-      color: $ssb-green-4;
+      outline: none;
     }
 
     &.has-icon {
@@ -53,31 +26,107 @@
   }
 
   label {
-    background: $ssb-white;
-    color: $label-color;
     cursor: text;
-    left: $global-padding-size;
-    position: absolute;
-    top: 8px;
-    transition: all .2s;
+    font-size: 14px;
+    margin-bottom: 5px;
     user-select: none;
-
-    &.has-value {
-      @include activate-label;
-    }
   }
 
-  .clickable-button {
+  .input-icon {
     align-items: center;
     cursor: pointer;
     display: flex;
     height: $input-field-height;
+    justify-content: center;
     margin-left: -$input-field-height;
     width: $input-field-height;
+  }
+
+  .error-message {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  &.standard {
+    &:hover {
+      input {
+        border: 2px solid $ssb-green-4;
+      }
+    }
+
+    input {
+      background: $ssb-white;
+      border: 1px solid $ssb-dark-5;
+
+      &:focus {
+        border: 2px solid $ssb-green-4;
+      }
+    }
+
+    label {
+      color: $ssb-dark-6;
+    }
+
+    &.with-error {
+      input {
+        border: 2px solid $ssb-red-4;
+      }
+    }
+
+    .error-message {
+      color: $ssb-red-4;
+    }
 
     .search-icon {
       color: $ssb-green-3;
     }
+
+    .alert-icon {
+      color: $ssb-red-4;
+    }
+
   }
+
+  &.negative {
+    &:hover {
+      input {
+        border: 2px solid $ssb-green-2;
+      }
+    }
+
+    input {
+      background: transparent;
+      border: 1px solid $ssb-white;
+      color: $ssb-white;
+
+      &:focus {
+        border: 2px solid $ssb-green-2;
+      }
+    }
+
+    label {
+      color: $ssb-white;
+    }
+
+    &.with-error {
+      input {
+        border: 2px solid $negative-red;
+      }
+    }
+
+    .error-message {
+      color: $negative-red;
+    }
+
+    .search-icon {
+      color: $ssb-green-2;
+    }
+
+    .alert-icon {
+      color: $negative-red;
+    }
+
+  }
+
 
 }

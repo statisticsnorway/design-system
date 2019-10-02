@@ -18,7 +18,10 @@ const Breadcrumb = ({ items }) => (
 );
 
 Breadcrumb.propTypes = {
-	items: PropTypes.arrayOf(PropTypes.object).isRequired,
+	items: PropTypes.arrayOf(PropTypes.shape({
+		link: PropTypes.string,
+		text: PropTypes.string.isRequired,
+	})).isRequired,
 };
 
 export default Breadcrumb;

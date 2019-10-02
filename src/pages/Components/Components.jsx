@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
+import BreadcrumbInfo from '@organisms/BreadcrumbInfo/BreadcrumbInfo';
 import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
 import DividerInfo from '@organisms/DividerInfo/DividerInfo';
 import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
@@ -19,6 +20,9 @@ const sidebarItems = [
 			label: 'Secondary',
 			path: '/secondary',
 		}],
+	}, {
+		label: 'Breadcrumb',
+		path: '/breadcrumb',
 	}, {
 		label: 'Button',
 		path: '/button',
@@ -60,6 +64,7 @@ const Components = withRouter(({ history, match }) => {
 						<h2 className="col-lg-12">Components</h2>
 					</Route>
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
+					<Route path={`${match.url}/breadcrumb`} component={BreadcrumbInfo} />
 					<Route path={`${match.url}/button`} component={ButtonInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />

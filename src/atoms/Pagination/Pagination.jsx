@@ -1,62 +1,85 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { ChevronLeft, ChevronRight } from 'react-feather';
 
 const Pagination = ({
-	items, selectedPage, pageLimit,
+	items, onSelect, selectedPage, pageLimit,
 }) => {
-	const [selected, setSelected] = useState(selectedPage);
-	const pager = getPager().pageArray;
+	const [selected, setSelected] = useState(selectedPage || items[0]);
+	const [currentButtons, updateCurrentButtons] = useState([{}]);
+	const [showLeftDots, updateLeftDots] = useState(false);
+	const [showRightDots, updateRightDots] = useState(true);
 
-	function getPager() {
-		let startPage = 1;
-		let endPage = items;
-		const middlePage = Math.ceil(pageLimit / 2);
-		if (selected <= middlePage) {
-			startPage = 1;
-			endPage = pageLimit;
-		} else if (selected + middlePage >= items) {
-			startPage = items - pageLimit - 1;
-			endPage = items;
+	useEffect(() => {
+		const showItems = items;
+		if (items.length < 8) {
+			updateLeftDots(false);
+			updateRightDots(false);
+			updateCurrentButtons(items);
+		} else if (items.indexOf(selected) < 7) {
+			updateLeftDots(false);
+			updateCurrentButtons(showItems.slice(0, 8));
+			if (items.length > currentButtons.length) {
+				updateRightDots(true);
+			}
+		} else if (items.indexOf(selected) > (items.length - 7)) {
+			updateCurrentButtons(showItems.slice((showItems.length - 8), showItems.length));
+			updateRightDots(false);
+			updateLeftDots(true);
 		} else {
-			startPage = selected - middlePage;
-			endPage = selected + middlePage - 1;
+			updateCurrentButtons(showItems.slice((showItems.indexOf(selected) - 3), (showItems.indexOf(selected) + 3)));
+			updateLeftDots(true);
+			updateRightDots(true);
 		}
+	}, [selected]);
 
-		const pageArray = [...Array((endPage + 1) - startPage).keys()].map(i => ({ id: (i + startPage), name: (i + startPage) }));
-
-		return {
-			pageArray,
-		};
-	}
+	const handleSelection = sel => {
+		setSelected(sel);
+		onSelect(sel);
+	};
 
 	return (
-		<nav>
-			<ul className="pagination">
-				<li className="previous">
-					<a href="#!" onClick={() => setSelected(selected - 1)}>Forrige</a>
-				</li>
-				{pager.map(page => (
-					<li key={page.id} className={selected === page.id ? 'active' : ''}>
-						<a href="#!" onClick={() => setSelected(page.id)}>
-							{page.id}
-						</a>
-					</li>
-				))}
-				<li>
-					<a className="next" href="#!" onClick={() => setSelected(selected + 1)}>Neste</a>
-				</li>
-			</ul>
+		<nav className="pagination-wrapper roboto">
+			<div className="direction-button" onClick={() => handleSelection(items[items.indexOf(selected) - 1])}>
+				<ChevronLeft className="chevron-icon" size={18} />
+				<span>Forrige</span>
+			</div>
+			<div className={`nav-button-square ${items[0] === selected && 'selected'}`} onClick={() => handleSelection(items[0])}>
+				{items[0].text}
+			</div>
+			{showLeftDots && <div className="dotted-indicator">...</div>}
+			{currentButtons && currentButtons.map(item => (
+				item !== items[0] && item !== items[items.length - 1] && (
+					<div
+						className={`nav-button-square ${item === selected && 'selected'}`}
+						onClick={() => handleSelection(item)}
+						key={item.path}
+					>{item.text}
+					</div>
+				)
+			))}
+			{showRightDots && <div className="dotted-indicator">...</div>}
+			<div
+				className={`nav-button-square ${items[items.length - 1] === selected && 'selected'}`}
+				onClick={() => handleSelection(items[items.length - 1])}
+			>{items[items.length - 1].text}
+			</div>
+			<div className="direction-button" onClick={() => handleSelection(items[items.indexOf(selected) + 1])}>
+				<span>Neste</span>
+				<ChevronRight className="chevron-icon" size={18} />
+			</div>
 		</nav>
 	);
 };
 
 Pagination.defaultProps = {
-	selectedPage: 0,
+	onSelect: () => {},
 };
 
 Pagination.propTypes = {
-	items: PropTypes.number,
-	selectedPage: PropTypes.number,
+	items: PropTypes.arrayOf(PropTypes.object).isRequired,
+	onSelect: PropTypes.func,
+	selectedPage: PropTypes.object,
 	pageLimit: PropTypes.number,
 };
 

@@ -9,6 +9,7 @@ import DividerInfo from '@organisms/DividerInfo/DividerInfo';
 import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
 import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
+import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
 
 const sidebarItems = [
 	{
@@ -39,6 +40,9 @@ const sidebarItems = [
 	}, {
 		label: 'Links',
 		path: '/links',
+	}, {
+		label: 'Pagination',
+		path: '/pagination',
 	},
 ];
 
@@ -74,6 +78,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/input`} component={InputInfo} />
 					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
+					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
 				</Switch>
 			</section>
 		</div>

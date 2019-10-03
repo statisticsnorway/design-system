@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 
 const Pagination = ({
-	items, onSelect, selectedPage, pageLimit,
+	items, onSelect, selectedPage,
 }) => {
 	const [selected, setSelected] = useState(selectedPage || items[0]);
 	const [currentButtons, updateCurrentButtons] = useState([{}]);
@@ -80,7 +80,6 @@ Pagination.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.object).isRequired,
 	onSelect: PropTypes.func,
 	selectedPage: PropTypes.object,
-	pageLimit: PropTypes.number,
 };
 
 export default Pagination;

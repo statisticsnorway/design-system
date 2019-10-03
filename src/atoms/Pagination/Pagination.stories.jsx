@@ -26,11 +26,10 @@ const items = [
 	{	text: '20', path: '/20'	},
 ];
 
-const pageLimit = 10;
 
 storiesOf('Atoms|Pagination', module).addDecorator(centered)
 	.add('Default', () => (
 		<div>
-			<Pagination items={items} pageLimit={pageLimit} selectedPage={items[4]} />
+			<Pagination items={items} selectedPage={items[4]} />
 		</div>
 	));

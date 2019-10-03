@@ -19,7 +19,10 @@ const Checkbox = ({
 	</div>
 );
 
-Checkbox.defaultProps = {};
+Checkbox.defaultProps = {
+	callback: () => {},
+	index: 1,
+};
 
 Checkbox.propTypes = {
 	callback: PropTypes.func,

@@ -7,6 +7,7 @@ import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
 import DividerInfo from '@organisms/DividerInfo/DividerInfo';
 import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
+import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
 
 const sidebarItems = [
 	{
@@ -31,6 +32,9 @@ const sidebarItems = [
 	}, {
 		label: 'Links',
 		path: '/links',
+	}, {
+		label: 'Checkbox',
+		path: '/checkbox',
 	},
 ];
 
@@ -64,6 +68,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
+					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 				</Switch>
 			</section>
 		</div>

@@ -1,7 +1,11 @@
 .checkbox-group-wrapper {
   display: inline-block;
 
-  h5 {
+  fieldset {
+    border: 0;
+  }
+
+  legend {
     margin-bottom: $global-padding-size;
     padding-left: $global-padding-size;
   }

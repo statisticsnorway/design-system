@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Checkbox = ({
-	index, children, callback, selected, value,
+	index, callback, selected, value, label,
 }) => (
 	<div tabIndex={index + 1} className="checkbox-button-wrapper" onClick={() => callback(value)}>
 		<label htmlFor={value}>
-			{children}
+			{label}
 			<input
 				id={value}
 				value={value}
@@ -23,13 +23,13 @@ Checkbox.defaultProps = {};
 
 Checkbox.propTypes = {
 	callback: PropTypes.func,
-	children: PropTypes.node,
 	index: PropTypes.number,
 	selected: PropTypes.bool,
 	value: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.number,
 	]).isRequired,
+	label: PropTypes.string,
 };
 
 export default Checkbox;
@@ -37,7 +37,7 @@ export default Checkbox;
 /*
 options:
 	callback: optional callback on selection
-	children: required for displaying a label
+	label: required for displaying a label
 	index: optional for tab order
 	selected: optional for setting selection
 	value: required for having value on selection

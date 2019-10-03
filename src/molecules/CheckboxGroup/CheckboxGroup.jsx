@@ -23,17 +23,19 @@ const CheckboxGroup = ({
 
 	return (
 		<div className="checkbox-group-wrapper">
-			{header && <h5>{header}</h5>}
-			{items.map((it, index) => (
-				<Checkbox
-					key={it.value}
-					index={index}
-					selected={selected.includes(it.value)}
-					value={it.value}
-					callback={setSelected}
-				>{it.label}
-				</Checkbox>
-			))}
+			<fieldset>
+				{header && <legend>{header}</legend>}
+				{items.map((it, index) => (
+					<Checkbox
+						key={it.value}
+						index={index}
+						selected={selected.includes(it.value)}
+						value={it.value}
+						callback={setSelected}
+						label={it.label}
+					/>
+				))}
+			</fieldset>
 		</div>
 	);
 };

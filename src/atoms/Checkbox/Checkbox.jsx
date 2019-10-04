@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Checkbox = ({
 	index, children, callback, selected, value,
 }) => (
-	<div tabIndex={index + 1} className="checkbox-button-wrapper" onClick={() => callback(value)}>
+	<div tabIndex={index + 1} className="checkbox-button-wrapper">
 		<label htmlFor={value}>
 			{children}
 			<input
@@ -19,7 +19,10 @@ const Checkbox = ({
 	</div>
 );
 
-Checkbox.defaultProps = {};
+Checkbox.defaultProps = {
+	callback: () => {},
+	index: 1,
+};
 
 Checkbox.propTypes = {
 	callback: PropTypes.func,
@@ -37,7 +40,7 @@ export default Checkbox;
 /*
 options:
 	callback: optional callback on selection
-	children: required for displaying a label
+	label: required for displaying a label
 	index: optional for tab order
 	selected: optional for setting selection
 	value: required for having value on selection

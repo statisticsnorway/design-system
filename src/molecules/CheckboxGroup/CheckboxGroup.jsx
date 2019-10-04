@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from '@atoms/Checkbox/Checkbox';
+import Title from '@atoms/Title/Title';
 
 const CheckboxGroup = ({
 	header, items, onChange, selectedValues,
@@ -23,7 +24,7 @@ const CheckboxGroup = ({
 
 	return (
 		<div className="checkbox-group-wrapper">
-			{header && <h5>{header}</h5>}
+			{header && <Title size={5}>{header}</Title>}
 			{items.map((it, index) => (
 				<Checkbox
 					key={it.value}

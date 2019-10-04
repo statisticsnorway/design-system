@@ -1,17 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import Checkbox from '@atoms/Checkbox/Checkbox';
 import CheckboxGroup from '@molecules/CheckboxGroup/CheckboxGroup';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
 import Divider from '@atoms/Divider/Divider';
 
 const leadParagraphText = `
-Check boxes provides the user with a range of options where the user may select any number of choices, one, multiple or zero. The default view for checkboxes has no options selected and the options provided should be listed in alphabetical order. 
+Check boxes provides the user with a range of options where the user may select any number of choices, one, multiple or zero.
+The default view for checkboxes has no options selected and the options provided should be listed in alphabetical order. 
 `;
 
 const overviewTextCheckbox = `
-Check boxes have 3 different states, alternating between unchecked, hover and checked. In the unchecked state the check boxes are neutral with a greyed border. As the user hovers over an unchecked box it transforms into a thicker border and turns green, at the same time a light green stripe will appear over the hovered check box row. When an option is checked by the user, the box will be filled and a check-icon will be displayed. 
+Check boxes have 3 different states, alternating between unchecked, hover and checked.
+In the unchecked state the check boxes are neutral with a greyed border.
+As the user hovers over an unchecked box it transforms into a thicker border and turns green,
+at the same time a light green stripe will appear over the hovered check box row.
+When an option is checked by the user, the box will be filled and a check-icon will be displayed. 
 `;
 
 const tabItems = [
@@ -51,7 +55,6 @@ const CheckboxInfo = () => {
 
 			{activeTab === '/overview' && (
 				<div className="mt-3">
-			
 					<div className="row mt-3">
 						<h3 className="col-lg-12">CheckboxGroup</h3>
 						<div className="col-lg-6">

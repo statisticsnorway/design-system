@@ -20,7 +20,6 @@ const CheckboxGroup = ({
 			newArr.push(sel);
 		}
 		updateSelected(newArr);
-		//event.preventDefault();
 	};
 
 	return (

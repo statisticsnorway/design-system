@@ -43,9 +43,9 @@ const sidebarItems = [
 		label: 'Links',
 		path: '/links',
 	}, {
-    label: 'Pagination',
+		label: 'Pagination',
 		path: '/pagination',
-	},{
+	}, {
 		label: 'Checkbox',
 		path: '/checkbox',
 	},
@@ -83,8 +83,8 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/input`} component={InputInfo} />
 					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
-          <Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
-          <Route path={`${match.url}/pagination`} component={PaginationInfo} />
+					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
+					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
 				</Switch>
 			</section>
 		</div>

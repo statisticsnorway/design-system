@@ -15,7 +15,7 @@ Check boxes have 3 different states, alternating between unchecked, hover and ch
 `;
 
 const overviewTextCheckboxGroup = `
-CheckboxGroup er en samling av flere Checkboxes.
+CheckboxGroup er en samling av Checkboxes.
 `;
 
 const tabItems = [
@@ -67,13 +67,6 @@ const CheckboxInfo = () => {
 						<div className="col-lg-6">
 							<p>{overviewTextCheckbox}</p>
 						</div>
-						{/*<div className="col-lg-6">*/}
-						{/*	<CheckboxGroup*/}
-						{/*		items={[*/}
-						{/*			{ label: 'Checkbox', value: 'checkbox' },*/}
-						{/*		]}*/}
-						{/*	/>*/}
-						{/*</div>*/}
 						<div className="col-lg-6">
 							<Checkbox
 								value="item"
@@ -84,7 +77,9 @@ const CheckboxInfo = () => {
 							<CodeSnippet code={codeExampleCheckbox} language="jsx" />
 						</div>
 					</div>
-					<Divider />
+
+					<Divider dark />
+
 					<div className="row mt-3">
 						<h3 className="col-lg-12">CheckboxGroup</h3>
 						<div className="col-lg-6">
@@ -103,8 +98,6 @@ const CheckboxInfo = () => {
 							<CodeSnippet code={codeExampleCheckboxGroup} language="jsx" />
 						</div>
 					</div>
-
-					<Divider />
 
 					<div className="row">
 						<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
@@ -130,6 +123,7 @@ const CheckboxInfo = () => {
 							</tbody>
 						</table>
 					</div>
+
 				</div>
 			)}
 		</div>

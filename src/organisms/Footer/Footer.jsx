@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@atoms/Button/Button';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 import { ArrowUp } from 'react-feather';
 
 const Footer = ({
@@ -11,9 +12,9 @@ const Footer = ({
 			<div className="d-flex flex-column justify-content-between">
 				<div>
 					<img className="logo" src={logo} alt="logo" />
-					<p>
+					<Paragraph>
 						{slogan && slogan}
-					</p>
+					</Paragraph>
 				</div>
 			</div>
 			<div>{children}</div>

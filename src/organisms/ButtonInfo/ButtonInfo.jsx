@@ -3,8 +3,10 @@ import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import Divider from '@atoms/Divider/Divider';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
+import Title from '@atoms/Title/Title';
 import Button from '@atoms/Button/Button';
 import Link from '@atoms/Link/Link';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 import { ChevronDown } from 'react-feather';
 
 const tabItems = [
@@ -48,7 +50,7 @@ const ButtonInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<h1>Button</h1>
+			<Title size={1}>Button</Title>
 			<LeadParagraph>
 				Buttons are used to communicate clear actions and help users to perform these actions.
 				The button component consists of a label and sometimes an icon to communicate the action that the user is able to perform.
@@ -71,12 +73,12 @@ const ButtonInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Primary Button</h3>
+						<Title size={3} className="col-lg-12">Primary Button</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								The primary button are used to indicate a primary action for the user, an action that is critical in a users workflow.
 								This can be for example a primary action such as ”submit” on a form or ”Login” on the login page.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Primary" primary />
@@ -88,14 +90,14 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Secondary Button</h3>
+						<Title size={3} className="col-lg-12">Secondary Button</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								The secondary button is used to indicate actions that are important,
 								but not as critical to the user as the primary button.
 								It can be used together with a primary button to create hierarchy
 								or together with other secondary buttons to indicate a similar hierarchy.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Secondary" />
@@ -107,13 +109,13 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Button with an icon</h3>
+						<Title size={3} className="col-lg-12">Button with an icon</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Both the primary and secondary button can be implemented with an icon,
 								these buttons can be used when it is needed to use an icon to communicate an action
 								or create further distinctions between the buttons.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Primary" primary icon={<ChevronDown size="18" />} />
@@ -125,12 +127,12 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Disabled Button</h3>
+						<Title size={3} className="col-lg-12">Disabled Button</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								The disabled button is greyed out and can’t be clicked nor does it have a hover animation.
 								This to indicate to the user that there are no actions available with it.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Primary" primary disabled />
@@ -144,7 +146,7 @@ const ButtonInfo = () => {
 					<Divider />
 
 					<div className="row">
-						<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
+						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
@@ -197,7 +199,7 @@ const ButtonInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-4">Rounded corners</h3>
+						<Title size={3} className="col-lg-4">Rounded corners</Title>
 						<div className="col-lg-8">
 							<span>
 								The choice of going with a slightly rounded corners was based on conveying a more
@@ -208,7 +210,7 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-4">Filled background</h3>
+						<Title size={3} className="col-lg-4">Filled background</Title>
 						<div className="col-lg-8">
 							<span>
 								For secondary buttons the background of the button is always filled,
@@ -220,7 +222,7 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-4">Underline on hover</h3>
+						<Title size={3} className="col-lg-4">Underline on hover</Title>
 						<div className="col-lg-8">
 							<span>
 								All button variants have underline on hover in order to address WCAG2.0 Citerion 1.4.1.

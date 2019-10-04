@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '@atoms/Link/Link';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 import { AlertCircle, AlertTriangle } from 'react-feather';
 
 const Dialog = ({
@@ -12,8 +13,8 @@ const Dialog = ({
 			{type === 'info' && <AlertCircle size="36" />}
 		</div>
 		<div className="info-content">
-			<h5><strong>{title}</strong></h5>
-			<p><span className="dialog-text">{text}</span></p>
+			<span><strong>{title}</strong></span>
+			<Paragraph>{text}</Paragraph>
 			{href && <Link href={href}>{linkText}</Link>}
 		</div>
 	</div>

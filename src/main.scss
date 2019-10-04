@@ -19,11 +19,15 @@
 @import 'atoms/Number/number';
 @import 'atoms/RadioButton/radio-button';
 @import 'atoms/Tabs/tabs';
+@import 'atoms/Text/text';
+@import 'atoms/Title/title';
 @import 'atoms/TreeMenu/tree-menu';
 @import 'atoms/WordExplanation/word-explanation';
+@import 'atoms/Pagination/pagination';
 
 // molecules
 @import 'molecules/Accordion/accordion';
+@import 'molecules/Breadcrumb/breadcrumb';
 @import 'molecules/CheckboxGroup/checkbox-group';
 @import 'molecules/Dialog/dialog';
 @import 'molecules/FactBox/fact-box';

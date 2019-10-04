@@ -5,6 +5,7 @@ import Divider from '@atoms/Divider/Divider';
 import Title from '@atoms/Title/Title';
 import Pagination from '@atoms/Pagination/Pagination';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const mockedItems = [
 	{ text: '1', path: '/1' },
@@ -56,10 +57,10 @@ const PaginationInfo = () => (
 			<div className="row mb-3">
 				<Title size={3} className="col-lg-12">Pagination</Title>
 				<div className="col-lg-6">
-					<p>
+					<Paragraph>
 						Pagination is a component that allows the user to view a subset of sorted data in limited amount. With pagination user
 						can progress to next page by clicking on the numbers which displays how many more pages there are available.
-					</p>
+					</Paragraph>
 				</div>
 				<div className="col-lg-12 mt-3 mb-3">
 					<Pagination items={mockedItems} selectedPage={mockedItems[4]} />

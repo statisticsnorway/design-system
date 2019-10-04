@@ -5,6 +5,7 @@ import Tabs from '@atoms/Tabs/Tabs';
 import Title from '@atoms/Title/Title';
 import Divider from '@atoms/Divider/Divider';
 import Breadcrumb from '@molecules/Breadcrumb/Breadcrumb';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const tabItems = [
 	{
@@ -52,10 +53,10 @@ const BreadcrumbInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Breadcrumbs</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Through breadcrumbs users can see where they are in the website hierarchy and by following the links to previous
 								sections it also provides simple navigations to prior level/content.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6">
 							<Breadcrumb items={mockedItems} />
@@ -94,19 +95,19 @@ const BreadcrumbInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-5">Location based breadcrumbs</Title>
 						<div className="col-lg-7">
-							<p>
+							<Paragraph>
 								We have opted for a location based breadcrumbs as it gives the user a good overview of where in the website
 								hierarchy they are currently in, instead of path based breadcrumb which only show the path that the user have browsed.
-							</p>
+							</Paragraph>
 						</div>
 					</div>
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-5">Simplistic design</Title>
 						<div className="col-lg-7">
-							<p>
+							<Paragraph>
 								As breadcrumbs are a secondary navigation, the overall design of breadcrumbs has been kept at a very simplistic level
 								to avoid it being too prominent or confused for being a main navigational element.
-							</p>
+							</Paragraph>
 						</div>
 					</div>
 				</div>

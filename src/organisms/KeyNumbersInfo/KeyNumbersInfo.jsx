@@ -5,6 +5,7 @@ import KeyNumbers from '@molecules/KeyNumbers/KeyNumbers';
 import Divider from '@atoms/Divider/Divider';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import Title from '@atoms/Title/Title';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 import { Home } from 'react-feather';
 
 const leadParagraphText = `
@@ -61,7 +62,7 @@ const AccordionInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Key Numbers</Title>
 						<div className="col-lg-6">
-							<p>{overviewText}</p>
+							<Paragraph>{overviewText}</Paragraph>
 						</div>
 						<div className="col-lg-6">
 							<KeyNumbers

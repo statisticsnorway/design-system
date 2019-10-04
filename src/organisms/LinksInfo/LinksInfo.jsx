@@ -6,6 +6,7 @@ import Tabs from '@atoms/Tabs/Tabs';
 import Divider from '@atoms/Divider/Divider';
 import Link from '@atoms/Link/Link';
 import Title from '@atoms/Title/Title';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const tabItems = [
 	{
@@ -51,10 +52,10 @@ const LinksInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Link</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Regular links can be used both in a paragraph and as a standalone
 								link that can be used to direct the user to another page when clicked.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-6">
@@ -72,11 +73,11 @@ const LinksInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Links with icons</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Links with icons are usually not normally used in a paragraph but rather as a standalone
 								link to indicate functionality. But it can also be used together with other links with
 								icons to differentiate and indicate different functionalities.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-6">
@@ -94,10 +95,10 @@ const LinksInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Profiled links with and without icon</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Profiled links are used to emphasis on hierarchy and can be used in combination with the
 								other types of links to display prominence.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-6">
@@ -169,11 +170,11 @@ const LinksInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Color</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								The chosen color for links is SSB green 4, the reason behind this choice is to fit the theme
 								of the overall design system and at the same time teaching the user about green being a clickable
 								component on our site as the majority of all clickable items are green.
-							</p>
+							</Paragraph>
 						</div>
 					</div>
 				</div>

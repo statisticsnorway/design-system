@@ -6,6 +6,7 @@ import Tabs from '@atoms/Tabs/Tabs';
 import Title from '@atoms/Title/Title';
 import Button from '@atoms/Button/Button';
 import Link from '@atoms/Link/Link';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 import { ChevronDown } from 'react-feather';
 
 const tabItems = [
@@ -74,10 +75,10 @@ const ButtonInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Primary Button</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								The primary button are used to indicate a primary action for the user, an action that is critical in a users workflow.
 								This can be for example a primary action such as ”submit” on a form or ”Login” on the login page.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Primary" primary />
@@ -91,12 +92,12 @@ const ButtonInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Secondary Button</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								The secondary button is used to indicate actions that are important,
 								but not as critical to the user as the primary button.
 								It can be used together with a primary button to create hierarchy
 								or together with other secondary buttons to indicate a similar hierarchy.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Secondary" />
@@ -110,11 +111,11 @@ const ButtonInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Button with an icon</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Both the primary and secondary button can be implemented with an icon,
 								these buttons can be used when it is needed to use an icon to communicate an action
 								or create further distinctions between the buttons.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Primary" primary icon={<ChevronDown size="18" />} />
@@ -128,10 +129,10 @@ const ButtonInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Disabled Button</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								The disabled button is greyed out and can’t be clicked nor does it have a hover animation.
 								This to indicate to the user that there are no actions available with it.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
 							<Button text="Primary" primary disabled />

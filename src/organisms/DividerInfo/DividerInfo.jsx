@@ -3,6 +3,7 @@ import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import Divider from '@atoms/Divider/Divider';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Title from '@atoms/Title/Title';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const codeExample = `
 <Divider dark />
@@ -24,9 +25,9 @@ const DividerInfo = () => (
 			<div className="row mb-3">
 				<Title size={3} className="col-lg-12">Divider</Title>
 				<div className="col-lg-6">
-					<p>
+					<Paragraph>
 						The divider element is always place at the end of a content grouping and before the start of the next new grouping.
-					</p>
+					</Paragraph>
 				</div>
 				<div className="col-lg-6">
 					<div className="mb-3"><Divider dark /></div>

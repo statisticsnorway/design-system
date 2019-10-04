@@ -5,6 +5,7 @@ import Tabs from '@atoms/Tabs/Tabs';
 import Divider from '@atoms/Divider/Divider';
 import Input from '@atoms/Input/Input';
 import Title from '@atoms/Title/Title';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const tabItems = [
 	{
@@ -38,12 +39,12 @@ const InputInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Input</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Input forms contains 3 different state: un-clicked, hover and clicked.
 								When un-clicked the form is outlined by a grey rectangle outline.
 								When hovered, this rectangle outline turns into green.
 								When clicked by the user the blinking line indicates that it is ready for typing.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-7">
@@ -58,12 +59,12 @@ const InputInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Input error</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								When an error occurs in the input form, the select form will change into a error state where the
 								input form will change its border into a thicker border and color into red.
 								At the right side of the input form an error icon will be displayed.
 								Underneath the form an error message will be displayed in order to explain how to fix the error.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-7">
@@ -78,10 +79,10 @@ const InputInfo = () => {
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Search</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Search form are an input element that combines an input form and a clickable search icon to allow
 								the user to search for specific word or phrases by inputting the data into the search form.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-7">

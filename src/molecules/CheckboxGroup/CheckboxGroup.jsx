@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Checkbox from '@atoms/Checkbox/Checkbox';
+import Title from '@atoms/Title/Title';
 
 const CheckboxGroup = ({
 	header, items, onChange, selectedValues,
@@ -19,24 +20,22 @@ const CheckboxGroup = ({
 			newArr.push(sel);
 		}
 		updateSelected(newArr);
-		event.preventDefault();
+		//event.preventDefault();
 	};
 
 	return (
 		<div className="checkbox-group-wrapper">
-			<fieldset>
-				{header && <legend>{header}</legend>}
-				{items.map((it, index) => (
-					<Checkbox
-						key={it.value}
-						index={index}
-						selected={selected.includes(it.value)}
-						value={it.value}
-						callback={setSelected}
-						label={it.label}
-					/>
-				))}
-			</fieldset>
+			{header && <Title size={5}>{header}</Title>}
+			{items.map((it, index) => (
+				<Checkbox
+					key={it.value}
+					index={index}
+					selected={selected.includes(it.value)}
+					value={it.value}
+					callback={setSelected}
+				>{it.label}
+				</Checkbox>
+			))}
 		</div>
 	);
 };

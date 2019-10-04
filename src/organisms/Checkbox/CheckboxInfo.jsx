@@ -14,10 +14,6 @@ const overviewTextCheckbox = `
 Check boxes have 3 different states, alternating between unchecked, hover and checked. In the unchecked state the check boxes are neutral with a greyed border. As the user hovers over an unchecked box it transforms into a thicker border and turns green, at the same time a light green stripe will appear over the hovered check box row. When an option is checked by the user, the box will be filled and a check-icon will be displayed. 
 `;
 
-const overviewTextCheckboxGroup = `
-CheckboxGroup er en samling av Checkboxes.
-`;
-
 const tabItems = [
 	{
 		title: 'Overview',
@@ -30,13 +26,6 @@ const tabItems = [
 		path: '/accessibility',
 	},
 ];
-
-const codeExampleCheckbox = `
-<Checkbox
-	value="item"
-	label="Item"
-/>
-`;
 
 const codeExampleCheckboxGroup = `
 <CheckboxGroup
@@ -62,28 +51,11 @@ const CheckboxInfo = () => {
 
 			{activeTab === '/overview' && (
 				<div className="mt-3">
-					<div className="row mb-3">
-						<h3 className="col-lg-12">Checkbox</h3>
-						<div className="col-lg-6">
-							<p>{overviewTextCheckbox}</p>
-						</div>
-						<div className="col-lg-6">
-							<Checkbox
-								value="item"
-								label="Item"
-							/>
-						</div>
-						<div className="col-lg-12  mt-3">
-							<CodeSnippet code={codeExampleCheckbox} language="jsx" />
-						</div>
-					</div>
-
-					<Divider dark />
-
+			
 					<div className="row mt-3">
 						<h3 className="col-lg-12">CheckboxGroup</h3>
 						<div className="col-lg-6">
-							<p>{overviewTextCheckboxGroup}</p>
+							<p>{overviewTextCheckbox}</p>
 						</div>
 						<div className="col-lg-6">
 							<CheckboxGroup

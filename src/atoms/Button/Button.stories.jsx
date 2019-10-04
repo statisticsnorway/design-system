@@ -17,7 +17,7 @@ storiesOf('Atoms|Button', module).addDecorator(centered)
 		<div style={{ display: 'flex' }}>
 			<Button text="Secondary" />
 			<Button text="Primary" icon={<ChevronDown size="18" />} />
-			<Button icon={<Play size="26" />} />
+			<Button icon={<Play size="18" />} />
 			<Button text="Disabled" disabled />
 		</div>
 	));

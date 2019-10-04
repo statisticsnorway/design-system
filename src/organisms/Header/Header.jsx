@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import Link from '@atoms/Link/Link';
 import Tabs from '@atoms/Tabs/Tabs';
+import Title from '@atoms/Title/Title';
 import { GitHub } from 'react-feather';
 
 const items = [
@@ -29,7 +30,7 @@ const Header = withRouter(({ history }) => (
 					<img src={logo} alt="logo" />
 				</div>
 				<div className="diagonal-divider" />
-				<h3>Design System</h3>
+				<Title size={3}>Design System</Title>
 			</div>
 			<div>
 				<Link href=" ">Norsk</Link>

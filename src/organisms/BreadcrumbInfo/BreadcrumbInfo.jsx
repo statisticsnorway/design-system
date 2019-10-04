@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
+import Title from '@atoms/Title/Title';
 import Divider from '@atoms/Divider/Divider';
 import Breadcrumb from '@molecules/Breadcrumb/Breadcrumb';
+import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const tabItems = [
 	{
@@ -37,7 +39,7 @@ const BreadcrumbInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<h1>Breadcrumb</h1>
+			<Title size={1}>Breadcrumb</Title>
 			<LeadParagraph>
 				Breadcrumbs are a navigational aid used to provide the user with the information of their location
 				on the website through a combination of links that is placed underneath the top header and at the top of a new page.
@@ -49,12 +51,12 @@ const BreadcrumbInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Breadcrumbs</h3>
+						<Title size={3} className="col-lg-12">Breadcrumbs</Title>
 						<div className="col-lg-6">
-							<p>
+							<Paragraph>
 								Through breadcrumbs users can see where they are in the website hierarchy and by following the links to previous
 								sections it also provides simple navigations to prior level/content.
-							</p>
+							</Paragraph>
 						</div>
 						<div className="col-lg-6">
 							<Breadcrumb items={mockedItems} />
@@ -67,13 +69,13 @@ const BreadcrumbInfo = () => {
 					<Divider />
 
 					<div className="row">
-						<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
+						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={5}>Prop name</Title></th>
+									<th><Title size={5}>Type</Title></th>
+									<th><Title size={5}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -91,21 +93,21 @@ const BreadcrumbInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-5">Location based breadcrumbs</h3>
+						<Title size={3} className="col-lg-5">Location based breadcrumbs</Title>
 						<div className="col-lg-7">
-							<p>
+							<Paragraph>
 								We have opted for a location based breadcrumbs as it gives the user a good overview of where in the website
 								hierarchy they are currently in, instead of path based breadcrumb which only show the path that the user have browsed.
-							</p>
+							</Paragraph>
 						</div>
 					</div>
 					<div className="row mb-3">
-						<h3 className="col-lg-5">Simplistic design</h3>
+						<Title size={3} className="col-lg-5">Simplistic design</Title>
 						<div className="col-lg-7">
-							<p>
+							<Paragraph>
 								As breadcrumbs are a secondary navigation, the overall design of breadcrumbs has been kept at a very simplistic level
 								to avoid it being too prominent or confused for being a main navigational element.
-							</p>
+							</Paragraph>
 						</div>
 					</div>
 				</div>

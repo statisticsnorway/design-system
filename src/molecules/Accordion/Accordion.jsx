@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Title from '@atoms/Title/Title';
 import { PlusCircle, MinusCircle } from 'react-feather';
 
 const Accordion = ({
@@ -14,8 +15,8 @@ const Accordion = ({
 			>
 				{!isOpen && <PlusCircle className="expand-icon" size={primary ? 20 : 15} />}
 				{isOpen && <MinusCircle className="expand-icon" size={primary ? 20 : 15} />}
-				{subHeader && <h5 className="sub-header">{subHeader}</h5>}
-				<h5 className="header-text">{header}</h5>
+				{subHeader && <Title size={5} className="sub-header">{subHeader}</Title>}
+				<Title size={5} className="header-text">{header}</Title>
 			</div>
 			<div className={`accordion-body ${isOpen ? 'open' : 'closed'}`}>
 				{isOpen && children}

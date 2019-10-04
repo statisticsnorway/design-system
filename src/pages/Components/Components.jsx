@@ -11,6 +11,7 @@ import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
 import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
+import Paragraph from '../../atoms/Paragraph/Paragraph';
 
 const sidebarItems = [
 	{
@@ -70,7 +71,8 @@ const Components = withRouter(({ history, match }) => {
 			<section>
 				<Switch>
 					<Route exact path={match.url}>
-						<Title size={2} className="col-lg-12">Components</Title>
+						<Title size={2} className="col-lg-12">Komponenter</Title>
+						<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
 					</Route>
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
 					<Route path={`${match.url}/breadcrumb`} component={BreadcrumbInfo} />

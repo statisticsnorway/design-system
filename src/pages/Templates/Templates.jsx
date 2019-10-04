@@ -57,8 +57,4 @@ const Templates = () => (
 	</div>
 );
 
-Templates.defaultProps = {};
-
-Templates.propTypes = {};
-
 export default Templates;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
+import Title from '@atoms/Title/Title';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import BreadcrumbInfo from '@organisms/BreadcrumbInfo/BreadcrumbInfo';
@@ -69,7 +70,7 @@ const Components = withRouter(({ history, match }) => {
 			<section>
 				<Switch>
 					<Route exact path={match.url}>
-						<h2 className="col-lg-12">Components</h2>
+						<Title size={2} className="col-lg-12">Components</Title>
 					</Route>
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
 					<Route path={`${match.url}/breadcrumb`} component={BreadcrumbInfo} />

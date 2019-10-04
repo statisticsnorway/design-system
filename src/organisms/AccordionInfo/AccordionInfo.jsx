@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
+import Title from '@atoms/Title/Title';
 import Accordion from '@molecules/Accordion/Accordion';
 import NestedAccordion from '@molecules/NestedAccordion/NestedAccordion';
 import Divider from '@atoms/Divider/Divider';
@@ -52,7 +53,7 @@ const AccordionInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<h1>Accordion</h1>
+			<Title size={1}>Accordion</Title>
 			<LeadParagraph>
 				Accordions maximizes efficiency and saves space by expand and collapse sections of content.
 				This allows the user to display the content of their choosing, therefore accordion components are always closed by default.
@@ -69,7 +70,7 @@ const AccordionInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Primary Accordion</h3>
+						<Title size={3} className="col-lg-12">Primary Accordion</Title>
 						<div className="col-lg-6">
 							<p>
 								Primary accordion are used when the content is important to the understanding of the page and something
@@ -85,7 +86,7 @@ const AccordionInfo = () => {
 					</div>
 					<Divider light className="mb-4" />
 					<div className="row">
-						<h3 className="col-lg-12">Secondary Accordion</h3>
+						<Title size={3} className="col-lg-12">Secondary Accordion</Title>
 						<div className="col-lg-6">
 							<p>
 								Secondary accordion are used when the content is not necessary for the user in order to understand the page but still
@@ -102,7 +103,7 @@ const AccordionInfo = () => {
 					</div>
 					<Divider light className="mb-4" />
 					<div className="row">
-						<h3 className="col-lg-12">Nested Accordion</h3>
+						<Title size={3} className="col-lg-12">Nested Accordion</Title>
 						<div className="col-lg-6">
 							<p>
 								Nested accordion are used when there are additional nested content within an
@@ -128,7 +129,7 @@ const AccordionInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-4">Primary and Secondary accordions</h3>
+						<Title size={3} className="col-lg-4">Primary and Secondary accordions</Title>
 						<div className="col-lg-8">
 							<span>
 								The reason we have two variants of accordion is to create a good hierarchy between the content,
@@ -141,7 +142,7 @@ const AccordionInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-4">Single action accordions</h3>
+						<Title size={3} className="col-lg-4">Single action accordions</Title>
 						<div className="col-lg-8">
 							<span>
 								There are other accordion elements on other sites that collapse an open accordion when another is opened.

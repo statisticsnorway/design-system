@@ -5,6 +5,7 @@ import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
 import Divider from '@atoms/Divider/Divider';
 import Link from '@atoms/Link/Link';
+import Title from '@atoms/Title/Title';
 
 const tabItems = [
 	{
@@ -36,7 +37,7 @@ const LinksInfo = () => {
 	};
 	return (
 		<div className="col-lg-12">
-			<h1>Links</h1>
+			<Title size={1}>Links</Title>
 			<LeadParagraph>
 				Link component is styled to resemble a hyperlink to show user that this is a link to another page.
 				It follows the styling of a paragraph text but is underlined and has a different color.
@@ -48,7 +49,7 @@ const LinksInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Link</h3>
+						<Title size={3} className="col-lg-12">Link</Title>
 						<div className="col-lg-6">
 							<p>
 								Regular links can be used both in a paragraph and as a standalone
@@ -69,7 +70,7 @@ const LinksInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Links with icons</h3>
+						<Title size={3} className="col-lg-12">Links with icons</Title>
 						<div className="col-lg-6">
 							<p>
 								Links with icons are usually not normally used in a paragraph but rather as a standalone
@@ -91,7 +92,7 @@ const LinksInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Profiled links with and without icon</h3>
+						<Title size={3} className="col-lg-12">Profiled links with and without icon</Title>
 						<div className="col-lg-6">
 							<p>
 								Profiled links are used to emphasis on hierarchy and can be used in combination with the
@@ -114,7 +115,7 @@ const LinksInfo = () => {
 					</div>
 					<Divider />
 					<div className="row">
-						<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
+						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
@@ -166,7 +167,7 @@ const LinksInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Color</h3>
+						<Title size={3} className="col-lg-12">Color</Title>
 						<div className="col-lg-6">
 							<p>
 								The chosen color for links is SSB green 4, the reason behind this choice is to fit the theme

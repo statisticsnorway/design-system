@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import Divider from '@atoms/Divider/Divider';
+import Title from '@atoms/Title/Title';
 import Pagination from '@atoms/Pagination/Pagination';
 import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 
@@ -34,7 +35,7 @@ const codeExample = `
 
 const PaginationInfo = () => (
 	<div className="col-lg-12">
-		<h1>Pagination</h1>
+		<Title size={1}>Pagination</Title>
 		<LeadParagraph>
 			The pagination component provides a styled list of links of links through numbering them starting from 1.
 			There are also two buttons allowing user to select previous and next page instead of clicking on the numbers.
@@ -53,7 +54,7 @@ const PaginationInfo = () => (
 
 		<div className="mt-3">
 			<div className="row mb-3">
-				<h3 className="col-lg-12">Pagination</h3>
+				<Title size={3} className="col-lg-12">Pagination</Title>
 				<div className="col-lg-6">
 					<p>
 						Pagination is a component that allows the user to view a subset of sorted data in limited amount. With pagination user
@@ -72,7 +73,7 @@ const PaginationInfo = () => (
 		<Divider />
 
 		<div className="row">
-			<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
+			<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
 			<table className="col-lg-12">
 				<thead style={{ textAlign: 'left' }}>
 					<tr>

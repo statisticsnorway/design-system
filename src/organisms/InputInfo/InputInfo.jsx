@@ -4,6 +4,7 @@ import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
 import Tabs from '@atoms/Tabs/Tabs';
 import Divider from '@atoms/Divider/Divider';
 import Input from '@atoms/Input/Input';
+import Title from '@atoms/Title/Title';
 
 const tabItems = [
 	{
@@ -22,7 +23,7 @@ const InputInfo = () => {
 	};
 	return (
 		<div className="col-lg-12">
-			<h1>Input</h1>
+			<Title size={1}>Input</Title>
 			<LeadParagraph>
 				Input forms are an input element that allows the user to interact and input data into.
 				Label text should be used to tell the user what kind of data the input form is looking for
@@ -35,7 +36,7 @@ const InputInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Input</h3>
+						<Title size={3} className="col-lg-12">Input</Title>
 						<div className="col-lg-6">
 							<p>
 								Input forms contains 3 different state: un-clicked, hover and clicked.
@@ -55,7 +56,7 @@ const InputInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Input error</h3>
+						<Title size={3} className="col-lg-12">Input error</Title>
 						<div className="col-lg-6">
 							<p>
 								When an error occurs in the input form, the select form will change into a error state where the
@@ -75,7 +76,7 @@ const InputInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<h3 className="col-lg-12">Search</h3>
+						<Title size={3} className="col-lg-12">Search</Title>
 						<div className="col-lg-6">
 							<p>
 								Search form are an input element that combines an input form and a clickable search icon to allow

@@ -120,9 +120,9 @@ const LinksInfo = () => {
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={5}>Prop name</Title></th>
+									<th><Title size={5}>Type</Title></th>
+									<th><Title size={5}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>

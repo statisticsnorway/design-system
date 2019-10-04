@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Title from '@atoms/Title/Title';
-import Paragraph from '@atoms/Paragraph/Paragraph';
 import { PlusCircle, MinusCircle } from 'react-feather';
 
 const Accordion = ({

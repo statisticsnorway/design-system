@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import Divider from '@atoms/Divider/Divider';
 import Title from '@atoms/Title/Title';
@@ -78,9 +77,9 @@ const PaginationInfo = () => (
 			<table className="col-lg-12">
 				<thead style={{ textAlign: 'left' }}>
 					<tr>
-						<th><h5>Prop name</h5></th>
-						<th><h5>Type</h5></th>
-						<th><h5>Description</h5></th>
+						<th><Title size={5}>Prop name</Title></th>
+						<th><Title size={5}>Type</Title></th>
+						<th><Title size={5}>Description</Title></th>
 					</tr>
 				</thead>
 				<tbody>

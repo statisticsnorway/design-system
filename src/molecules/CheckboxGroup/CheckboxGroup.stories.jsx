@@ -13,6 +13,7 @@ const checkboxItems = [
 	}, {
 		label: 'Item 3',
 		value: 'item3',
+		disabled: 'true',
 	},
 ];
 

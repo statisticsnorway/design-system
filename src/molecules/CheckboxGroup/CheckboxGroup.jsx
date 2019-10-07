@@ -32,6 +32,7 @@ const CheckboxGroup = ({
 					selected={selected.includes(it.value)}
 					value={it.value}
 					callback={setSelected}
+					disabled={it.disabled}
 				>{it.label}
 				</Checkbox>
 			))}

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Checkbox = ({
-	index, children, callback, selected, value,
+	index, children, callback, selected, value, disabled,
 }) => (
-	<div tabIndex={index + 1} className="checkbox-button-wrapper">
+	<div tabIndex={index + 1} className={`checkbox-button-wrapper${disabled ? ' disabled' : ''}`}>
 		<label htmlFor={value}>
 			{children}
 			<input
@@ -33,6 +33,7 @@ Checkbox.propTypes = {
 		PropTypes.string,
 		PropTypes.number,
 	]).isRequired,
+	disabled: PropTypes.bool,
 };
 
 export default Checkbox;

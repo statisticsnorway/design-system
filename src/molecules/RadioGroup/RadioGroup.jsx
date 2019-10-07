@@ -21,6 +21,7 @@ const RadioGroup = ({
 					selected={it.value === selected}
 					value={it.value}
 					callback={updateSelected}
+					disabled={it.disabled}
 				>{it.label}
 				</RadioButton>
 			))}

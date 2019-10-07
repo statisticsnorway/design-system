@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const RadioButton = ({
-	index, children, callback, selected, value,
+	index, children, callback, selected, value, disabled,
 }) => (
-	<div tabIndex={index + 1} className="radio-button-wrapper" onClick={() => callback(value)}>
+	<div tabIndex={index + 1} className={`radio-button-wrapper${disabled ? ' disabled' : ''}`} onClick={() => callback(value)}>
 		<label htmlFor={value}>
 			{children}
 			<input
@@ -22,6 +22,7 @@ const RadioButton = ({
 RadioButton.defaultProps = {
 	callback: () => {},
 	index: 1,
+	disabled: false,
 };
 
 RadioButton.propTypes = {
@@ -33,6 +34,7 @@ RadioButton.propTypes = {
 		PropTypes.string,
 		PropTypes.number,
 	]).isRequired,
+	disabled: PropTypes.bool,
 };
 
 export default RadioButton;

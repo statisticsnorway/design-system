@@ -12,6 +12,7 @@ import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
 import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
+import RadioButtonInfo from '@organisms/RadioButtonInfo/RadioButtonInfo';
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 
 const sidebarItems = [
@@ -49,6 +50,9 @@ const sidebarItems = [
 	}, {
 		label: 'Checkbox',
 		path: '/checkbox',
+	}, {
+		label: 'Radio Buttons',
+		path: '/radiobutton',
 	},
 ];
 
@@ -87,6 +91,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
+					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 				</Switch>
 			</section>
 		</div>

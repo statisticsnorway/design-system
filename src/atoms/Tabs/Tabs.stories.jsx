@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
-import StoryRouter from 'storybook-react-router';
 
 import Tabs from './Tabs';
 
@@ -20,7 +19,7 @@ const items = [
 	},
 ];
 
-storiesOf('Atoms|Tabs', module).addDecorator(centered).addDecorator(StoryRouter())
+storiesOf('Atoms|Tabs', module).addDecorator(centered)
 	.add('Tabs', () => (
 		<Tabs items={items} />
 	));

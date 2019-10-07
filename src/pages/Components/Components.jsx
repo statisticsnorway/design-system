@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
-import Title from '@atoms/Title/Title';
+import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import BreadcrumbInfo from '@organisms/BreadcrumbInfo/BreadcrumbInfo';
@@ -12,7 +12,6 @@ import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
 import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
-import Paragraph from '../../atoms/Paragraph/Paragraph';
 
 const sidebarItems = [
 	{

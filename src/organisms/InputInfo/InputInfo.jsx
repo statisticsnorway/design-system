@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
-import Divider from '@atoms/Divider/Divider';
-import Input from '@atoms/Input/Input';
-import Title from '@atoms/Title/Title';
-import Paragraph from '@atoms/Paragraph/Paragraph';
+import { Divider, Input, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{

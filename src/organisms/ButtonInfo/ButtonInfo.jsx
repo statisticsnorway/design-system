@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import Divider from '@atoms/Divider/Divider';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
-import Title from '@atoms/Title/Title';
-import Button from '@atoms/Button/Button';
-import Link from '@atoms/Link/Link';
-import Paragraph from '@atoms/Paragraph/Paragraph';
+import { Button, Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import { ChevronDown } from 'react-feather';
 
 const tabItems = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Link from '@atoms/Link/Link';
+import { Link } from '@statisticsnorway/ssb-component-library';
 import Header from '@organisms/Header/Header';
 import Footer from '@organisms/Footer/Footer';
 import Components from '@pages/Components/Components';

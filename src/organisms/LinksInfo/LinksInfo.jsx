@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'react-feather';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
-import Divider from '@atoms/Divider/Divider';
-import Link from '@atoms/Link/Link';
-import Title from '@atoms/Title/Title';
-import Paragraph from '@atoms/Paragraph/Paragraph';
+import { Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{

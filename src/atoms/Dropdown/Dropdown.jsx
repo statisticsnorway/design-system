@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
 
-const id = uuid();
-
 const Dropdown = ({
 	header, items, onSelect, open, placeholder, searchable, selectedItem,
 }) => {
+	const id = uuid();
 	const node = useRef();
 	const [isOpen, setOpen] = useState(open);
 	const [availableOptions, filterOptions] = useState(items);

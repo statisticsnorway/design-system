@@ -1,9 +1,6 @@
 import React from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import Divider from '@atoms/Divider/Divider';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Title from '@atoms/Title/Title';
-import Paragraph from '@atoms/Paragraph/Paragraph';
+import { Divider, LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const codeExample = `
 <Divider dark />

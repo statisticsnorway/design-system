@@ -2,7 +2,7 @@
 
 exports[`Link component Matches the snapshot 1`] = `
 <div
-  className="link"
+  className="link standard"
 >
   <div
     className="index"
@@ -18,7 +18,6 @@ exports[`Link component Matches the snapshot 1`] = `
       >
         A link
       </span>
-       
     </a>
   </div>
   <div

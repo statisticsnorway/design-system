@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@atoms/Button/Button';
-import Paragraph from '@atoms/Paragraph/Paragraph';
+import { Button, Paragraph } from '@statisticsnorway/ssb-component-library/lib';
 import { ArrowUp } from 'react-feather';
 
 const Footer = ({
@@ -39,7 +38,7 @@ const Footer = ({
 				<Button
 					onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
 					text="Til toppen"
-					icon={<ArrowUp />}
+					icon={<ArrowUp size={18} />}
 				/>
 			</div>
 		)}

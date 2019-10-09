@@ -2,19 +2,23 @@
 
 exports[`Input component Matches the snapshot 1`] = `
 <div
-  className="input-field-wrapper"
+  className="input-field-wrapper standard"
 >
-  <input
-    disabled={false}
-    id="b05d0f77-4b8b-4d54-affb-a40e6ded92cf"
-    onChange={[Function]}
-    type="text"
-  />
   <label
-    className="undefined"
-    htmlFor="b05d0f77-4b8b-4d54-affb-a40e6ded92cf"
+    htmlFor="839b72c7-53a6-4af1-804d-e38738fcf497"
   >
     Input field
   </label>
+  <div
+    className="d-flex"
+  >
+    <input
+      className=""
+      disabled={false}
+      id="839b72c7-53a6-4af1-804d-e38738fcf497"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>
 </div>
 `;

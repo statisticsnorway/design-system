@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'react-feather';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library/lib';
 
 const tabItems = [
 	{

@@ -2,22 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
-import Link from '@atoms/Link/Link';
-import Tabs from '@atoms/Tabs/Tabs';
-import Title from '@atoms/Title/Title';
+import { Link, Tabs, Title } from '@statisticsnorway/ssb-component-library/lib';
 import { GitHub } from 'react-feather';
 
 const items = [
 	{
-		title: 'Get Started',
+		title: 'Om designsystemet',
 		path: '/get-started',
 	},
 	{
-		title: 'Components',
+		title: 'Komponenter',
 		path: '/components',
 	},
 	{
-		title: 'Templates',
+		title: 'Sidemaler',
 		path: '/templates',
 	},
 ];
@@ -30,7 +28,7 @@ const Header = withRouter(({ history }) => (
 					<img src={logo} alt="logo" />
 				</div>
 				<div className="diagonal-divider" />
-				<Title size={3}>Design System</Title>
+				<Title size={3}>Designsystem</Title>
 			</div>
 			<div>
 				<Link href=" ">Norsk</Link>
@@ -41,7 +39,7 @@ const Header = withRouter(({ history }) => (
 				<Tabs items={items} onClick={e => history.push(e)} />
 			</div>
 			<div className="links">
-				<Link href="https://github.com/statisticsnorway/design-system" isExternal icon={<GitHub size="18" />}>
+				<Link href="https://github.com/statisticsnorway/ssb-component-library" isExternal icon={<GitHub size="18" />}>
 					Github
 				</Link>
 			</div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
-import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
+import { Paragraph, Title } from '@statisticsnorway/ssb-component-library/lib';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import BreadcrumbInfo from '@organisms/BreadcrumbInfo/BreadcrumbInfo';

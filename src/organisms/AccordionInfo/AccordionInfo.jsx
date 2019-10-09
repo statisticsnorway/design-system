@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library/lib';
 import Accordion from '@molecules/Accordion/Accordion';
 import NestedAccordion from '@molecules/NestedAccordion/NestedAccordion';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';

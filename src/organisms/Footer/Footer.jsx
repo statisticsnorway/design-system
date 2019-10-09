@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Paragraph } from '@statisticsnorway/ssb-component-library';
+import { Button, Paragraph } from '@statisticsnorway/ssb-component-library/lib';
 import { ArrowUp } from 'react-feather';
 
 const Footer = ({

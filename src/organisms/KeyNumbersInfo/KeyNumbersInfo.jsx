@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import KeyNumbers from '@molecules/KeyNumbers/KeyNumbers';
-import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library/lib';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import { Home } from 'react-feather';
 

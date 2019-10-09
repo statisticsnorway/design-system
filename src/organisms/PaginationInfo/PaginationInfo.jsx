@@ -1,6 +1,6 @@
 import React from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Pagination, Paragraph, Title } from '@statisticsnorway/ssb-component-library/lib';
+import { Divider, LeadParagraph, Pagination, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const mockedItems = [
 	{ text: '1', path: '/1' },

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
-import { Link, Tabs, Title } from '@statisticsnorway/ssb-component-library/lib';
+import { Link, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import { GitHub } from 'react-feather';
 
 const items = [

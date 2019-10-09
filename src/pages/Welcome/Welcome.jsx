@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Paragraph } from '@statisticsnorway/ssb-component-library/lib';
+import { Title, Paragraph } from '@statisticsnorway/ssb-component-library';
 
 const Welcome = () => (
 	<div className="welcome page-wrapper">

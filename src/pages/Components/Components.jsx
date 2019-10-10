@@ -12,6 +12,7 @@ import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
 import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
+import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
 
 const sidebarItems = [
 	{
@@ -48,6 +49,9 @@ const sidebarItems = [
 	}, {
 		label: 'Checkbox',
 		path: '/checkbox',
+	}, {
+		label: 'Dropdown',
+		path: '/dropdown',
 	},
 ];
 
@@ -86,6 +90,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
+					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 				</Switch>
 			</section>
 		</div>

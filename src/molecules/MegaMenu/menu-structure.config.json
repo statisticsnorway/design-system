@@ -1,0 +1,285 @@
+{
+    "Befolkning og bolig": {
+        "Befolkning": {
+            "filter": [
+                "Barn, familier og husholdninger",
+                "Befolkningsframskrivinger",
+                "Folke- og boligtellinger",
+                "Folketall",
+                "Flytting",
+                "Fødte og døde",
+                "Innvandrere",
+                "Likestilling",
+                "Navn"
+            ],
+            "article": []
+        },
+        "Bygg, bolig og eiendom": {
+            "filter": [
+                "Bolig og boforhold",
+                "Bygg og anlegg",
+                "Eiendom"
+            ],
+            "article": []
+        },
+        "Innvandring og innvandrere": {
+            "filter": [
+                "Arbeid og lønn",
+                "Befolkning",
+                "Bygg, bolig og eiendom",
+                "Helse",
+                "Inntekt og forbruk",
+                "Kultur og fritid",
+                "Nasjonalregnskap og konjunkturer",
+                "Offentlig sektor",
+                "Sosiale forhold og kriminalitet",
+                "Utdanning",
+                "Valg",
+                "Virksomheter, foretak og regnskap"
+            ],
+            "article": []
+        }
+    },
+    "Arbeid, lønn og utdanning": {
+        "Arbeid og lønn": {
+            "filter": [
+                "Arbeidsledighet",
+                "Arbeidsmiljø, sykefravær og arbeidskonflikter",
+                "Lønn og arbeidskraftkostnader",
+                "Sysselsetting"
+            ],
+            "article": [
+                "Ansatte i barnehage og skole",
+                "Antall arbeidsforhold og lønn",
+                "Arbeidskraftkostnader",
+                "Arbeidskraftkostnadsindeks",
+                "Arbeidskraftundersøkelsen",
+                "Arbeidskraftundersøkinga, sesongjusterte tal",
+                "Arbeidsmiljø, levekårsundersøkelsen",
+                "Arbeidsulykker",
+                "Fagforeiningsmedlemmer og streikar",
+                "Funksjonshemmede, arbeidskraftundersøkelsen",
+                "Grunnlag for arbeidsgiveravgift",
+                "Helse- og sosialpersonell",
+                "Ledige stillingar",
+                "Lønn",
+                "Registrerte arbeidsledige",
+                "Registrerte arbeidsledige blant innvandrere",
+                "Sykefravær",
+                "Sysselsetting blant innvandrere, registerbasert",
+                "Sysselsetting, registerbasert",
+                "Tilknytning til arbeid, utdanning og velferdsordninger"
+            ]
+        },
+        "Inntekt og forbruk": {
+            "filter": [
+                "Skatt for personer",
+                "Inntekt og formue",
+                "Forbruk"
+            ],
+            "article": []
+        },
+        "Utdanning": {
+            "filter": [
+                "Barnehager",
+                "Fagskoleutdanning",
+                "Grunnskoler",
+                "Høyere utdanning",
+                "Utdanningsnivå",
+                "Videregående utdanning",
+                "Voksenopplæring"
+            ],
+            "article": []
+        }
+    },
+    "Økonomi": {
+        "Bank og finansmarked": {
+            "filter": [
+                "Finansielle indikatorer",
+                "Finansinstitusjoner og andre finansielle foretak",
+                "Verdipapirmarkeder"
+            ],
+            "stricles": [
+                "Aksjer og kapitalutdelinger",
+                "Banker og kredittforetak",
+                "Finansielle holdingselskaper",
+                "Finansielle sektorregnskaper",
+                "Kredittindikator",
+                "Livs- og skadeforsikringsselskaper, regnskap",
+                "Opna konkursar",
+                "Pengemengde",
+                "Pensjonskasser",
+                "Renter i banker og kredittforetak",
+                "Tjenestepensjoner",
+                "Verdipapirer",
+                "Verdipapirfond",
+                "Verdipapirfond, kvartalstall"
+            ]
+        },
+        "Nasjonalregnskap og konjunkturer": {
+            "filter": [
+                "Finansregnskap",
+                "Konjunkturer",
+                "Nasjonalregnskap",
+                "Discussion Papers"
+            ],
+            "article": []
+        },
+        "Offentlig sektor": {
+            "filter": [
+                "Kommunale finanser",
+                "KOSTRA",
+                "Offentlig forvaltning",
+                "Skatteregnskap",
+                "Statlige finanser"
+            ],
+            "article": []
+        },
+        "Priser og prisindekser": {
+            "filter": [
+                "Boligpriser og boligprisindekser",
+                "Byggekostnadsindekser",
+                "Kjøpekraftspariteter",
+                "Konsumpriser",
+                "Produsent- og engrosprisindekser"
+            ],
+            "article": []
+        },
+        "Utenriksøkonomi": {
+            "filter": [
+                "Fordringer og gjeld overfor utlandet",
+                "Utenrikshandel",
+                "Utenriksregnskap"
+            ],
+            "article": []
+        }
+    },
+    "Næringsliv og teknologi": {
+        "Energi og industri": {
+            "filter": [
+                "Energi",
+                "Industri og bergverksdrift",
+                "Olje og gass"
+            ],
+            "article": []
+        },
+        "Jord, skog, jakt og fiskeri": {
+            "filter": [
+                "Landbrukstellinger",
+                "Landbrukseiendommer",
+                "Akvakultur",
+                "Fiske og fangst",
+                "Skogbruk",
+                "Jakt",
+                "Jordbruk"
+            ],
+            "article": []
+        },
+        "Teknologi og innovasjon": {
+            "filter": [
+                "Forskning og innovasjon i næringslivet",
+                "Informasjons- og kommunikasjonsteknologi - IKT"
+            ],
+            "article": []
+        },
+        "Varehandel og tjenesteyting": {
+            "filter": [
+                "Tjenesteyting",
+                "Varehandel"
+            ],
+            "article": []
+        },
+        "Virksomheter, foretak og regnskap": {
+            "filter": [
+                "Eierskap og roller",
+                "Konkurser",
+                "Regnskap",
+                "Skatt for næringsvirksomhet",
+                "Virksomheter og foretak"
+            ],
+            "article": []
+        }
+    },
+    "Miljø og transport": {
+        "Natur og miljø": {
+            "filter": [
+                "Areal",
+                "Avfall",
+                "Forurensning og klima",
+                "Miljøregnskap",
+                "Vann og avløp"
+            ],
+            "article": []
+        },
+        "Transport og reiseliv": {
+            "filter": [
+                "Landtransport",
+                "Luftfart",
+                "Reiseliv",
+                "Sjøtransport"
+            ],
+            "article": []
+        }
+    },
+    "Helse og samfunn": {
+        "Helse": {
+            "filter": [
+                "Funksjonsevne",
+                "Helseforhold og levevaner",
+                "Helsetjenester",
+                "Dødsårsaker"
+            ],
+            "article": []
+        },
+        "Kultur og fritid": {
+            "filter": [
+                "Idrett og friluftsliv",
+                "Kultur",
+                "Organisasjoner og medlemskap",
+                "Religion og livssyn",
+                "Tids- og mediebruk"
+            ],
+            "article": []
+        },
+        "Sosiale forhold og kriminalitet": {
+            "filter": [
+                "Barne- og familievern",
+                "Kriminalitet og rettsvesen",
+                "Levekår",
+                "Trygd og stønad"
+            ],
+            "article": []
+        },
+        "Svalbard": {
+            "filter": [
+                "Arbeid og lønn",
+                "Befolkning",
+                "Bygg, bolig og eiendom",
+                "Energi og industri",
+                "Inntekt og forbruk",
+                "Jord, skog, jakt og fiskeri",
+                "Kultur og fritid",
+                "Nasjonalregnskap og konjunkturer",
+                "Natur og miljø",
+                "Offentlig sektor",
+                "Priser og prisindekser",
+                "Sosiale forhold og kriminalitet",
+                "Teknologi og innovasjon",
+                "Transport og reiseliv",
+                "Utdanning",
+                "Virksomheter, foretak og regnskap"
+            ],
+            "article": []
+        },
+        "Valg": {
+            "filter": [
+                "Folkeavstemninger",
+                "Kommunestyre- og fylkestingsvalg",
+                "Partifinansiering",
+                "Sametingsvalg",
+                "Stortingsvalg"
+            ],
+            "article": []
+        }
+    }
+}

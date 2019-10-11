@@ -13,6 +13,7 @@ import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
 import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
 import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
+import MegaMenu from '@organisms/MegaMenu/MegaMenu';
 
 const sidebarItems = [
 	{
@@ -52,6 +53,9 @@ const sidebarItems = [
 	}, {
 		label: 'Dropdown',
 		path: '/dropdown',
+	}, {
+		label: 'Megameny',
+		path: '/mega-menu',
 	},
 ];
 
@@ -91,6 +95,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
+					<Route path={`${match.url}/mega-menu`} component={MegaMenu} />
 				</Switch>
 			</section>
 		</div>

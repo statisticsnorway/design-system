@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
-import Title from '@atoms/Title/Title';
+import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import Accordion from '@molecules/Accordion/Accordion';
 import NestedAccordion from '@molecules/NestedAccordion/NestedAccordion';
-import Divider from '@atoms/Divider/Divider';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const accordionFillerText = `
 This is paragraph text which explains the accordion, the rest of the text is just to fill out space.

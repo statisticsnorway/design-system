@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
 import KeyNumbers from '@molecules/KeyNumbers/KeyNumbers';
-import Divider from '@atoms/Divider/Divider';
+import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import Title from '@atoms/Title/Title';
-import Paragraph from '@atoms/Paragraph/Paragraph';
 import { Home } from 'react-feather';
 
 const leadParagraphText = `

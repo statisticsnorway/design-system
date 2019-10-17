@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
-import Title from '@atoms/Title/Title';
-import Divider from '@atoms/Divider/Divider';
+import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import Breadcrumb from '@molecules/Breadcrumb/Breadcrumb';
-import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const tabItems = [
 	{

@@ -45,6 +45,12 @@ new component. This directory should contain four files. A [component](#componen
 file, a [test](#testing) file and a [stylesheet](#styling).
 
 #### Components
+Components are written in [React](https://reactjs.org/) using the [JSX](https://reactjs.org/docs/introducing-jsx.html) syntax.
+Components should be written as functions, as opposed to classes, and if a local state or event handler is needed you should
+take use of the [Hooks API](https://reactjs.org/docs/hooks-intro.html).
+
+As a way to ensure that our components are being used they way we intended, we use [PropTypes](https://www.npmjs.com/package/prop-types)
+to check properties being passed to components. _All_ components with props available should have this. 
 
 #### Storybook
 [Storybook](https://storybook.js.org/) is an open source tool for developing UI components in an isolated environment.

@@ -2,6 +2,6 @@
 
 exports[`Divider component Matches the snapshot 1`] = `
 <hr
-  className="divider-line dark"
+  className="divider-line dark "
 />
 `;

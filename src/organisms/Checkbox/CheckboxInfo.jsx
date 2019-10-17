@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import CheckboxGroup from '@molecules/CheckboxGroup/CheckboxGroup';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
-import Divider from '@atoms/Divider/Divider';
+import { Divider, LeadParagraph, Tabs } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Check boxes provides the user with a range of options where the user may select any number of choices, one, multiple or zero.

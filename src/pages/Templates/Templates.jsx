@@ -1,6 +1,5 @@
 import React from 'react';
-import Title from '@atoms/Title/Title';
-import Paragraph from '@atoms/Paragraph/Paragraph';
+import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const Templates = () => (
 	<div className="templates page-wrapper">

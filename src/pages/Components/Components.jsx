@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
-import Title from '@atoms/Title/Title';
+import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 import TreeMenu from '@atoms/TreeMenu/TreeMenu';
 import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import BreadcrumbInfo from '@organisms/BreadcrumbInfo/BreadcrumbInfo';
@@ -12,8 +12,8 @@ import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
 import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
+import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
 import RadioButtonInfo from '@organisms/RadioButtonInfo/RadioButtonInfo';
-import Paragraph from '../../atoms/Paragraph/Paragraph';
 
 const sidebarItems = [
 	{
@@ -51,9 +51,12 @@ const sidebarItems = [
 		label: 'Checkbox',
 		path: '/checkbox',
 	}, {
+		label: 'Dropdown',
+		path: '/dropdown',
+	}, {
 		label: 'Radio Buttons',
 		path: '/radiobutton',
-	},
+	}
 ];
 
 sidebarItems.sort((a, b) => ((a.label > b.label) ? 1 : -1));
@@ -91,6 +94,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
+          <Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 				</Switch>
 			</section>

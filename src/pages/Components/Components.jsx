@@ -13,6 +13,7 @@ import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
 import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
 import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
+import RadioButtonInfo from '@organisms/RadioButtonInfo/RadioButtonInfo';
 
 const sidebarItems = [
 	{
@@ -52,7 +53,10 @@ const sidebarItems = [
 	}, {
 		label: 'Dropdown',
 		path: '/dropdown',
-	},
+	}, {
+		label: 'Radio Buttons',
+		path: '/radiobutton',
+	}
 ];
 
 sidebarItems.sort((a, b) => ((a.label > b.label) ? 1 : -1));
@@ -90,7 +94,8 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
-					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
+          <Route path={`${match.url}/dropdown`} component={DropdownInfo} />
+					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 				</Switch>
 			</section>
 		</div>

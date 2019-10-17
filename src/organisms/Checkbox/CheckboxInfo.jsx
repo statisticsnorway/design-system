@@ -32,7 +32,11 @@ const tabItems = [
 const codeExampleCheckboxGroup = `
 <CheckboxGroup
 	header="Header"
-	items={items}
+	items={[
+		{ label: 'Checkbox 1', value: 'checkbox1' },
+		{ label: 'Checkbox 2', value: 'checkbox2' },
+		{ label: 'Checkbox 3', value: 'checkbox3', disabled: true },
+	]}
 />
 `;
 
@@ -64,6 +68,7 @@ const CheckboxInfo = () => {
 								items={[
 									{ label: 'Checkbox 1', value: 'checkbox1' },
 									{ label: 'Checkbox 2', value: 'checkbox2' },
+									{ label: 'Checkbox 3', value: 'checkbox3', disabled: true },
 								]}
 							/>
 						</div>

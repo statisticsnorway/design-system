@@ -21,18 +21,47 @@
 .mega-menu.prototype-2 {
   #globalMenuItems {
     list-style: none;
-    margin: 0;
+    margin: 5px 0 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    cursor: pointer;
     li {
-      margin: 0;
+      margin: 0 20px 0 0;
       padding: 0;
       display: inline;
+      &.collapse,
+      &.expand {
+        position: relative;
+        padding-right: 15px;
+        font-weight: bold;
+        &::after {
+          content: "›";
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          font-size: 1.4em;
+          display: block;
+          color: #00824d;
+          height: 0px;
+          line-height: 0px;
+          transform: rotate(90deg);
+          right: 0px;
+        }  
+      }
+      &.expand {
+        color: #00824D;
+        &::after {
+          content: "‹";
+        }
+      }
     }
   }
   .coreSiteStuff {
     text-align: right !important;
     a {
-      color: #00824D;
+      color: #00824d;
       font-size: 16px;
       margin-left: 20px;
     }
@@ -43,16 +72,16 @@
     border-top: 1px solid #274247;
     margin-top: 40px;
     max-height: 600px;
-    transition: max-height .2s ease-out;
+    transition: max-height 0.2s ease-out;
     &.expand > * {
       opacity: 1;
-      transition: opacity .4s ease-out;
+      transition: opacity 0.4s ease-out;
     }
     &.collapse {
       max-height: 0px;
       & > * {
         opacity: 0;
-        transition: opacity .4s ease-out;
+        transition: opacity 0.4s ease-out;
       }
     }
   }
@@ -162,9 +191,8 @@
       cursor: pointer;
       position: relative;
       display: block;
-      height: 50px;
       width: 100%;
-      padding: 15px 20px;
+      padding: 14px 20px;
       list-style: none;
       &:hover,
       &.force-hover {
@@ -181,10 +209,13 @@
         content: "›";
         position: absolute;
         right: 10px;
-        top: 7px;
+        top: 50%;
         font-size: 1.4em;
         display: block;
         color: #00824d;
+        height: 0px;
+        line-height: 0px;
+        margin-top: -2px;
       }
     }
   }

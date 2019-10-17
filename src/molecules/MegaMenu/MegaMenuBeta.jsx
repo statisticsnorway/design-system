@@ -59,19 +59,21 @@ const MegaMenuBeta = ({ openByDefault }) => {
                         <img className="logo" src={logo} alt="logo" />
                     </a>
                 </div>
-                <div className="col-4">
+                <div className="col-8">
                     <ul id="globalMenuItems">
-                        <li onClick={toggleOpenMenu}>Finn statistikk</li>
+                        <li onClick={toggleOpenMenu} className={OpenMenu ?  "expand" : "collapse"}>Finn statistikk</li>
                         <li>SSB forskingin</li>
                         <li>Om SSB</li>
                     </ul>
                 </div>
+                {/*
                 <div className="col-4">
                     <ul id="toolsMenuItems">
                         <li onClick={toggleOpenMenu}>Finn statistikk</li>
                         <li>Søk</li>
                     </ul>
                 </div>
+                */}
             </div>
 
             <div id="navbarMainMenu" className={`row no-gutters ${OpenMenu ? "expand" : "collapse"}`}>
@@ -84,10 +86,10 @@ const MegaMenuBeta = ({ openByDefault }) => {
                                 selected={noGroupActive()}
                                 value="false"
                                 callback={resetSelection}
-                            >Vis alle (a-å)
+                            >Vis alle emner (a-å)
                             </Checkbox>
                         </li>
-                        <li className="divider">Filtrer etter tema:</li>
+                        <li className="divider">Filtrer emner etter tema:</li>
                         {Groups.map((group, index) =>
                             <li key={group.name}>
                                 <Checkbox

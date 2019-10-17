@@ -6,7 +6,7 @@ import Link from '@atoms/Link/Link';
 // TODO: Make this either hard coded or load through endpoint or more sexy or whatever.
 const MenuStructure = require('./menu-structure.config.json');
 
-const MegaMenu = ({ openByDefault }) => {
+const MegaMenuAlpha = ({ openByDefault }) => {
     
     let [ActiveGroup, SetActiveGroupState] = useState(false)
     let [ActiveTopic, SetActiveTopic] = useState(false)
@@ -45,12 +45,8 @@ const MegaMenu = ({ openByDefault }) => {
         TopicArray.sort();
         topicMenu = TopicArray.map(topic => <li key={topic} onClick={()=>SetActiveTopic(topic)} className={topic == ActiveTopic ? "active" : ""}>{topic}</li>);
     }
-    else {
-        console.log("Aint no active group")
-    }
     let filterMenuColumns = ActiveGroup ? 6 : 9;
-    let filterItemColumns = ActiveGroup ? 6 : 4;
-    let filterMenu = <ul className="filterMenu">{FilterArray.map(filter => <li className={`col-${filterItemColumns}`} key={filter}><a href={filter}>{filter}</a></li>)}</ul>
+    let filterMenu = <ul className={`filterMenu ${ ActiveGroup ? "text-col-2" : "text-col-3"}`}>{FilterArray.map(filter => <li className="col-12" key={filter}><a href={filter}>{filter}</a></li>)}</ul>
 
     return (
         <nav className="mega-menu prototype-1">
@@ -61,7 +57,7 @@ const MegaMenu = ({ openByDefault }) => {
             <div id="navbarMainMenu" className="row no-gutters">
                 <div className="col-3">
                     <ul className="groupMenu">
-                        <li onClick={()=>SetActiveGroup(false)} className={ ! ActiveGroup ? "active" : ""}>A–Å</li>
+                        <li onClick={()=>SetActiveGroup(false)} className={ ! ActiveGroup ? "active" : ""}>A-Å</li>
                         {Groups.map(group => <li onClick={()=>SetActiveGroup(group)} key={group} className={ActiveGroup == group ? "active" : ""}>{group}</li>)}
                     </ul>
                 </div>
@@ -81,15 +77,15 @@ const MegaMenu = ({ openByDefault }) => {
     );
 };
 
-MegaMenu.defaultProps = {
+MegaMenuAlpha.defaultProps = {
     openByDefault: false,
 };
 
-MegaMenu.propTypes = {
+MegaMenuAlpha.propTypes = {
     children: PropTypes.node,
     header: PropTypes.string,
     openByDefault: PropTypes.bool,
     subHeader: PropTypes.string,
 };
 
-export default MegaMenu;
+export default MegaMenuAlpha;

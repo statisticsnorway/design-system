@@ -1,7 +1,8 @@
 import React from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
-import MegaMenu from '@molecules/MegaMenu/MegaMenu';
+import MegaMenuAlpha from '@molecules/MegaMenu/MegaMenuAlpha';
+import MegaMenuBeta from '@molecules/MegaMenu/MegaMenuBeta';
 
 const codeExample = `
 <Divider dark />
@@ -28,7 +29,11 @@ const DividerInfo = () => (
 					</Paragraph>
 				</div>
 				<div className="col-lg-12">
-					<MegaMenu />
+					<MegaMenuBeta />
+				</div>
+
+				<div className="col-lg-12">
+					<MegaMenuAlpha />
 				</div>
 			</div>
 		</div>

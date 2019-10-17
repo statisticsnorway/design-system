@@ -1,6 +1,7 @@
 {
     "Befolkning og bolig": {
         "Befolkning": {
+            "icon" : "group.svg",
             "filter": [
                 "Barn, familier og husholdninger",
                 "Befolkningsframskrivinger",
@@ -15,6 +16,7 @@
             "article": []
         },
         "Bygg, bolig og eiendom": {
+            "icon" : "home.svg",
             "filter": [
                 "Bolig og boforhold",
                 "Bygg og anlegg",
@@ -23,6 +25,7 @@
             "article": []
         },
         "Innvandring og innvandrere": {
+            "icon" : "earth-globe.svg",
             "filter": [
                 "Arbeid og lønn",
                 "Befolkning",
@@ -42,6 +45,7 @@
     },
     "Arbeid, lønn og utdanning": {
         "Arbeid og lønn": {
+            "icon" : "piggy-bank.svg",
             "filter": [
                 "Arbeidsledighet",
                 "Arbeidsmiljø, sykefravær og arbeidskonflikter",
@@ -72,6 +76,7 @@
             ]
         },
         "Inntekt og forbruk": {
+            "icon" : "wallet.svg",
             "filter": [
                 "Skatt for personer",
                 "Inntekt og formue",
@@ -80,6 +85,7 @@
             "article": []
         },
         "Utdanning": {
+            "icon" : "apple.svg",
             "filter": [
                 "Barnehager",
                 "Fagskoleutdanning",
@@ -94,6 +100,7 @@
     },
     "Økonomi": {
         "Bank og finansmarked": {
+            "icon" : "kroner.svg",
             "filter": [
                 "Finansielle indikatorer",
                 "Finansinstitusjoner og andre finansielle foretak",
@@ -117,6 +124,7 @@
             ]
         },
         "Nasjonalregnskap og konjunkturer": {
+            "icon" : "bar-chart.svg",
             "filter": [
                 "Finansregnskap",
                 "Konjunkturer",
@@ -126,6 +134,7 @@
             "article": []
         },
         "Offentlig sektor": {
+            "icon" : "shield.svg",
             "filter": [
                 "Kommunale finanser",
                 "KOSTRA",
@@ -136,6 +145,7 @@
             "article": []
         },
         "Priser og prisindekser": {
+            "icon" : "tag.svg",
             "filter": [
                 "Boligpriser og boligprisindekser",
                 "Byggekostnadsindekser",
@@ -146,6 +156,7 @@
             "article": []
         },
         "Utenriksøkonomi": {
+            "icon" : "dollar.svg",
             "filter": [
                 "Fordringer og gjeld overfor utlandet",
                 "Utenrikshandel",
@@ -156,6 +167,7 @@
     },
     "Næringsliv og teknologi": {
         "Energi og industri": {
+            "icon" : "renewable-energy.svg",
             "filter": [
                 "Energi",
                 "Industri og bergverksdrift",
@@ -164,6 +176,7 @@
             "article": []
         },
         "Jord, skog, jakt og fiskeri": {
+            "icon" : "elk.svg",
             "filter": [
                 "Landbrukstellinger",
                 "Landbrukseiendommer",
@@ -176,6 +189,7 @@
             "article": []
         },
         "Teknologi og innovasjon": {
+            "icon" : "lightbulb.svg",
             "filter": [
                 "Forskning og innovasjon i næringslivet",
                 "Informasjons- og kommunikasjonsteknologi - IKT"
@@ -183,6 +197,7 @@
             "article": []
         },
         "Varehandel og tjenesteyting": {
+            "icon" : "shopping-cart.svg",
             "filter": [
                 "Tjenesteyting",
                 "Varehandel"
@@ -190,6 +205,7 @@
             "article": []
         },
         "Virksomheter, foretak og regnskap": {
+            "icon" : "book.svg",
             "filter": [
                 "Eierskap og roller",
                 "Konkurser",
@@ -202,6 +218,7 @@
     },
     "Miljø og transport": {
         "Natur og miljø": {
+            "icon" : "plant.svg",
             "filter": [
                 "Areal",
                 "Avfall",
@@ -212,6 +229,7 @@
             "article": []
         },
         "Transport og reiseliv": {
+            "icon" : "aeroplane.svg",
             "filter": [
                 "Landtransport",
                 "Luftfart",
@@ -223,6 +241,7 @@
     },
     "Helse og samfunn": {
         "Helse": {
+            "icon" : "health.svg",
             "filter": [
                 "Funksjonsevne",
                 "Helseforhold og levevaner",
@@ -232,6 +251,7 @@
             "article": []
         },
         "Kultur og fritid": {
+            "icon" : "sun.svg",
             "filter": [
                 "Idrett og friluftsliv",
                 "Kultur",
@@ -242,6 +262,7 @@
             "article": []
         },
         "Sosiale forhold og kriminalitet": {
+            "icon" : "paragraph.svg",
             "filter": [
                 "Barne- og familievern",
                 "Kriminalitet og rettsvesen",
@@ -251,6 +272,7 @@
             "article": []
         },
         "Svalbard": {
+            "icon" : "polar-bear.svg",
             "filter": [
                 "Arbeid og lønn",
                 "Befolkning",
@@ -272,6 +294,7 @@
             "article": []
         },
         "Valg": {
+            "icon" : "vote.svg",
             "filter": [
                 "Folkeavstemninger",
                 "Kommunestyre- og fylkestingsvalg",

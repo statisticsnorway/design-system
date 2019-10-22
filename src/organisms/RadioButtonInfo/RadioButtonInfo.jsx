@@ -6,6 +6,7 @@ import Tabs from '@atoms/Tabs/Tabs';
 import Divider from '@atoms/Divider/Divider';
 
 const leadParagraphText = `
+Norsk teksforklaring kommer her.
 Radio buttons allows the user to select a single selection among a groups of options which includes at least two or more choices. 
 In a radio button list the options should always be independent from every other option and by default no radio element should be selected.
 `;

@@ -16,14 +16,63 @@ const tabItems = [
 	},
 ];
 
+const ordinaryLink = `
+// React
+<Link href="">Link text</Link>
+<Link negative href="">Link text</Link>
+
+// HTML
+<a class="ssb-link" href=" " target="" rel="">
+	<span class="link-text">A regular link</span>
+</a>
+
+<a class="ssb-link negative" href=" " target="" rel="">
+	<span class="link-text">A regular link</span>
+</a>
+`;
+
+const iconLinks = `
+// React
+<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+<Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+
+// HTML
+<a class="ssb-link" href=" " target="" rel="">
+	{insert icon here}
+	<span class="link-text">A regular link</span>
+</a>
+
+<a class="ssb-link negative" href=" " target="" rel="">
+	{insert icon here}
+	<span class="link-text">A regular link</span>
+</a>
+`;
+
 const profiledLinks = `
+// React
 <Link href=" " linkType="profiled">Link text</Link>
-<Link
-	href=" "
-	linkType="profiled"
-	icon={<ArrowRight size="20" />}
->Link text
-</Link>
+<Link negative href=" " linkType="profiled">Link text</Link>
+<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+
+// HTML
+<a class="ssb-link" href=" " target="" rel="">
+	<span class="link-text">A regular link</span>
+</a>
+
+<a class="ssb-link negative" href=" " target="" rel="">
+	<span class="link-text">A regular link</span>
+</a>
+
+<a class="ssb-link" href=" " target="" rel="">
+	{insert icon here}
+	<span class="link-text">A regular link</span>
+</a>
+
+<a class="ssb-link negative" href=" " target="" rel="">
+	{insert icon here}
+	<span class="link-text">A regular link</span>
+</a>
 `;
 
 const LinksInfo = () => {
@@ -33,11 +82,9 @@ const LinksInfo = () => {
 	};
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Links</Title>
+			<Title size={1}>Link</Title>
 			<LeadParagraph>
-				Link component is styled to resemble a hyperlink to show user that this is a link to another page.
-				It follows the styling of a paragraph text but is underlined and has a different color.
-				Links can also be used in different formats, this includes: link lists, in-lined links and links with icons.
+				Lenker stiles slik at det er lett å forstå at de er hyperlenker til andre sider. De følger stilen til tekst de står sammen med i paragrafen, men er understreket og har grønn farge for å differensieres fra teksten. Lenker kan også bli brukt i andre former som lenkelister, profilerte lenker og lenker med ikon.
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
@@ -45,11 +92,10 @@ const LinksInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Link</Title>
+						<Title size={3} className="col-lg-12">Lenker</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Regular links can be used both in a paragraph and as a standalone
-								link that can be used to direct the user to another page when clicked.
+								Ordinære lenker kan blir brukt både i løpende tekst og som frittstående lenker.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
@@ -61,17 +107,15 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={'<Link href=" ">Link text</Link>'} language="jsx" />
+							<CodeSnippet code={ordinaryLink} language="jsx" />
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Links with icons</Title>
+						<Title size={3} className="col-lg-12">Lenker med ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Links with icons are usually not normally used in a paragraph but rather as a standalone
-								link to indicate functionality. But it can also be used together with other links with
-								icons to differentiate and indicate different functionalities.
+								Lenker med ikon brukes vanligvis ikke i løpende tekst, men gjerne på frittstående lenker. Men de kan også blir brukt sammen med andre lenker med ikon for å differensiere eller indikere forskjellig funksjonalitet.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
@@ -83,16 +127,15 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={'<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>'} language="jsx" />
+							<CodeSnippet code={iconLinks} language="jsx" />
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Profiled links with and without icon</Title>
+						<Title size={3} className="col-lg-12">Profilerte lenker med og uten ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Profiled links are used to emphasis on hierarchy and can be used in combination with the
-								other types of links to display prominence.
+								Profilerte lenker brukes for å presisere hierarki og de kan bli brukt i kombinasjon med andre typer lenker for å fremheve viktighet.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
@@ -163,12 +206,10 @@ const LinksInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Color</Title>
+						<Title size={3} className="col-lg-12">Farge</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								The chosen color for links is SSB green 4, the reason behind this choice is to fit the theme
-								of the overall design system and at the same time teaching the user about green being a clickable
-								component on our site as the majority of all clickable items are green.
+								Fargen på lenker er SSB grønn 4. Denne fargen er valgt for å passe inn i helheten i  designsystemet, og samtidig lære brukeren at grønn farge alltid er klikkbart på ssb.no.
 							</Paragraph>
 						</div>
 					</div>

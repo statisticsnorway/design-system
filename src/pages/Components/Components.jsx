@@ -7,7 +7,7 @@ import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
 import BreadcrumbInfo from '@organisms/BreadcrumbInfo/BreadcrumbInfo';
 import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
 import DividerInfo from '@organisms/DividerInfo/DividerInfo';
-import KeyNumbersInfo from '@organisms/KeyNumbersInfo/KeyNumbersInfo';
+import KeyFiguresInfo from '@organisms/KeyFiguresInfo/KeyFiguresInfo';
 import InputInfo from '@organisms/InputInfo/InputInfo';
 import LinksInfo from '@organisms/LinksInfo/LinksInfo';
 import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
@@ -39,8 +39,8 @@ const sidebarItems = [
 		label: 'Input',
 		path: '/input',
 	}, {
-		label: 'Key Numbers',
-		path: '/key-numbers',
+		label: 'Key Figures',
+		path: '/key-figures',
 	}, {
 		label: 'Links',
 		path: '/links',
@@ -90,11 +90,11 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/button`} component={ButtonInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/input`} component={InputInfo} />
-					<Route path={`${match.url}/key-numbers`} component={KeyNumbersInfo} />
+					<Route path={`${match.url}/key-figures`} component={KeyFiguresInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
-          <Route path={`${match.url}/dropdown`} component={DropdownInfo} />
+					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 				</Switch>
 			</section>

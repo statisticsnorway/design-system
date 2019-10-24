@@ -17,7 +17,7 @@ const MegaMenuBeta = ({ openByDefault }) => {
     tempTopics.sort((a, b) => a.name.localeCompare(b.name));
     let [Topics, setTopics] = useState(tempTopics)
     let [Groups, setGroups] = useState(Object.keys(MenuStructure).map(group => { return { "name": group, "active": false } }).sort((a, b) => a.name.localeCompare(b.name)));
-    let [OpenMenu, SetOpenMenu] = useState(true);
+    let [OpenMenu, SetOpenMenu] = useState(false);
 
     let noGroupActive = () => {
         return Groups.filter(group => group.active).length == 0;
@@ -29,7 +29,6 @@ const MegaMenuBeta = ({ openByDefault }) => {
     }
 
     const toggleOpenMenu = () => {
-        console.log(OpenMenu);
         SetOpenMenu(!OpenMenu)
     }
 
@@ -62,8 +61,8 @@ const MegaMenuBeta = ({ openByDefault }) => {
                 <div className="col-5">
                     <ul id="globalMenuItems">
                         <li onClick={toggleOpenMenu} className={OpenMenu ?  "expand" : "collapse"}>Finn statistikk</li>
-                        <li>SSB forskingin</li>
-                        <li>Om SSB</li>
+                        <li onClick={()=>SetOpenMenu(false)}>SSB forskning</li>
+                        <li onClick={()=>SetOpenMenu(false)}>Om SSB</li>
                     </ul>
                 </div>
                 <div className="col-3">

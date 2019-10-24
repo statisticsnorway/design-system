@@ -187,12 +187,27 @@
   }
 }
 .mega-menu.prototype-1 {
+  .logo {
+    height: 40px;
+    margin-top: 10px;
+  }
   .content-appear {
     overflow: hidden;
     position: relative;
     ul {
       position: relative;
       animation: slide-in 0.2s ease-out;
+    }
+  }
+
+  .coreSiteStuff {
+    text-align: right !important;
+    margin-top: 7px;
+    height: 31px;
+    a {
+      color: #00824d;
+      font-size: 14px;
+      margin-left: 20px;
     }
   }
 
@@ -210,11 +225,54 @@
     height: 350px;
     overflow: hidden;
     border-top: 1px solid #274247;
-    margin: 40px 0 0;
+    margin: 0;
+    max-height: 600px;
+    &.expand > * {
+      opacity: 1;
+      transition: opacity 0.4s ease-out;
+    }
+    &.collapse {
+      max-height: 0px;
+      & > * {
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+      }
+    }
   }
   .col-3 {
     border-right: 1px solid #274247;
   }
+
+  #toolsMenuItems {
+    float: right;
+    li {
+      padding: 13px;
+    }
+  }
+
+  ul.mainMenu {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    li {
+      img {
+        margin-top: -18px;
+        position: relative;
+        top: 6px;
+        margin-right: 5px;
+      }
+      cursor: pointer;
+      list-style: none;
+      display: inline-block;
+      margin-right: 10px;
+      border-bottom: 4px transparent solid;
+      padding: 13px 35px;
+      &.active {
+        border-bottom-color: #00824D;
+      }
+    }
+  }
+
   ul.groupMenu {
     margin: 0;
     padding: 0;

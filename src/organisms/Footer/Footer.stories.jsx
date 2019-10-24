@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Facebook, Linkedin, Rss, Twitter } from 'react-feather';
-import Link from '@atoms/Link/Link';
+import { Link } from '@statisticsnorway/ssb-component-library';
 import logo from '@public/ssb-logo-white.svg';
 import Footer from './Footer';
 

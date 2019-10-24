@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '@atoms/Link/Link';
+import { Link } from '@statisticsnorway/ssb-component-library';
 import Paragraph from '@atoms/Paragraph/Paragraph';
 
 const ProfileBox = ({

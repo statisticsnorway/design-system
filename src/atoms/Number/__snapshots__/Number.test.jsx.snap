@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Number component Matches the snapshot 1`] = `
-<div
-  className="number-component small"
->
-  2 423
-</div>
-`;

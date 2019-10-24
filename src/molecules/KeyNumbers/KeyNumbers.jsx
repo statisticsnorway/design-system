@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Number from '@atoms/Number/Number';
+import { Number } from '@statisticsnorway/ssb-component-library';
 
 const KeyNumbers = ({
 	icon, number, numberDescription, size, title, year,

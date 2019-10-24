@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Title from '@atoms/Title/Title';
+import { Title } from '@statisticsnorway/ssb-component-library';
 import { Plus, Minus } from 'react-feather';
 
 const NestedAccordion = ({

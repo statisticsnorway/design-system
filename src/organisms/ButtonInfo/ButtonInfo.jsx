@@ -17,23 +17,43 @@ const tabItems = [
 ];
 
 const codeExamplePrimary = `
-<Button text="Primary" primary />
-<Button text="Primary" primary disabled />
+// React
+<Button primary>Primary</Button>
+<Button primary disabled>Primary</Button>
+
+// HTML
+<button class="ssb-button primary-btn">Click me</button>
+<button class="ssb-button primary-btn" disabled="true">Click me</button>
 `;
 
 const codeExampleSecondary = `
-<Button text="Secondary" />
-<Button text="Secondary" disabled />
+// React
+<Button>Secondary</Button>
+<Button disabled>Secondary</Button>
+
+// HTML
+<button class="ssb-button">Click me</button>
+<button class="ssb-button" disabled="true">Click me</button>
 `;
 
 const codeExampleIcon = `
-<Button text="Primary" primary icon={<ChevronDown size="18" />} />
-<Button text="Secondary" icon={<ChevronDown size="18" />} />
+// React
+<Button primary><ChevronDown size="18" />&nbsp;Primary</Button>
+<Button><ChevronDown size="18" />&nbsp;Secondary</Button>
+
+// HTML
+<button class="ssb-button primary-btn">{insert icon}&nbsp;Click me</button>
+<button class="ssb-button">{insert icon}&nbsp;Click me</button>
 `;
 
 const codeExampleDisabled = `
-<Button text="Primary" primary disabled />
-<Button text="Secondary" disabled />
+// React
+<Button primary disabled>Primary</Button>
+<Button disabled>Secondary</Button>
+
+// HTML
+<button class="ssb-button primary-btn" disabled="true">Click me</button>
+<button class="ssb-button" disabled="true">Click me</button>
 `;
 
 const ButtonInfo = () => {
@@ -46,19 +66,15 @@ const ButtonInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Button</Title>
 			<LeadParagraph>
-				Buttons are used to communicate clear actions and help users to perform these actions.
-				The button component consists of a label and sometimes an icon to communicate the action that the user is able to perform.
-				The label should be as short as possible and not extend to two lines.
+				Knapper brukes for å kommunisere tydelig mulighet for handling. Knapp består av knappetekst, og noen ganger ikon for å tydeliggjøre hva brukeren får utført med knappen. Knappeteksten skal være så kort som mulig, og ikke gå over to linjer.
 			</LeadParagraph>
 
 			<ul className="mb-3 col-lg-8">
 				<li>
-					Primary and secondary buttons are not used to navigate the user to external pages outside of the solution.
-					Use instead <Link href="/#/components/links">links</Link>.
+					Primær- og sekundærknapper skal ikke brukes for navigasjon ut til eksterne sider. Bruk da i stedet <Link href="/#/components/links">lenker</Link>.
 				</li>
 				<li>
-					Buttons are generally used for performing actions and not for multiple-choices,
-					try instead to use check box or radios buttons instead if possible.
+					Knapper brukes for å utføre handlinger og ikke for multiple-choice (flere valg). Bruk da i stedet check-bokser og radio-buttons hvis mulig.
 				</li>
 			</ul>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
@@ -67,16 +83,15 @@ const ButtonInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Primary Button</Title>
+						<Title size={3} className="col-lg-12">Primærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								The primary button are used to indicate a primary action for the user, an action that is critical in a users workflow.
-								This can be for example a primary action such as ”submit” on a form or ”Login” on the login page.
+								Primærknapp brukes for viktige handlinger for brukeren, en aksjon som er kritisk for brukerens videre fremdrift. Eksempel på en kritisk aksjon er “send inn” på et besetillingsskjema eller “logg inn” på en innloggingstjeneste.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
-							<Button text="Primary" primary />
-							<Button text="Primary" primary disabled />
+							<Button primary>Primary</Button>
+							<Button primary disabled>Primary</Button>
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={codeExamplePrimary} language="jsx" />
@@ -84,18 +99,15 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Secondary Button</Title>
+						<Title size={3} className="col-lg-12">Sekundærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								The secondary button is used to indicate actions that are important,
-								but not as critical to the user as the primary button.
-								It can be used together with a primary button to create hierarchy
-								or together with other secondary buttons to indicate a similar hierarchy.
+								Sekundærknapp brukes for handlinger som er viktige, men ikke kritiske, for den videre fremdriften i brukerens oppgaver. Den kan brukes sammen men primærknappen for å skape et hierarki, eller sammen med andre sekundærknapper for å indikere likt hierarki.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
-							<Button text="Secondary" />
-							<Button text="Secondary" disabled />
+							<Button>Secondary</Button>
+							<Button disabled>Secondary</Button>
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={codeExampleSecondary} language="jsx" />
@@ -103,17 +115,15 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Button with an icon</Title>
+						<Title size={3} className="col-lg-12">Knapp med ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Both the primary and secondary button can be implemented with an icon,
-								these buttons can be used when it is needed to use an icon to communicate an action
-								or create further distinctions between the buttons.
+								Både primær- og sekundærknapp kan ha ikon hvis det er viktig å kommunisere hva knappen gjør, eller for å tydeliggjøre forskjellen mellom knapper.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
-							<Button text="Primary" primary icon={<ChevronDown size="18" />} />
-							<Button text="Secondary" icon={<ChevronDown size="18" />} />
+							<Button primary><ChevronDown size="18" />&nbsp;Primary</Button>
+							<Button><ChevronDown size="18" />&nbsp;Secondary</Button>
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={codeExampleIcon} language="jsx" />
@@ -121,16 +131,15 @@ const ButtonInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Disabled Button</Title>
+						<Title size={3} className="col-lg-12">Ikke-aktiv knapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								The disabled button is greyed out and can’t be clicked nor does it have a hover animation.
-								This to indicate to the user that there are no actions available with it.
+								En ikke-aktiv knapp er grået ut og er ikke klikkbar. Den har heller ikke hover animasjon. Dette er for å indikere til brukeren at det ikke er noen funksjonalitet bak knappen.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
-							<Button text="Primary" primary disabled />
-							<Button text="Secondary" disabled />
+							<Button primary disabled>Primary</Button>
+							<Button disabled>Secondary</Button>
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={codeExampleDisabled} language="jsx" />
@@ -151,14 +160,14 @@ const ButtonInfo = () => {
 							</thead>
 							<tbody>
 								<tr>
+									<td><code>children</code></td>
+									<td>Required node</td>
+									<td>Button text or/and icon</td>
+								</tr>
+								<tr>
 									<td><code>disabled</code></td>
 									<td>bool</td>
 									<td>Decides if the button is disabled</td>
-								</tr>
-								<tr>
-									<td><code>icon</code></td>
-									<td>node</td>
-									<td>Renders an icon</td>
 								</tr>
 								<tr>
 									<td><code>onClick</code></td>
@@ -169,11 +178,6 @@ const ButtonInfo = () => {
 									<td><code>primary</code></td>
 									<td>bool</td>
 									<td>Changes style to represent a primary button</td>
-								</tr>
-								<tr>
-									<td><code>text</code></td>
-									<td>string</td>
-									<td>Text to be shown inside button</td>
 								</tr>
 								<tr>
 									<td><code>type</code></td>
@@ -193,35 +197,34 @@ const ButtonInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-4">Rounded corners</Title>
+						<div className="col-lg-4">
+							<Title size={3}>Avrundede hjørnen</Title>
+						</div>
 						<div className="col-lg-8">
 							<span>
-								The choice of going with a slightly rounded corners was based on conveying a more
-								open and friendly branding for ssb.no and to create contrast with the other more squared
-								components within the library to make buttons distinctive and stand out.
+								Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no. Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
 							</span>
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-4">Filled background</Title>
+						<div className="col-lg-4">
+							<Title size={3}>Fylt bakgrunn</Title>
+						</div>
 						<div className="col-lg-8">
 							<span>
-								For secondary buttons the background of the button is always filled,
-								the reason behind this is to make sure the label inside of the button always has a
-								good contrast and visible to the user. This way the placement of secondary buttons
-								becomes more flexible and will always fulfill the UU requirements.
+								For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren. Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
 							</span>
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-4">Underline on hover</Title>
+						<div className="col-lg-4">
+							<Title size={3}>Understrek ved hoved</Title>
+						</div>
 						<div className="col-lg-8">
 							<span>
-								All button variants have underline on hover in order to address WCAG2.0 Citerion 1.4.1.
-								”1.4.1 Use of Color: Color is not used as the only visual means of conveying
-								information, indicating an action, prompting a response, or distinguishing a visual element. (Level A)”
+								Alle knappevarianter har understrek ved hover for å tilfredsstille WCAG 2.0-kravene.
 							</span>
 						</div>
 					</div>

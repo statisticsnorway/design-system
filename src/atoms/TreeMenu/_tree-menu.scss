@@ -4,12 +4,13 @@
 
   .items-section {
     background: $ssb-white;
-    position: absolute;
     width: 100%;
     z-index: 2;
 
     &.sub-menu {
       border: 1px solid $ssb-dark-5;
+      left: 200px;
+      position: absolute;
     }
   }
 

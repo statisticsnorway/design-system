@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import './main.scss';
+import '../node_modules/@statisticsnorway/ssb-component-library/lib/bundle.css';
 import { HashRouter } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import App from './App';

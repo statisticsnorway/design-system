@@ -35,11 +35,9 @@ const Footer = ({
 		</div>
 		{scrollToTop && (
 			<div className="scroll-to-top">
-				<Button
-					onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
-					text="Til toppen"
-					icon={<ArrowUp size={18} />}
-				/>
+				<Button onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}>
+					<ArrowUp size={18} />&nbsp;Til toppen
+				</Button>
 			</div>
 		)}
 	</div>

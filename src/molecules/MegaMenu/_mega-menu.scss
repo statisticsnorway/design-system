@@ -19,6 +19,9 @@
   opacity: 0.8;
 }
 .mega-menu.prototype-2 {
+  .logo {
+    height: 50px;
+  }
   #closeMenu {
     text-align: center;
     margin: 10px 0;
@@ -48,7 +51,7 @@
   #globalMenuItems,
   #toolsMenuItems {
     list-style: none;
-    margin: 5px 0 0;
+    margin: 16px 0 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
     font-weight: 200;
@@ -87,6 +90,8 @@
   }
   .coreSiteStuff {
     text-align: right !important;
+    margin-top: 7px;
+    height: 31px;
     a {
       color: #00824d;
       font-size: 16px;
@@ -192,7 +197,6 @@
   }
 
   margin: 0 auto;
-  max-width: 980px;
   .navBarExpandedContent {
     &.collapsed {
       max-height: 0px;

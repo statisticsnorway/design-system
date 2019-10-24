@@ -59,21 +59,19 @@ const MegaMenuBeta = ({ openByDefault }) => {
                         <img className="logo" src={logo} alt="logo" />
                     </a>
                 </div>
-                <div className="col-8">
+                <div className="col-5">
                     <ul id="globalMenuItems">
                         <li onClick={toggleOpenMenu} className={OpenMenu ?  "expand" : "collapse"}>Finn statistikk</li>
                         <li>SSB forskingin</li>
                         <li>Om SSB</li>
                     </ul>
                 </div>
-                {/*
-                <div className="col-4">
+                <div className="col-3">
                     <ul id="toolsMenuItems">
-                        <li onClick={toggleOpenMenu}>Finn statistikk</li>
-                        <li>Søk</li>
+                        <li>Søk<img src={require("./icons/search.svg")}/></li>
+                        <li>English</li>
                     </ul>
                 </div>
-                */}
             </div>
 
             <div id="navbarMainMenu" className={`row no-gutters ${OpenMenu ? "expand" : "collapse"}`}>
@@ -110,6 +108,11 @@ const MegaMenuBeta = ({ openByDefault }) => {
                             <img src={topic.icon} alt={`Icon for ${topic.name}`} />{topic.name}
                         </li>)}
                     </ul>
+                </div>
+                <div id="closeMenu" className="col-12">
+                    <span onClick={toggleOpenMenu}>
+                        <img src={require("./icons/close.svg")} alt="Close menu" />Lukk
+                    </span>
                 </div>
             </div>
         </nav>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import CheckboxGroup from '@molecules/CheckboxGroup/CheckboxGroup';
-import { Divider, LeadParagraph, Tabs } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Check boxes provides the user with a range of options where the user may select any number of choices, one, multiple or zero.
@@ -48,7 +48,7 @@ const CheckboxInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<h1>Checkbox</h1>
+			<Title size={1}>Checkbox</Title>
 			<LeadParagraph>
 				{leadParagraphText}
 			</LeadParagraph>
@@ -58,7 +58,7 @@ const CheckboxInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mt-3">
-						<h3 className="col-lg-12">CheckboxGroup</h3>
+						<Title size={3} className="col-lg-12">CheckboxGroup</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextCheckbox}</p>
 						</div>
@@ -78,7 +78,7 @@ const CheckboxInfo = () => {
 					</div>
 
 					<div className="row">
-						<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
+						<Title size={3} className="col-lg-12 mt-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>

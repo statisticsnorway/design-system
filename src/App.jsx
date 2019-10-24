@@ -51,7 +51,7 @@ const App = () => (
 						<Welcome />
 					</Route>
 					<Route path="/get-started">
-						<GetStarted />
+						<Welcome />
 					</Route>
 					<Route path="/components" component={Components}>
 						<Components />

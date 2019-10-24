@@ -19,13 +19,6 @@ const sidebarItems = [
 	{
 		label: 'Accordion',
 		path: '/accordion',
-		items: [{
-			label: 'Primary',
-			path: '/primary',
-		}, {
-			label: 'Secondary',
-			path: '/secondary',
-		}],
 	}, {
 		label: 'Breadcrumb',
 		path: '/breadcrumb',

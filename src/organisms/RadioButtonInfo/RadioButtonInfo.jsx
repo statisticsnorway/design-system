@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import RadioGroup from '@molecules/RadioGroup/RadioGroup';
-import LeadParagraph from '@atoms/LeadParagraph/LeadParagraph';
-import Tabs from '@atoms/Tabs/Tabs';
-import Divider from '@atoms/Divider/Divider';
+import { Divider, LeadParagraph, RadioGroup, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Norsk teksforklaring kommer her.
@@ -64,7 +61,7 @@ const RadioButtonInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<h1>Radio buttons</h1>
+			<Title size={1}>Radio buttons</Title>
 			<LeadParagraph>
 				{leadParagraphText}
 			</LeadParagraph>
@@ -74,7 +71,7 @@ const RadioButtonInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mt-3">
-						<h3 className="col-lg-12">RadioGroup</h3>
+						<Title size={3} className="col-lg-12">RadioGroup</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextRadiobutton}</p>
 						</div>
@@ -94,7 +91,7 @@ const RadioButtonInfo = () => {
 					</div>
 
 					<div className="row">
-						<h3 className="col-lg-12 mt-3 mb-3">Props</h3>
+						<Title size={3} className="col-lg-12 mt-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>

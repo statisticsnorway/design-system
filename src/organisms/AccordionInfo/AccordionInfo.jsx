@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import Accordion from '@molecules/Accordion/Accordion';
 import NestedAccordion from '@molecules/NestedAccordion/NestedAccordion';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
@@ -22,15 +22,39 @@ const tabItems = [
 ];
 
 const codeExamplePrimary = `
+// React
 <Accordion primary header="This is a primary header">
 	{Insert content here}
 </Accordion>
+
+// HTML
+<div class="ssb-accordion">
+  <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
+    {22px filled plus icon}
+    <div class="ssb-title header-text no-margin"><h5>This is a primary header</h5></div>
+  </div>
+  <div class="accordion-body closed">
+    {insert content here}
+  </div>
+</div>
 `;
 
 const codeExampleSecondary = `
+// React
 <Accordion header="This is a secondary header">
 	{Insert content here}
 </Accordion>
+
+// HTML
+<div class="ssb-accordion">
+  <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
+    {20px unfilled plus icon}
+    <div class="ssb-title header-text no-margin"><h5>This is a secondary header</h5></div>
+  </div>
+  <div class="accordion-body closed">
+    {insert content here}
+  </div>
+</div>
 `;
 
 const nestedExample = `
@@ -40,6 +64,28 @@ const nestedExample = `
 		{Insert content here}
 	</NestedAccordion>
 </Accordion>
+
+// HTML
+<div class="ssb-accordion">
+  <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
+    {22px filled plus icon}
+    <div class="ssb-title header-text no-margin"><h5>This is a primary header</h5></div>
+  </div>
+  <div class="accordion-body closed">
+    {insert content here}
+    
+    <div class="ssb-nested-accordion mt-3">
+			<div class="nested-accordion-header closed" onclick="{toggle classname to 'open'}">
+				{10px plus sign}
+				<span class="header-text">Title</span>
+			</div>
+			<div class="accordion-body closed">
+				{insert content}
+			</div>
+		</div>
+    
+  </div>
+</div>
 `;
 
 const AccordionInfo = () => {
@@ -50,28 +96,22 @@ const AccordionInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Accordion</Title>
+			<Title size={1}>Accordion (åpne/lukke-felter)</Title>
 			<LeadParagraph>
-				Accordions maximizes efficiency and saves space by expand and collapse sections of content.
-				This allows the user to display the content of their choosing, therefore accordion components are always closed by default.
+				Accordions sparer plass ved å utvide eller lukke seksjoner med innhold. De tillater brukeren å vise kun den informasjon hun ønsker. Derfor er accordion-komponentene alltid lukket som default.
 			</LeadParagraph>
 			<Paragraph>
-				It should be noted that accordions should be used sparsely for primary content on a page,
-				if the user requires the information on the page it should not be hidden within layers,
-				this makes it harder for a user to scan a web page and its content.
-				It can also increase cognitive load as it requires users to click every time they want to expand on a topic.
-				User might also ignore or not see important information.
+				Accordions må brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskeligere for brukeren å finne den skjulte informasjonen. Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold. Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href={'https://www.nngroup.com/articles/accordions-complex-content/'}>her</Link>.
 			</Paragraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider />
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Primary Accordion</Title>
+						<Title size={3} className="col-lg-12">Primær Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Primary accordion are used when the content is important to the understanding of the page and something
-								that we want the user to view. By using the primary accordion the emphasis is put on the importance of the content.
+								Brukes når innholdet i dem er viktig for å forstå helheten i sidens innhold, og vi ønsker at brukeren skal se det.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
@@ -83,12 +123,10 @@ const AccordionInfo = () => {
 					</div>
 					<Divider light className="mb-4" />
 					<div className="row">
-						<Title size={3} className="col-lg-12">Secondary Accordion</Title>
+						<Title size={3} className="col-lg-12">Sekundær Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Secondary accordion are used when the content is not necessary for the user in order to understand the page but still
-								important information to be available for viewing if needed. This can include authors, definitions,
-								background etc and is there to be viewed by the user if they choose to.
+								Sekundær accordion brukes når innholdet kun trenger å hentes frem når brukeren trenger det. Dette kan være forfattere, definisjoner, bakgrunn etc.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
@@ -100,12 +138,10 @@ const AccordionInfo = () => {
 					</div>
 					<Divider light className="mb-4" />
 					<div className="row">
-						<Title size={3} className="col-lg-12">Nested Accordion</Title>
+						<Title size={3} className="col-lg-12">Innflettet Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Nested accordion are used when there are additional nested content within an
-								accordion section both primary and secondary, it also functions as a way to organizes
-								the content and provides both structure and hierarchy for an easier viewing experience.
+								Innflettet accordion brukes når det er flere nivåer accordions, dvs. en accordion er inne i en annen accordion. Når det er flere nivåer på innholdet i den. Dens funksjon er å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">

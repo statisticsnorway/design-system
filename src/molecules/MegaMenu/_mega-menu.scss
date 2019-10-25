@@ -227,6 +227,7 @@
     border-top: 1px solid #274247;
     margin: 0;
     max-height: 600px;
+    transition: max-height 0.2s ease-out;
     &.expand > * {
       opacity: 1;
       transition: opacity 0.4s ease-out;
@@ -288,7 +289,7 @@
         background-color: #b6e8b8;
       }
       &.active {
-        background: #00824d;
+        background: #1A9D49;
         color: #fff;
         &::after {
           color: #fff;

@@ -28,10 +28,9 @@ const MegaMenuAlpha = ({ openByDefault }) => {
             for (let index in MenuStructure[group][topic].filter) {
                 if (
                     (ActiveGroup == group && topic == ActiveTopic) ||
-                    (!ActiveTopic && ActiveGroup == group) ||
+                    (ActiveGroup == group && !ActiveTopic) ||
                     (!ActiveGroup && !ActiveTopic)
                 ) {
-                    console.log(ActiveGroup, ActiveTopic);
                     FilterArrayKeys[MenuStructure[group][topic].filter[index]] = true;
                 }
             }

@@ -42,7 +42,8 @@ const radioItems = [
 	},
 ];
 
-const codeExampleRadioGroup = `
+const radioGroup = `
+// React
 <RadioGroup
 	header="Header"
 	items={[
@@ -51,6 +52,19 @@ const codeExampleRadioGroup = `
 		{ label: 'Item 3', value: 'item3', disabled: true },
 	]}
 />
+
+// HTML
+<div class="ssb-radio-group">
+    <div class="ssb-title no-margin"><h5>Title</h5></div>
+    <div class="ssb-radio">
+        <input type="radio" id="option1" value="option1" />
+        <label class="radio-label" for="option1">Insert label</label>
+    </div>
+    <div class="ssb-radio">
+        <input type="radio" id="option2" value="option2" />
+        <label class="radio-label" for="option2">Insert label</label>
+    </div>
+</div>
 `;
 
 const RadioButtonInfo = () => {
@@ -86,7 +100,7 @@ const RadioButtonInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12  mt-3">
-							<CodeSnippet code={codeExampleRadioGroup} language="jsx" />
+							<CodeSnippet code={radioGroup} language="jsx" />
 						</div>
 					</div>
 
@@ -104,12 +118,22 @@ const RadioButtonInfo = () => {
 								<tr>
 									<td><code>header</code></td>
 									<td>string</td>
-									<td>Header above checkbox</td>
+									<td>Renders a h5 title</td>
 								</tr>
 								<tr>
 									<td><code>items</code></td>
-									<td>array of objects</td>
-									<td>Items for <code>label</code> and <code>value</code></td>
+									<td>arrayOf(label, value) </td>
+									<td>Required items for rendering radio buttons</td>
+								</tr>
+                                <tr>
+									<td><code>onChange</code></td>
+									<td>func</td>
+									<td>Callback function when a value is changed </td>
+								</tr>
+                                <tr>
+									<td><code>selectedValue</code></td>
+									<td>string</td>
+									<td>Pre selected value</td>
 								</tr>
 							</tbody>
 						</table>

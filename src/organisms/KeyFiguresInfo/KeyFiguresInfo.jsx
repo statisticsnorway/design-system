@@ -101,12 +101,14 @@ const AccordionInfo = () => {
                         <Divider />
                         {activeCodeTab === '/react' && (
                             <div className="col-lg-12 mt-3">
+                                <Title size={3}>React code</Title>
                                 <CodeSnippet code={codeReact} language="jsx" />
                             </div>
                             
                         )}
                         {activeCodeTab === '/html' && (
                             <div className="col-lg-12 mt-3">
+                                <Title size={3}>Html code</Title>
                                 <CodeSnippet code={codeHtml} language="html" />
                             </div>
                         )}

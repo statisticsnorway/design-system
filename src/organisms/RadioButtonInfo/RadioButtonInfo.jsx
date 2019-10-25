@@ -29,21 +29,17 @@ const tabItems = [
 	},
 ];
 
-const radioItems = [
+const tabCode = [
 	{
-		label: 'Item 1',
-		value: 'item1',
+		title: 'React',
+		path: '/react',
 	}, {
-		label: 'Item 2',
-		value: 'item2',
-	}, {
-		label: 'Item 3',
-		value: 'item3',
+		title: 'Html',
+		path: '/html',
 	},
 ];
 
-const radioGroup = `
-// React
+const codeReact = `
 <RadioGroup
 	header="Header"
 	items={[
@@ -52,8 +48,9 @@ const radioGroup = `
 		{ label: 'Item 3', value: 'item3', disabled: true },
 	]}
 />
+`;
 
-// HTML
+const codeHtml = `
 <div class="ssb-radio-group">
     <div class="ssb-title no-margin"><h5>Title</h5></div>
     <div class="ssb-radio">
@@ -69,8 +66,12 @@ const radioGroup = `
 
 const RadioButtonInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => {
 		changeTab(e);
+	};
+	const tabCodeClicked = e => {
+		changeCodeTab(e);
 	};
 
 	return (
@@ -99,9 +100,22 @@ const RadioButtonInfo = () => {
 								]}
 							/>
 						</div>
-						<div className="col-lg-12  mt-3">
-							<CodeSnippet code={radioGroup} language="jsx" />
-						</div>
+						<Divider light className="mt-3" />
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider />
+						{activeCodeTab === '/react' && (
+							<div className="col-lg-12 mt-3">
+								<Title size={3}>React code</Title>
+								<CodeSnippet code={codeReact} language="jsx" />
+							</div>
+
+						)}
+						{activeCodeTab === '/html' && (
+							<div className="col-lg-12 mt-3">
+								<Title size={3}>Html code</Title>
+								<CodeSnippet code={codeHtml} language="html" />
+							</div>
+						)}
 					</div>
 
 					<div className="row">
@@ -125,12 +139,12 @@ const RadioButtonInfo = () => {
 									<td>arrayOf(label, value) </td>
 									<td>Required items for rendering radio buttons</td>
 								</tr>
-                                <tr>
+								<tr>
 									<td><code>onChange</code></td>
 									<td>func</td>
 									<td>Callback function when a value is changed </td>
 								</tr>
-                                <tr>
+								<tr>
 									<td><code>selectedValue</code></td>
 									<td>string</td>
 									<td>Pre selected value</td>

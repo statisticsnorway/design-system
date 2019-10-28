@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-import Accordion from '@molecules/Accordion/Accordion';
-import NestedAccordion from '@molecules/NestedAccordion/NestedAccordion';
+import { Accordion, Divider, LeadParagraph, Link, NestedAccordion, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 
 const accordionFillerText = `

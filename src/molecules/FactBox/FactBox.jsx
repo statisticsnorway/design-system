@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Accordion from '@molecules/Accordion/Accordion';
+import Accordion from '@statisticsnorway/ssb-component-library';
 
 const FactBox = ({
 	header, openByDefault, text,

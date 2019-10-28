@@ -100,22 +100,23 @@ const RadioButtonInfo = () => {
 								]}
 							/>
 						</div>
-						<Divider light className="mt-3" />
-						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-						<Divider />
-						{activeCodeTab === '/react' && (
-							<div className="col-lg-12 mt-3">
-								<Title size={3}>React code</Title>
-								<CodeSnippet code={codeReact} language="jsx" />
-							</div>
-
-						)}
-						{activeCodeTab === '/html' && (
-							<div className="col-lg-12 mt-3">
-								<Title size={3}>Html code</Title>
-								<CodeSnippet code={codeHtml} language="html" />
-							</div>
-						)}
+						<div className="col-lg-12">
+							<Divider light className="mt-3" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider />
+							{activeCodeTab === '/react' && (
+								<div className="col-lg-12 mt-3">
+									<Title size={3}>React code</Title>
+									<CodeSnippet code={codeReact} language="jsx" />
+								</div>
+							)}
+							{activeCodeTab === '/html' && (
+								<div className="col-lg-12 mt-3">
+									<Title size={3}>Html code</Title>
+									<CodeSnippet code={codeHtml} language="html" />
+								</div>
+							)}
+						</div>
 					</div>
 
 					<div className="row">

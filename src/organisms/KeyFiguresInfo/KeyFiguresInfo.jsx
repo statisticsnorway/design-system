@@ -42,7 +42,7 @@ const codeReact = `
 	number="789 398"
 	title="Antall husholdninger"
 	numberDescription="husholdninger"
-	year="2018"
+	time="2018"
 	size="small"
 	icon={<Home size="240" />}
 />
@@ -50,13 +50,13 @@ const codeReact = `
 
 const codeHtml = `
 <div class="ssb-key-figures">
-  <div class="kf-icon large"><i /></div>
-  <div>
-    <div class="ssb-title"><h4>Title</h4></div>
-    <div>2019</div>
-    <div class="ssb-number large">12 345</div>
-    <div class="ssb-title"><h4>husholdninger</h4></div>
-  </div>
+	<div class="kf-icon small"><i /></div>
+	<div>
+		<div class="ssb-title"><h4>Antall husholdninger</h4></div>
+		<div class="kf-time">2018</div>
+		<div class="ssb-number small">789 398</div>
+		<div class="ssb-title"><h4>husholdninger</h4></div>
+	</div>
 </div>
 `;
 
@@ -90,26 +90,28 @@ const AccordionInfo = () => {
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
-								year="2018"
+								time="2018"
 								size="small"
 								icon={<Home size="140" />}
 							/>
 						</div>
-						<Divider light className="mt-3" />
-						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-						<Divider />
-						{activeCodeTab === '/react' && (
-							<div className="col-lg-12 mt-3">
-								<Title size={3}>React code</Title>
-								<CodeSnippet code={codeReact} language="jsx" />
-							</div>
-						)}
-						{activeCodeTab === '/html' && (
-							<div className="col-lg-12 mt-3">
-								<Title size={3}>Html code</Title>
-								<CodeSnippet code={codeHtml} language="html" />
-							</div>
-						)}
+						<div className="col-lg-12">
+							<Divider light className="mt-3" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider />
+							{activeCodeTab === '/react' && (
+								<div className="col-lg-12 mt-3">
+									<Title size={3}>React code</Title>
+									<CodeSnippet code={codeReact} language="jsx" />
+								</div>
+							)}
+							{activeCodeTab === '/html' && (
+								<div className="col-lg-12 mt-3">
+									<Title size={3}>Html code</Title>
+									<CodeSnippet code={codeHtml} language="html" />
+								</div>
+							)}
+						</div>
 					</div>
 					<div className="row">
 						<Title size={3} className="col-lg-12 mt-3">Props</Title>
@@ -148,9 +150,9 @@ const AccordionInfo = () => {
 									<td>Displays title</td>
 								</tr>
 								<tr>
-									<td><code>year</code></td>
+									<td><code>time</code></td>
 									<td>string or number</td>
-									<td>Displays a year between title and number</td>
+									<td>Displays time for the number between title and number</td>
 								</tr>
 							</tbody>
 						</table>
@@ -171,7 +173,7 @@ const AccordionInfo = () => {
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
-								year="2018"
+								time="2018"
 								size="large"
 								icon={<Home size="280" />}
 							/>
@@ -181,7 +183,7 @@ const AccordionInfo = () => {
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
-								year="2018"
+								time="2018"
 								size="medium"
 								icon={<Home size="210" />}
 							/>
@@ -191,7 +193,7 @@ const AccordionInfo = () => {
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
-								year="2018"
+								time="2018"
 								size="small"
 								icon={<Home size="140" />}
 							/>

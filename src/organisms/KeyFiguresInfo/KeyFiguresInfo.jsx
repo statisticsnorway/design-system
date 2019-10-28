@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import KeyNumbers from '@molecules/KeyNumbers/KeyNumbers';
-import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, KeyFigures, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import { Home } from 'react-feather';
 
@@ -28,8 +27,18 @@ const tabItems = [
 	},
 ];
 
-const codeExample = `
-<KeyNumbers
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
+const codeReact = `
+<KeyFigures
 	number="789 398"
 	title="Antall husholdninger"
 	numberDescription="husholdninger"
@@ -39,10 +48,26 @@ const codeExample = `
 />
 `;
 
+const codeHtml = `
+<div class="ssb-key-figures">
+  <div class="kf-icon large"><i /></div>
+  <div>
+    <div class="ssb-title"><h4>Title</h4></div>
+    <div>2019</div>
+    <div class="ssb-number large">12 345</div>
+    <div class="ssb-title"><h4>husholdninger</h4></div>
+  </div>
+</div>
+`;
+
 const AccordionInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => {
 		changeTab(e);
+	};
+	const tabCodeClicked = e => {
+		changeCodeTab(e);
 	};
 
 	return (
@@ -61,7 +86,7 @@ const AccordionInfo = () => {
 							<Paragraph>{overviewText}</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
@@ -70,9 +95,65 @@ const AccordionInfo = () => {
 								icon={<Home size="140" />}
 							/>
 						</div>
-						<div className="col-lg-12 mt-3">
-							<CodeSnippet code={codeExample} language="jsx" />
-						</div>
+						<Divider light className="mt-3" />
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider />
+						{activeCodeTab === '/react' && (
+							<div className="col-lg-12 mt-3">
+								<Title size={3}>React code</Title>
+								<CodeSnippet code={codeReact} language="jsx" />
+							</div>
+						)}
+						{activeCodeTab === '/html' && (
+							<div className="col-lg-12 mt-3">
+								<Title size={3}>Html code</Title>
+								<CodeSnippet code={codeHtml} language="html" />
+							</div>
+						)}
+					</div>
+					<div className="row">
+						<Title size={3} className="col-lg-12 mt-3">Props</Title>
+						<table className="col-lg-12">
+							<thead style={{ textAlign: 'left' }}>
+								<tr>
+									<th><h5>Prop name</h5></th>
+									<th><h5>Type</h5></th>
+									<th><h5>Description</h5></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>icon</code></td>
+									<td>node</td>
+									<td>Renders an icon</td>
+								</tr>
+								<tr>
+									<td><code>number</code></td>
+									<td>string or number</td>
+									<td>Large number to be displayed</td>
+								</tr>
+								<tr>
+									<td><code>numberDescription</code></td>
+									<td>string</td>
+									<td>Subtitle</td>
+								</tr>
+								<tr>
+									<td><code>size</code></td>
+									<td>small, medium or large</td>
+									<td>Change size of number and icon</td>
+								</tr>
+								<tr>
+									<td><code>title</code></td>
+									<td>string</td>
+									<td>Displays title</td>
+								</tr>
+								<tr>
+									<td><code>year</code></td>
+									<td>string or number</td>
+									<td>Displays a year between title and number</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			)}
@@ -86,7 +167,7 @@ const AccordionInfo = () => {
 							This choice was made so that a clear design structure could be created and followed.
 						</div>
 						<div className="col-lg-12 mt-3 mb-3">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
@@ -96,7 +177,7 @@ const AccordionInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12 mt-3 mb-3">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
@@ -106,7 +187,7 @@ const AccordionInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12 mt-3 mb-3">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"

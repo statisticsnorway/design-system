@@ -4,14 +4,17 @@ import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 const Templates = () => (
 	<div className="templates page-wrapper">
 		<section>
-			<Title size={2}>Templates</Title>
+			<Title size={2}>Templates/maler</Title>
 			<Paragraph>
-				One of the navigation category which provides an overview of available templates.
-				Templates helps to get projects up and running faster. It also helps to create a consistent experience for the user of the system.
+				Oversikt over tilgjengelige maler. Disse hjelper prosjektet med å komme i gang raskere. De bidrar også til en konsistent opplevelse for brukeren av systemet.
 			</Paragraph>
 
-			<Title size={3}>Typography</Title>
-			<Title size={4}>Overview</Title>
+			<Title size={3}>Avstand og luft</Title>
+			<Paragraph>
+				Komponenters plassering i forhold til hverandre gir visuell hjelp til hvordan elementene fungerer. I vårt designsystem bruker vi et 10-punktssystem som gjør det enklere for utvikleren å anslå avstanden mellom elementene i stedet for å tilfeldig gjette hva det kan være.
+			</Paragraph>
+
+			<Title size={3}>Typografi</Title>
 			<Paragraph>
 				Typography is an important core component of the Design system as it conveys the look and feel of the website and the brand identity.
 				In the SSB Design System Roboto, Roboto Condensed and Open Sans are used.
@@ -22,35 +25,28 @@ const Templates = () => (
 				making it easier to differentiate these elements from each other.
 			</Paragraph>
 
-			<Title size={4}>Headings</Title>
+			<Title size={4}>Overskrifter</Title>
 			<Paragraph>
-				Roboto and Roboto Condensed are only used for headings. For text size 24 and above, Roboto Condensed is used.
-				Headings are divided into 6 different levels, going from largest to smallest.
+				Roboto og Roboto Condensed brukes for overskrifter. For tekst større enn 24, brukes Roboto Condensed. Overskrifter finnes i 6 forskjellige nivåer, fra størst til minst.
 			</Paragraph>
 
-			<Title size={4}>Paragraph</Title>
+			<Title size={4}>Vanlig tekst</Title>
 			<Paragraph>
-				Open Sans font is only used for regular paragraph text.
+				Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.
 			</Paragraph>
 
-			<Title size={3}>Color Palette</Title>
-			<Title size={4}>Overview</Title>
+			<Title size={3}>Farger</Title>
 			<Paragraph>
-				Color palette is a selection of colors chosen to be used within the design system to convey the design and the branding of SSB.
-				All the color pairings have been carefully chosen to match each other and fulfilling the UU requirements.
+				Fargepaletten er et utvalg farger som er valgt for å brukes i designsystemet for å forsterke design og merkevaren SSB. Alle fargesammensettinger har blitt nøye utvalgt for å matche hverandre og tilfredsstille universell utforming.
+			</Paragraph>
+			<Title size={4}>Primærfarger</Title>
+			<Paragraph>
+				Disse fargene er basisfarger som brukes gjennom hele designet, på de ulike komponentene i designsystemet.
 			</Paragraph>
 
-			<Title size={4}>Primary palettes</Title>
+			<Title size={4}>Sekundærfarger (figurfarger)</Title>
 			<Paragraph>
-				These colors displayed here are colors that has been used mostly throughout the
-				designing of different components within the design system.
-			</Paragraph>
-
-			<Title size={4}>Secondary palettes</Title>
-			<Paragraph>
-				The secondary palettes consist of a range of colors that has been selected to be used most in the
-				context of diagrams which requires a wide range of different colors for differentiation.
-				These colors should in most cases not be used within the different components of the design system.
+				Sekundærfargene består av et utvalg farger som først og fremst brukes på figurer som krever en større variasjon og utvalg i fargeutvalg og differensiering. Disse fargene skal vanligvis ikke brukes på andre komponenter i designsystemet.
 			</Paragraph>
 		</section>
 	</div>

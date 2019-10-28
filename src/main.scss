@@ -1,4 +1,5 @@
 // import variables first to ensure availability
+@import '../node_modules/@statisticsnorway/ssb-component-library/lib/bundle.css';
 @import 'style/variables';
 @import 'style/global';
 @import 'style/grid';
@@ -12,7 +13,6 @@
 // molecules
 @import 'molecules/Accordion/accordion';
 @import 'molecules/FactBox/fact-box';
-@import 'molecules/KeyNumbers/key-numbers';
 @import 'molecules/NestedAccordion/nested-accordion';
 @import 'molecules/ReferenceLink/reference-link';
 @import 'molecules/ProfileBox/profile-box';

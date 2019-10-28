@@ -4,26 +4,30 @@ import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import { Home } from 'react-feather';
 
 const leadParagraphText = `
-Key numbers are a visual element that showcases important numbers that wants to be prominently displayed.
-Key numbers comes in 3 different sizes, each made for different type of placements.
-The large key number is displayed in its own row, while the medium and smaller key numbers can be placed in groups of two in the same row.
+Nøkkeltall er et visuelt element som viser fremhevede hovedtall. Nøkkeltall kan vises i 3 størrelser ut fra hvordan de skal brukes. 
+Det store nøkkeltallet vises alene på egen linje, mens medium og lite nøkkeltall kan være plassert i grupper på to og to på samme linje.
 `;
 
 const overviewText = `
-Key numbers comprises of 5 visual elements, a label describing the key number, the year,
-the key number, the description of the number and if necessary a text that describes the change number.
+Nøkkeltall er sammensatt av 5 visuelle elementer; en tittel som beskriver tallet, tidspunkt tallet gjelder for (telletidspunkt eller tidsperiode), selve tallet, 
+beskrivelse av tallet (benevning), og om nødvendig en tekst som beskriver endring i tallet.
+`;
+
+const rationaleText = `
+Det er bare selve tallet som endrer størrelse i de ulike visningene for nøkkeltall. De andre elementene beholder samme størrelse. 
+Dette er gjort slik at det er mulig å skape en klar og konsistent designstruktur.
 `;
 
 const tabItems = [
 	{
-		title: 'Overview',
-		path: '/overview',
+		title: 'Oversikt',
+		path: '/oversikt',
 	}, {
-		title: 'Rationale',
-		path: '/rationale',
+		title: 'Begrunnelse',
+		path: '/begrunnelse',
 	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
+		title: 'Tilgjengelighet',
+		path: '/tilgjengelighet',
 	},
 ];
 
@@ -72,16 +76,16 @@ const AccordionInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Key Numbers</Title>
+			<Title size={1}>Nøkkeltall</Title>
 			<LeadParagraph>
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider />
-			{activeTab === '/overview' && (
+			{activeTab === '/oversikt' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Key Numbers</Title>
+						<Title size={3} className="col-lg-12">Nøkkeltall</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
 						</div>
@@ -159,16 +163,20 @@ const AccordionInfo = () => {
 					</div>
 				</div>
 			)}
-			{activeTab === '/rationale' && (
+
+			{activeTab === '/begrunnelse' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Element sizes</Title>
+						<Title size={3} className="col-lg-12">Elementstørrelse</Title>
 						<div className="col-lg-6">
-							As seen in all different sizes of key numbers, only the key number itself changes
-							size while all other elements retains the same size.
-							This choice was made so that a clear design structure could be created and followed.
+							<Paragraph>{rationaleText}</Paragraph>
 						</div>
-						<div className="col-lg-12 mt-3 mb-3">
+					</div>
+
+					<div className="row mb-3">
+						<Title size={4} className="col-lg-12">Large</Title>
+						<Divider light className="mt-1 mb-3" />
+						<div className="col-lg-12">
 							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
@@ -178,27 +186,38 @@ const AccordionInfo = () => {
 								icon={<Home size="280" />}
 							/>
 						</div>
-						<div className="col-lg-12 mt-3 mb-3">
+					</div>
+
+					<div className="row mb-3">
+						<Title size={4} className="col-lg-12">Medium</Title>
+						<Divider light className="mb-3" />
+						<div className="col-lg-12">
 							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
 								time="2018"
 								size="medium"
-								icon={<Home size="210" />}
+								icon={<Home size="280" />}
 							/>
 						</div>
-						<div className="col-lg-12 mt-3 mb-3">
+					</div>
+
+					<div className="row mb-3">
+						<Title size={4} className="col-lg-12">Small</Title>
+						<Divider light className="mb-3" />
+						<div className="col-lg-12">
 							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
 								time="2018"
 								size="small"
-								icon={<Home size="140" />}
+								icon={<Home size="280" />}
 							/>
 						</div>
 					</div>
+
 				</div>
 			)}
 		</div>

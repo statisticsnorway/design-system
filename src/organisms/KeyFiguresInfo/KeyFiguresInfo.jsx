@@ -9,7 +9,8 @@ Det store nøkkeltallet vises alene på egen linje, mens medium og lite nøkkelt
 `;
 
 const overviewText = `
-Nøkkeltall er sammensatt av 5 visuelle elementer; en tittel som beskriver tallet, tidspunkt tallet gjelder for (telletidspunkt eller tidsperiode), selve tallet, 
+Nøkkeltall er sammensatt av 5 visuelle elementer; en tittel som beskriver tallet, tidspunkt tallet gjelder for (telletidspunkt eller tidsperiode), 
+selve tallet, 
 beskrivelse av tallet (benevning), og om nødvendig en tekst som beskriver endring i tallet.
 `;
 
@@ -198,7 +199,7 @@ const AccordionInfo = () => {
 								numberDescription="husholdninger"
 								time="2018"
 								size="medium"
-								icon={<Home size="280" />}
+								icon={<Home size="210" />}
 							/>
 						</div>
 					</div>
@@ -213,7 +214,7 @@ const AccordionInfo = () => {
 								numberDescription="husholdninger"
 								time="2018"
 								size="small"
-								icon={<Home size="280" />}
+								icon={<Home size="140" />}
 							/>
 						</div>
 					</div>

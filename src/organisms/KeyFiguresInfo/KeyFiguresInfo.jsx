@@ -52,10 +52,10 @@ const codeHtml = `
 <div class="ssb-key-figures">
 	<div class="kf-icon small"><i /></div>
 	<div>
-		<div class="ssb-title"><h4>Antall husholdninger</h4></div>
+		<h4 class="ssb-title no-margin">Antall husholdninger</h4>
 		<div class="kf-time">2018</div>
 		<div class="ssb-number small">789 398</div>
-		<div class="ssb-title"><h4>husholdninger</h4></div>
+		<h4 class="ssb-title no-margin">husholdninger</h4>
 	</div>
 </div>
 `;

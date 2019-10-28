@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import KeyNumbers from '@molecules/KeyNumbers/KeyNumbers';
-import { Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, KeyFigures, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import { Home } from 'react-feather';
 
@@ -35,11 +34,11 @@ const tabCode = [
 	}, {
 		title: 'Html',
 		path: '/html',
-	}, 
+	},
 ];
 
 const codeReact = `
-<KeyNumbers
+<KeyFigures
 	number="789 398"
 	title="Antall husholdninger"
 	numberDescription="husholdninger"
@@ -62,12 +61,12 @@ const codeHtml = `
 `;
 
 const AccordionInfo = () => {
-    const [activeTab, changeTab] = useState(tabItems[0].path);
-    const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const [activeTab, changeTab] = useState(tabItems[0].path);
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => {
 		changeTab(e);
-    };
-    const tabCodeClicked = e => {
+	};
+	const tabCodeClicked = e => {
 		changeCodeTab(e);
 	};
 
@@ -87,7 +86,7 @@ const AccordionInfo = () => {
 							<Paragraph>{overviewText}</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
@@ -96,25 +95,23 @@ const AccordionInfo = () => {
 								icon={<Home size="140" />}
 							/>
 						</div>
-                        <Divider light className="mt-3"/>
-                        <Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-                        <Divider />
-                        {activeCodeTab === '/react' && (
-                            <div className="col-lg-12 mt-3">
-                                <Title size={3}>React code</Title>
-                                <CodeSnippet code={codeReact} language="jsx" />
-                            </div>
-                            
-                        )}
-                        {activeCodeTab === '/html' && (
-                            <div className="col-lg-12 mt-3">
-                                <Title size={3}>Html code</Title>
-                                <CodeSnippet code={codeHtml} language="html" />
-                            </div>
-                        )}
+						<Divider light className="mt-3" />
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider />
+						{activeCodeTab === '/react' && (
+							<div className="col-lg-12 mt-3">
+								<Title size={3}>React code</Title>
+								<CodeSnippet code={codeReact} language="jsx" />
+							</div>
+						)}
+						{activeCodeTab === '/html' && (
+							<div className="col-lg-12 mt-3">
+								<Title size={3}>Html code</Title>
+								<CodeSnippet code={codeHtml} language="html" />
+							</div>
+						)}
 					</div>
-
-                    <div className="row">
+					<div className="row">
 						<Title size={3} className="col-lg-12 mt-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
@@ -135,22 +132,22 @@ const AccordionInfo = () => {
 									<td>string or number</td>
 									<td>Large number to be displayed</td>
 								</tr>
-                                <tr>
+								<tr>
 									<td><code>numberDescription</code></td>
 									<td>string</td>
 									<td>Subtitle</td>
 								</tr>
-                                <tr>
+								<tr>
 									<td><code>size</code></td>
-									<td>'small', 'medium' or 'large'</td>
+									<td>small, medium or large</td>
 									<td>Change size of number and icon</td>
 								</tr>
-                                <tr>
+								<tr>
 									<td><code>title</code></td>
 									<td>string</td>
 									<td>Displays title</td>
 								</tr>
-                                <tr>
+								<tr>
 									<td><code>year</code></td>
 									<td>string or number</td>
 									<td>Displays a year between title and number</td>
@@ -170,7 +167,7 @@ const AccordionInfo = () => {
 							This choice was made so that a clear design structure could be created and followed.
 						</div>
 						<div className="col-lg-12 mt-3 mb-3">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
@@ -180,7 +177,7 @@ const AccordionInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12 mt-3 mb-3">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
@@ -190,7 +187,7 @@ const AccordionInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12 mt-3 mb-3">
-							<KeyNumbers
+							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
 								numberDescription="husholdninger"
@@ -201,7 +198,7 @@ const AccordionInfo = () => {
 						</div>
 					</div>
 				</div>
-            )}
+			)}
 		</div>
 	);
 };

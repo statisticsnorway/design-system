@@ -15,8 +15,9 @@ import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
 import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
 import RadioButtonInfo from '@organisms/RadioButtonInfo/RadioButtonInfo';
 import TabsInfo from '@organisms/TabsInfo/TabsInfo';
-import TypographyInfo from '../../organisms/Typography/TypographyInfo';
-import DialogInfo from '../../organisms/DialogInfo/DialogInfo';
+import DialogInfo from '@organisms/DialogInfo/DialogInfo';
+import TypographyInfo from '@organisms/Typography/TypographyInfo';
+import WordExplanationInfo from '@organisms/WordExplanationInfo/WordExplanationInfo';
 
 const sidebarItems = [
 	{
@@ -62,6 +63,10 @@ const sidebarItems = [
 		label: 'Typography',
 		path: '/typography',
 	},
+	{
+		label: 'Word Explanation',
+		path: '/word-explanation',
+	},
 ];
 
 sidebarItems.sort((a, b) => ((a.label > b.label) ? 1 : -1));
@@ -106,6 +111,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 					<Route path={`${match.url}/tabs`} component={TabsInfo} />
 					<Route path={`${match.url}/typography`} component={TypographyInfo} />
+					<Route path={`${match.url}/word-explanation`} component={WordExplanationInfo} />
 				</Switch>
 			</section>
 		</div>

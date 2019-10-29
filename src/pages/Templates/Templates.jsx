@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
+import { Link, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const Templates = () => (
 	<div className="templates page-wrapper">
@@ -26,28 +26,30 @@ const Templates = () => (
 			</Paragraph>
 
 			<Title size={4}>Overskrifter</Title>
-			<Paragraph>
-				Roboto og Roboto Condensed brukes for overskrifter. For tekst større enn 24, brukes Roboto Condensed. Overskrifter finnes i 6 forskjellige nivåer, fra størst til minst.
-			</Paragraph>
+			<Paragraph>Roboto og Roboto Condensed brukes for overskrifter. For tekst større enn 24, brukes Roboto Condensed. Overskrifter finnes i 6 forskjellige nivåer, fra størst til minst.</Paragraph>
 
 			<Title size={4}>Vanlig tekst</Title>
-			<Paragraph>
-				Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.
-			</Paragraph>
+			<Paragraph>Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.</Paragraph>
 
 			<Title size={3}>Farger</Title>
-			<Paragraph>
-				Fargepaletten er et utvalg farger som er valgt for å brukes i designsystemet for å forsterke design og merkevaren SSB. Alle fargesammensettinger har blitt nøye utvalgt for å matche hverandre og tilfredsstille universell utforming.
-			</Paragraph>
+			<Paragraph>Fargepaletten er et utvalg farger som er valgt for å brukes i designsystemet for å forsterke design og merkevaren SSB. Alle fargesammensettinger har blitt nøye utvalgt for å matche hverandre og tilfredsstille universell utforming.</Paragraph>
 			<Title size={4}>Primærfarger</Title>
-			<Paragraph>
-				Disse fargene er basisfarger som brukes gjennom hele designet, på de ulike komponentene i designsystemet.
-			</Paragraph>
+			<Paragraph>Disse fargene er basisfarger som brukes gjennom hele designet, på de ulike komponentene i designsystemet.</Paragraph>
 
 			<Title size={4}>Sekundærfarger (figurfarger)</Title>
+			<Paragraph>Sekundærfargene består av et utvalg farger som først og fremst brukes på figurer som krever en større variasjon og utvalg i fargeutvalg og differensiering. Disse fargene skal vanligvis ikke brukes på andre komponenter i designsystemet.</Paragraph>
+
+			<Title size={4}>Ikonografi</Title>
+			<Paragraph>For å sikre konsistent design gjennom hele designsystemet, har vi valgt å bruke ikonbiblioteket “feather icon library” som leverer et sett avrundede og minimalistiske ikoner. Feather har mer enn 280 ulike open source ikoner som dekker de mest brukte ikonene. Ikonene finnes her: <Link isExternal href="https://feathericons.com/">https://feathericons.com/</Link></Paragraph>
 			<Paragraph>
-				Sekundærfargene består av et utvalg farger som først og fremst brukes på figurer som krever en større variasjon og utvalg i fargeutvalg og differensiering. Disse fargene skal vanligvis ikke brukes på andre komponenter i designsystemet.
+				Hvis et spesielt ikon ikke finnes i dette biblioteket, er det greit å finne et ikon fra et annet bibliotek så lenge det har likhet med feather-ikonene:
+				<ul>
+					<li>Lett avrundede hjørner</li>
+					<li>Vennlig stil</li>
+				</ul>
 			</Paragraph>
+			<Paragraph>Men husk at uansett må ikonet godkjennes av ansvarlig designer før det blir implementert. Hvis det ikke er egnet, vil designer lage et.</Paragraph>
+			<Paragraph>Spesielle ikoner som er unike for SSB vil våre interne designere lage. Kontakt profilansvarlig for spesielle ønsker.</Paragraph>
 		</section>
 	</div>
 );

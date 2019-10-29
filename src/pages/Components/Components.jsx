@@ -80,7 +80,9 @@ const Components = withRouter(({ history, match }) => {
 				<Switch>
 					<Route exact path={match.url}>
 						<Title size={2} className="col-lg-12">Komponenter</Title>
-						<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
+						<div className="col-lg-12">
+							<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
+						</div>
 					</Route>
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
 					<Route path={`${match.url}/breadcrumb`} component={BreadcrumbInfo} />

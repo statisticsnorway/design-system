@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import { Breadcrumb, Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Breadcrumb, Divider, LeadParagraph, Link, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -100,6 +100,15 @@ const BreadcrumbInfo = () => {
 								</tr>
 							</tbody>
 						</table>
+
+						<Divider className="mt-3" />
+
+						<div className="col-lg-3 mt-3">
+							<Text>Depends on</Text>
+							<ul>
+								<li><Link href="#/components/links">Link</Link></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			)}

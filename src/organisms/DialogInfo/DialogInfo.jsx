@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import { Dialog, Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Dialog, Divider, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Warning alters are a banner-like element used to tell the user about something that has gone wrong.
@@ -187,6 +187,15 @@ const DialogInfo = () => {
 								</tr>
 							</tbody>
 						</table>
+
+						<Divider className="mt-3" />
+
+						<div className="col-lg-3 mt-3">
+							<Text>Depends on</Text>
+							<ul>
+								<li><Link href="#/components/typography">Paragraph</Link></li>
+							</ul>
+						</div>
 					</div>
 
 				</div>

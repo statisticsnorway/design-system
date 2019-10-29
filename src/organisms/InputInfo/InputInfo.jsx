@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import { Divider, Input, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, Input, LeadParagraph, Link, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -86,6 +86,87 @@ const InputInfo = () => {
 						</div>
 						<div className="col-lg-12">
 							<CodeSnippet code={'<Input searchField submitCallback={handleSubmit} />'} language="jsx" />
+						</div>
+					</div>
+
+					<Divider />
+
+					<div className="row">
+						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
+						<table className="col-lg-12">
+							<thead style={{ textAlign: 'left' }}>
+								<tr>
+									<th><Title size={5}>Prop name</Title></th>
+									<th><Title size={5}>Type</Title></th>
+									<th><Title size={5}>Description</Title></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>disabled</code></td>
+									<td>bool</td>
+									<td>Toggles disabled state</td>
+								</tr>
+								<tr>
+									<td><code>error</code></td>
+									<td>bool</td>
+									<td>Changes design</td>
+								</tr>
+								<tr>
+									<td><code>errorMessage</code></td>
+									<td>string</td>
+									<td>Renders an error message underneath input field</td>
+								</tr>
+								<tr>
+									<td><code>handleChange</code></td>
+									<td>func</td>
+									<td>Callback function</td>
+								</tr>
+								<tr>
+									<td><code>id</code></td>
+									<td>string</td>
+									<td>ID to connect label with input field</td>
+								</tr>
+								<tr>
+									<td><code>label</code></td>
+									<td>string</td>
+									<td>Label text</td>
+								</tr>
+								<tr>
+									<td><code>negative</code></td>
+									<td>bool</td>
+									<td>Changes design</td>
+								</tr>
+								<tr>
+									<td><code>searchField</code></td>
+									<td>bool</td>
+									<td>Ads search icon with click</td>
+								</tr>
+								<tr>
+									<td><code>submitCallback</code></td>
+									<td>func</td>
+									<td>Callback for onSubmit</td>
+								</tr>
+								<tr>
+									<td><code>type</code></td>
+									<td>string</td>
+									<td>Changes input type</td>
+								</tr>
+								<tr>
+									<td><code>value</code></td>
+									<td>string</td>
+									<td>Input value. Can be initiated with a value</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<Divider className="mt-3" />
+
+						<div className="col-lg-3 mt-3">
+							<Text>Depends on</Text>
+							<ul>
+								<li><Link href="#/components/form-error">Form error</Link></li>
+							</ul>
 						</div>
 					</div>
 				</div>

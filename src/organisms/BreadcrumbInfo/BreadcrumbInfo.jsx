@@ -106,7 +106,7 @@ const BreadcrumbInfo = () => {
 						<div className="col-lg-3 mt-3">
 							<Text>Depends on</Text>
 							<ul>
-								<li><Link href="#/components/links">Link</Link></li>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link" isExternal>Link</Link></li>
 							</ul>
 						</div>
 					</div>

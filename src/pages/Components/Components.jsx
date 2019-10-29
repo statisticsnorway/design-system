@@ -16,6 +16,7 @@ import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
 import RadioButtonInfo from '@organisms/RadioButtonInfo/RadioButtonInfo';
 import TabsInfo from '@organisms/TabsInfo/TabsInfo';
 import TypographyInfo from '../../organisms/Typography/TypographyInfo';
+import DialogInfo from '../../organisms/DialogInfo/DialogInfo';
 
 const sidebarItems = [
 	{
@@ -27,6 +28,9 @@ const sidebarItems = [
 	}, {
 		label: 'Button',
 		path: '/button',
+	}, {
+		label: 'Dialog',
+		path: '/dialog',
 	}, {
 		label: 'Divider',
 		path: '/divider',
@@ -91,6 +95,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
 					<Route path={`${match.url}/breadcrumb`} component={BreadcrumbInfo} />
 					<Route path={`${match.url}/button`} component={ButtonInfo} />
+					<Route path={`${match.url}/dialog`} component={DialogInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/input`} component={InputInfo} />
 					<Route path={`${match.url}/key-figures`} component={KeyFiguresInfo} />

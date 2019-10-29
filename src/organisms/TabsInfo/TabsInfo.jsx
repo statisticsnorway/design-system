@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
-import { Divider, KeyFigures, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library'
-import { Home } from 'react-feather'
+import { Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Tabs are a navigational element that allows the user to navigate between related pages or views while retaining the context. 

@@ -68,7 +68,8 @@ const BreadcrumbInfo = () => {
 						<Title size={3} className="col-lg-12">Brødsmuler</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Brødsmulene hjelper brukeren å se hvor de befinner seg på nettstedet. Ved å følge lenkene til tidligere sider/nivåer, vil brødsmulene fungere som en enkel navigasjon til foregående sider og innhold.
+								Brødsmulene hjelper brukeren å se hvor de befinner seg på nettstedet. Ved å følge lenkene til tidligere sider/nivåer,
+								vil brødsmulene fungere som en enkel navigasjon til foregående sider og innhold.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">

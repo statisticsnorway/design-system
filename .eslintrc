@@ -13,7 +13,7 @@
     "import/no-unresolved": 0, // because the project uses aliases
     "indent": ["error", "tab"],
     "linebreak-style": 0,
-    "max-len": ["warn", {"code": 150}],
+    "max-len": ["warn", {"code": 200}],
     "no-console": 0,
     "no-irregular-whitespace": 0,
     "no-tabs": 0,

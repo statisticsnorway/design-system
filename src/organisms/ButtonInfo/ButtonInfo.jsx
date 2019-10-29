@@ -66,7 +66,8 @@ const ButtonInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Button</Title>
 			<LeadParagraph>
-				Knapper brukes for å kommunisere tydelig mulighet for handling. Knapp består av knappetekst, og noen ganger ikon for å tydeliggjøre hva brukeren får utført med knappen. Knappeteksten skal være så kort som mulig, og ikke gå over to linjer.
+				Knapper brukes for å kommunisere tydelig mulighet for handling. Knapp består av knappetekst, og noen ganger ikon for å tydeliggjøre hva brukeren får utført med knappen.
+				Knappeteksten skal være så kort som mulig, og ikke gå over to linjer.
 			</LeadParagraph>
 
 			<ul className="mb-3 col-lg-8">
@@ -86,7 +87,8 @@ const ButtonInfo = () => {
 						<Title size={3} className="col-lg-12">Primærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Primærknapp brukes for viktige handlinger for brukeren, en aksjon som er kritisk for brukerens videre fremdrift. Eksempel på en kritisk aksjon er “send inn” på et besetillingsskjema eller “logg inn” på en innloggingstjeneste.
+								Primærknapp brukes for viktige handlinger for brukeren, en aksjon som er kritisk for brukerens videre fremdrift.
+								Eksempel på en kritisk aksjon er “send inn” på et besetillingsskjema eller “logg inn” på en innloggingstjeneste.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
@@ -102,7 +104,8 @@ const ButtonInfo = () => {
 						<Title size={3} className="col-lg-12">Sekundærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Sekundærknapp brukes for handlinger som er viktige, men ikke kritiske, for den videre fremdriften i brukerens oppgaver. Den kan brukes sammen men primærknappen for å skape et hierarki, eller sammen med andre sekundærknapper for å indikere likt hierarki.
+								Sekundærknapp brukes for handlinger som er viktige, men ikke kritiske, for den videre fremdriften i brukerens oppgaver.
+								Den kan brukes sammen men primærknappen for å skape et hierarki, eller sammen med andre sekundærknapper for å indikere likt hierarki.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
@@ -134,7 +137,8 @@ const ButtonInfo = () => {
 						<Title size={3} className="col-lg-12">Ikke-aktiv knapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								En ikke-aktiv knapp er grået ut og er ikke klikkbar. Den har heller ikke hover animasjon. Dette er for å indikere til brukeren at det ikke er noen funksjonalitet bak knappen.
+								En ikke-aktiv knapp er grået ut og er ikke klikkbar. Den har heller ikke hover animasjon.
+								Dette er for å indikere til brukeren at det ikke er noen funksjonalitet bak knappen.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 d-flex flex-row">
@@ -202,7 +206,8 @@ const ButtonInfo = () => {
 						</div>
 						<div className="col-lg-8">
 							<span>
-								Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no. Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
+								Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
+								Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
 							</span>
 						</div>
 					</div>
@@ -213,7 +218,8 @@ const ButtonInfo = () => {
 						</div>
 						<div className="col-lg-8">
 							<span>
-								For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren. Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
+								For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren.
+								Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
 							</span>
 						</div>
 					</div>

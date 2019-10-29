@@ -84,7 +84,8 @@ const LinksInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Link</Title>
 			<LeadParagraph>
-				Lenker stiles slik at det er lett å forstå at de er hyperlenker til andre sider. De følger stilen til tekst de står sammen med i paragrafen, men er understreket og har grønn farge for å differensieres fra teksten. Lenker kan også bli brukt i andre former som lenkelister, profilerte lenker og lenker med ikon.
+				Lenker stiles slik at det er lett å forstå at de er hyperlenker til andre sider. De følger stilen til tekst de står sammen med i paragrafen,
+				men er understreket og har grønn farge for å differensieres fra teksten. Lenker kan også bli brukt i andre former som lenkelister, profilerte lenker og lenker med ikon.
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
@@ -115,7 +116,8 @@ const LinksInfo = () => {
 						<Title size={3} className="col-lg-12">Lenker med ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Lenker med ikon brukes vanligvis ikke i løpende tekst, men gjerne på frittstående lenker. Men de kan også blir brukt sammen med andre lenker med ikon for å differensiere eller indikere forskjellig funksjonalitet.
+								Lenker med ikon brukes vanligvis ikke i løpende tekst, men gjerne på frittstående lenker.
+								Men de kan også blir brukt sammen med andre lenker med ikon for å differensiere eller indikere forskjellig funksjonalitet.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 row">
@@ -209,7 +211,8 @@ const LinksInfo = () => {
 						<Title size={3} className="col-lg-12">Farge</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Fargen på lenker er SSB grønn 4. Denne fargen er valgt for å passe inn i helheten i  designsystemet, og samtidig lære brukeren at grønn farge alltid er klikkbart på ssb.no.
+								Fargen på lenker er SSB grønn 4. Denne fargen er valgt for å passe inn i helheten i  designsystemet,
+								og samtidig lære brukeren at grønn farge alltid er klikkbart på ssb.no.
 							</Paragraph>
 						</div>
 					</div>

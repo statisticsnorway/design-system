@@ -15,7 +15,7 @@ import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
 import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
 import RadioButtonInfo from '@organisms/RadioButtonInfo/RadioButtonInfo';
 import TabsInfo from '@organisms/TabsInfo/TabsInfo';
-import TypographyInfo from '../../organisms/Typography/TypographyInfo'
+import TypographyInfo from '../../organisms/Typography/TypographyInfo';
 
 const sidebarItems = [
 	{

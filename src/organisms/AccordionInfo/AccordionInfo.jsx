@@ -96,10 +96,13 @@ const AccordionInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Accordion (åpne/lukke-felter)</Title>
 			<LeadParagraph>
-				Accordions sparer plass ved å utvide eller lukke seksjoner med innhold. De tillater brukeren å vise kun den informasjon hun ønsker. Derfor er accordion-komponentene alltid lukket som default.
+				Accordions sparer plass ved å utvide eller lukke seksjoner med innhold. De tillater brukeren å vise kun den informasjon hun ønsker.
+				Derfor er accordion-komponentene alltid lukket som default.
 			</LeadParagraph>
 			<Paragraph>
-				Accordions må brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskeligere for brukeren å finne den skjulte informasjonen. Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold. Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href={'https://www.nngroup.com/articles/accordions-complex-content/'}>her</Link>.
+				Accordions må brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskeligere for brukeren å finne den skjulte informasjonen.
+				Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold.
+				Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href="https://www.nngroup.com/articles/accordions-complex-content/">her</Link>.
 			</Paragraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider />
@@ -139,7 +142,8 @@ const AccordionInfo = () => {
 						<Title size={3} className="col-lg-12">Innflettet Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Innflettet accordion brukes når det er flere nivåer accordions, dvs. en accordion er inne i en annen accordion. Når det er flere nivåer på innholdet i den. Dens funksjon er å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
+								Innflettet accordion brukes når det er flere nivåer accordions, dvs. en accordion er inne i en annen accordion. Når det er flere nivåer på innholdet i den.
+								Dens funksjon er å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">

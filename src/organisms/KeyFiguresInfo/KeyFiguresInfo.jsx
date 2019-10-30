@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Divider, LeadParagraph, KeyFigures, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, KeyFigures, Paragraph, Tabs, Title, Text, Link } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 import { Home } from 'react-feather';
 
@@ -161,6 +161,16 @@ const AccordionInfo = () => {
 								</tr>
 							</tbody>
 						</table>
+
+						<Divider className="mt-3" />
+
+						<div className="col-lg-3 mt-3">
+							<Text>Depends on</Text>
+							<ul>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Number" isExternal>Number</Link></li>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			)}

@@ -72,7 +72,7 @@ const ButtonInfo = () => {
 
 			<ul className="mb-3 col-lg-8">
 				<li>
-					Primær- og sekundærknapper skal ikke brukes for navigasjon ut til eksterne sider. Bruk da i stedet <Link href="/#/components/links">lenker</Link>.
+					Primær- og sekundærknapper skal ikke brukes for navigasjon ut til eksterne sider. Bruk da i stedet <Link href="#/components/links">lenker</Link>.
 				</li>
 				<li>
 					Knapper brukes for å utføre handlinger og ikke for multiple-choice (flere valg). Bruk da i stedet check-bokser og radio-buttons hvis mulig.

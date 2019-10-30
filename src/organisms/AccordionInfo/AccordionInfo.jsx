@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Accordion, Divider, LeadParagraph, Link, NestedAccordion, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Accordion, Divider, LeadParagraph, Link, NestedAccordion, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
 
 const accordionFillerText = `
@@ -156,6 +156,54 @@ const AccordionInfo = () => {
 						</div>
 						<div className="col-lg-12 mt-3">
 							<CodeSnippet code={nestedExample} language="jsx" />
+						</div>
+					</div>
+					<div className="row">
+						<Title size={3} className="col-lg-12 mt-3">Props</Title>
+						<table className="col-lg-12">
+							<thead style={{ textAlign: 'left' }}>
+								<tr>
+									<th><h5>Prop name</h5></th>
+									<th><h5>Type</h5></th>
+									<th><h5>Description</h5></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>children</code></td>
+									<td>node</td>
+									<td>Accordion content</td>
+								</tr>
+								<tr>
+									<td><code>header</code></td>
+									<td>string</td>
+									<td>Header text</td>
+								</tr>
+								<tr>
+									<td><code>openByDefault</code></td>
+									<td>bool</td>
+									<td>Will set the open state on init</td>
+								</tr>
+								<tr>
+									<td><code>primary</code></td>
+									<td>bool</td>
+									<td>Changes type and design of accordion</td>
+								</tr>
+								<tr>
+									<td><code>subHeader</code></td>
+									<td>string</td>
+									<td>Renders the header with the sub header design</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<Divider className="mt-3" />
+
+						<div className="col-lg-3 mt-3">
+							<Text>Depends on</Text>
+							<ul>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+							</ul>
 						</div>
 					</div>
 				</div>

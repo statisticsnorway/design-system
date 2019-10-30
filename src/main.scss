@@ -2,20 +2,12 @@
 @import '../node_modules/@statisticsnorway/ssb-component-library/lib/bundle.css';
 @import 'style/variables';
 @import 'style/global';
-@import 'style/grid';
 @import 'style/text';
 
-// atoms
-@import 'atoms/TreeMenu/tree-menu';
-
-// molecules
-@import 'molecules/FactBox/fact-box';
-@import 'molecules/ReferenceLink/reference-link';
-@import 'molecules/ProfileBox/profile-box';
-
-// organisms
-@import 'organisms/Footer/footer';
-@import 'organisms/Header/header';
+// local components
+@import 'components/Footer/footer';
+@import 'components/Header/header';
+@import 'components/TreeMenu/tree-menu';
 
 // pages
 @import 'pages/Components/components';

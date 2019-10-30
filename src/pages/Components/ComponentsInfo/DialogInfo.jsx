@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
+import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Dialog, Divider, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `

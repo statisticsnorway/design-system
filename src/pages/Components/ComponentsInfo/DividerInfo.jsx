@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
+import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const codeExample = `

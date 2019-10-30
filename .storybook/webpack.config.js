@@ -27,9 +27,8 @@ module.exports = {
 
 	resolve: {
 		alias: {
-			'@atoms': path.resolve(__dirname, '../src/atoms/'),
+			'@components': path.resolve(__dirname, '../src/components/'),
 			'@molecules': path.resolve(__dirname, '../src/molecules/'),
-			'@organisms': path.resolve(__dirname, '../src/organisms/'),
 			'@pages': path.resolve(__dirname, '../src/pages/'),
 			'@templates': path.resolve(__dirname, '../src/templates/'),
 			'@public': path.resolve(__dirname, '..', 'public'),

@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
 import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
-import TreeMenu from '@atoms/TreeMenu/TreeMenu';
-import AccordionInfo from '@organisms/AccordionInfo/AccordionInfo';
-import BreadcrumbInfo from '@organisms/BreadcrumbInfo/BreadcrumbInfo';
-import ButtonInfo from '@organisms/ButtonInfo/ButtonInfo';
-import DividerInfo from '@organisms/DividerInfo/DividerInfo';
-import KeyFiguresInfo from '@organisms/KeyFiguresInfo/KeyFiguresInfo';
-import InputInfo from '@organisms/InputInfo/InputInfo';
-import LinksInfo from '@organisms/LinksInfo/LinksInfo';
-import CheckboxInfo from '@organisms/Checkbox/CheckboxInfo';
-import PaginationInfo from '@organisms/PaginationInfo/PaginationInfo';
-import DropdownInfo from '@organisms/DropdownInfo/DropdownInfo';
-import RadioButtonInfo from '@organisms/RadioButtonInfo/RadioButtonInfo';
-import TabsInfo from '@organisms/TabsInfo/TabsInfo';
-import DialogInfo from '@organisms/DialogInfo/DialogInfo';
-import TypographyInfo from '@organisms/Typography/TypographyInfo';
-import WordExplanationInfo from '@organisms/WordExplanationInfo/WordExplanationInfo';
+import TreeMenu from '@components/TreeMenu/TreeMenu';
+import AccordionInfo from './ComponentsInfo/AccordionInfo';
+import BreadcrumbInfo from './ComponentsInfo/BreadcrumbInfo';
+import ButtonInfo from './ComponentsInfo/ButtonInfo';
+import CheckboxInfo from './ComponentsInfo/CheckboxInfo';
+import DialogInfo from './ComponentsInfo/DialogInfo';
+import DividerInfo from './ComponentsInfo/DividerInfo';
+import DropdownInfo from './ComponentsInfo/DropdownInfo';
+import InputInfo from './ComponentsInfo/InputInfo';
+import KeyFiguresInfo from './ComponentsInfo/KeyFiguresInfo';
+import LinksInfo from './ComponentsInfo/LinksInfo';
+import PaginationInfo from './ComponentsInfo/PaginationInfo';
+import RadioButtonInfo from './ComponentsInfo/RadioButtonInfo';
+import TabsInfo from './ComponentsInfo/TabsInfo';
+import TypographyInfo from './ComponentsInfo/TypographyInfo';
+import WordExplanationInfo from './ComponentsInfo/WordExplanationInfo';
 
 const sidebarItems = [
 	{

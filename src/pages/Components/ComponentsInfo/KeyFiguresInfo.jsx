@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Divider, LeadParagraph, KeyFigures, Paragraph, Tabs, Title, Text, Link } from '@statisticsnorway/ssb-component-library';
-import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
+import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Home } from 'react-feather';
 
 const leadParagraphText = `

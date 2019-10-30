@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Accordion, Divider, LeadParagraph, Link, NestedAccordion, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
-import CodeSnippet from '@atoms/CodeSnippet/CodeSnippet';
+import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 
 const accordionFillerText = `
 This is paragraph text which explains the accordion, the rest of the text is just to fill out space.

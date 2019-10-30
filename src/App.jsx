@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Link } from '@statisticsnorway/ssb-component-library';
-import Header from '@organisms/Header/Header';
-import Footer from '@organisms/Footer/Footer';
+import Header from '@components/Header/Header';
+import Footer from '@components/Footer/Footer';
 import Components from '@pages/Components/Components';
 import GetStarted from '@pages/GetStarted/GetStarted';
 import Templates from '@pages/Templates/Templates';

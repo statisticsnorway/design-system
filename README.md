@@ -40,7 +40,7 @@ update and start the build process.
 ## Developing a component
 The project uses [Atomic Design](http://atomicdesign.bradfrost.com/) as its structural form.
 It is recommended that you familiarize yourself with this before developing. 
-When implementing a new component, add it to the [atoms](./src/atoms) directory and create a new directory for your
+When implementing a new component, add it to the [atoms](src/components) directory and create a new directory for your
 new component. This directory should contain four files. A [component](#components) file, a [storybook](#storybook)
 file, a [test](#testing) file and a [stylesheet](#styling).
 

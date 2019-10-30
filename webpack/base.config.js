@@ -19,9 +19,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			'@components': path.resolve(paths.APP_DIR, 'components/'),
-			'@molecules': path.resolve(paths.APP_DIR, 'molecules/'),
 			'@pages': path.resolve(paths.APP_DIR, 'pages/'),
-			'@templates': path.resolve(paths.APP_DIR, 'templates/'),
 			'@public': path.resolve(__dirname, '..', 'public'),
 		},
 		extensions: ['.jsx', '.js'],
@@ -34,8 +32,6 @@ module.exports = {
 
 exports.aliases = {
 	'@components': path.resolve(paths.APP_DIR, 'components/'),
-	'@molecules': path.resolve(paths.APP_DIR, 'molecules/'),
 	'@pages': path.resolve(paths.APP_DIR, 'pages/'),
-	'@templates': path.resolve(paths.APP_DIR, 'templates/'),
 	'@public': path.resolve(__dirname, '..', 'public'),
 };

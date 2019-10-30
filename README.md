@@ -37,13 +37,6 @@ Build the latest version with `npm run build` and makes sure the build doesn't f
 When build is done, publish by running `gh-pages -d build`. The branch named `gh-pages` should
 update and start the build process. 
 
-## Developing a component
-The project uses [Atomic Design](http://atomicdesign.bradfrost.com/) as its structural form.
-It is recommended that you familiarize yourself with this before developing. 
-When implementing a new component, add it to the [atoms](src/components) directory and create a new directory for your
-new component. This directory should contain four files. A [component](#components) file, a [storybook](#storybook)
-file, a [test](#testing) file and a [stylesheet](#styling).
-
 #### Components
 Components are written in [React](https://reactjs.org/) using the [JSX](https://reactjs.org/docs/introducing-jsx.html) syntax.
 Components should be written as functions, as opposed to classes, and if a local state or event handler is needed you should
@@ -51,29 +44,6 @@ take use of the [Hooks API](https://reactjs.org/docs/hooks-intro.html).
 
 As a way to ensure that our components are being used they way we intended, we use [PropTypes](https://www.npmjs.com/package/prop-types)
 to check properties being passed to components. _All_ components with props available should have this. 
-
-#### Storybook
-[Storybook](https://storybook.js.org/) is an open source tool for developing UI components in an isolated environment.
-It is also a useful tool for demoing components by themselves or put together into a user scenario.
-To add a component to the storybook build, create a file named like `ComponentName.stories.jsx`.
-Import some needed modules, the component you are creating the story for, and add it like this:
-```jsx harmony
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import centered from '@storybook/addon-centered/react';
-import Button from './Button';
-
-storiesOf('Atoms|Button', module)
-  .addDecorator(centered)
-  .add('Primary button', () => (
-    <div>
-      <Button text="Primary" primary />
-      <Button text="Disabled" primary disabled />
-    </div>
-  ))
-```
-Every new instance of `storiesOf` creates a new menu item in the storybook. When using the `add`, it creates an item in
-a sub menu. 
 
 #### Testing
 Testing is done with [Jest](https://jestjs.io/en/). Write unit tests for all atoms aim for a 100% test coverage. 

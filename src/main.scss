@@ -1,5 +1,5 @@
 // import variables first to ensure availability
-@import '../node_modules/@statisticsnorway/ssb-component-library/lib/bundle.css';
+@import '../node_modules/@statisticsnorway/ssb-component-library/src/main';
 @import 'style/variables';
 @import 'style/global';
 @import 'style/text';
@@ -11,6 +11,5 @@
 
 // pages
 @import 'pages/Components/components';
-@import 'pages/GetStarted/get-started';
 @import 'pages/Templates/templates';
 @import 'pages/Welcome/welcome';

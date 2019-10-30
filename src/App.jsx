@@ -4,7 +4,6 @@ import { Link } from '@statisticsnorway/ssb-component-library';
 import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 import Components from '@pages/Components/Components';
-import GetStarted from '@pages/GetStarted/GetStarted';
 import Templates from '@pages/Templates/Templates';
 import Welcome from '@pages/Welcome/Welcome';
 import logo from '@public/ssb-logo-white.svg';

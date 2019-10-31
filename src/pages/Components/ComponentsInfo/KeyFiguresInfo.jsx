@@ -65,7 +65,7 @@ const codeHtml = `
 </div>
 `;
 
-const AccordionInfo = () => {
+const KeyFiguresInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => {
@@ -235,4 +235,4 @@ const AccordionInfo = () => {
 	);
 };
 
-export default AccordionInfo;
+export default KeyFiguresInfo;

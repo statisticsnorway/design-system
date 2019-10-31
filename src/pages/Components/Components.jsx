@@ -14,6 +14,7 @@ import InputInfo from './ComponentsInfo/InputInfo';
 import KeyFiguresInfo from './ComponentsInfo/KeyFiguresInfo';
 import LinksInfo from './ComponentsInfo/LinksInfo';
 import PaginationInfo from './ComponentsInfo/PaginationInfo';
+import ProfileBoxInfo from './ComponentsInfo/ProfileBoxInfo';
 import RadioButtonInfo from './ComponentsInfo/RadioButtonInfo';
 import TabsInfo from './ComponentsInfo/TabsInfo';
 import TypographyInfo from './ComponentsInfo/TypographyInfo';
@@ -47,6 +48,9 @@ const sidebarItems = [
 	}, {
 		label: 'Pagination',
 		path: '/pagination',
+	}, {
+		label: 'ProfileBox',
+		path: '/profilebox',
 	}, {
 		label: 'Checkbox',
 		path: '/checkbox',
@@ -107,6 +111,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
+					<Route path={`${match.url}/profilebox`} component={ProfileBoxInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 					<Route path={`${match.url}/tabs`} component={TabsInfo} />

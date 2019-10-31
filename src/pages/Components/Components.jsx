@@ -10,6 +10,7 @@ import CheckboxInfo from './ComponentsInfo/CheckboxInfo';
 import DialogInfo from './ComponentsInfo/DialogInfo';
 import DividerInfo from './ComponentsInfo/DividerInfo';
 import DropdownInfo from './ComponentsInfo/DropdownInfo';
+import FactBoxInfo from './ComponentsInfo/FactBoxInfo';
 import InputInfo from './ComponentsInfo/InputInfo';
 import KeyFiguresInfo from './ComponentsInfo/KeyFiguresInfo';
 import LinksInfo from './ComponentsInfo/LinksInfo';
@@ -39,6 +40,9 @@ const sidebarItems = [
 	}, {
 		label: 'Input',
 		path: '/input',
+	}, {
+		label: 'FactBox',
+		path: '/factbox',
 	}, {
 		label: 'Key Figures',
 		path: '/key-figures',
@@ -107,6 +111,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/dialog`} component={DialogInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/input`} component={InputInfo} />
+					<Route path={`${match.url}/factbox`} component={FactBoxInfo} />
 					<Route path={`${match.url}/key-figures`} component={KeyFiguresInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />

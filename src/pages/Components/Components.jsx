@@ -4,6 +4,7 @@ import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
 import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 import TreeMenu from '@components/TreeMenu/TreeMenu';
 import AccordionInfo from './ComponentsInfo/AccordionInfo';
+import BlockContentInfo from './ComponentsInfo/BlockContentInfo';
 import BreadcrumbInfo from './ComponentsInfo/BreadcrumbInfo';
 import ButtonInfo from './ComponentsInfo/ButtonInfo';
 import CheckboxInfo from './ComponentsInfo/CheckboxInfo';
@@ -23,6 +24,9 @@ const sidebarItems = [
 	{
 		label: 'Accordion',
 		path: '/accordion',
+	}, {
+		label: 'Block Content',
+		path: '/block-content',
 	}, {
 		label: 'Breadcrumb',
 		path: '/breadcrumb',
@@ -97,7 +101,8 @@ const Components = withRouter(({ history, match }) => {
 							<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
 						</div>
 					</Route>
-					<Route path={`${match.url}/accordion/:type?`} component={AccordionInfo} />
+					<Route path={`${match.url}/accordion`} component={AccordionInfo} />
+					<Route path={`${match.url}/block-content`} component={BlockContentInfo} />
 					<Route path={`${match.url}/breadcrumb`} component={BreadcrumbInfo} />
 					<Route path={`${match.url}/button`} component={ButtonInfo} />
 					<Route path={`${match.url}/dialog`} component={DialogInfo} />

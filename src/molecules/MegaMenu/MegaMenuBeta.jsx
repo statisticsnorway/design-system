@@ -18,6 +18,7 @@ const MegaMenuBeta = ({ openByDefault }) => {
     let [Topics, setTopics] = useState(tempTopics)
     let [Groups, setGroups] = useState(Object.keys(MenuStructure).map(group => { return { "name": group, "active": false } }).sort((a, b) => a.name.localeCompare(b.name)));
     let [OpenMenu, SetOpenMenu] = useState(false);
+    let [FakeContent, SetFakeContent] = useState(false);
 
     let noGroupActive = () => {
         return Groups.filter(group => group.active).length == 0;
@@ -31,6 +32,18 @@ const MegaMenuBeta = ({ openByDefault }) => {
     const toggleOpenMenu = () => {
         SetOpenMenu(!OpenMenu)
     }
+
+    let generateFakeContent = ( contentName = false )=>{
+        let fakeContent = false;
+        if( contentName ){
+            fakeContent = <article>
+                <h1>{contentName}</h1>
+                <span onClick={()=>generateFakeContent( false )}>lukk</span>
+            </article>
+        }
+        toggleOpenMenu()
+        SetFakeContent( fakeContent );
+    };
 
     let toggleGroup = in_group => {
         console.log("toggle:", in_group)
@@ -48,6 +61,7 @@ const MegaMenuBeta = ({ openByDefault }) => {
         <nav className="mega-menu prototype-2">
             <div className="row no-gutters coreSiteStuff">
                 <div className="col-12">
+                    <a href="#">SSB forskning</a>
                     <a href="#">Innrapportering</a>
                     <a href="#">Cookies og personvern</a>
                 </div>
@@ -58,16 +72,14 @@ const MegaMenuBeta = ({ openByDefault }) => {
                         <img className="logo" src={logo} alt="logo" />
                     </a>
                 </div>
-                <div className="col-5">
+                <div className="col-4">
                     <ul id="globalMenuItems">
-                        <li onClick={toggleOpenMenu} className={OpenMenu ?  "expand" : "collapse"}>Finn statistikk</li>
-                        <li onClick={()=>SetOpenMenu(false)}>SSB forskning</li>
-                        <li onClick={()=>SetOpenMenu(false)}>Om SSB</li>
+                        <li onClick={toggleOpenMenu} className={OpenMenu ? "expand" : "collapse"}>Finn statistikk</li>
                     </ul>
                 </div>
-                <div className="col-3">
+                <div className="col-4">
                     <ul id="toolsMenuItems">
-                        <li>Søk<img src={require("./icons/search.svg")}/></li>
+                        <li>Søk<img src={require("./icons/search.svg")} /></li>
                         <li>English</li>
                     </ul>
                 </div>
@@ -103,7 +115,7 @@ const MegaMenuBeta = ({ openByDefault }) => {
                 </div>
                 <div className="col-9">
                     <ul className={`topicMenu ${!noGroupActive() ? "highlightGroups" : ""}`}>
-                        {Topics.map(topic => <li className={`col-12 ${topic.active ? "active" : ""}`} key={topic.name}>
+                        {Topics.map(topic => <li onClick={() => generateFakeContent(topic.name)} className={`col-12 ${topic.active ? "active" : ""}`} key={topic.name}>
                             <img src={topic.icon} alt={`Icon for ${topic.name}`} />{topic.name}
                         </li>)}
                     </ul>
@@ -113,6 +125,9 @@ const MegaMenuBeta = ({ openByDefault }) => {
                         <img src={require("./icons/close.svg")} alt="Close menu" />Lukk
                     </span>
                 </div>
+            </div>
+            <div id="fake-content">
+                {FakeContent}
             </div>
         </nav>
     );

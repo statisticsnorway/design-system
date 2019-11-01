@@ -57,22 +57,22 @@ const MegaMenuAlpha = ({ openByDefault }) => {
                     </a>
                 </div>
                 <div className="col-6 coreSiteStuff">
+                    <a href="#">SSB forskning</a>
                     <a href="#">Innrapportering</a>
                     <a href="#">Cookies og personvern</a>
-                    <a href="#">Om SSB</a>
                 </div>
             </div>
 
             <div className="row no-gutters">
-                <div className="col-6">
+                <div className="offset-5 col-2">
                     <ul className="mainMenu">
-                        <li className={OpenMenu ? "active" : ""} onClick={() => { SetOpenMenu(!OpenMenu); SetActiveGroup(false) }}>All statistikk</li>
+                        <li className={OpenMenu ? "arrow active" : "arrow"} onClick={() => { SetOpenMenu(!OpenMenu); SetActiveGroup(false) }}>Finn statistikk</li>
                     </ul>
                 </div>
-                <div className="col-6">
+                <div className="col-5">
                     <ul id="toolsMenuItems" className="mainMenu">
                         <li><img src={require("./icons/search.svg")} />Søk</li>
-                        <li onClick={() => SetOpenMenu(false)}>SSB forskning</li>
+                        <li>English</li>
                     </ul>
                 </div>
             </div>

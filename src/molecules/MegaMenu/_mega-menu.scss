@@ -377,11 +377,10 @@
       list-style: none;
       display: inline-block;
       animation: fade-in 0.3s ease-out;
-      a {
-        color: #4b7272 !important;
-        font-size: 0.9em;
-        text-decoration: none;
-      }
+      color: #4b7272 !important;
+      font-size: 0.9em;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
 }

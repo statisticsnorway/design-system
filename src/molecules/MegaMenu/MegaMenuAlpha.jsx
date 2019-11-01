@@ -11,6 +11,7 @@ const MegaMenuAlpha = ({ openByDefault }) => {
     let [ActiveGroup, SetActiveGroupState] = useState(false)
     let [ActiveTopic, SetActiveTopic] = useState(false)
     let [OpenMenu, SetOpenMenu] = useState(false);
+    let [FakeContent, SetFakeContent] = useState(false);
 
     const SetActiveGroup = (group) => {
         SetActiveGroupState(group)
@@ -20,6 +21,18 @@ const MegaMenuAlpha = ({ openByDefault }) => {
     const [isOpen, toggleOpen] = useState(openByDefault);
 
     const Groups = Object.keys(MenuStructure);
+
+    let generateFakeContent = ( contentName = false )=>{
+        let fakeContent = false;
+        if( contentName ){
+            fakeContent = <article>
+                <h1>{contentName}</h1>
+                <span onClick={()=>generateFakeContent( false )}>lukk</span>
+            </article>
+        }
+        SetOpenMenu(!OpenMenu)
+        SetFakeContent( fakeContent );
+    };
 
 
     let FilterArrayKeys = {};
@@ -46,11 +59,11 @@ const MegaMenuAlpha = ({ openByDefault }) => {
         topicMenu = TopicArray.map(topic => <li key={topic} onClick={() => SetActiveTopic(topic)} className={topic == ActiveTopic ? "active" : ""}>{topic}</li>);
     }
     let filterMenuColumns = ActiveGroup ? 6 : 9;
-    let filterMenu = <ul className={`filterMenu ${ActiveGroup ? "text-col-2" : "text-col-3"}`}>{FilterArray.map(filter => <li className="col-12" key={filter}><a href={filter}>{filter}</a></li>)}</ul>
+    let filterMenu = <ul className={`filterMenu ${ActiveGroup ? "text-col-2" : "text-col-3"}`}>{FilterArray.map(filter => <li onClick={()=>generateFakeContent( filter )} className="col-12" key={filter}>{filter}</li>)}</ul>
 
     return (
         <nav className="mega-menu prototype-1">
-            <div class="row no-gutters">
+            <div className="row no-gutters">
                 <div className="col-6">
                     <a className="navbar-brand">
                         <img className="logo" src={logo} alt="logo" />
@@ -95,6 +108,9 @@ const MegaMenuAlpha = ({ openByDefault }) => {
                 <div className={`col-${filterMenuColumns}`}>
                     {filterMenu}
                 </div>
+            </div>
+            <div id="fake-content">
+                {FakeContent}
             </div>
         </nav>
     );

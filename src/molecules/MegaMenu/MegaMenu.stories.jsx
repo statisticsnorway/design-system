@@ -4,7 +4,7 @@ import MegaMenuAlpha from './MegaMenuAlpha';
 import MegaMenuBeta from './MegaMenuBeta';
 
 const menuWidth = {
-	"max-width": "1240px",
+	"maxWidth": "1240px",
 	"margin": "0 auto"
 }
 

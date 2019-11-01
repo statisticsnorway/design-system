@@ -30,14 +30,12 @@ const tabCode = [
 ];
 
 const codeExamplePrimary = `
-// React
 <Accordion primary header="This is a primary header">
 	{Insert content here}
 </Accordion>
 `;
 
 const codeExamplePrimaryHtml = `
-// HTML
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {22px filled plus icon}
@@ -50,14 +48,12 @@ const codeExamplePrimaryHtml = `
 `;
 
 const codeExampleSecondary = `
-// React
 <Accordion header="This is a secondary header">
 	{Insert content here}
 </Accordion>
 `;
 
 const codeExampleSecondaryHtml = `
-// HTML
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {20px unfilled plus icon}
@@ -79,7 +75,6 @@ const nestedExample = `
 `;
 
 const nestedExampleHtml = `
-// HTML
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {22px filled plus icon}

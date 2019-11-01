@@ -109,12 +109,14 @@ const Components = withRouter(({ history, match }) => {
 					onSelect={navigate}
 				/>
 			</aside>
-			<section>
+			<section className="container-fluid">
 				<Switch>
 					<Route exact path={match.url}>
-						<Title size={2} className="col-lg-12">Komponenter</Title>
-						<div className="col-lg-12">
-							<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
+						<div className="row">
+							<Title size={2} className="col-lg-12">Komponenter</Title>
+							<div className="col-lg-12">
+								<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
+							</div>
 						</div>
 					</Route>
 					<Route path={`${match.url}/accordion`} component={AccordionInfo} />

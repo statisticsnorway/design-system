@@ -2,6 +2,7 @@ body {
   margin: 0 auto;
 
   .app {
+    color: $ssb-dark-6;
     display: grid;
     grid-template-rows: 1fr;
     min-height: 100vh;
@@ -26,7 +27,8 @@ body {
 
   .page-wrapper {
     > section {
-      padding: 60px 0;
+      padding-bottom: 50px;
+      padding-top: 35px;
     }
   }
 }

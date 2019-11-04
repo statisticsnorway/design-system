@@ -18,6 +18,7 @@ import LinksInfo from './ComponentsInfo/LinksInfo';
 import PaginationInfo from './ComponentsInfo/PaginationInfo';
 import ProfileBoxInfo from './ComponentsInfo/ProfileBoxInfo';
 import RadioButtonInfo from './ComponentsInfo/RadioButtonInfo';
+import ReferenceInfo from './ComponentsInfo/ReferenceInfo';
 import TabsInfo from './ComponentsInfo/TabsInfo';
 import TypographyInfo from './ComponentsInfo/TypographyInfo';
 import WordExplanationInfo from './ComponentsInfo/WordExplanationInfo';
@@ -68,6 +69,9 @@ const sidebarItems = [
 	}, {
 		label: 'Radio Buttons',
 		path: '/radiobutton',
+	}, {
+		label: 'Reference',
+		path: '/reference',
 	}, {
 		label: 'Tabs',
 		path: '/tabs',
@@ -124,6 +128,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/profilebox`} component={ProfileBoxInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
+					<Route path={`${match.url}/reference`} component={ReferenceInfo} />
 					<Route path={`${match.url}/tabs`} component={TabsInfo} />
 					<Route path={`${match.url}/typography`} component={TypographyInfo} />
 					<Route path={`${match.url}/word-explanation`} component={WordExplanationInfo} />

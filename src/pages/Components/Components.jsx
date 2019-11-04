@@ -75,7 +75,7 @@ const sidebarItems = [
 		path: '/reference',
 	}, {
 		label: 'SearchBox',
-		path: '/searchbox',
+		path: '/search-box',
 	}, {
 		label: 'Tabs',
 		path: '/tabs',
@@ -134,8 +134,8 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/-`} component={ProfileBoxInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
-          <Route path={`${match.url}/reference`} component={ReferenceInfo} />
-          <Route path={`${match.url}/searchbox`} component={SearchBoxInfo} />
+					<Route path={`${match.url}/reference`} component={ReferenceInfo} />
+					<Route path={`${match.url}/search-box`} component={SearchBoxInfo} />
 					<Route path={`${match.url}/tabs`} component={TabsInfo} />
 					<Route path={`${match.url}/typography`} component={TypographyInfo} />
 					<Route path={`${match.url}/word-explanation`} component={WordExplanationInfo} />

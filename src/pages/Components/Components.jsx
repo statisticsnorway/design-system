@@ -47,8 +47,8 @@ const sidebarItems = [
 		label: 'Input',
 		path: '/input',
 	}, {
-		label: 'FactBox',
-		path: '/factbox',
+		label: 'Fact Box',
+		path: '/fact-box',
 	}, {
 		label: 'Key Figures',
 		path: '/key-figures',
@@ -59,8 +59,8 @@ const sidebarItems = [
 		label: 'Pagination',
 		path: '/pagination',
 	}, {
-		label: 'ProfileBox',
-		path: '/profilebox',
+		label: 'Profile Box',
+		path: '/profile-box',
 	}, {
 		label: 'Checkbox',
 		path: '/checkbox',
@@ -126,12 +126,12 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/dialog`} component={DialogInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/input`} component={InputInfo} />
-					<Route path={`${match.url}/factbox`} component={FactBoxInfo} />
+					<Route path={`${match.url}/fact-box`} component={FactBoxInfo} />
 					<Route path={`${match.url}/key-figures`} component={KeyFiguresInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
-					<Route path={`${match.url}/profilebox`} component={ProfileBoxInfo} />
+					<Route path={`${match.url}/-`} component={ProfileBoxInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
           <Route path={`${match.url}/reference`} component={ReferenceInfo} />

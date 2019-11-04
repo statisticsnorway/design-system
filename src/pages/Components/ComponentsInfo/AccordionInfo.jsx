@@ -8,14 +8,11 @@ This is paragraph text which explains the accordion, the rest of the text is jus
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
-	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
 	},
 ];
 
@@ -108,182 +105,183 @@ const AccordionInfo = () => {
 	const tabCode3Clicked = e => changeCodeTab3(e);
 
 	return (
-		<div className="row">
-			<div className="col-lg-12">
-				<Title size={1}>Accordion (åpne/lukke-felter)</Title>
-				<LeadParagraph>
-					Accordions sparer plass ved å utvide eller lukke seksjoner med innhold. De tillater brukeren å vise kun den informasjon hun ønsker.
-					Derfor er accordion-komponentene alltid lukket som default.
-				</LeadParagraph>
-				<Paragraph>
-					Accordions må brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskeligere for brukeren å finne den skjulte informasjonen.
-					Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold.
-					Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href="https://www.nngroup.com/articles/accordions-complex-content/">her</Link>.
-				</Paragraph>
-				<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-				<Divider />
-				{activeTab === '/overview' && (
-					<div className="mt-3">
-						<div className="row mb-3">
-							<Title size={3} className="col-lg-12">Primær Accordion</Title>
-							<div className="col-lg-6">
-								<Paragraph>
-									Brukes når innholdet i dem er viktig for å forstå helheten i sidens innhold, og vi ønsker at brukeren skal se det.
-								</Paragraph>
-							</div>
-							<div className="col-lg-6">
-								<Accordion primary header="This is a primary header">{accordionFillerText}</Accordion>
-							</div>
+		<div className="col-lg-12">
+			<Title size={1}>Accordion (åpne/lukke-felter)</Title>
+			<LeadParagraph>
+				Accordions sparer plass ved å utvide eller lukke seksjoner med innhold. De tillater brukeren å vise kun den informasjon hun ønsker.
+				Derfor er accordion-komponentene alltid lukket som default.
+			</LeadParagraph>
+			<Paragraph>
+				Accordions må brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskeligere for brukeren å finne den skjulte informasjonen.
+				Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold.
+				Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href="https://www.nngroup.com/articles/accordions-complex-content/">her</Link>.
+			</Paragraph>
 
-							<div className="col-lg-12 mt-3">
-								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
-								<Divider light />
-								{activeCodeTab1 === '/react' && (
-									<CodeSnippet code={codeExamplePrimary} language="jsx" />
-								)}
-								{activeCodeTab1 === '/html' && (
-									<CodeSnippet code={codeExamplePrimaryHtml} language="html" />
-								)}
-							</div>
-
+			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
+			<Divider />
+			{activeTab === '/overview' && (
+				<div className="mt-3">
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-12">Primær Accordion</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Brukes når innholdet i dem er viktig for å forstå helheten i sidens innhold, og vi ønsker at brukeren skal se det.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6">
+							<Accordion primary header="This is a primary header">{accordionFillerText}</Accordion>
 						</div>
 
-						<Divider light className="mb-4" />
-
-						<div className="row">
-							<Title size={3} className="col-lg-12">Sekundær Accordion</Title>
-							<div className="col-lg-6">
-								<Paragraph>
-									Sekundær accordion brukes når innholdet kun trenger å hentes frem når brukeren trenger det. Dette kan være forfattere, definisjoner, bakgrunn etc.
-								</Paragraph>
-							</div>
-							<div className="col-lg-6">
-								<Accordion header="This is a secondary header">{accordionFillerText}</Accordion>
-							</div>
-							<div className="col-lg-12 mt-3">
-								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
-								<Divider light />
-								{activeCodeTab2 === '/react' && (
-									<CodeSnippet code={codeExampleSecondary} language="jsx" />
-								)}
-								{activeCodeTab2 === '/html' && (
-									<CodeSnippet code={codeExampleSecondaryHtml} language="html" />
-								)}
-							</div>
+						<div className="col-lg-12 mt-3">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
+							<Divider light />
+							{activeCodeTab1 === '/react' && (
+								<CodeSnippet code={codeExamplePrimary} language="jsx" />
+							)}
+							{activeCodeTab1 === '/html' && (
+								<CodeSnippet code={codeExamplePrimaryHtml} language="html" />
+							)}
 						</div>
 
-						<Divider light className="mb-4" />
+					</div>
 
-						<div className="row">
-							<Title size={3} className="col-lg-12">Innflettet Accordion</Title>
-							<div className="col-lg-6">
-								<Paragraph>
-									Innflettet accordion brukes når det er flere nivåer accordions, dvs. en accordion er inne i en annen accordion. Når det er flere nivåer på innholdet i den.
-									Dens funksjon er å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
-								</Paragraph>
-							</div>
-							<div className="col-lg-6">
-								<Accordion header="This is a secondary header">
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-12">Sekundær Accordion</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Sekundær accordion brukes når innholdet kun trenger å hentes frem når brukeren trenger det. Dette kan være forfattere, definisjoner, bakgrunn etc.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6">
+							<Accordion header="This is a secondary header">{accordionFillerText}</Accordion>
+						</div>
+						<div className="col-lg-12 mt-3">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
+							<Divider light />
+							{activeCodeTab2 === '/react' && (
+								<CodeSnippet code={codeExampleSecondary} language="jsx" />
+							)}
+							{activeCodeTab2 === '/html' && (
+								<CodeSnippet code={codeExampleSecondaryHtml} language="html" />
+							)}
+						</div>
+					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-12">Innflettet Accordion</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Innflettet accordion brukes når det er flere nivåer accordions, dvs. en accordion er inne i en annen accordion. Når det er flere nivåer på innholdet i den.
+								Dens funksjon er å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6">
+							<Accordion header="This is a secondary header">
+								{accordionFillerText}
+								<NestedAccordion header="A nested accordion header">
 									{accordionFillerText}
-									<NestedAccordion header="A nested accordion header">
-										{accordionFillerText}
-									</NestedAccordion>
-								</Accordion>
-							</div>
-							<div className="col-lg-12 mt-3">
-								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
-								<Divider light />
-								{activeCodeTab3 === '/react' && (
-									<CodeSnippet code={nestedExample} language="jsx" />
-								)}
-								{activeCodeTab3 === '/html' && (
-									<CodeSnippet code={nestedExampleHtml} language="html" />
-								)}
-							</div>
+								</NestedAccordion>
+							</Accordion>
 						</div>
+						<div className="col-lg-12 mt-3">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
+							<Divider light />
+							{activeCodeTab3 === '/react' && (
+								<CodeSnippet code={nestedExample} language="jsx" />
+							)}
+							{activeCodeTab3 === '/html' && (
+								<CodeSnippet code={nestedExampleHtml} language="html" />
+							)}
+						</div>
+					</div>
 
-						<div className="row">
-							<div className="col-lg-12">
-								<Title size={3} className="mt-3">Props</Title>
-								<table className="col-lg-12">
-									<thead style={{ textAlign: 'left' }}>
-										<tr>
-											<th><h5>Prop name</h5></th>
-											<th><h5>Type</h5></th>
-											<th><h5>Description</h5></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><code>children</code></td>
-											<td>node</td>
-											<td>Accordion content</td>
-										</tr>
-										<tr>
-											<td><code>header</code></td>
-											<td>string</td>
-											<td>Header text</td>
-										</tr>
-										<tr>
-											<td><code>openByDefault</code></td>
-											<td>bool</td>
-											<td>Will set the open state on init</td>
-										</tr>
-										<tr>
-											<td><code>primary</code></td>
-											<td>bool</td>
-											<td>Changes type and design of accordion</td>
-										</tr>
-										<tr>
-											<td><code>subHeader</code></td>
-											<td>string</td>
-											<td>Renders the header with the sub header design</td>
-										</tr>
-									</tbody>
-								</table>
+					<Divider light className="mb-3" />
 
-								<Divider className="mt-3" />
+					<div className="row mb-3">
+						<div className="col-lg-12">
+							<Title size={3} className="mt-3">Props</Title>
+							<table className="col-lg-12">
+								<thead style={{ textAlign: 'left' }}>
+									<tr>
+										<th><h5>Prop name</h5></th>
+										<th><h5>Type</h5></th>
+										<th><h5>Description</h5></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>children</code></td>
+										<td>node</td>
+										<td>Accordion content</td>
+									</tr>
+									<tr>
+										<td><code>header</code></td>
+										<td>string</td>
+										<td>Header text</td>
+									</tr>
+									<tr>
+										<td><code>openByDefault</code></td>
+										<td>bool</td>
+										<td>Will set the open state on init</td>
+									</tr>
+									<tr>
+										<td><code>primary</code></td>
+										<td>bool</td>
+										<td>Changes type and design of accordion</td>
+									</tr>
+									<tr>
+										<td><code>subHeader</code></td>
+										<td>string</td>
+										<td>Renders the header with the sub header design</td>
+									</tr>
+								</tbody>
+							</table>
 
-								<div className="mt-3">
-									<Text>Depends on</Text>
-									<ul>
-										<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
-									</ul>
-								</div>
+							<Divider className="mt-3" />
+
+							<div className="mt-3">
+								<Text>Depends on</Text>
+								<ul>
+									<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-				)}
+				</div>
+			)}
 
-				{activeTab === '/rationale' && (
-					<div className="mt-3">
-						<div className="row mb-3">
-							<Title size={3} className="col-lg-4">Primary and Secondary accordions</Title>
-							<div className="col-lg-8">
-								<span>
-									The reason we have two variants of accordion is to create a good hierarchy between the content,
-									while both primary and secondary accordions provides valuable information,
-									primary accordions contains content that are crucial for user to see in order to
-									understand the content on the page. Secondary accordions provide content that are important
-									but not crucial for the understanding of the page.
-								</span>
-							</div>
+			{activeTab === '/rationale' && (
+				<div className="mt-3">
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-4">Primary and Secondary accordions</Title>
+						<div className="col-lg-8">
+							<span>
+								The reason we have two variants of accordion is to create a good hierarchy between the content,
+								while both primary and secondary accordions provides valuable information,
+								primary accordions contains content that are crucial for user to see in order to
+								understand the content on the page. Secondary accordions provide content that are important
+								but not crucial for the understanding of the page.
+							</span>
 						</div>
-
-						<div className="row mb-3">
-							<Title size={3} className="col-lg-4">Single action accordions</Title>
-							<div className="col-lg-8">
-								<span>
-									There are other accordion elements on other sites that collapse an open accordion when another is opened.
-									This feature is not incorporated into our accordions as this behavior can be unpredictable for the users.
-									Our user has full control over what type of content they would like to have remain visible.
-								</span>
-							</div>
-						</div>
-
 					</div>
-				)}
-			</div>
+
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-4">Single action accordions</Title>
+						<div className="col-lg-8">
+							<span>
+								There are other accordion elements on other sites that collapse an open accordion when another is opened.
+								This feature is not incorporated into our accordions as this behavior can be unpredictable for the users.
+								Our user has full control over what type of content they would like to have remain visible.
+							</span>
+						</div>
+					</div>
+
+				</div>
+			)}
 		</div>
 	);
 };

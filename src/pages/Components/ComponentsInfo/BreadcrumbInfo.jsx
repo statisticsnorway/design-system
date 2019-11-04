@@ -4,10 +4,10 @@ import { Breadcrumb, Divider, LeadParagraph, Link, Paragraph, Tabs, Text, Title 
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
 	},
 ];
@@ -61,102 +61,100 @@ const codeExampleHtml = `
 const BreadcrumbInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const tabClicked = e => changeTab(e);
-	const [activeCodeTab, changeCodeTab1] = useState(tabCode[0].path);
-	const tabCodeClicked = e => changeCodeTab1(e);
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 
 	return (
-		<div className="row">
-			<div className="col-lg-12">
-				<Title size={1}>Breadcrumb</Title>
-				<LeadParagraph>
-					Brødsmuler er en navigasjonshjelp som gir brukeren informasjon om hvor de befinner seg på nettstedet, ved en kombinasjon av lenker som er plassert under toppfeltet på en side.
-				</LeadParagraph>
+		<div className="col-lg-12">
+			<Title size={1}>Breadcrumb</Title>
+			<LeadParagraph>
+				Brødsmuler er en navigasjonshjelp som gir brukeren informasjon om hvor de befinner seg på nettstedet, ved en kombinasjon av lenker som er plassert under toppfeltet på en side.
+			</LeadParagraph>
 
-				<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-				<Divider />
+			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
+			<Divider />
 
-				{activeTab === '/overview' && (
-					<div className="mt-3">
-						<div className="row mb-3">
-							<Title size={3} className="col-lg-12">Brødsmuler</Title>
-							<div className="col-lg-6">
-								<Paragraph>
-									Brødsmulene hjelper brukeren å se hvor de befinner seg på nettstedet. Ved å følge lenkene til tidligere sider/nivåer,
-									vil brødsmulene fungere som en enkel navigasjon til foregående sider og innhold.
-								</Paragraph>
-							</div>
-							<div className="col-lg-6">
-								<Breadcrumb items={mockedItems} />
-							</div>
-							<div className="col-lg-12">
-								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-								<Divider light />
-								{activeCodeTab === '/react' && (
-									<CodeSnippet code={codeExample} language="jsx" />
-								)}
-								{activeCodeTab === '/html' && (
-									<CodeSnippet code={codeExampleHtml} language="html" />
-								)}
-							</div>
+			{activeTab === '/overview' && (
+				<div className="mt-3">
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-12">Brødsmuler</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Brødsmulene hjelper brukeren å se hvor de befinner seg på nettstedet. Ved å følge lenkene til tidligere sider/nivåer,
+								vil brødsmulene fungere som en enkel navigasjon til foregående sider og innhold.
+							</Paragraph>
 						</div>
-
-						<Divider />
-
-						<div>
-							<Title size={3} className="mt-3 mb-3">Props</Title>
-							<table>
-								<thead style={{ textAlign: 'left' }}>
-									<tr>
-										<th><Title size={5}>Prop name</Title></th>
-										<th><Title size={5}>Type</Title></th>
-										<th><Title size={5}>Description</Title></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><code>items</code></td>
-										<td>Required array of objects</td>
-										<td>A list of objects. Object key <code>text</code> is required, <code>link</code> is optional.</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<Divider className="mt-3" />
-
-							<div className="mt-3">
-								<Text>Depends on</Text>
-								<ul>
-									<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link" isExternal>Link</Link></li>
-								</ul>
-							</div>
+						<div className="col-lg-6">
+							<Breadcrumb items={mockedItems} />
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && (
+								<CodeSnippet code={codeExample} language="jsx" />
+							)}
+							{activeCodeTab === '/html' && (
+								<CodeSnippet code={codeExampleHtml} language="html" />
+							)}
 						</div>
 					</div>
-				)}
 
-				{activeTab === '/rationale' && (
-					<div className="mt-3">
-						<div className="row mb-3">
-							<Title size={3} className="col-lg-5">Location based breadcrumbs</Title>
-							<div className="col-lg-7">
-								<Paragraph>
-									We have opted for a location based breadcrumbs as it gives the user a good overview of where in the website
-									hierarchy they are currently in, instead of path based breadcrumb which only show the path that the user have browsed.
-								</Paragraph>
-							</div>
-						</div>
-						<div className="row mb-3">
-							<Title size={3} className="col-lg-5">Simplistic design</Title>
-							<div className="col-lg-7">
-								<Paragraph>
-									As breadcrumbs are a secondary navigation, the overall design of breadcrumbs has been kept at a very simplistic level
-									to avoid it being too prominent or confused for being a main navigational element.
-								</Paragraph>
-							</div>
+					<Divider light className="mb-3" />
+
+					<div>
+						<Title size={3} className="mt-3 mb-3">Props</Title>
+						<table>
+							<thead style={{ textAlign: 'left' }}>
+								<tr>
+									<th><Title size={5}>Prop name</Title></th>
+									<th><Title size={5}>Type</Title></th>
+									<th><Title size={5}>Description</Title></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>items</code></td>
+									<td>Required array of objects</td>
+									<td>A list of objects. Object key <code>text</code> is required, <code>link</code> is optional.</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<Divider className="mt-3" />
+
+						<div className="mt-3">
+							<Text>Depends on</Text>
+							<ul>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link" isExternal>Link</Link></li>
+							</ul>
 						</div>
 					</div>
-				)}
-			</div>
+				</div>
+			)}
+
+			{activeTab === '/rationale' && (
+				<div className="mt-3">
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-5">Location based breadcrumbs</Title>
+						<div className="col-lg-7">
+							<Paragraph>
+								We have opted for a location based breadcrumbs as it gives the user a good overview of where in the website
+								hierarchy they are currently in, instead of path based breadcrumb which only show the path that the user have browsed.
+							</Paragraph>
+						</div>
+					</div>
+					<div className="row mb-3">
+						<Title size={3} className="col-lg-5">Simplistic design</Title>
+						<div className="col-lg-7">
+							<Paragraph>
+								As breadcrumbs are a secondary navigation, the overall design of breadcrumbs has been kept at a very simplistic level
+								to avoid it being too prominent or confused for being a main navigational element.
+							</Paragraph>
+						</div>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { ProfileBox, Divider, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { Button, Divider, LeadParagraph, Link, Paragraph, ProfileBox, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Profiled box content are used by various type of content such as statistic,
@@ -43,19 +43,23 @@ const tabCode = [
 ];
 
 const codeReact = `
-<ProfileBox 
-	link=" "
-	text="Explaining text about something."
-	title="This is a title link"
-/> 
+<ProfileBox>
+	<Title size={2}>Profiled box header</Title>
+	<Paragraph>Explain something about something with something clever.</Paragraph>
+	<Button primary>Handling</Button>
+</ProfileBox>
 `;
 
 const codeHtml = `
 <div class="ssb-profile-box">
-    <a class="ssb-link header" href=" " target="" rel="">
-        <span class="link-text">This is a title link</span>
-    </a>
-    <p class="ssb-paragraph ">Explaining text about something.</p>
+  <a class="profile-content">
+    {fill with content}
+  </a>
+  /* Optional download field */
+  <a download href=" " class="download-section">
+    <i class="download-icon" size="20" />
+    <span>Last ned</span>
+  </a>
 </div>
 `;
 
@@ -86,66 +90,60 @@ const ProfileBoxInfo = () => {
 							<p>{profileBoxStaticText}</p>
 						</div>
 						<div className="col-lg-6">
-							<ProfileBox link=" " text="Explaining text about something." title="This is a title link" />
+							<ProfileBox fileLocation="./not_a_file">
+								<Title size={2}>Profiled box header</Title>
+								<Paragraph>Explain something about something with something clever.</Paragraph>
+								<Button primary>Handling</Button>
+							</ProfileBox>
 						</div>
-						<div className="col-lg-12">
-							<Divider light className="mt-3" />
+						<div className="col-lg-12 mb-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
+							<Divider light />
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>React code</Title>
-									<CodeSnippet code={codeReact} language="jsx" />
-								</div>
+								<CodeSnippet code={codeReact} language="jsx" />
 							)}
 							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>Html code</Title>
-									<CodeSnippet code={codeHtml} language="html" />
-								</div>
+								<CodeSnippet code={codeHtml} language="html" />
 							)}
 						</div>
 					</div>
 
-					<Divider />
+					<Divider light className="mb-3" />
 
-					<div className="row col-lg-12 ">
-						<Title size={3} className="mt-3">Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>link</code></td>
-									<td>string</td>
-									<td>Destination for navigation</td>
-								</tr>
-								<tr>
-									<td><code>text</code></td>
-									<td>string</td>
-									<td>Renders text</td>
-								</tr>
-								<tr>
-									<td><code>title</code></td>
-									<td>string</td>
-									<td>Link text</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<Divider className="mt-3" />
-
-						<div className="col-lg-3 mt-3">
-							<Text>Depends on</Text>
-							<ul>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Paragraph" isExternal>Paragraph</Link></li>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link" isExternal>Link</Link></li>
-							</ul>
+					<div className="row">
+						<div className="col-lg-12">
+							<Title size={3}>Props</Title>
+							<table className="col-lg-12">
+								<thead style={{ textAlign: 'left' }}>
+									<tr>
+										<th><h5>Prop name</h5></th>
+										<th><h5>Type</h5></th>
+										<th><h5>Description</h5></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>centered</code></td>
+										<td>bool</td>
+										<td>Centers text</td>
+									</tr>
+									<tr>
+										<td><code>children</code></td>
+										<td>node</td>
+										<td>Required. Fills box with content</td>
+									</tr>
+									<tr>
+										<td><code>fileLocation</code></td>
+										<td>string</td>
+										<td>Path to downloadable file. Ads the download field</td>
+									</tr>
+									<tr>
+										<td><code>onClick</code></td>
+										<td>func</td>
+										<td>Callback function</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 

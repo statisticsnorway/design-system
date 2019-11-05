@@ -47,8 +47,8 @@ const sidebarItems = [
 		label: 'Input',
 		path: '/input',
 	}, {
-		label: 'FactBox',
-		path: '/factbox',
+		label: 'Fact Box',
+		path: '/fact-box',
 	}, {
 		label: 'Key Figures',
 		path: '/key-figures',
@@ -59,8 +59,8 @@ const sidebarItems = [
 		label: 'Pagination',
 		path: '/pagination',
 	}, {
-		label: 'ProfileBox',
-		path: '/profilebox',
+		label: 'Profile Box',
+		path: '/profile-box',
 	}, {
 		label: 'Checkbox',
 		path: '/checkbox',
@@ -75,7 +75,7 @@ const sidebarItems = [
 		path: '/reference',
 	}, {
 		label: 'SearchBox',
-		path: '/searchbox',
+		path: '/search-box',
 	}, {
 		label: 'Tabs',
 		path: '/tabs',
@@ -109,12 +109,14 @@ const Components = withRouter(({ history, match }) => {
 					onSelect={navigate}
 				/>
 			</aside>
-			<section>
+			<section className="container-fluid">
 				<Switch>
 					<Route exact path={match.url}>
-						<Title size={2} className="col-lg-12">Komponenter</Title>
-						<div className="col-lg-12">
-							<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
+						<div className="row">
+							<Title size={2} className="col-lg-12">Komponenter</Title>
+							<div className="col-lg-12">
+								<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
+							</div>
 						</div>
 					</Route>
 					<Route path={`${match.url}/accordion`} component={AccordionInfo} />
@@ -124,16 +126,16 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/dialog`} component={DialogInfo} />
 					<Route path={`${match.url}/divider`} component={DividerInfo} />
 					<Route path={`${match.url}/input`} component={InputInfo} />
-					<Route path={`${match.url}/factbox`} component={FactBoxInfo} />
+					<Route path={`${match.url}/fact-box`} component={FactBoxInfo} />
 					<Route path={`${match.url}/key-figures`} component={KeyFiguresInfo} />
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
-					<Route path={`${match.url}/profilebox`} component={ProfileBoxInfo} />
+					<Route path={`${match.url}/-`} component={ProfileBoxInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
-          <Route path={`${match.url}/reference`} component={ReferenceInfo} />
-          <Route path={`${match.url}/searchbox`} component={SearchBoxInfo} />
+					<Route path={`${match.url}/reference`} component={ReferenceInfo} />
+					<Route path={`${match.url}/search-box`} component={SearchBoxInfo} />
 					<Route path={`${match.url}/tabs`} component={TabsInfo} />
 					<Route path={`${match.url}/typography`} component={TypographyInfo} />
 					<Route path={`${match.url}/word-explanation`} component={WordExplanationInfo} />

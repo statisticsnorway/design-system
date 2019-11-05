@@ -1,11 +1,12 @@
 .components {
   display: grid;
   flex-grow: 1;
-  grid-template-columns: minmax(200px, 10%) 1fr;
+  grid-template-columns: 200px calc(100% - 200px);
   height: 100%;
 
   > aside {
-    padding-top: 60px;
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 
   > section {

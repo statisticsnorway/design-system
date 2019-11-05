@@ -5,14 +5,11 @@ import { Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statistic
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
-	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
 	},
 ];
 
@@ -103,7 +100,7 @@ const LinksInfo = () => {
 							<div className="col-lg-6">
 								<Link href=" ">Link text</Link>
 							</div>
-							<div className="col-lg-6">
+							<div className="col-lg-6 dark-background">
 								<Link href=" " negative>Link text</Link>
 							</div>
 						</div>
@@ -111,6 +108,8 @@ const LinksInfo = () => {
 							<CodeSnippet code={ordinaryLink} language="jsx" />
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Lenker med ikon</Title>
@@ -124,7 +123,7 @@ const LinksInfo = () => {
 							<div className="col-lg-6">
 								<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
-							<div className="col-lg-6">
+							<div className="col-lg-6 dark-background">
 								<Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
 						</div>
@@ -132,6 +131,8 @@ const LinksInfo = () => {
 							<CodeSnippet code={iconLinks} language="jsx" />
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Profilerte lenker med og uten ikon</Title>
@@ -143,10 +144,10 @@ const LinksInfo = () => {
 						<div className="col-lg-6 row">
 							<div className="col-lg-6">
 								<Link href=" " linkType="profiled">Link text</Link><br />
-								<Link negative href=" " linkType="profiled">Link text</Link>
+								<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
-							<div className="col-lg-6">
-								<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link><br />
+							<div className="col-lg-6 dark-background">
+								<Link negative href=" " linkType="profiled">Link text</Link><br />
 								<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
 						</div>
@@ -154,9 +155,11 @@ const LinksInfo = () => {
 							<CodeSnippet code={profiledLinks} language="jsx" />
 						</div>
 					</div>
-					<Divider />
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
+
+					<Divider light className="mb-3" />
+
+					<div>
+						<Title size={3} className="mb-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>

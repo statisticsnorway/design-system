@@ -5,62 +5,75 @@ import { ChevronDown } from 'react-feather';
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
+	}
+];
+
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
 	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
+		title: 'Html',
+		path: '/html',
 	},
 ];
 
-const codeExamplePrimary = `
-// React
+const codeExample1 = `
 <Button primary>Primary</Button>
 <Button primary disabled>Primary</Button>
+`;
 
-// HTML
+const codeExample1Html = `
 <button class="ssb-button primary-btn">Click me</button>
 <button class="ssb-button primary-btn" disabled="true">Click me</button>
 `;
 
-const codeExampleSecondary = `
-// React
+const codeExample2 = `
 <Button>Secondary</Button>
 <Button disabled>Secondary</Button>
+`;
 
-// HTML
+const codeExample2Html = `
 <button class="ssb-button">Click me</button>
 <button class="ssb-button" disabled="true">Click me</button>
 `;
 
-const codeExampleIcon = `
-// React
+const codeExample3 = `
 <Button primary><ChevronDown size="18" />&nbsp;Primary</Button>
 <Button><ChevronDown size="18" />&nbsp;Secondary</Button>
+`;
 
-// HTML
+const codeExample3Html = `
 <button class="ssb-button primary-btn">{insert icon}&nbsp;Click me</button>
 <button class="ssb-button">{insert icon}&nbsp;Click me</button>
 `;
 
-const codeExampleDisabled = `
-// React
+const codeExample4 = `
 <Button primary disabled>Primary</Button>
 <Button disabled>Secondary</Button>
+`;
 
-// HTML
+const codeExample4Html = `
 <button class="ssb-button primary-btn" disabled="true">Click me</button>
 <button class="ssb-button" disabled="true">Click me</button>
 `;
 
 const ButtonInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const [activeCodeTab1, changeCodeTab1] = useState(tabCode[0].path);
+	const [activeCodeTab2, changeCodeTab2] = useState(tabCode[0].path);
+	const [activeCodeTab3, changeCodeTab3] = useState(tabCode[0].path);
+	const [activeCodeTab4, changeCodeTab4] = useState(tabCode[0].path);
+	const tabCode1Clicked = e => changeCodeTab1(e);
+	const tabCode2Clicked = e => changeCodeTab2(e);
+	const tabCode3Clicked = e => changeCodeTab3(e);
+	const tabCode4Clicked = e => changeCodeTab4(e);
 
 	return (
 		<div className="col-lg-12">
@@ -70,7 +83,7 @@ const ButtonInfo = () => {
 				Knappeteksten skal være så kort som mulig, og ikke gå over to linjer.
 			</LeadParagraph>
 
-			<ul className="mb-3 col-lg-8">
+			<ul className="mb-3 ml-2 col-lg-8">
 				<li>
 					Primær- og sekundærknapper skal ikke brukes for navigasjon ut til eksterne sider. Bruk da i stedet <Link href="#/components/links">lenker</Link>.
 				</li>
@@ -96,9 +109,18 @@ const ButtonInfo = () => {
 							<Button primary disabled>Primary</Button>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={codeExamplePrimary} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
+							<Divider light />
+							{activeCodeTab1 === '/react' && (
+								<CodeSnippet code={codeExample1} language="jsx" />
+							)}
+							{activeCodeTab1 === '/html' && (
+								<CodeSnippet code={codeExample1Html} language="html" />
+							)}
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Sekundærknapp</Title>
@@ -113,9 +135,18 @@ const ButtonInfo = () => {
 							<Button disabled>Secondary</Button>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={codeExampleSecondary} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
+							<Divider light />
+							{activeCodeTab2 === '/react' && (
+								<CodeSnippet code={codeExample2} language="jsx" />
+							)}
+							{activeCodeTab2 === '/html' && (
+								<CodeSnippet code={codeExample2Html} language="html" />
+							)}
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Knapp med ikon</Title>
@@ -129,9 +160,18 @@ const ButtonInfo = () => {
 							<Button><ChevronDown size="18" />&nbsp;Secondary</Button>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={codeExampleIcon} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
+							<Divider light />
+							{activeCodeTab3 === '/react' && (
+								<CodeSnippet code={codeExample3} language="jsx" />
+							)}
+							{activeCodeTab3 === '/html' && (
+								<CodeSnippet code={codeExample3Html} language="html" />
+							)}
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Ikke-aktiv knapp</Title>
@@ -146,54 +186,58 @@ const ButtonInfo = () => {
 							<Button disabled>Secondary</Button>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={codeExampleDisabled} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode4Clicked} />
+							<Divider light />
+							{activeCodeTab4 === '/react' && (
+								<CodeSnippet code={codeExample4} language="jsx" />
+							)}
+							{activeCodeTab4 === '/html' && (
+								<CodeSnippet code={codeExample4Html} language="html" />
+							)}
 						</div>
 					</div>
 
-					<Divider />
-
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>children</code></td>
-									<td>Required node</td>
-									<td>Button text or/and icon</td>
-								</tr>
-								<tr>
-									<td><code>disabled</code></td>
-									<td>bool</td>
-									<td>Decides if the button is disabled</td>
-								</tr>
-								<tr>
-									<td><code>onClick</code></td>
-									<td>function</td>
-									<td>Callback for button click</td>
-								</tr>
-								<tr>
-									<td><code>primary</code></td>
-									<td>bool</td>
-									<td>Changes style to represent a primary button</td>
-								</tr>
-								<tr>
-									<td><code>type</code></td>
-									<td>string</td>
-									<td>
-										Button type. Can be &apos;submit&apos;, &apos;reset&apos;, or &apos;button&apos;.
-										Defaults to &apos;button&apos;.
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					<Divider className="mb-3" />
+					<Title size={3} className="mt-3 mb-3">Props</Title>
+					<table className="col-lg-12">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><h5>Prop name</h5></th>
+								<th><h5>Type</h5></th>
+								<th><h5>Description</h5></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>children</code></td>
+								<td>Required node</td>
+								<td>Button text or/and icon</td>
+							</tr>
+							<tr>
+								<td><code>disabled</code></td>
+								<td>bool</td>
+								<td>Decides if the button is disabled</td>
+							</tr>
+							<tr>
+								<td><code>onClick</code></td>
+								<td>function</td>
+								<td>Callback for button click</td>
+							</tr>
+							<tr>
+								<td><code>primary</code></td>
+								<td>bool</td>
+								<td>Changes style to represent a primary button</td>
+							</tr>
+							<tr>
+								<td><code>type</code></td>
+								<td>string</td>
+								<td>
+									Button type. Can be &apos;submit&apos;, &apos;reset&apos;, or &apos;button&apos;.
+									Defaults to &apos;button&apos;.
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
 				</div>
 			)}

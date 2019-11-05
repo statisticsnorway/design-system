@@ -16,22 +16,19 @@ const tabItems = [
 ];
 
 const codeExampleJsx = `
-Explain this <WordExplanation explanation={placeHolder}>word</WordExplanation>.
+Explain some <WordExplanation explanation={placeHolder}>word</WordExplanation>.
 `;
 
 const codeExampleHtml = `
-<div class="ssb-we-popup">
-  <div class="ssb-we-arrow">
-    <svg width="16" height="16">
-      <rect width="16" height="16" rotate="45deg" />
-    </svg>
-  </div>
-  <div class="content-box">
-    <span class="info-text">{insert explanation}</span>
-    <div class="ssb-we-closing">
-      <XCircle size="14" /><span>Lukk</span>
+<div>
+  <div class="ssb-we-popup {open or closed}">
+    <div class="content-box">
+      <span class="info-text">{insert explanation}</span>
+      <div class="ssb-we-closing">
+        <XCircle size="14" /><span>Lukk</span>
+      </div>
     </div>
-  </div>
+	</div>
 </div>
 `;
 
@@ -90,25 +87,22 @@ const WordExplanationInfo = () => {
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider />
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>React code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeExampleJsx} language="jsx" />
 								</div>
 							)}
 							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>Html code</Title>
-									<Paragraph>You will have to handle positioning in javascript to make it stick to the word you want explained.</Paragraph>
+								<div className="mt-3">
 									<CodeSnippet code={codeExampleHtml} language="html" />
 								</div>
 							)}
 						</div>
 					</div>
 
-					<Divider />
+					<Divider className="mb-3 mt-3" />
 
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
+					<div>
+						<Title size={3} className="mb-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>

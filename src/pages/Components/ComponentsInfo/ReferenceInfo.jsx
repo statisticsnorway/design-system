@@ -125,23 +125,21 @@ const ReferenceInfo = () => {
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider />
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={4}>React code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeReact} language="jsx" />
 								</div>
 							)}
 							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={4}>Html code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeHtml} language="html" />
 								</div>
 							)}
 						</div>
 					</div>
 
-					<Divider className="mt-3" />
+					<Divider light className="mt-3 mb-3" />
 
-					<div className="row col-lg-12 ">
+					<div>
 						<Title size={4} className="mt-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
@@ -166,9 +164,9 @@ const ReferenceInfo = () => {
 						</table>
 					</div>
 
-					<Divider className="mt-3" />
+					<Divider className="mt-3 mb-3" />
 
-					<div className="row col-lg-3 mt-3">
+					<div>
 						<Title size={4}>Depends on</Title>
 						<ul>
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link" isExternal>Link</Link></li>

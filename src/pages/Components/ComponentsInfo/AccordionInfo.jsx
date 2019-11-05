@@ -8,24 +8,31 @@ This is paragraph text which explains the accordion, the rest of the text is jus
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
+	},
+];
+
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
 	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
+		title: 'Html',
+		path: '/html',
 	},
 ];
 
 const codeExamplePrimary = `
-// React
 <Accordion primary header="This is a primary header">
 	{Insert content here}
 </Accordion>
+`;
 
-// HTML
+const codeExamplePrimaryHtml = `
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {22px filled plus icon}
@@ -38,12 +45,12 @@ const codeExamplePrimary = `
 `;
 
 const codeExampleSecondary = `
-// React
 <Accordion header="This is a secondary header">
 	{Insert content here}
 </Accordion>
+`;
 
-// HTML
+const codeExampleSecondaryHtml = `
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {20px unfilled plus icon}
@@ -62,8 +69,9 @@ const nestedExample = `
 		{Insert content here}
 	</NestedAccordion>
 </Accordion>
+`;
 
-// HTML
+const nestedExampleHtml = `
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {22px filled plus icon}
@@ -88,9 +96,13 @@ const nestedExample = `
 
 const AccordionInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const [activeCodeTab1, changeCodeTab1] = useState(tabCode[0].path);
+	const [activeCodeTab2, changeCodeTab2] = useState(tabCode[0].path);
+	const [activeCodeTab3, changeCodeTab3] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
+	const tabCode1Clicked = e => changeCodeTab1(e);
+	const tabCode2Clicked = e => changeCodeTab2(e);
+	const tabCode3Clicked = e => changeCodeTab3(e);
 
 	return (
 		<div className="col-lg-12">
@@ -104,6 +116,7 @@ const AccordionInfo = () => {
 				Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold.
 				Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href="https://www.nngroup.com/articles/accordions-complex-content/">her</Link>.
 			</Paragraph>
+
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider />
 			{activeTab === '/overview' && (
@@ -118,12 +131,23 @@ const AccordionInfo = () => {
 						<div className="col-lg-6">
 							<Accordion primary header="This is a primary header">{accordionFillerText}</Accordion>
 						</div>
+
 						<div className="col-lg-12 mt-3">
-							<CodeSnippet code={codeExamplePrimary} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
+							<Divider light />
+							{activeCodeTab1 === '/react' && (
+								<CodeSnippet code={codeExamplePrimary} language="jsx" />
+							)}
+							{activeCodeTab1 === '/html' && (
+								<CodeSnippet code={codeExamplePrimaryHtml} language="html" />
+							)}
 						</div>
+
 					</div>
-					<Divider light className="mb-4" />
-					<div className="row">
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Sekundær Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -134,11 +158,20 @@ const AccordionInfo = () => {
 							<Accordion header="This is a secondary header">{accordionFillerText}</Accordion>
 						</div>
 						<div className="col-lg-12 mt-3">
-							<CodeSnippet code={codeExampleSecondary} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
+							<Divider light />
+							{activeCodeTab2 === '/react' && (
+								<CodeSnippet code={codeExampleSecondary} language="jsx" />
+							)}
+							{activeCodeTab2 === '/html' && (
+								<CodeSnippet code={codeExampleSecondaryHtml} language="html" />
+							)}
 						</div>
 					</div>
-					<Divider light className="mb-4" />
-					<div className="row">
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Innflettet Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -155,55 +188,67 @@ const AccordionInfo = () => {
 							</Accordion>
 						</div>
 						<div className="col-lg-12 mt-3">
-							<CodeSnippet code={nestedExample} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
+							<Divider light />
+							{activeCodeTab3 === '/react' && (
+								<CodeSnippet code={nestedExample} language="jsx" />
+							)}
+							{activeCodeTab3 === '/html' && (
+								<CodeSnippet code={nestedExampleHtml} language="html" />
+							)}
 						</div>
 					</div>
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3">Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>children</code></td>
-									<td>node</td>
-									<td>Accordion content</td>
-								</tr>
-								<tr>
-									<td><code>header</code></td>
-									<td>string</td>
-									<td>Header text</td>
-								</tr>
-								<tr>
-									<td><code>openByDefault</code></td>
-									<td>bool</td>
-									<td>Will set the open state on init</td>
-								</tr>
-								<tr>
-									<td><code>primary</code></td>
-									<td>bool</td>
-									<td>Changes type and design of accordion</td>
-								</tr>
-								<tr>
-									<td><code>subHeader</code></td>
-									<td>string</td>
-									<td>Renders the header with the sub header design</td>
-								</tr>
-							</tbody>
-						</table>
 
-						<Divider className="mt-3" />
+					<Divider light className="mb-3" />
 
-						<div className="col-lg-3 mt-3">
-							<Text>Depends on</Text>
-							<ul>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
-							</ul>
+					<div className="row mb-3">
+						<div className="col-lg-12">
+							<Title size={3} className="mt-3">Props</Title>
+							<table className="col-lg-12">
+								<thead style={{ textAlign: 'left' }}>
+									<tr>
+										<th><h5>Prop name</h5></th>
+										<th><h5>Type</h5></th>
+										<th><h5>Description</h5></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>children</code></td>
+										<td>node</td>
+										<td>Accordion content</td>
+									</tr>
+									<tr>
+										<td><code>header</code></td>
+										<td>string</td>
+										<td>Header text</td>
+									</tr>
+									<tr>
+										<td><code>openByDefault</code></td>
+										<td>bool</td>
+										<td>Will set the open state on init</td>
+									</tr>
+									<tr>
+										<td><code>primary</code></td>
+										<td>bool</td>
+										<td>Changes type and design of accordion</td>
+									</tr>
+									<tr>
+										<td><code>subHeader</code></td>
+										<td>string</td>
+										<td>Renders the header with the sub header design</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<Divider className="mt-3" />
+
+							<div className="mt-3">
+								<Text>Depends on</Text>
+								<ul>
+									<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

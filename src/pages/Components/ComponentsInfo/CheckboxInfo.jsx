@@ -17,14 +17,11 @@ When an option is checked by the user, the box will be filled and a check-icon w
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
-	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
 	},
 ];
 
@@ -56,7 +53,7 @@ const CheckboxInfo = () => {
 
 			{activeTab === '/overview' && (
 				<div className="mt-3">
-					<div className="row mt-3">
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">CheckboxGroup</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextCheckbox}</p>
@@ -76,8 +73,10 @@ const CheckboxInfo = () => {
 						</div>
 					</div>
 
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3">Props</Title>
+					<Divider light className="mb-3" />
+
+					<div>
+						<Title size={3}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>

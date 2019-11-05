@@ -89,7 +89,7 @@ const DropdownInfo = () => {
 
 			{activeTab === '/overview' && (
 				<div className="mt-3">
-					<div className="row mt-3">
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Dropdown</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
@@ -102,9 +102,9 @@ const DropdownInfo = () => {
 						</div>
 					</div>
 
-					<Divider />
+					<Divider light className="mb-3" />
 
-					<div className="row mt-3">
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Dropdown Pre-selected Value</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextPreSelectedValue}</Paragraph>
@@ -117,9 +117,9 @@ const DropdownInfo = () => {
 						</div>
 					</div>
 
-					<Divider />
+					<Divider light className="mb-3" />
 
-					<div className="row mt-3">
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Dropdown searchable</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextSearchable}</Paragraph>
@@ -132,10 +132,10 @@ const DropdownInfo = () => {
 						</div>
 					</div>
 
-					<Divider />
+					<Divider className="mb-3" />
 
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
+					<div>
+						<Title size={3}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>

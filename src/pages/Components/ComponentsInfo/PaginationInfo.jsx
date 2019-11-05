@@ -37,7 +37,7 @@ const PaginationInfo = () => (
 			There are also two buttons allowing user to select previous and next page instead of clicking on the numbers.
 		</LeadParagraph>
 
-		<ul className="mb-3 col-lg-8">
+		<ul className="mb-3 ml-2 col-lg-8">
 			<li>
 				Do not use pagination if you don’t want the user to pause for navigating, as this will hide content available.
 			</li>
@@ -66,10 +66,10 @@ const PaginationInfo = () => (
 			</div>
 		</div>
 
-		<Divider />
+		<Divider light className="mb-3 mt-3" />
 
-		<div className="row">
-			<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
+		<div>
+			<Title size={3}>Props</Title>
 			<table className="col-lg-12">
 				<thead style={{ textAlign: 'left' }}>
 					<tr>

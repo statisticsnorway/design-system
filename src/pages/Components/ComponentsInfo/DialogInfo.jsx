@@ -99,7 +99,7 @@ const DialogInfo = () => {
 
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
-					<div className="row mt-3">
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Error warning</Title>
 						<div className="col-lg-6">
 							<p>{errorWarningText}</p>
@@ -110,13 +110,12 @@ const DialogInfo = () => {
 							</Dialog>
 						</div>
 						<div className="col-lg-12">
-							<div className="col-lg-12 mt-3">
-								<Divider light className="mt-3" />
+							<div className="mt-3">
 								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 								<Divider />
 							</div>
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
+								<div className="mt-3">
 									<Title size={3}>React code</Title>
 									<CodeSnippet code={codeWarningReact} language="jsx" />
 								</div>
@@ -130,7 +129,9 @@ const DialogInfo = () => {
 						</div>
 					</div>
 
-					<div className="row mt-3">
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Information warning</Title>
 						<div className="col-lg-6">
 							<p>{infoWarningText}</p>
@@ -141,11 +142,10 @@ const DialogInfo = () => {
 							</Dialog>
 						</div>
 						<div className="col-lg-12">
-							<Divider light className="mt-3" />
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider />
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
+								<div className="mt-3">
 									<Title size={3}>React code</Title>
 									<CodeSnippet code={codeInfoReact} language="jsx" />
 								</div>
@@ -159,8 +159,10 @@ const DialogInfo = () => {
 						</div>
 					</div>
 
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3">Props</Title>
+					<Divider light className="mb-3" />
+
+					<div>
+						<Title size={3}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
@@ -190,7 +192,7 @@ const DialogInfo = () => {
 
 						<Divider className="mt-3" />
 
-						<div className="col-lg-3 mt-3">
+						<div className="mt-3">
 							<Text>Depends on</Text>
 							<ul>
 								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Paragraph" isExternal>Paragraph</Link></li>

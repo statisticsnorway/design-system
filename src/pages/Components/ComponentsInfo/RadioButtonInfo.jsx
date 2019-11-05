@@ -85,7 +85,7 @@ const RadioButtonInfo = () => {
 
 			{activeTab === '/overview' && (
 				<div className="mt-3">
-					<div className="row mt-3">
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">RadioGroup</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextRadiobutton}</p>
@@ -101,26 +101,25 @@ const RadioButtonInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12">
-							<Divider light className="mt-3" />
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider />
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>React code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeReact} language="jsx" />
 								</div>
 							)}
 							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>Html code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeHtml} language="html" />
 								</div>
 							)}
 						</div>
 					</div>
 
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3">Props</Title>
+					<Divider light className="mb-3" />
+
+					<div>
+						<Title size={3}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>

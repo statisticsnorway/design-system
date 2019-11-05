@@ -47,16 +47,16 @@ const codeReact = `
 
 const codeHtml = `
 <div class="ssb-fact-box">
-    <div class="ssb-accordion">
-        <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
-            {plus icon}
-            <div class="ssb-title header-text no-margin">
-                <h5>Title</h5></div>
-        </div>
-        <div class="accordion-body closed">
-            {insert content}
-        </div>
-    </div>
+	<div class="ssb-accordion">
+		<div class="accordion-header closed" onclick="{toggle classname to 'open'}">
+			{plus icon}
+			<div class="ssb-title header-text no-margin">
+				<h5>Title</h5></div>
+		</div>
+		<div class="accordion-body closed">
+			{insert content}
+		</div>
+	</div>
 </div>
 `;
 
@@ -81,7 +81,7 @@ const FactBoxInfo = () => {
 
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
-					<div className="row mt-3">
+					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Faktabokser</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextFactbox}</p>
@@ -90,11 +90,10 @@ const FactBoxInfo = () => {
 							<FactBox header="This is a header" text="This is paragraph text which explains the accordion" />
 						</div>
 						<div className="col-lg-12">
-							<Divider light className="mt-3" />
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider />
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
+								<div className="mt-3">
 									<Title size={3}>React code</Title>
 									<CodeSnippet code={codeReact} language="jsx" />
 								</div>
@@ -108,7 +107,7 @@ const FactBoxInfo = () => {
 						</div>
 					</div>
 
-					<Divider className="mt-3" />
+					<Divider light className="mb-3" />
 
 					<div className="row col-lg-12 ">
 						<Title size={3} className="mt-3">Props</Title>
@@ -142,7 +141,7 @@ const FactBoxInfo = () => {
 
 					<Divider className="mt-3" />
 
-					<div className="row col-lg-3 mt-3">
+					<div className="mt-3">
 						<Text>Depends on</Text>
 						<ul>
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Accordion" isExternal>Accordion</Link></li>

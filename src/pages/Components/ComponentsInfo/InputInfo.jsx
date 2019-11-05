@@ -4,10 +4,10 @@ import { Divider, Input, LeadParagraph, Link, Paragraph, Tabs, Text, Title } fro
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
 	},
 ];
@@ -43,13 +43,15 @@ const InputInfo = () => {
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-7">
-								<Input />
+								<Input label="Label" />
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={'<Input value={someValue} handleChange={handleChange} />'} language="jsx" />
+							<CodeSnippet code={'<Input label="Label" value={someValue} handleChange={handleChange} />'} language="jsx" />
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Input error</Title>
@@ -63,13 +65,15 @@ const InputInfo = () => {
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-7">
-								<Input error errorMessage="Her gikk det galt" />
+								<Input label="Label" error errorMessage="Her gikk det galt" />
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={'<Input error errorMessage="Her gikk det galt" />'} language="jsx" />
+							<CodeSnippet code={'<Input error errorMessage="Her gikk det galt" label="Label" />'} language="jsx" />
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
 						<Title size={3} className="col-lg-12">Search</Title>
@@ -81,18 +85,18 @@ const InputInfo = () => {
 						</div>
 						<div className="col-lg-6 row">
 							<div className="col-lg-7">
-								<Input searchField />
+								<Input searchField label="Label" />
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={'<Input searchField submitCallback={handleSubmit} />'} language="jsx" />
+							<CodeSnippet code={'<Input searchField submitCallback={handleSubmit} label="Label" />'} language="jsx" />
 						</div>
 					</div>
 
-					<Divider />
+					<Divider light className="mb-3" />
 
-					<div className="row">
-						<Title size={3} className="col-lg-12 mt-3 mb-3">Props</Title>
+					<div>
+						<Title size={3}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
@@ -160,12 +164,12 @@ const InputInfo = () => {
 							</tbody>
 						</table>
 
-						<Divider className="mt-3" />
+						<Divider className="mt-3 mb-3" />
 
-						<div className="col-lg-3 mt-3">
+						<div>
 							<Text>Depends on</Text>
 							<ul>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/FormError" isExternal>Form error</Link></li>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/InputError" isExternal>Form error</Link></li>
 							</ul>
 						</div>
 					</div>

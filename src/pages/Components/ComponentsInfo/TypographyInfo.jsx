@@ -5,7 +5,7 @@ import { Divider, LeadParagraph, Paragraph, Tabs, Text, Title } from '@statistic
 const leadParagraphText = `
 Typografien er en kjernekomponent i designsystemet, ettersom den bidrar til stil og tone på nettstedet og bidrar til å bygge profil. 
 SSB sitt designsystem bruker skrifttypene Roboto, Roboto condensed og Opens Sans. 
-Disse skrifttypene har en lett avrundet form, og gir et åpent og vennlig uttrykk.Roboto brukes for å skille ut interaksjonselementer fra vanlig tekst.
+Disse skrifttypene har en lett avrundet form, og gir et åpent og vennlig uttrykk. Roboto brukes for å skille ut interaksjonselementer fra vanlig tekst.
 `;
 
 const overviewTextHeadings = `
@@ -117,25 +117,20 @@ const TypographyInfo = () => {
 							<Title size={5}>Title h5</Title>
 							<Title size={6}>Title h6</Title>
 						</div>
-						<div className="col-lg-12">
-							<div className="col-lg-12 mt-3">
-								<Divider light className="mt-3" />
-								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-								<Divider />
-							</div>
-							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={4}>React code</Title>
-									<CodeSnippet code={codeHeadingReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={4}>Html code</Title>
-									<CodeSnippet code={codeHeadingHtml} language="html" />
-								</div>
-							)}
+						<div className="col-lg-12 mt-3">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider />
 						</div>
+						{activeCodeTab === '/react' && (
+							<div className="col-lg-12 mt-3">
+								<CodeSnippet code={codeHeadingReact} language="jsx" />
+							</div>
+						)}
+						{activeCodeTab === '/html' && (
+							<div className="col-lg-12 mt-3">
+								<CodeSnippet code={codeHeadingHtml} language="html" />
+							</div>
+						)}
 						<div className="col-lg-12">
 							<Title size={4} className="col-lg-12 mt-3">Props</Title>
 							<table className="col-lg-12">
@@ -172,10 +167,9 @@ const TypographyInfo = () => {
 						</div>
 					</div>
 
-					<Divider className="mt-3" />
+					<Divider className="mt-3 mb-3" />
 
-
-					<div className="row mt-3">
+					<div className="row">
 						<Title size={3} className="col-lg-12">Vanlig tekst</Title>
 						<div className="col-lg-6">
 							<p>{overviewRegularText}</p>
@@ -185,26 +179,25 @@ const TypographyInfo = () => {
 							<Text small>This is small Text</Text>
 						</div>
 						<div className="col-lg-12">
-							<div className="col-lg-12 mt-3">
-								<Divider light className="mt-3" />
+							<div className="mt-3">
 								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 								<Divider />
 							</div>
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={4}>React code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeTextReact} language="jsx" />
 								</div>
 							)}
 							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={4}>Html code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeTextHtml} language="html" />
 								</div>
 							)}
 						</div>
-						<div className="col-lg-12">
-							<Title size={4} className="col-lg-12 mt-3">Props</Title>
+
+						<Divider light className="mt-3 mb-3" />
+						<div className="col-lg-12 mb-3">
+							<Title size={4}>Props</Title>
 							<table className="col-lg-12">
 								<thead style={{ textAlign: 'left' }}>
 									<tr>
@@ -240,29 +233,28 @@ const TypographyInfo = () => {
 						<Title size={3} className="col-lg-12">Paragraf</Title>
 						<div className="col-lg-6">
 							<Paragraph>This is paragraph</Paragraph>
-							<LeadParagraph>This is Leadparagraph</LeadParagraph>
+							<LeadParagraph>This is a lead paragraph</LeadParagraph>
 						</div>
 						<div className="col-lg-12">
-							<div className="col-lg-12 mt-3">
-								<Divider light className="mt-3" />
+							<div className="mt-3">
 								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 								<Divider />
 							</div>
 							{activeCodeTab === '/react' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={4}>React code</Title>
+								<div className="mt-3">
 									<CodeSnippet code={codeParagraphReact} language="jsx" />
 								</div>
 							)}
 							{activeCodeTab === '/html' && (
 								<div className="col-lg-12 mt-3">
-									<Title size={4}>Html code</Title>
 									<CodeSnippet code={codeParagraphHtml} language="html" />
 								</div>
 							)}
 						</div>
+
+						<Divider light className="mt-3 mb-3" />
 						<div className="col-lg-12">
-							<Title size={4} className="col-lg-12 mt-3">Props</Title>
+							<Title size={4}>Props</Title>
 							<table className="col-lg-12">
 								<thead style={{ textAlign: 'left' }}>
 									<tr>

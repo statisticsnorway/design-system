@@ -131,7 +131,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/links`} component={LinksInfo} />
 					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
-					<Route path={`${match.url}/-`} component={ProfileBoxInfo} />
+					<Route path={`${match.url}/profile-box`} component={ProfileBoxInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 					<Route path={`${match.url}/reference`} component={ReferenceInfo} />

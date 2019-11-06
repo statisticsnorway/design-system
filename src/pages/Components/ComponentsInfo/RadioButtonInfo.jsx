@@ -99,12 +99,8 @@ const RadioButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeReact} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
 

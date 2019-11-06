@@ -95,12 +95,8 @@ const ProfileBoxInfo = () => {
 						<div className="col-lg-12 mb-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeReact} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
 

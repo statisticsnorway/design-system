@@ -111,12 +111,8 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
 							<Divider light />
-							{activeCodeTab1 === '/react' && (
-								<CodeSnippet code={codeExample1} language="jsx" />
-							)}
-							{activeCodeTab1 === '/html' && (
-								<CodeSnippet code={codeExample1Html} language="html" />
-							)}
+							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExample1} language="jsx" />}
+							{activeCodeTab1 === '/html' && <CodeSnippet code={codeExample1Html} language="html" />}
 						</div>
 					</div>
 
@@ -137,12 +133,8 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
 							<Divider light />
-							{activeCodeTab2 === '/react' && (
-								<CodeSnippet code={codeExample2} language="jsx" />
-							)}
-							{activeCodeTab2 === '/html' && (
-								<CodeSnippet code={codeExample2Html} language="html" />
-							)}
+							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExample2} language="jsx" />}
+							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExample2Html} language="html" />}
 						</div>
 					</div>
 
@@ -162,12 +154,8 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
 							<Divider light />
-							{activeCodeTab3 === '/react' && (
-								<CodeSnippet code={codeExample3} language="jsx" />
-							)}
-							{activeCodeTab3 === '/html' && (
-								<CodeSnippet code={codeExample3Html} language="html" />
-							)}
+							{activeCodeTab3 === '/react' && <CodeSnippet code={codeExample3} language="jsx" />}
+							{activeCodeTab3 === '/html' && <CodeSnippet code={codeExample3Html} language="html" />}
 						</div>
 					</div>
 
@@ -188,12 +176,8 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode4Clicked} />
 							<Divider light />
-							{activeCodeTab4 === '/react' && (
-								<CodeSnippet code={codeExample4} language="jsx" />
-							)}
-							{activeCodeTab4 === '/html' && (
-								<CodeSnippet code={codeExample4Html} language="html" />
-							)}
+							{activeCodeTab4 === '/react' && <CodeSnippet code={codeExample4} language="jsx" />}
+							{activeCodeTab4 === '/html' && <CodeSnippet code={codeExample4Html} language="html" />}
 						</div>
 					</div>
 

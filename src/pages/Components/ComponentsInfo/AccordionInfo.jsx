@@ -135,12 +135,8 @@ const AccordionInfo = () => {
 						<div className="col-lg-12 mt-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
 							<Divider light />
-							{activeCodeTab1 === '/react' && (
-								<CodeSnippet code={codeExamplePrimary} language="jsx" />
-							)}
-							{activeCodeTab1 === '/html' && (
-								<CodeSnippet code={codeExamplePrimaryHtml} language="html" />
-							)}
+							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExamplePrimary} language="jsx" />}
+							{activeCodeTab1 === '/html' && <CodeSnippet code={codeExamplePrimaryHtml} language="html" />}
 						</div>
 
 					</div>
@@ -160,12 +156,8 @@ const AccordionInfo = () => {
 						<div className="col-lg-12 mt-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
 							<Divider light />
-							{activeCodeTab2 === '/react' && (
-								<CodeSnippet code={codeExampleSecondary} language="jsx" />
-							)}
-							{activeCodeTab2 === '/html' && (
-								<CodeSnippet code={codeExampleSecondaryHtml} language="html" />
-							)}
+							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExampleSecondary} language="jsx" />}
+							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExampleSecondaryHtml} language="html" />}
 						</div>
 					</div>
 
@@ -190,12 +182,8 @@ const AccordionInfo = () => {
 						<div className="col-lg-12 mt-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
 							<Divider light />
-							{activeCodeTab3 === '/react' && (
-								<CodeSnippet code={nestedExample} language="jsx" />
-							)}
-							{activeCodeTab3 === '/html' && (
-								<CodeSnippet code={nestedExampleHtml} language="html" />
-							)}
+							{activeCodeTab3 === '/react' && <CodeSnippet code={nestedExample} language="jsx" />}
+							{activeCodeTab3 === '/html' && <CodeSnippet code={nestedExampleHtml} language="html" />}
 						</div>
 					</div>
 

@@ -85,12 +85,8 @@ const WordExplanationInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeExampleJsx} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeExampleHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleJsx} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 

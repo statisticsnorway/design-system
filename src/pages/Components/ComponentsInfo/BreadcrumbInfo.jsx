@@ -64,7 +64,6 @@ const BreadcrumbInfo = () => {
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabCodeClicked = e => changeCodeTab(e);
 
-
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Breadcrumb</Title>
@@ -91,12 +90,8 @@ const BreadcrumbInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeExample} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeExampleHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 

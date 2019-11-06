@@ -84,16 +84,8 @@ const SearchBoxInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeHtml} language="html" />
-								</div>
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
 

@@ -94,19 +94,10 @@ const TabsInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12">
-							<Divider light className="mt-3" />
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeHtml} language="html" />
-								</div>
-							)}
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
 

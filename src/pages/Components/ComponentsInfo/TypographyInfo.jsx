@@ -39,7 +39,7 @@ const tabCode = [
 	},
 ];
 
-const codeHeadingReact = `
+const codeExample = `
 <Title size="1">Title h1</Title>
 <Title size="2">Title h2</Title>
 <Title size="3">Title h3</Title>
@@ -48,7 +48,7 @@ const codeHeadingReact = `
 <Title size="6">Title h6</Title>
 `;
 
-const codeHeadingHtml = `
+const codeExampleHtml = `
 <h1 class="ssb-title">Title h1</h1>
 <h2 class="ssb-title">Title h2</h2>
 <h3 class="ssb-title">Title h3</h3>
@@ -86,12 +86,8 @@ const codeParagraphHtml = `
 const TypographyInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -120,12 +116,8 @@ const TypographyInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeHeadingReact} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeHeadingHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 
 						<Divider light className="col-lg-12 mt-3 mb-3" />
@@ -182,12 +174,8 @@ const TypographyInfo = () => {
 								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 								<Divider light />
 							</div>
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeTextReact} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeTextHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeTextReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeTextHtml} language="html" />}
 						</div>
 
 						<div className="col-lg-12 mb-3">

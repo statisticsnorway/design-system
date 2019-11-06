@@ -13,68 +13,81 @@ const tabItems = [
 	},
 ];
 
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
 const ordinaryLink = `
-// React
 <Link href="">Link text</Link>
 <Link negative href="">Link text</Link>
+`;
 
-// HTML
+const ordinaryLinkHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 `;
 
 const iconLinks = `
-// React
 <Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 <Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+`;
 
-// HTML
+const iconLinksHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 `;
 
 const profiledLinks = `
-// React
 <Link href=" " linkType="profiled">Link text</Link>
 <Link negative href=" " linkType="profiled">Link text</Link>
 <Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 <Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+`;
 
-// HTML
+const profiledLinksHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 `;
 
 const LinksInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
+
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Link</Title>
@@ -103,7 +116,10 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={ordinaryLink} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={ordinaryLink} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={ordinaryLinkHtml} language="html" />}
 						</div>
 					</div>
 
@@ -126,7 +142,10 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={iconLinks} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={iconLinks} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={iconLinksHtml} language="html" />}
 						</div>
 					</div>
 
@@ -150,7 +169,10 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={profiledLinks} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={profiledLinks} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={profiledLinksHtml} language="html" />}
 						</div>
 					</div>
 

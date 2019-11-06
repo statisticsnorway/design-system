@@ -3,8 +3,15 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const codeExample = `
+// React
 <Divider dark />
 <Divider light />
+`;
+
+const codeExampleHtml = `
+<!-- HTML -->
+<hr class="ssb-divider type-dark" />
+<hr class="ssb-divider type-light" />
 `;
 
 const DividerInfo = () => (
@@ -32,6 +39,7 @@ const DividerInfo = () => (
 				</div>
 				<div className="col-lg-6">
 					<CodeSnippet code={codeExample} language="jsx" />
+					<CodeSnippet code={codeExampleHtml} language="html" />
 				</div>
 			</div>
 		</div>

@@ -12,11 +12,62 @@ const tabItems = [
 	},
 ];
 
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
+const codeExample = `
+<Input
+  id="input1"
+  label="Label"
+  value={someValue}
+  handleChange={handleChange}
+/>
+`;
+
+const codeExampleHtml = `
+<div class="ssb-input">
+  <label for="input1">Label</label>
+  <div class="input-wrapper">
+    <input id="input1" value="value1" />
+  </div>
+</div>
+`;
+
+const codeExampleError = `
+<Input
+  id="input1"
+  error
+  errorMessage="Dette er feil"
+  label="Label"
+/>
+`;
+
+const codeExampleErrorHtml = `
+<div class="ssb-input error">
+  <label for="input1">Label</label>
+  <div class="input-wrapper">
+    <input id="input1" value="option1" />
+    <div class="icon-wrapper">
+      <icon>alert</icon>
+    </div>
+  </div>
+  <span class="ssb-form-error">Dette er feil</span>
+</div>
+`;
+
 const InputInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
+
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Input</Title>
@@ -47,7 +98,10 @@ const InputInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={'<Input label="Label" value={someValue} handleChange={handleChange} />'} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 
@@ -69,27 +123,10 @@ const InputInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={'<Input error errorMessage="Her gikk det galt" label="Label" />'} language="jsx" />
-						</div>
-					</div>
-
-					<Divider light className="mb-3" />
-
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Search</Title>
-						<div className="col-lg-6">
-							<Paragraph>
-								Search form are an input element that combines an input form and a clickable search icon to allow
-								the user to search for specific word or phrases by inputting the data into the search form.
-							</Paragraph>
-						</div>
-						<div className="col-lg-6 row">
-							<div className="col-lg-7">
-								<Input searchField label="Label" />
-							</div>
-						</div>
-						<div className="col-lg-12">
-							<CodeSnippet code={'<Input searchField submitCallback={handleSubmit} label="Label" />'} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleError} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleErrorHtml} language="html" />}
 						</div>
 					</div>
 

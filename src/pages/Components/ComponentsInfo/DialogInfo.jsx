@@ -114,16 +114,8 @@ const DialogInfo = () => {
 								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 								<Divider light />
 							</div>
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeWarningReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<CodeSnippet code={codeWarningHtml} language="html" />
-								</div>
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeWarningReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeWarningHtml} language="html" />}
 						</div>
 					</div>
 
@@ -142,16 +134,8 @@ const DialogInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeInfoReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<CodeSnippet code={codeInfoHtml} language="html" />
-								</div>
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeInfoReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeInfoHtml} language="html" />}
 						</div>
 					</div>
 

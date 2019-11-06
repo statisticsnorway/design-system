@@ -25,9 +25,21 @@ const tabItems = [
 	},
 ];
 
-const codeExampleCheckboxGroup = `
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
+const codeExample = `
 <CheckboxGroup
 	header="Header"
+	onChange={() => callback}
+	selectedValue="item2"
 	items={[
 		{ label: 'Checkbox 1', value: 'checkbox1' },
 		{ label: 'Checkbox 2', value: 'checkbox2' },
@@ -36,11 +48,25 @@ const codeExampleCheckboxGroup = `
 />
 `;
 
+const codeExampleHtml = `
+<div class="ssb-checkbox-group">
+  <div class="ssb-title no-margin"><h5>Title</h5></div>
+  <div class="ssb-checkbox">
+    <input type="checkbox" id="option1" value="option1" />
+    <label class="checkbox-label" for="option1">Insert label</label>
+  </div>
+  <div class="ssb-checkbox">
+    <input type="checkbox" id="option2" value="option2" />
+    <label class="checkbox-label" for="option2">Insert label</label>
+  </div>
+</div>
+`;
+
 const CheckboxInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -68,8 +94,11 @@ const CheckboxInfo = () => {
 								]}
 							/>
 						</div>
-						<div className="col-lg-12  mt-3">
-							<CodeSnippet code={codeExampleCheckboxGroup} language="jsx" />
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 

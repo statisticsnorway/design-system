@@ -34,6 +34,16 @@ const tabItems = [
 	},
 ];
 
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
 const items = [
 	{
 		title: 'Apples',
@@ -57,6 +67,21 @@ const codeExample = `
 />
 `;
 
+const codeExampleHtml = `
+<div class="ssb-dropdown">
+  <label for="input-dropdown">Menu header</label>
+  <div class="dropdown-interactive-area">
+    <input class="focused" id="input-dropdown" disabled="" placeholder="Select item" value="">
+    <div class="dd-icon"><i /></div>
+    <div class="list-of-options">
+      <div class="option-list-element" value="item1" id="item1">Apples</div>
+      <div class="option-list-element selected" value="item2" id="item2">Rainbows</div>
+      <div class="option-list-element" value="item3" id="item3">Ocean</div>
+    </div>
+  </div>
+</div>
+`;
+
 const codeExamplePreSelected = `
 <Dropdown
 	header="Menu header"
@@ -75,9 +100,10 @@ const codeExampleSearchable = `
 
 const DropdownInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
+
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Dropdown</Title>
@@ -97,8 +123,11 @@ const DropdownInfo = () => {
 						<div className="col-lg-6">
 							<Dropdown header="Menu header" items={items} />
 						</div>
-						<div className="col-lg-12  mt-3">
-							<CodeSnippet code={codeExample} language="jsx" />
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 

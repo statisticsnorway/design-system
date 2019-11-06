@@ -97,7 +97,7 @@ const ButtonInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Primærknapp</Title>
+						<Title size={2} className="col-lg-12">Primærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Primærknapp brukes for viktige handlinger for brukeren, en aksjon som er kritisk for brukerens videre fremdrift.
@@ -111,19 +111,15 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
 							<Divider light />
-							{activeCodeTab1 === '/react' && (
-								<CodeSnippet code={codeExample1} language="jsx" />
-							)}
-							{activeCodeTab1 === '/html' && (
-								<CodeSnippet code={codeExample1Html} language="html" />
-							)}
+							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExample1} language="jsx" />}
+							{activeCodeTab1 === '/html' && <CodeSnippet code={codeExample1Html} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Sekundærknapp</Title>
+						<Title size={2} className="col-lg-12">Sekundærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Sekundærknapp brukes for handlinger som er viktige, men ikke kritiske, for den videre fremdriften i brukerens oppgaver.
@@ -137,19 +133,15 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
 							<Divider light />
-							{activeCodeTab2 === '/react' && (
-								<CodeSnippet code={codeExample2} language="jsx" />
-							)}
-							{activeCodeTab2 === '/html' && (
-								<CodeSnippet code={codeExample2Html} language="html" />
-							)}
+							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExample2} language="jsx" />}
+							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExample2Html} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Knapp med ikon</Title>
+						<Title size={2} className="col-lg-12">Knapp med ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Både primær- og sekundærknapp kan ha ikon hvis det er viktig å kommunisere hva knappen gjør, eller for å tydeliggjøre forskjellen mellom knapper.
@@ -162,19 +154,15 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
 							<Divider light />
-							{activeCodeTab3 === '/react' && (
-								<CodeSnippet code={codeExample3} language="jsx" />
-							)}
-							{activeCodeTab3 === '/html' && (
-								<CodeSnippet code={codeExample3Html} language="html" />
-							)}
+							{activeCodeTab3 === '/react' && <CodeSnippet code={codeExample3} language="jsx" />}
+							{activeCodeTab3 === '/html' && <CodeSnippet code={codeExample3Html} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Ikke-aktiv knapp</Title>
+						<Title size={2} className="col-lg-12">Ikke-aktiv knapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								En ikke-aktiv knapp er grået ut og er ikke klikkbar. Den har heller ikke hover animasjon.
@@ -188,23 +176,19 @@ const ButtonInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode4Clicked} />
 							<Divider light />
-							{activeCodeTab4 === '/react' && (
-								<CodeSnippet code={codeExample4} language="jsx" />
-							)}
-							{activeCodeTab4 === '/html' && (
-								<CodeSnippet code={codeExample4Html} language="html" />
-							)}
+							{activeCodeTab4 === '/react' && <CodeSnippet code={codeExample4} language="jsx" />}
+							{activeCodeTab4 === '/html' && <CodeSnippet code={codeExample4Html} language="html" />}
 						</div>
 					</div>
 
 					<Divider className="mb-3" />
-					<Title size={3} className="mt-3 mb-3">Props</Title>
+					<Title size={2} className="mt-3 mb-3">Props</Title>
 					<table className="col-lg-12">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
-								<th><h5>Prop name</h5></th>
-								<th><h5>Type</h5></th>
-								<th><h5>Description</h5></th>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -246,7 +230,7 @@ const ButtonInfo = () => {
 				<div className="mt-3">
 					<div className="row mb-3">
 						<div className="col-lg-4">
-							<Title size={3}>Avrundede hjørnen</Title>
+							<Title size={2}>Avrundede hjørnen</Title>
 						</div>
 						<div className="col-lg-8">
 							<span>
@@ -258,7 +242,7 @@ const ButtonInfo = () => {
 
 					<div className="row mb-3">
 						<div className="col-lg-4">
-							<Title size={3}>Fylt bakgrunn</Title>
+							<Title size={2}>Fylt bakgrunn</Title>
 						</div>
 						<div className="col-lg-8">
 							<span>
@@ -270,7 +254,7 @@ const ButtonInfo = () => {
 
 					<div className="row mb-3">
 						<div className="col-lg-4">
-							<Title size={3}>Understrek ved hoved</Title>
+							<Title size={2}>Understrek ved hoved</Title>
 						</div>
 						<div className="col-lg-8">
 							<span>

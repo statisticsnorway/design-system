@@ -68,7 +68,7 @@ const WordExplanationInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mt-3">
-						<Title size={3} className="col-lg-12">Ordforklaring</Title>
+						<Title size={2} className="col-lg-12">Ordforklaring</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Word explanations are defined by two attributes, first it&apos;s underlined by dotted line to differentiate itself from a regular link component.
@@ -83,32 +83,23 @@ const WordExplanationInfo = () => {
 							Explain this <WordExplanation explanation={placeHolder}>word</WordExplanation>.
 						</div>
 						<div className="col-lg-12">
-							<Divider light className="mt-3" />
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeExampleJsx} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeExampleHtml} language="html" />
-								</div>
-							)}
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleJsx} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 
-					<Divider className="mb-3 mt-3" />
+					<Divider light className="mb-3 mt-3" />
 
 					<div>
-						<Title size={3} className="mb-3">Props</Title>
+						<Title size={2} className="mb-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>

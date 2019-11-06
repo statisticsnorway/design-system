@@ -3,8 +3,15 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const codeExample = `
+// React
 <Divider dark />
 <Divider light />
+`;
+
+const codeExampleHtml = `
+<!-- HTML -->
+<hr class="ssb-divider type-dark" />
+<hr class="ssb-divider type-light" />
 `;
 
 const DividerInfo = () => (
@@ -20,7 +27,7 @@ const DividerInfo = () => (
 
 		<div className="mt-3">
 			<div className="row mb-3">
-				<Title size={3} className="col-lg-12">Divider</Title>
+				<Title size={2} className="col-lg-12">Divider</Title>
 				<div className="col-lg-6">
 					<Paragraph>
 						The divider element is always place at the end of a content grouping and before the start of the next new grouping.
@@ -32,6 +39,7 @@ const DividerInfo = () => (
 				</div>
 				<div className="col-lg-6">
 					<CodeSnippet code={codeExample} language="jsx" />
+					<CodeSnippet code={codeExampleHtml} language="html" />
 				</div>
 			</div>
 		</div>

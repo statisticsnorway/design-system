@@ -39,7 +39,7 @@ const BlockContentInfo = () => {
 
 			<div className="mt-3">
 				<div className="row mb-3">
-					<Title size={3} className="col-lg-12">BlockContent</Title>
+					<Title size={2} className="col-lg-12">BlockContent</Title>
 					<div className="col-lg-6">
 						<Paragraph>
 							The BlockContent components ads a green line on top of the container and a subtle drop shadow.
@@ -48,12 +48,8 @@ const BlockContentInfo = () => {
 
 						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 						<Divider light />
-						{activeCodeTab === '/react' && (
-							<CodeSnippet code={codeExample} language="jsx" />
-						)}
-						{activeCodeTab === '/html' && (
-							<CodeSnippet code={codeExampleHtml} language="html" />
-						)}
+						{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 					</div>
 					<div className="col-lg-6">
 						<BlockContent pageNumber={1}>

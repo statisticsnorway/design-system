@@ -100,7 +100,7 @@ const DialogInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Error warning</Title>
+						<Title size={2} className="col-lg-12">Error warning</Title>
 						<div className="col-lg-6">
 							<p>{errorWarningText}</p>
 						</div>
@@ -112,27 +112,17 @@ const DialogInfo = () => {
 						<div className="col-lg-12">
 							<div className="mt-3">
 								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-								<Divider />
+								<Divider light />
 							</div>
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<Title size={3}>React code</Title>
-									<CodeSnippet code={codeWarningReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>Html code</Title>
-									<CodeSnippet code={codeWarningHtml} language="html" />
-								</div>
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeWarningReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeWarningHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Information warning</Title>
+						<Title size={2} className="col-lg-12">Information warning</Title>
 						<div className="col-lg-6">
 							<p>{infoWarningText}</p>
 						</div>
@@ -143,32 +133,22 @@ const DialogInfo = () => {
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<Title size={3}>React code</Title>
-									<CodeSnippet code={codeInfoReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<Title size={3}>Html code</Title>
-									<CodeSnippet code={codeInfoHtml} language="html" />
-								</div>
-							)}
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeInfoReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeInfoHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3}>Props</Title>
+						<Title size={2}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -205,7 +185,7 @@ const DialogInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Colors</Title>
+						<Title size={2} className="col-lg-12">Colors</Title>
 						<div className="col-lg-6">
 							The red color of warning was chosen because red being associated with error. The blue color was chosen to differentiate from the red and the green.
 							It has also been tested through different colorblindness test to ensure that the colors would still provide difference in contrast.

@@ -25,9 +25,21 @@ const tabItems = [
 	},
 ];
 
-const codeExampleCheckboxGroup = `
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
+const codeExample = `
 <CheckboxGroup
 	header="Header"
+	onChange={() => callback}
+	selectedValue="item2"
 	items={[
 		{ label: 'Checkbox 1', value: 'checkbox1' },
 		{ label: 'Checkbox 2', value: 'checkbox2' },
@@ -36,11 +48,25 @@ const codeExampleCheckboxGroup = `
 />
 `;
 
+const codeExampleHtml = `
+<div class="ssb-checkbox-group">
+  <div class="ssb-title no-margin"><h5>Title</h5></div>
+  <div class="ssb-checkbox">
+    <input type="checkbox" id="option1" value="option1" />
+    <label class="checkbox-label" for="option1">Insert label</label>
+  </div>
+  <div class="ssb-checkbox">
+    <input type="checkbox" id="option2" value="option2" />
+    <label class="checkbox-label" for="option2">Insert label</label>
+  </div>
+</div>
+`;
+
 const CheckboxInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -54,7 +80,7 @@ const CheckboxInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">CheckboxGroup</Title>
+						<Title size={2} className="col-lg-12">CheckboxGroup</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextCheckbox}</p>
 						</div>
@@ -68,21 +94,24 @@ const CheckboxInfo = () => {
 								]}
 							/>
 						</div>
-						<div className="col-lg-12  mt-3">
-							<CodeSnippet code={codeExampleCheckboxGroup} language="jsx" />
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3}>Props</Title>
+						<Title size={2}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>

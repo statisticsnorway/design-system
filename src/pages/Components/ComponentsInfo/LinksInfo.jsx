@@ -13,70 +13,81 @@ const tabItems = [
 	},
 ];
 
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
 const ordinaryLink = `
-// React
 <Link href="">Link text</Link>
 <Link negative href="">Link text</Link>
+`;
 
-// HTML
+const ordinaryLinkHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 `;
 
 const iconLinks = `
-// React
 <Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 <Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+`;
 
-// HTML
+const iconLinksHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 `;
 
 const profiledLinks = `
-// React
 <Link href=" " linkType="profiled">Link text</Link>
 <Link negative href=" " linkType="profiled">Link text</Link>
 <Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 <Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+`;
 
-// HTML
+const profiledLinksHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	<span class="link-text">A regular link</span>
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-	{insert icon here}
-	<span class="link-text">A regular link</span>
+  {insert icon here}
+  <span class="link-text">A regular link</span>
 </a>
 `;
 
 const LinksInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
+
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Link</Title>
@@ -90,7 +101,7 @@ const LinksInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Lenker</Title>
+						<Title size={2} className="col-lg-12">Lenker</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Ordinære lenker kan blir brukt både i løpende tekst og som frittstående lenker.
@@ -105,14 +116,17 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={ordinaryLink} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={ordinaryLink} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={ordinaryLinkHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Lenker med ikon</Title>
+						<Title size={2} className="col-lg-12">Lenker med ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Lenker med ikon brukes vanligvis ikke i løpende tekst, men gjerne på frittstående lenker.
@@ -128,14 +142,17 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={iconLinks} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={iconLinks} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={iconLinksHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Profilerte lenker med og uten ikon</Title>
+						<Title size={2} className="col-lg-12">Profilerte lenker med og uten ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Profilerte lenker brukes for å presisere hierarki og de kan bli brukt i kombinasjon med andre typer lenker for å fremheve viktighet.
@@ -152,20 +169,23 @@ const LinksInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12">
-							<CodeSnippet code={profiledLinks} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={profiledLinks} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={profiledLinksHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3} className="mb-3">Props</Title>
+						<Title size={2} className="mb-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><Title size={5}>Prop name</Title></th>
-									<th><Title size={5}>Type</Title></th>
-									<th><Title size={5}>Description</Title></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -211,7 +231,7 @@ const LinksInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Farge</Title>
+						<Title size={2} className="col-lg-12">Farge</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Fargen på lenker er SSB grønn 4. Denne fargen er valgt for å passe inn i helheten i  designsystemet,

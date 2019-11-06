@@ -39,7 +39,7 @@ const tabCode = [
 	},
 ];
 
-const codeHeadingReact = `
+const codeExample = `
 <Title size="1">Title h1</Title>
 <Title size="2">Title h2</Title>
 <Title size="3">Title h3</Title>
@@ -48,7 +48,7 @@ const codeHeadingReact = `
 <Title size="6">Title h6</Title>
 `;
 
-const codeHeadingHtml = `
+const codeExampleHtml = `
 <h1 class="ssb-title">Title h1</h1>
 <h2 class="ssb-title">Title h2</h2>
 <h3 class="ssb-title">Title h3</h3>
@@ -86,12 +86,8 @@ const codeParagraphHtml = `
 const TypographyInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -104,8 +100,8 @@ const TypographyInfo = () => {
 
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
-					<div className="row mt-3">
-						<Title size={3} className="col-lg-12">Overskrifter</Title>
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Overskrifter</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextHeadings}</p>
 						</div>
@@ -117,28 +113,23 @@ const TypographyInfo = () => {
 							<Title size={5}>Title h5</Title>
 							<Title size={6}>Title h6</Title>
 						</div>
-						<div className="col-lg-12 mt-3">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
-						</div>
-						{activeCodeTab === '/react' && (
-							<div className="col-lg-12 mt-3">
-								<CodeSnippet code={codeHeadingReact} language="jsx" />
-							</div>
-						)}
-						{activeCodeTab === '/html' && (
-							<div className="col-lg-12 mt-3">
-								<CodeSnippet code={codeHeadingHtml} language="html" />
-							</div>
-						)}
 						<div className="col-lg-12">
-							<Title size={4} className="col-lg-12 mt-3">Props</Title>
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
+						</div>
+
+						<Divider light className="col-lg-12 mt-3 mb-3" />
+
+						<div className="col-lg-12">
+							<Title size={2}>Props</Title>
 							<table className="col-lg-12">
 								<thead style={{ textAlign: 'left' }}>
 									<tr>
-										<th><h5>Prop name</h5></th>
-										<th><h5>Type</h5></th>
-										<th><h5>Description</h5></th>
+										<th><Title size={3}>Prop name</Title></th>
+										<th><Title size={3}>Type</Title></th>
+										<th><Title size={3}>Description</Title></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -167,10 +158,10 @@ const TypographyInfo = () => {
 						</div>
 					</div>
 
-					<Divider className="mt-3 mb-3" />
+					<Divider className="col-lg-12 mt-3 mb-3" />
 
 					<div className="row">
-						<Title size={3} className="col-lg-12">Vanlig tekst</Title>
+						<Title size={2} className="col-lg-12">Vanlig tekst</Title>
 						<div className="col-lg-6">
 							<p>{overviewRegularText}</p>
 						</div>
@@ -181,29 +172,21 @@ const TypographyInfo = () => {
 						<div className="col-lg-12">
 							<div className="mt-3">
 								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-								<Divider />
+								<Divider light />
 							</div>
-							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeTextReact} language="jsx" />
-								</div>
-							)}
-							{activeCodeTab === '/html' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeTextHtml} language="html" />
-								</div>
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeTextReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeTextHtml} language="html" />}
 						</div>
 
-						<Divider light className="mt-3 mb-3" />
 						<div className="col-lg-12 mb-3">
-							<Title size={4}>Props</Title>
+							<Divider light className="mt-3 mb-3" />
+							<Title size={2}>Props</Title>
 							<table className="col-lg-12">
 								<thead style={{ textAlign: 'left' }}>
 									<tr>
-										<th><h5>Prop name</h5></th>
-										<th><h5>Type</h5></th>
-										<th><h5>Description</h5></th>
+										<th><Title size={3}>Prop name</Title></th>
+										<th><Title size={3}>Type</Title></th>
+										<th><Title size={3}>Description</Title></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -230,30 +213,25 @@ const TypographyInfo = () => {
 					<Divider className="mt-3" />
 
 					<div className="row mt-3">
-						<Title size={3} className="col-lg-12">Paragraf</Title>
+						<Title size={2} className="col-lg-12">Paragraf</Title>
 						<div className="col-lg-6">
 							<Paragraph>This is paragraph</Paragraph>
 							<LeadParagraph>This is a lead paragraph</LeadParagraph>
 						</div>
 						<div className="col-lg-12">
-							<div className="mt-3">
-								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-								<Divider />
-							</div>
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
 							{activeCodeTab === '/react' && (
-								<div className="mt-3">
-									<CodeSnippet code={codeParagraphReact} language="jsx" />
-								</div>
+								<CodeSnippet code={codeParagraphReact} language="jsx" />
 							)}
 							{activeCodeTab === '/html' && (
-								<div className="col-lg-12 mt-3">
-									<CodeSnippet code={codeParagraphHtml} language="html" />
-								</div>
+								<CodeSnippet code={codeParagraphHtml} language="html" />
 							)}
 						</div>
 
-						<Divider light className="mt-3 mb-3" />
+
 						<div className="col-lg-12">
+							<Divider light className="mt-3 mb-3" />
 							<Title size={4}>Props</Title>
 							<table className="col-lg-12">
 								<thead style={{ textAlign: 'left' }}>

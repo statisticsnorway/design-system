@@ -64,7 +64,6 @@ const BreadcrumbInfo = () => {
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabCodeClicked = e => changeCodeTab(e);
 
-
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Breadcrumb</Title>
@@ -78,7 +77,7 @@ const BreadcrumbInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Brødsmuler</Title>
+						<Title size={2} className="col-lg-12">Brødsmuler</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Brødsmulene hjelper brukeren å se hvor de befinner seg på nettstedet. Ved å følge lenkene til tidligere sider/nivåer,
@@ -91,25 +90,21 @@ const BreadcrumbInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeExample} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeExampleHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3} className="mt-3 mb-3">Props</Title>
-						<table>
+						<Title size={2} className="mt-3 mb-3">Props</Title>
+						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><Title size={5}>Prop name</Title></th>
-									<th><Title size={5}>Type</Title></th>
-									<th><Title size={5}>Description</Title></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>

@@ -34,6 +34,16 @@ const tabItems = [
 	},
 ];
 
+const tabCode = [
+	{
+		title: 'React',
+		path: '/react',
+	}, {
+		title: 'Html',
+		path: '/html',
+	},
+];
+
 const items = [
 	{
 		title: 'Apples',
@@ -57,6 +67,21 @@ const codeExample = `
 />
 `;
 
+const codeExampleHtml = `
+<div class="ssb-dropdown">
+  <label for="input-dropdown">Menu header</label>
+  <div class="dropdown-interactive-area">
+    <input class="focused" id="input-dropdown" disabled="" placeholder="Select item" value="">
+    <div class="dd-icon"><i /></div>
+    <div class="list-of-options">
+      <div class="option-list-element" value="item1" id="item1">Apples</div>
+      <div class="option-list-element selected" value="item2" id="item2">Rainbows</div>
+      <div class="option-list-element" value="item3" id="item3">Ocean</div>
+    </div>
+  </div>
+</div>
+`;
+
 const codeExamplePreSelected = `
 <Dropdown
 	header="Menu header"
@@ -75,9 +100,10 @@ const codeExampleSearchable = `
 
 const DropdownInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
+
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Dropdown</Title>
@@ -90,22 +116,25 @@ const DropdownInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Dropdown</Title>
+						<Title size={2} className="col-lg-12">Dropdown</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
 						</div>
 						<div className="col-lg-6">
 							<Dropdown header="Menu header" items={items} />
 						</div>
-						<div className="col-lg-12  mt-3">
-							<CodeSnippet code={codeExample} language="jsx" />
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Dropdown Pre-selected Value</Title>
+						<Title size={2} className="col-lg-12">Dropdown Pre-selected Value</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextPreSelectedValue}</Paragraph>
 						</div>
@@ -120,7 +149,7 @@ const DropdownInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Dropdown searchable</Title>
+						<Title size={2} className="col-lg-12">Dropdown searchable</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextSearchable}</Paragraph>
 						</div>
@@ -132,16 +161,16 @@ const DropdownInfo = () => {
 						</div>
 					</div>
 
-					<Divider className="mb-3" />
+					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3}>Props</Title>
+						<Title size={2}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>

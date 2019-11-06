@@ -66,12 +66,8 @@ const codeHtml = `
 const ProfileBoxInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -85,7 +81,7 @@ const ProfileBoxInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
 					<div className="row mt-3">
-						<Title size={3} className="col-lg-12">Profiled box - Statistic</Title>
+						<Title size={2} className="col-lg-12">Profiled box - Statistic</Title>
 						<div className="col-lg-6">
 							<p>{profileBoxStaticText}</p>
 						</div>
@@ -99,12 +95,8 @@ const ProfileBoxInfo = () => {
 						<div className="col-lg-12 mb-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && (
-								<CodeSnippet code={codeReact} language="jsx" />
-							)}
-							{activeCodeTab === '/html' && (
-								<CodeSnippet code={codeHtml} language="html" />
-							)}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
 
@@ -112,13 +104,13 @@ const ProfileBoxInfo = () => {
 
 					<div className="row">
 						<div className="col-lg-12">
-							<Title size={3}>Props</Title>
+							<Title size={2}>Props</Title>
 							<table className="col-lg-12">
 								<thead style={{ textAlign: 'left' }}>
 									<tr>
-										<th><h5>Prop name</h5></th>
-										<th><h5>Type</h5></th>
-										<th><h5>Description</h5></th>
+										<th><Title size={3}>Prop name</Title></th>
+										<th><Title size={3}>Type</Title></th>
+										<th><Title size={3}>Description</Title></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -152,7 +144,7 @@ const ProfileBoxInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Different designs</Title>
+						<Title size={2} className="col-lg-12">Different designs</Title>
 						<div className="col-lg-6">
 							<p>{rationaleText}</p>
 						</div>

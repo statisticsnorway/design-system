@@ -68,7 +68,7 @@ const BreadcrumbInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Breadcrumb</Title>
 			<LeadParagraph>
-				Brødsmuler er en navigasjonshjel0p som gir brukeren informasjon om hvor de befinner seg på nettstedet, ved en kombinasjon av lenker som er plassert under toppfeltet på en side.
+				Brødsmuler er en navigasjonshjelp som gir brukeren informasjon om hvor de befinner seg på nettstedet, ved en kombinasjon av lenker som er plassert under toppfeltet på en side.
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />

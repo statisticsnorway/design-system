@@ -20,7 +20,7 @@ const DividerInfo = () => (
 
 		<div className="mt-3">
 			<div className="row mb-3">
-				<Title size={3} className="col-lg-12">Divider</Title>
+				<Title size={2} className="col-lg-12">Divider</Title>
 				<div className="col-lg-6">
 					<Paragraph>
 						The divider element is always place at the end of a content grouping and before the start of the next new grouping.

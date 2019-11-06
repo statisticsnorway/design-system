@@ -69,7 +69,7 @@ const BreadcrumbInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Breadcrumb</Title>
 			<LeadParagraph>
-				Brødsmuler er en navigasjonshjelp som gir brukeren informasjon om hvor de befinner seg på nettstedet, ved en kombinasjon av lenker som er plassert under toppfeltet på en side.
+				Brødsmuler er en navigasjonshjel0p som gir brukeren informasjon om hvor de befinner seg på nettstedet, ved en kombinasjon av lenker som er plassert under toppfeltet på en side.
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
@@ -78,7 +78,7 @@ const BreadcrumbInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Brødsmuler</Title>
+						<Title size={2} className="col-lg-12">Brødsmuler</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Brødsmulene hjelper brukeren å se hvor de befinner seg på nettstedet. Ved å følge lenkene til tidligere sider/nivåer,
@@ -103,13 +103,13 @@ const BreadcrumbInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3} className="mt-3 mb-3">Props</Title>
-						<table>
+						<Title size={2} className="mt-3 mb-3">Props</Title>
+						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><Title size={5}>Prop name</Title></th>
-									<th><Title size={5}>Type</Title></th>
-									<th><Title size={5}>Description</Title></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>

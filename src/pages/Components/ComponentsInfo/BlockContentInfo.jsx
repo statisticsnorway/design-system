@@ -39,7 +39,7 @@ const BlockContentInfo = () => {
 
 			<div className="mt-3">
 				<div className="row mb-3">
-					<Title size={3} className="col-lg-12">BlockContent</Title>
+					<Title size={2} className="col-lg-12">BlockContent</Title>
 					<div className="col-lg-6">
 						<Paragraph>
 							The BlockContent components ads a green line on top of the container and a subtle drop shadow.

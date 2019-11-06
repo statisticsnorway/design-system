@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, Input, LeadParagraph, Link, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, Input, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Search form are an input element that combines an input form and a clickable search icon 
@@ -55,12 +55,8 @@ const codeHtml = `
 const SearchBoxInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -74,7 +70,7 @@ const SearchBoxInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
 					<div className="row mt-3">
-						<Title size={3} className="col-lg-12">Seach form</Title>
+						<Title size={2} className="col-lg-12">Seach form</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextFactbox}</p>
 						</div>
@@ -87,7 +83,7 @@ const SearchBoxInfo = () => {
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
+							<Divider light />
 							{activeCodeTab === '/react' && (
 								<div className="mt-3">
 									<CodeSnippet code={codeReact} language="jsx" />
@@ -104,10 +100,11 @@ const SearchBoxInfo = () => {
 					<Divider light className="mt-3 mb-3" />
 
 					<div>
-						<Title size={4}>Props</Title>
-						<ul>
-							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Input" isExternal>Same as Input</Link></li>
-						</ul>
+						<Title size={2}>Props</Title>
+						<Text>The search field is a modification of
+							the <Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Input" isExternal>input</Link> component,
+							and therefore has the same props.
+						</Text>
 					</div>
 
 				</div>

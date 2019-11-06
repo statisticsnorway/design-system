@@ -82,7 +82,7 @@ const FactBoxInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Faktabokser</Title>
+						<Title size={2} className="col-lg-12">Faktabokser</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextFactbox}</p>
 						</div>
@@ -91,16 +91,14 @@ const FactBoxInfo = () => {
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
+							<Divider light />
 							{activeCodeTab === '/react' && (
 								<div className="mt-3">
-									<Title size={3}>React code</Title>
 									<CodeSnippet code={codeReact} language="jsx" />
 								</div>
 							)}
 							{activeCodeTab === '/html' && (
 								<div className="col-lg-12 mt-3">
-									<Title size={3}>Html code</Title>
 									<CodeSnippet code={codeHtml} language="html" />
 								</div>
 							)}
@@ -110,13 +108,13 @@ const FactBoxInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row col-lg-12 ">
-						<Title size={3} className="mt-3">Props</Title>
+						<Title size={2} className="mt-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -153,7 +151,7 @@ const FactBoxInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Boksramme</Title>
+						<Title size={2} className="col-lg-12">Boksramme</Title>
 						<div className="col-lg-6">
 							<p>{rationaleText}</p>
 						</div>

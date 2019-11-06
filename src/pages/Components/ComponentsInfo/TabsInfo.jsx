@@ -64,12 +64,8 @@ const codeHtml = `
 const TabsInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -83,7 +79,7 @@ const TabsInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mt-3">
-						<Title size={3} className="col-lg-12">Tabs</Title>
+						<Title size={2} className="col-lg-12">Tabs</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextTabs}</p>
 						</div>
@@ -117,13 +113,13 @@ const TabsInfo = () => {
 					<Divider light className="mb-3 mt-3" />
 
 					<div>
-						<Title size={3} className="mt-3">Props</Title>
+						<Title size={2} className="mt-3">Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -151,7 +147,7 @@ const TabsInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Underscore</Title>
+						<Title size={2} className="col-lg-12">Underscore</Title>
 						<div className="col-lg-6">
 							By using an underscore underneath the tabs, it becomes easier for the user to separate between the content.
 							Especially using different colors between green and dark and having the underscore pop up during active hover.

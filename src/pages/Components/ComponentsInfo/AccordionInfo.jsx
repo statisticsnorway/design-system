@@ -122,7 +122,7 @@ const AccordionInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Primær Accordion</Title>
+						<Title size={2} className="col-lg-12">Primær Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Brukes når innholdet i dem er viktig for å forstå helheten i sidens innhold, og vi ønsker at brukeren skal se det.
@@ -148,7 +148,7 @@ const AccordionInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Sekundær Accordion</Title>
+						<Title size={2} className="col-lg-12">Sekundær Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Sekundær accordion brukes når innholdet kun trenger å hentes frem når brukeren trenger det. Dette kan være forfattere, definisjoner, bakgrunn etc.
@@ -172,7 +172,7 @@ const AccordionInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Innflettet Accordion</Title>
+						<Title size={2} className="col-lg-12">Innflettet Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Innflettet accordion brukes når det er flere nivåer accordions, dvs. en accordion er inne i en annen accordion. Når det er flere nivåer på innholdet i den.
@@ -203,13 +203,13 @@ const AccordionInfo = () => {
 
 					<div className="row mb-3">
 						<div className="col-lg-12">
-							<Title size={3} className="mt-3">Props</Title>
+							<Title size={2} className="mt-3">Props</Title>
 							<table className="col-lg-12">
 								<thead style={{ textAlign: 'left' }}>
 									<tr>
-										<th><h5>Prop name</h5></th>
-										<th><h5>Type</h5></th>
-										<th><h5>Description</h5></th>
+										<th><Title size={3}>Prop name</Title></th>
+										<th><Title size={3}>Type</Title></th>
+										<th><Title size={3}>Description</Title></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -257,7 +257,7 @@ const AccordionInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-4">Primary and Secondary accordions</Title>
+						<Title size={2} className="col-lg-4">Primary and Secondary accordions</Title>
 						<div className="col-lg-8">
 							<span>
 								The reason we have two variants of accordion is to create a good hierarchy between the content,
@@ -270,7 +270,7 @@ const AccordionInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-4">Single action accordions</Title>
+						<Title size={2} className="col-lg-4">Single action accordions</Title>
 						<div className="col-lg-8">
 							<span>
 								There are other accordion elements on other sites that collapse an open accordion when another is opened.

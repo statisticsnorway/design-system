@@ -32,7 +32,7 @@ const InputInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Input</Title>
+						<Title size={2} className="col-lg-12">Input</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Input forms contains 3 different state: un-clicked, hover and clicked.
@@ -54,7 +54,7 @@ const InputInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Input error</Title>
+						<Title size={2} className="col-lg-12">Input error</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								When an error occurs in the input form, the select form will change into a error state where the
@@ -76,7 +76,7 @@ const InputInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Search</Title>
+						<Title size={2} className="col-lg-12">Search</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Search form are an input element that combines an input form and a clickable search icon to allow
@@ -96,13 +96,13 @@ const InputInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3}>Props</Title>
+						<Title size={2}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><Title size={5}>Prop name</Title></th>
-									<th><Title size={5}>Type</Title></th>
-									<th><Title size={5}>Description</Title></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>

@@ -82,7 +82,7 @@ const KeyFiguresInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Nøkkeltall</Title>
+						<Title size={2} className="col-lg-12">Nøkkeltall</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
 						</div>
@@ -97,9 +97,8 @@ const KeyFiguresInfo = () => {
 							/>
 						</div>
 						<div className="col-lg-12">
-							<Divider light className="mt-3" />
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider />
+							<Divider light />
 							{activeCodeTab === '/react' && (
 								<div className="mt-3">
 									<CodeSnippet code={codeReact} language="jsx" />
@@ -116,13 +115,13 @@ const KeyFiguresInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div>
-						<Title size={3}>Props</Title>
+						<Title size={2}>Props</Title>
 						<table className="col-lg-12">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
-									<th><h5>Prop name</h5></th>
-									<th><h5>Type</h5></th>
-									<th><h5>Description</h5></th>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -175,14 +174,14 @@ const KeyFiguresInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Elementstørrelse</Title>
+						<Title size={2} className="col-lg-12">Elementstørrelse</Title>
 						<div className="col-lg-6">
 							<Paragraph>{rationaleText}</Paragraph>
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<Title size={4} className="col-lg-12">Large</Title>
+						<Title size={3} className="col-lg-12">Large</Title>
 						<Divider light className="mt-1 mb-3" />
 						<div className="col-lg-12">
 							<KeyFigures
@@ -197,7 +196,7 @@ const KeyFiguresInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<Title size={4} className="col-lg-12">Medium</Title>
+						<Title size={3} className="col-lg-12">Medium</Title>
 						<Divider light className="mb-3" />
 						<div className="col-lg-12">
 							<KeyFigures
@@ -212,7 +211,7 @@ const KeyFiguresInfo = () => {
 					</div>
 
 					<div className="row mb-3">
-						<Title size={4} className="col-lg-12">Small</Title>
+						<Title size={3} className="col-lg-12">Small</Title>
 						<Divider light className="mb-3" />
 						<div className="col-lg-12">
 							<KeyFigures

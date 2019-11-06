@@ -18,18 +18,22 @@ const socialLinks = [
 	{
 		link: 'https://www.facebook.com/statistisksentralbyra/',
 		logo: <Facebook />,
+		name: 'Facebook',
 	},
 	{
 		link: 'https://twitter.com/ssbnytt',
 		logo: <Twitter />,
+		name: 'Twitter',
 	},
 	{
 		link: 'https://www.linkedin.com/company/statistics-norway/',
 		logo: <Linkedin />,
+		name: 'LinkedIn',
 	},
 	{
 		link: 'https://www.ssb.no/informasjon/rss',
 		logo: <Rss />,
+		name: 'RSS',
 	},
 ];
 

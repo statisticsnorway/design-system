@@ -23,6 +23,7 @@ const Footer = ({
 			<div className="social-links">
 				{socialLinks && socialLinks.map(so => (
 					<a
+						aria-label={so.name}
 						className="social-navigation"
 						href={so.link}
 						key={so.link}

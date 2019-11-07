@@ -119,6 +119,21 @@ const WordExplanationInfo = () => {
 
 				</div>
 			)}
+
+			{activeTab === '/rationale' && (
+				<div className="mt-3">
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-4">Animation</Title>
+						<div className="col-lg-8">
+							<span>
+								The hover animation is a left to right marking animation,
+								this in order to emulate reality where a user would mark word with a color marker and at the same time separate it from a link.
+							</span>
+						</div>
+					</div>
+
+				</div>
+			)}
 		</div>
 	);
 };

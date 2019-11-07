@@ -47,14 +47,14 @@ const TreeMenu = ({
 								key={uuid()}
 								className={`tree-node ${item.path === activeItem && 'selected'}`}
 								onClick={() => changeSubmenu(item)}
-							>{item.label}{item.items && <ChevronRight className="arrow-icon" size="18" />}
+							>{item.label}<ChevronRight className="arrow-icon" size="18" />
 							</div>
 						) : (
 							<div
 								key={uuid()}
 								className={`tree-node ${item.path === activeItem && 'selected'}`}
 								onClick={() => handleSelection(item.path)}
-							>{item.label}
+							>{item.label}<ChevronRight className="arrow-icon" size="18" />
 							</div>
 						)
 				))}

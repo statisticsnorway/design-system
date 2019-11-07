@@ -14,7 +14,7 @@ module.exports = api => {
 			['prismjs', {
 				languages: ['javascript', 'html', 'css', 'jsx'],
 				plugins: ['line-numbers'],
-				theme: 'coy',
+				theme: 'tomorrow',
 				css: true,
 			}],
 		],
@@ -46,7 +46,7 @@ module.exports = api => {
 			['prismjs', {
 				languages: ['javascript', 'html', 'css', 'jsx'],
 				plugins: ['line-numbers'],
-				theme: 'coy',
+				theme: 'tomorrow',
 				css: true,
 			}],
 		],

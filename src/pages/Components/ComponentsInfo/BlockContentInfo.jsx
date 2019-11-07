@@ -45,16 +45,19 @@ const BlockContentInfo = () => {
 							The BlockContent components ads a green line on top of the container and a subtle drop shadow.
 							It also has an optional rendering of a page number.
 						</Paragraph>
+					</div>
 
+					<div className="col-lg-12 mb-3">
+						<BlockContent pageNumber={1}>
+							Insert content here
+						</BlockContent>
+					</div>
+
+					<div className="col-lg-6">
 						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 						<Divider light />
 						{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
 						{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
-					</div>
-					<div className="col-lg-6">
-						<BlockContent pageNumber={1}>
-							Insert content here
-						</BlockContent>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Link, Paragraph, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const codeExample = `
 // React
@@ -39,8 +39,39 @@ const DividerInfo = () => (
 				</div>
 				<div className="col-lg-6">
 					<CodeSnippet code={codeExample} language="jsx" />
+				</div>
+				<div className="col-lg-6">
 					<CodeSnippet code={codeExampleHtml} language="html" />
 				</div>
+			</div>
+		</div>
+
+		<Divider light className="mb-3" />
+
+		<div className="row mb-3">
+			<div className="col-lg-12">
+				<Title size={2} className="mt-3">Props</Title>
+				<table className="col-lg-12">
+					<thead style={{ textAlign: 'left' }}>
+						<tr>
+							<th><Title size={3}>Prop name</Title></th>
+							<th><Title size={3}>Type</Title></th>
+							<th><Title size={3}>Description</Title></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>dark</code></td>
+							<td>bool</td>
+							<td>Changes color of component. Defaults to true.</td>
+						</tr>
+						<tr>
+							<td><code>light</code></td>
+							<td>bool</td>
+							<td>Changes color of component. Defaults to false.</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>

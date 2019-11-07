@@ -28,10 +28,7 @@ const Header = withRouter(({ history }) => (
 					<img src={logo} alt="logo" />
 				</div>
 				<div className="diagonal-divider" />
-				<Title size={3}>Designsystem</Title>
-			</div>
-			<div>
-				<Link href=" ">Norsk</Link>
+				<Title size={2}>Designsystem</Title>
 			</div>
 		</div>
 		<nav className="lower-section">
@@ -39,8 +36,11 @@ const Header = withRouter(({ history }) => (
 				<Tabs items={items} onClick={e => history.push(e)} />
 			</div>
 			<div className="links">
-				<Link href="https://github.com/statisticsnorway/ssb-component-library" isExternal icon={<GitHub size="18" />}>
-					Github
+				<Link
+					href="https://github.com/statisticsnorway/ssb-component-library"
+					isExternal
+					icon={<GitHub size="18" />}
+				>&nbsp;Github
 				</Link>
 			</div>
 		</nav>

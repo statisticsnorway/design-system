@@ -23,6 +23,7 @@ import SearchBoxInfo from './ComponentsInfo/SearchBoxInfo';
 import TabsInfo from './ComponentsInfo/TabsInfo';
 import TypographyInfo from './ComponentsInfo/TypographyInfo';
 import WordExplanationInfo from './ComponentsInfo/WordExplanationInfo';
+import QuotesInfo from './ComponentsInfo/QuotesInfo';
 
 const sidebarItems = [
 	{
@@ -70,6 +71,9 @@ const sidebarItems = [
 	}, {
 		label: 'Radio Buttons',
 		path: '/radiobutton',
+	}, {
+		label: 'Quotes',
+		path: '/quotes',
 	}, {
 		label: 'Reference',
 		path: '/reference',
@@ -133,6 +137,7 @@ const Components = withRouter(({ history, match }) => {
 					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
 					<Route path={`${match.url}/profile-box`} component={ProfileBoxInfo} />
 					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
+					<Route path={`${match.url}/quotes`} component={QuotesInfo} />
 					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
 					<Route path={`${match.url}/reference`} component={ReferenceInfo} />
 					<Route path={`${match.url}/search-box`} component={SearchBoxInfo} />

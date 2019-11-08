@@ -10,7 +10,7 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/rationale',
-	}
+	},
 ];
 
 const tabCode = [
@@ -163,7 +163,7 @@ const ButtonInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Ikke-aktiv knapp</Title>
-						<div className="col-lg-6">
+						<div className="col-lg-12">
 							<Paragraph>
 								En ikke-aktiv knapp er grået ut og er ikke klikkbar. Den har heller ikke hover animasjon.
 								Dette er for å indikere til brukeren at det ikke er noen funksjonalitet bak knappen.
@@ -229,38 +229,26 @@ const ButtonInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<div className="col-lg-4">
-							<Title size={2}>Avrundede hjørnen</Title>
-						</div>
-						<div className="col-lg-8">
-							<span>
-								Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
-								Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
-							</span>
-						</div>
+						<Title size={2} className="col-lg-12">Avrundede hjørnen</Title>
+						<Paragraph className="col-lg-6">
+							Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
+							Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
+						</Paragraph>
 					</div>
 
 					<div className="row mb-3">
-						<div className="col-lg-4">
-							<Title size={2}>Fylt bakgrunn</Title>
-						</div>
-						<div className="col-lg-8">
-							<span>
-								For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren.
-								Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
-							</span>
-						</div>
+						<Title size={2} className="col-lg-12">Fylt bakgrunn</Title>
+						<Paragraph className="col-lg-6">
+							For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren.
+							Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
+						</Paragraph>
 					</div>
 
 					<div className="row mb-3">
-						<div className="col-lg-4">
-							<Title size={2}>Understrek ved hoved</Title>
-						</div>
-						<div className="col-lg-8">
-							<span>
-								Alle knappevarianter har understrek ved hover for å tilfredsstille WCAG 2.0-kravene.
-							</span>
-						</div>
+						<Title size={2} className="col-lg-12">Understrek ved hoved</Title>
+						<Paragraph className="col-lg-6">
+							Alle knappevarianter har understrek ved hover for å tilfredsstille WCAG 2.0-kravene.
+						</Paragraph>
 					</div>
 				</div>
 			)}

@@ -131,8 +131,8 @@ const BreadcrumbInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-5">Location based breadcrumbs</Title>
-						<div className="col-lg-7">
+						<Title size={3} className="col-lg-12">Location based breadcrumbs</Title>
+						<div className="col-lg-6">
 							<Paragraph>
 								We have opted for a location based breadcrumbs as it gives the user a good overview of where in the website
 								hierarchy they are currently in, instead of path based breadcrumb which only show the path that the user have browsed.
@@ -140,8 +140,8 @@ const BreadcrumbInfo = () => {
 						</div>
 					</div>
 					<div className="row mb-3">
-						<Title size={3} className="col-lg-5">Simplistic design</Title>
-						<div className="col-lg-7">
+						<Title size={3} className="col-lg-12">Simplistic design</Title>
+						<div className="col-lg-6">
 							<Paragraph>
 								As breadcrumbs are a secondary navigation, the overall design of breadcrumbs has been kept at a very simplistic level
 								to avoid it being too prominent or confused for being a main navigational element.

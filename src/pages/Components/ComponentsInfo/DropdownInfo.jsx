@@ -194,12 +194,12 @@ const DropdownInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-4">Green indicator</Title>
-						<div className="col-lg-8">
-							<span>
+						<Title size={2} className="col-lg-12">Green indicator</Title>
+						<div className="col-lg-6">
+							<Paragraph>
 								A 5px green rectangle indicator is added together with the light green hover in order to provide a clear
 								indication for users with lower-vision or vision impairment.
-							</span>
+							</Paragraph>
 						</div>
 					</div>
 

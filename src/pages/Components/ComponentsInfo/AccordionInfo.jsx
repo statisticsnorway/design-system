@@ -245,26 +245,26 @@ const AccordionInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="mt-3">
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-4">Primary and Secondary accordions</Title>
-						<div className="col-lg-8">
-							<span>
+						<Title className="col-lg-12" size={2}>Primary and Secondary accordions</Title>
+						<div className="col-lg-6">
+							<Paragraph>
 								The reason we have two variants of accordion is to create a good hierarchy between the content,
 								while both primary and secondary accordions provides valuable information,
 								primary accordions contains content that are crucial for user to see in order to
 								understand the content on the page. Secondary accordions provide content that are important
 								but not crucial for the understanding of the page.
-							</span>
+							</Paragraph>
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-4">Single action accordions</Title>
-						<div className="col-lg-8">
-							<span>
+						<Title size={2} className="col-lg-12">Single action accordions</Title>
+						<div className="col-lg-6">
+							<Paragraph>
 								There are other accordion elements on other sites that collapse an open accordion when another is opened.
 								This feature is not incorporated into our accordions as this behavior can be unpredictable for the users.
 								Our user has full control over what type of content they would like to have remain visible.
-							</span>
+							</Paragraph>
 						</div>
 					</div>
 

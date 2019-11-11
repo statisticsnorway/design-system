@@ -38,7 +38,7 @@ const TreeMenu = ({
 	}, [activeSubmenu]);
 
 	return (
-		<div className="tree-menu-wrapper">
+		<div className="tree-menu-wrapper roboto">
 			<div ref={itemsSection} className="items-section">
 				{items && items.map(item => (
 					item.items

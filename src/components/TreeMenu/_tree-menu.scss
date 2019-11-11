@@ -1,4 +1,5 @@
 .tree-menu-wrapper {
+
   display: flex;
   position: relative;
 
@@ -29,13 +30,19 @@
     }
 
     &:hover {
-      background: $ssb-green-2;
+      background: $ssb-dark-5;
+      color: white;
       cursor: pointer;
+
+      .arrow-icon {
+        color: $ssb-white;
+      }
     }
 
     &.selected {
       background: $ssb-green-4;
       color: $ssb-white;
+      font-weight: bold;
 
       .arrow-icon {
         color: $ssb-white;

@@ -7,7 +7,7 @@ import { GitHub } from 'react-feather';
 
 const items = [
 	{
-		title: 'Om designsystemet',
+		title: 'Kom i gang',
 		path: '/get-started',
 	},
 	{

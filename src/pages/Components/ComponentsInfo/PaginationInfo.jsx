@@ -145,6 +145,6 @@ const PaginationInfo = () => {
 
 		</div>
 	);
-}
+};
 
 export default PaginationInfo;

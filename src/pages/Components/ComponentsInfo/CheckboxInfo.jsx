@@ -125,6 +125,16 @@ const CheckboxInfo = () => {
 									<td>array of objects</td>
 									<td>A list of checkboxes. Object <code>label</code> and <code>value</code> is required</td>
 								</tr>
+								<tr>
+									<td><code>onChange</code></td>
+									<td>func</td>
+									<td>Callback function when a value is changed</td>
+								</tr>
+								<tr>
+									<td><code>selectedValue</code></td>
+									<td>string</td>
+									<td>Pre selected value</td>
+								</tr>
 							</tbody>
 						</table>
 					</div>

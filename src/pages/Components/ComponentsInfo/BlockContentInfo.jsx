@@ -61,6 +61,34 @@ const BlockContentInfo = () => {
 					</div>
 				</div>
 			</div>
+			<Divider light className="mb-3" />
+
+			<div className="row mb-3">
+				<div className="col-lg-12">
+					<Title size={2} className="mt-3">Props</Title>
+					<table className="col-lg-12">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>children</code></td>
+								<td>Required node</td>
+								<td>Content within the wrapper</td>
+							</tr>
+							<tr>
+								<td><code>sectionNumber</code></td>
+								<td>Optional number or string</td>
+								<td>Optional rendering of a page number</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	);
 };

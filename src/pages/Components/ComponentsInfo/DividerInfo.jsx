@@ -1,6 +1,6 @@
 import React from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Link, Paragraph, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const codeExample = `
 // React
@@ -60,6 +60,11 @@ const DividerInfo = () => (
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
+							<td><code>className</code></td>
+							<td>string</td>
+							<td>Optional container class</td>
+						</tr>
 						<tr>
 							<td><code>dark</code></td>
 							<td>bool</td>

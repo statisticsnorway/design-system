@@ -144,6 +144,11 @@ const InputInfo = () => {
 							</thead>
 							<tbody>
 								<tr>
+									<td><code>ariaLabel</code></td>
+									<td>string</td>
+									<td>Defines a string value that labels input element, use if label is not visible</td>
+								</tr>
+								<tr>
 									<td><code>disabled</code></td>
 									<td>bool</td>
 									<td>Toggles disabled state</td>
@@ -177,6 +182,11 @@ const InputInfo = () => {
 									<td><code>negative</code></td>
 									<td>bool</td>
 									<td>Changes design</td>
+								</tr>
+								<tr>
+									<td><code>placeholder</code></td>
+									<td>string</td>
+									<td>Placeholder text</td>
 								</tr>
 								<tr>
 									<td><code>searchField</code></td>

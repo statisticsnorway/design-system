@@ -184,6 +184,31 @@ const DropdownInfo = () => {
 									<td>array of objects</td>
 									<td>Object <code>title</code> and <code>id</code> is required</td>
 								</tr>
+								<tr>
+									<td><code>onSelect</code></td>
+									<td>func</td>
+									<td>Callback function when a title is selected</td>
+								</tr>
+								<tr>
+									<td><code>open</code></td>
+									<td>bool</td>
+									<td>Selected state of dropdown</td>
+								</tr>
+								<tr>
+									<td><code>placeholder</code></td>
+									<td>string</td>
+									<td>Placeholder for dropdown</td>
+								</tr>
+								<tr>
+									<td><code>searchable</code></td>
+									<td>bool</td>
+									<td>If true, dropdown is searchable</td>
+								</tr>
+								<tr>
+									<td><code>selectedItem</code></td>
+									<td>object</td>
+									<td>Selected element in dropdown</td>
+								</tr>
 							</tbody>
 						</table>
 					</div>

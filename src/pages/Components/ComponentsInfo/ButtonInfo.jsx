@@ -203,6 +203,16 @@ const ButtonInfo = () => {
 								<td>Decides if the button is disabled</td>
 							</tr>
 							<tr>
+								<td><code>icon</code></td>
+								<td>node</td>
+								<td>Renders an icon</td>
+							</tr>
+							<tr>
+								<td><code>negative</code></td>
+								<td>bool</td>
+								<td>Changes design</td>
+							</tr>
+							<tr>
 								<td><code>onClick</code></td>
 								<td>function</td>
 								<td>Callback for button click</td>

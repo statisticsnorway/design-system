@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, RadioGroup, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Link, RadioGroup, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Norsk teksforklaring kommer her.
@@ -139,8 +139,17 @@ const RadioButtonInfo = () => {
 								</tr>
 							</tbody>
 						</table>
-					</div>
 
+						<Divider className="mt-3 mb-3" />
+
+						<div>
+							<Text>Depends on</Text>
+							<ul>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/RadioButton" isExternal>RadioButton</Link></li>
+								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+							</ul>
+						</div>
+					</div>
 
 				</div>
 			)}

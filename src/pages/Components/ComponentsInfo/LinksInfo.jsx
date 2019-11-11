@@ -195,6 +195,11 @@ const LinksInfo = () => {
 									<td>Required. Something that renders to wrap the link around</td>
 								</tr>
 								<tr>
+									<td><code>className</code></td>
+									<td>string</td>
+									<td>Optional container class</td>
+								</tr>
+								<tr>
 									<td><code>href</code></td>
 									<td>string</td>
 									<td>Required. Destination for navigation</td>

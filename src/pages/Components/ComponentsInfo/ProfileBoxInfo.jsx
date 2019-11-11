@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Button, Divider, LeadParagraph, Link, Paragraph, ProfileBox, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { Button, Divider, LeadParagraph, Paragraph, ProfileBox, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Profiled box content are used by various type of content such as statistic,

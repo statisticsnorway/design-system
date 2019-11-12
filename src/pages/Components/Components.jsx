@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
-import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
+import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
+import { ArrowRight } from 'react-feather';
 import TreeMenu from '@components/TreeMenu/TreeMenu';
 import AccordionInfo from './ComponentsInfo/AccordionInfo';
 import BlockContentInfo from './ComponentsInfo/BlockContentInfo';
@@ -26,82 +27,49 @@ import TabsInfo from './ComponentsInfo/TabsInfo';
 import TypographyInfo from './ComponentsInfo/TypographyInfo';
 import WordExplanationInfo from './ComponentsInfo/WordExplanationInfo';
 import QuotesInfo from './ComponentsInfo/QuotesInfo';
+import ColorPage from '../Color/ColorPage';
+import GridSpacing from '../GridSpacing/GridSpacing';
+import TypographyPage from '../Typography/Typography';
+
+const sidebarMainItems = [
+	{ component: ColorPage, label: 'Farger', path: '/color' },
+	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing' },
+	{ component: TypographyPage, label: 'Typography', path: '/typography-page' },
+];
 
 const sidebarItems = [
-	{
-		label: 'Accordion',
-		path: '/accordion',
-	}, {
-		label: 'Block Content',
-		path: '/block-content',
-	}, {
-		label: 'Breadcrumb',
-		path: '/breadcrumb',
-	}, {
-		label: 'Button',
-		path: '/button',
-	}, {
-		label: 'Dialog',
-		path: '/dialog',
-	}, {
-		label: 'Divider',
-		path: '/divider',
-	}, {
-		label: 'Input',
-		path: '/input',
-	}, {
-		label: 'Fact Box',
-		path: '/fact-box',
-	}, {
-		label: 'Form Error',
-		path: '/form-error',
-	}, {
-		label: 'Key Figures',
-		path: '/key-figures',
-	}, {
-		label: 'Links',
-		path: '/links',
-	}, {
-		label: 'Pagination',
-		path: '/pagination',
-	}, {
-		label: 'Profile Box',
-		path: '/profile-box',
-	}, {
-		label: 'Checkbox',
-		path: '/checkbox',
-	}, {
-		label: 'Dropdown',
-		path: '/dropdown',
-	}, {
-		label: 'Radio Buttons',
-		path: '/radiobutton',
-	}, {
-		label: 'Quotes',
-		path: '/quotes',
-	}, {
-		label: 'Reference',
-		path: '/reference',
-	}, {
-		label: 'SearchBox',
-		path: '/search-box',
-	}, {
-		label: 'Sticky Menu',
-		path: '/sticky-menu',
-	}, {
-		label: 'Tabs',
-		path: '/tabs',
-	}, {
-		label: 'Typography',
-		path: '/typography',
-	},
-	{
-		label: 'Word Explanation',
-		path: '/word-explanation',
-	},
+	{ component: AccordionInfo, label: 'Accordion', path: '/accordion' },
+	{ component: BlockContentInfo, label: 'Block Content', path: '/block-content' },
+	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb' },
+	{ component: ButtonInfo, label: 'Button', path: '/button' },
+	{ component: DialogInfo, label: 'Dialog', path: '/dialog' },
+	{ component: DividerInfo, label: 'Divider', path: '/divider' },
+	{ component: InputInfo, label: 'Input', path: '/input' },
+	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box' },
+	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
+	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures' },
+	{ component: LinksInfo, label: 'Links', path: '/links' },
+	{ component: PaginationInfo, label: 'Pagination', path: '/pagination' },
+	{ component: ProfileBoxInfo, label: 'Profile Box', path: '/profile-box' },
+	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox' },
+	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown' },
+	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton' },
+	{ component: QuotesInfo, label: 'Quotes', path: '/quotes' },
+	{ component: ReferenceInfo, label: 'Reference', path: '/reference' },
+	{ component: SearchBoxInfo, label: 'SearchBox', path: '/search-box' },
+	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu' },
+	{ component: TabsInfo, label: 'Tabs', path: '/tabs' },
+	{ component: TypographyInfo, label: 'Typography', path: '/typography' },
+	{ component: WordExplanationInfo, label: 'Word Explanation', path: '/word-explanation' },
 ];
 
 sidebarItems.sort((a, b) => ((a.label > b.label) ? 1 : -1));
+
+const leadParagraphText = `
+Her er en oversikt over komponentene i SSBs designsystem.
+Komponentene skal brukes i nye og eksisterende digitale prosjekter hvor SSB er avsender.
+Med hver komponent følger det begrunnelser for designvalg, kode og eksempler slik at du raskt kan komme i gang med ditt prosjekt.
+`;
 
 const Components = withRouter(({ history, match }) => {
 	const selectedComponent = matchPath(history.location.pathname, { path: '/components/:component' });
@@ -112,7 +80,7 @@ const Components = withRouter(({ history, match }) => {
 	};
 
 	return (
-		<div className="components page-wrapper">
+		<div className="components-page page-wrapper">
 			<aside>
 				<TreeMenu
 					activeItem={activeMenuItem}
@@ -124,36 +92,37 @@ const Components = withRouter(({ history, match }) => {
 			<section className="container-fluid">
 				<Switch>
 					<Route exact path={match.url}>
-						<div className="row">
-							<Title size={2} className="col-lg-12">Komponenter</Title>
-							<div className="col-lg-12">
-								<Paragraph>En oversikt over hvilke elementer (komponenter) som er tilgjengelige i designsystemet.</Paragraph>
-							</div>
+						<Title size={1} className="col-lg-12">Komponenter</Title>
+						<div className="col-lg-12 mb-5">
+							<LeadParagraph>{leadParagraphText}</LeadParagraph>
+						</div>
+						<div className="col-lg-12">
+							<Title size={2}>Grunnprinsipper</Title>
+						</div>
+						<div className="col-lg-12 mb-5 navigator-grid">
+							{sidebarMainItems.map(it => (
+								<a className="nav-item" href={`#${match.url}${it.path}`}>
+									<img className="component-icon" alt={it.label} />
+									<Title size={3}>{it.label}</Title>
+									<ArrowRight className="arrow-right" />
+								</a>
+							))}
+						</div>
+						<div className="col-lg-12">
+							<Title size={2}>Komponenter</Title>
+						</div>
+						<div className="col-lg-12 navigator-grid">
+							{sidebarItems.map(it => (
+								<a className="nav-item" href={`#${match.url}${it.path}`}>
+									<img className="component-icon" alt={it.label} />
+									<Title size={3}>{it.label}</Title>
+									<ArrowRight className="arrow-right" />
+								</a>
+							))}
 						</div>
 					</Route>
-					<Route path={`${match.url}/accordion`} component={AccordionInfo} />
-					<Route path={`${match.url}/block-content`} component={BlockContentInfo} />
-					<Route path={`${match.url}/breadcrumb`} component={BreadcrumbInfo} />
-					<Route path={`${match.url}/button`} component={ButtonInfo} />
-					<Route path={`${match.url}/dialog`} component={DialogInfo} />
-					<Route path={`${match.url}/divider`} component={DividerInfo} />
-					<Route path={`${match.url}/input`} component={InputInfo} />
-					<Route path={`${match.url}/fact-box`} component={FactBoxInfo} />
-					<Route path={`${match.url}/form-error`} component={FormErrorInfo} />
-					<Route path={`${match.url}/key-figures`} component={KeyFiguresInfo} />
-					<Route path={`${match.url}/links`} component={LinksInfo} />
-					<Route path={`${match.url}/checkbox`} component={CheckboxInfo} />
-					<Route path={`${match.url}/pagination`} component={PaginationInfo} />
-					<Route path={`${match.url}/profile-box`} component={ProfileBoxInfo} />
-					<Route path={`${match.url}/dropdown`} component={DropdownInfo} />
-					<Route path={`${match.url}/quotes`} component={QuotesInfo} />
-					<Route path={`${match.url}/radiobutton`} component={RadioButtonInfo} />
-					<Route path={`${match.url}/reference`} component={ReferenceInfo} />
-					<Route path={`${match.url}/search-box`} component={SearchBoxInfo} />
-					<Route path={`${match.url}/sticky-menu`} component={StickyMenuInfo} />
-					<Route path={`${match.url}/tabs`} component={TabsInfo} />
-					<Route path={`${match.url}/typography`} component={TypographyInfo} />
-					<Route path={`${match.url}/word-explanation`} component={WordExplanationInfo} />
+					{sidebarMainItems.map(it => <Route key={it.path} path={`${match.url}${it.path}`} component={it.component} />)}
+					{sidebarItems.map(it => <Route key={it.path} path={`${match.url}${it.path}`} component={it.component} />)}
 				</Switch>
 			</section>
 		</div>

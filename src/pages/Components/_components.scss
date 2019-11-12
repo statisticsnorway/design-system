@@ -1,4 +1,10 @@
-.components {
+@keyframes bump {
+  0% { margin-left: 0; }
+  50% { margin-left: 4px; }
+  100% { margin-left: 0; }
+}
+
+.components-page {
   display: grid;
   flex-grow: 1;
   grid-template-columns: 200px calc(100% - 200px);
@@ -11,5 +17,40 @@
 
   > section {
     border-left: 1px solid $ssb-dark-5;
+  }
+
+  .navigator-grid {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .nav-item {
+    align-items: center;
+    border: 1px solid $ssb-dark-2;
+    border-top: 5px solid $ssb-green-3;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    justify-content: space-between;
+    padding: 30px;
+
+    .component-icon {
+      height: 120px;
+      width: 120px;
+    }
+
+    .arrow-right {
+      color: $ssb-green-3;
+    }
+
+    &:hover {
+      .arrow-right {
+        animation-duration: .2s;
+        animation-name: bump;
+      }
+    }
   }
 }

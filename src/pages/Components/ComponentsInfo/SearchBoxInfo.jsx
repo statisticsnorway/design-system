@@ -74,12 +74,22 @@ const SearchBoxInfo = () => {
 						<div className="col-lg-6">
 							<p>{overviewTextFactbox}</p>
 						</div>
-						<div className="col-lg-6">
-							<Input
-								ariaLabel="Input field Search"
-								placeholder="Search text"
-								searchField
-							/>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
+								<Input
+									ariaLabel="Input field Search"
+									placeholder="Search text"
+									searchField
+								/>
+							</div>
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Input
+									ariaLabel="Input field Search"
+									placeholder="Search text"
+									searchField
+									negative
+								/>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

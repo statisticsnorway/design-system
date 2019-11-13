@@ -104,9 +104,15 @@ const ButtonInfo = () => {
 								Eksempel på en kritisk aksjon er “send inn” på et besetillingsskjema eller “logg inn” på en innloggingstjeneste.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 d-flex flex-row">
-							<Button primary>Primary</Button>
-							<Button primary disabled>Primary</Button>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
+								<Button primary>Primary</Button>
+								<Button primary disabled>Primary</Button>
+							</div>
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Button negative primary>Primary</Button>
+								<Button negative primary disabled>Primary</Button>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
@@ -126,9 +132,15 @@ const ButtonInfo = () => {
 								Den kan brukes sammen men primærknappen for å skape et hierarki, eller sammen med andre sekundærknapper for å indikere likt hierarki.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 d-flex flex-row">
-							<Button>Secondary</Button>
-							<Button disabled>Secondary</Button>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
+								<Button>Secondary</Button>
+								<Button disabled>Secondary</Button>
+							</div>
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Button negative>Secondary</Button>
+								<Button negative disabled>Secondary</Button>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
@@ -147,9 +159,15 @@ const ButtonInfo = () => {
 								Både primær- og sekundærknapp kan ha ikon hvis det er viktig å kommunisere hva knappen gjør, eller for å tydeliggjøre forskjellen mellom knapper.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 d-flex flex-row">
-							<Button primary><ChevronDown size="18" />&nbsp;Primary</Button>
-							<Button><ChevronDown size="18" />&nbsp;Secondary</Button>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
+								<Button primary><ChevronDown size="18" />&nbsp;Primary</Button>
+								<Button><ChevronDown size="18" />&nbsp;Secondary</Button>
+							</div>
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Button negative primary><ChevronDown size="18" />&nbsp;Primary</Button>
+								<Button negative><ChevronDown size="18" />&nbsp;Secondary</Button>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
@@ -163,15 +181,21 @@ const ButtonInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Ikke-aktiv knapp</Title>
-						<div className="col-lg-12">
+						<div className="col-lg-6">
 							<Paragraph>
 								En ikke-aktiv knapp er grået ut og er ikke klikkbar. Den har heller ikke hover animasjon.
 								Dette er for å indikere til brukeren at det ikke er noen funksjonalitet bak knappen.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 d-flex flex-row">
-							<Button primary disabled>Primary</Button>
-							<Button disabled>Secondary</Button>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
+								<Button primary disabled>Primary</Button>
+								<Button disabled>Secondary</Button>
+							</div>
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Button primary disabled>Primary</Button>
+								<Button disabled>Secondary</Button>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode4Clicked} />

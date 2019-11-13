@@ -107,11 +107,11 @@ const LinksInfo = () => {
 								Ordinære lenker kan blir brukt både i løpende tekst og som frittstående lenker.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 row">
-							<div className="col-lg-6">
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
 								<Link href=" ">Link text</Link>
 							</div>
-							<div className="col-lg-6 dark-background">
+							<div className="d-flex justify-content-center negative-wrapper">
 								<Link href=" " negative>Link text</Link>
 							</div>
 						</div>
@@ -133,11 +133,11 @@ const LinksInfo = () => {
 								Men de kan også blir brukt sammen med andre lenker med ikon for å differensiere eller indikere forskjellig funksjonalitet.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 row">
-							<div className="col-lg-6">
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
 								<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
-							<div className="col-lg-6 dark-background">
+							<div className="d-flex justify-content-center negative-wrapper">
 								<Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
 						</div>
@@ -158,13 +158,13 @@ const LinksInfo = () => {
 								Profilerte lenker brukes for å presisere hierarki og de kan bli brukt i kombinasjon med andre typer lenker for å fremheve viktighet.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 row">
-							<div className="col-lg-6">
-								<Link href=" " linkType="profiled">Link text</Link><br />
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
+								<Link className="mr-4" href=" " linkType="profiled">Link text</Link><br />
 								<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
-							<div className="col-lg-6 dark-background">
-								<Link negative href=" " linkType="profiled">Link text</Link><br />
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Link className="mr-4" negative href=" " linkType="profiled">Link text</Link><br />
 								<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
 						</div>

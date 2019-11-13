@@ -92,9 +92,12 @@ const InputInfo = () => {
 								When clicked by the user the blinking line indicates that it is ready for typing.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 row">
-							<div className="col-lg-7">
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
 								<Input label="Label" />
+							</div>
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Input negative label="Label" />
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -117,9 +120,12 @@ const InputInfo = () => {
 								Underneath the form an error message will be displayed in order to explain how to fix the error.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 row">
-							<div className="col-lg-7">
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
 								<Input label="Label" error errorMessage="Her gikk det galt" />
+							</div>
+							<div className="d-flex justify-content-center negative-wrapper">
+								<Input negative label="Label" error errorMessage="Her gikk det galt" />
 							</div>
 						</div>
 						<div className="col-lg-12">

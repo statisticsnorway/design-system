@@ -66,11 +66,11 @@ const QuotesInfo = () => {
 						<div className="col-lg-6">
 							<p>{overviewText}</p>
 						</div>
-						<div className="col-lg-6 row">
-							<div className="col-lg-6">
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex mb-4">
 								<Quote>Default text here</Quote>
 							</div>
-							<div className="col-lg-6 dark-background">
+							<div className="d-flex justify-content-center negative-wrapper">
 								<Quote negative>Negative text here</Quote>
 							</div>
 						</div>

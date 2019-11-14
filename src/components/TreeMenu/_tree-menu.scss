@@ -1,7 +1,14 @@
 .tree-menu-wrapper {
-
   display: flex;
+  flex-direction: column;
   position: relative;
+
+  .tree-title {
+    @include roboto;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
   .items-section {
     background: $ssb-white;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Link } from '@statisticsnorway/ssb-component-library';
 import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 import Components from '@pages/Components/Components';
@@ -10,10 +9,6 @@ import logo from '@public/ssb-logo-white.svg';
 import { Facebook, Linkedin, Rss, Twitter } from 'react-feather';
 
 const NoMatchPage = () => <h3>404 - Not found</h3>;
-const slogan = `
-Offisiell statistikk om det norske
-samfunnet siden 1876
-`;
 const socialLinks = [
 	{
 		link: 'https://www.facebook.com/statistisksentralbyra/',
@@ -65,9 +60,7 @@ const App = () => (
 			</main>
 		</div>
 		<footer>
-			<Footer logo={logo}>
-				{/* Insert mega menu */}
-			</Footer>
+			<Footer logo={logo} />
 		</footer>
 	</div>
 );

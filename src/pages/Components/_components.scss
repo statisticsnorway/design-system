@@ -19,6 +19,18 @@
     border-left: 1px solid $ssb-dark-5;
   }
 
+  @media #{$mobile} {
+    grid-template-columns: 100%;
+
+    > aside {
+      display: none;
+    }
+
+    > section {
+      border-left: 0;
+    }
+  }
+
   .navigator-grid {
     display: grid;
     grid-column-gap: 20px;

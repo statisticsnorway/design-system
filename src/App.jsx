@@ -37,8 +37,6 @@ const socialLinks = [
 	},
 ];
 
-const footerLink = <Link href="https://www.ssb.no/">Statistisk Sentralbyrå © 2019</Link>;
-
 const App = () => (
 	<div className="app">
 		<div className="app-content">
@@ -67,7 +65,7 @@ const App = () => (
 			</main>
 		</div>
 		<footer>
-			<Footer scrollToTop link={footerLink} logo={logo} slogan={slogan} socialLinks={socialLinks}>
+			<Footer logo={logo}>
 				{/* Insert mega menu */}
 			</Footer>
 		</footer>

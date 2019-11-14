@@ -16,9 +16,9 @@
     "lint:css": "stylelint '**/*.scss'"
   },
   "dependencies": {
-    "@babel/runtime": "^7.6.2",
-    "@statisticsnorway/ssb-component-library": "^1.1.15",
-    "core-js": "^3.2.1",
+    "@babel/runtime": "^7.7.2",
+    "@statisticsnorway/ssb-component-library": "^1.1.16",
+    "core-js": "^3.4.1",
     "gh-pages": "^2.1.1",
     "history": "^4.10.1",
     "prismjs": "^1.17.1",
@@ -31,10 +31,10 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
@@ -59,7 +59,7 @@
     "jest": "^24.9.0",
     "node-sass": "^4.12.0",
     "path": "^0.12.7",
-    "sass": "^1.23.0",
+    "sass": "^1.23.3",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "stylelint": "^10.1.0",
@@ -68,7 +68,7 @@
     "terser-webpack-plugin": "^1.4.1",
     "url-loader": "^2.1.0",
     "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.8.1",
     "webpack-merge": "^4.2.2"
   },

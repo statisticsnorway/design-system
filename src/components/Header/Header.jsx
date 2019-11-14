@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import { Link, Tabs, Title } from '@statisticsnorway/ssb-component-library';
@@ -20,7 +19,7 @@ const items = [
 	},
 ];
 
-const Header = withRouter(({ history }) => (
+const Header = withRouter(({ history, match }) => (
 	<div className="header-component-wrapper">
 		<div className="upper-section">
 			<div className="logo-and-title">
@@ -33,7 +32,11 @@ const Header = withRouter(({ history }) => (
 		</div>
 		<nav className="lower-section">
 			<div>
-				<Tabs items={items} onClick={e => history.push(e)} />
+				<Tabs
+					activeOnInit={match.path}
+					items={items}
+					onClick={e => history.push(e)}
+				/>
 			</div>
 			<div className="links">
 				<Link
@@ -46,9 +49,5 @@ const Header = withRouter(({ history }) => (
 		</nav>
 	</div>
 ));
-
-Header.defaultProps = {};
-
-Header.propTypes = {};
 
 export default Header;

@@ -27,11 +27,12 @@ const TypographyPage = () => (
 		</Paragraph>
 		<Paragraph>
 			Hvis et spesielt ikon ikke finnes i dette biblioteket, er det greit å finne et ikon fra et annet bibliotek så lenge det har likhet med feather-ikonene:
-			<ul>
-				<li>Lett avrundede hjørner</li>
-				<li>Vennlig stil</li>
-			</ul>
 		</Paragraph>
+		<ul>
+			<li>Lett avrundede hjørner</li>
+			<li>Vennlig stil</li>
+		</ul>
+
 		<Paragraph>Men husk at uansett må ikonet godkjennes av ansvarlig designer før det blir implementert. Hvis det ikke er egnet, vil designer lage et.</Paragraph>
 		<Paragraph>Spesielle ikoner som er unike for SSB vil våre interne designere lage. Kontakt profilansvarlig for spesielle ønsker.</Paragraph>
 	</div>

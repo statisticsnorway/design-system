@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Link } from '@statisticsnorway/ssb-component-library';
 import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 import Components from '@pages/Components/Components';
@@ -10,10 +9,6 @@ import logo from '@public/ssb-logo-white.svg';
 import { Facebook, Linkedin, Rss, Twitter } from 'react-feather';
 
 const NoMatchPage = () => <h3>404 - Not found</h3>;
-const slogan = `
-Offisiell statistikk om det norske
-samfunnet siden 1876
-`;
 const socialLinks = [
 	{
 		link: 'https://www.facebook.com/statistisksentralbyra/',
@@ -39,35 +34,61 @@ const socialLinks = [
 
 const App = () => (
 	<div className="app">
-		<div className="app-content">
-			<header className="app-header">
-				<Header />
-			</header>
-			<main>
-				<Switch>
-					<Route exact path="/">
+		<Switch>
+			<Route exact path="/">
+				<div className="app-content">
+					<header className="app-header">
+						<Header />
+					</header>
+					<main>
 						<Welcome />
-					</Route>
-					<Route path="/design-system"> {/* For GH pages */}
+					</main>
+				</div>
+			</Route>
+			<Route path="/design-system"> {/* For GH pages */}
+				<div className="app-content">
+					<header className="app-header">
+						<Header />
+					</header>
+					<main>
 						<Welcome />
-					</Route>
-					<Route path="/get-started">
+					</main>
+				</div>
+			</Route>
+			<Route path="/get-started">
+				<div className="app-content">
+					<header className="app-header">
+						<Header />
+					</header>
+					<main>
 						<Welcome />
-					</Route>
-					<Route path="/components" component={Components}>
+					</main>
+				</div>
+			</Route>
+			<Route path="/components" component={Components}>
+				<div className="app-content">
+					<header className="app-header">
+						<Header />
+					</header>
+					<main>
 						<Components />
-					</Route>
-					<Route path="/templates">
+					</main>
+				</div>
+			</Route>
+			<Route path="/templates">
+				<div className="app-content">
+					<header className="app-header">
+						<Header />
+					</header>
+					<main>
 						<Templates />
-					</Route>
-					<Route component={NoMatchPage} />
-				</Switch>
-			</main>
-		</div>
+					</main>
+				</div>
+			</Route>
+			<Route component={NoMatchPage} />
+		</Switch>
 		<footer>
-			<Footer logo={logo}>
-				{/* Insert mega menu */}
-			</Footer>
+			<Footer logo={logo} />
 		</footer>
 	</div>
 );

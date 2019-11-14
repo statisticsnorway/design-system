@@ -6,33 +6,31 @@ import { Divider } from '@statisticsnorway/ssb-component-library';
 import { NavLink, withRouter } from 'react-router-dom';
 
 const TreeMenu = withRouter(({
-	activeItem, items, mainItems, match, history,
+	activeItem, items, mainItems, match,
 }) => {
-	const node = useRef();
+	// const node = useRef();
 	const itemsSection = useRef();
-	const [activeSubmenu, changeSubmenu] = useState({});
-	const [sectionWidth, updateWidth] = useState(0);
+	// const [activeSubmenu, changeSubmenu] = useState({});
+	// const [sectionWidth, updateWidth] = useState(0);
 
-	const handleClickOutside = e => {
-		if (!node.current.contains(e.target)) {
-			changeSubmenu({});
-		}
-	};
+	// const handleClickOutside = e => {
+	// 	if (!node.current.contains(e.target)) {
+	// 		changeSubmenu({});
+	// 	}
+	// };
 
-	useEffect(() => console.log('Props changed in Tree: ', history), [match]);
-
-	useEffect(() => {
-		updateWidth(itemsSection.current.offsetWidth);
-
-		if (Object.keys(activeSubmenu).length > 0) {
-			document.addEventListener('mousedown', handleClickOutside);
-		} else {
-			document.removeEventListener('mousedown', handleClickOutside);
-		}
-		return () => {
-			document.removeEventListener('mousedown', handleClickOutside);
-		};
-	}, [activeSubmenu]);
+	// useEffect(() => {
+	// 	updateWidth(itemsSection.current.offsetWidth);
+	//
+	// 	if (Object.keys(activeSubmenu).length > 0) {
+	// 		document.addEventListener('mousedown', handleClickOutside);
+	// 	} else {
+	// 		document.removeEventListener('mousedown', handleClickOutside);
+	// 	}
+	// 	return () => {
+	// 		document.removeEventListener('mousedown', handleClickOutside);
+	// 	};
+	// }, [activeSubmenu]);
 
 	return (
 		<div className="tree-menu-wrapper roboto">
@@ -72,20 +70,20 @@ const TreeMenu = withRouter(({
 						)
 				))}
 			</div>
-			{Object.keys(activeSubmenu).length > 0 && (
-				<div ref={node} className="items-section sub-menu" style={{ right: `-${sectionWidth}px` }}>
-					{activeSubmenu.items.map(item => (
-						<NavLink
-							to={match.path + item.path}
-							activeClassName="selected"
-							key={item.path}
-							className={`tree-node ${(activeSubmenu.path + item.path) === activeItem && 'selected'}`}
-						>
-							{item.label}
-						</NavLink>
-					))}
-				</div>
-			)}
+			{/*{Object.keys(activeSubmenu).length > 0 && (*/}
+			{/*	<div ref={node} className="items-section sub-menu" style={{ right: `-${sectionWidth}px` }}>*/}
+			{/*		{activeSubmenu.items.map(item => (*/}
+			{/*			<NavLink*/}
+			{/*				to={match.path + item.path}*/}
+			{/*				activeClassName="selected"*/}
+			{/*				key={item.path}*/}
+			{/*				className={`tree-node ${(activeSubmenu.path + item.path) === activeItem && 'selected'}`}*/}
+			{/*			>*/}
+			{/*				{item.label}*/}
+			{/*			</NavLink>*/}
+			{/*		))}*/}
+			{/*	</div>*/}
+			{/*)}*/}
 		</div>
 	);
 });

@@ -4,10 +4,10 @@ import { Divider, LeadParagraph, Paragraph, Title, Tabs, WordExplanation } from 
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
 	}, {
 		title: 'Props',

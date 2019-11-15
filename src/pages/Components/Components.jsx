@@ -5,7 +5,6 @@ import { LeadParagraph, Link, Title } from '@statisticsnorway/ssb-component-libr
 import { ArrowRight } from 'react-feather';
 import TreeMenu from '@components/TreeMenu/TreeMenu';
 import AccordionInfo from './ComponentsInfo/AccordionInfo';
-import BlockContentInfo from './ComponentsInfo/BlockContentInfo';
 import BreadcrumbInfo from './ComponentsInfo/BreadcrumbInfo';
 import ButtonInfo from './ComponentsInfo/ButtonInfo';
 import CheckboxInfo from './ComponentsInfo/CheckboxInfo';
@@ -69,7 +68,6 @@ const sidebarMainItems = [
 
 const sidebarItems = [
 	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
-	{ component: BlockContentInfo, label: 'Block Content', path: '/block-content' },
 	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },

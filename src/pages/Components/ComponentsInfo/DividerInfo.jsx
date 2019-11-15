@@ -23,26 +23,24 @@ const DividerInfo = () => (
 			article page, statistic page etc.
 		</LeadParagraph>
 
-		<Divider />
+		<Divider className="mb-3" />
 
-		<div className="mt-3">
-			<div className="row mb-3">
-				<Title size={2} className="col-lg-12">Divider</Title>
-				<div className="col-lg-6">
-					<Paragraph>
-						The divider element is always place at the end of a content grouping and before the start of the next new grouping.
-					</Paragraph>
-				</div>
-				<div className="col-lg-6">
-					<div className="mb-3"><Divider dark /></div>
-					<Divider light />
-				</div>
-				<div className="col-lg-6">
-					<CodeSnippet code={codeExample} language="jsx" />
-				</div>
-				<div className="col-lg-6">
-					<CodeSnippet code={codeExampleHtml} language="html" />
-				</div>
+		<div className="row mb-3">
+			<Title size={2} className="col-lg-12">Divider</Title>
+			<div className="col-lg-6">
+				<Paragraph>
+					The divider element is always place at the end of a content grouping and before the start of the next new grouping.
+				</Paragraph>
+			</div>
+			<div className="col-lg-6">
+				<div className="mb-3"><Divider dark /></div>
+				<Divider light />
+			</div>
+			<div className="col-lg-6">
+				<CodeSnippet code={codeExample} language="jsx" />
+			</div>
+			<div className="col-lg-6">
+				<CodeSnippet code={codeExampleHtml} language="html" />
 			</div>
 		</div>
 

@@ -16,14 +16,14 @@ When in hover it instead underlines the hovered element with a dark rectangle.
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
 	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -74,76 +74,73 @@ const TabsInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+
+			<Divider className="mb-3" />
 
 			{activeTab === '/overview' && (
-				<div className="mt-3">
-					<div className="row mt-3">
-						<Title size={2} className="col-lg-12">Tabs</Title>
-						<div className="col-lg-6">
-							<p>{overviewTextTabs}</p>
-						</div>
-						<div className="col-lg-6">
-							<Tabs
-								activeOnInit="item1/"
-								items={[
-									{ title: 'Item 1', path: 'item1/' },
-									{ title: 'Item 2', path: 'item2/' },
-									{ title: 'Item 3', path: 'item3/' },
-								]}
-							/>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
-						</div>
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">Tabs</Title>
+					<div className="col-lg-6">
+						<p>{overviewTextTabs}</p>
 					</div>
-
-					<Divider light className="mb-3 mt-3" />
-
-					<div>
-						<Title size={2} className="mt-3">Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>activeOnInit</code></td>
-									<td>string</td>
-									<td>Will set an item to be active on init</td>
-								</tr>
-								<tr>
-									<td><code>items</code></td>
-									<td>arrayOf(title, path) </td>
-									<td>Sets label and path of buttons</td>
-								</tr>
-								<tr>
-									<td><code>onClick</code></td>
-									<td>func</td>
-									<td>Callback function</td>
-								</tr>
-							</tbody>
-						</table>
+					<div className="col-lg-6">
+						<Tabs
+							activeOnInit="item1/"
+							items={[
+								{ title: 'Item 1', path: 'item1/' },
+								{ title: 'Item 2', path: 'item2/' },
+								{ title: 'Item 3', path: 'item3/' },
+							]}
+						/>
 					</div>
-
+					<div className="col-lg-12">
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider light />
+						{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+					</div>
 				</div>
 			)}
+
 			{activeTab === '/rationale' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Underscore</Title>
-						<div className="col-lg-6">
-							By using an underscore underneath the tabs, it becomes easier for the user to separate between the content.
-							Especially using different colors between green and dark and having the underscore pop up during active hover.
-						</div>
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">Underscore</Title>
+					<div className="col-lg-6">
+						By using an underscore underneath the tabs, it becomes easier for the user to separate between the content.
+						Especially using different colors between green and dark and having the underscore pop up during active hover.
 					</div>
+				</div>
+			)}
+
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2} className="mb-3">Props</Title>
+					<table className="col-lg-12">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>activeOnInit</code></td>
+								<td>string</td>
+								<td>Will set an item to be active on init</td>
+							</tr>
+							<tr>
+								<td><code>items</code></td>
+								<td>arrayOf(title, path) </td>
+								<td>Sets label and path of buttons</td>
+							</tr>
+							<tr>
+								<td><code>onClick</code></td>
+								<td>func</td>
+								<td>Callback function</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			)}
 		</div>

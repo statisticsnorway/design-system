@@ -18,14 +18,14 @@ When a radio button is selected by the user, a dark circle will fill the selecte
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
 	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -77,10 +77,11 @@ const RadioButtonInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+
+			<Divider className="mb-3" />
 
 			{activeTab === '/overview' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">RadioGroup</Title>
 						<div className="col-lg-6">
@@ -103,54 +104,53 @@ const RadioButtonInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
+				</div>
+			)}
 
-					<Divider light className="mb-3" />
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>header</code></td>
+								<td>string</td>
+								<td>Renders a h5 title</td>
+							</tr>
+							<tr>
+								<td><code>items</code></td>
+								<td>arrayOf(label, value) </td>
+								<td>Required items for rendering radio buttons</td>
+							</tr>
+							<tr>
+								<td><code>onChange</code></td>
+								<td>func</td>
+								<td>Callback function when a value is changed </td>
+							</tr>
+							<tr>
+								<td><code>selectedValue</code></td>
+								<td>string</td>
+								<td>Pre selected value</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-3" light />
 
 					<div>
-						<Title size={2}>Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>header</code></td>
-									<td>string</td>
-									<td>Renders a h5 title</td>
-								</tr>
-								<tr>
-									<td><code>items</code></td>
-									<td>arrayOf(label, value) </td>
-									<td>Required items for rendering radio buttons</td>
-								</tr>
-								<tr>
-									<td><code>onChange</code></td>
-									<td>func</td>
-									<td>Callback function when a value is changed </td>
-								</tr>
-								<tr>
-									<td><code>selectedValue</code></td>
-									<td>string</td>
-									<td>Pre selected value</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<Divider className="mt-3 mb-3" />
-
-						<div>
-							<Text>Depends on</Text>
-							<ul>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/RadioButton" isExternal>RadioButton</Link></li>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
-							</ul>
-						</div>
+						<Text>Depends on</Text>
+						<ul>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/RadioButton" isExternal>RadioButton</Link></li>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+						</ul>
 					</div>
-
 				</div>
 			)}
 		</div>

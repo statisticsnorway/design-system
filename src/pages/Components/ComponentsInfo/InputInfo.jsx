@@ -9,6 +9,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/rationale',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -78,10 +81,10 @@ const InputInfo = () => {
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/overview' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Input</Title>
 						<div className="col-lg-6">
@@ -135,96 +138,96 @@ const InputInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleErrorHtml} language="html" />}
 						</div>
 					</div>
+				</div>
+			)}
 
-					<Divider light className="mb-3" />
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>ariaLabel</code></td>
+								<td>string</td>
+								<td>Defines a string value that labels input element, use if label is not visible</td>
+							</tr>
+							<tr>
+								<td><code>disabled</code></td>
+								<td>bool</td>
+								<td>Toggles disabled state</td>
+							</tr>
+							<tr>
+								<td><code>error</code></td>
+								<td>bool</td>
+								<td>Changes design</td>
+							</tr>
+							<tr>
+								<td><code>errorMessage</code></td>
+								<td>string</td>
+								<td>Renders an error message underneath input field</td>
+							</tr>
+							<tr>
+								<td><code>handleChange</code></td>
+								<td>func</td>
+								<td>Callback function</td>
+							</tr>
+							<tr>
+								<td><code>id</code></td>
+								<td>string</td>
+								<td>ID to connect label with input field</td>
+							</tr>
+							<tr>
+								<td><code>label</code></td>
+								<td>string</td>
+								<td>Label text</td>
+							</tr>
+							<tr>
+								<td><code>negative</code></td>
+								<td>bool</td>
+								<td>Changes design</td>
+							</tr>
+							<tr>
+								<td><code>placeholder</code></td>
+								<td>string</td>
+								<td>Placeholder text</td>
+							</tr>
+							<tr>
+								<td><code>searchField</code></td>
+								<td>bool</td>
+								<td>Ads search icon with click</td>
+							</tr>
+							<tr>
+								<td><code>submitCallback</code></td>
+								<td>func</td>
+								<td>Callback for onSubmit</td>
+							</tr>
+							<tr>
+								<td><code>type</code></td>
+								<td>string</td>
+								<td>Changes input type</td>
+							</tr>
+							<tr>
+								<td><code>value</code></td>
+								<td>string</td>
+								<td>Input value. Can be initiated with a value</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-3" light />
 
 					<div>
-						<Title size={2}>Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>ariaLabel</code></td>
-									<td>string</td>
-									<td>Defines a string value that labels input element, use if label is not visible</td>
-								</tr>
-								<tr>
-									<td><code>disabled</code></td>
-									<td>bool</td>
-									<td>Toggles disabled state</td>
-								</tr>
-								<tr>
-									<td><code>error</code></td>
-									<td>bool</td>
-									<td>Changes design</td>
-								</tr>
-								<tr>
-									<td><code>errorMessage</code></td>
-									<td>string</td>
-									<td>Renders an error message underneath input field</td>
-								</tr>
-								<tr>
-									<td><code>handleChange</code></td>
-									<td>func</td>
-									<td>Callback function</td>
-								</tr>
-								<tr>
-									<td><code>id</code></td>
-									<td>string</td>
-									<td>ID to connect label with input field</td>
-								</tr>
-								<tr>
-									<td><code>label</code></td>
-									<td>string</td>
-									<td>Label text</td>
-								</tr>
-								<tr>
-									<td><code>negative</code></td>
-									<td>bool</td>
-									<td>Changes design</td>
-								</tr>
-								<tr>
-									<td><code>placeholder</code></td>
-									<td>string</td>
-									<td>Placeholder text</td>
-								</tr>
-								<tr>
-									<td><code>searchField</code></td>
-									<td>bool</td>
-									<td>Ads search icon with click</td>
-								</tr>
-								<tr>
-									<td><code>submitCallback</code></td>
-									<td>func</td>
-									<td>Callback for onSubmit</td>
-								</tr>
-								<tr>
-									<td><code>type</code></td>
-									<td>string</td>
-									<td>Changes input type</td>
-								</tr>
-								<tr>
-									<td><code>value</code></td>
-									<td>string</td>
-									<td>Input value. Can be initiated with a value</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<Divider className="mt-3 mb-3" />
-
-						<div>
-							<Text>Depends on</Text>
-							<ul>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/InputError" isExternal>Form error</Link></li>
-							</ul>
-						</div>
+						<Text>Depends on</Text>
+						<ul>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/InputError" isExternal>Form error</Link></li>
+						</ul>
 					</div>
 				</div>
 			)}

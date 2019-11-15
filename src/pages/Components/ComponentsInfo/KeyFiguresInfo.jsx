@@ -27,8 +27,8 @@ const tabItems = [
 		title: 'Begrunnelse',
 		path: '/begrunnelse',
 	}, {
-		title: 'Tilgjengelighet',
-		path: '/tilgjengelighet',
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -78,9 +78,9 @@ const KeyFiguresInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 			{activeTab === '/oversikt' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Nøkkeltall</Title>
 						<div className="col-lg-6">
@@ -103,68 +103,11 @@ const KeyFiguresInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
-
-					<Divider light className="mb-3" />
-
-					<div>
-						<Title size={2}>Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>icon</code></td>
-									<td>node</td>
-									<td>Renders an icon</td>
-								</tr>
-								<tr>
-									<td><code>number</code></td>
-									<td>string or number</td>
-									<td>Large number to be displayed</td>
-								</tr>
-								<tr>
-									<td><code>numberDescription</code></td>
-									<td>string</td>
-									<td>Subtitle</td>
-								</tr>
-								<tr>
-									<td><code>size</code></td>
-									<td>small, medium or large</td>
-									<td>Change size of number and icon</td>
-								</tr>
-								<tr>
-									<td><code>title</code></td>
-									<td>string</td>
-									<td>Displays title</td>
-								</tr>
-								<tr>
-									<td><code>time</code></td>
-									<td>string or number</td>
-									<td>Displays time for the number between title and number</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<Divider className="mt-3 mb-3" />
-
-						<div>
-							<Text>Depends on</Text>
-							<ul>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Number" isExternal>Number</Link></li>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
-							</ul>
-						</div>
-					</div>
 				</div>
 			)}
 
 			{activeTab === '/begrunnelse' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Elementstørrelse</Title>
 						<div className="col-lg-6">
@@ -216,7 +159,63 @@ const KeyFiguresInfo = () => {
 							/>
 						</div>
 					</div>
+				</div>
+			)}
 
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>icon</code></td>
+								<td>node</td>
+								<td>Renders an icon</td>
+							</tr>
+							<tr>
+								<td><code>number</code></td>
+								<td>string or number</td>
+								<td>Large number to be displayed</td>
+							</tr>
+							<tr>
+								<td><code>numberDescription</code></td>
+								<td>string</td>
+								<td>Subtitle</td>
+							</tr>
+							<tr>
+								<td><code>size</code></td>
+								<td>small, medium or large</td>
+								<td>Change size of number and icon</td>
+							</tr>
+							<tr>
+								<td><code>title</code></td>
+								<td>string</td>
+								<td>Displays title</td>
+							</tr>
+							<tr>
+								<td><code>time</code></td>
+								<td>string or number</td>
+								<td>Displays time for the number between title and number</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-3" light />
+
+					<div>
+						<Text>Depends on</Text>
+						<ul>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Number" isExternal>Number</Link></li>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+						</ul>
+					</div>
 				</div>
 			)}
 		</div>

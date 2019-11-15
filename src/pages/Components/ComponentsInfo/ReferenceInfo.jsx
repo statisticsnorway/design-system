@@ -22,6 +22,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/begrunnelse',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -103,11 +106,11 @@ const ReferenceInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/oversikt' && (
-				<div className="mt-3">
-					<div className="row mt-3">
+				<div>
+					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">References</Title>
 						<div className="col-lg-6">
 							<p>{overviewText}</p>
@@ -123,35 +126,35 @@ const ReferenceInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
+				</div>
+			)}
 
-					<Divider light className="mt-3 mb-3" />
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2} className="mb-3">Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>referenceList</code></td>
+								<td>arrayOf( href, label, plainText )</td>
+								<td>Required list of objects to render content</td>
+							</tr>
+							<tr>
+								<td><code>title</code></td>
+								<td>string</td>
+								<td>Header text</td>
+							</tr>
+						</tbody>
+					</table>
 
-					<div>
-						<Title size={2} className="mt-3">Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>referenceList</code></td>
-									<td>arrayOf( href, label, plainText )</td>
-									<td>Required list of objects to render content</td>
-								</tr>
-								<tr>
-									<td><code>title</code></td>
-									<td>string</td>
-									<td>Header text</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
-					<Divider className="mt-3 mb-3" />
+					<Divider className="mb-3" light />
 
 					<div>
 						<Text>Depends on</Text>
@@ -161,7 +164,6 @@ const ReferenceInfo = () => {
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title " isExternal>Title </Link></li>
 						</ul>
 					</div>
-
 				</div>
 			)}
 

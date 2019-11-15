@@ -88,30 +88,28 @@ const PaginationInfo = () => {
 				</li>
 			</ul>
 
-			<Divider />
+			<Divider className="mb-3" />
 
-			<div className="mt-3">
-				<div className="row mb-3">
-					<Title size={2} className="col-lg-12">Pagination</Title>
-					<div className="col-lg-6">
-						<Paragraph>
-							Pagination is a component that allows the user to view a subset of sorted data in limited amount. With pagination user
-							can progress to next page by clicking on the numbers which displays how many more pages there are available.
-						</Paragraph>
-					</div>
-					<div className="col-lg-12 mt-3 mb-3">
-						<Pagination items={mockedItems} selectedPage={mockedItems[4]} />
-					</div>
-					<div className="col-lg-12">
-						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-						<Divider light />
-						{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
-						{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
-					</div>
+			<div className="row mb-3">
+				<Title size={2} className="col-lg-12">Pagination</Title>
+				<div className="col-lg-6">
+					<Paragraph>
+						Pagination is a component that allows the user to view a subset of sorted data in limited amount. With pagination user
+						can progress to next page by clicking on the numbers which displays how many more pages there are available.
+					</Paragraph>
+				</div>
+				<div className="col-lg-12 mt-3 mb-3">
+					<Pagination items={mockedItems} selectedPage={mockedItems[4]} />
+				</div>
+				<div className="col-lg-12">
+					<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+					<Divider light />
+					{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+					{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 				</div>
 			</div>
 
-			<Divider light className="mb-3 mt-3" />
+			<Divider light className="mb-3" />
 
 			<div>
 				<Title size={2}>Props</Title>

@@ -29,6 +29,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/begrunnelse',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -76,79 +79,72 @@ const ProfileBoxInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/oversikt' && (
-				<div className="mt-3">
-					<div className="row mt-3">
-						<Title size={2} className="col-lg-12">Profiled box - Statistic</Title>
-						<div className="col-lg-6">
-							<p>{profileBoxStaticText}</p>
-						</div>
-						<div className="col-lg-6">
-							<ProfileBox fileLocation="./not_a_file">
-								<Title size={2}>Profiled box header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Button primary>Handling</Button>
-							</ProfileBox>
-						</div>
-						<div className="col-lg-12 mb-3">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
-						</div>
+				<div className="row mt-3">
+					<Title size={2} className="col-lg-12">Profiled box - Statistic</Title>
+					<div className="col-lg-6">
+						<p>{profileBoxStaticText}</p>
 					</div>
-
-					<Divider light className="mb-3" />
-
-					<div className="row">
-						<div className="col-lg-12">
-							<Title size={2}>Props</Title>
-							<table className="col-lg-12">
-								<thead style={{ textAlign: 'left' }}>
-									<tr>
-										<th><Title size={3}>Prop name</Title></th>
-										<th><Title size={3}>Type</Title></th>
-										<th><Title size={3}>Description</Title></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><code>centered</code></td>
-										<td>bool</td>
-										<td>Centers text</td>
-									</tr>
-									<tr>
-										<td><code>children</code></td>
-										<td>node</td>
-										<td>Required. Fills box with content</td>
-									</tr>
-									<tr>
-										<td><code>fileLocation</code></td>
-										<td>string</td>
-										<td>Path to downloadable file. Ads the download field</td>
-									</tr>
-									<tr>
-										<td><code>onClick</code></td>
-										<td>func</td>
-										<td>Callback function</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+					<div className="col-lg-6">
+						<ProfileBox fileLocation="./not_a_file">
+							<Title size={2}>Profiled box header</Title>
+							<Paragraph>Explain something about something with something clever.</Paragraph>
+							<Button primary>Handling</Button>
+						</ProfileBox>
 					</div>
-
+					<div className="col-lg-12 mb-3">
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider light />
+						{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+					</div>
 				</div>
 			)}
 			{activeTab === '/begrunnelse' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Different designs</Title>
-						<div className="col-lg-6">
-							<p>{rationaleText}</p>
-						</div>
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">Different designs</Title>
+					<div className="col-lg-6">
+						<p>{rationaleText}</p>
 					</div>
+				</div>
+			)}
+
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>centered</code></td>
+								<td>bool</td>
+								<td>Centers text</td>
+							</tr>
+							<tr>
+								<td><code>children</code></td>
+								<td>node</td>
+								<td>Required. Fills box with content</td>
+							</tr>
+							<tr>
+								<td><code>fileLocation</code></td>
+								<td>string</td>
+								<td>Path to downloadable file. Ads the download field</td>
+							</tr>
+							<tr>
+								<td><code>onClick</code></td>
+								<td>func</td>
+								<td>Callback function</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			)}
 		</div>

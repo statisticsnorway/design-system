@@ -25,6 +25,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/begrunnelse',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -63,12 +66,8 @@ const codeHtml = `
 const FactBoxInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -77,31 +76,40 @@ const FactBoxInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/oversikt' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Faktabokser</Title>
-						<div className="col-lg-6">
-							<p>{overviewTextFactbox}</p>
-						</div>
-						<div className="col-lg-6">
-							<FactBox header="This is a header" text="This is paragraph text which explains the accordion" />
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
-						</div>
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">Faktabokser</Title>
+					<div className="col-lg-6">
+						<p>{overviewTextFactbox}</p>
 					</div>
+					<div className="col-lg-6">
+						<FactBox header="This is a header" text="This is paragraph text which explains the accordion" />
+					</div>
+					<div className="col-lg-12">
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider light />
+						{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+					</div>
+				</div>
+			)}
 
-					<Divider light className="mb-3" />
+			{activeTab === '/begrunnelse' && (
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">Boksramme</Title>
+					<div className="col-lg-6">
+						<p>{rationaleText}</p>
+					</div>
+				</div>
+			)}
 
+			{activeTab === '/props' && (
+				<div>
 					<div className="row col-lg-12 ">
-						<Title size={2} className="mt-3">Props</Title>
-						<table className="col-lg-12">
+						<Title size={2}>Props</Title>
+						<table className="col-lg-12 mb-3">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
 									<th><Title size={3}>Prop name</Title></th>
@@ -129,24 +137,13 @@ const FactBoxInfo = () => {
 						</table>
 					</div>
 
-					<Divider className="mt-3" />
+					<Divider className="mb-3" light />
 
-					<div className="mt-3">
+					<div>
 						<Text>Depends on</Text>
 						<ul>
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Accordion" isExternal>Accordion</Link></li>
 						</ul>
-					</div>
-
-				</div>
-			)}
-			{activeTab === '/begrunnelse' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Boksramme</Title>
-						<div className="col-lg-6">
-							<p>{rationaleText}</p>
-						</div>
 					</div>
 				</div>
 			)}

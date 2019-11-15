@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
-import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
+import { LeadParagraph, Link, Title } from '@statisticsnorway/ssb-component-library';
 import { ArrowRight } from 'react-feather';
 import TreeMenu from '@components/TreeMenu/TreeMenu';
 import AccordionInfo from './ComponentsInfo/AccordionInfo';

@@ -10,6 +10,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/rationale',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -97,9 +100,9 @@ const LinksInfo = () => {
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 			{activeTab === '/overview' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Lenker</Title>
 						<div className="col-lg-6">
@@ -175,61 +178,6 @@ const LinksInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={profiledLinksHtml} language="html" />}
 						</div>
 					</div>
-
-					<Divider light className="mb-3" />
-
-					<div>
-						<Title size={2} className="mb-3">Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>children</code></td>
-									<td>node</td>
-									<td>Required. Something that renders to wrap the link around</td>
-								</tr>
-								<tr>
-									<td><code>className</code></td>
-									<td>string</td>
-									<td>Optional container class</td>
-								</tr>
-								<tr>
-									<td><code>href</code></td>
-									<td>string</td>
-									<td>Required. Destination for navigation</td>
-								</tr>
-								<tr>
-									<td><code>icon</code></td>
-									<td>node</td>
-									<td>Renders an icon</td>
-								</tr>
-								<tr>
-									<td><code>isExternal</code></td>
-									<td>bool</td>
-									<td>Will make the link open in new tab. Defaults to <code>false</code></td>
-								</tr>
-								<tr>
-									<td><code>linkType</code></td>
-									<td>string</td>
-									<td>
-										Changes the style. Can be &apos;regular&apos;, &apos;profiled&apos;, or &apos;header&apos;.
-										Defaults to &apos;regular&apos;.
-									</td>
-								</tr>
-								<tr>
-									<td><code>negative</code></td>
-									<td>bool</td>
-									<td>Will change component style. Defaults to <code>false</code></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
 				</div>
 			)}
 
@@ -244,6 +192,61 @@ const LinksInfo = () => {
 							</Paragraph>
 						</div>
 					</div>
+				</div>
+			)}
+
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2} className="mb-3">Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>children</code></td>
+								<td>node</td>
+								<td>Required. Something that renders to wrap the link around</td>
+							</tr>
+							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
+								<td><code>href</code></td>
+								<td>string</td>
+								<td>Required. Destination for navigation</td>
+							</tr>
+							<tr>
+								<td><code>icon</code></td>
+								<td>node</td>
+								<td>Renders an icon</td>
+							</tr>
+							<tr>
+								<td><code>isExternal</code></td>
+								<td>bool</td>
+								<td>Will make the link open in new tab. Defaults to <code>false</code></td>
+							</tr>
+							<tr>
+								<td><code>linkType</code></td>
+								<td>string</td>
+								<td>
+									Changes the style. Can be &apos;regular&apos;, &apos;profiled&apos;, or &apos;header&apos;.
+									Defaults to &apos;regular&apos;.
+								</td>
+							</tr>
+							<tr>
+								<td><code>negative</code></td>
+								<td>bool</td>
+								<td>Will change component style. Defaults to <code>false</code></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			)}
 

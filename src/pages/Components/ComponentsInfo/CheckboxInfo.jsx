@@ -22,6 +22,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/rationale',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -75,70 +78,67 @@ const CheckboxInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/overview' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">CheckboxGroup</Title>
-						<div className="col-lg-6">
-							<p>{overviewTextCheckbox}</p>
-						</div>
-						<div className="col-lg-6">
-							<CheckboxGroup
-								header="Header"
-								items={[
-									{ label: 'Checkbox 1', value: 'checkbox1' },
-									{ label: 'Checkbox 2', value: 'checkbox2' },
-									{ label: 'Checkbox 3', value: 'checkbox3', disabled: true },
-								]}
-							/>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
-						</div>
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">CheckboxGroup</Title>
+					<div className="col-lg-6">
+						<p>{overviewTextCheckbox}</p>
 					</div>
-
-					<Divider light className="mb-3" />
-
-					<div>
-						<Title size={2}>Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>header</code></td>
-									<td>string</td>
-									<td>Header above checkbox</td>
-								</tr>
-								<tr>
-									<td><code>items</code></td>
-									<td>array of objects</td>
-									<td>A list of checkboxes. Object <code>label</code> and <code>value</code> is required</td>
-								</tr>
-								<tr>
-									<td><code>onChange</code></td>
-									<td>func</td>
-									<td>Callback function when a value is changed</td>
-								</tr>
-								<tr>
-									<td><code>selectedValue</code></td>
-									<td>string</td>
-									<td>Pre selected value</td>
-								</tr>
-							</tbody>
-						</table>
+					<div className="col-lg-6">
+						<CheckboxGroup
+							header="Header"
+							items={[
+								{ label: 'Checkbox 1', value: 'checkbox1' },
+								{ label: 'Checkbox 2', value: 'checkbox2' },
+								{ label: 'Checkbox 3', value: 'checkbox3', disabled: true },
+							]}
+						/>
 					</div>
+					<div className="col-lg-12">
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider light />
+						{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
+					</div>
+				</div>
+			)}
 
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>header</code></td>
+								<td>string</td>
+								<td>Header above checkbox</td>
+							</tr>
+							<tr>
+								<td><code>items</code></td>
+								<td>array of objects</td>
+								<td>A list of checkboxes. Object <code>label</code> and <code>value</code> is required</td>
+							</tr>
+							<tr>
+								<td><code>onChange</code></td>
+								<td>func</td>
+								<td>Callback function when a value is changed</td>
+							</tr>
+							<tr>
+								<td><code>selectedValue</code></td>
+								<td>string</td>
+								<td>Pre selected value</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			)}
 		</div>

@@ -23,14 +23,14 @@ Dropdown searchable
 
 const tabItems = [
 	{
-		title: 'Overview',
+		title: 'Oversikt',
 		path: '/overview',
 	}, {
-		title: 'Rationale',
+		title: 'Begrunnelse',
 		path: '/rationale',
 	}, {
-		title: 'Accessibility',
-		path: '/accessibility',
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -111,10 +111,10 @@ const DropdownInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/overview' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Dropdown</Title>
 						<div className="col-lg-6">
@@ -161,73 +161,70 @@ const DropdownInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
-
-					<div>
-						<Title size={2}>Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>header</code></td>
-									<td>string</td>
-									<td>Header above dropdown</td>
-								</tr>
-								<tr>
-									<td><code>items</code></td>
-									<td>array of objects</td>
-									<td>Object <code>title</code> and <code>id</code> is required</td>
-								</tr>
-								<tr>
-									<td><code>onSelect</code></td>
-									<td>func</td>
-									<td>Callback function when a title is selected</td>
-								</tr>
-								<tr>
-									<td><code>open</code></td>
-									<td>bool</td>
-									<td>Selected state of dropdown</td>
-								</tr>
-								<tr>
-									<td><code>placeholder</code></td>
-									<td>string</td>
-									<td>Placeholder for dropdown</td>
-								</tr>
-								<tr>
-									<td><code>searchable</code></td>
-									<td>bool</td>
-									<td>If true, dropdown is searchable</td>
-								</tr>
-								<tr>
-									<td><code>selectedItem</code></td>
-									<td>object</td>
-									<td>Selected element in dropdown</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
 				</div>
 			)}
 
 			{activeTab === '/rationale' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Green indicator</Title>
-						<div className="col-lg-6">
-							<Paragraph>
-								A 5px green rectangle indicator is added together with the light green hover in order to provide a clear
-								indication for users with lower-vision or vision impairment.
-							</Paragraph>
-						</div>
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">Green indicator</Title>
+					<div className="col-lg-6">
+						<Paragraph>
+							A 5px green rectangle indicator is added together with the light green hover in order to provide a clear
+							indication for users with lower-vision or vision impairment.
+						</Paragraph>
 					</div>
+				</div>
+			)}
 
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>header</code></td>
+								<td>string</td>
+								<td>Header above dropdown</td>
+							</tr>
+							<tr>
+								<td><code>items</code></td>
+								<td>array of objects</td>
+								<td>Object <code>title</code> and <code>id</code> is required</td>
+							</tr>
+							<tr>
+								<td><code>onSelect</code></td>
+								<td>func</td>
+								<td>Callback function when a title is selected</td>
+							</tr>
+							<tr>
+								<td><code>open</code></td>
+								<td>bool</td>
+								<td>Selected state of dropdown</td>
+							</tr>
+							<tr>
+								<td><code>placeholder</code></td>
+								<td>string</td>
+								<td>Placeholder for dropdown</td>
+							</tr>
+							<tr>
+								<td><code>searchable</code></td>
+								<td>bool</td>
+								<td>If true, dropdown is searchable</td>
+							</tr>
+							<tr>
+								<td><code>selectedItem</code></td>
+								<td>object</td>
+								<td>Selected element in dropdown</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			)}
 		</div>

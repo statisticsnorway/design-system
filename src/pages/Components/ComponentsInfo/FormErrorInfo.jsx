@@ -17,6 +17,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/begrunnelse',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -62,12 +65,8 @@ const errorMessages = [
 const FormErrorInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -76,10 +75,10 @@ const FormErrorInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/oversikt' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Form error</Title>
 						<div className="col-lg-6">
@@ -95,39 +94,38 @@ const FormErrorInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
 					</div>
+				</div>
+			)}
 
-					<Divider light className="mb-3" />
-
-					<div className="row col-lg-12 ">
-						<Title size={2} className="mt-3">Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>className</code></td>
-									<td>string</td>
-									<td>Optional container class</td>
-								</tr>
-								<tr>
-									<td><code>errorMessages</code></td>
-									<td>array</td>
-									<td>Renders list items</td>
-								</tr>
-								<tr>
-									<td><code>title</code></td>
-									<td>string</td>
-									<td>Renders a title</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
+			{activeTab === '/props' && (
+				<div className="row col-lg-12 ">
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
+								<td><code>errorMessages</code></td>
+								<td>array</td>
+								<td>Renders list items</td>
+							</tr>
+							<tr>
+								<td><code>title</code></td>
+								<td>string</td>
+								<td>Renders a title</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			)}
 		</div>

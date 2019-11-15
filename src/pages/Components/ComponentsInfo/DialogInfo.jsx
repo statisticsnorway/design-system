@@ -27,8 +27,8 @@ const tabItems = [
 		title: 'Begrunnelse',
 		path: '/begrunnelse',
 	}, {
-		title: 'Tilgjengelighet',
-		path: '/tilgjengelighet',
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -95,10 +95,10 @@ const DialogInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/oversikt' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Error warning</Title>
 						<div className="col-lg-6">
@@ -139,57 +139,55 @@ const DialogInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
-
-					<div>
-						<Title size={2}>Props</Title>
-						<table className="col-lg-12">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>children</code></td>
-									<td>Required node</td>
-									<td>Content within the wrapper</td>
-								</tr>
-								<tr>
-									<td><code>title</code></td>
-									<td>Required string</td>
-									<td>Bold text as a title</td>
-								</tr>
-								<tr>
-									<td><code>type</code></td>
-									<td>info or warning</td>
-									<td>Changes color and icon</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<Divider className="mt-3" />
-
-						<div className="mt-3">
-							<Text>Depends on</Text>
-							<ul>
-								<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Paragraph" isExternal>Paragraph</Link></li>
-							</ul>
-						</div>
-					</div>
-
 				</div>
 			)}
 			{activeTab === '/begrunnelse' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Colors</Title>
-						<div className="col-lg-6">
-							The red color of warning was chosen because red being associated with error. The blue color was chosen to differentiate from the red and the green.
-							It has also been tested through different colorblindness test to ensure that the colors would still provide difference in contrast.
-						</div>
+				<div className="row mb-3">
+					<Title size={2} className="col-lg-12">Colors</Title>
+					<div className="col-lg-6">
+						The red color of warning was chosen because red being associated with error. The blue color was chosen to differentiate from the red and the green.
+						It has also been tested through different colorblindness test to ensure that the colors would still provide difference in contrast.
+					</div>
+				</div>
+			)}
+
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>children</code></td>
+								<td>Required node</td>
+								<td>Content within the wrapper</td>
+							</tr>
+							<tr>
+								<td><code>title</code></td>
+								<td>Required string</td>
+								<td>Bold text as a title</td>
+							</tr>
+							<tr>
+								<td><code>type</code></td>
+								<td>info or warning</td>
+								<td>Changes color and icon</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-3" light />
+
+					<div className="mb-3">
+						<Text>Depends on</Text>
+						<ul>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Paragraph" isExternal>Paragraph</Link></li>
+						</ul>
 					</div>
 				</div>
 			)}

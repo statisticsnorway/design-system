@@ -13,6 +13,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/rationale',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -118,9 +121,9 @@ const AccordionInfo = () => {
 			</Paragraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 			{activeTab === '/overview' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Primær Accordion</Title>
 						<div className="col-lg-6">
@@ -189,61 +192,12 @@ const AccordionInfo = () => {
 
 					<Divider light className="mb-3" />
 
-					<div className="row mb-3">
-						<div className="col-lg-12">
-							<Title size={2} className="mt-3">Props</Title>
-							<table className="col-lg-12">
-								<thead style={{ textAlign: 'left' }}>
-									<tr>
-										<th><Title size={3}>Prop name</Title></th>
-										<th><Title size={3}>Type</Title></th>
-										<th><Title size={3}>Description</Title></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><code>children</code></td>
-										<td>node</td>
-										<td>Accordion content</td>
-									</tr>
-									<tr>
-										<td><code>header</code></td>
-										<td>string</td>
-										<td>Header text</td>
-									</tr>
-									<tr>
-										<td><code>openByDefault</code></td>
-										<td>bool</td>
-										<td>Will set the open state on init</td>
-									</tr>
-									<tr>
-										<td><code>primary</code></td>
-										<td>bool</td>
-										<td>Changes type and design of accordion</td>
-									</tr>
-									<tr>
-										<td><code>subHeader</code></td>
-										<td>string</td>
-										<td>Renders the header with the sub header design</td>
-									</tr>
-								</tbody>
-							</table>
 
-							<Divider className="mt-3" />
-
-							<div className="mt-3">
-								<Text>Depends on</Text>
-								<ul>
-									<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
-								</ul>
-							</div>
-						</div>
-					</div>
 				</div>
 			)}
 
 			{activeTab === '/rationale' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title className="col-lg-12" size={2}>Primary and Secondary accordions</Title>
 						<div className="col-lg-6">
@@ -268,6 +222,57 @@ const AccordionInfo = () => {
 						</div>
 					</div>
 
+				</div>
+			)}
+
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>children</code></td>
+								<td>node</td>
+								<td>Accordion content</td>
+							</tr>
+							<tr>
+								<td><code>header</code></td>
+								<td>string</td>
+								<td>Header text</td>
+							</tr>
+							<tr>
+								<td><code>openByDefault</code></td>
+								<td>bool</td>
+								<td>Will set the open state on init</td>
+							</tr>
+							<tr>
+								<td><code>primary</code></td>
+								<td>bool</td>
+								<td>Changes type and design of accordion</td>
+							</tr>
+							<tr>
+								<td><code>subHeader</code></td>
+								<td>string</td>
+								<td>Renders the header with the sub header design</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-3" light />
+
+					<div>
+						<Text>Depends on</Text>
+						<ul>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+						</ul>
+					</div>
 				</div>
 			)}
 		</div>

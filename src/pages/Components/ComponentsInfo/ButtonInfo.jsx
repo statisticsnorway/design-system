@@ -10,6 +10,9 @@ const tabItems = [
 	}, {
 		title: 'Begrunnelse',
 		path: '/rationale',
+	}, {
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -92,10 +95,10 @@ const ButtonInfo = () => {
 				</li>
 			</ul>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider />
+			<Divider className="mb-3" />
 
 			{activeTab === '/overview' && (
-				<div className="mt-3">
+				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Primærknapp</Title>
 						<div className="col-lg-6">
@@ -204,9 +207,40 @@ const ButtonInfo = () => {
 							{activeCodeTab4 === '/html' && <CodeSnippet code={codeExample4Html} language="html" />}
 						</div>
 					</div>
+				</div>
+			)}
 
-					<Divider className="mb-3" />
+			{activeTab === '/rationale' && (
+				<div>
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Avrundede hjørnen</Title>
+						<Paragraph className="col-lg-6">
+							Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
+							Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
+						</Paragraph>
+					</div>
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Fylt bakgrunn</Title>
+						<Paragraph className="col-lg-6">
+							For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren.
+							Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
+						</Paragraph>
+					</div>
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Understrek ved hoved</Title>
+						<Paragraph className="col-lg-6">
+							Alle knappevarianter har understrek ved hover for å tilfredsstille WCAG 2.0-kravene.
+						</Paragraph>
+					</div>
+				</div>
+			)}
+
+			{activeTab === '/props' && (
+				<div>
 					<Title size={2} className="mt-3 mb-3">Props</Title>
+
 					<table className="col-lg-12">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
@@ -256,34 +290,6 @@ const ButtonInfo = () => {
 							</tr>
 						</tbody>
 					</table>
-
-				</div>
-			)}
-
-			{activeTab === '/rationale' && (
-				<div className="mt-3">
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Avrundede hjørnen</Title>
-						<Paragraph className="col-lg-6">
-							Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
-							Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
-						</Paragraph>
-					</div>
-
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Fylt bakgrunn</Title>
-						<Paragraph className="col-lg-6">
-							For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren.
-							Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
-						</Paragraph>
-					</div>
-
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Understrek ved hoved</Title>
-						<Paragraph className="col-lg-6">
-							Alle knappevarianter har understrek ved hover for å tilfredsstille WCAG 2.0-kravene.
-						</Paragraph>
-					</div>
 				</div>
 			)}
 		</div>

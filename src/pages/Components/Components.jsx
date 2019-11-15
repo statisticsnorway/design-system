@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
-import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
+import { LeadParagraph, Link, Title } from '@statisticsnorway/ssb-component-library';
 import { ArrowRight } from 'react-feather';
 import TreeMenu from '@components/TreeMenu/TreeMenu';
 import AccordionInfo from './ComponentsInfo/AccordionInfo';
@@ -30,37 +30,67 @@ import QuotesInfo from './ComponentsInfo/QuotesInfo';
 import ColorPage from '../Color/ColorPage';
 import GridSpacing from '../GridSpacing/GridSpacing';
 import TypographyPage from '../Typography/Typography';
+import accordionIcon from '../../../public/customIcons/accordion.svg';
+import breadcrumbIcon from '../../../public/customIcons/breadcrumb.svg';
+import buttonsIcon from '../../../public/customIcons/buttons.svg';
+import cardsIcon from '../../../public/customIcons/cards.svg';
+import checkboxIcon from '../../../public/customIcons/checkbox.svg';
+import colorIcon from '../../../public/customIcons/color.svg';
+import dialogIcon from '../../../public/customIcons/dialog.svg';
+import dividersIcon from '../../../public/customIcons/dividers.svg';
+import dropdownIcon from '../../../public/customIcons/dropdown.svg';
+import factboxIcon from '../../../public/customIcons/factbox.svg';
+import footerIcon from '../../../public/customIcons/footer.svg';
+import graphsIcon from '../../../public/customIcons/graphs.svg';
+import gridIcon from '../../../public/customIcons/grid.svg';
+import headerIcon from '../../../public/customIcons/header.svg';
+import inputIcon from '../../../public/customIcons/input.svg';
+import keyfiguresIcon from '../../../public/customIcons/keyfigures.svg';
+import linksIcon from '../../../public/customIcons/links.svg';
+import mapIcon from '../../../public/customIcons/map.svg';
+import paginationIcon from '../../../public/customIcons/pagination.svg';
+import radiobuttonIcon from '../../../public/customIcons/radiobutton.svg';
+import referenceIcon from '../../../public/customIcons/reference.svg';
+import responsiveIcon from '../../../public/customIcons/responsive.svg';
+import searchIcon from '../../../public/customIcons/search.svg';
+import sidenavigationIcon from '../../../public/customIcons/sidenavigation.svg';
+import stickymenuIcon from '../../../public/customIcons/stickymenu.svg';
+import tableIcon from '../../../public/customIcons/table.svg';
+import tabsIcon from '../../../public/customIcons/tabs.svg';
+import tagsIcon from '../../../public/customIcons/tags.svg';
+import typographyIcon from '../../../public/customIcons/typography.svg';
+import wordExplanationIcon from '../../../public/customIcons/wordexplanation.svg';
 
 const sidebarMainItems = [
-	{ component: ColorPage, label: 'Farger', path: '/color' },
-	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing' },
-	{ component: TypographyPage, label: 'Typography', path: '/typography-page' },
+	{ component: ColorPage, label: 'Farger', path: '/color', icon: colorIcon },
+	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing', icon: gridIcon },
+	{ component: TypographyPage, label: 'Typography', path: '/typography-page', icon: typographyIcon },
 ];
 
 const sidebarItems = [
-	{ component: AccordionInfo, label: 'Accordion', path: '/accordion' },
+	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
 	{ component: BlockContentInfo, label: 'Block Content', path: '/block-content' },
-	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb' },
-	{ component: ButtonInfo, label: 'Button', path: '/button' },
-	{ component: DialogInfo, label: 'Dialog', path: '/dialog' },
-	{ component: DividerInfo, label: 'Divider', path: '/divider' },
-	{ component: InputInfo, label: 'Input', path: '/input' },
-	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box' },
+	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
+	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
+	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
+	{ component: DialogInfo, label: 'Dialog', path: '/dialog', icon: dialogIcon },
+	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
+	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
+	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
 	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
-	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures' },
-	{ component: LinksInfo, label: 'Links', path: '/links' },
-	{ component: PaginationInfo, label: 'Pagination', path: '/pagination' },
+	{ component: InputInfo, label: 'Input', path: '/input', icon: inputIcon },
+	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures', icon: keyfiguresIcon },
+	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },
+	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
 	{ component: ProfileBoxInfo, label: 'Profile Box', path: '/profile-box' },
-	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox' },
-	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown' },
-	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton' },
+	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
 	{ component: QuotesInfo, label: 'Quotes', path: '/quotes' },
-	{ component: ReferenceInfo, label: 'Reference', path: '/reference' },
-	{ component: SearchBoxInfo, label: 'SearchBox', path: '/search-box' },
-	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu' },
-	{ component: TabsInfo, label: 'Tabs', path: '/tabs' },
-	{ component: TypographyInfo, label: 'Typography', path: '/typography' },
-	{ component: WordExplanationInfo, label: 'Word Explanation', path: '/word-explanation' },
+	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
+	{ component: SearchBoxInfo, label: 'SearchBox', path: '/search-box', icon: searchIcon },
+	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
+	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
+	{ component: TypographyInfo, label: 'Typography', path: '/typography', icon: typographyIcon },
+	{ component: WordExplanationInfo, label: 'Word Explanation', path: '/word-explanation', icon: wordExplanationIcon },
 ];
 
 sidebarItems.sort((a, b) => ((a.label > b.label) ? 1 : -1));
@@ -92,7 +122,7 @@ const Components = withRouter(({ match }) => (
 					<div className="col-lg-12 mb-5 navigator-grid">
 						{sidebarMainItems.map(it => (
 							<a className="nav-item" href={`#${match.url}${it.path}`}>
-								<img className="component-icon" alt={it.label} />
+								<img className="component-icon" src={it.icon} alt={it.label} />
 								<Title size={3}>{it.label}</Title>
 								<ArrowRight className="arrow-right" />
 							</a>
@@ -104,7 +134,7 @@ const Components = withRouter(({ match }) => (
 					<div className="col-lg-12 navigator-grid">
 						{sidebarItems.map(it => (
 							<a className="nav-item" href={`#${match.url}${it.path}`}>
-								<img className="component-icon" alt={it.label} />
+								<img className="component-icon" src={it.icon} alt={it.label} />
 								<Title size={3}>{it.label}</Title>
 								<ArrowRight className="arrow-right" />
 							</a>

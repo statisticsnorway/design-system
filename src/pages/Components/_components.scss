@@ -48,6 +48,7 @@
     height: 260px;
     justify-content: space-between;
     padding: 30px;
+    text-decoration: none;
 
     .component-icon {
       height: 120px;
@@ -56,12 +57,14 @@
 
     .arrow-right {
       color: $ssb-green-3;
+      transition: all .1s;
     }
 
     &:hover {
+      border-color: $ssb-green-3;
+
       .arrow-right {
-        animation-duration: .2s;
-        animation-name: bump;
+        margin-left: 4px;
       }
     }
   }

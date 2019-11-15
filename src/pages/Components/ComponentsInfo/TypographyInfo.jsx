@@ -105,13 +105,23 @@ const TypographyInfo = () => {
 						<div className="col-lg-6">
 							<p>{overviewTextHeadings}</p>
 						</div>
-						<div className="col-lg-6">
-							<Title size={1}>Title h1</Title>
-							<Title size={2}>Title h2</Title>
-							<Title size={3}>Title h3</Title>
-							<Title size={4}>Title h4</Title>
-							<Title size={5}>Title h5</Title>
-							<Title size={6}>Title h6</Title>
+						<div className="col-lg-6 divider-left d-flex flex-row align-items-center">
+							<div className="d-flex flex-column align-items-center mb-4">
+								<Title size={1}>Title 1</Title>
+								<Title size={2}>Title 2</Title>
+								<Title size={3}>Title 3</Title>
+								<Title size={4}>Title 4</Title>
+								<Title size={5}>Title 5</Title>
+								<Title size={6}>Title 6</Title>
+							</div>
+							<div className="d-flex flex-column align-items-center negative-wrapper">
+								<Title negative size={1}>Title 1</Title>
+								<Title negative size={2}>Title 2</Title>
+								<Title negative size={3}>Title 3</Title>
+								<Title negative size={4}>Title 4</Title>
+								<Title negative size={5}>Title 5</Title>
+								<Title negative size={6}>Title 6</Title>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -128,9 +138,15 @@ const TypographyInfo = () => {
 						<div className="col-lg-6">
 							<p>{overviewRegularText}</p>
 						</div>
-						<div className="col-lg-6">
-							<Text>This is default Text<br /></Text>
-							<Text small>This is small Text</Text>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex flex-column align-items-center mb-4">
+								<Text>This is default Text<br /></Text>
+								<Text small>This is small Text</Text>
+							</div>
+							<div className="d-flex flex-column align-items-center negative-wrapper">
+								<Text negative>This is default Text<br /></Text>
+								<Text negative small>This is small Text</Text>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<div className="mt-3">
@@ -146,9 +162,16 @@ const TypographyInfo = () => {
 
 					<div className="row mt-3">
 						<Title size={2} className="col-lg-12">Paragraf</Title>
-						<div className="col-lg-6">
-							<Paragraph>This is paragraph</Paragraph>
-							<LeadParagraph>This is a lead paragraph</LeadParagraph>
+						<div className="col-lg-6">Coming soon</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex flex-column align-items-center mb-4">
+								<Paragraph>This is paragraph</Paragraph>
+								<LeadParagraph>This is a lead paragraph</LeadParagraph>
+							</div>
+							<div className="d-flex flex-column align-items-center negative-wrapper">
+								<Paragraph negative>This is paragraph</Paragraph>
+								<LeadParagraph negative>This is a lead paragraph</LeadParagraph>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

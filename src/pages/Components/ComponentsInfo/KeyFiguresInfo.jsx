@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Divider, LeadParagraph, KeyFigures, Paragraph, Tabs, Title, Text, Link } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Home } from 'react-feather';
+import KeyFiguresExample from '../../../../public/customIcons/keyFiguresExample.svg';
 
 const leadParagraphText = `
 Nøkkeltall er et visuelt element som viser fremhevede hovedtall. Nøkkeltall kan vises i 3 størrelser ut fra hvordan de skal brukes. 
@@ -93,7 +94,7 @@ const KeyFiguresInfo = () => {
 								numberDescription="husholdninger"
 								time="2018"
 								size="small"
-								icon={<Home size="140" />}
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
 						<div className="col-lg-12">
@@ -125,7 +126,7 @@ const KeyFiguresInfo = () => {
 								numberDescription="husholdninger"
 								time="2018"
 								size="large"
-								icon={<Home size="280" />}
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
 					</div>
@@ -140,7 +141,7 @@ const KeyFiguresInfo = () => {
 								numberDescription="husholdninger"
 								time="2018"
 								size="medium"
-								icon={<Home size="210" />}
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
 					</div>
@@ -155,7 +156,7 @@ const KeyFiguresInfo = () => {
 								numberDescription="husholdninger"
 								time="2018"
 								size="small"
-								icon={<Home size="140" />}
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
 					</div>

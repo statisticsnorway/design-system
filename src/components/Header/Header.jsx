@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import { Link, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import { GitHub } from 'react-feather';
@@ -21,7 +21,7 @@ const items = [
 
 const Header = withRouter(({ history, match }) => (
 	<div className="header-component-wrapper">
-		<div className="upper-section">
+		<div className="left-section">
 			<div className="logo-and-title">
 				<div className="home-nav" onClick={() => history.push('/')}>
 					<img src={logo} alt="logo" />
@@ -30,21 +30,26 @@ const Header = withRouter(({ history, match }) => (
 				<Title size={2}>Designsystem</Title>
 			</div>
 		</div>
-		<nav className="lower-section">
+		<nav className="right-section">
 			<div>
-				<Tabs
-					activeOnInit={match.path}
-					items={items}
-					onClick={e => history.push(e)}
-				/>
-			</div>
-			<div className="links">
-				<Link
+				{items.map(it => (
+					<NavLink
+						className="header-navigation roboto"
+						activeClassName="active"
+						activeOnInit={match.path}
+						items={items}
+						to={it.path}
+						onClick={() => history.push(it.path)}
+					>{it.title}
+					</NavLink>
+				))}
+				<a
+					className="header-navigation roboto"
 					href="https://github.com/statisticsnorway/ssb-component-library"
-					isExternal
-					icon={<GitHub size="18" />}
-				>&nbsp;Github
-				</Link>
+					target="_blank"
+					rel="noopener noreferrer"
+				><GitHub size="18" />&nbsp;Github
+				</a>
 			</div>
 		</nav>
 	</div>

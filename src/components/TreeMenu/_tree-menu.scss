@@ -56,6 +56,8 @@
         cursor: pointer;
 
         .arrow-icon {
+          animation-duration: .2s;
+          animation-name: bump;
           color: $ssb-white;
         }
       }

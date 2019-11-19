@@ -1,6 +1,6 @@
 @keyframes bump {
   0% { margin-left: 0; }
-  50% { margin-left: 4px; }
+  50% { margin-left: 10px; }
   100% { margin-left: 0; }
 }
 
@@ -57,14 +57,14 @@
 
     .arrow-right {
       color: $ssb-green-3;
-      transition: all .1s;
     }
 
     &:hover {
       border-color: $ssb-green-3;
 
       .arrow-right {
-        margin-left: 4px;
+        animation-duration: .2s;
+        animation-name: bump;
       }
     }
   }

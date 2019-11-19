@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { References, Divider, LeadParagraph, Link, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
+import { References, Divider, LeadParagraph, Link, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 References is used to credit where the data has been collected from. The reference element also provides a convenient way for users to quickly locate relevant data if wanted.
@@ -113,8 +113,8 @@ const ReferenceInfo = () => {
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">References</Title>
 						<div className="col-lg-6">
-							<p>{overviewText}</p>
-							<p>{referenceWithAdditionalText}</p>
+							<Paragraph>{overviewText}</Paragraph>
+							<Paragraph>{referenceWithAdditionalText}</Paragraph>
 						</div>
 						<div className="col-lg-6">
 							<References title="Sources" referenceList={referenceList} />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, Input, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, Input, LeadParagraph, Link, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Search form are an input element that combines an input form and a clickable search icon 
@@ -72,7 +72,7 @@ const SearchBoxInfo = () => {
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Seach form</Title>
 						<div className="col-lg-6">
-							<p>{overviewTextFactbox}</p>
+							<Paragraph>{overviewTextFactbox}</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex mb-4">

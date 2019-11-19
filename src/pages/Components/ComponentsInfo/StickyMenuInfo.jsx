@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Input, Divider, LeadParagraph, StickyMenu, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Input, Divider, LeadParagraph, Paragraph, StickyMenu, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import { ChevronDown } from 'react-feather';
 
 const leadParagraphText = `
@@ -120,7 +120,7 @@ const StickyMenuInfo = () => {
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Sticky menu</Title>
 						<div className="col-lg-6">
-							<p>{overviewText}</p>
+							<Paragraph>{overviewText}</Paragraph>
 						</div>
 						<div className="col-lg-12">
 							<StickyMenu>

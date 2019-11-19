@@ -7,7 +7,7 @@
 .components-page {
   display: grid;
   flex-grow: 1;
-  grid-template-columns: 200px calc(100% - 200px);
+  grid-template-columns: 255px calc(100% - 255px);
   height: 100%;
 
   > aside {
@@ -42,13 +42,46 @@
     align-items: center;
     border: 1px solid $ssb-dark-2;
     border-top: 5px solid $ssb-green-3;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 260px;
     justify-content: space-between;
     padding: 30px;
+    position: relative;
     text-decoration: none;
+
+    &.coming-soon {
+      border-top-color: $ssb-dark-5;
+
+      .coming-soon-label {
+        align-items: center;
+        background: $ssb-dark-5;
+        color: $ssb-white;
+        display: flex;
+        font-size: 14px;
+        height: 24px;
+        left: 0;
+        padding: 0 6px;
+        position: absolute;
+        top: 20px;
+
+        &:before {
+          border-color: $ssb-dark-5  transparent  $ssb-dark-5 transparent;
+          border-style: solid;
+          border-width: 12px 0 12px 12px;
+          content: '';
+          float: right;
+          height: 0;
+          left: -12px;
+          position: absolute;
+          top: 0;
+          width: 0;
+        }
+      }
+    }
+
+    >.ssb-title {
+      margin-top: 20px;
+    }
 
     .component-icon {
       height: 120px;
@@ -59,12 +92,16 @@
       color: $ssb-green-3;
     }
 
-    &:hover {
-      border-color: $ssb-green-3;
+    &.clickable {
+      cursor: pointer;
 
-      .arrow-right {
-        animation-duration: .2s;
-        animation-name: bump;
+      &:hover {
+        border-color: $ssb-green-3;
+
+        .arrow-right {
+          animation-duration: .2s;
+          animation-name: bump;
+        }
       }
     }
   }

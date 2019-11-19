@@ -48,6 +48,7 @@ import keyfiguresIcon from '../../../public/customIcons/keyfigures.svg';
 import linksIcon from '../../../public/customIcons/links.svg';
 import mapIcon from '../../../public/customIcons/map.svg';
 import paginationIcon from '../../../public/customIcons/pagination.svg';
+import quoteIcon from '../../../public/customIcons/quote.svg';
 import radiobuttonIcon from '../../../public/customIcons/radiobutton.svg';
 import referenceIcon from '../../../public/customIcons/reference.svg';
 import responsiveIcon from '../../../public/customIcons/responsive.svg';
@@ -62,7 +63,7 @@ import wordExplanationIcon from '../../../public/customIcons/wordexplanation.svg
 
 const sidebarMainItems = [
 	{ component: ColorPage, label: 'Farger', path: '/color', icon: colorIcon },
-	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing', icon: gridIcon },
+	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing', icon: gridIcon, comingSoon: true },
 	{ component: TypographyPage, label: 'Typography', path: '/typography-page', icon: typographyIcon },
 ];
 
@@ -82,7 +83,7 @@ const sidebarItems = [
 	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
 	{ component: ProfileBoxInfo, label: 'Profile Box', path: '/profile-box' },
 	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
-	{ component: QuotesInfo, label: 'Quotes', path: '/quotes' },
+	{ component: QuotesInfo, label: 'Quotes', path: '/quotes', icon: quoteIcon },
 	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
 	{ component: SearchBoxInfo, label: 'SearchBox', path: '/search-box', icon: searchIcon },
 	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
@@ -119,11 +120,20 @@ const Components = withRouter(({ match }) => (
 					</div>
 					<div className="col-lg-12 mb-5 navigator-grid">
 						{sidebarMainItems.map(it => (
-							<a className="nav-item" href={`#${match.url}${it.path}`}>
-								<img className="component-icon" src={it.icon} alt={it.label} />
-								<Title size={3}>{it.label}</Title>
-								<ArrowRight className="arrow-right" />
-							</a>
+							it.comingSoon ? (
+								<div className="nav-item coming-soon">
+									<div className="coming-soon-label">Kommer</div>
+									<img className="component-icon" src={it.icon} alt={it.label} />
+									<Title size={3}>{it.label}</Title>
+									<ArrowRight className="arrow-right" />
+								</div>
+							) : (
+								<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
+									<img className="component-icon" src={it.icon} alt={it.label} />
+									<Title size={3}>{it.label}</Title>
+									<ArrowRight className="arrow-right" />
+								</a>
+							)
 						))}
 					</div>
 					<div className="col-lg-12">
@@ -131,11 +141,19 @@ const Components = withRouter(({ match }) => (
 					</div>
 					<div className="col-lg-12 navigator-grid">
 						{sidebarItems.map(it => (
-							<a className="nav-item" href={`#${match.url}${it.path}`}>
-								<img className="component-icon" src={it.icon} alt={it.label} />
-								<Title size={3}>{it.label}</Title>
-								<ArrowRight className="arrow-right" />
-							</a>
+							it.comingSoon ? (
+								<div className="nav-item coming-soon">
+									<img className="component-icon" src={it.icon} alt={it.label} />
+									<Title size={3}>{it.label}</Title>
+									<ArrowRight className="arrow-right" />
+								</div>
+							) : (
+								<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
+									<img className="component-icon" src={it.icon} alt={it.label} />
+									<Title size={3}>{it.label}</Title>
+									<ArrowRight className="arrow-right" />
+								</a>
+							)
 						))}
 					</div>
 				</Route>

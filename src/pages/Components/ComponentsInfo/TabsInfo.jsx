@@ -3,12 +3,17 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-Tabs are a navigational element that allows the user to navigate between related pages or views while retaining the context. 
-It is important to remember that because the tab navigation is a horizontal list, it does not accommodate a long string of text. 
-It is better to try having short and concise wording instead. 
+Faner er navigasjonselementer som gir brukeren muligheten til å navigere mellom relaterte sider eller visning samtidig som
+han beholder konteksten. Husk at selv om faner er en horisontal liste, innebærer den ikke en lang tekststreng. 
+Det er bedre å ha korte og konsiste ord i stedet. 
 `;
+{/*Tabs are a navigational element that allows the user to navigate between related pages or views while retaining the context. 
+It is important to remember that because the tab navigation is a horizontal list, it does not accommodate a long string of text. 
+It is better to try having short and concise wording instead. */}
+
 
 const overviewTextTabs = `
+Norsk tekst inn her.
 Tabs consist of 3 different elements, a label header that describes the content of the tab element. 
 Sub headers that describe each option within the tab and an indicator element that shows active tab by underlining it with a green rectangle. 
 When in hover it instead underlines the hovered element with a dark rectangle.

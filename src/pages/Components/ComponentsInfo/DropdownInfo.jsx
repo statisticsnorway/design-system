@@ -3,14 +3,24 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, Dropdown, LeadParagraph, Paragraph, Title, Tabs } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-The dropdown component is a selection element that pushes a large amount of items into one list that the user can view when selected. 
-This helps to free up a lot of space for items that are not necessary to be viewed at all times.  
+Dropdown komponenten samler flere valg i en liste som brukeren kan åpne og se hvis han velger den. Dette frigir mye plass for 
+informasjon som ikke er nødvendig å ha fremme hele tiden. Hvis det er færre en 5 valg i listen bør du i stedet prøve å vise 
+valgene på en annen måte, f.eks. avhukingsbokser eller radioknapper. Hvis listen blir veldig innholdsrik, sånn som årganger, 
+bør du i stedet bruke søk som sorterer resultat etter brukerens input og som raskt kan gi relevante valg.  
 `;
 
-const overviewText = `
+{/*The dropdown component is a selection element that pushes a large amount of items into one list that the user can view when selected. 
+This helps to free up a lot of space for items that are not necessary to be viewed at all times.
+
 The dropdown component is comprised of a label describing the action of the component and a input form element that allow user to click on, 
 when clicked a list of items will be displayed for the user to choose from. 
 The selected item is highlighted with a dark green color and the hovered item is highlighted with a light green color.  
+*/}  
+
+const overviewText = `
+Dropdown består av en ledetekst som beskriver hva elementet består av og et input-element som brukeren kan klikke på. 
+Ved klikk åpnes en liste å velge fra. Valgt innhold blir uthevet med en mørk grønn farge, mens innhold man bare peker på blir 
+markert med en lys grønn farge.
 `;
 
 const overviewTextPreSelectedValue = `
@@ -134,7 +144,7 @@ const DropdownInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Dropdown Pre-selected Value</Title>
+						<Title size={2} className="col-lg-12">Dropdown med forhåndsvalgt verdi</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextPreSelectedValue}</Paragraph>
 						</div>
@@ -149,7 +159,7 @@ const DropdownInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Dropdown searchable</Title>
+						<Title size={2} className="col-lg-12">Dropdown med søkemulighet</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextSearchable}</Paragraph>
 						</div>
@@ -166,11 +176,14 @@ const DropdownInfo = () => {
 
 			{activeTab === '/rationale' && (
 				<div className="row mb-3">
-					<Title size={2} className="col-lg-12">Green indicator</Title>
+					<Title size={2} className="col-lg-12">Grønn indikator</Title>
 					<div className="col-lg-6">
 						<Paragraph>
-							A 5px green rectangle indicator is added together with the light green hover in order to provide a clear
-							indication for users with lower-vision or vision impairment.
+							En 5px grønn rektangulær indikator vises sammen med den lyse grønne hover-fargen for å 
+							gi en tydeligere indikasjon på valg for brukere med nedsatt syn.
+							
+							{/*A 5px green rectangle indicator is added together with the light green hover in order to provide a clear
+							indication for users with lower-vision or vision impairment.*/}
 						</Paragraph>
 					</div>
 				</div>

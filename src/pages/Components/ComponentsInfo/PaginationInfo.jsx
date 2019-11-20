@@ -75,16 +75,23 @@ const PaginationInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Pagination</Title>
 			<LeadParagraph>
-				The pagination component provides a styled list of links of links through numbering them starting from 1.
-				There are also two buttons allowing user to select previous and next page instead of clicking on the numbers.
+				Paginering gir en ordnet liste med linker i form av nummer som starter med 1. Komponenten består også 
+				av to knapper som gir brukeren muligheten til å velge forrige eller neste side i stedet for å klikke 
+				på numrene.								
 			</LeadParagraph>
 
+			{/*The pagination component provides a styled list of links of links through numbering them starting from 1.
+			There are also two buttons allowing user to select previous and next page instead of clicking on the numbers.
+			Do not use pagination if you don’t want the user to pause for navigating, as this will hide content available.
+			Use pagination when it is unsuitable to display all content on a single page.*/}
+			
 			<ul className="mb-3 ml-2 col-lg-8">
 				<li>
-					Do not use pagination if you don’t want the user to pause for navigating, as this will hide content available.
-				</li>
+					Bruk paginering hvis det ikke er hensiktsmessig å vise alt innhold på en enkelt side.
+									</li>
 				<li>
-					Use pagination when it is unsuitable to display all content on a single page.
+					Bruk ikke paginering hvis du ikke vil at brukeren skal stoppe opp og navigere, 
+					siden paginering vil skjule tilgjengelig innhold.
 				</li>
 			</ul>
 
@@ -94,9 +101,14 @@ const PaginationInfo = () => {
 				<Title size={2} className="col-lg-12">Pagination</Title>
 				<div className="col-lg-6">
 					<Paragraph>
-						Pagination is a component that allows the user to view a subset of sorted data in limited amount. With pagination user
-						can progress to next page by clicking on the numbers which displays how many more pages there are available.
+						Paginering gir brukeren muligheten til å se en begrenset mengde sortert innhold om gangen. 
+						Brukeren kan fortsette til neste side ved å klikke på numrene - som også viser hvor mange 
+						flere sider det finnes tilgjengelig. 											
 					</Paragraph>
+					
+					{/*Pagination is a component that allows the user to view a subset of sorted data in limited amount. With pagination user
+					can progress to next page by clicking on the numbers which displays how many more pages there are available.*/}
+
 				</div>
 				<div className="col-lg-12 mt-3 mb-3">
 					<Pagination items={mockedItems} selectedPage={mockedItems[4]} />

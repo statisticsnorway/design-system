@@ -5,13 +5,19 @@ const TypographyPage = () => (
 	<div className="col-lg-12">
 		<Title size={1}>Typografi</Title>
 		<LeadParagraph>
-			Typography is an important core component of the Design system as it conveys the look and feel of the website and the brand identity.
+			Typografien er en kjernekomponent i designsystemet, ettersom den bidrar til stil og tone på nettstedet og bidrar til å bygge profil. 
+			SSB sitt designsystem bruker skrifttypene Roboto, Roboto condensed og Opens Sans. Disse skrifttypene har en lett avrundet form, 
+			og gir et åpent og vennlig uttrykk.Roboto brukes for å skille ut interaksjonselementer fra vanlig tekst.
+			
+			{/*Typography is an important core component of the Design system as it conveys the look and feel of the website and the brand identity.
 			In the SSB Design System Roboto, Roboto Condensed and Open Sans are used.
-			These fonts have a slightly rounded form and gives an open and kind expression.
+			These fonts have a slightly rounded form and gives an open and kind expression.*/}
 		</LeadParagraph>
 		<Paragraph>
-			On all UI elements, Roboto is used in order to differentiate UI elements with regular text,
-			making it easier to differentiate these elements from each other.
+			På alle interaksjonselementer er Roboto brukt for å skille disse elementene ut fra vanlig tekst.
+			
+			{/*On all UI elements, Roboto is used in order to differentiate UI elements with regular text,
+			making it easier to differentiate these elements from each other.*/}
 		</Paragraph>
 
 		<Title size={2}>Overskrifter</Title>

@@ -76,14 +76,14 @@ const sidebarItems = [
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
-	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
+	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error', comingSoon: true },
 	{ component: InputInfo, label: 'Input', path: '/input', icon: inputIcon },
 	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures', icon: keyfiguresIcon },
 	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },
 	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
 	{ component: ProfileBoxInfo, label: 'Profile Box', path: '/profile-box' },
 	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
-	{ component: QuotesInfo, label: 'Quotes', path: '/quotes', icon: quoteIcon },
+	{ component: QuotesInfo, label: 'Quotes', path: '/quotes', icon: quoteIcon, new: true },
 	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
 	{ component: SearchBoxInfo, label: 'SearchBox', path: '/search-box', icon: searchIcon },
 	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
@@ -132,6 +132,7 @@ const Components = () => {
 									</div>
 								) : (
 									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
+										{it.new && <div className="new-label">Ny</div>}
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
 										<ArrowRight className="arrow-right" />
@@ -146,12 +147,14 @@ const Components = () => {
 							{sidebarItems.map(it => (
 								it.comingSoon ? (
 									<div className="nav-item coming-soon">
+										<div className="coming-soon-label">Kommer</div>
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
 										<ArrowRight className="arrow-right" />
 									</div>
 								) : (
 									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
+										{it.new && <div className="new-label">Ny</div>}
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
 										<ArrowRight className="arrow-right" />

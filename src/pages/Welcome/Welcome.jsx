@@ -1,34 +1,50 @@
 import React from 'react';
-import { Title, Paragraph } from '@statisticsnorway/ssb-component-library';
+import { NavLink } from 'react-router-dom';
+import { Button, Title, Paragraph } from '@statisticsnorway/ssb-component-library';
+import { Mail } from 'react-feather';
 
 const Welcome = () => (
-	<div className="welcome page-wrapper">
-		<section>
-			<Title size={2}>Introduksjon</Title>
-			<Paragraph>
-				Det er en utfordring å lage en konsistent webløsning innenfor en stor organisasjon med en mengde teams som jobber med sin del
-				av en webside eller et produkt. Hva vi ofte ser, er at disse løsningene har en tendens til å skille seg fra hverandre både
-				visuelt og i hierarkisk layout. Med det nye designsystemet i SSB, ønsker vi å løse disse utfordringene ved å lage et
-				komponentbasert designsystem som tillater hvem som helst å bruke de ulike komponenter med både ferdig design og kode slik at
-				de raskt kan bygge den løsningen de ønsker. Samtidig vil de ved å bruke disse komponentene alltid sikre at resultatet blir
-				enhetlig og raskt gjenkjent som levert av SSB.
-			</Paragraph>
+	<div className="welcome-page page-wrapper">
+		<section className="offset-lg-1">
+			<div className="row mega-margin">
+				<div className="col-lg-6">
+					<Title size={2}>Designsystemets komponenter</Title>
+					<Paragraph>
+						Designsystemet er komponentbasert og skal brukes av alle som jobber med digitale produkter og tjenester for SSB.
+						Her finner du komponenter som bidrar til å bygge merkevare, identitet og et intuitivt og brukervennlig design.
+						Alle komponenter kommer ferdig designet, kodet og UU-sjekket slik at det raskt kan bygges helhetlige løsninger, uansett hvilket team eller prosjekt man jobber for.
+					</Paragraph>
+					<NavLink to="/components"><Button primary onClick={() => {}}>Se alle komponenter</Button></NavLink>
+				</div>
+				<div className="col-lg-6">Illustration</div>
+			</div>
 
-			<Title size={2}>Designere</Title>
-			<Paragraph>
-				Med designsystemet har vi laget komponenter som enkelt kan bli brukt for å skape et visuelt tiltalende og intuitivt design.
-				Vi håper at våre komponenter også skal bidra til å bygge merkevare og identitet. Men en designsystem er aldri helt ferdig.
-				Det vil alltid være i utvikling avhengig av behov, og vi tar alltid imot nye forslag og tilleggsfunksjonalitet.
-				Så hvis det er noe som du ser mangler eller trenger å bli endret,
-				snakk med de ansvarlige for design og send oss forslag med begrunnelse.
-			</Paragraph>
+			<div className="row mega-margin">
+				<div className="col-lg-6">Illustration</div>
+				<div className="col-lg-6">
+					<Title size={2}>Designsystemet i bruk</Title>
+					<Paragraph>
+						Ved oppstart av et nytt prosjekt anbefaler vi at de eksisterende sidemalene brukes som inspirasjon.
+						En designer skal sikre riktig bruk av komponentene slik at sluttproduktet/-tjenesten dekker brukerens behov,
+						har god brukervennlighet og representerer SSB på en tillitsvekkende måte.
+						Det er derfor viktig å inkludere designer tidlig i prosessen.
+					</Paragraph>
+					<NavLink to="/templates"><Button onClick={() => {}}>Se alle sidemaler</Button></NavLink>
+				</div>
+			</div>
 
-			<Title size={2}>Programmerere</Title>
-			<Paragraph>
-				Selv om designsystemet forenkler og gjør det lettere å skape et konsistent design, betyr det ikke at designeren nå er overflødig.
-				Det er fortsatt viktig å inkludere designere i designprosessen for å sjekke at sluttproduktet gir brukeren den
-				optimale opplevelsen ved bruk av designet.
-			</Paragraph>
+			<div className="row">
+				<div className="col-lg-6">
+					<Title size={2}>Tilbakemelding og kontakt</Title>
+					<Paragraph>
+						Et designsystem er alltid i utvikling. Ulike behov, skiftende trender, endringer i WCAG (UU) og visuell profil samt brukertesting vil kunne føre til endringer.
+						Kontakt alltid ansvarlig designer for designsystemet dersom du ser behov som ikke er dekket, eller en komponent som må tilpasses ditt prosjekt.
+						Nye komponenter og maler skal ikke lanseres uten at de er klarert av designansvarlig for designsystemet.
+					</Paragraph>
+					<Button onClick={() => {}} icon={<Mail size={16} />}>Kontakt designansvarlig</Button>
+				</div>
+				<div className="col-lg-6">Illustration</div>
+			</div>
 		</section>
 	</div>
 );

@@ -1,14 +1,26 @@
 .header-component-wrapper {
   align-items: center;
+  background: $ssb-white;
   border-bottom: 1px solid $ssb-dark-5;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(auto, 1200px);
+  height: 100%;
+  justify-content: center;
   width: 100%;
+
+  .content-holder {
+    padding-top: 45px;
+  }
+
+  &.front-page {
+    background: $ssb-dark-1;
+    border-bottom: 0;
+  }
 
   .left-section {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 45px;
 
     .logo-and-title {
       display: flex;
@@ -37,8 +49,11 @@
   }
 
   .right-section {
+    align-items: center;
     display: flex;
+    height: 38px;
     justify-content: space-between;
+    margin-bottom: 45px;
 
     .links {
       align-items: center;
@@ -61,6 +76,18 @@
 
     &.active, &:hover, &:focus {
       color: $ssb-green-4;
+    }
+  }
+
+  .get-started {
+    margin-bottom: 60px;
+
+    .get-started-title {
+      color: $ssb-green-3;
+    }
+
+    .intro-text {
+      font-size: 20px;
     }
   }
 }

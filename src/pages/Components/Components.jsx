@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { matchPath, Route, Switch, withRouter } from 'react-router-dom';
-import { LeadParagraph, Link, Title } from '@statisticsnorway/ssb-component-library';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
 import { ArrowRight } from 'react-feather';
 import TreeMenu from '@components/TreeMenu/TreeMenu';
 import AccordionInfo from './ComponentsInfo/AccordionInfo';
@@ -100,69 +100,73 @@ Komponentene skal brukes i nye og eksisterende digitale prosjekter hvor SSB er a
 Med hver komponent følger det begrunnelser for designvalg, kode og eksempler slik at du raskt kan komme i gang med ditt prosjekt.
 `;
 
-const Components = withRouter(({ match }) => (
-	<div className="components-page page-wrapper">
-		<aside>
-			<TreeMenu
-				items={sidebarItems.sort((a, b) => a.label - b.label)}
-				mainItems={sidebarMainItems}
-			/>
-		</aside>
-		<section className="container-fluid">
-			<Switch>
-				<Route exact path={match.url}>
-					<Title size={1} className="col-lg-12">Komponenter</Title>
-					<div className="col-lg-12 mb-5">
-						<LeadParagraph>{leadParagraphText}</LeadParagraph>
-					</div>
-					<div className="col-lg-12">
-						<Title size={2}>Grunnprinsipper</Title>
-					</div>
-					<div className="col-lg-12 mb-5 navigator-grid">
-						{sidebarMainItems.map(it => (
-							it.comingSoon ? (
-								<div className="nav-item coming-soon">
-									<div className="coming-soon-label">Kommer</div>
-									<img className="component-icon" src={it.icon} alt={it.label} />
-									<Title size={3}>{it.label}</Title>
-									<ArrowRight className="arrow-right" />
-								</div>
-							) : (
-								<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
-									<img className="component-icon" src={it.icon} alt={it.label} />
-									<Title size={3}>{it.label}</Title>
-									<ArrowRight className="arrow-right" />
-								</a>
-							)
-						))}
-					</div>
-					<div className="col-lg-12">
-						<Title size={2}>Komponenter</Title>
-					</div>
-					<div className="col-lg-12 navigator-grid">
-						{sidebarItems.map(it => (
-							it.comingSoon ? (
-								<div className="nav-item coming-soon">
-									<img className="component-icon" src={it.icon} alt={it.label} />
-									<Title size={3}>{it.label}</Title>
-									<ArrowRight className="arrow-right" />
-								</div>
-							) : (
-								<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
-									<img className="component-icon" src={it.icon} alt={it.label} />
-									<Title size={3}>{it.label}</Title>
-									<ArrowRight className="arrow-right" />
-								</a>
-							)
-						))}
-					</div>
-				</Route>
-				{sidebarMainItems.map(it => <Route key={it.path} path={`${match.url}${it.path}`} component={it.component} />)}
-				{sidebarItems.map(it => <Route key={it.path} path={`${match.url}${it.path}`} component={it.component} />)}
-			</Switch>
-		</section>
-	</div>
-));
+const Components = () => {
+	const match = useRouteMatch('/components');
+	return (
+		<div className="components-page page-wrapper">
+			<aside>
+				<TreeMenu
+					match={match}
+					items={sidebarItems.sort((a, b) => a.label - b.label)}
+					mainItems={sidebarMainItems}
+				/>
+			</aside>
+			<section className="container-fluid">
+				<Switch>
+					<Route exact path={match.url}>
+						<Title size={1} className="col-lg-12">Komponenter</Title>
+						<div className="col-lg-12 mb-5">
+							<LeadParagraph>{leadParagraphText}</LeadParagraph>
+						</div>
+						<div className="col-lg-12">
+							<Title size={2}>Grunnprinsipper</Title>
+						</div>
+						<div className="col-lg-12 mb-5 navigator-grid">
+							{sidebarMainItems.map(it => (
+								it.comingSoon ? (
+									<div className="nav-item coming-soon">
+										<div className="coming-soon-label">Kommer</div>
+										<img className="component-icon" src={it.icon} alt={it.label} />
+										<Title size={3}>{it.label}</Title>
+										<ArrowRight className="arrow-right" />
+									</div>
+								) : (
+									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
+										<img className="component-icon" src={it.icon} alt={it.label} />
+										<Title size={3}>{it.label}</Title>
+										<ArrowRight className="arrow-right" />
+									</a>
+								)
+							))}
+						</div>
+						<div className="col-lg-12">
+							<Title size={2}>Komponenter</Title>
+						</div>
+						<div className="col-lg-12 navigator-grid">
+							{sidebarItems.map(it => (
+								it.comingSoon ? (
+									<div className="nav-item coming-soon">
+										<img className="component-icon" src={it.icon} alt={it.label} />
+										<Title size={3}>{it.label}</Title>
+										<ArrowRight className="arrow-right" />
+									</div>
+								) : (
+									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
+										<img className="component-icon" src={it.icon} alt={it.label} />
+										<Title size={3}>{it.label}</Title>
+										<ArrowRight className="arrow-right" />
+									</a>
+								)
+							))}
+						</div>
+					</Route>
+					{sidebarMainItems.map(it => <Route key={it.path} path={`${match.url}${it.path}`} component={it.component} />)}
+					{sidebarItems.map(it => <Route key={it.path} path={`${match.url}${it.path}`} component={it.component} />)}
+				</Switch>
+			</section>
+		</div>
+	);
+};
 
 Components.defaultProps = {};
 

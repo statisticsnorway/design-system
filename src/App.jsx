@@ -34,59 +34,39 @@ const socialLinks = [
 
 const App = () => (
 	<div className="app">
-		<Switch>
-			<Route exact path="/">
-				<div className="app-content">
-					<header className="app-header">
-						<Header />
-					</header>
+		<header className="app-header">
+			<Header />
+		</header>
+		<div className="app-content">
+			<Switch>
+				<Route exact path="/">
 					<main>
 						<Welcome />
 					</main>
-				</div>
-			</Route>
-			<Route path="/design-system"> {/* For GH pages */}
-				<div className="app-content">
-					<header className="app-header">
-						<Header />
-					</header>
+				</Route>
+				<Route path="/design-system"> {/* For GH pages */}
 					<main>
 						<Welcome />
 					</main>
-				</div>
-			</Route>
-			<Route path="/get-started">
-				<div className="app-content">
-					<header className="app-header">
-						<Header />
-					</header>
+				</Route>
+				<Route path="/get-started">
 					<main>
 						<Welcome />
 					</main>
-				</div>
-			</Route>
-			<Route path="/components" component={Components}>
-				<div className="app-content">
-					<header className="app-header">
-						<Header />
-					</header>
+				</Route>
+				<Route path="/components" component={Components}>
 					<main>
 						<Components />
 					</main>
-				</div>
-			</Route>
-			<Route path="/templates">
-				<div className="app-content">
-					<header className="app-header">
-						<Header />
-					</header>
+				</Route>
+				<Route path="/templates">
 					<main>
 						<Templates />
 					</main>
-				</div>
-			</Route>
-			<Route component={NoMatchPage} />
-		</Switch>
+				</Route>
+				<Route component={NoMatchPage} />
+			</Switch>
+		</div>
 		<footer>
 			<Footer logo={logo} />
 		</footer>

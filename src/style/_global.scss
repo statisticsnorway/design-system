@@ -4,14 +4,13 @@ body {
   .app {
     color: $ssb-dark-6;
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto 1fr;
     min-height: 100vh;
   }
 
   .app-content {
     display: grid;
     grid-template-columns: minmax(320px, $max-content-size);
-    grid-template-rows: 130px 1fr;
     justify-content: center;
     margin: 0 $global-padding-size;
     position: relative;

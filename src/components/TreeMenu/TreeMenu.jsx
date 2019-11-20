@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
 import { ChevronRight } from 'react-feather';
 import { Divider } from '@statisticsnorway/ssb-component-library';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const TreeMenu = withRouter(({
+const TreeMenu = ({
 	activeItem, items, mainItems, match,
 }) => (
 	<div className="tree-menu-wrapper roboto">
@@ -52,7 +52,7 @@ const TreeMenu = withRouter(({
 			))}
 		</div>
 	</div>
-));
+);
 
 TreeMenu.defaultProps = {};
 
@@ -60,7 +60,7 @@ TreeMenu.propTypes = {
 	activeItem: PropTypes.string,
 	items: PropTypes.arrayOf(PropTypes.object),
 	mainItems: PropTypes.arrayOf(PropTypes.object),
-	onSelect: PropTypes.func,
+	match: PropTypes.object,
 };
 
 export default TreeMenu;

@@ -3,9 +3,12 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, Input, LeadParagraph, Link, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-Search form are an input element that combines an input form and a clickable search icon 
-to allow the user to search for specific word or phrases by inputing the data into the search form.
+Søkefelt kombineres av inputfelt og et klikkbart søkeikon. 
+Feltet gjør det mulig for brukeren å søke på spesielle ord eller fraser ved å skrive dem inn i søkefeltet. 
 `;
+
+{/*Search form are an input element that combines an input form and a clickable search icon 
+to allow the user to search for specific word or phrases by inputing the data into the search form.*/}
 
 const overviewTextFactbox = `
 With the search form user can quickly search for what they are looking for on the website.

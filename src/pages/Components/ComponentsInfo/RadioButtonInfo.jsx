@@ -3,18 +3,24 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Link, RadioGroup, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-Norsk teksforklaring kommer her.
-Radio buttons allows the user to select a single selection among a groups of options which includes at least two or more choices. 
-In a radio button list the options should always be independent from every other option and by default no radio element should be selected.
+Radioknapper lar brukeren velge kun ett av et forhåndsdefinert sett av alternativer. 
+Default visning er at ingen valg er markert av knappene.
 `;
+{/*Radio buttons allows the user to select a single selection among a groups of options which includes at least two or more choices. 
+In a radio button list the options should always be independent from every other option and by default no radio element should be selected.*/}
 
 const overviewTextRadiobutton = `
-Radio buttons have 3 different states, alternating between unchecked, hover and checked. 
+Radioknapper har 3 ulike statuser; ikke-valgt, hover (musepeker over den) og valgt. Når knappen ikke er valgt vises den 
+nøytralt med en grå sirkel. Når brukeren peker over den med musepekeren, blir sirkelen grønn og tykkere. Samtidig vises 
+en grønn bakgrunnsstripe på hele raden for knappen. Når knappen er valgt, blir sirkelen bli fylt med en mindre sirkel i mørk farge. 
+`;
+
+{/*Radio buttons have 3 different states, alternating between unchecked, hover and checked. 
 In the unchecked state the radio buttons are neutral with a greyed circle. 
 As the user hover over an unchecked radio button it transforms into a thicker circle and turns green, 
 at the same time a light green stripe will appear over the hovered radio button row. 
-When a radio button is selected by the user, a dark circle will fill the selected radio button. 
-`;
+When a radio button is selected by the user, a dark circle will fill the selected radio button.*/} 
+
 
 const tabItems = [
 	{

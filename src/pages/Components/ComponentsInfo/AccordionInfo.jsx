@@ -115,7 +115,7 @@ const AccordionInfo = () => {
 				Derfor er accordion-komponentene alltid lukket som default.
 			</LeadParagraph>
 			<Paragraph>
-				Accordions må brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskeligere for brukeren å finne den skjulte informasjonen.
+				Accordions bør brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskelig for brukeren å finne den skjulte informasjonen.
 				Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold.
 				Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href="https://www.nngroup.com/articles/accordions-complex-content/">her</Link>.
 			</Paragraph>
@@ -167,11 +167,11 @@ const AccordionInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Innflettet Accordion</Title>
+						<Title size={2} className="col-lg-12">Flere nivåer accordions</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Innflettet accordion brukes når det er flere nivåer accordions, dvs. en accordion er inne i en annen accordion. Når det er flere nivåer på innholdet i den.
-								Dens funksjon er å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
+								Det kan være behov for flere nivåer i en accordion. Det vil si en accordion er inne i en annen accordion, når det er flere nivåer på innholdet..
+								Denne funksjonen er for å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">

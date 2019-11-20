@@ -73,11 +73,15 @@ const InputInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Input</Title>
+			<Title size={1}>Inputfelt</Title>
 			<LeadParagraph>
-				Input forms are an input element that allows the user to interact and input data into.
+				Inputfelter er elementer som tillater at brukeren legger inn innhold. Det skal være en ledetekst (etikett) 
+				som forteller brukeren hva slags informasjon han skal legge inn i feltet. En placeholder tekst 
+				(erstatningstekst) kan blir brukt inne i inputfeltet hvis ledetekst ikke er nødvendig, se for eksempel på 
+				søkeboks. 
+				{/*Input forms are an input element that allows the user to interact and input data into.
 				Label text should be used to tell the user what kind of data the input form is looking for
-				and should be short and concise and written in plain language.
+				and should be short and concise and written in plain language.*/}
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
@@ -89,10 +93,16 @@ const InputInfo = () => {
 						<Title size={2} className="col-lg-12">Input</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Input forms contains 3 different state: un-clicked, hover and clicked.
+								Inputfelter har 3 ulike statuser; ikke valgt, hover (musepeker over den) og valgt. 
+								Når feltet ikke er valgt har det en tynn rektangulær mørk ramme. Når brukeren peker over 
+								den med musepekeren, blir rammen grønn. Når feltet er klikket på blir rammen grønn og tykkere, 
+								samtidig som det vises en blinkende strek inne i feltet for å indikere at brukeren kan starte 
+								å skrive.
+																
+								{/*Input forms contains 3 different state: un-clicked, hover and clicked.
 								When un-clicked the form is outlined by a grey rectangle outline.
 								When hovered, this rectangle outline turns into green.
-								When clicked by the user the blinking line indicates that it is ready for typing.
+								When clicked by the user the blinking line indicates that it is ready for typing.*/}
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
@@ -117,10 +127,14 @@ const InputInfo = () => {
 						<Title size={2} className="col-lg-12">Input error</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								When an error occurs in the input form, the select form will change into a error state where the
+								Når en feil oppstår i et inputfelt, blir feltet endret til feilinformasjon. 
+								Rammen på feltet vil bli rød og fetere. Til høyre for feltet vil et feilikon vises. 
+								Under feltet vil det vises en feilmeldingstekst som forklarer hvordan man kan løse feilen.
+								
+								{/*When an error occurs in the input form, the select form will change into a error state where the
 								input form will change its border into a thicker border and color into red.
 								At the right side of the input form an error icon will be displayed.
-								Underneath the form an error message will be displayed in order to explain how to fix the error.
+								Underneath the form an error message will be displayed in order to explain how to fix the error.*/}
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">

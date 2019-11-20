@@ -55,8 +55,9 @@ const WordExplanationInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Ordforklaring</Title>
 			<LeadParagraph>
-				Word explanation are used when there are words that are domain specific and difficult to understand or a word that can
-				be provided with additional context in order to be better understood.
+				{/*Word explanation are used when there are words that are domain specific and difficult to understand or a word that can
+				be provided with additional context in order to be better understood.*/}
+				Ordforklaring brukes når det ord eller begreper som er vanskelige å forstå, eller ord som kan trenge en ytterligere beskrivelse for å bli forstått i sammenhengen.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-3" />
@@ -66,12 +67,16 @@ const WordExplanationInfo = () => {
 					<Title size={2} className="col-lg-12">Ordforklaring</Title>
 					<div className="col-lg-6">
 						<Paragraph>
-							Word explanations are defined by two attributes, first it&apos;s underlined by dotted line to differentiate itself from a regular link component.
-							But to add another layer of clarity, it also has a word explanation icon in green at the end of the word.
+							{/*Word explanations are defined by two attributes, first it&apos;s underlined by dotted line to differentiate itself from a regular link component.
+							But to add another layer of clarity, it also has a word explanation icon in green at the end of the word.*/}
+							Ordforklaringer markeres med to virkemidler; de skal være understreket med stiplet linje for å skille seg ut fra en vanlig lenke. 
+							De har også et tilhørende grønt ikon ved slutten av ordet. 
 						</Paragraph>
 						<Paragraph>
-							On hover, word explanation is marked with a green stripe that marks the whole word and a an additional explanation box is displayed.
-							The word explanation box is displayed underneath the word explanation.
+							{/*On hover, word explanation is marked with a green stripe that marks the whole word and a an additional explanation box is displayed.
+							The word explanation box is displayed underneath the word explanation.*/}
+							Når musepekeren holdes over en ordforklaringer blir ordet markert med en grønn bakgrunngrunnsfarge. 
+							Ved klikk på ordforklaringen vises en tekstboks med selve forklaringen.  
 						</Paragraph>
 					</div>
 					<div className="col-lg-6">
@@ -91,8 +96,10 @@ const WordExplanationInfo = () => {
 					<Title size={2} className="col-lg-12">Animation</Title>
 					<div className="col-lg-12">
 						<Paragraph>
-							The hover animation is a left to right marking animation,
-							this in order to emulate reality where a user would mark word with a color marker and at the same time separate it from a link.
+							{/*The hover animation is a left to right marking animation,
+							this in order to emulate reality where a user would mark word with a color marker and at the same time separate it from a link.*/}
+							Hover animiasjonen (når musepeker føres over) er en animert markering fra venstre til høyre.
+							Dette er for å etterligne hvordan en bruker ville markert et ord med merkepenn, og samtidig adskille det fra en lenke.
 						</Paragraph>
 					</div>
 				</div>

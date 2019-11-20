@@ -104,7 +104,7 @@ const ButtonInfo = () => {
 						<div className="col-lg-6">
 							<Paragraph>
 								Primærknapp brukes for viktige handlinger for brukeren, en aksjon som er kritisk for brukerens videre fremdrift.
-								Eksempel på en kritisk aksjon er “send inn” på et besetillingsskjema eller “logg inn” på en innloggingstjeneste.
+								Eksempel på en kritisk aksjon er “send inn” på et bestillingsskjema eller “logg inn” på en innloggingstjeneste.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
@@ -213,7 +213,7 @@ const ButtonInfo = () => {
 			{activeTab === '/rationale' && (
 				<div>
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Avrundede hjørnen</Title>
+						<Title size={2} className="col-lg-12">Avrundede hjørner</Title>
 						<Paragraph className="col-lg-6">
 							Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
 							Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.

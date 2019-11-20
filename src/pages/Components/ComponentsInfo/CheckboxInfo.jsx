@@ -3,17 +3,25 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { CheckboxGroup, Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-Check boxes provides the user with a range of options where the user may select any number of choices, one, multiple or zero.
-The default view for checkboxes has no options selected and the options provided should be listed in alphabetical order. 
+Avhukingsbokser gir brukeren muligheten til å velge flere valg i et utvalg. 
+Default visning for avhukingsbokser er at ingen valg er markert, og de ulike valgene bør stå i alfabetisk rekkefølge.
 `;
+{/*Check boxes provides the user with a range of options where the user may select any number of choices, one, multiple or zero.
+The default view for checkboxes has no options selected and the options provided should be listed in alphabetical order.*/} 
 
 const overviewTextCheckbox = `
-Check boxes have 3 different states, alternating between unchecked, hover and checked.
+Avhukingsbokser har 3 ulike statuser; ikke-avhuket (ikke valgt), hover (musepeker over den)  og avhuket (valgt). 
+Som ikke-valgt vil boksen være nøytral med en grå ramme. Når brukeren peker over en boks vil boksens ramme bli tykkere og grønn, 
+samtidig som en grønn bakgrunnsstripe vises på hele avhukingsboksens rad. Når en boks er valgt, vil boksen bli fylt og markert 
+med et avhukingsikon. 
+`;
+
+{/*Check boxes have 3 different states, alternating between unchecked, hover and checked.
 In the unchecked state the check boxes are neutral with a greyed border.
 As the user hovers over an unchecked box it transforms into a thicker border and turns green,
 at the same time a light green stripe will appear over the hovered check box row.
-When an option is checked by the user, the box will be filled and a check-icon will be displayed. 
-`;
+When an option is checked by the user, the box will be filled and a check-icon will be displayed.*/}
+
 
 const tabItems = [
 	{

@@ -18,9 +18,12 @@ const DividerInfo = () => (
 	<div className="col-lg-12">
 		<Title size={1}>Divider</Title>
 		<LeadParagraph>
-			Divider is an element used to draw horizontal lines between different content groupings,
+			Delestreker brukes for å vise horisontale linjer mellom forskjellig grupperinger av innhold. 
+			Det brukes oftest på sider som har mye forskjellig innhold, f.eks. forsiden, artikler, statistikker.
+			
+			{/*Divider is an element used to draw horizontal lines between different content groupings,
 			used mostly on open pages that have lots of different components present, i.e. front page,
-			article page, statistic page etc.
+			article page, statistic page etc.*/}
 		</LeadParagraph>
 
 		<Divider className="mb-3" />
@@ -29,7 +32,8 @@ const DividerInfo = () => (
 			<Title size={2} className="col-lg-12">Divider</Title>
 			<div className="col-lg-6">
 				<Paragraph>
-					The divider element is always place at the end of a content grouping and before the start of the next new grouping.
+					Delestreken er alltid plassert i slutten av en innholdsgruppe og før starten av neste innholdsgruppe.
+					{/*The divider element is always place at the end of a content grouping and before the start of the next new grouping.*/}
 				</Paragraph>
 			</div>
 			<div className="col-lg-6">

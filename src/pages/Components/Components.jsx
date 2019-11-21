@@ -72,7 +72,7 @@ const sidebarItems = [
 	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
-	{ component: DialogInfo, label: 'Dialog', path: '/dialog', icon: dialogIcon },
+	{ component: DialogInfo, label: 'Warnings and errors', path: '/dialog', icon: dialogIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },

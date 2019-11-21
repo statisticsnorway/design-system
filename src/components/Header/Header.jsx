@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
-import { Title } from '@statisticsnorway/ssb-component-library';
+import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
 import { GitHub } from 'react-feather';
+import coopIllustration from '../../../public/customIcons/illustrasjon-samarbeid.svg';
 
 const items = [
 	{ title: 'Kom i gang', path: '/get-started' },
@@ -46,6 +47,7 @@ const Header = () => {
 			</div>
 			{(history.location.pathname === '/get-started' || history.location.pathname === '/') && (
 				<div className="get-started row d-flex offset-lg-1">
+					<img className="col-lg-11 mb-3" src={coopIllustration} alt="Usage" />
 					<Title className="get-started-title col-lg-4" size={1}>Kom i gang</Title>
 					<div className="col-lg-7">
 						<p className="intro-text mt-3">

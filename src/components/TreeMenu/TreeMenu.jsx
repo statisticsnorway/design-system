@@ -13,10 +13,8 @@ const TreeMenu = ({
 		<div className="items-section">
 			{mainItems.map(it => (
 				it.comingSoon ? (
-					<div
-						key={it.path}
-						className="tree-node coming-soon"
-					>{it.label}<div className="coming-soon-label">Kommer</div>
+					<div key={it.path} className="tree-node coming-soon">
+						{it.label}<div className="coming-soon-label">Kommer</div>
 					</div>
 				) : (
 					<NavLink
@@ -35,10 +33,8 @@ const TreeMenu = ({
 			{items && items.map(item => (
 				item.comingSoon
 					? (
-						<div
-							key={uuid()}
-							className={`tree-node ${item.path === activeItem && 'selected'}`}
-						>{item.label}<div className="coming-soon-label">Kommer</div>
+						<div key={uuid()} className="tree-node coming-soon">
+							{item.label}<div className="coming-soon-label">Kommer</div>
 						</div>
 					) : (
 						<NavLink

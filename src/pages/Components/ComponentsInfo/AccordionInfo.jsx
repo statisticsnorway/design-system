@@ -66,7 +66,7 @@ const codeExampleSecondaryHtml = `
 `;
 
 const nestedExample = `
-<Accordion header="This is a secondary header">
+<Accordion header="This is a header">
 	{Insert content here}
 	<NestedAccordion header="A nested accordion header">
 		{Insert content here}
@@ -175,7 +175,7 @@ const AccordionInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Accordion header="This is a secondary header">
+							<Accordion header="This is a header">
 								{accordionFillerText}
 								<NestedAccordion header="A nested accordion header">
 									{accordionFillerText}

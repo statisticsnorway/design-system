@@ -59,7 +59,7 @@ module.exports = merge(base, {
 				use: {
 					loader: 'svg-url-loader',
 					options: {
-						limit: 10 * 1024,
+						// limit: 10 * 1024,
 						noquotes: true,
 					},
 				},

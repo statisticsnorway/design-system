@@ -3,20 +3,17 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Dialog, Divider, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-Warning alters are a banner-like element used to tell the user about something that has gone wrong.
-There are two different types of warnings: the information error and the error warning. Error warnings are used when something is explicitly wrong,
-to warn the user of something has gone wrong in the system. The information error are used for informative purposes,
-for example when a piece of content has been moved, content has stopped being updated. Warning alerts are meant to persist and are not dismissible.  
+Varsler er et type banner som brukes for å gjøre brukeren oppmerksom på spesiell informasjon.
+Det kan være enten feilmeldinger eller informasjonvarsler. Feilmeldinger brukes når noe har blitt utført galt.
+Informasjonsvarsler er meldinger med informasjon som kan være bra å vite, men som ikke er kritisk for å komme videre.  
 `;
 
 const errorWarningText = `
-Error warnings are defined by its red color to indicate something wrong,
-it is also accompanied by a warning icon using triangle layout and is always placed at the top of the page underneath the header.
+Feilmeldinger er i rød farge for å indikere at noe har gått galt. De presenteres sammen med et trekantet varselsikon. 
 `;
 
 const infoWarningText = `
-Information warnings are defined by its blue color to separate itself from error warning visually, it also has a rounded information icon.
-Similar to the error warning the information warning are also placed at the top of the page underneath the header. 
+Informasjonsvarsler er i blå farge for å skille seg fra de røde feilmeldingene. De presenteres sammen med et sirkelformet informasjonsikon.  
 `;
 
 const tabItems = [
@@ -145,8 +142,8 @@ const DialogInfo = () => {
 				<div className="row mb-3">
 					<Title size={2} className="col-lg-12">Colors</Title>
 					<div className="col-lg-6">
-						The red color of warning was chosen because red being associated with error. The blue color was chosen to differentiate from the red and the green.
-						It has also been tested through different colorblindness test to ensure that the colors would still provide difference in contrast.
+						Rød farge på feilmeldinger er valgt fordi rødt gir assosiasjoner til feil. Blå farge er valgt for å skille seg ut fra rødt og grønt.
+						Fargene har også blitt testet gjennom fargeblindhetstester slik at de tilfredsstiller forskjell i kontrast
 					</div>
 				</div>
 			)}

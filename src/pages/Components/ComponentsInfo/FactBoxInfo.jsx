@@ -50,15 +50,16 @@ const codeReact = `
 
 const codeHtml = `
 <div class="ssb-fact-box">
-	<div class="ssb-accordion">
-		<div class="accordion-header closed" onclick="{toggle classname to 'open'}">
-			{plus icon}
-			<div class="ssb-title header-text no-margin">
-				<h5>Title</h5></div>
-		</div>
-		<div class="accordion-body closed">
-			{insert content}
-		</div>
+	<div class="ssb-accordion without-borders">
+			<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
+					<span class="button-grid">
+						<h5 class="ssb-title header-text no-margin">Title</h5>
+						{20px ChevronDown icon, add class="expand-icon" }
+					</span>
+			</button>
+			<div class="accordion-body closed">
+					{insert content}
+			</div>
 	</div>
 </div>
 `;

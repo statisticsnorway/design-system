@@ -29,39 +29,44 @@ const tabCode = [
 	},
 ];
 
-const codeExamplePrimary = `
-<Accordion primary header="This is a primary header">
+const codeExample = `
+<Accordion header="This is a header">
 	{Insert content here}
 </Accordion>
 `;
 
-const codeExamplePrimaryHtml = `
+const codeExampleHtml = `
 <div class="ssb-accordion">
-  <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
-    {22px filled plus icon}
-    <div class="ssb-title header-text no-margin"><h5>This is a primary header</h5></div>
-  </div>
-  <div class="accordion-body closed">
-    {insert content here}
-  </div>
+	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
+		<span class="button-grid">
+			<h5 class="ssb-title header-text no-margin">This is a accordion title</h5>
+			{20px ChevronDown icon, add class="expand-icon" }
+		</span>
+	</button>
+	<div class="accordion-body closed">
+		{insert content}
+	</div>
 </div>
 `;
 
-const codeExampleSecondary = `
-<Accordion header="This is a secondary header">
+const codeExampleSubheader = `
+<Accordion header="This is a secondary header" subHeader="Subheader" >
 	{Insert content here}
 </Accordion>
 `;
 
-const codeExampleSecondaryHtml = `
-<div class="ssb-accordion">
-  <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
-    {20px unfilled plus icon}
-    <div class="ssb-title header-text no-margin"><h5>This is a secondary header</h5></div>
-  </div>
-  <div class="accordion-body closed">
-    {insert content here}
-  </div>
+const codeExampleSubheaderHtml = `
+<div class="ssb-accordion with-sub-header">
+	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
+		<span class=" button-grid ">
+			<h5 class="ssb-title sub-header no-margin ">Subheader</h5>
+			<h5 class="ssb-title header-text no-margin ">This is a accordion title with a sub-header</h5>
+			{20px ChevronDown icon, add class="expand-icon " }
+		</span>
+	</button>
+	<div class="accordion-body closed ">
+		{insert content}
+	</div>
 </div>
 `;
 
@@ -78,7 +83,7 @@ const nestedExampleHtml = `
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {22px filled plus icon}
-    <div class="ssb-title header-text no-margin"><h5>This is a primary header</h5></div>
+    <div class="ssb-title header-text no-margin"><h5>This is a header</h5></div>
   </div>
   <div class="accordion-body closed">
     {insert content here}
@@ -125,21 +130,21 @@ const AccordionInfo = () => {
 			{activeTab === '/overview' && (
 				<div>
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Primær Accordion</Title>
+						<Title size={2} className="col-lg-12">Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Brukes når innholdet i dem er viktig for å forstå helheten i sidens innhold, og vi ønsker at brukeren skal se det.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Accordion primary header="This is a primary header">{accordionFillerText}</Accordion>
+							<Accordion header="This is a header">{accordionFillerText}</Accordion>
 						</div>
 
 						<div className="col-lg-12 mt-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
 							<Divider light />
-							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExamplePrimary} language="jsx" />}
-							{activeCodeTab1 === '/html' && <CodeSnippet code={codeExamplePrimaryHtml} language="html" />}
+							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab1 === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 
 					</div>
@@ -147,20 +152,20 @@ const AccordionInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Sekundær Accordion</Title>
+						<Title size={2} className="col-lg-12">Accordion med subheader</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Sekundær accordion brukes når innholdet kun trenger å hentes frem når brukeren trenger det. Dette kan være forfattere, definisjoner, bakgrunn etc.
+								Trenger tekst her
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Accordion header="This is a secondary header">{accordionFillerText}</Accordion>
+							<Accordion header="This is a header" subHeader="Subheader">{accordionFillerText}</Accordion>
 						</div>
 						<div className="col-lg-12 mt-3">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
 							<Divider light />
-							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExampleSecondary} language="jsx" />}
-							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExampleSecondaryHtml} language="html" />}
+							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExampleSubheader} language="jsx" />}
+							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExampleSubheaderHtml} language="html" />}
 						</div>
 					</div>
 
@@ -198,19 +203,6 @@ const AccordionInfo = () => {
 
 			{activeTab === '/rationale' && (
 				<div>
-					<div className="row mb-3">
-						<Title className="col-lg-12" size={2}>Primary and Secondary accordions</Title>
-						<div className="col-lg-6">
-							<Paragraph>
-								The reason we have two variants of accordion is to create a good hierarchy between the content,
-								while both primary and secondary accordions provides valuable information,
-								primary accordions contains content that are crucial for user to see in order to
-								understand the content on the page. Secondary accordions provide content that are important
-								but not crucial for the understanding of the page.
-							</Paragraph>
-						</div>
-					</div>
-
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Single action accordions</Title>
 						<div className="col-lg-6">
@@ -253,14 +245,14 @@ const AccordionInfo = () => {
 								<td>Will set the open state on init</td>
 							</tr>
 							<tr>
-								<td><code>primary</code></td>
-								<td>bool</td>
-								<td>Changes type and design of accordion</td>
-							</tr>
-							<tr>
 								<td><code>subHeader</code></td>
 								<td>string</td>
 								<td>Renders the header with the sub header design</td>
+							</tr>
+							<tr>
+								<td><code>withoutBorders</code></td>
+								<td>bool</td>
+								<td>Default false, Accordion without border on top and bottom if value is true</td>
 							</tr>
 						</tbody>
 					</table>

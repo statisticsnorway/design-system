@@ -1,0 +1,50 @@
+.color-page {
+
+  .color-example-grid {
+    display: grid;
+    grid-gap: $global-padding-size * 2;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
+
+    .color-box {
+      width: 100%;
+
+      .hex-label {
+        align-items: center;
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+        height: 50px;
+        justify-content: center;
+      }
+
+      .name-label {
+        align-items: center;
+        display: flex;
+        height: 50px;
+        justify-content: center;
+      }
+    }
+
+    .background {
+      height: 110px;
+    }
+
+    &.small {
+      grid-column-gap: 57px;
+      grid-template-columns: repeat(auto-fit, 130px);
+
+      .background {
+        height: 80px;
+      }
+    }
+
+    &.smallest {
+      grid-column-gap: 57px;
+      grid-template-columns: repeat(auto-fit, 130px);
+
+      .background {
+        height: 46px;
+      }
+    }
+  }
+}

@@ -144,6 +144,6 @@ const ColorPage = () => {
 			)}
 		</div>
 	);
-}
+};
 
 export default ColorPage;

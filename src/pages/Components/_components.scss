@@ -110,6 +110,12 @@
 
     .arrow-right {
       color: $ssb-green-3;
+      border: 0 solid transparent;
+      border-radius: 50%;
+      box-sizing: content-box;
+      margin: 0;
+      padding: 2px;
+      transition: border .2s, margin .2s;
     }
 
     &.clickable {
@@ -119,8 +125,8 @@
         border-color: $ssb-green-3;
 
         .arrow-right {
-          animation-duration: .2s;
-          animation-name: bump;
+          border: 2px solid $ssb-green-3;
+          margin: -2px;
         }
       }
     }

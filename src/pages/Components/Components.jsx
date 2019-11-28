@@ -138,14 +138,14 @@ const Components = () => {
 										<div className="coming-soon-label">Kommer</div>
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
-										<ArrowRight style={{ opacity: 0 }} className="arrow-right" />
+										<ArrowRight size={18} style={{ opacity: 0 }} className="arrow-right" />
 									</div>
 								) : (
 									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
 										{it.new && <div className="new-label">Ny</div>}
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
-										<ArrowRight className="arrow-right" />
+										<ArrowRight size={18} className="arrow-right" />
 									</a>
 								)
 							))}
@@ -160,14 +160,14 @@ const Components = () => {
 										<div className="coming-soon-label">Kommer</div>
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
-										<ArrowRight style={{ opacity: 0 }} className="arrow-right" />
+										<ArrowRight size={18} style={{ opacity: 0 }} className="arrow-right" />
 									</div>
 								) : (
 									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
 										{it.new && <div className="new-label">Ny</div>}
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
-										<ArrowRight className="arrow-right" />
+										<ArrowRight size={18} className="arrow-right" />
 									</a>
 								)
 							))}

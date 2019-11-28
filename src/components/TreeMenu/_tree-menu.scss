@@ -46,6 +46,8 @@
 
     .arrow-icon {
       color: $ssb-green-4;
+      margin-right: 0;
+      transition: margin-right .2s ease-out;
     }
 
     &.clickable {
@@ -56,9 +58,8 @@
         cursor: pointer;
 
         .arrow-icon {
-          animation-duration: .2s;
-          animation-name: bump;
           color: $ssb-white;
+          margin-right: -4px;
         }
       }
     }

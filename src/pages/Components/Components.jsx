@@ -71,23 +71,33 @@ const sidebarItems = [
 	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
 	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
+	{ component: '', label: 'Cards', path: '/cards', comingSoon: true },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
 	{ component: DialogInfo, label: 'Warnings and errors', path: '/dialog', icon: dialogIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
+	{ component: '', label: 'Footer', path: '/footer', comingSoon: true },
 	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error', new: true },
+	{ component: '', label: 'Graphs', path: '/graphs', comingSoon: true },
+	{ component: '', label: 'Header', path: '/header', comingSoon: true },
+	{ component: '', label: 'Icons', path: '/icons', comingSoon: true },
 	{ component: InputInfo, label: 'Input', path: '/input', icon: inputIcon },
 	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures', icon: keyfiguresIcon },
 	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },
+	{ component: '', label: 'Map', path: '/map', comingSoon: true },
 	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
 	{ component: ProfileBoxInfo, label: 'Profile Box', path: '/profile-box' },
-	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
 	{ component: QuotesInfo, label: 'Quotes', path: '/quotes', icon: quoteIcon },
+	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
+	{ component: '', label: 'Responsive media', path: '/responsive-media', comingSoon: true },
 	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
 	{ component: SearchBoxInfo, label: 'SearchBox', path: '/search-box', icon: searchIcon },
+	{ component: '', label: 'Site navigation', path: '/site-navigation', comingSoon: true },
 	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
+	{ component: '', label: 'Table', path: '/table', comingSoon: true },
 	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
+	{ component: '', label: 'Tags', path: '/tags', comingSoon: true },
 	{ component: TypographyInfo, label: 'Typography', path: '/typography', icon: typographyIcon },
 	{ component: WordExplanationInfo, label: 'Word Explanation', path: '/word-explanation', icon: wordExplanationIcon },
 ];
@@ -128,7 +138,7 @@ const Components = () => {
 										<div className="coming-soon-label">Kommer</div>
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
-										<ArrowRight className="arrow-right" />
+										<ArrowRight style={{ opacity: 0 }} className="arrow-right" />
 									</div>
 								) : (
 									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>
@@ -150,7 +160,7 @@ const Components = () => {
 										<div className="coming-soon-label">Kommer</div>
 										<img className="component-icon" src={it.icon} alt={it.label} />
 										<Title size={3}>{it.label}</Title>
-										<ArrowRight className="arrow-right" />
+										<ArrowRight style={{ opacity: 0 }} className="arrow-right" />
 									</div>
 								) : (
 									<a className="nav-item clickable" href={`#${match.url}${it.path}`}>

@@ -111,14 +111,14 @@ const LinksInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" ">Link text</Link>
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Link href=" " negative>Link text</Link>
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={ordinaryLink} language="jsx" />}
@@ -137,10 +137,10 @@ const LinksInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
 						</div>
@@ -162,11 +162,11 @@ const LinksInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link className="mr-4" href=" " linkType="profiled">Link text</Link><br />
 								<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Link className="mr-4" negative href=" " linkType="profiled">Link text</Link><br />
 								<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
 							</div>

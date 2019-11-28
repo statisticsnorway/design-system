@@ -105,8 +105,8 @@ const TypographyInfo = () => {
 						<div className="col-lg-6">
 							<p>{overviewTextHeadings}</p>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-row align-items-center">
-							<div className="d-flex flex-column align-items-center mb-4">
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Title size={1}>Title 1</Title>
 								<Title size={2}>Title 2</Title>
 								<Title size={3}>Title 3</Title>
@@ -114,7 +114,7 @@ const TypographyInfo = () => {
 								<Title size={5}>Title 5</Title>
 								<Title size={6}>Title 6</Title>
 							</div>
-							<div className="d-flex flex-column align-items-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Title negative size={1}>Title 1</Title>
 								<Title negative size={2}>Title 2</Title>
 								<Title negative size={3}>Title 3</Title>
@@ -123,7 +123,7 @@ const TypographyInfo = () => {
 								<Title negative size={6}>Title 6</Title>
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
@@ -139,20 +139,18 @@ const TypographyInfo = () => {
 							<p>{overviewRegularText}</p>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex flex-column align-items-center mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Text>This is default Text<br /></Text>
 								<Text small>This is small Text</Text>
 							</div>
-							<div className="d-flex flex-column align-items-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Text negative>This is default Text<br /></Text>
 								<Text negative small>This is small Text</Text>
 							</div>
 						</div>
-						<div className="col-lg-12">
-							<div className="mt-3">
-								<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-								<Divider light />
-							</div>
+						<div className="col-lg-12 mt-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeTextReact} language="jsx" />}
 							{activeCodeTab === '/html' && <CodeSnippet code={codeTextHtml} language="html" />}
 						</div>
@@ -164,16 +162,16 @@ const TypographyInfo = () => {
 						<Title size={2} className="col-lg-12">Paragraf</Title>
 						<div className="col-lg-6">Coming soon</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex flex-column align-items-center mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Paragraph>This is paragraph</Paragraph>
 								<LeadParagraph>This is a lead paragraph</LeadParagraph>
 							</div>
-							<div className="d-flex flex-column align-items-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Paragraph negative>This is paragraph</Paragraph>
 								<LeadParagraph negative>This is a lead paragraph</LeadParagraph>
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && (

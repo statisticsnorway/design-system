@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
-import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
+import { Title } from '@statisticsnorway/ssb-component-library';
 import { GitHub } from 'react-feather';
 import coopIllustration from '../../../public/customIcons/illustrasjon-samarbeid.svg';
 

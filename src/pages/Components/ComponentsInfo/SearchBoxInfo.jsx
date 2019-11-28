@@ -7,7 +7,7 @@ Søkefelt kombineres av inputfelt og et klikkbart søkeikon.
 Feltet gjør det mulig for brukeren å søke på spesielle ord eller fraser ved å skrive dem inn i søkefeltet. 
 `;
 
-{/*Search form are an input element that combines an input form and a clickable search icon 
+{/*Search form are an input element that combines an input form and a clickable search icon
 to allow the user to search for specific word or phrases by inputing the data into the search form.*/}
 
 const overviewTextFactbox = `
@@ -78,14 +78,14 @@ const SearchBoxInfo = () => {
 							<Paragraph>{overviewTextFactbox}</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input
 									ariaLabel="Input field Search"
 									placeholder="Search text"
 									searchField
 								/>
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Input
 									ariaLabel="Input field Search"
 									placeholder="Search text"

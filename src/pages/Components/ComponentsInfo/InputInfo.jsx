@@ -75,13 +75,9 @@ const InputInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Inputfelt</Title>
 			<LeadParagraph>
-				Inputfelter er elementer som tillater at brukeren legger inn innhold. Det skal være en ledetekst (etikett) 
-				som forteller brukeren hva slags informasjon han skal legge inn i feltet. En placeholder tekst 
-				(erstatningstekst) kan blir brukt inne i inputfeltet hvis ledetekst ikke er nødvendig, se for eksempel på 
-				søkeboks. 
-				{/*Input forms are an input element that allows the user to interact and input data into.
-				Label text should be used to tell the user what kind of data the input form is looking for
-				and should be short and concise and written in plain language.*/}
+				Inputfelter er elementer som tillater at brukeren legger inn innhold. Det skal være en ledetekst (etikett)
+				som forteller brukeren hva slags informasjon han skal legge inn i feltet.
+				En placeholder tekst (erstatningstekst) kan blir brukt inne i inputfeltet hvis ledetekst ikke er nødvendig, se for eksempel på søkeboks.
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
@@ -93,27 +89,21 @@ const InputInfo = () => {
 						<Title size={2} className="col-lg-12">Input</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Inputfelter har 3 ulike statuser; ikke valgt, hover (musepeker over den) og valgt. 
-								Når feltet ikke er valgt har det en tynn rektangulær mørk ramme. Når brukeren peker over 
-								den med musepekeren, blir rammen grønn. Når feltet er klikket på blir rammen grønn og tykkere, 
-								samtidig som det vises en blinkende strek inne i feltet for å indikere at brukeren kan starte 
-								å skrive.
-																
-								{/*Input forms contains 3 different state: un-clicked, hover and clicked.
-								When un-clicked the form is outlined by a grey rectangle outline.
-								When hovered, this rectangle outline turns into green.
-								When clicked by the user the blinking line indicates that it is ready for typing.*/}
+								Inputfelter har 3 ulike statuser; ikke valgt, hover (musepeker over den) og valgt.
+								Når feltet ikke er valgt har det en tynn rektangulær mørk ramme. Når brukeren peker over
+								den med musepekeren, blir rammen grønn. Når feltet er klikket på blir rammen grønn og tykkere,
+								samtidig som det vises en blinkende strek inne i feltet for å indikere at brukeren kan starte å skrive.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input label="Label" />
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Input negative label="Label" />
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
@@ -127,25 +117,20 @@ const InputInfo = () => {
 						<Title size={2} className="col-lg-12">Input error</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Når en feil oppstår i et inputfelt, blir feltet endret til feilinformasjon. 
-								Rammen på feltet vil bli rød og fetere. Til høyre for feltet vil et feilikon vises. 
+								Når en feil oppstår i et inputfelt, blir feltet endret til feilinformasjon.
+								Rammen på feltet vil bli rød og fetere. Til høyre for feltet vil et feilikon vises.
 								Under feltet vil det vises en feilmeldingstekst som forklarer hvordan man kan løse feilen.
-								
-								{/*When an error occurs in the input form, the select form will change into a error state where the
-								input form will change its border into a thicker border and color into red.
-								At the right side of the input form an error icon will be displayed.
-								Underneath the form an error message will be displayed in order to explain how to fix the error.*/}
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input label="Label" error errorMessage="Her gikk det galt" />
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Input negative label="Label" error errorMessage="Her gikk det galt" />
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleError} language="jsx" />}

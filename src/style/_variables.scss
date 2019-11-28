@@ -38,10 +38,24 @@ $max-content-size: 1200px;
   border-right: 1px solid $ssb-dark-2;
 }
 
+.component-wrapper {
+  margin-left: 20px;
+  width: 100%;
+
+  > * {
+    margin: 16px;
+  }
+}
+
 .negative-wrapper {
   background-color: $ssb-dark-5;
-  margin: 0 20px;
-  padding: 40px;
+  margin-left: 20px;
+  padding: 32px 18px;
+  width: 100%;
+
+  > * {
+    margin: 16px;
+  }
 }
 
 @keyframes bump {

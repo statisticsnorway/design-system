@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Button, Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-import { ChevronDown } from 'react-feather';
+import { ChevronDown, Upload } from 'react-feather';
 
 const tabItems = [
 	{
@@ -108,16 +108,16 @@ const ButtonInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button primary>Primary</Button>
-								<Button primary disabled>Primary</Button>
+								<Button primary icon={<Upload size={18} />}>Primary</Button>
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Button negative primary>Primary</Button>
-								<Button negative primary disabled>Primary</Button>
+								<Button negative primary icon={<Upload size={18} />}>Primary</Button>
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
 							<Divider light />
 							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExample1} language="jsx" />}
@@ -136,47 +136,20 @@ const ButtonInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button>Secondary</Button>
-								<Button disabled>Secondary</Button>
+								<Button icon={<Upload size={18} />}>Secondary</Button>
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Button negative>Secondary</Button>
-								<Button negative disabled>Secondary</Button>
+								<Button negative icon={<Upload size={18} />}>Secondary</Button>
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
 							<Divider light />
 							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExample2} language="jsx" />}
 							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExample2Html} language="html" />}
-						</div>
-					</div>
-
-					<Divider light className="mb-3" />
-
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Knapp med ikon</Title>
-						<div className="col-lg-6">
-							<Paragraph>
-								Både primær- og sekundærknapp kan ha ikon hvis det er viktig å kommunisere hva knappen gjør, eller for å tydeliggjøre forskjellen mellom knapper.
-							</Paragraph>
-						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
-								<Button primary><ChevronDown size="18" />&nbsp;Primary</Button>
-								<Button><ChevronDown size="18" />&nbsp;Secondary</Button>
-							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
-								<Button negative primary><ChevronDown size="18" />&nbsp;Primary</Button>
-								<Button negative><ChevronDown size="18" />&nbsp;Secondary</Button>
-							</div>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
-							<Divider light />
-							{activeCodeTab3 === '/react' && <CodeSnippet code={codeExample3} language="jsx" />}
-							{activeCodeTab3 === '/html' && <CodeSnippet code={codeExample3Html} language="html" />}
 						</div>
 					</div>
 
@@ -191,16 +164,16 @@ const ButtonInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button primary disabled>Primary</Button>
 								<Button disabled>Secondary</Button>
 							</div>
-							<div className="d-flex justify-content-center negative-wrapper">
-								<Button primary disabled>Primary</Button>
-								<Button disabled>Secondary</Button>
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
+								<Button primary disabled negative>Primary</Button>
+								<Button disabled negative>Secondary</Button>
 							</div>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode4Clicked} />
 							<Divider light />
 							{activeCodeTab4 === '/react' && <CodeSnippet code={codeExample4} language="jsx" />}

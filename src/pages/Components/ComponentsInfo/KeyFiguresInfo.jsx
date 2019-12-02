@@ -1,24 +1,7 @@
 import React, { useState } from 'react';
 import { Divider, LeadParagraph, KeyFigures, Paragraph, Tabs, Title, Text, Link } from '@statisticsnorway/ssb-component-library';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Home } from 'react-feather';
 import KeyFiguresExample from '../../../../public/customIcons/keyFiguresExample.svg';
-
-const leadParagraphText = `
-Nøkkeltall er et visuelt element som viser fremhevede hovedtall. Nøkkeltall kan vises i 3 størrelser ut fra hvordan de skal brukes. 
-Det store nøkkeltallet vises alene på egen linje, mens medium og lite nøkkeltall kan være plassert i grupper på to og to på samme linje.
-`;
-
-const overviewText = `
-Nøkkeltall er sammensatt av 5 visuelle elementer; en tittel som beskriver tallet, tidspunkt tallet gjelder for (telletidspunkt eller tidsperiode), 
-selve tallet, 
-beskrivelse av tallet (benevning), og om nødvendig en tekst som beskriver endring i tallet.
-`;
-
-const rationaleText = `
-Det er bare selve tallet som endrer størrelse i de ulike visningene for nøkkeltall. De andre elementene beholder samme størrelse. 
-Dette er gjort slik at det er mulig å skape en klar og konsistent designstruktur.
-`;
 
 const tabItems = [
 	{
@@ -43,25 +26,71 @@ const tabCode = [
 	},
 ];
 
-const codeReact = `
+const codeLargeReact = `
 <KeyFigures
 	number="789 398"
 	title="Antall husholdninger"
 	numberDescription="husholdninger"
 	time="2018"
-	size="small"
+	size="large"
 	icon={<Home size="240" />}
 />
 `;
 
-const codeHtml = `
+const codeLargeHtml = `
 <div class="ssb-key-figures">
-	<div class="kf-icon small"><i /></div>
+	<div class="kf-icon large"><i /></div>
 	<div>
 		<h4 class="ssb-title kf-title">Antall husholdninger</h4>
 		<div class="kf-time">2018</div>
-		<div class="ssb-number small">789 398</div>
+		<div class="ssb-number large">789 398</div>
 		<h4 class="ssb-title kf-title">husholdninger</h4>
+	</div>
+</div>
+`;
+
+const codeMediumReact = `
+<KeyFigures
+	number="80.6"
+	title="Menn"
+	numberDescription="år"
+	time="2018"
+	size="medium"
+	icon={<img alt="IconExample" src={KeyFiguresExample} />}
+/>
+`;
+
+const codeMediumHtml = `
+<div class="ssb-key-figures">
+	<div class="kf-icon medium"><i /></div>
+	<div>
+		<h4 class="ssb-title kf-title">Menn</h4>
+		<div class="kf-time">2018</div>
+		<div class="ssb-number medium">80,6</div>
+		<h4 class="ssb-title kf-title">år</h4>
+	</div>
+</div>
+`;
+
+const codeSmallReact = `
+<KeyFigures
+	number="80.6"
+	title="Menn"
+	numberDescription="år"
+	time="2018"
+	size="small"
+	icon={<img alt="IconExample" src={KeyFiguresExample} />}
+/>
+`;
+
+const codeSmallHtml = `
+<div class="ssb-key-figures">
+	<div class="kf-icon small"><i /></div>
+	<div>
+		<h4 class="ssb-title kf-title">Menn</h4>
+		<div class="kf-time">2018</div>
+		<div class="ssb-number small">80,6</div>
+		<h4 class="ssb-title kf-title">år</h4>
 	</div>
 </div>
 `;
@@ -76,50 +105,23 @@ const KeyFiguresInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Nøkkeltall</Title>
 			<LeadParagraph>
-				{leadParagraphText}
+				Nøkkeltall er tall vi ønsker å fremheve (hovedtall). De kommer i tre størrelser – S, M og L, og skaper spenning og dynamikk på siden.
+				Når nøkkeltall settes sammen til en gruppe er det viktig å tenke på hva du vil si. Det viktigste kommer øverst – og skal dermed være størst.
+				Grupper skal alltid følge rekkefølgen L + M + S, M + S, L + M eller L + S. I grupper hvor alle nøkkeltall har lik størrelse brukes alltid størrelse S.
+				De ulike nivåene skilles med lys skillelinje (se definisjon i «Komponenter»).
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Nøkkeltall</Title>
-						<div className="col-lg-6">
-							<Paragraph>{overviewText}</Paragraph>
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Large</Title>
+						<div className="col-lg-12 mb-4">
+							<Paragraph>
+								De viktigste tallene settes i denne størrelsen. Det skal aldri være mer enn ett large nøkkeltall i en gruppe.
+							</Paragraph>
 						</div>
-						<div className="col-lg-6">
-							<KeyFigures
-								number="789 398"
-								title="Antall husholdninger"
-								numberDescription="husholdninger"
-								time="2018"
-								size="small"
-								icon={<img alt="IconExample" src={KeyFiguresExample} />}
-							/>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
-						</div>
-					</div>
-				</div>
-			)}
-
-			{activeTab === '/begrunnelse' && (
-				<div>
-					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Elementstørrelse</Title>
-						<div className="col-lg-6">
-							<Paragraph>{rationaleText}</Paragraph>
-						</div>
-					</div>
-
-					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Large</Title>
-						<Divider light className="mt-1 mb-3" />
-						<div className="col-lg-12">
+						<div className="col-lg-12 mb-4">
 							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
@@ -129,36 +131,120 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeLargeReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeLargeHtml} language="html" />}
+						</div>
 					</div>
 
-					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Medium</Title>
-						<Divider light className="mb-3" />
-						<div className="col-lg-12">
+					<Divider className="mb-4" />
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Medium</Title>
+						<div className="col-lg-12 mb-4">
+							<Paragraph>
+								Medium nøkkeltall skal alltid være en gruppe på to. De to tallene skal alltid stå på høyde med hverandre, ikke under hverandre – bortsett fra i mobilvisning.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="789 398"
-								title="Antall husholdninger"
-								numberDescription="husholdninger"
+								number="80.6"
+								title="Menn"
+								numberDescription="år"
 								time="2018"
 								size="medium"
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
+						<div className="col-lg-6 mb-4">
+							<KeyFigures
+								number="84.7"
+								title="Kvinner"
+								numberDescription="år"
+								time="2018"
+								size="medium"
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
+							/>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeMediumReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeMediumHtml} language="html" />}
+						</div>
 					</div>
 
-					<div className="row mb-3">
-						<Title size={3} className="col-lg-12">Small</Title>
-						<Divider light className="mb-3" />
-						<div className="col-lg-12">
+					<Divider className="mb-4" />
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Small</Title>
+						<div className="col-lg-12 mb-4">
+							<Paragraph>
+								Small nøkkeltall skal alltid være en gruppe på minimum to. Antallet small nøkkeltall i en gruppe skal alltid følge togangen – 2, 4, 6, osv.
+								Det anbefales ikke å bruke grupper på mer enn seks small nøkkeltall.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="789 398"
-								title="Antall husholdninger"
-								numberDescription="husholdninger"
+								number="80.6"
+								title="Menn"
+								numberDescription="år"
 								time="2018"
 								size="small"
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
+						<div className="col-lg-6 mb-4">
+							<KeyFigures
+								number="80.6"
+								title="Menn"
+								numberDescription="år"
+								time="2018"
+								size="small"
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
+							/>
+						</div>
+						<div className="col-lg-6 mb-4">
+							<KeyFigures
+								number="84.7"
+								title="Kvinner"
+								numberDescription="år"
+								time="2018"
+								size="small"
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
+							/>
+						</div>
+						<div className="col-lg-6 mb-4">
+							<KeyFigures
+								number="84.7"
+								title="Kvinner"
+								numberDescription="år"
+								time="2018"
+								size="small"
+								icon={<img alt="IconExample" src={KeyFiguresExample} />}
+							/>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeMediumReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeMediumHtml} language="html" />}
+						</div>
+					</div>
+
+				</div>
+			)}
+
+			{activeTab === '/begrunnelse' && (
+				<div className="row mb-4">
+					<Title size={2} className="col-lg-12">Elementstørrelse</Title>
+					<div className="col-lg-6">
+						<Paragraph>
+							Det er bare selve tallet som endrer størrelse i de ulike visningene for nøkkeltall. De andre elementene beholder samme størrelse.
+							Dette er gjort slik at det er mulig å skape en klar og konsistent designstruktur.
+						</Paragraph>
 					</div>
 				</div>
 			)}
@@ -166,7 +252,7 @@ const KeyFiguresInfo = () => {
 			{activeTab === '/props' && (
 				<div>
 					<Title size={2}>Props</Title>
-					<table className="col-lg-12 mb-3">
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -208,7 +294,7 @@ const KeyFiguresInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider className="mb-3" light />
+					<Divider className="mb-4" light />
 
 					<div>
 						<Text>Depends on</Text>

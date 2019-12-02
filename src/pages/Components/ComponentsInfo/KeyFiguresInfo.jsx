@@ -150,7 +150,7 @@ const KeyFiguresInfo = () => {
 						</div>
 						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="80.6"
+								number="80,6"
 								title="Menn"
 								numberDescription="år"
 								time="2018"
@@ -160,7 +160,7 @@ const KeyFiguresInfo = () => {
 						</div>
 						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="84.7"
+								number="84,7"
 								title="Kvinner"
 								numberDescription="år"
 								time="2018"
@@ -188,7 +188,7 @@ const KeyFiguresInfo = () => {
 						</div>
 						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="80.6"
+								number="80,6"
 								title="Menn"
 								numberDescription="år"
 								time="2018"
@@ -198,7 +198,7 @@ const KeyFiguresInfo = () => {
 						</div>
 						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="80.6"
+								number="80,6"
 								title="Menn"
 								numberDescription="år"
 								time="2018"
@@ -208,7 +208,7 @@ const KeyFiguresInfo = () => {
 						</div>
 						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="84.7"
+								number="84,7"
 								title="Kvinner"
 								numberDescription="år"
 								time="2018"
@@ -218,7 +218,7 @@ const KeyFiguresInfo = () => {
 						</div>
 						<div className="col-lg-6 mb-4">
 							<KeyFigures
-								number="84.7"
+								number="84,7"
 								title="Kvinner"
 								numberDescription="år"
 								time="2018"

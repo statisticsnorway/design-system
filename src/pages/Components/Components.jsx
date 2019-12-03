@@ -17,7 +17,7 @@ import InputInfo from './ComponentsInfo/InputInfo';
 import KeyFiguresInfo from './ComponentsInfo/KeyFiguresInfo';
 import LinksInfo from './ComponentsInfo/LinksInfo';
 import PaginationInfo from './ComponentsInfo/PaginationInfo';
-import ProfileBoxInfo from './ComponentsInfo/ProfileBoxInfo';
+import CardsInfo from './ComponentsInfo/CardsInfo';
 import RadioButtonInfo from './ComponentsInfo/RadioButtonInfo';
 import ReferenceInfo from './ComponentsInfo/ReferenceInfo';
 import SearchBoxInfo from './ComponentsInfo/SearchBoxInfo';
@@ -71,7 +71,7 @@ const sidebarItems = [
 	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
 	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
-	{ component: '', label: 'Cards', path: '/cards', icon: cardsIcon, comingSoon: true },
+	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
 	{ component: DialogInfo, label: 'Warnings and errors', path: '/dialog', icon: dialogIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
@@ -87,7 +87,6 @@ const sidebarItems = [
 	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },
 	{ component: '', label: 'Map', path: '/map', icon: mapIcon, comingSoon: true },
 	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
-	{ component: ProfileBoxInfo, label: 'Profile Box', path: '/profile-box' },
 	{ component: QuotesInfo, label: 'Quotes', path: '/quotes', icon: quoteIcon },
 	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
 	{ component: '', label: 'Responsive media', path: '/responsive-media', icon: responsiveIcon, comingSoon: true },

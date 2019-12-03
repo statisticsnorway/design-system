@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Button, Divider, LeadParagraph, Paragraph, ProfileBox, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-
-const profileBoxStaticText = `
-The statistic version of the profiled box element are grouped into groups of 3. At the top of the boxes,
-there is always a heading which states the type of content displayed below. A statistic profiled box element has a light green fill.
-At the top, a sub-header states the type of the content the box is displaying accompanied by a link header and a short paragraph which describes the content within.
-`;
+import { Button, Card, Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const rationaleText = `
 As can be seen between these different profiled box elements, even though these are labeled underneath the same element, 
@@ -39,16 +33,16 @@ const tabCode = [
 ];
 
 const codeReact = `
-<ProfileBox>
+<Card>
 	<Title size={2}>Profiled box header</Title>
 	<Paragraph>Explain something about something with something clever.</Paragraph>
 	<Button primary>Handling</Button>
-</ProfileBox>
+</Card>
 `;
 
 const codeHtml = `
-<div class="ssb-profile-box">
-  <a class="profile-content">
+<div class="ssb-card">
+  <a class="card-content">
     {fill with content}
   </a>
   /* Optional download field */
@@ -89,11 +83,11 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<ProfileBox fileLocation="./not_a_file">
-								<Title size={2}>Profiled box header</Title>
+							<Card fileLocation="./not_a_file">
+								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Button primary>Handling</Button>
-							</ProfileBox>
+							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -113,11 +107,11 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<ProfileBox fileLocation="./not_a_file">
-								<Title size={2}>Profiled box header</Title>
+							<Card fileLocation="./not_a_file">
+								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Button primary>Handling</Button>
-							</ProfileBox>
+							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -139,11 +133,11 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<ProfileBox fileLocation="./not_a_file">
-								<Title size={2}>Profiled box header</Title>
+							<Card fileLocation="./not_a_file">
+								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Button primary>Handling</Button>
-							</ProfileBox>
+							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -165,11 +159,11 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<ProfileBox fileLocation="./not_a_file">
-								<Title size={2}>Profiled box header</Title>
+							<Card fileLocation="./not_a_file">
+								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Button primary>Handling</Button>
-							</ProfileBox>
+							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -187,11 +181,11 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<ProfileBox fileLocation="./not_a_file">
-								<Title size={2}>Profiled box header</Title>
+							<Card fileLocation="./not_a_file">
+								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Button primary>Handling</Button>
-							</ProfileBox>
+							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

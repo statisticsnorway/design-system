@@ -2,6 +2,7 @@
 @import '../node_modules/@statisticsnorway/ssb-component-library/src/main';
 @import 'style/variables';
 @import 'style/global';
+@import 'style/grid';
 @import 'style/text';
 
 // local components
@@ -12,5 +13,6 @@
 // pages
 @import 'pages/Color/color-page';
 @import 'pages/Components/components';
+@import 'pages/GridSpacing/grid-spacing';
 @import 'pages/Templates/templates';
 @import 'pages/Welcome/welcome';

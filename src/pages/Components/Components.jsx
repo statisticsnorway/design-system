@@ -63,7 +63,7 @@ import wordExplanationIcon from '../../../public/customIcons/wordexplanation.svg
 
 const sidebarMainItems = [
 	{ component: ColorPage, label: 'Farger', path: '/color', icon: colorIcon },
-	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing', icon: gridIcon, comingSoon: true },
+	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing', icon: gridIcon, new: true },
 	{ component: TypographyPage, label: 'Typography', path: '/typography-page', icon: typographyIcon },
 ];
 
@@ -71,14 +71,14 @@ const sidebarItems = [
 	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
 	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
-	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon },
+	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon, comingSoon: true },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
 	{ component: DialogInfo, label: 'Warnings and errors', path: '/dialog', icon: dialogIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
 	{ component: '', label: 'Footer', path: '/footer', icon: footerIcon, comingSoon: true },
-	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error', new: true },
+	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
 	{ component: '', label: 'Graphs', path: '/graphs', icon: graphsIcon, comingSoon: true },
 	{ component: '', label: 'Header', path: '/header', icon: headerIcon, comingSoon: true },
 	{ component: '', label: 'Icons', path: '/icons', comingSoon: true },

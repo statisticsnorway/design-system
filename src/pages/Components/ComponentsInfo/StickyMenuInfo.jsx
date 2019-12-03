@@ -113,11 +113,11 @@ const StickyMenuInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Sticky menu</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
@@ -159,7 +159,7 @@ const StickyMenuInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mb-3">Props</Title>
+					<Title size={2} className="mb-4">Props</Title>
 					<table className="col-lg-12">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>

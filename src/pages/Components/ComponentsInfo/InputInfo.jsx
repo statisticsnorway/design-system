@@ -81,11 +81,11 @@ const InputInfo = () => {
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/overview' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Input</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -111,9 +111,9 @@ const InputInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Input error</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -143,7 +143,7 @@ const InputInfo = () => {
 			{activeTab === '/props' && (
 				<div>
 					<Title size={2}>Props</Title>
-					<table className="col-lg-12 mb-3">
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -220,7 +220,7 @@ const InputInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider className="mb-3" light />
+					<Divider className="mb-4" light />
 
 					<div>
 						<Text>Depends on</Text>

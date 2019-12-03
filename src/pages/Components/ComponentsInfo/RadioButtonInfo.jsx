@@ -6,7 +6,7 @@ const leadParagraphText = `
 Radioknapper lar brukeren velge kun ett av et forhåndsdefinert sett av alternativer. 
 Default visning er at ingen valg er markert av knappene.
 `;
-{/*Radio buttons allows the user to select a single selection among a groups of options which includes at least two or more choices. 
+{/*Radio buttons allows the user to select a single selection among a groups of options which includes at least two or more choices.
 In a radio button list the options should always be independent from every other option and by default no radio element should be selected.*/}
 
 const overviewTextRadiobutton = `
@@ -15,11 +15,11 @@ nøytralt med en grå sirkel. Når brukeren peker over den med musepekeren, blir
 en grønn bakgrunnsstripe på hele raden for knappen. Når knappen er valgt, blir sirkelen bli fylt med en mindre sirkel i mørk farge. 
 `;
 
-{/*Radio buttons have 3 different states, alternating between unchecked, hover and checked. 
-In the unchecked state the radio buttons are neutral with a greyed circle. 
-As the user hover over an unchecked radio button it transforms into a thicker circle and turns green, 
-at the same time a light green stripe will appear over the hovered radio button row. 
-When a radio button is selected by the user, a dark circle will fill the selected radio button.*/} 
+{/*Radio buttons have 3 different states, alternating between unchecked, hover and checked.
+In the unchecked state the radio buttons are neutral with a greyed circle.
+As the user hover over an unchecked radio button it transforms into a thicker circle and turns green,
+at the same time a light green stripe will appear over the hovered radio button row.
+When a radio button is selected by the user, a dark circle will fill the selected radio button.*/}
 
 
 const tabItems = [
@@ -84,11 +84,11 @@ const RadioButtonInfo = () => {
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/overview' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">RadioGroup</Title>
 						<div className="col-lg-6">
 							<p>{overviewTextRadiobutton}</p>
@@ -116,7 +116,7 @@ const RadioButtonInfo = () => {
 			{activeTab === '/props' && (
 				<div>
 					<Title size={2}>Props</Title>
-					<table className="col-lg-12 mb-3">
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -148,7 +148,7 @@ const RadioButtonInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider className="mb-3" light />
+					<Divider className="mb-4" light />
 
 					<div>
 						<Text>Depends on</Text>

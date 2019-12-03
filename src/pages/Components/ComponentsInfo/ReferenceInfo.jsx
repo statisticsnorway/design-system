@@ -106,11 +106,11 @@ const ReferenceInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">References</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
@@ -131,8 +131,8 @@ const ReferenceInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mb-3">Props</Title>
-					<table className="col-lg-12 mb-3">
+					<Title size={2} className="mb-4">Props</Title>
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -154,7 +154,7 @@ const ReferenceInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider className="mb-3" light />
+					<Divider className="mb-4" light />
 
 					<div>
 						<Text>Depends on</Text>

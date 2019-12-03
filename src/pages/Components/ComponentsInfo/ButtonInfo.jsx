@@ -86,7 +86,7 @@ const ButtonInfo = () => {
 				Knappeteksten skal være så kort som mulig, og ikke gå over to linjer.
 			</LeadParagraph>
 
-			<ul className="mb-3 ml-2 col-lg-8">
+			<ul className="mb-4 ml-2 col-lg-8">
 				<li>
 					Primær- og sekundærknapper skal ikke brukes for navigasjon ut til eksterne sider. Bruk da i stedet <Link href="#/components/links">lenker</Link>.
 				</li>
@@ -95,11 +95,11 @@ const ButtonInfo = () => {
 				</li>
 			</ul>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/overview' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Primærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -125,9 +125,9 @@ const ButtonInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Sekundærknapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -153,9 +153,9 @@ const ButtonInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Ikke-aktiv knapp</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -185,7 +185,7 @@ const ButtonInfo = () => {
 
 			{activeTab === '/rationale' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Avrundede hjørner</Title>
 						<Paragraph className="col-lg-6">
 							Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
@@ -193,7 +193,7 @@ const ButtonInfo = () => {
 						</Paragraph>
 					</div>
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Fylt bakgrunn</Title>
 						<Paragraph className="col-lg-6">
 							For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren.
@@ -201,7 +201,7 @@ const ButtonInfo = () => {
 						</Paragraph>
 					</div>
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Understrek ved hoved</Title>
 						<Paragraph className="col-lg-6">
 							Alle knappevarianter har understrek ved hover for å tilfredsstille WCAG 2.0-kravene.
@@ -212,7 +212,7 @@ const ButtonInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mt-3 mb-3">Props</Title>
+					<Title size={2} className="mt-4 mb-4">Props</Title>
 
 					<table className="col-lg-12">
 						<thead style={{ textAlign: 'left' }}>

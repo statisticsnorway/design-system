@@ -100,10 +100,10 @@ const LinksInfo = () => {
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 			{activeTab === '/overview' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Lenker</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -126,9 +126,9 @@ const LinksInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Lenker med ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -152,9 +152,9 @@ const LinksInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Profilerte lenker med og uten ikon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -182,8 +182,8 @@ const LinksInfo = () => {
 			)}
 
 			{activeTab === '/rationale' && (
-				<div className="mt-3">
-					<div className="row mb-3">
+				<div className="mt-4">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Farge</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -197,8 +197,8 @@ const LinksInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mb-3">Props</Title>
-					<table className="col-lg-12 mb-3">
+					<Title size={2} className="mb-4">Props</Title>
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>

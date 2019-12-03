@@ -9,13 +9,13 @@ valgene på en annen måte, f.eks. avhukingsbokser eller radioknapper. Hvis list
 bør du i stedet bruke søk som sorterer resultat etter brukerens input og som raskt kan gi relevante valg.  
 `;
 
-{/*The dropdown component is a selection element that pushes a large amount of items into one list that the user can view when selected. 
+{/*The dropdown component is a selection element that pushes a large amount of items into one list that the user can view when selected.
 This helps to free up a lot of space for items that are not necessary to be viewed at all times.
 
-The dropdown component is comprised of a label describing the action of the component and a input form element that allow user to click on, 
-when clicked a list of items will be displayed for the user to choose from. 
-The selected item is highlighted with a dark green color and the hovered item is highlighted with a light green color.  
-*/}  
+The dropdown component is comprised of a label describing the action of the component and a input form element that allow user to click on,
+when clicked a list of items will be displayed for the user to choose from.
+The selected item is highlighted with a dark green color and the hovered item is highlighted with a light green color.
+*/}
 
 const overviewText = `
 Dropdown består av en ledetekst som beskriver hva elementet består av og et input-element som brukeren kan klikke på. 
@@ -121,11 +121,11 @@ const DropdownInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/overview' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Dropdown</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
@@ -141,9 +141,9 @@ const DropdownInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Dropdown med forhåndsvalgt verdi</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextPreSelectedValue}</Paragraph>
@@ -151,14 +151,14 @@ const DropdownInfo = () => {
 						<div className="col-lg-6">
 							<Dropdown header="Menu header" selectedItem={{ title: 'Ocean', id: 'item3' }} items={items} />
 						</div>
-						<div className="col-lg-12  mt-3">
+						<div className="col-lg-12 mt-4">
 							<CodeSnippet code={codeExamplePreSelected} language="jsx" />
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Dropdown med søkemulighet</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextSearchable}</Paragraph>
@@ -166,7 +166,7 @@ const DropdownInfo = () => {
 						<div className="col-lg-6">
 							<Dropdown header="Menu header" searchable items={items} />
 						</div>
-						<div className="col-lg-12  mt-3">
+						<div className="col-lg-12 mt-4">
 							<CodeSnippet code={codeExampleSearchable} language="jsx" />
 						</div>
 					</div>
@@ -175,15 +175,12 @@ const DropdownInfo = () => {
 			)}
 
 			{activeTab === '/rationale' && (
-				<div className="row mb-3">
+				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Grønn indikator</Title>
 					<div className="col-lg-6">
 						<Paragraph>
-							En 5px grønn rektangulær indikator vises sammen med den lyse grønne hover-fargen for å 
+							En 5px grønn rektangulær indikator vises sammen med den lyse grønne hover-fargen for å
 							gi en tydeligere indikasjon på valg for brukere med nedsatt syn.
-							
-							{/*A 5px green rectangle indicator is added together with the light green hover in order to provide a clear
-							indication for users with lower-vision or vision impairment.*/}
 						</Paragraph>
 					</div>
 				</div>

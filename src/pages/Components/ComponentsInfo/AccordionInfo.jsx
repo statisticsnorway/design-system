@@ -88,7 +88,7 @@ const nestedExampleHtml = `
   <div class="accordion-body closed">
     {insert content here}
     
-    <div class="ssb-nested-accordion mt-3">
+    <div class="ssb-nested-accordion mt-4">
 			<div class="nested-accordion-header closed" onclick="{toggle classname to 'open'}">
 				{10px plus sign}
 				<span class="header-text">Title</span>
@@ -126,10 +126,10 @@ const AccordionInfo = () => {
 			</Paragraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 			{activeTab === '/overview' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -140,7 +140,7 @@ const AccordionInfo = () => {
 							<Accordion header="This is a header">{accordionFillerText}</Accordion>
 						</div>
 
-						<div className="col-lg-12 mt-3">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
 							<Divider light />
 							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
@@ -149,9 +149,9 @@ const AccordionInfo = () => {
 
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Accordion med subheader</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -161,7 +161,7 @@ const AccordionInfo = () => {
 						<div className="col-lg-6">
 							<Accordion header="This is a header" subHeader="Subheader">{accordionFillerText}</Accordion>
 						</div>
-						<div className="col-lg-12 mt-3">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
 							<Divider light />
 							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExampleSubheader} language="jsx" />}
@@ -169,9 +169,9 @@ const AccordionInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Flere nivåer accordions</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -187,7 +187,7 @@ const AccordionInfo = () => {
 								</NestedAccordion>
 							</Accordion>
 						</div>
-						<div className="col-lg-12 mt-3">
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
 							<Divider light />
 							{activeCodeTab3 === '/react' && <CodeSnippet code={nestedExample} language="jsx" />}
@@ -195,7 +195,7 @@ const AccordionInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
 
 				</div>
@@ -203,7 +203,7 @@ const AccordionInfo = () => {
 
 			{activeTab === '/rationale' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Single action accordions</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -220,7 +220,7 @@ const AccordionInfo = () => {
 			{activeTab === '/props' && (
 				<div>
 					<Title size={2}>Props</Title>
-					<table className="col-lg-12 mb-3">
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -257,7 +257,7 @@ const AccordionInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider className="mb-3" light />
+					<Divider className="mb-4" light />
 
 					<div>
 						<Text>Depends on</Text>

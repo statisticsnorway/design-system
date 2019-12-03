@@ -35,10 +35,10 @@ const BlockContentInfo = () => {
 				BlockContent is a wrapper for wrapping content.
 			</LeadParagraph>
 
-			<Divider />
+			<Divider className="mb-4" />
 
-			<div className="mt-3">
-				<div className="row mb-3">
+			<div>
+				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">BlockContent</Title>
 					<div className="col-lg-12">
 						<Paragraph>
@@ -47,7 +47,7 @@ const BlockContentInfo = () => {
 						</Paragraph>
 					</div>
 
-					<div className="col-lg-12 mb-3">
+					<div className="col-lg-12 mb-4">
 						<BlockContent pageNumber={1}>
 							Insert content here
 						</BlockContent>
@@ -61,11 +61,11 @@ const BlockContentInfo = () => {
 					</div>
 				</div>
 			</div>
-			<Divider light className="mb-3" />
+			<Divider light className="mb-4" />
 
-			<div className="row mb-3">
+			<div className="row mb-4">
 				<div className="col-lg-12">
-					<Title size={2} className="mt-3">Props</Title>
+					<Title size={2} className="mt-4">Props</Title>
 					<table className="col-lg-12">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>

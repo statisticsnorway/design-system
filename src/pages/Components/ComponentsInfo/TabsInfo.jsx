@@ -7,8 +7,8 @@ Faner er navigasjonselementer som gir brukeren muligheten til å navigere mellom
 han beholder konteksten. Husk at selv om faner er en horisontal liste, innebærer den ikke en lang tekststreng. 
 Det er bedre å ha korte og konsiste ord i stedet. 
 `;
-{/*Tabs are a navigational element that allows the user to navigate between related pages or views while retaining the context. 
-It is important to remember that because the tab navigation is a horizontal list, it does not accommodate a long string of text. 
+{/*Tabs are a navigational element that allows the user to navigate between related pages or views while retaining the context.
+It is important to remember that because the tab navigation is a horizontal list, it does not accommodate a long string of text.
 It is better to try having short and concise wording instead. */}
 
 
@@ -80,10 +80,10 @@ const TabsInfo = () => {
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/overview' && (
-				<div className="row mb-3">
+				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Tabs</Title>
 					<div className="col-lg-6">
 						<p>{overviewTextTabs}</p>
@@ -108,7 +108,7 @@ const TabsInfo = () => {
 			)}
 
 			{activeTab === '/rationale' && (
-				<div className="row mb-3">
+				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Underscore</Title>
 					<div className="col-lg-6">
 						By using an underscore underneath the tabs, it becomes easier for the user to separate between the content.
@@ -119,7 +119,7 @@ const TabsInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mb-3">Props</Title>
+					<Title size={2} className="mb-4">Props</Title>
 					<table className="col-lg-12">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>

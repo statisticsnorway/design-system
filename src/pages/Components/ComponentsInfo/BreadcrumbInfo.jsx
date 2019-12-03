@@ -75,10 +75,10 @@ const BreadcrumbInfo = () => {
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/overview' && (
-				<div className="row mb-3">
+				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Brødsmuler</Title>
 					<div className="col-lg-6">
 						<Paragraph>
@@ -99,7 +99,7 @@ const BreadcrumbInfo = () => {
 			)}
 
 			{activeTab === '/rationale' && (
-				<div className="row mb-3">
+				<div className="row mb-4">
 					<Title size={3} className="col-lg-12">Location based breadcrumbs</Title>
 					<div className="col-lg-6">
 						<Paragraph>
@@ -120,8 +120,8 @@ const BreadcrumbInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mt-3 mb-3">Props</Title>
-					<table className="col-lg-12 mb-3">
+					<Title size={2} className="mt-4 mb-4">Props</Title>
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -138,7 +138,7 @@ const BreadcrumbInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider className="mb-3" light />
+					<Divider className="mb-4" light />
 
 					<div>
 						<Text>Depends on</Text>

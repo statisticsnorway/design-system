@@ -7,7 +7,7 @@ Avhukingsbokser gir brukeren muligheten til å velge flere valg i et utvalg.
 Default visning for avhukingsbokser er at ingen valg er markert, og de ulike valgene bør stå i alfabetisk rekkefølge.
 `;
 {/*Check boxes provides the user with a range of options where the user may select any number of choices, one, multiple or zero.
-The default view for checkboxes has no options selected and the options provided should be listed in alphabetical order.*/} 
+The default view for checkboxes has no options selected and the options provided should be listed in alphabetical order.*/}
 
 const overviewTextCheckbox = `
 Avhukingsbokser har 3 ulike statuser; ikke-avhuket (ikke valgt), hover (musepeker over den)  og avhuket (valgt). 
@@ -86,10 +86,10 @@ const CheckboxInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/overview' && (
-				<div className="row mb-3">
+				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">CheckboxGroup</Title>
 					<div className="col-lg-6">
 						<p>{overviewTextCheckbox}</p>

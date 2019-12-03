@@ -18,17 +18,17 @@ const DividerInfo = () => (
 	<div className="col-lg-12">
 		<Title size={1}>Divider</Title>
 		<LeadParagraph>
-			Delestreker brukes for å vise horisontale linjer mellom forskjellig grupperinger av innhold. 
+			Delestreker brukes for å vise horisontale linjer mellom forskjellig grupperinger av innhold.
 			Det brukes oftest på sider som har mye forskjellig innhold, f.eks. forsiden, artikler, statistikker.
-			
+
 			{/*Divider is an element used to draw horizontal lines between different content groupings,
 			used mostly on open pages that have lots of different components present, i.e. front page,
 			article page, statistic page etc.*/}
 		</LeadParagraph>
 
-		<Divider className="mb-3" />
+		<Divider className="mb-4" />
 
-		<div className="row mb-3">
+		<div className="row mb-4">
 			<Title size={2} className="col-lg-12">Divider</Title>
 			<div className="col-lg-6">
 				<Paragraph>
@@ -37,7 +37,7 @@ const DividerInfo = () => (
 				</Paragraph>
 			</div>
 			<div className="col-lg-6">
-				<div className="mb-3"><Divider dark /></div>
+				<div className="mb-4"><Divider dark /></div>
 				<Divider light />
 			</div>
 			<div className="col-lg-6">
@@ -48,11 +48,11 @@ const DividerInfo = () => (
 			</div>
 		</div>
 
-		<Divider light className="mb-3" />
+		<Divider light className="mb-4" />
 
-		<div className="row mb-3">
+		<div className="row mb-4">
 			<div className="col-lg-12">
-				<Title size={2} className="mt-3">Props</Title>
+				<Title size={2} className="mt-4">Props</Title>
 				<table className="col-lg-12">
 					<thead style={{ textAlign: 'left' }}>
 						<tr>

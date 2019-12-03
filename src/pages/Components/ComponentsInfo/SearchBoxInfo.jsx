@@ -68,11 +68,11 @@ const SearchBoxInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Seach form</Title>
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextFactbox}</Paragraph>
@@ -102,7 +102,7 @@ const SearchBoxInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
 					<div>
 						<Title size={2}>Props</Title>

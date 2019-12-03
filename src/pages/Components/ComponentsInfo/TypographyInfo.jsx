@@ -2,27 +2,10 @@ import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
-const leadParagraphText = `
-Typografien er en kjernekomponent i designsystemet, ettersom den bidrar til stil og tone på nettstedet og bidrar til å bygge profil. 
-SSB sitt designsystem bruker skrifttypene Roboto, Roboto condensed og Opens Sans. 
-Disse skrifttypene har en lett avrundet form, og gir et åpent og vennlig uttrykk. Roboto brukes for å skille ut interaksjonselementer fra vanlig tekst.
-`;
-
-const overviewTextHeadings = `
-Roboto og Roboto Condensed brukes for overskrifter. 
-For tekst større enn 24, brukes Roboto Condensed. Overskrifter finnes i 6 forskjellige nivåer, fra størst til minst.
-`;
-const overviewRegularText = `
-Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.
-`;
-
 const tabItems = [
 	{
 		title: 'Oversikt',
 		path: '/oversikt',
-	}, {
-		title: 'Begrunnelse',
-		path: '/begrunnelse',
 	}, {
 		title: 'Props',
 		path: '/props',
@@ -44,8 +27,6 @@ const codeExample = `
 <Title size="2">Title h2</Title>
 <Title size="3">Title h3</Title>
 <Title size="4">Title h4</Title>
-<Title size="5">Title h5</Title>
-<Title size="6">Title h6</Title>
 `;
 
 const codeExampleHtml = `
@@ -53,8 +34,6 @@ const codeExampleHtml = `
 <h2 class="ssb-title">Title h2</h2>
 <h3 class="ssb-title">Title h3</h3>
 <h4 class="ssb-title">Title h4</h4>
-<h5 class="ssb-title">Title h5</h5>
-<h6 class="ssb-title">Title h6</h6>
 `;
 
 const codeTextReact = `
@@ -63,22 +42,38 @@ const codeTextReact = `
 <Text negative>Negative text here</Text>
 `;
 
+const codeSmallTextReact = `
+<Text small>Small text here</Text>
+<Text negative small>Negative small text here</Text>
+`;
+
 const codeTextHtml = `
 <span class="ssb-text-wrapper">Default text here</span>
 <span class="ssb-text-wrapper small-text">Small text here</span>
 <span class="ssb-text-wrapper negative">Negative text here</span>
 `;
 
+const codeSmallTextHtml = `
+<span class="ssb-text-wrapper small-text">Small text here</span>
+<span class="ssb-text-wrapper negative small-text">Negative small text here</span>
+`;
+
 const codeParagraphReact = `
 <Paragraph>This is paragraph</Paragraph>
 <Paragraph negative>Negative text here</Paragraph>
-<LeadParagraph>Default text here</LeadParagraph>
-<LeadParagraph negative>Negative text here</LeadParagraph>
 `;
 
 const codeParagraphHtml = `
 <p class="ssb-paragraph">Default text here</p>
 <p class="ssb-paragraph negative">Negative text here</p>
+`;
+
+const codeLeadParagraphReact = `
+<LeadParagraph>Default text here</LeadParagraph>
+<LeadParagraph negative>Negative text here</LeadParagraph>
+`;
+
+const codeLeadParagraphHtml = `
 <p class="ssb-lead-paragraph">Default text here</p>
 <p class="ssb-lead-paragraph negative">Negative text here</p>
 `;
@@ -93,37 +88,35 @@ const TypographyInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Typografi</Title>
 			<LeadParagraph>
-				{leadParagraphText}
+				Typografien er en kjernekomponent i designsystemet, ettersom den bidrar til stil og tone på nettstedet og bidrar til å bygge profil.
+				SSB sitt designsystem bruker skrifttypene Roboto, Roboto condensed og Opens Sans.
+				Disse skrifttypene har en lett avrundet form, og gir et åpent og vennlig uttrykk. Roboto brukes for å skille ut interaksjonselementer fra vanlig tekst.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-3" />
+			<Divider className="mb-4" />
 
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Overskrifter</Title>
 						<div className="col-lg-6">
-							<p>{overviewTextHeadings}</p>
+							<Paragraph>
+								H1 brukes på den første tittelen – ofte hovedtittel på en side. En side skal aldri ha mer enn én H1.
+								H2 brukes i mellomtitler, mens H3 er underordnet denne igjen. H4 har samme størrelse som løpende tekst.
+								Alle titler finnes også som hvit for plassering mot mørk bakgrunn.
+							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Title size={1}>Title 1</Title>
-								<Title size={2}>Title 2</Title>
-								<Title size={3}>Title 3</Title>
-								<Title size={4}>Title 4</Title>
-								<Title size={5}>Title 5</Title>
-								<Title size={6}>Title 6</Title>
-							</div>
-							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Title negative size={1}>Title 1</Title>
-								<Title negative size={2}>Title 2</Title>
-								<Title negative size={3}>Title 3</Title>
-								<Title negative size={4}>Title 4</Title>
-								<Title negative size={5}>Title 5</Title>
-								<Title negative size={6}>Title 6</Title>
-							</div>
+						<div className="col-lg-6 divider-left d-flex flex-column flex-wrap mb-4">
+							<Title size={1}>H1 eksempel</Title>
+							<Paragraph>Roboto Condensed Bold, 56px, 80px linjeavstand.<br />Mobil: 44px, 56px linjeavstand.</Paragraph>
+							<Title size={2}>H2 eksempel</Title>
+							<Paragraph>Roboto Condensed Bold, 28px, 40px linjeavstand.<br />Mobil: 28px, 36px linjeavstand.</Paragraph>
+							<Title size={3}>H3 eksempel</Title>
+							<Paragraph>Roboto Bold, 20px, 32px linjeavstand.<br />Mobil: Ingen endring.</Paragraph>
+							<Title size={4}>H4 eksempel</Title>
+							<Paragraph>Roboto Bold, 16px, 28px linjeavstand.<br />Mobil: Ingen endring.</Paragraph>
 						</div>
-						<div className="col-lg-12 mt-4">
+						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
@@ -131,47 +124,49 @@ const TypographyInfo = () => {
 						</div>
 					</div>
 
-					<Divider className="col-lg-12 mt-3 mb-3" />
+					<Divider className="col-lg-12 mb-4" />
 
-					<div className="row">
-						<Title size={2} className="col-lg-12">Vanlig tekst</Title>
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Lead Paragraph</Title>
 						<div className="col-lg-6">
-							<p>{overviewRegularText}</p>
+							<Paragraph>
+								Ingress brukes ofte mellom heading og paragraph som et kortfattet resumeé over innholdet.
+								Ingress settes i Open Sans Regular 20px, 32px linjeavstand på desktop. (Samme størrelse på mobil og desktop). Ingress har også en hvit versjon.
+							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Text>This is default Text<br /></Text>
-								<Text small>This is small Text</Text>
-							</div>
-							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Text negative>This is default Text<br /></Text>
-								<Text negative small>This is small Text</Text>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+							<div className="d-flex flex-wrap">
+								<LeadParagraph>
+									Ingress ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+								</LeadParagraph>
 							</div>
 						</div>
-						<div className="col-lg-12 mt-4">
+						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeTextReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeTextHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeLeadParagraphReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeLeadParagraphHtml} language="html" />}
 						</div>
 					</div>
 
-					<Divider className="mt-3" />
+					<Divider className="mb-4" />
 
-					<div className="row mt-3">
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Paragraf</Title>
-						<div className="col-lg-6">Coming soon</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Paragraph>This is paragraph</Paragraph>
-								<LeadParagraph>This is a lead paragraph</LeadParagraph>
-							</div>
-							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Paragraph negative>This is paragraph</Paragraph>
-								<LeadParagraph negative>This is a lead paragraph</LeadParagraph>
+						<div className="col-lg-6">
+							<Paragraph>
+								Brødtekst settes i Open Sans Regular 16px, 28px linjeavstand på desktop. (Samme størrelse på mobil og desktop). Brødtekst har også en hvit versjon.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+							<div className="d-flex flex-wrap">
+								<Paragraph>
+									Brødtekst ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam.
+								</Paragraph>
 							</div>
 						</div>
-						<div className="col-lg-12 mt-4">
+						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && (
@@ -183,13 +178,58 @@ const TypographyInfo = () => {
 						</div>
 					</div>
 
+					<Divider className="mb-4" />
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Vanlig tekst</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+							<div className="d-flex flex-wrap">
+								<Text>Vanlig tekst ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+							</div>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeTextReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeTextHtml} language="html" />}
+						</div>
+					</div>
+
+					<Divider className="mb-4" />
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Liten tekst</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Størrelsen benyttes kun i ekstra-tekst, som f.eks. ordforklaring og labels til input-felt. Desktop: Open Sans Regular 14px, 24px linjeavstand.
+								(Samme størrelse på mobil og desktop). Liten tekst har også en hvit versjon.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+							<div className="d-flex flex-wrap">
+								<Text small>Microtext og labels ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+							</div>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeSmallTextReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeSmallTextHtml} language="html" />}
+						</div>
+					</div>
+
 				</div>
 			)}
 
 			{activeTab === '/props' && (
 				<div>
 					<Title size={2}>Title Props</Title>
-					<table className="col-lg-12 mb-3">
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -221,10 +261,10 @@ const TypographyInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
 					<Title size={2}>Text Props</Title>
-					<table className="col-lg-12 mb-3">
+					<table className="col-lg-12 mb-4">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>
@@ -251,7 +291,7 @@ const TypographyInfo = () => {
 						</tbody>
 					</table>
 
-					<Divider light className="mb-3" />
+					<Divider light className="mb-4" />
 
 					<Title size={2}>Paragraph Props</Title>
 					<table className="col-lg-12">

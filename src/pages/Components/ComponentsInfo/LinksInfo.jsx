@@ -27,61 +27,99 @@ const tabCode = [
 ];
 
 const ordinaryLink = `
-<Link href="">Link text</Link>
-<Link negative href="">Link text</Link>
+<Link href="">This is a clickable text link</Link>
+<Link negative href="">This is a clickable text link</Link>
 `;
 
 const ordinaryLinkHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a clickable text link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a clickable text link</span>
 </a>
 `;
 
 const iconLinks = `
-<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
-<Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+<Link href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
+<Link negative href=" " icon={<ArrowRight size="20" />}>This is a link with an icont</Link>
 `;
 
 const iconLinksHtml = `
 <a class="ssb-link" href=" " target="" rel="">
   {insert icon here}
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a link with an icon</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
   {insert icon here}
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a link with an icon</span>
 </a>
 `;
 
 const profiledLinks = `
-<Link href=" " linkType="profiled">Link text</Link>
-<Link negative href=" " linkType="profiled">Link text</Link>
-<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
-<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+<Link href=" " linkType="profiled">This is a profiled text link</Link>
+<Link negative href=" " linkType="profiled">This is a profiled text link</Link>
 `;
 
 const profiledLinksHtml = `
 <a class="ssb-link" href=" " target="" rel="">
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a profiled text link</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a profiled text link</span>
 </a>
+`;
 
+const profiledLinksIcon = `
+<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>This is a profiled link with icon</Link>
+<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>This is a profiled link with icon</Link>
+`;
+
+const profiledLinksIconHtml = `
 <a class="ssb-link" href=" " target="" rel="">
   {insert icon here}
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a profiled link with icon</span>
 </a>
 
 <a class="ssb-link negative" href=" " target="" rel="">
   {insert icon here}
-  <span class="link-text">A regular link</span>
+  <span class="link-text">This is a profiled link with icon</span>
+</a>
+`;
+
+const headerLinks = `
+<Link href=" " linkType="header">This is an header link</Link>
+<Link negative href=" " linkType="header">This is an header link</Link>
+`;
+
+const headerLinksHtml = `
+<a class="ssb-link header" href=" " target="" rel="">
+  <span class="link-text">This is an header link</span>
+</a>
+
+<a class="ssb-link header negative" href=" " target="" rel="">
+  <span class="link-text">This is an header link</span>
+</a>
+`;
+
+const linkList = `
+<Link href=" " linkType="header">This is a clickable text link in a link list</Link>
+<Link href=" " linkType="header">This is a clickable text link in a link list</Link>
+<Link href=" " linkType="header">This is a clickable text link in a link list</Link>
+`;
+
+const linkListHtml = `
+<a class="ssb-link" href=" " target="" rel="">
+	<span class="link-text">This is a clickable text link in a link list</span>
+</a>
+<a class="ssb-link" href=" " target="" rel="">
+	<span class="link-text">This is a clickable text link in a link list</span>
+</a>
+<a class="ssb-link" href=" " target="" rel="">
+	<span class="link-text">This is a clickable text link in a link list</span>
 </a>
 `;
 
@@ -95,53 +133,58 @@ const LinksInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Link</Title>
 			<LeadParagraph>
-				Lenker stiles slik at det er lett å forstå at de er hyperlenker til andre sider. De følger stilen til tekst de står sammen med i paragrafen,
-				men er understreket og har grønn farge for å differensieres fra teksten. Lenker kan også bli brukt i andre former som lenkelister, profilerte lenker og lenker med ikon.
+				Lenker stiles slik at det er lett å forstå at de er klikkbare og tar brukeren til andre sider.
+				De kan stå enkeltvis, i brødtekst eller settes sammen til lenkelister. Lenker stiles etter UU-krav.
+				Lenketeksten skal gi brukeren en tydelig indikasjon på lenkens funksjon.
 			</LeadParagraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-4" />
+			<Divider className="mb-3" />
 			{activeTab === '/overview' && (
 				<div>
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Lenker</Title>
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Link</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Ordinære lenker kan blir brukt både i løpende tekst og som frittstående lenker.
+								Standard lenke følger stilen til brødtekst, men er understreket og har grønn farge for å skille den fra ikke-klikkbar tekst.
+								Kan stå alene eller sammen med flere i lenkeliste. Den kan også brukes i brødtekst.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link href=" ">Link text</Link>
+								<Link href=" ">This is a clickable text link</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link href=" " negative>Link text</Link>
+								<Link href=" " negative>This is a clickable text link</Link>
 							</div>
 						</div>
+
 						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={ordinaryLink} language="jsx" />}
 							{activeCodeTab === '/html' && <CodeSnippet code={ordinaryLinkHtml} language="html" />}
 						</div>
+
+
 					</div>
 
-					<Divider light className="mb-4" />
+					<Divider light className="mb-3" />
 
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Lenker med ikon</Title>
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Link with icon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Lenker med ikon brukes vanligvis ikke i løpende tekst, men gjerne på frittstående lenker.
-								Men de kan også blir brukt sammen med andre lenker med ikon for å differensiere eller indikere forskjellig funksjonalitet.
+								Lenker med ikon brukes som frittstående lenker. Flere lenker med ikon kan settes sammen til lenkeliste.
+								Ikonet brukes for å differensiere eller indikere ulik funksjonalitet. Ikonet skal alltid gi brukeren økt forståelse for lenkens funksjon.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+								<Link href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link negative href=" " icon={<ArrowRight size="20" />}>Link text</Link>
+								<Link negative href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -152,23 +195,22 @@ const LinksInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-4" />
+					<Divider light className="mb-3" />
 
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Profilerte lenker med og uten ikon</Title>
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Profield link</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Profilerte lenker brukes for å presisere hierarki og de kan bli brukt i kombinasjon med andre typer lenker for å fremheve viktighet.
+								Profilerte lenker brukes der man ønsker en lenke som gjør mer ut av seg enn en standard lenke. Innholdet lenken tar deg til er av stor betydning for brukeren.
+								Profilert lenke kan brukes i kombinasjon med andre typer lenker for å skape hierarki. Skal aldri ta brukeren til ekstern side.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link className="mr-4" href=" " linkType="profiled">Link text</Link><br />
-								<Link href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+								<Link className="mr-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link className="mr-4" negative href=" " linkType="profiled">Link text</Link><br />
-								<Link negative href=" " linkType="profiled" icon={<ArrowRight size="20" />}>Link text</Link>
+								<Link negative className="mr-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -178,12 +220,88 @@ const LinksInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={profiledLinksHtml} language="html" />}
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Profield link with icon</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Se forklaring under «Profiled Link». Ikonet brukes for å differensiere eller indikere ulik funksjonalitet.
+								Ikonet skal alltid gi brukeren økt forståelse for lenkens funksjon. Skal aldri ta brukeren til ekstern side.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<Link className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
+							</div>
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
+								<Link negative className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
+							</div>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={profiledLinksIcon} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={profiledLinksIconHtml} language="html" />}
+						</div>
+					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Header link</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Tittellenke brukes der det er naturlig at tittelen er lenken. For eksempel kan dette brukes i innganger til artikler hvor titlene er beskrivende for innholdet.
+								Tittellenke kan også brukes der det er vanskelig å finne lenketekst som erstatter «Les mer».
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<Link href=" " linkType="header">This is an header link</Link>
+							</div>
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
+								<Link href=" " linkType="header" negative>This is an header link</Link>
+							</div>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={headerLinks} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={headerLinksHtml} language="html" />}
+						</div>
+					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Link list</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Standard lenke og standard lenke med ikon kan settes sammen til lenkeliste. Lenkelister brukes uten kulepunkter.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<Link href=" ">This is a clickable text link in a link list</Link>
+								<Link href=" ">This is a clickable text link in a link list</Link><br />
+								<Link href=" ">This is a clickable text link in a link list</Link><br />
+							</div>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={linkList} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={linkListHtml} language="html" />}
+						</div>
+					</div>
 				</div>
 			)}
 
 			{activeTab === '/rationale' && (
-				<div className="mt-4">
-					<div className="row mb-4">
+				<div className="mt-3">
+					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Farge</Title>
 						<div className="col-lg-6">
 							<Paragraph>
@@ -197,8 +315,8 @@ const LinksInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mb-4">Props</Title>
-					<table className="col-lg-12 mb-4">
+					<Title size={2} className="mb-3">Props</Title>
+					<table className="col-lg-12 mb-3">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
 								<th><Title size={3}>Prop name</Title></th>

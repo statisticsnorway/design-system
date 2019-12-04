@@ -46,16 +46,18 @@ const Header = () => {
 				</nav>
 			</div>
 			{(history.location.pathname === '/get-started' || history.location.pathname === '/') && (
-				<div className="get-started row d-flex offset-lg-1">
-					<img className="col-lg-11 mb-4" src={coopIllustration} alt="Usage" />
-					<Title className="get-started-title col-lg-4" size={1}>Kom i gang</Title>
-					<div className="col-lg-7">
-						<p className="intro-text mt-4">
-							I en virksomhet som Statistisk sentralbyrå, hvor produkter og tjenester utvikles over tid av ulike prosjekter og team,
-							er det viktig å ha et felles sett med retningslinjer som sikrer et enhetlig uttrykk.
-							Designsystemet er et åpent verktøy, som ved riktig bruk sikrer at vi fremstår som ett SSB – én tydelig avsender.
-							Slik bygger vi tillit hos brukerne våre – tillit til at våre løsninger faktisk kommer fra oss.
-						</p>
+				<div className="get-started offset-lg-1">
+					<div className="row ml-1 mr-1">
+						<img className="col-lg-11 mb-4" src={coopIllustration} alt="Usage" />
+						<Title className="get-started-title col-lg-4" size={1}>Kom i gang</Title>
+						<div className="col-lg-7">
+							<p className="intro-text mt-4">
+								I en virksomhet som Statistisk sentralbyrå, hvor produkter og tjenester utvikles over tid av ulike prosjekter og team,
+								er det viktig å ha et felles sett med retningslinjer som sikrer et enhetlig uttrykk.
+								Designsystemet er et åpent verktøy, som ved riktig bruk sikrer at vi fremstår som ett SSB – én tydelig avsender.
+								Slik bygger vi tillit hos brukerne våre – tillit til at våre løsninger faktisk kommer fra oss.
+							</p>
+						</div>
 					</div>
 				</div>
 			)}

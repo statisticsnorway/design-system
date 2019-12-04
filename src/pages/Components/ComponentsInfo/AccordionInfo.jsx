@@ -30,7 +30,7 @@ const tabCode = [
 ];
 
 const codeExample = `
-<Accordion header="This is a header">
+<Accordion header="This is a standard accordion">
 	{Insert content here}
 </Accordion>
 `;
@@ -39,7 +39,7 @@ const codeExampleHtml = `
 <div class="ssb-accordion">
 	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
 		<span class="button-grid">
-			<h5 class="ssb-title header-text no-margin">This is a accordion title</h5>
+			<h5 class="ssb-title header-text no-margin">This is a standard accordion</h5>
 			{20px ChevronDown icon, add class="expand-icon" }
 		</span>
 	</button>
@@ -50,7 +50,7 @@ const codeExampleHtml = `
 `;
 
 const codeExampleSubheader = `
-<Accordion header="This is a secondary header" subHeader="Subheader" >
+<Accordion header="This is a secondary header" subHeader="Tabell 1" >
 	{Insert content here}
 </Accordion>
 `;
@@ -59,8 +59,8 @@ const codeExampleSubheaderHtml = `
 <div class="ssb-accordion with-sub-header">
 	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
 		<span class=" button-grid ">
-			<h5 class="ssb-title sub-header no-margin ">Subheader</h5>
-			<h5 class="ssb-title header-text no-margin ">This is a accordion title with a sub-header</h5>
+			<h5 class="ssb-title sub-header no-margin ">Tabell 1</h5>
+			<h5 class="ssb-title header-text no-margin ">This is a table accordion</h5>
 			{20px ChevronDown icon, add class="expand-icon " }
 		</span>
 	</button>
@@ -71,9 +71,9 @@ const codeExampleSubheaderHtml = `
 `;
 
 const nestedExample = `
-<Accordion header="This is a header">
+<Accordion header="This is a nested accordion">
 	{Insert content here}
-	<NestedAccordion header="A nested accordion header">
+	<NestedAccordion header="This is a nested accordion">
 		{Insert content here}
 	</NestedAccordion>
 </Accordion>
@@ -83,7 +83,7 @@ const nestedExampleHtml = `
 <div class="ssb-accordion">
   <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
     {22px filled plus icon}
-    <div class="ssb-title header-text no-margin"><h5>This is a header</h5></div>
+    <div class="ssb-title header-text no-margin"><h5>This is a nested accordion</h5></div>
   </div>
   <div class="accordion-body closed">
     {insert content here}
@@ -91,7 +91,7 @@ const nestedExampleHtml = `
     <div class="ssb-nested-accordion mt-4">
 			<div class="nested-accordion-header closed" onclick="{toggle classname to 'open'}">
 				{10px plus sign}
-				<span class="header-text">Title</span>
+				<span class="header-text">This is a nested accordion</span>
 			</div>
 			<div class="accordion-body closed">
 				{insert content}
@@ -114,30 +114,28 @@ const AccordionInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Accordion (åpne/lukke-felter)</Title>
+			<Title size={1}>Accordion</Title>
 			<LeadParagraph>
-				Accordions sparer plass ved å utvide eller lukke seksjoner med innhold. De tillater brukeren å vise kun den informasjon hun ønsker.
-				Derfor er accordion-komponentene alltid lukket som default.
+				Accordion sparer plass ved å utvide eller lukke seksjoner med innhold. På en effektiv måte gir de brukeren mulighet til å se innholdet når brukeren selv ønsker.
+				De gir god oversikt over innhold i lange lister, kan brukes til å vise lange tabeller eller til ulike seksjoner i filtrering.
+				Accordions er godt egnet på mobil hvor de sparer plass. Accordion er derfor som regel lukket som default.
 			</LeadParagraph>
-			<Paragraph>
-				Accordions bør brukes med forsiktighet for primærinnhold på en side, siden det kan være vanskelig for brukeren å finne den skjulte informasjonen.
-				Det kan også skape kognitive problemer siden det kreves at brukeren må klikke hver gang hun vil ekspandere et innhold.
-				Brukeren kan risikere å ignorere eller ikke se viktig informasjon. Les evt. mer om dette <Link href="https://www.nngroup.com/articles/accordions-complex-content/">her</Link>.
-			</Paragraph>
 
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
 			{activeTab === '/overview' && (
 				<div>
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Accordion</Title>
+						<Title size={2} className="col-lg-12">Standard accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Brukes når innholdet i dem er viktig for å forstå helheten i sidens innhold, og vi ønsker at brukeren skal se det.
+								Brukes til filtrering, lange lister med flere seksjoner, menyer, tillegg, osv.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Accordion header="This is a header">{accordionFillerText}</Accordion>
+							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
+							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
+							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 						</div>
 
 						<div className="col-lg-12 mt-4">
@@ -152,46 +150,56 @@ const AccordionInfo = () => {
 					<Divider light className="mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Accordion med subheader</Title>
+						<Title size={2} className="col-lg-12">Nested accordions</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Trenger tekst her
+								Nested accordion brukes når det er behov for flere nivåer på innholdet.
+								Versjonen organiserer komplekst innhold og gir det hierarki og struktur. Det gir en bedre brukervennlighet og dermed en bedre brukeropplevelse.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Accordion header="This is a header" subHeader="Subheader">{accordionFillerText}</Accordion>
+							<Accordion header="This is a nested accordion" openByDefault>
+								<NestedAccordion header="This is a nested accordion" openByDefault>
+									{accordionFillerText}
+								</NestedAccordion>
+								<NestedAccordion header="This is a nested accordion">
+									{accordionFillerText}
+								</NestedAccordion>
+							</Accordion>
 						</div>
 						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
 							<Divider light />
-							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExampleSubheader} language="jsx" />}
-							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExampleSubheaderHtml} language="html" />}
+							{activeCodeTab2 === '/react' && <CodeSnippet code={nestedExample} language="jsx" />}
+							{activeCodeTab2 === '/html' && <CodeSnippet code={nestedExampleHtml} language="html" />}
 						</div>
 					</div>
 
 					<Divider light className="mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Flere nivåer accordions</Title>
+						<Title size={2} className="col-lg-12">Table accordion</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Det kan være behov for flere nivåer i en accordion. Det vil si en accordion er inne i en annen accordion, når det er flere nivåer på innholdet..
-								Denne funksjonen er for å organisere innholdet og gi struktur og hierarki for en enklere brukeropplevelse.
+								Det er utviklet egen accordion til tabeller. Accordiontekst er tabellens tittel, nummereringen er tabellens plassering på siden.
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Accordion header="This is a header">
+							<Accordion subHeader="Tabell 1" header="This is a table accordion">
 								{accordionFillerText}
-								<NestedAccordion header="A nested accordion header">
-									{accordionFillerText}
-								</NestedAccordion>
+							</Accordion>
+							<Accordion subHeader="Tabell 2" header="This is a table accordion">
+								{accordionFillerText}
+							</Accordion>
+							<Accordion subHeader="Tabell 3" header="This is a table accordion">
+								{accordionFillerText}
 							</Accordion>
 						</div>
 						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
 							<Divider light />
-							{activeCodeTab3 === '/react' && <CodeSnippet code={nestedExample} language="jsx" />}
-							{activeCodeTab3 === '/html' && <CodeSnippet code={nestedExampleHtml} language="html" />}
+							{activeCodeTab3 === '/react' && <CodeSnippet code={codeExampleSubheader} language="jsx" />}
+							{activeCodeTab3 === '/html' && <CodeSnippet code={codeExampleSubheaderHtml} language="html" />}
 						</div>
 					</div>
 

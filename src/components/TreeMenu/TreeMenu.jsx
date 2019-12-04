@@ -39,6 +39,7 @@ const TreeMenu = ({
 					) : (
 						<NavLink
 							to={match.path + item.path}
+							onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
 							key={uuid()}
 							activeClassName="selected"
 							className={`tree-node clickable${item.path === activeItem ? ' selected' : ''}`}

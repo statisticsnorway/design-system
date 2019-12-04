@@ -38,14 +38,16 @@ const codeLargeReact = `
 `;
 
 const codeLargeHtml = `
-<div class="ssb-key-figures">
-	<div class="kf-icon large"><i /></div>
-	<div>
-		<h4 class="ssb-title kf-title">Antall husholdninger</h4>
-		<div class="kf-time">2018</div>
-		<div class="ssb-number large">789 398</div>
-		<h4 class="ssb-title kf-title">husholdninger</h4>
-	</div>
+<div class="ssb-key-figures large">
+  <div class="kf-icon large"><!-- Insert icon --></div>
+  <div>
+    <span class="kf-title">Title</span>
+    <div class="kf-time">2019</div>
+    <div class="number-section">
+      <div class="ssb-number large">12 345</div>
+      <span class="kf-title subtitle">husholdninger</span>
+    </div>
+  </div>
 </div>
 `;
 
@@ -61,14 +63,16 @@ const codeMediumReact = `
 `;
 
 const codeMediumHtml = `
-<div class="ssb-key-figures">
-	<div class="kf-icon medium"><i /></div>
-	<div>
-		<h4 class="ssb-title kf-title">Menn</h4>
-		<div class="kf-time">2018</div>
-		<div class="ssb-number medium">80,6</div>
-		<h4 class="ssb-title kf-title">år</h4>
-	</div>
+<div class="ssb-key-figures medium">
+  <div class="kf-icon medium"><!-- Insert icon --></div>
+  <div>
+    <span class="kf-title">Menn</span>
+    <div class="kf-time">2018</div>
+    <div class="number-section">
+      <div class="ssb-number medium">80,6</div>
+      <span class="kf-title subtitle">år</span>
+    </div>
+  </div>
 </div>
 `;
 
@@ -84,14 +88,16 @@ const codeSmallReact = `
 `;
 
 const codeSmallHtml = `
-<div class="ssb-key-figures">
-	<div class="kf-icon small"><i /></div>
-	<div>
-		<h4 class="ssb-title kf-title">Menn</h4>
-		<div class="kf-time">2018</div>
-		<div class="ssb-number small">80,6</div>
-		<h4 class="ssb-title kf-title">år</h4>
-	</div>
+<div class="ssb-key-figures small">
+  <div class="kf-icon small"><!-- Insert icon --></div>
+  <div>
+    <span class="kf-title">Menn</span>
+    <div class="kf-time">2018</div>
+    <div class="number-section">
+      <div class="ssb-number small">80,6</div>
+      <span class="kf-title subtitle">år</span>
+    </div>
+  </div>
 </div>
 `;
 
@@ -182,7 +188,7 @@ const KeyFiguresInfo = () => {
 						<Title size={2} className="col-lg-12">Small</Title>
 						<div className="col-lg-12 mb-4">
 							<Paragraph>
-								Small nøkkeltall skal alltid være en gruppe på minimum to. Antallet small nøkkeltall i en gruppe skal alltid følge togangen – 2, 4, 6, osv.
+								Små nøkkeltall skal alltid være en gruppe på minimum to. Antallet små nøkkeltall i en gruppe skal alltid følge togangen – 2, 4, 6, osv.
 								Det anbefales ikke å bruke grupper på mer enn seks small nøkkeltall.
 							</Paragraph>
 						</div>
@@ -229,8 +235,8 @@ const KeyFiguresInfo = () => {
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeMediumReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeMediumHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeSmallReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeSmallHtml} language="html" />}
 						</div>
 					</div>
 

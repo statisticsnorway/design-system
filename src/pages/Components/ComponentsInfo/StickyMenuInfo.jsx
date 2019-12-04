@@ -40,7 +40,7 @@ const tabCode = [
 
 const codeReact = `
 <StickyMenu>
-    {Insert content here, example below}
+    {/* Insert content here, example below */}
     <div className="container">
         <div className="row align-items-center">
             <div className="column col-md-12 col-lg-5">
@@ -117,43 +117,40 @@ const StickyMenuInfo = () => {
 
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Sticky menu</Title>
-						<div className="col-lg-6">
-							<Paragraph>{overviewText}</Paragraph>
-						</div>
-						<div className="col-lg-12">
-							<StickyMenu>
-								<div className="container">
-									<div className="row align-items-center">
-										<div className="column col-md-12 col-lg-5">
-											<div className="col-12">
-												<div className="subtitle">Kommunefakta</div>
-												<div className="title">Stordal (Møre og Romsdal)</div>
-											</div>
-										</div>
-										<div className="column col-md-6  col-lg-5">
-											<div className="col-flex flex-row align-items-center">
-												<div className="input-header">Bytt kommune:</div>
-												<div className="w-100">
-													<Input ariaLabel="Søk på kommune" searchField placeholder="Søk på kommune" />
-												</div>
-											</div>
-										</div>
-										<div className="column col-md-6 col-lg-2">
-											<div className="choose-chart">Velg i kart</div><ChevronDown className="chevron-down-icon" size={18} />
+					<Title size={2}>Sticky menu</Title>
+					<Paragraph className="mb-4">{overviewText}</Paragraph>
+					<div className="mb-4">
+						<StickyMenu>
+							<div className="container">
+								<div className="row align-items-center">
+									<div className="column col-md-12 col-lg-5">
+										<div className="col-12">
+											<div className="subtitle">Kommunefakta</div>
+											<div className="title">Stordal (Møre og Romsdal)</div>
 										</div>
 									</div>
+									<div className="column col-md-6  col-lg-5">
+										<div className="col-flex flex-row align-items-center">
+											<div className="input-header">Bytt kommune:</div>
+											<div className="w-100">
+												<Input ariaLabel="Søk på kommune" searchField placeholder="Søk på kommune" />
+											</div>
+										</div>
+									</div>
+									<div className="column col-md-6 col-lg-2">
+										<div className="choose-chart">Velg i kart</div><ChevronDown className="chevron-down-icon" size={18} />
+									</div>
 								</div>
-							</StickyMenu>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
-						</div>
+							</div>
+						</StickyMenu>
 					</div>
+					<div>
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider light />
+						{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+					</div>
+
 				</div>
 			)}
 

@@ -91,7 +91,7 @@ const sidebarItems = [
 	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
 	{ component: '', label: 'Responsive media', path: '/responsive-media', icon: responsiveIcon, comingSoon: true },
 	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
-	{ component: SearchBoxInfo, label: 'SearchBox', path: '/search-box', icon: searchIcon },
+	{ component: SearchBoxInfo, label: 'Search', path: '/search-box', icon: searchIcon },
 	{ component: '', label: 'Site navigation', path: '/site-navigation', icon: sidenavigationIcon, comingSoon: true },
 	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
 	{ component: '', label: 'Table', path: '/table', icon: tableIcon, comingSoon: true },

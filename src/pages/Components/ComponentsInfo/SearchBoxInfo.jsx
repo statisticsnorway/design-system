@@ -2,25 +2,13 @@ import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, Input, LeadParagraph, Link, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
-const leadParagraphText = `
-Søkefelt kombineres av inputfelt og et klikkbart søkeikon. 
-Feltet gjør det mulig for brukeren å søke på spesielle ord eller fraser ved å skrive dem inn i søkefeltet. 
-`;
-
-{/*Search form are an input element that combines an input form and a clickable search icon
-to allow the user to search for specific word or phrases by inputing the data into the search form.*/}
-
-const overviewTextFactbox = `
-With the search form user can quickly search for what they are looking for on the website.
-`;
-
 const tabItems = [
 	{
 		title: 'Oversikt',
 		path: '/oversikt',
 	}, {
-		title: 'Begrunnelse',
-		path: '/begrunnelse',
+		title: 'Props',
+		path: '/props',
 	},
 ];
 
@@ -63,9 +51,9 @@ const SearchBoxInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Search form</Title>
+			<Title size={1}>Search</Title>
 			<LeadParagraph>
-				{leadParagraphText}
+				Søkefelt består av inputfelt og klikkbart ikon. Feltet gjør det mulig for brukeren å søke på spesielle ord eller setninger ved å skrive dem inn i søkefeltet.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
@@ -73,9 +61,11 @@ const SearchBoxInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div>
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Seach form</Title>
+						<Title size={2} className="col-lg-12">Seach</Title>
 						<div className="col-lg-6">
-							<Paragraph>{overviewTextFactbox}</Paragraph>
+							<Paragraph>
+								Søk er det eneste inputfeltet i designsystemet som har placeholder-tekst, fordi feltets funksjon er tydelig selv når teksten forsvinner ved klikk.
+							</Paragraph>
 						</div>
 						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
@@ -102,16 +92,96 @@ const SearchBoxInfo = () => {
 						</div>
 					</div>
 
-					<Divider light className="mb-4" />
+				</div>
+			)}
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2}>Props</Title>
+					<table className="col-lg-12 mb-4">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>ariaLabel</code></td>
+								<td>string</td>
+								<td>Defines a string value that labels input element, use if label is not visible</td>
+							</tr>
+							<tr>
+								<td><code>disabled</code></td>
+								<td>bool</td>
+								<td>Toggles disabled state</td>
+							</tr>
+							<tr>
+								<td><code>error</code></td>
+								<td>bool</td>
+								<td>Changes design</td>
+							</tr>
+							<tr>
+								<td><code>errorMessage</code></td>
+								<td>string</td>
+								<td>Renders an error message underneath input field</td>
+							</tr>
+							<tr>
+								<td><code>handleChange</code></td>
+								<td>func</td>
+								<td>Callback function</td>
+							</tr>
+							<tr>
+								<td><code>id</code></td>
+								<td>string</td>
+								<td>ID to connect label with input field</td>
+							</tr>
+							<tr>
+								<td><code>label</code></td>
+								<td>string</td>
+								<td>Label text</td>
+							</tr>
+							<tr>
+								<td><code>negative</code></td>
+								<td>bool</td>
+								<td>Changes design</td>
+							</tr>
+							<tr>
+								<td><code>placeholder</code></td>
+								<td>string</td>
+								<td>Placeholder text</td>
+							</tr>
+							<tr>
+								<td><code>searchField</code></td>
+								<td>bool</td>
+								<td>Ads search icon with click</td>
+							</tr>
+							<tr>
+								<td><code>submitCallback</code></td>
+								<td>func</td>
+								<td>Callback for onSubmit</td>
+							</tr>
+							<tr>
+								<td><code>type</code></td>
+								<td>string</td>
+								<td>Changes input type</td>
+							</tr>
+							<tr>
+								<td><code>value</code></td>
+								<td>string</td>
+								<td>Input value. Can be initiated with a value</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-4" light />
 
 					<div>
-						<Title size={2}>Props</Title>
-						<Text>The search field is a modification of
-							the <Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Input" isExternal>input</Link> component,
-							and therefore has the same props.
-						</Text>
+						<Text>Depends on</Text>
+						<ul>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/InputError" isExternal>Form error</Link></li>
+						</ul>
 					</div>
-
 				</div>
 			)}
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, Input, LeadParagraph, Link, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, Input, LeadParagraph, Link, Paragraph, Tabs, Text, TextArea, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -108,6 +108,28 @@ const InputInfo = () => {
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
 							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
+						</div>
+					</div>
+
+					<Divider light className="mb-4" />
+
+					<Title size={2}>Textarea</Title>
+					<Paragraph className="mb-4">
+						Samme stil som inputfelt, men har plass til flere rader med tekst. Brukes for eksempel i spørreskjemaer og for tilbakemelding og annen friere tekstinput.
+					</Paragraph>
+
+					<div className="row">
+						<div style={{ marginLeft: 0, padding: '32px 18px' }} className="d-flex col-lg-6 justify-content-center flex-wrap component-wrapper">
+							<TextArea label="Label" />
+						</div>
+						<div style={{ marginLeft: 0 }} className="d-flex col-lg-6 justify-content-center flex-wrap negative-wrapper">
+							<TextArea negative label="Label" />
+						</div>
+						<div className="col-lg-12 mt-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleError} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleErrorHtml} language="html" />}
 						</div>
 					</div>
 

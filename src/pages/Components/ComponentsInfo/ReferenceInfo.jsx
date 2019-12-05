@@ -2,19 +2,6 @@ import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { References, Divider, LeadParagraph, Link, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
 
-const leadParagraphText = `
-References is used to credit where the data has been collected from. The reference element also provides a convenient way for users to quickly locate relevant data if wanted.
-`;
-
-const overviewText = `
-The reference element contains a header which allows the user to quickly understand this is a reference element and a text link 
-which has the name of the referenced source and upon clicking will lead the user to the referenced link.
-`;
-
-const referenceWithAdditionalText = `
-References can also have additional body text added in order to explain more regarding the references.  
-`;
-
 const tabItems = [
 	{
 		title: 'Oversikt',
@@ -38,56 +25,133 @@ const tabCode = [
 	},
 ];
 
-const referenceList = [
-	{
-		href: ' ',
-		label: 'Link 1',
-	}, {
-		href: ' ',
-		label: 'Link 2',
-	}, {
-		href: ' ',
-		label: 'Link 3',
-		plainText: 'A paragraph',
-	},
-];
+const codeReferenceSimple = `
+<References
+	title="Kilde"
+	referenceList={[
+		{
+			href: ' ',
+			label: 'reference link',
+		},
+	]}
+/>
+
+<References
+	title="Kilde"
+	referenceList={[
+		{
+			href: ' ',
+			label: 'reference link',
+			plainText: 'Paragraph text.',
+		},
+	]}
+/>
+`;
+
+const codeReferenceSimpleHtml = `
+<div class="ssb-references">
+    <span class="reference-header">Kilde</span>
+    <div>
+        <a class="ssb-link" href=" " target="" rel="">
+            <span class="link-text">reference link</span>
+        </a>
+    </div>
+</div>
+
+<div class="ssb-references">
+    <span class="reference-header">Kilde</span>
+    <div> <span class="ssb-text-wrapper">Paragraph text.&nbsp;</span>
+        <a class="ssb-link" href=" " target="" rel="">
+            <span class="link-text">reference link</span>
+        </a>
+    </div>
+</div>
+`;
 
 
 const codeReact = `
-const referenceList = [
-  {
-    href: ' ',
-    label: 'Link 1',
-  }, {
-    href: ' ',
-    label: 'Link 2',
-  }, {
-    href: ' ',
-    label: 'Link 3',
-    plainText: 'A paragraph',
-  },
-];
+<References
+	title="Kilde"
+	referenceList={[
+		{
+			href: ' ',
+			label: 'reference link',
+		},
+		{
+			href: ' ',
+			label: 'reference link',
+		},
+		{
+			href: ' ',
+			label: 'reference link',
+		},
+	]}
+/>
 
-<References title="Sources" referenceList={referenceList} />
+<References
+	title="Kilde"
+	referenceList={[
+		{
+			plainText: 'Paragraph text.',
+		},
+		{
+			href: ' ',
+			label: 'reference link',
+		},
+		{
+			href: ' ',
+			label: 'reference link',
+		},
+		{
+			href: ' ',
+			label: 'reference link',
+		},
+	]}
+/>
+
 `;
 
 const codeHtml = `
 <div class="ssb-references">
-    <h5 class="ssb-title no-margin">Sources</h5>
+    <span class="reference-header">Kilde</span>
     <div>
         <a class="ssb-link" href=" " target="" rel="">
-            <span class="link-text">Link 1</span>
+            <span class="link-text">reference link</span>
         </a>
     </div>
     <div>
         <a class="ssb-link" href=" " target="" rel="">
-            <span class="link-text">Link 2</span>
+            <span class="link-text">reference link</span>
         </a>
     </div>
     <div>
-        <span class="ssb-text-wrapper">A paragraph&nbsp;</span>
         <a class="ssb-link" href=" " target="" rel="">
-            <span class="link-text">Link 3</span>
+            <span class="link-text">reference link</span>
+        </a>
+    </div>
+</div>
+
+<div class="ssb-references">
+    <span class="reference-header">Kilde</span>
+    <div>
+        <span class="ssb-text-wrapper">Paragraph text.&nbsp;</span>
+        <a class="ssb-link" target="" rel="">
+            <span class="link-text"></span>
+        </a>
+    </div>
+    <div>
+        <a class="ssb-link" href=" " target="" rel="">
+            <span class="link-text">reference link</span>
+        </a>
+    </div>
+    <div>
+        <a class="ssb-link" href=" " target="" rel="">
+            <span class="link-text">reference link</span>
+        </a>
+    </div>
+    <div>
+        <a class="ssb-link" href=" " target="" rel="">
+            <span class="link-text">reference link</span>
         </a>
     </div>
 </div>
@@ -101,30 +165,123 @@ const ReferenceInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>References</Title>
+			<Title size={1}>Reference</Title>
 			<LeadParagraph>
-				{leadParagraphText}
+				Kilden viser hvor innholdet er hentet fra.
+				Den lar brukeren dykke dypere inn i internt eller eksternt innhold, samt vurdere om innholdet er til å stole på.
+				Tydelige og solide kilder er derfor viktig for å bygge tillit hos brukerne våre.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
 
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">References</Title>
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Reference</Title>
 						<div className="col-lg-6">
-							<Paragraph>{overviewText}</Paragraph>
-							<Paragraph>{referenceWithAdditionalText}</Paragraph>
+							<Paragraph>
+								Kilde-komponenten består av en tittel («Kilde») for å gjøre det enkelt for brukeren å identifisere den, og en lenke.
+							</Paragraph>
 						</div>
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-start">
+							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+								<References
+									title="Kilde"
+									referenceList={[
+										{
+											href: ' ',
+											label: 'reference link',
+										},
+									]}
+								/>
+							</div>
+							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+								<References
+									title="Kilde"
+									referenceList={[
+										{
+											href: ' ',
+											label: 'reference link',
+											plainText: 'Paragraph text.',
+										},
+									]}
+								/>
+							</div>
+						</div>
+
+						<div className="col-lg-12 mt-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeReferenceSimple} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeReferenceSimpleHtml} language="html" />}
+						</div>
+
+
+					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Reference list</Title>
 						<div className="col-lg-6">
-							<References title="Sources" referenceList={referenceList} />
+							<Paragraph>
+								Kilde-komponenten består av en tittel («Kilde») for å gjøre det enkelt for brukeren å identifisere den, og en eller flere lenker.
+								Der innholdet har flere kilder stiles kildene som lenkeliste.
+								Ved behov kan det også skrives en beskrivende tekst til lenken. Denne settes i brødtekst-stil.
+							</Paragraph>
 						</div>
-						<div className="col-lg-12">
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-start">
+							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+								<References
+									title="Kilde"
+									referenceList={[
+										{
+											href: ' ',
+											label: 'reference link',
+										},
+										{
+											href: ' ',
+											label: 'reference link',
+										},
+										{
+											href: ' ',
+											label: 'reference link',
+										},
+									]}
+								/>
+							</div>
+							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+								<References
+									title="Kilde"
+									referenceList={[
+										{
+											plainText: 'Paragraph text.',
+										},
+										{
+											href: ' ',
+											label: 'reference link',
+										},
+										{
+											href: ' ',
+											label: 'reference link',
+										},
+										{
+											href: ' ',
+											label: 'reference link',
+										},
+									]}
+								/>
+							</div>
+						</div>
+
+						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
 							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
+
+
 					</div>
 				</div>
 			)}

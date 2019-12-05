@@ -23,6 +23,7 @@ import ReferenceInfo from './ComponentsInfo/ReferenceInfo';
 import SearchBoxInfo from './ComponentsInfo/SearchBoxInfo';
 import StickyMenuInfo from './ComponentsInfo/StickyMenuInfo';
 import TabsInfo from './ComponentsInfo/TabsInfo';
+import TagsInfo from './ComponentsInfo/TagsInfo';
 import TypographyInfo from './ComponentsInfo/TypographyInfo';
 import GlossaryInfo from './ComponentsInfo/GlossaryInfo';
 import QuotesInfo from './ComponentsInfo/QuotesInfo';
@@ -97,7 +98,7 @@ const sidebarItems = [
 	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
 	{ component: '', label: 'Table', path: '/table', icon: tableIcon, comingSoon: true },
 	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
-	{ component: '', label: 'Tags', path: '/tags', icon: tagsIcon, comingSoon: true },
+	{ component: TagsInfo, label: 'Tags', path: '/tags', icon: tagsIcon },
 	{ component: TypographyInfo, label: 'Typography', path: '/typography', icon: typographyIcon },
 ];
 

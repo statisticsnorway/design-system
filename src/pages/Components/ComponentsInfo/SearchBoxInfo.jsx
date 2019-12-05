@@ -33,12 +33,12 @@ const codeReact = `
 `;
 
 const codeHtml = `
-<div class="ssb-input">
+<div class="ssb-input ">
     <div class="input-wrapper">
-        <input id="input1" aria-label="Input field Search" placeholder="Search text" />
-        <div class="icon-wrapper">
-            <icon>search</icon>
-        </div>
+        <input id="input1" type="text" placeholder="Search text" aria-label="Input field Search" class="with-icon" value="">
+        <button class="icon-wrapper search-icon">
+            {insert Search icon here}
+        </button>
     </div>
 </div>
 `;

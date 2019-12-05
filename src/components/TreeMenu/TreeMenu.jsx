@@ -6,10 +6,10 @@ import { Divider } from '@statisticsnorway/ssb-component-library';
 import { NavLink } from 'react-router-dom';
 
 const TreeMenu = ({
-	activeItem, items, mainItems, match,
+	activeItem, items, mainItems, mainTitle, match, secondTitle,
 }) => (
 	<div className="tree-menu-wrapper roboto">
-		<span className="tree-title">Grunnprinsipper</span>
+		<span className="tree-title">{mainTitle}</span>
 		<div className="items-section">
 			{mainItems.map(it => (
 				it.comingSoon ? (
@@ -28,7 +28,7 @@ const TreeMenu = ({
 			))}
 		</div>
 		<Divider className="mt-4 mb-4" light />
-		<span className="tree-title">Komponenter A-Z</span>
+		<span className="tree-title">{secondTitle}</span>
 		<div className="items-section">
 			{items && items.map(item => (
 				item.comingSoon
@@ -57,7 +57,9 @@ TreeMenu.propTypes = {
 	activeItem: PropTypes.string,
 	items: PropTypes.arrayOf(PropTypes.object),
 	mainItems: PropTypes.arrayOf(PropTypes.object),
+	mainTitle: PropTypes.string,
 	match: PropTypes.object,
+	secondTitle: PropTypes.string,
 };
 
 export default TreeMenu;

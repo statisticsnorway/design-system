@@ -1,15 +1,49 @@
 import React from 'react';
-import { Paragraph, Title } from '@statisticsnorway/ssb-component-library';
+import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import TreeMenu from '../../components/TreeMenu/TreeMenu';
 
-const Templates = () => (
-	<div className="templates page-wrapper">
-		<section>
-			<Title size={2}>Templates/maler</Title>
-			<Paragraph>
-				Oversikt over tilgjengelige maler. Disse hjelper prosjektet med å komme i gang raskere. De bidrar også til en konsistent opplevelse for brukeren av systemet.
-			</Paragraph>
-		</section>
-	</div>
-);
+const sidebarMainItems = [
+	{ component: '', label: 'Artikkel', path: '/article', icon: '', comingSoon: true },
+	{ component: '', label: 'Faktaside', path: '/fact-page', icon: '', comingSoon: true },
+	{ component: '', label: 'Kommunefakta', path: '/kommunefakta', icon: '', comingSoon: true },
+];
+
+const sidebarItems = [
+	{ component: '', label: 'Byggekostnadskalkulator', path: '/bkk', icon: '', comingSoon: true },
+];
+
+const Templates = () => {
+	const match = useRouteMatch('/templates');
+	return (
+		<div className="templates-page page-wrapper">
+			<aside>
+				<TreeMenu
+					match={match}
+					items={sidebarItems}
+					mainItems={sidebarMainItems}
+					mainTitle="Sidemaler A-Å"
+					secondTitle="Store organismer"
+				/>
+			</aside>
+			<section className="container-fluid">
+				<Switch>
+					<Route exact path={match.url}>
+						<div className="col-lg-12">
+							<Title size={1}>Templates/maler</Title>
+							<LeadParagraph>
+								Ved oppstart av et nytt prosjekt anbefaler vi at du tar en titt på eksisterende sidemaler.
+								De gir et godt innblikk i hvordan komponenter brukes, samt stil og tone.
+								Bruk gjerne en eksisterende mal som utgangspunkt for raskt å komme i gang.
+								Det bidrar til en konsistent opplevelse for brukerne våre.
+								Husk at komponeneter kan tilpasses ditt behov, men skal klareres av designansvarlig i designsystemet.
+							</LeadParagraph>
+						</div>
+					</Route>
+				</Switch>
+			</section>
+		</div>
+	);
+};
 
 export default Templates;

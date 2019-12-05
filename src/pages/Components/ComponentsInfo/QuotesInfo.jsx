@@ -68,10 +68,7 @@ const QuotesInfo = () => {
 					<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 						<div className="component-wrapper">
 							<Quote>
-								“Most people make the mistake of thinking design is what it looks like.
-								People think it’s this veneer – that the designers are handed this box and told,
-								‘Make it look good!’ That’s not what we think design is.
-								It’s not just what it looks like and feels like. Design is how it works.”
+								“The trouble with programmers is that you can never tell what a programmer is doing until it&apos;s too late”
 							</Quote>
 						</div>
 					</div>

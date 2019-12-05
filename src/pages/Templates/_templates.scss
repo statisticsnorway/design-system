@@ -1,1 +1,27 @@
+.templates-page {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: 280px calc(100% - 280px);
+  height: 100%;
 
+  > aside {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  > section {
+    border-left: 1px solid $ssb-dark-5;
+  }
+
+  @media #{$mobile} {
+    grid-template-columns: 100%;
+
+    > aside {
+      display: none;
+    }
+
+    > section {
+      border-left: 0;
+    }
+  }
+}

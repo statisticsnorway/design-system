@@ -88,7 +88,7 @@ const sidebarItems = [
 	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },
 	{ component: '', label: 'Map', path: '/map', icon: mapIcon, comingSoon: true },
 	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
-	{ component: QuotesInfo, label: 'Quotes', path: '/quotes', icon: quoteIcon, comingSoon: true },
+	{ component: QuotesInfo, label: 'Quotes', path: '/quotes', icon: quoteIcon },
 	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
 	{ component: '', label: 'Responsive media', path: '/responsive-media', icon: responsiveIcon, comingSoon: true },
 	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
@@ -118,18 +118,18 @@ const Components = () => {
 					match={match}
 					items={sidebarItems.sort((a, b) => a.label - b.label)}
 					mainItems={sidebarMainItems}
+					mainTitle="Grunnprinsipper"
+					secondTitle="Komponenter A-Å"
 				/>
 			</aside>
 			<section className="container-fluid">
 				<Switch>
 					<Route exact path={match.url}>
-						<Title size={1} className="col-lg-12">Komponenter</Title>
 						<div className="col-lg-12 mb-5">
+							<Title size={1}>Komponenter</Title>
 							<LeadParagraph>{leadParagraphText}</LeadParagraph>
 						</div>
-						<div className="col-lg-12">
-							<Title size={2}>Grunnprinsipper</Title>
-						</div>
+						<Title className="col-lg-12" size={2}>Grunnprinsipper</Title>
 						<div className="col-lg-12 mb-5 navigator-grid">
 							{sidebarMainItems.map(it => (
 								it.comingSoon ? (

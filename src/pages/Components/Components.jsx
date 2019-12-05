@@ -24,7 +24,7 @@ import SearchBoxInfo from './ComponentsInfo/SearchBoxInfo';
 import StickyMenuInfo from './ComponentsInfo/StickyMenuInfo';
 import TabsInfo from './ComponentsInfo/TabsInfo';
 import TypographyInfo from './ComponentsInfo/TypographyInfo';
-import WordExplanationInfo from './ComponentsInfo/WordExplanationInfo';
+import GlossaryInfo from './ComponentsInfo/GlossaryInfo';
 import QuotesInfo from './ComponentsInfo/QuotesInfo';
 import ColorPage from '../Color/ColorPage';
 import GridSpacing from '../GridSpacing/GridSpacing';
@@ -79,6 +79,7 @@ const sidebarItems = [
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
 	{ component: '', label: 'Footer', path: '/footer', icon: footerIcon, comingSoon: true },
 	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
+	{ component: GlossaryInfo, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },
 	{ component: '', label: 'Graphs', path: '/graphs', icon: graphsIcon, comingSoon: true },
 	{ component: '', label: 'Header', path: '/header', icon: headerIcon, comingSoon: true },
 	{ component: '', label: 'Icons', path: '/icons', comingSoon: true },
@@ -98,7 +99,6 @@ const sidebarItems = [
 	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
 	{ component: '', label: 'Tags', path: '/tags', icon: tagsIcon, comingSoon: true },
 	{ component: TypographyInfo, label: 'Typography', path: '/typography', icon: typographyIcon },
-	{ component: WordExplanationInfo, label: 'Word Explanation', path: '/word-explanation', icon: wordExplanationIcon },
 ];
 
 sidebarItems.sort((a, b) => ((a.label > b.label) ? 1 : -1));

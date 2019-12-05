@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Paragraph, Title, Tabs, WordExplanation } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Glossary, Paragraph, Title, Tabs } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -16,20 +16,24 @@ const tabItems = [
 ];
 
 const codeExampleJsx = `
-Explain some <WordExplanation explanation={placeHolder}>word</WordExplanation>.
+<Glossary explanation={placeHolder}>Explain this</Glossary>
 `;
 
 const codeExampleHtml = `
-<div>
-  <div class="ssb-we-popup {open or closed}">
+<button class="ssb-glossary"><!-- click to toggle 'open' class -->
+  <div class="glossary-text-wrap">Explain this</div>
+  <i>{feather.openBook 12px}</i>
+  <div class="glossary-animate-background"></div>
+  <div class="ssb-glossary-popup {open or closed}">
     <div class="content-box">
       <span class="info-text">{insert explanation}</span>
-      <div class="ssb-we-closing">
-        <XCircle size="14" /><span>Lukk</span>
+      <div class="ssb-glossary-closing">
+        <i class="icon">{feather.xCircle 14px}</i>
+        <span>Lukk</span>
       </div>
     </div>
-	</div>
-</div>
+  </div>
+</button>
 `;
 
 const placeHolder = `This is the explanation of the word
@@ -45,7 +49,7 @@ const tabCode = [
 	},
 ];
 
-const WordExplanationInfo = () => {
+const GlossaryInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => changeTab(e);
@@ -74,7 +78,7 @@ const WordExplanationInfo = () => {
 						</Paragraph>
 					</div>
 					<div className="col-lg-6">
-						Explain this <WordExplanation explanation={placeHolder}>word</WordExplanation>.
+						Explain this <Glossary explanation={placeHolder}>word</Glossary>.
 					</div>
 					<div className="col-lg-12">
 						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -127,4 +131,4 @@ const WordExplanationInfo = () => {
 	);
 };
 
-export default WordExplanationInfo;
+export default GlossaryInfo;

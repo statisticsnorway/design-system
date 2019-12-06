@@ -15,4 +15,18 @@
   .paragraph-illustration {
     max-height: 290px;
   }
+
+  @media #{$mobile} {
+    .mega-margin {
+      margin-bottom: 80px;
+    }
+
+    .welcome-responsive-section {
+      flex-direction: column-reverse;
+    }
+
+    img {
+      margin-bottom: 40px;
+    }
+  }
 }

@@ -19,8 +19,8 @@ $ssb-purple-1: #f2f0ff;
 $ssb-purple-3: #9272fc;
 $ssb-blue-3: #3396d2;
 
-$mobile: 'screen and (max-width: 768px)';
-$tablet: 'screen and (max-width: 992px)';
+$mobile: 'screen and (max-width: 767px)';
+$tablet: 'screen and (min-width: 768px) and (max-width: 991px)';
 $desktop: 'screen and (min-width: 992px)';
 
 // Use media queries like this:

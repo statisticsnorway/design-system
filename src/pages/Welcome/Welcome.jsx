@@ -9,7 +9,7 @@ import contactIllustration from '../../../public/customIcons/illustrasjon-kontak
 const Welcome = () => (
 	<div className="welcome-page page-wrapper">
 		<section className="offset-lg-1">
-			<div className="row mega-margin">
+			<div className="row welcome-responsive-section mega-margin">
 				<div className="col-lg-6 d-flex flex-column justify-content-end align-items-start">
 					<Title size={2}>Designsystemets komponenter</Title>
 					<Paragraph>
@@ -40,7 +40,7 @@ const Welcome = () => (
 				</div>
 			</div>
 
-			<div className="row">
+			<div className="row welcome-responsive-section">
 				<div className="col-lg-6 d-flex flex-column justify-content-end align-items-start">
 					<Title size={2}>Tilbakemelding og kontakt</Title>
 					<Paragraph>

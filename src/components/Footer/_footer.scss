@@ -8,29 +8,35 @@
   padding: 35px 0;
   position: relative;
 
-  .footer-grid-content {
-    column-gap: 100px;
-    display: grid;
-    grid-template-columns: 280px auto;
+  .footer-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  p {
-    color: $ssb-white;
+  .interactive-elements {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    > * {
+      margin-right: 20px;
+    }
   }
 
-  .logo {
-    color: $ssb-white;
-    margin-top: -5px;
-    width: 280px;
-  }
+  @media #{$mobile} {
+    .footer-content {
+      flex-direction: column-reverse;
+      margin: 20px 0;
+    }
 
-  .social-links {
-    a {
-      color: $ssb-white;
-      margin-left: $global-padding-size;
+    .interactive-elements {
+      flex-direction: column;
 
-      &:hover {
-        color: $ssb-green-3;
+      > * {
+        margin-bottom: 40px;
+        margin-right: 0;
       }
     }
   }

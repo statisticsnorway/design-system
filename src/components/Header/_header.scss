@@ -31,6 +31,30 @@
         width: 260px;
       }
 
+      .logo-symbol {
+        display: none;
+        margin-left: 16px;
+      }
+
+      @media #{$mobile} {
+        .home-nav {
+          width: auto;
+        }
+
+        .diagonal-divider {
+          display: none;
+        }
+
+        .logo-symbol {
+          display: block;
+          margin-right: 8px;
+        }
+
+        .logo-full {
+          display: none;
+        }
+      }
+
       img {
         height: 47px;
         margin-top: -5px;
@@ -60,7 +84,7 @@
       align-items: center;
       display: flex;
       font-weight: bold;
-      margin-left: 15px;
+      margin-left: 16px;
 
       > div {
         margin-left: $global-padding-size;
@@ -72,7 +96,7 @@
     color: $ssb-dark-6;
     font-size: 20px;
     font-weight: bold;
-    margin: 0 15px;
+    margin: 0 16px;
     text-decoration: none;
     white-space: nowrap;
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
+import logoSymbol from '@public/ssb-logo-symbol.svg';
 import { Title } from '@statisticsnorway/ssb-component-library';
 import { GitHub } from 'react-feather';
 import coopIllustration from '../../../public/customIcons/illustrasjon-samarbeid.svg';
@@ -19,7 +20,8 @@ const Header = () => {
 				<div className="left-section">
 					<div className="logo-and-title">
 						<div className="home-nav" onClick={() => history.push('/')}>
-							<img src={logo} alt="logo" />
+							<img className="logo-full" src={logo} alt="logo" />
+							<img className="logo-symbol" src={logoSymbol} alt="logo" />
 						</div>
 						<div className="diagonal-divider" />
 						<Title size={2}>Designsystem</Title>

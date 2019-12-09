@@ -44,20 +44,19 @@ const codeExample = `
 `;
 
 const codeExampleHtml = `
-<div class="ssb-breadcrumbs ">
-	<div>
-		<a class="ssb-link" href="">
-			<span class="link-text">breadcrumb 1</span>
-		</a>
-		&nbsp;/&nbsp;
-	</div>
-	<div>
-		<a class="ssb-link" href="">
-			<span class="link-text">breadcrumb 2</span>
-		</a>
-		&nbsp;/&nbsp;
-	</div>
-	<div class="current-page">breadcrumb 3</div>
+<div class="ssb-breadcrumbs">
+    <div>
+        <a class="ssb-link" href=" ">
+            <span class="link-text">breadcrumb 1</span>
+        </a>
+        &nbsp;/&nbsp;
+    </div>
+    <div>
+        <a class="ssb-link" href=" ">
+            <span class="link-text">breadcrumb 2</span>
+        </a>&nbsp;/&nbsp;
+    </div>
+    <span class="current-page">breadcrumb 3</span>
 </div>
 `;
 

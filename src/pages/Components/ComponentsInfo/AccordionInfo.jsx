@@ -81,24 +81,32 @@ const nestedExample = `
 
 const nestedExampleHtml = `
 <div class="ssb-accordion">
-  <div class="accordion-header closed" onclick="{toggle classname to 'open'}">
-    {22px filled plus icon}
-    <div class="ssb-title header-text no-margin"><h5>This is a nested accordion</h5></div>
-  </div>
-  <div class="accordion-body closed">
-    {insert content here}
-    
-    <div class="ssb-nested-accordion mt-4">
-			<div class="nested-accordion-header closed" onclick="{toggle classname to 'open'}">
-				{10px plus sign}
-				<span class="header-text">This is a nested accordion</span>
-			</div>
-			<div class="accordion-body closed">
-				{insert content}
-			</div>
-		</div>
-    
-  </div>
+    <button class="accordion-header closed" onclick="{toggle classname to 'open'}" tabindex="0">
+        <span class=" button-grid ">
+        	<h5 class="ssb-title header-text no-margin ">This is a nested accordion</h5>
+            <!-- If open -->
+            {20px chevronUp icon, add class="expand-icon" }
+            <!-- If closed -->
+            {20px chevronDown icon, add class="expand-icon" }
+      	</span>
+    </button>
+    <div class="accordion-body open ">This is paragraph text which explains the accordion, the rest of the text is just to fill it out and show the space it takes.
+        <div class="ssb-nested-accordion mt-3 ">
+            <button class="nested-accordion-header closed " onclick="{toggle classname to 'open'}">
+                <span class=" button-grid ">
+                    <!-- If open -->
+                    {16px chevronUp icon, add class="expand-icon" }
+                    <i class="expand-icon">{feather.chevronUp 16px}</i>
+                    <!-- If closed -->
+                    {16px chevronDown icon, add class="expand-icon" }
+                    <span class="header-text ">This is a nested accordion</span>
+                </span>
+            </button>
+            <div class="nested-accordion-body closed">
+                {insert content}
+            </div>
+        </div>
+    </div>
 </div>
 `;
 

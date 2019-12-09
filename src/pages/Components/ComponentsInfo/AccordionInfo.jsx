@@ -112,13 +112,9 @@ const nestedExampleHtml = `
 
 const AccordionInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const [activeCodeTab1, changeCodeTab1] = useState(tabCode[0].path);
-	const [activeCodeTab2, changeCodeTab2] = useState(tabCode[0].path);
-	const [activeCodeTab3, changeCodeTab3] = useState(tabCode[0].path);
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => changeTab(e);
-	const tabCode1Clicked = e => changeCodeTab1(e);
-	const tabCode2Clicked = e => changeCodeTab2(e);
-	const tabCode3Clicked = e => changeCodeTab3(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -140,17 +136,16 @@ const AccordionInfo = () => {
 								Brukes til filtrering, lange lister med flere seksjoner, menyer, tillegg, osv.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6">
+						<div className="col-lg-6 divider-left align-items-center pl-4">
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 						</div>
-
 						<div className="col-lg-12 mt-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
-							{activeCodeTab1 === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
 						</div>
 
 					</div>
@@ -165,7 +160,7 @@ const AccordionInfo = () => {
 								Versjonen organiserer komplekst innhold og gir det hierarki og struktur. Det gir en bedre brukervennlighet og dermed en bedre brukeropplevelse.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6">
+						<div className="col-lg-6 divider-left align-items-center pl-4">
 							<Accordion header="This is a nested accordion" openByDefault>
 								<NestedAccordion header="This is a nested accordion" openByDefault>
 									{accordionFillerText}
@@ -176,10 +171,10 @@ const AccordionInfo = () => {
 							</Accordion>
 						</div>
 						<div className="col-lg-12 mt-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab2 === '/react' && <CodeSnippet code={nestedExample} language="jsx" />}
-							{activeCodeTab2 === '/html' && <CodeSnippet code={nestedExampleHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={nestedExample} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={nestedExampleHtml} language="html" />}
 						</div>
 					</div>
 
@@ -192,7 +187,7 @@ const AccordionInfo = () => {
 								Det er utviklet egen accordion til tabeller. Accordiontekst er tabellens tittel, nummereringen er tabellens plassering på siden.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6">
+						<div className="col-lg-6 divider-left align-items-center pl-4">
 							<Accordion subHeader="Tabell 1" header="This is a table accordion">
 								{accordionFillerText}
 							</Accordion>
@@ -204,10 +199,10 @@ const AccordionInfo = () => {
 							</Accordion>
 						</div>
 						<div className="col-lg-12 mt-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode3Clicked} />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab3 === '/react' && <CodeSnippet code={codeExampleSubheader} language="jsx" />}
-							{activeCodeTab3 === '/html' && <CodeSnippet code={codeExampleSubheaderHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleSubheader} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleSubheaderHtml} language="html" />}
 						</div>
 					</div>
 

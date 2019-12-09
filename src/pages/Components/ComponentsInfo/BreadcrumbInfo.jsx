@@ -85,8 +85,10 @@ const BreadcrumbInfo = () => {
 							vil brødsmulene fungere som en enkel navigasjon til foregående sider og innhold.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6">
-						<Breadcrumb items={mockedItems} />
+					<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-wrapper">
+							<Breadcrumb items={mockedItems} />
+						</div>
 					</div>
 					<div className="col-lg-12">
 						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

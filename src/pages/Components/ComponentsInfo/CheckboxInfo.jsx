@@ -87,15 +87,17 @@ const CheckboxInfo = () => {
 							med et avhukingsikon.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6">
-						<CheckboxGroup
-							header="Header"
-							items={[
-								{ label: 'Checkbox 1', value: 'checkbox1' },
-								{ label: 'Checkbox 2', value: 'checkbox2' },
-								{ label: 'Checkbox 3', value: 'checkbox3', disabled: true },
-							]}
-						/>
+					<div className="col-lg-6 divider-left align-items-center pl-4">
+						<div className="component-wrapper">
+							<CheckboxGroup
+								header="Header"
+								items={[
+									{ label: 'Checkbox 1', value: 'checkbox1' },
+									{ label: 'Checkbox 2', value: 'checkbox2' },
+									{ label: 'Checkbox 3', value: 'checkbox3', disabled: true },
+								]}
+							/>
+						</div>
 					</div>
 					<div className="col-lg-12">
 						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

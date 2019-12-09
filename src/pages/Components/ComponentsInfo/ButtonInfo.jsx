@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Button, Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-import { ChevronDown, Upload } from 'react-feather';
+import { Button, Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Upload } from 'react-feather';
 
 const tabItems = [
 	{
@@ -78,15 +78,9 @@ const codeExampleDisabledHtml = `
 
 const ButtonInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
+	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => changeTab(e);
-	const [activeCodeTab1, changeCodeTab1] = useState(tabCode[0].path);
-	const [activeCodeTab2, changeCodeTab2] = useState(tabCode[0].path);
-	const [activeCodeTab3, changeCodeTab3] = useState(tabCode[0].path);
-	const [activeCodeTab4, changeCodeTab4] = useState(tabCode[0].path);
-	const tabCode1Clicked = e => changeCodeTab1(e);
-	const tabCode2Clicked = e => changeCodeTab2(e);
-	const tabCode3Clicked = e => changeCodeTab3(e);
-	const tabCode4Clicked = e => changeCodeTab4(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -121,10 +115,10 @@ const ButtonInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12 mt-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode1Clicked} />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab1 === '/react' && <CodeSnippet code={codeExamplePrimary} language="jsx" />}
-							{activeCodeTab1 === '/html' && <CodeSnippet code={codeExamplePrimaryHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExamplePrimary} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExamplePrimaryHtml} language="html" />}
 						</div>
 					</div>
 
@@ -150,10 +144,10 @@ const ButtonInfo = () => {
 							</div>
 						</div>
 						<div className="col-lg-12 mt-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode2Clicked} />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab2 === '/react' && <CodeSnippet code={codeExampleSecondary} language="jsx" />}
-							{activeCodeTab2 === '/html' && <CodeSnippet code={codeExampleSecondaryHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleSecondary} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleSecondaryHtml} language="html" />}
 						</div>
 					</div>
 
@@ -191,10 +185,10 @@ const ButtonInfo = () => {
 						</div>
 
 						<div className="col-lg-12 mt-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCode4Clicked} />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab4 === '/react' && <CodeSnippet code={codeExampleDisabled} language="jsx" />}
-							{activeCodeTab4 === '/html' && <CodeSnippet code={codeExampleDisabledHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleDisabled} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleDisabledHtml} language="html" />}
 						</div>
 					</div>
 				</div>

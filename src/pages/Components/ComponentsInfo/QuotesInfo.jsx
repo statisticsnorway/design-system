@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Divider, LeadParagraph, Paragraph, Quote, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
-const overviewText = `
-Coming soon.
-`;
-
 const tabItems = [
 	{
 		title: 'Oversikt',
@@ -30,13 +26,21 @@ const tabCode = [
 ];
 
 const codeReact = `
-<Quote>Default text here</Quote>
-<Quote negative>Negative text here</Quote>
+<Quote>
+	“Most people make the mistake of thinking design is what it looks like. 
+	People think it’s this veneer – that the designers are handed this box and told,
+	‘Make it look good!’ That’s not what we think design is.
+	It’s not just what it looks like and feels like. Design is how it works.”
+</Quote>
 `;
 
 const codeHtml = `
-<span class="ssb-quote">Default text here</span>
-<span class="ssb-quote negative">Negative text here</span>
+<span class="ssb-quote">
+	“Most people make the mistake of thinking design is what it looks like.
+	People think it’s this veneer – that the designers are handed this box and told,
+	‘Make it look good!’ That’s not what we think design is.
+	It’s not just what it looks like and feels like. Design is how it works.”
+</span>
 `;
 
 const QuotesInfo = () => {
@@ -50,8 +54,8 @@ const QuotesInfo = () => {
 			<Title size={1}>Quote</Title>
 			<LeadParagraph>
 				Vi bruker to ulike stiler for utheving av sitat og fremheving av viktig tekst.
-				Et sitat eller en fremheving skal være kort.
-				Vurder alltid om fremheving (highlighting) skal brukes i stedet for kursiv – ettersom kursiv kan være vanskelig å lese for en del brukere (UU).
+				Et sitat eller en fremheving skal være kort. Vurder alltid om fremheving (highlighting) skal
+				brukes i stedet for kursiv – ettersom kursiv kan være vanskelig å lese for en del brukere (UU).
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
@@ -62,14 +66,19 @@ const QuotesInfo = () => {
 					<div className="col-lg-6">
 						<Paragraph>
 							Et sitat gjengir ordrett noe som er sagt, eller er et tekstutdrag hentet fra ekstern kilde.
-							Sitat løftes ut av brødteksten, settes i større font og med innrykket venstremarg. Husk å bruke riktig tegnsetting ved sitat; «norsk», “english”.
+							Sitat løftes ut av brødteksten, settes i større font og med innrykket venstremarg.
+							Husk å bruke riktig tegnsetting ved sitat; «norsk», “english”.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
-						<div className="component-wrapper">
-							<Quote>
-								“The trouble with programmers is that you can never tell what a programmer is doing until it&apos;s too late”
-							</Quote>
+					<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+							<div className="component-wrapper">
+								<Quote>
+									“Most people make the mistake of thinking design is what it looks like.
+									People think it’s this veneer – that the designers are handed this box and told, ‘Make it look good!’ That’s not what we think design is.
+									It’s not just what it looks like and feels like. Design is how it works.”
+								</Quote>
+							</div>
 						</div>
 					</div>
 					<div className="col-lg-12">

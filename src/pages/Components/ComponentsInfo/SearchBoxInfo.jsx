@@ -112,6 +112,11 @@ const SearchBoxInfo = () => {
 								<td>Defines a string value that labels input element, use if label is not visible</td>
 							</tr>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>disabled</code></td>
 								<td>bool</td>
 								<td>Toggles disabled state</td>

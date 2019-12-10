@@ -318,7 +318,6 @@ const ReferenceInfo = () => {
 						<ul>
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link" isExternal>Link</Link></li>
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Text" isExternal>Text</Link></li>
-							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title " isExternal>Title </Link></li>
 						</ul>
 					</div>
 				</div>

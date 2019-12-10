@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { FormError, Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-
-const leadParagraphText = `
-Kommer snart   
-`;
-
-const overviewText = `
-Kommer snart   
-`;
+import { FormError, Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -36,14 +28,25 @@ const tabCode = [
 const codeReact = `
 const errors = ['error 1', 'error 2', 'error 3'];
 
-<FormError
-  errorMessages={errors}
-  title="Some fields are not right:"
-/>
+<FormError errorMessages={errors} title="Some fields are not right:" />
+
+<FormError negative errorMessages={errors} title="Some fields are not right!" />
 `;
 
 const codeHtml = `
 <div class="ssb-form-error">
+  <span class="error-icon" />
+  <div>
+    <span class="error-title">Some fields are not right:</span>
+    <ul>
+      <li>error 1</li>
+      <li>error 2</li>
+      <li>error 3</li>
+    </ul>
+  </div>
+</div>
+
+<div class="ssb-form-error negative">
   <span class="error-icon" />
   <div>
     <span class="error-title">Some fields are not right:</span>
@@ -72,7 +75,7 @@ const FormErrorInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Form error</Title>
 			<LeadParagraph>
-				{leadParagraphText}
+				Kommer snart
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
@@ -82,10 +85,17 @@ const FormErrorInfo = () => {
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Form error</Title>
 						<div className="col-lg-6">
-							<p>{overviewText}</p>
+							<Paragraph>
+								Kommer snart
+							</Paragraph>
 						</div>
-						<div className="col-lg-6">
-							<FormError errorMessages={errorMessages} title="Some fields are not right!" />
+						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex component-wrapper">
+								<FormError errorMessages={errorMessages} title="Some fields are not right!" />
+							</div>
+							<div className="d-flex component-wrapper">
+								<FormError negative errorMessages={errorMessages} title="Some fields are not right!" />
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -118,6 +128,11 @@ const FormErrorInfo = () => {
 								<td><code>errorMessages</code></td>
 								<td>array</td>
 								<td>Renders list items</td>
+							</tr>
+							<tr>
+								<td><code>negative</code></td>
+								<td>Optional boolean</td>
+								<td>Will change component style. Defaults to false</td>
 							</tr>
 							<tr>
 								<td><code>title</code></td>

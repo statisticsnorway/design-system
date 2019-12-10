@@ -1,26 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Link, RadioGroup, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
-
-const leadParagraphText = `
-Radioknapper lar brukeren velge kun ett av et forhåndsdefinert sett av alternativer. 
-Default visning er at ingen valg er markert av knappene.
-`;
-{/*Radio buttons allows the user to select a single selection among a groups of options which includes at least two or more choices.
-In a radio button list the options should always be independent from every other option and by default no radio element should be selected.*/}
-
-const overviewTextRadiobutton = `
-Radioknapper har 3 ulike statuser; ikke-valgt, hover (musepeker over den) og valgt. Når knappen ikke er valgt vises den 
-nøytralt med en grå sirkel. Når brukeren peker over den med musepekeren, blir sirkelen grønn og tykkere. Samtidig vises 
-en grønn bakgrunnsstripe på hele raden for knappen. Når knappen er valgt, blir sirkelen bli fylt med en mindre sirkel i mørk farge. 
-`;
-
-{/*Radio buttons have 3 different states, alternating between unchecked, hover and checked.
-In the unchecked state the radio buttons are neutral with a greyed circle.
-As the user hover over an unchecked radio button it transforms into a thicker circle and turns green,
-at the same time a light green stripe will appear over the hovered radio button row.
-When a radio button is selected by the user, a dark circle will fill the selected radio button.*/}
-
+import { Divider, LeadParagraph, Link, RadioGroup, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -48,6 +28,9 @@ const tabCode = [
 const codeReact = `
 <RadioGroup
 	header="Header"
+	onChange={() => callback}
+	selectedValue="item1" 
+	orientation="column"
 	items={[
 		{ label: 'Item 1', value: 'item1' },
 		{ label: 'Item 2', value: 'item2' },
@@ -58,14 +41,21 @@ const codeReact = `
 
 const codeHtml = `
 <div class="ssb-radio-group">
-    <div class="ssb-title no-margin"><h5>Title</h5></div>
-    <div class="ssb-radio">
-        <input type="radio" id="option1" value="option1" />
-        <label class="radio-label" for="option1">Insert label</label>
-    </div>
-    <div class="ssb-radio">
-        <input type="radio" id="option2" value="option2" />
-        <label class="radio-label" for="option2">Insert label</label>
+    <h6 class="ssb-title radio-group-header no-margin">Header</h6>
+    <!-- Use flex-row If horizontal layout -->
+    <div class="boxes flex-column">
+        <div class="ssb-radio">
+            <input tabindex="0" id="item1" name="Header" type="radio" value="item1">
+            <label class="radio-label" for="item1">Item 1</label>
+        </div>
+        <div class="ssb-radio">
+            <input tabindex="0" id="item2" name="Header" type="radio" value="item2">
+            <label class="radio-label" for="item2">Item 2</label>
+        </div>
+        <div class="ssb-radio">
+            <input tabindex="0" id="item3" name="Header" disabled="" type="radio" value="item3">
+            <label class="radio-label" for="item3">Item 3</label>
+        </div>
     </div>
 </div>
 `;
@@ -80,7 +70,8 @@ const RadioButtonInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Radio buttons</Title>
 			<LeadParagraph>
-				{leadParagraphText}
+				Radioknapper lar brukeren velge kun ett av et forhåndsdefinert sett av alternativer.
+				Default visning er at ingen valg er markert av knappene.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 
@@ -91,17 +82,24 @@ const RadioButtonInfo = () => {
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">RadioGroup</Title>
 						<div className="col-lg-6">
-							<p>{overviewTextRadiobutton}</p>
+							<Paragraph>
+								Radioknapper har 3 ulike statuser; ikke-valgt, hover (musepeker over den) og valgt. Når knappen ikke er valgt vises den
+								nøytralt med en grå sirkel. Når brukeren peker over den med musepekeren, blir sirkelen grønn og tykkere. Samtidig vises
+								en grønn bakgrunnsstripe på hele raden for knappen. Når knappen er valgt, blir sirkelen bli fylt med en mindre sirkel i mørk farge.
+							</Paragraph>
 						</div>
-						<div className="col-lg-6">
-							<RadioGroup
-								header="Header"
-								items={[
-									{ label: 'Item 1', value: 'item1' },
-									{ label: 'Item 2', value: 'item2' },
-									{ label: 'Item 3', value: 'item3', disabled: true },
-								]}
-							/>
+						<div className="col-lg-6 divider-left align-items-center pl-4">
+							<div className="component-wrapper">
+								<RadioGroup
+									header="Header"
+									selectedValue="item1"
+									items={[
+										{ label: 'Item 1', value: 'item1' },
+										{ label: 'Item 2', value: 'item2' },
+										{ label: 'Item 3', value: 'item3', disabled: true },
+									]}
+								/>
+							</div>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -128,7 +126,7 @@ const RadioButtonInfo = () => {
 							<tr>
 								<td><code>header</code></td>
 								<td>string</td>
-								<td>Renders a h5 title</td>
+								<td>Renders a h6 title</td>
 							</tr>
 							<tr>
 								<td><code>items</code></td>
@@ -139,6 +137,11 @@ const RadioButtonInfo = () => {
 								<td><code>onChange</code></td>
 								<td>func</td>
 								<td>Callback function when a value is changed </td>
+							</tr>
+							<tr>
+								<td><code>orientation</code></td>
+								<td>column or row , default column</td>
+								<td>Vertical og horizontal layout</td>
 							</tr>
 							<tr>
 								<td><code>selectedValue</code></td>

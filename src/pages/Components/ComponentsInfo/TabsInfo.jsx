@@ -27,6 +27,7 @@ const tabCode = [
 
 const codeReact = `
 <Tabs
+	activeOnInit="category1/"
 	items={[
 		{ title: 'Category 1', path: 'category1/' },
 		{ title: 'Category 2', path: 'category2/' },

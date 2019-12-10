@@ -123,7 +123,7 @@ const CheckboxInfo = () => {
 							<tr>
 								<td><code>header</code></td>
 								<td>string</td>
-								<td>Header above checkbox</td>
+								<td>Renders a h6 title</td>
 							</tr>
 							<tr>
 								<td><code>items</code></td>

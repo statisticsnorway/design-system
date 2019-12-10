@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Paragraph, Quote, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-
-const overviewText = `
-Coming soon.
-`;
+import { Divider, LeadParagraph, Paragraph, Quote, Tabs, Title } from '@statisticsnorway/ssb-component-library'
 
 const tabItems = [
 	{
@@ -65,11 +61,20 @@ const QuotesInfo = () => {
 							Sitat løftes ut av brødteksten, settes i større font og med innrykket venstremarg. Husk å bruke riktig tegnsetting ved sitat; «norsk», “english”.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
-						<div className="component-wrapper">
-							<Quote>
-								“The trouble with programmers is that you can never tell what a programmer is doing until it&apos;s too late”
-							</Quote>
+					<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+							<div className="component-wrapper">
+								<Quote>
+									“The trouble with programmers is that you can never tell what a programmer is doing until it&apos;s too late”
+								</Quote>
+							</div>
+						</div>
+						<div className="d-flex justify-content-center flex-wrap negative-wrapper">
+							<div className="component-wrapper">
+								<Quote negative>
+									“The trouble with programmers is that you can never tell what a programmer is doing until it&apos;s too late”
+								</Quote>
+							</div>
 						</div>
 					</div>
 					<div className="col-lg-12">

@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import {
-	Divider,
-	LeadParagraph,
-	Glossary,
-	Paragraph,
-	Title,
-	Tabs,
-	Quote
-} from '@statisticsnorway/ssb-component-library'
+import { Divider, LeadParagraph, Glossary, Paragraph, Title, Tabs } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{

@@ -12,6 +12,19 @@ const tabCode = [
 	},
 ];
 
+const tabItems = [
+	{
+		title: 'Oversikt',
+		path: '/overview',
+	}, {
+		title: 'Begrunnelse',
+		path: '/rationale',
+	}, {
+		title: 'Props',
+		path: '/props',
+	},
+];
+
 const mockedItems = [
 	{ text: '1', path: '/1' },
 	{ text: '2', path: '/2' },
@@ -47,28 +60,32 @@ const items = [
 `;
 
 const codeExampleHtml = `
-<div class="ssb-pagination">
-  <div class="direction-button">
-    <i class="chevron-icon">{chevron left icon}</i>Forrige
-  </div>
-  <div class="nav-button-square selected" onclick="{select this}">1</div>
-  <div class="nav-button-square" onclick="{select this}">2</div>
-  <div class="nav-button-square" onclick="{select this}">3</div>
-  <div class="nav-button-square" onclick="{select this}">4</div>
-  <div class="nav-button-square" onclick="{select this}">5</div>
-  <div class="nav-button-square" onclick="{select this}">6</div>
-  <div class="nav-button-square" onclick="{select this}">7</div>
-  <div class="nav-button-square" onclick="{select this}">8</div>
-  <div class="dotted-indicator">...</div>
-  <div class="nav-button-square" onclick="{select this}">20</div>
-  <div class="direction-button">
-    Neste<i class="chevron-icon">{chevron right icon}</i>
-  </div>
-</div>
+<nav class="ssb-pagination">
+    <button class="direction-button previous">
+    	<i class="chevron-icon">{feather.chevronLeft 18px}</i>
+    	<span>Forrige</span>
+    </button>
+    <button class="nav-button-square">1</button>
+    <button class="nav-button-square 2">2</button>
+    <button class="nav-button-square 3">3</button>
+    <button class="nav-button-square 4">4</button>
+    <button class="nav-button-square 5 selected">5</button>
+    <button class="nav-button-square 6">6</button>
+    <button class="nav-button-square 7">7</button>
+    <button class="nav-button-square 8">8</button>
+    <div class="dotted-indicator">...</div>
+    <button class="nav-button-square">20</button>
+    <button class="direction-button next">
+        <span>Neste</span>
+        <i class="chevron-icon">{feather.chevronRight 18px}</i>
+    </button>
+</nav>
 `;
 
 const PaginationInfo = () => {
+	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => changeTab(e);
 	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
@@ -79,76 +96,73 @@ const PaginationInfo = () => {
 				av to knapper som gir brukeren muligheten til å velge forrige eller neste side i stedet for å klikke
 				på numrene.
 			</LeadParagraph>
-
-			{/*The pagination component provides a styled list of links of links through numbering them starting from 1.
-			There are also two buttons allowing user to select previous and next page instead of clicking on the numbers.
-			Do not use pagination if you don’t want the user to pause for navigating, as this will hide content available.
-			Use pagination when it is unsuitable to display all content on a single page.*/}
-
 			<ul className="mb-4 ml-2 col-lg-8">
 				<li>
 					Bruk paginering hvis det ikke er hensiktsmessig å vise alt innhold på en enkelt side.
-									</li>
+				</li>
 				<li>
 					Bruk ikke paginering hvis du ikke vil at brukeren skal stoppe opp og navigere,
 					siden paginering vil skjule tilgjengelig innhold.
 				</li>
 			</ul>
-
+			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
 
-			<div className="row mb-4">
-				<Title size={2} className="col-lg-12">Pagination</Title>
-				<div className="col-lg-6">
-					<Paragraph>
-						Paginering gir brukeren muligheten til å se en begrenset mengde sortert innhold om gangen.
-						Brukeren kan fortsette til neste side ved å klikke på numrene - som også viser hvor mange
-						flere sider det finnes tilgjengelig.
-					</Paragraph>
+			{activeTab === '/overview' && (
+				<div className="row mt-4">
+					<Title size={2} className="col-lg-12">Pagination</Title>
+					<div className="col-lg-6">
+						<Paragraph>
+							Paginering gir brukeren muligheten til å se en begrenset mengde sortert innhold om gangen.
+							Brukeren kan fortsette til neste side ved å klikke på numrene - som også viser hvor mange
+							flere sider det finnes tilgjengelig.
+						</Paragraph>
+					</div>
+					<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-wrapper">
+							<Pagination items={mockedItems} selectedPage={mockedItems[4]} />
+						</div>
+					</div>
+					<div className="col-lg-12">
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider light />
+						{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
+					</div>
 				</div>
-				<div className="col-lg-12 mt-4 mb-4">
-					<Pagination items={mockedItems} selectedPage={mockedItems[4]} />
+			)}
+
+			{activeTab === '/props' && (
+				<div>
+					<Title size={2} className="mb-4">Props</Title>
+					<table className="col-lg-12">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>items</code></td>
+								<td>arrayOf(text (string), path (string))</td>
+								<td>Required. Items for text label and path</td>
+							</tr>
+							<tr>
+								<td><code>onSelect</code></td>
+								<td>func</td>
+								<td>Callback function</td>
+							</tr>
+							<tr>
+								<td><code>selectedPage</code></td>
+								<td>object</td>
+								<td>Optional. Selected item on render</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<div className="col-lg-12">
-					<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-					<Divider light />
-					{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}
-					{activeCodeTab === '/html' && <CodeSnippet code={codeExampleHtml} language="html" />}
-				</div>
-			</div>
-
-			<Divider light className="mb-4" />
-
-			<div>
-				<Title size={2}>Props</Title>
-				<table className="col-lg-12">
-					<thead style={{ textAlign: 'left' }}>
-						<tr>
-							<th><Title size={3}>Prop name</Title></th>
-							<th><Title size={3}>Type</Title></th>
-							<th><Title size={3}>Description</Title></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><code>items</code></td>
-							<td>array of objects</td>
-							<td>Required. Items for text label and path</td>
-						</tr>
-						<tr>
-							<td><code>selectedPage</code></td>
-							<td>object</td>
-							<td>Optional. Selected item on render</td>
-						</tr>
-						<tr>
-							<td><code>icon</code></td>
-							<td>node</td>
-							<td>Renders an icon</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
+			)}
 		</div>
 	);
 };

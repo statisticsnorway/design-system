@@ -79,6 +79,7 @@
     height: 38px;
     justify-content: space-between;
     margin-bottom: 45px;
+    position: relative;
 
     .links {
       align-items: center;
@@ -89,6 +90,39 @@
       > div {
         margin-left: $global-padding-size;
       }
+    }
+
+    .mobile-collapse-menu {
+      display: none;
+
+      input {
+        opacity: 0;
+      }
+    }
+
+    @media #{$mobile} {
+      .mobile-collapse-menu {
+        display: block;
+      }
+
+      .navigation-items {
+        &.closed {
+          display: none;
+        }
+        &.open {
+          background: $ssb-white;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          left: 0;
+          overflow-y: hidden;
+          position: fixed;
+          top: 128px;
+          width: 100%;
+          z-index: 999;
+        }
+      }
+
     }
   }
 

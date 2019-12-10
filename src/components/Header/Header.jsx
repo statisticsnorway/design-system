@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import logoSymbol from '@public/ssb-logo-symbol.svg';
 import { Title } from '@statisticsnorway/ssb-component-library';
-import { GitHub } from 'react-feather';
+import { GitHub, Menu } from 'react-feather';
 import coopIllustration from '../../../public/customIcons/illustrasjon-samarbeid.svg';
 
 const items = [
@@ -14,6 +14,7 @@ const items = [
 
 const Header = () => {
 	const history = useHistory();
+	const [menuIsOpen, toggleMenu] = useState(false);
 	return (
 		<div className={`header-component-wrapper${history.location.pathname === '/get-started' || history.location.pathname === '/' ? ' front-page' : ''}`}>
 			<div className="content-holder d-flex justify-content-between flex-wrap">
@@ -29,23 +30,29 @@ const Header = () => {
 				</div>
 
 				<nav className="right-section">
-					{items.map(it => (
-						<NavLink
+					<label htmlFor="menu" className="mobile-collapse-menu">
+						<Menu />
+						<input type="checkbox" id="menu" onChange={() => toggleMenu(!menuIsOpen)} />
+					</label>
+					<div className={`navigation-items ${menuIsOpen ? 'open' : 'closed'}`}>
+						{items.map(it => (
+							<NavLink
+								className="header-navigation roboto"
+								activeClassName="active"
+								items={items}
+								to={it.path}
+								onClick={() => history.push(it.path)}
+							>{it.title}
+							</NavLink>
+						))}
+						<a
 							className="header-navigation roboto"
-							activeClassName="active"
-							items={items}
-							to={it.path}
-							onClick={() => history.push(it.path)}
-						>{it.title}
-						</NavLink>
-					))}
-					<a
-						className="header-navigation roboto"
-						href="https://github.com/statisticsnorway/ssb-component-library"
-						target="_blank"
-						rel="noopener noreferrer"
-					><GitHub size="18" />&nbsp;Github
-					</a>
+							href="https://github.com/statisticsnorway/ssb-component-library"
+							target="_blank"
+							rel="noopener noreferrer"
+						><GitHub size="18" />&nbsp;Github
+						</a>
+					</div>
 				</nav>
 
 			</div>

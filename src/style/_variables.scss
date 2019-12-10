@@ -38,15 +38,6 @@ $max-content-size: 1200px;
   border-right: 1px solid $ssb-dark-2;
 }
 
-.component-wrapper {
-  margin-left: 20px;
-  width: 100%;
-
-  > * {
-    margin: 16px;
-  }
-}
-
 .negative-wrapper {
   background-color: $ssb-dark-5;
   margin-left: 20px;

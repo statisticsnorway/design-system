@@ -27,6 +27,7 @@ const Header = () => {
 						<Title size={2}>Designsystem</Title>
 					</div>
 				</div>
+
 				<nav className="right-section">
 					{items.map(it => (
 						<NavLink
@@ -46,6 +47,7 @@ const Header = () => {
 					><GitHub size="18" />&nbsp;Github
 					</a>
 				</nav>
+
 			</div>
 			{(history.location.pathname === '/get-started' || history.location.pathname === '/') && (
 				<div className="get-started offset-lg-1">

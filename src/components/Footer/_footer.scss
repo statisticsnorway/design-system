@@ -41,3 +41,13 @@
     }
   }
 }
+
+// For component info pages
+.component-wrapper {
+  margin-left: 20px;
+  width: 100%;
+
+  > * {
+    margin: 16px;
+  }
+}

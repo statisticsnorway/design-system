@@ -27,27 +27,36 @@ const tabCode = [
 ];
 
 const codeLargeReact = `
-<KeyFigures
-	number="789 398"
-	title="Antall husholdninger"
-	numberDescription="husholdninger"
-	time="2018"
-	size="large"
-	icon={<Home size="240" />}
+<KeyFigures 
+	number="789 398" 
+	title={title} 
+	numberDescription="husholdninger" 
+	time="2018" 
+	size="large" 
+	icon= { Insert icon }
+	glossary="Dette er en forklaring av Antall husholdninger" 
 />
 `;
 
 const codeLargeHtml = `
 <div class="ssb-key-figures large">
-  <div class="kf-icon large"><!-- Insert icon --></div>
-  <div>
-    <span class="kf-title">Title</span>
-    <div class="kf-time">2019</div>
-    <div class="number-section">
-      <div class="ssb-number large">12 345</div>
-      <span class="kf-title subtitle">husholdninger</span>
+    <div class="kf-icon large">
+        <!-- Insert icon -->
     </div>
-  </div>
+    <div>
+        <button class="ssb-glossary">
+            <div class="glossary-text-wrap">
+                <span class="kf-title">Antall husholdninger</span>
+            </div>
+            <i/>
+            <div class="glossary-animate-background"></div>
+        </button>        
+        <div class="kf-time">2018</div>
+        <div class="number-section">
+            <div class="ssb-number large">789 398</div>
+            <span class="kf-title subtitle">husholdninger</span>
+        </div>
+    </div>
 </div>
 `;
 
@@ -64,15 +73,16 @@ const codeMediumReact = `
 
 const codeMediumHtml = `
 <div class="ssb-key-figures medium">
-  <div class="kf-icon medium"><!-- Insert icon --></div>
-  <div>
-    <span class="kf-title">Menn</span>
-    <div class="kf-time">2018</div>
-    <div class="number-section">
-      <div class="ssb-number medium">80,6</div>
-      <span class="kf-title subtitle">år</span>
+    <div class="kf-icon medium">
+        <!-- Insert icon -->
     </div>
-  </div>
+    <div><span class="kf-title">Menn</span>
+        <div class="kf-time">2018</div>
+        <div class="number-section">
+            <div class="ssb-number medium">80,6</div>
+            <span class="kf-title subtitle">år</span>
+        </div>
+    </div>
 </div>
 `;
 
@@ -89,15 +99,17 @@ const codeSmallReact = `
 
 const codeSmallHtml = `
 <div class="ssb-key-figures small">
-  <div class="kf-icon small"><!-- Insert icon --></div>
-  <div>
-    <span class="kf-title">Menn</span>
-    <div class="kf-time">2018</div>
-    <div class="number-section">
-      <div class="ssb-number small">80,6</div>
-      <span class="kf-title subtitle">år</span>
+    <div class="kf-icon small">
+        <!-- Insert icon -->
     </div>
-  </div>
+    <div>
+        <span class="kf-title">Menn</span>
+        <div class="kf-time">2018</div>
+        <div class="number-section">
+            <div class="ssb-number small">80,6</div>
+            <span class="kf-title subtitle">år</span>
+        </div>
+    </div>
 </div>
 `;
 
@@ -135,6 +147,7 @@ const KeyFiguresInfo = () => {
 								time="2018"
 								size="large"
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
+								glossary="Dette er en forklaring av Antall husholdninger"
 							/>
 						</div>
 						<div className="col-lg-12">
@@ -297,6 +310,11 @@ const KeyFiguresInfo = () => {
 								<td>string or number</td>
 								<td>Displays time for the number between title and number</td>
 							</tr>
+							<tr>
+								<td><code>glossary</code></td>
+								<td>string</td>
+								<td>Explanation for the title</td>
+							</tr>
 						</tbody>
 					</table>
 
@@ -307,6 +325,7 @@ const KeyFiguresInfo = () => {
 						<ul>
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Number" isExternal>Number</Link></li>
 							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Title" isExternal>Title</Link></li>
+							<li><Link href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Glossary" isExternal>Glossary</Link></li>
 						</ul>
 					</div>
 				</div>

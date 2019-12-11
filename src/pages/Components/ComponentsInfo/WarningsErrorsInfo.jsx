@@ -65,7 +65,7 @@ const codeInfoHtml = `
 </div>
 `;
 
-const DialogInfo = () => {
+const WarningsErrorsInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => {
@@ -193,4 +193,4 @@ const DialogInfo = () => {
 	);
 };
 
-export default DialogInfo;
+export default WarningsErrorsInfo;

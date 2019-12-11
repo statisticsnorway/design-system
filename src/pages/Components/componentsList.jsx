@@ -8,7 +8,7 @@ import CardsInfo from './ComponentsInfo/CardsInfo';
 import cardsIcon from '../../../public/customIcons/cards.svg';
 import CheckboxInfo from './ComponentsInfo/CheckboxInfo';
 import checkboxIcon from '../../../public/customIcons/checkbox.svg';
-import DialogInfo from './ComponentsInfo/DialogInfo';
+import WarningsErrorsInfo from './ComponentsInfo/WarningsErrorsInfo';
 import dialogIcon from '../../../public/customIcons/dialog.svg';
 import DividerInfo from './ComponentsInfo/DividerInfo';
 import dividersIcon from '../../../public/customIcons/dividers.svg';
@@ -57,7 +57,6 @@ const componentsList = [
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
 	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon, comingSoon: true },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
-	{ component: DialogInfo, label: 'Warnings and errors', path: '/dialog', icon: dialogIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
@@ -83,6 +82,7 @@ const componentsList = [
 	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
 	{ component: TagsInfo, label: 'Tags', path: '/tags', icon: tagsIcon },
 	{ component: TypographyInfo, label: 'Typography', path: '/typography', icon: typographyIcon },
+	{ component: WarningsErrorsInfo, label: 'Warnings and errors', path: '/warnings-errors', icon: dialogIcon },
 ];
 
-export default componentsList.sort((a, b) => a.label - b.label);
+export default componentsList;

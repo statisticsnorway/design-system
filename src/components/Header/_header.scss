@@ -10,6 +10,16 @@
 
   .content-holder {
     padding-top: 45px;
+
+    .mobile-menu {
+      background: $ssb-white;
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
   }
 
   &.front-page {
@@ -31,10 +41,6 @@
         width: 260px;
       }
 
-      .logo-symbol {
-        display: none;
-        margin-left: 16px;
-      }
 
       @media #{$mobile} {
         .home-nav {
@@ -45,17 +51,12 @@
           display: none;
         }
 
-        .logo-symbol {
-          display: block;
-          margin-right: 8px;
-        }
-
         .logo-full {
           display: none;
         }
       }
 
-      img {
+      .logo-full {
         height: 47px;
         margin-top: -5px;
       }
@@ -71,6 +72,12 @@
         margin: 0;
       }
     }
+
+    @media #{$mobile} {
+      .logo-and-title {
+        align-items: center;
+      }
+    }
   }
 
   .right-section {
@@ -79,6 +86,7 @@
     height: 38px;
     justify-content: space-between;
     margin-bottom: 45px;
+    position: relative;
 
     .links {
       align-items: center;
@@ -90,6 +98,8 @@
         margin-left: $global-padding-size;
       }
     }
+
+
   }
 
   .header-navigation {
@@ -115,6 +125,73 @@
     .intro-text {
       font-size: 20px;
       line-height: 1.7;
+    }
+  }
+
+  .logo-symbol {
+    display: none;
+    height: 28px;
+  }
+
+  .mobile-collapse-menu {
+    display: none;
+    margin-bottom: 0;
+
+    input {
+      opacity: 0;
+    }
+  }
+
+  .menu-label {
+    @include roboto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
+  @media #{$mobile} {
+    .mobile-collapse-menu {
+      display: block;
+    }
+
+    .navigation-items {
+      &.closed {
+        display: none;
+      }
+    }
+  }
+
+  @media #{$mobile} {
+    .content-holder {
+      padding: 20px;
+    }
+
+    .search-bar-container {
+      margin: 0 20px 20px 20px;
+    }
+
+    .logo-symbol {
+      display: block;
+      margin-right: 8px;
+    }
+
+    .ssb-title {
+      color: $ssb-dark-5;
+      margin-bottom: 0;
+    }
+
+    .left-section, .right-section {
+      margin-bottom: 0;
+    }
+
+    .mobile-navigation-items {
+      border-bottom: 1px solid $ssb-dark-2;
+
+      .header-navigation {
+        border-top: 1px solid $ssb-dark-2;
+        margin: 0;
+        padding: 20px;
+      }
     }
   }
 }

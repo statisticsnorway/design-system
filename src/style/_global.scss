@@ -16,6 +16,10 @@ body {
     margin: 0 $global-padding-size;
     position: relative;
 
+    @media #{$mobile} {
+      margin: 0;
+    }
+
     header {
       display: grid;
     }
@@ -27,8 +31,7 @@ body {
 
   .page-wrapper {
     > section {
-      padding-bottom: 50px;
-      padding-top: 35px;
+      padding: 35px 5px 50px 5px;
     }
   }
 

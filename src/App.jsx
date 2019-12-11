@@ -6,31 +6,8 @@ import Components from '@pages/Components/Components';
 import Templates from '@pages/Templates/Templates';
 import Welcome from '@pages/Welcome/Welcome';
 import logo from '@public/ssb-logo-white.svg';
-import { Facebook, Linkedin, Rss, Twitter } from 'react-feather';
 
 const NoMatchPage = () => <h3>404 - Not found</h3>;
-const socialLinks = [
-	{
-		link: 'https://www.facebook.com/statistisksentralbyra/',
-		logo: <Facebook />,
-		name: 'Facebook',
-	},
-	{
-		link: 'https://twitter.com/ssbnytt',
-		logo: <Twitter />,
-		name: 'Twitter',
-	},
-	{
-		link: 'https://www.linkedin.com/company/statistics-norway/',
-		logo: <Linkedin />,
-		name: 'LinkedIn',
-	},
-	{
-		link: 'https://www.ssb.no/informasjon/rss',
-		logo: <Rss />,
-		name: 'RSS',
-	},
-];
 
 const App = () => (
 	<div className="app">

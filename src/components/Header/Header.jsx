@@ -14,7 +14,6 @@ const items = [
 ];
 
 const listItems = componentsList.filter(c => !c.comingSoon);
-console.log(listItems)
 
 const Header = () => {
 	const history = useHistory();

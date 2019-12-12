@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import logoSymbol from '@public/ssb-logo-symbol.svg';
-import { Dropdown, Title } from '@statisticsnorway/ssb-component-library';
+import { Dropdown, Link, Title } from '@statisticsnorway/ssb-component-library';
 import { GitHub, Menu } from 'react-feather';
 import componentsList from '../../pages/Components/componentsList';
 import coopIllustration from '../../../public/customIcons/illustrasjon-samarbeid.svg';
@@ -121,6 +121,8 @@ const Header = () => {
 								er det viktig å ha et felles sett med retningslinjer som sikrer et enhetlig uttrykk.
 								Designsystemet er et åpent verktøy, som ved riktig bruk sikrer at vi fremstår som ett SSB – én tydelig avsender.
 								Slik bygger vi tillit hos brukerne våre – tillit til at våre løsninger faktisk kommer fra oss.
+								Detaljert beskrivelse for utviklere ligger på&nbsp;
+								<Link linkType="profiled" isExternal href="https://github.com/statisticsnorway/ssb-component-library">GitHub</Link>.
 							</p>
 						</div>
 					</div>

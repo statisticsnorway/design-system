@@ -162,7 +162,8 @@
 
   @media #{$mobile} {
     .mobile-collapse-menu {
-      display: block;
+      align-items: center;
+      display: flex;
     }
 
     .navigation-items {

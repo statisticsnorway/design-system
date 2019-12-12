@@ -198,7 +198,7 @@ const LinksInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Profield link</Title>
+						<Title size={2} className="col-lg-12">Profiled link</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Profilerte lenker brukes der man ønsker en lenke som gjør mer ut av seg enn en standard lenke. Innholdet lenken tar deg til er av stor betydning for brukeren.
@@ -224,7 +224,7 @@ const LinksInfo = () => {
 					<Divider light className="mb-3" />
 
 					<div className="row mb-3">
-						<Title size={2} className="col-lg-12">Profield link with icon</Title>
+						<Title size={2} className="col-lg-12">Profiled link with icon</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Se forklaring under «Profiled Link». Ikonet brukes for å differensiere eller indikere ulik funksjonalitet.

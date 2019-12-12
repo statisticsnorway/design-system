@@ -28,14 +28,14 @@ const Header = () => {
 							<img className="logo-symbol" src={logoSymbol} alt="logo" />
 						</div>
 						<div className="diagonal-divider" />
-						<Title size={2}>Designsystem</Title>
+						<div className="site-title">Designsystem</div>
 					</div>
 				</div>
 
 				<nav className="right-section d-flex align-items-center">
 					<label htmlFor="menu" className="mobile-collapse-menu">
 						<span className="menu-label">Meny</span>
-						<Menu size={24} />
+						<Menu className="menu-icon" size={24} />
 						<input type="checkbox" id="menu" onChange={() => toggleMenu(!menuIsOpen)} />
 					</label>
 					<div className="navigation-items closed">

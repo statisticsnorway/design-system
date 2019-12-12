@@ -139,7 +139,7 @@ const KeyFiguresInfo = () => {
 								De viktigste tallene settes i denne størrelsen. Det skal aldri være mer enn ett large nøkkeltall i en gruppe.
 							</Paragraph>
 						</div>
-						<div className="col-lg-12 mb-4">
+						<div className="component-example col-lg-12 mb-4">
 							<KeyFigures
 								number="789 398"
 								title="Antall husholdninger"
@@ -167,7 +167,7 @@ const KeyFiguresInfo = () => {
 								Medium nøkkeltall skal alltid være en gruppe på to. De to tallene skal alltid stå på høyde med hverandre, ikke under hverandre – bortsett fra i mobilvisning.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 mb-4">
+						<div className="component-example col-lg-6 mb-4">
 							<KeyFigures
 								number="80,6"
 								title="Menn"
@@ -177,7 +177,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="col-lg-6 mb-4">
+						<div className="component-example col-lg-6 mb-4">
 							<KeyFigures
 								number="84,7"
 								title="Kvinner"
@@ -205,7 +205,7 @@ const KeyFiguresInfo = () => {
 								Det anbefales ikke å bruke grupper på mer enn seks small nøkkeltall.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 mb-4">
+						<div className="component-example col-lg-6 mb-4">
 							<KeyFigures
 								number="80,6"
 								title="Menn"
@@ -215,7 +215,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="col-lg-6 mb-4">
+						<div className="component-example col-lg-6 mb-4">
 							<KeyFigures
 								number="80,6"
 								title="Menn"
@@ -225,7 +225,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="col-lg-6 mb-4">
+						<div className="component-example col-lg-6 mb-4">
 							<KeyFigures
 								number="84,7"
 								title="Kvinner"
@@ -235,7 +235,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="col-lg-6 mb-4">
+						<div className="component-example col-lg-6 mb-4">
 							<KeyFigures
 								number="84,7"
 								title="Kvinner"

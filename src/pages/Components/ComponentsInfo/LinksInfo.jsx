@@ -150,7 +150,7 @@ const LinksInfo = () => {
 								Kan stå alene eller sammen med flere i lenkeliste. Den kan også brukes i brødtekst.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" ">This is a clickable text link</Link>
 							</div>
@@ -179,7 +179,7 @@ const LinksInfo = () => {
 								Ikonet brukes for å differensiere eller indikere ulik funksjonalitet. Ikonet skal alltid gi brukeren økt forståelse for lenkens funksjon.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
 							</div>
@@ -205,7 +205,7 @@ const LinksInfo = () => {
 								Profilert lenke kan brukes i kombinasjon med andre typer lenker for å skape hierarki. Skal aldri ta brukeren til ekstern side.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link className="mr-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
 							</div>
@@ -231,7 +231,7 @@ const LinksInfo = () => {
 								Ikonet skal alltid gi brukeren økt forståelse for lenkens funksjon. Skal aldri ta brukeren til ekstern side.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
 							</div>
@@ -257,7 +257,7 @@ const LinksInfo = () => {
 								Tittellenke kan også brukes der det er vanskelig å finne lenketekst som erstatter «Les mer».
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " linkType="header">This is an header link</Link>
 							</div>
@@ -282,7 +282,7 @@ const LinksInfo = () => {
 								Standard lenke og standard lenke med ikon kan settes sammen til lenkeliste. Lenkelister brukes uten kulepunkter.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" ">This is a clickable text link in a link list</Link>
 								<Link href=" ">This is a clickable text link in a link list</Link><br />

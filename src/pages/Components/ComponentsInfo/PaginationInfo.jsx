@@ -118,7 +118,7 @@ const PaginationInfo = () => {
 							flere sider det finnes tilgjengelig.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+					<div className="component-example col-lg-6 divider-left">
 						<div className="component-wrapper">
 							<Pagination items={mockedItems} selectedPage={mockedItems[4]} />
 						</div>

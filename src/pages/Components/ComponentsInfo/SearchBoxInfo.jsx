@@ -67,7 +67,7 @@ const SearchBoxInfo = () => {
 								Søk er det eneste inputfeltet i designsystemet som har placeholder-tekst, fordi feltets funksjon er tydelig selv når teksten forsvinner ved klikk.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input
 									ariaLabel="Input field Search"

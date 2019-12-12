@@ -106,7 +106,7 @@ const TypographyInfo = () => {
 								Alle titler finnes også som hvit for plassering mot mørk bakgrunn.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column flex-wrap mb-4">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column flex-wrap mb-4">
 							<Title size={1}>H1 eksempel</Title>
 							<Paragraph>Roboto Condensed Bold, 56px, 80px linjeavstand.<br />Mobil: 44px, 56px linjeavstand.</Paragraph>
 							<Title size={2}>H2 eksempel</Title>
@@ -134,7 +134,7 @@ const TypographyInfo = () => {
 								Ingress settes i Open Sans Regular 20px, 32px linjeavstand på desktop. (Samme størrelse på mobil og desktop). Ingress har også en hvit versjon.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 							<div className="d-flex flex-wrap">
 								<LeadParagraph>
 									Ingress ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
@@ -158,7 +158,7 @@ const TypographyInfo = () => {
 								Brødtekst settes i Open Sans Regular 16px, 28px linjeavstand på desktop. (Samme størrelse på mobil og desktop). Brødtekst har også en hvit versjon.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 							<div className="d-flex flex-wrap">
 								<Paragraph>
 									Brødtekst ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -187,7 +187,7 @@ const TypographyInfo = () => {
 								Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 							<div className="d-flex flex-wrap">
 								<Text>Vanlig tekst ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
 							</div>
@@ -210,7 +210,7 @@ const TypographyInfo = () => {
 								(Samme størrelse på mobil og desktop). Liten tekst har også en hvit versjon.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 							<div className="d-flex flex-wrap">
 								<Text small>Microtext og labels ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
 							</div>

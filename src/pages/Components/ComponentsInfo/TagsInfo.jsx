@@ -67,10 +67,8 @@ const TagsInfo = () => {
 								Tekst kommer
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Tag>Tag</Tag>
-							</div>
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+							<Tag>Tag</Tag>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -89,10 +87,8 @@ const TagsInfo = () => {
 								Tekst kommer
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Tag icon={<Star size={18} />}>Tag with icon</Tag>
-							</div>
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+							<Tag icon={<Star size={18} />}>Tag with icon</Tag>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

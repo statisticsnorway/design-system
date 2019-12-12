@@ -75,17 +75,15 @@ const TabsInfo = () => {
 								Fane-tekst må være kort og konsis for at komponenten skal være enkel å navigere i. Kun ett ord – om mulig.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex justify-content-start mb-4 flex-wrap component-wrapper">
-								<Tabs
-									activeOnInit="category1/"
-									items={[
-										{ title: 'Category 1', path: 'category1/' },
-										{ title: 'Category 2', path: 'category2/' },
-										{ title: 'Category 3', path: 'category3/' },
-									]}
-								/>
-							</div>
+						<div className="component-example col-lg-6 divider-left">
+							<Tabs
+								activeOnInit="category1/"
+								items={[
+									{ title: 'Category 1', path: 'category1/' },
+									{ title: 'Category 2', path: 'category2/' },
+									{ title: 'Category 3', path: 'category3/' },
+								]}
+							/>
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

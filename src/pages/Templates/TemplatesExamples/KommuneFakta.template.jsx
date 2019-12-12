@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dialog, Divider, LeadParagraph, Link, Paragraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 import kommunefaktaDesktop from '../../../../public/templates/kommunefakta-desktop.png';
 
 const tabItems = [

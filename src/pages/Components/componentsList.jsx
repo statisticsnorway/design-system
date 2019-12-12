@@ -81,7 +81,7 @@ const componentsList = [
 	{ component: '', label: 'Table', path: '/table', icon: tableIcon, comingSoon: true },
 	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
 	{ component: TagsInfo, label: 'Tags', path: '/tags', icon: tagsIcon },
-	{ component: TypographyInfo, label: 'Typography', path: '/typography', icon: typographyIcon },
+	{ component: TypographyInfo, label: 'Text elements', path: '/text-elements', icon: typographyIcon },
 	{ component: WarningsErrorsInfo, label: 'Warnings and errors', path: '/warnings-errors', icon: dialogIcon },
 ];
 

@@ -162,34 +162,23 @@ const ButtonInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start mb-4">
-							<div className="component-wrapper justify-content-center d-flex ml-0">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button primary disabled className="mr-1">Disabled primary</Button>
-							</div>
-
-							<div className="component-wrapper justify-content-center d-flex mr-2">
 								<Button primary disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 
-							<div className="negative-wrapper justify-content-center d-flex p-1">
+							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
 								<Button primary disabled negative className="mr-1">Disabled secondary</Button>
-							</div>
-							<div className="negative-wrapper justify-content-center d-flex p-1">
 								<Button primary disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>
 						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start">
-							<div className="component-wrapper justify-content-center d-flex ml-0">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button disabled className="mr-1">Disabled primary</Button>
-							</div>
-
-							<div className="component-wrapper justify-content-center d-flex mr-2">
 								<Button disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
-
-							<div className="negative-wrapper justify-content-center d-flex p-1">
+							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
 								<Button disabled negative className="mr-1">Disabled secondary</Button>
-							</div>
-							<div className="negative-wrapper justify-content-center d-flex p-1">
 								<Button disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>

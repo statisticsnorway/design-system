@@ -135,7 +135,7 @@ const InputInfo = () => {
 								Ved klikk vises en blinkende strek (cursor) i rammen for å kommunisere at brukeren kan fylle inn tekst.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input label="Label" />
 							</div>
@@ -186,7 +186,7 @@ const InputInfo = () => {
 								Feilmeldingsboksen finner du stil og kode til her(lenke).
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input label="Passord" error errorMessage="Skriv inn passord, minimum 6 siffer" />
 							</div>

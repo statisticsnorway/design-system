@@ -68,12 +68,8 @@ const codeInfoHtml = `
 const WarningsErrorsInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => {
-		changeTab(e);
-	};
-	const tabCodeClicked = e => {
-		changeCodeTab(e);
-	};
+	const tabClicked = e => changeTab(e);
+	const tabCodeClicked = e => changeCodeTab(e);
 
 	return (
 		<div className="col-lg-12">

@@ -130,7 +130,7 @@ const DropdownInfo = () => {
 						<div className="col-lg-6">
 							<Paragraph>{overviewText}</Paragraph>
 						</div>
-						<div className="col-lg-6">
+						<div className="component-example col-lg-6 divider-left">
 							<Dropdown header="Menu header" items={items} />
 						</div>
 						<div className="col-lg-12">
@@ -148,7 +148,7 @@ const DropdownInfo = () => {
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextPreSelectedValue}</Paragraph>
 						</div>
-						<div className="col-lg-6">
+						<div className="component-example col-lg-6 divider-left">
 							<Dropdown header="Menu header" selectedItem={{ title: 'Ocean', id: 'item3' }} items={items} />
 						</div>
 						<div className="col-lg-12 mt-4">
@@ -163,7 +163,7 @@ const DropdownInfo = () => {
 						<div className="col-lg-6">
 							<Paragraph>{overviewTextSearchable}</Paragraph>
 						</div>
-						<div className="col-lg-6">
+						<div className="component-example col-lg-6 divider-left">
 							<Dropdown header="Menu header" searchable items={items} />
 						</div>
 						<div className="col-lg-12 mt-4">

@@ -104,7 +104,7 @@ const ButtonInfo = () => {
 								En primærknapp bør kun brukes én gang per visning. Ikon brukes til å skille knapper fra hverandre, eller for å tydeliggjøre knappens funsjonalitet.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button primary>Primary Button</Button>
 								<Button primary icon={<Upload size={18} />}>Primary Icon</Button>
@@ -133,7 +133,7 @@ const ButtonInfo = () => {
 								Ikon brukes til å skille knapper fra hverandre, eller for å tydeliggjøre knappens funsjonalitet.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button>Secondary button</Button>
 								<Button icon={<Upload size={18} />}>Secondary icon</Button>
@@ -161,29 +161,27 @@ const ButtonInfo = () => {
 								En passiv knapp kan ikke klikkes, og har heller ikke hover. Passive knapper er ikke underlagt kontrastkrav i UU.
 							</Paragraph>
 						</div>
-
-						<div className="col-lg-12 d-flex flex-row">
-							<div className="col-lg-6 d-flex justify-content-center component-wrapper ml-0">
-								<Button primary disabled>Disabled primary</Button>
-								<Button primary disabled icon={<Upload size={18} />}>Disabled icon</Button>
+						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start mb-4">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<Button primary disabled className="mr-1">Disabled primary</Button>
+								<Button primary disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
-							<div className="col-lg-6 d-flex justify-content-center component-wrapper ml-1">
-								<Button disabled>Disabled secondary</Button>
-								<Button disabled icon={<Upload size={18} />}>Disabled icon</Button>
+
+							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
+								<Button primary disabled negative className="mr-1">Disabled secondary</Button>
+								<Button primary disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>
-
-						<div className="col-lg-12 d-flex flex-row">
-							<div className="col-lg-6 d-flex justify-content-center negative-wrapper ml-0 p-0">
-								<Button primary disabled negative>Disabled primary</Button>
-								<Button primary disabled icon={<Upload size={18} />} negative>Disabled icon</Button>
+						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<Button disabled className="mr-1">Disabled primary</Button>
+								<Button disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
-							<div className="col-lg-6 d-flex justify-content-center negative-wrapper ml-1 p-0">
-								<Button disabled negative>Disabled secondary</Button>
-								<Button disabled icon={<Upload size={18} />} negative>Disabled icon</Button>
+							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
+								<Button disabled negative className="mr-1">Disabled secondary</Button>
+								<Button disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>
-
 						<div className="col-lg-12 mt-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />

@@ -91,7 +91,7 @@ const WarningsErrorsInfo = () => {
 								Feilmeldinger er i rød farge for å indikere at noe har gått galt. De presenteres sammen med et trekantet varselsikon.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 							<Dialog type="warning" title="A fitting title">
 								Insert content here
 							</Dialog>
@@ -115,7 +115,7 @@ const WarningsErrorsInfo = () => {
 								Informasjonsvarsler er i blå farge for å skille seg fra de røde feilmeldingene. De presenteres sammen med et sirkelformet informasjonsikon.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 							<Dialog type="info" title="A fitting title">
 								Insert content here
 							</Dialog>

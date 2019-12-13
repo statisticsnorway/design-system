@@ -77,7 +77,7 @@ const GlossaryInfo = () => {
 							Ved klikk på ordforklaringen vises en tekstboks med selve forklaringen.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
 						<div className="component-wrapper">
 							Explain this <Glossary explanation={placeHolder}>word</Glossary>.
 						</div>

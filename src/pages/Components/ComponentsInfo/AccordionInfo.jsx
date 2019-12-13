@@ -39,7 +39,7 @@ const codeExampleHtml = `
 <div class="ssb-accordion">
 	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
 		<span class="button-grid">
-			<h5 class="ssb-title header-text no-margin">This is a standard accordion</h5>
+			<span class="header-text">This is a standard accordion</span>
 			{20px ChevronDown icon, add class="expand-icon" }
 		</span>
 	</button>
@@ -59,8 +59,8 @@ const codeExampleSubheaderHtml = `
 <div class="ssb-accordion with-sub-header">
 	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
 		<span class=" button-grid ">
-			<h5 class="ssb-title sub-header no-margin ">Tabell 1</h5>
-			<h5 class="ssb-title header-text no-margin ">This is a table accordion</h5>
+			<span class="sub-header">Tabell 1</span>
+			<span class="header-text">This is a table accordion</span>
 			{20px ChevronDown icon, add class="expand-icon " }
 		</span>
 	</button>
@@ -83,7 +83,7 @@ const nestedExampleHtml = `
 <div class="ssb-accordion">
     <button class="accordion-header closed" onclick="{toggle classname to 'open'}" tabindex="0">
         <span class=" button-grid ">
-        	<h5 class="ssb-title header-text no-margin ">This is a nested accordion</h5>
+			<span class="header-text">This is a nested accordion</span>
             <!-- If open -->
             {20px chevronUp icon, add class="expand-icon" }
             <!-- If closed -->
@@ -91,7 +91,7 @@ const nestedExampleHtml = `
       	</span>
     </button>
     <div class="accordion-body open ">This is paragraph text which explains the accordion, the rest of the text is just to fill it out and show the space it takes.
-        <div class="ssb-nested-accordion mt-3 ">
+        <div class="ssb-nested-accordion">
             <button class="nested-accordion-header closed " onclick="{toggle classname to 'open'}">
                 <span class=" button-grid ">
                     <!-- If open -->
@@ -99,7 +99,7 @@ const nestedExampleHtml = `
                     <i class="expand-icon">{feather.chevronUp 16px}</i>
                     <!-- If closed -->
                     {16px chevronDown icon, add class="expand-icon" }
-                    <span class="header-text ">This is a nested accordion</span>
+                    <span class="header-text">This is a nested accordion</span>
                 </span>
             </button>
             <div class="nested-accordion-body closed">
@@ -136,7 +136,7 @@ const AccordionInfo = () => {
 								Brukes til filtrering, lange lister med flere seksjoner, menyer, tillegg, osv.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left align-items-center pl-4">
+						<div className="component-example col-lg-6 divider-left align-items-center">
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
@@ -160,7 +160,7 @@ const AccordionInfo = () => {
 								Versjonen organiserer komplekst innhold og gir det hierarki og struktur. Det gir en bedre brukervennlighet og dermed en bedre brukeropplevelse.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left align-items-center pl-4">
+						<div className="component-example col-lg-6 divider-left align-items-center">
 							<Accordion header="This is a nested accordion" openByDefault>
 								<NestedAccordion header="This is a nested accordion" openByDefault>
 									{accordionFillerText}
@@ -187,7 +187,7 @@ const AccordionInfo = () => {
 								Det er utviklet egen accordion til tabeller. Accordiontekst er tabellens tittel, nummereringen er tabellens plassering på siden.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left align-items-center pl-4">
+						<div className="component-example col-lg-6 divider-left align-items-center">
 							<Accordion subHeader="Tabell 1" header="This is a table accordion">
 								{accordionFillerText}
 							</Accordion>

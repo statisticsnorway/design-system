@@ -183,8 +183,8 @@ const ReferenceInfo = () => {
 								Kilde-komponenten består av en tittel («Kilde») for å gjøre det enkelt for brukeren å identifisere den, og en lenke.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-start">
-							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-start">
+							<div className="d-flex justify-content-start mb-4 flex-wrap">
 								<References
 									title="Kilde"
 									referenceList={[
@@ -195,7 +195,7 @@ const ReferenceInfo = () => {
 									]}
 								/>
 							</div>
-							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+							<div className="d-flex justify-content-start mb-4 flex-wrap">
 								<References
 									title="Kilde"
 									referenceList={[
@@ -230,8 +230,8 @@ const ReferenceInfo = () => {
 								Ved behov kan det også skrives en beskrivende tekst til lenken. Denne settes i brødtekst-stil.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-start">
-							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-start">
+							<div className="d-flex justify-content-start mb-4 flex-wrap">
 								<References
 									title="Kilde"
 									referenceList={[
@@ -250,7 +250,7 @@ const ReferenceInfo = () => {
 									]}
 								/>
 							</div>
-							<div className="d-flex justify-content-start mb-4 ml-4 flex-wrap component-wrapper">
+							<div className="d-flex justify-content-start mb-4 flex-wrap">
 								<References
 									title="Kilde"
 									referenceList={[

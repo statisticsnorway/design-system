@@ -70,7 +70,7 @@ const QuotesInfo = () => {
 							Husk å bruke riktig tegnsetting ved sitat; «norsk», “english”.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 						<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 							<div className="component-wrapper">
 								<Quote>

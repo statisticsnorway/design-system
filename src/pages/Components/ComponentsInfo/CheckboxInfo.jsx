@@ -41,7 +41,7 @@ const codeExample = `
 
 const codeExampleHtml = `
 <div class="ssb-checkbox-group">
-	<h6 class="ssb-title checkbox-group-header no-margin">Header</h6>
+	<div class="checkbox-group-header">Header</div>
 	<!-- Use flex-row If horizontal layout -->
 		<div class="boxes flex-column">
         <div class="ssb-checkbox">
@@ -87,7 +87,7 @@ const CheckboxInfo = () => {
 							med et avhukingsikon.
 						</Paragraph>
 					</div>
-					<div className="col-lg-6 divider-left align-items-center pl-4">
+					<div className="component-example col-lg-6 divider-left align-items-center">
 						<div className="component-wrapper">
 							<CheckboxGroup
 								header="Header"

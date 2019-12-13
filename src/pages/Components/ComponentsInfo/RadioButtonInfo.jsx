@@ -41,7 +41,7 @@ const codeReact = `
 
 const codeHtml = `
 <div class="ssb-radio-group">
-    <h6 class="ssb-title radio-group-header no-margin">Header</h6>
+	<div class="radio-group-header">Header</div>
     <!-- Use flex-row If horizontal layout -->
     <div class="boxes flex-column">
         <div class="ssb-radio">
@@ -88,7 +88,7 @@ const RadioButtonInfo = () => {
 								en grønn bakgrunnsstripe på hele raden for knappen. Når knappen er valgt, blir sirkelen bli fylt med en mindre sirkel i mørk farge.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left align-items-center pl-4">
+						<div className="component-example col-lg-6 divider-left align-items-center pl-4">
 							<div className="component-wrapper">
 								<RadioGroup
 									header="Header"

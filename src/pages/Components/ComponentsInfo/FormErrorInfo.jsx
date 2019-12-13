@@ -89,7 +89,7 @@ const FormErrorInfo = () => {
 								Kommer snart
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex component-wrapper">
 								<FormError errorMessages={errorMessages} title="Some fields are not right!" />
 							</div>

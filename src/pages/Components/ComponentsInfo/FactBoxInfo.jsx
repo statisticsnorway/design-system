@@ -53,7 +53,7 @@ const codeHtml = `
 	<div class="ssb-accordion without-borders">
 			<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
 					<span class="button-grid">
-						<h5 class="ssb-title header-text no-margin">Title</h5>
+						<span class="header-text">This is a fact box header</span>
 						{20px ChevronDown icon, add class="expand-icon" }
 					</span>
 			</button>
@@ -85,7 +85,7 @@ const FactBoxInfo = () => {
 					<div className="col-lg-6">
 						<p>{overviewTextFactbox}</p>
 					</div>
-					<div className="col-lg-6">
+					<div className="component-example col-lg-6 divider-left">
 						<FactBox header="This is a header" text="This is paragraph text which explains the accordion" />
 					</div>
 					<div className="col-lg-12">

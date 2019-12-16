@@ -22,6 +22,7 @@ import GlossaryInfo from './ComponentsInfo/GlossaryInfo';
 import wordExplanationIcon from '../../../public/customIcons/wordexplanation.svg';
 import graphsIcon from '../../../public/customIcons/graphs.svg';
 import headerIcon from '../../../public/customIcons/header.svg';
+import IconInfo from './ComponentsInfo/IconInfo';
 import InputInfo from './ComponentsInfo/InputInfo';
 import inputIcon from '../../../public/customIcons/input.svg';
 import KeyFiguresInfo from './ComponentsInfo/KeyFiguresInfo';
@@ -65,7 +66,7 @@ const componentsList = [
 	{ component: GlossaryInfo, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },
 	{ component: '', label: 'Graphs', path: '/graphs', icon: graphsIcon, comingSoon: true },
 	{ component: '', label: 'Header', path: '/header', icon: headerIcon, comingSoon: true },
-	{ component: '', label: 'Icons', path: '/icons', comingSoon: true },
+	{ component: IconInfo, label: 'Icons', path: '/icons', new: true },
 	{ component: InputInfo, label: 'Input', path: '/input', icon: inputIcon },
 	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures', icon: keyfiguresIcon },
 	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },

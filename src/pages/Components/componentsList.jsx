@@ -56,7 +56,7 @@ const componentsList = [
 	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
 	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
-	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon, comingSoon: true },
+	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon, new: true },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },

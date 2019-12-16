@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Button, Card, Divider, LeadParagraph, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Button, Card, Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { ArrowRight } from 'react-feather';
+import exampleImage from '../../../../public/img/card_image.png';
 
 const rationaleText = `
 As can be seen between these different profiled box elements, even though these are labeled underneath the same element, 
@@ -83,7 +85,7 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Card fileLocation="./not_a_file">
+							<Card image={<img src={exampleImage} alt="example" />} imagePlacement="top">
 								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Button primary>Handling</Button>
@@ -99,15 +101,15 @@ const CardsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Horisontal picture & text card</Title>
-						<div className="col-lg-6">
+						<div className="col-lg-12 mb-4">
 							<Paragraph>
 								Brukes der ett eller flere kort plasseres under hverandre. Kortet har fleksibel bredde, med lenketittel.
 								Bildet beholder dimensjonene selv om kortet blir høyere eller større. Tekstmengde i kortet bør begrenses.
 								Brukes som inngang til artikler eller annet innhold hvor det er viktig at brukeren får et kort sammendrag av innholdet.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6">
-							<Card fileLocation="./not_a_file">
+						<div className="col-lg-12 mb-4">
+							<Card image={<img src={exampleImage} alt="example" />} imagePlacement="left">
 								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Button primary>Handling</Button>
@@ -123,7 +125,7 @@ const CardsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Simple cards</Title>
-						<div className="col-lg-6">
+						<div className="col-lg-12">
 							<Paragraph>
 								Kortene passer godt i større grupper, som visuelle innganger til sider innen samme innholdstype (eksempelvis statistikksider).
 								Bør aldri inneholde mer enn et par linjer forklarende tekst i tillegg til en kort tittel.
@@ -132,7 +134,14 @@ const CardsInfo = () => {
 								Ved sammenstilling av flere kort med knapp og lik verdi bør sekundærknapp eller pilikon benyttes.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6">
+						<div className="col-lg-6 mb-4">
+							<Card>
+								<Title size={2}>Card header</Title>
+								<Paragraph>Explain something about something with something clever.</Paragraph>
+								<Button primary>Handling</Button>
+							</Card>
+						</div>
+						<div className="col-lg-6 mb-4">
 							<Card fileLocation="./not_a_file">
 								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
@@ -175,16 +184,26 @@ const CardsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Card list</Title>
-						<div className="col-lg-6">
+						<div className="col-lg-12 mb-4">
 							<Paragraph>
 								Når flere kort plasseres sammen til en gruppe/liste skal de følge layout-griden med 20px mellomrom til neste kort både horisontalt og vertikalt.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6">
-							<Card fileLocation="./not_a_file">
+						<div className="col-lg-12 mb-4 grid-column grid-3">
+							<Card>
 								<Title size={2}>Card header</Title>
 								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Button primary>Handling</Button>
+								<Link icon={<ArrowRight />} href=" " />
+							</Card>
+							<Card>
+								<Title size={2}>Card header</Title>
+								<Paragraph>Explain something about something with something clever.</Paragraph>
+								<Link icon={<ArrowRight />} href=" " />
+							</Card>
+							<Card>
+								<Title size={2}>Card header</Title>
+								<Paragraph>Explain something about something with something clever.</Paragraph>
+								<Link icon={<ArrowRight />} href=" " />
 							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">

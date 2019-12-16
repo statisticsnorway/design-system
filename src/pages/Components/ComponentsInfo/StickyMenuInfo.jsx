@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Input, Divider, LeadParagraph, Paragraph, StickyMenu, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Input, Divider, LeadParagraph, Paragraph, StickyMenu, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 import { ChevronDown } from 'react-feather';
 
 const tabItems = [
@@ -26,52 +26,45 @@ const tabCode = [
 const codeReact = `
 <StickyMenu>
     {/* Insert content here, example below */}
-    <div className="container">
-        <div className="row align-items-center">
-            <div className="column col-md-12 col-lg-5">
-                <div className="col-12">
-                    <div className="subtitle">Kommunefakta</div>
-                    <div className="title">Stordal (Møre og Romsdal)</div>
-                </div>
-            </div>
-            <div className="column col-md-6  col-lg-5">
-                <div className="col-flex flex-row align-items-center">
-                    <div className="input-header">Bytt kommune:</div>
-                    <div className="w-100">
-                        <Input ariaLabel="Søk på kommune" searchField placeholder="Søk på kommune" />
-                    </div>
-                </div>
-            </div>
-            <div className="column col-md-6 col-lg-2">
-                <div className="choose-chart">Velg i kart</div>
-                <ChevronDown className="chevron-down-icon" size={18} />
-            </div>
+    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+        <div>
+            <Text small>Kommunefakta</Text>
+            <div style={{ fontSize: '24px', fontWeight: 'bold' }}>Stordal (Møre og Romsdal)</div>
         </div>
-    </div>    
+        <div style={{ alignItems: 'center', display: 'flex' }}>
+            <div style={{ alignItems: 'center', display: 'flex' }}>
+                <label htmlFor="kommune" className="input-header">Bytt kommune:</label>{/* eslint-disable-line */}
+                <Input id="kommune" ariaLabel="Søk på kommune" searchField placeholder="Søk på kommune" />
+            </div>
+            <div style={{ marginLeft: '30px' }} className="choose-chart">Velg i kart</div>
+            <ChevronDown size={18} className="chevron-down-icon" />
+        </div>
+    </div>
 </StickyMenu>
 `;
 
 const codeHtml = `
 <div class="ssb-sticky-menu">
     <div class="menu-content">
-    <!-- Suggested content -->
         <div style="display: flex; justify-content: space-between; width: 100%;">
             <div>
-                <span class="ssb-text-wrapper small-text">Kommunefakta</span>
+            		<span class="ssb-text-wrapper small-text">Kommunefakta</span>
                 <div style="font-size: 24px; font-weight: bold;">Stordal (Møre og Romsdal)</div>
             </div>
             <div style="align-items: center; display: flex;">
                 <div style="align-items: center; display: flex;">
                     <label for="kommune" class="input-header">Bytt kommune:</label>
-                    <div class="ssb-input">
+                    <div class="ssb-input ">
                         <div class="input-wrapper">
-                            <input id="kommune" type="text" placeholder="Søk på kommune" aria-label="Søk på kommune" class=" with-icon" value="" />
-                            <button class="icon-wrapper search-icon"><i>{feather.search 18px}</i></button>
+                            <input id="kommune" type="text" placeholder="Søk på kommune" aria-label="Søk på kommune" class=" with-icon" value="">
+                            <button class="icon-wrapper search-icon">
+                                <i>{feather.search 18px}</i>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="choose-chart" style="margin-left: 30px;">Velg i kart</div>
-                {feather.chevronDown 18px}
+                <i>{feather.chevronDown 18px}</i>
             </div>
         </div>
     </div>
@@ -103,27 +96,20 @@ const StickyMenuInfo = () => {
 						Underneath the menu header is a sub-header which displays which item is currently selected. When clicked an expandable column appears with a list of selectable items.
 						The selected item will be shown with a dark green background while a new item when hovered over becomes light green to indicate click-ability.
 					</Paragraph>
-					<div className="mb-4">
+					<div className="col-lg-12 p-0">
 						<StickyMenu>
-							<div className="container">
-								<div className="row align-items-center">
-									<div className="column col-md-12 col-lg-5">
-										<div className="col-12">
-											<div className="subtitle">Kommunefakta</div>
-											<div className="title">Stordal (Møre og Romsdal)</div>
-										</div>
+							<div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+								<div>
+									<Text small>Kommunefakta</Text>
+									<div style={{ fontSize: '24px', fontWeight: 'bold' }}>Stordal (Møre og Romsdal)</div>
+								</div>
+								<div style={{ alignItems: 'center', display: 'flex' }}>
+									<div style={{ alignItems: 'center', display: 'flex' }}>
+										<label htmlFor="kommune" className="input-header">Bytt kommune:</label>{/* eslint-disable-line */}
+										<Input id="kommune" ariaLabel="Søk på kommune" searchField placeholder="Søk på kommune" />
 									</div>
-									<div className="column col-md-6  col-lg-5">
-										<div className="col-flex flex-row align-items-center">
-											<div className="input-header">Bytt kommune:</div>
-											<div className="w-100">
-												<Input ariaLabel="Søk på kommune" searchField placeholder="Søk på kommune" />
-											</div>
-										</div>
-									</div>
-									<div className="column col-md-6 col-lg-2">
-										<div className="choose-chart">Velg i kart</div><ChevronDown className="chevron-down-icon" size={18} />
-									</div>
+									<div style={{ marginLeft: '30px' }} className="choose-chart">Velg i kart</div>
+									<ChevronDown size={18} className="chevron-down-icon" />
 								</div>
 							</div>
 						</StickyMenu>

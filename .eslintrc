@@ -11,6 +11,7 @@
     "func-names": ["error", "never"],
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0, // because the project uses aliases
+    "import/extensions": 0,
     "indent": ["error", "tab"],
     "linebreak-style": 0,
     "max-len": ["warn", {"code": 200}],

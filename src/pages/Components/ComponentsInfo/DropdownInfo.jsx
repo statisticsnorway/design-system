@@ -9,14 +9,6 @@ valgene på en annen måte, f.eks. avhukingsbokser eller radioknapper. Hvis list
 bør du i stedet bruke søk som sorterer resultat etter brukerens input og som raskt kan gi relevante valg.  
 `;
 
-{/*The dropdown component is a selection element that pushes a large amount of items into one list that the user can view when selected.
-This helps to free up a lot of space for items that are not necessary to be viewed at all times.
-
-The dropdown component is comprised of a label describing the action of the component and a input form element that allow user to click on,
-when clicked a list of items will be displayed for the user to choose from.
-The selected item is highlighted with a dark green color and the hovered item is highlighted with a light green color.
-*/}
-
 const overviewText = `
 Dropdown består av en ledetekst som beskriver hva elementet består av og et input-element som brukeren kan klikke på. 
 Ved klikk åpnes en liste å velge fra. Valgt innhold blir uthevet med en mørk grønn farge, mens innhold man bare peker på blir 

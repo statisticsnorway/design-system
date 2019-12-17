@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeadParagraph, Link, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
+import { LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const TypographyPage = () => (
 	<div className="col-lg-12">

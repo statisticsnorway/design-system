@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Button, Card, Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Button, Card, Divider, ImageLink, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import { ArrowRight } from 'react-feather';
 import exampleImage from '../../../../public/img/card_image.png';
+import imageLinkExample from '../../../../public/img/imageLinkExample.png';
 
 const rationaleText = `
 As can be seen between these different profiled box elements, even though these are labeled underneath the same element, 
@@ -205,6 +206,25 @@ const CardsInfo = () => {
 								<Paragraph>Explain something about something with something clever.</Paragraph>
 								<Link icon={<ArrowRight />} href=" " />
 							</Card>
+						</div>
+						<div className="col-lg-12 mb-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+						</div>
+					</div>
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Faktaside vertical card</Title>
+						<div className="col-lg-6 mb-4">
+							<Paragraph>
+								Kort til faktasider har fullbilde for å kommunisere at sidene er visuelle. Bildet gjør at kortene synes godt og stikker seg ut på siden.
+								Kortene har en tydelig pil for å kommunisere at kortet er klikkbart.
+							</Paragraph>
+						</div>
+						<div className="col-lg-6 mb-4">
+							<ImageLink image={<img src={imageLinkExample} alt="example" />} type="Type" title="Tittel" />
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

@@ -36,7 +36,12 @@ const Welcome = () => (
 						har god brukervennlighet og representerer SSB på en tillitsvekkende måte.
 						Det er derfor viktig å inkludere designer tidlig i prosessen.
 					</Paragraph>
-					<NavLink to="/templates"><Button onClick={() => {}}>Se alle sidemaler</Button></NavLink>
+					<div className="grid-column grid-2">
+						<NavLink to="/templates"><Button onClick={() => {}}>Se alle sidemaler</Button></NavLink>
+						<a href="https://github.com/statisticsnorway/ssb-component-library/blob/master/lib/bundle.css" download="bundle.css">
+							<Button onClick={() => {}}>Last ned CSS</Button>
+						</a>
+					</div>
 				</div>
 			</div>
 

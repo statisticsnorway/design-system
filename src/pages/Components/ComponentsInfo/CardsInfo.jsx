@@ -3,7 +3,8 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Button, Card, Divider, ImageLink, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import { ArrowRight } from 'react-feather';
 import exampleImage from '../../../../public/img/card_image.png';
-import imageLinkExample from '../../../../public/img/imageLinkExample.png';
+import imageLinkVertical from '../../../../public/img/imageLinkVertical.png';
+import imageLinkHorizontal from '../../../../public/img/imageLinkHorizontal.png';
 
 const rationaleText = `
 As can be seen between these different profiled box elements, even though these are labeled underneath the same element, 
@@ -54,6 +55,43 @@ const codeHtml = `
     <span>Last ned</span>
   </a>
 </div>
+`;
+
+const imageLinkCode = `
+<ImageLink
+	image={<img src={} alt="image" />}
+	onClick={function}
+	type="Type"
+	title="Tittel"
+/>
+`;
+
+const imageLinkCodeHtml = `
+<a class="ssb-image-link" href=" ">
+	<div class="image-background"><img src="" alt="" /></div>
+	<span class="il-type">Type</span>
+	<span class="il-title">Title</span>
+	{feather.arrowRightCircle 32px}
+</a>
+`;
+
+const imageLinkHorizontalCode = `
+<ImageLink
+	horizontal
+	image={<img src={} alt="image" />}
+	onClick={function}
+	type="Type"
+	title="Tittel"
+/>
+`;
+
+const imageLinkHorizontalCodeHtml = `
+<a class="ssb-image-link horizontal" href=" ">
+	<div class="image-background"><img src="" alt="" /></div>
+	<span class="il-type">Type</span>
+	<span class="il-title">Title</span>
+	{feather.arrowRightCircle 32px}
+</a>
 `;
 
 const CardsInfo = () => {
@@ -224,13 +262,31 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 mb-4">
-							<ImageLink image={<img src={imageLinkExample} alt="example" />} type="Type" title="Tittel" />
+							<ImageLink image={<img src={imageLinkVertical} alt="example" />} type="Type" title="Tittel" />
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={imageLinkCode} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={imageLinkCodeHtml} language="html" />}
+						</div>
+					</div>
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Faktaside horizontal card</Title>
+						<div className="col-lg-12 mb-4">
+							<Paragraph>
+								Følger samme stil som vertikalt kort.
+							</Paragraph>
+						</div>
+						<div className="col-lg-12 mb-4">
+							<ImageLink orientation="horizontal" image={<img src={imageLinkHorizontal} alt="example" />} type="Type" title="Tittel" />
+						</div>
+						<div className="col-lg-12 mb-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={imageLinkHorizontalCode} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={imageLinkHorizontalCodeHtml} language="html" />}
 						</div>
 					</div>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import logoSymbol from '@public/ssb-logo-symbol.svg';
-import { Dropdown, Link, Title } from '@statisticsnorway/ssb-component-library';
+import { Dropdown, Link, Text, Title } from '@statisticsnorway/ssb-component-library';
 import { GitHub, Menu } from 'react-feather';
 import componentsList from '../../pages/Components/componentsList';
 import coopIllustration from '../../../public/customIcons/illustrasjon-samarbeid.svg';
@@ -18,6 +18,7 @@ const listItems = componentsList.filter(c => !c.comingSoon);
 const Header = () => {
 	const history = useHistory();
 	const [menuIsOpen, toggleMenu] = useState(false);
+
 	return (
 		<div className={`header-component-wrapper${history.location.pathname === '/get-started' || history.location.pathname === '/' ? ' front-page' : ''}`}>
 			<div className="content-holder d-flex justify-content-between flex-wrap">
@@ -29,6 +30,9 @@ const Header = () => {
 						</div>
 						<div className="diagonal-divider" />
 						<div className="site-title">Designsystem</div>
+						&nbsp;
+						<Text>v1.1.41</Text>
+						{/*<a href="https://badge.fury.io/js/%40statisticsnorway%2Fssb-component-library"><img src="https://badge.fury.io/js/%40statisticsnorway%2Fssb-component-library.svg" alt="npm version" height="18" /></a>*/}
 					</div>
 				</div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
+import { LeadParagraph, Link, Paragraph, Title } from '@statisticsnorway/ssb-component-library';
 
 const TypographyPage = () => (
 	<div className="col-lg-12">
@@ -18,6 +18,8 @@ const TypographyPage = () => (
 
 		<Title size={2}>Vanlig tekst</Title>
 		<Paragraph>Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.</Paragraph>
+
+		<Paragraph>Se forøvrig detaljerte beskrivelser og tilgjengelige komponenter under <Link href="/#/components/text-elements">Text elements</Link>.</Paragraph>
 	</div>
 );
 

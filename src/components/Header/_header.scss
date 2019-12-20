@@ -51,6 +51,11 @@
         width: 260px;
       }
 
+      .desktop-version-number {
+        align-items: center;
+        display: flex;
+      }
+
 
       @media #{$mobile} {
         .home-nav {

@@ -17,6 +17,7 @@ import dropdownIcon from '../../../public/customIcons/dropdown.svg';
 import FactBoxInfo from './ComponentsInfo/FactBoxInfo';
 import factboxIcon from '../../../public/customIcons/factbox.svg';
 import footerIcon from '../../../public/customIcons/footer.svg';
+import FooterInfo from './ComponentsInfo/FooterInfo';
 import FormErrorInfo from './ComponentsInfo/FormErrorInfo';
 import GlossaryInfo from './ComponentsInfo/GlossaryInfo';
 import wordExplanationIcon from '../../../public/customIcons/wordexplanation.svg';
@@ -62,7 +63,7 @@ const componentsList = [
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
-	{ component: '', label: 'Footer', path: '/footer', icon: footerIcon, comingSoon: true },
+	{ component: FooterInfo, label: 'Footer', path: '/footer', icon: footerIcon, new: true },
 	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
 	{ component: GlossaryInfo, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },
 	{ component: '', label: 'Graphs', path: '/graphs', icon: graphsIcon, comingSoon: true },

@@ -35,6 +35,11 @@ const codeLargeReact = `
 	size="large" 
 	icon= { Insert icon }
 	glossary="Dette er en forklaring av Antall husholdninger" 
+	changes={{
+		changeDirection: 'up',
+		changeText: 'Opp 30 999 kroner',
+		changePeriod: 'fra året før',
+	}}
 />
 `;
 
@@ -55,6 +60,11 @@ const codeLargeHtml = `
         <div class="number-section">
             <div class="ssb-number large">789 398</div>
             <span class="kf-title subtitle">husholdninger</span>
+        </div>
+        <div class="kf-changes">
+             <i class="changes-icon">{feather.[ chevronDown | chevronUp | Minus] 20px}</i>
+            <span class="changes-text">Opp 30 999 kroner</span>&nbsp;
+            <span class="changes-periode">fra året før</span>
         </div>
     </div>
 </div>
@@ -148,6 +158,11 @@ const KeyFiguresInfo = () => {
 								size="large"
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 								glossary="Dette er en forklaring av Antall husholdninger"
+								changes={{
+									changeDirection: 'up',
+									changeText: 'Opp 30 999 kroner',
+									changePeriod: 'fra året før',
+								}}
 							/>
 						</div>
 						<div className="col-lg-12">
@@ -280,6 +295,11 @@ const KeyFiguresInfo = () => {
 							</tr>
 						</thead>
 						<tbody>
+							<tr>
+								<td><code>changes</code></td>
+								<td>object</td>
+								<td>Object with <code>changeDirection(up, down or same), changeText, changePeriod</code></td>
+							</tr>
 							<tr>
 								<td><code>icon</code></td>
 								<td>node</td>

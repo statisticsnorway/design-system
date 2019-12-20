@@ -324,6 +324,11 @@ const CardsInfo = () => {
 								<td>Required. Fills box with content</td>
 							</tr>
 							<tr>
+								<td><code>downloadText </code></td>
+								<td>string </td>
+								<td>Text download link, default: Last ned</td>
+							</tr>
+							<tr>
 								<td><code>fileLocation</code></td>
 								<td>string</td>
 								<td>Path to downloadable file. Ads the download field</td>

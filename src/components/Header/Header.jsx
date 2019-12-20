@@ -31,7 +31,7 @@ const Header = () => {
 						<div className="diagonal-divider" />
 						<div className="site-title">Designsystem</div>
 						&nbsp;
-						<Text>v1.1.42</Text>
+						<div className="desktop-version-number"><Text>v1.1.42</Text></div>
 						{/*<a href="https://badge.fury.io/js/%40statisticsnorway%2Fssb-component-library"><img src="https://badge.fury.io/js/%40statisticsnorway%2Fssb-component-library.svg" alt="npm version" height="18" /></a>*/}
 					</div>
 				</div>
@@ -111,6 +111,7 @@ const Header = () => {
 							><GitHub size="18" />&nbsp;Github
 							</a>
 						</div>
+						<div className="version-number"><Text>v1.1.42</Text></div>
 					</div>
 				)}
 			</div>

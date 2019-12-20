@@ -19,6 +19,11 @@
       top: 0;
       width: 100%;
       z-index: 999;
+
+      .version-number {
+        padding: 20px;
+        text-align: right;
+      }
     }
   }
 
@@ -88,6 +93,10 @@
     @media #{$mobile} {
       .logo-and-title {
         align-items: center;
+      }
+
+      .desktop-version-number {
+        display: none;
       }
     }
   }

@@ -57,7 +57,7 @@ const GlossaryInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Ordforklaring</Title>
+			<Title size={1}>Glossary / Ordforklaring</Title>
 			<LeadParagraph>
 				Ordforklaring brukes når det ord eller begreper som er vanskelige å forstå, eller ord som kan trenge en ytterligere beskrivelse for å bli forstått i sammenhengen.
 			</LeadParagraph>
@@ -78,7 +78,7 @@ const GlossaryInfo = () => {
 						</Paragraph>
 					</div>
 					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
-						<div className="component-wrapper">
+						<div className="">
 							Explain this <Glossary explanation={placeHolder}>word</Glossary>.
 						</div>
 					</div>

@@ -316,6 +316,11 @@ const KeyFiguresInfo = () => {
 								<td>Subtitle</td>
 							</tr>
 							<tr>
+								<td><code>noNumberText</code></td>
+								<td>string</td>
+								<td>Text if number not set, default: Tall ikke tilgjengelig</td>
+							</tr>
+							<tr>
 								<td><code>size</code></td>
 								<td>small, medium or large</td>
 								<td>Change size of number and icon</td>

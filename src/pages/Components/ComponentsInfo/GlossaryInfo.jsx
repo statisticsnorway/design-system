@@ -121,6 +121,11 @@ const GlossaryInfo = () => {
 								<td>Something to wrap the click event around</td>
 							</tr>
 							<tr>
+								<td><code>closeText</code></td>
+								<td>string</td>
+								<td>Close button text, default: Lukk</td>
+							</tr>
+							<tr>
 								<td><code>explanation</code></td>
 								<td>required string</td>
 								<td>Text to be inside popup</td>

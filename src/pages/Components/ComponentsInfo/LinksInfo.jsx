@@ -47,14 +47,18 @@ const iconLinks = `
 `;
 
 const iconLinksHtml = `
-<a class="ssb-link" href=" " target="" rel="">
-  {insert icon here}
-  <span class="link-text">This is a link with an icon</span>
+<a class="ssb-link with-icon" href=" " target="" rel="">
+    <div class="icon-wrapper">
+        {insert icon here}
+    </div>
+    <span class="link-text">This is a link with an icon</span>
 </a>
 
-<a class="ssb-link negative" href=" " target="" rel="">
-  {insert icon here}
-  <span class="link-text">This is a link with an icon</span>
+<a class="ssb-link negative with-icon" href=" " target="" rel="">
+    <div class="icon-wrapper">
+        {insert icon here}
+    </div>
+    <span class="link-text">This is a link with an icon</span>
 </a>
 `;
 
@@ -79,14 +83,18 @@ const profiledLinksIcon = `
 `;
 
 const profiledLinksIconHtml = `
-<a class="ssb-link" href=" " target="" rel="">
-  {insert icon here}
-  <span class="link-text">This is a profiled link with icon</span>
+<a class="ssb-link profiled with-icon" href=" " target="" rel="">
+    <div class="icon-wrapper">
+        {insert icon here}
+    </div>
+    <span class="link-text">This is a profiled link with icon</span>
 </a>
 
-<a class="ssb-link negative" href=" " target="" rel="">
-  {insert icon here}
-  <span class="link-text">This is a profiled link with icon</span>
+<a class="ssb-link negative profiled with-icon" href=" " target="" rel="">
+    <div class="icon-wrapper">
+        {insert icon here}
+    </div>
+    <span class="link-text">This is a profiled link with icon</span>
 </a>
 `;
 

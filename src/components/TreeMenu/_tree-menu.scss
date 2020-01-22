@@ -51,10 +51,9 @@
     }
 
     &.clickable {
-
       &:hover {
         background: $ssb-dark-5;
-        color: white;
+        color: $ssb-white;
         cursor: pointer;
 
         .arrow-icon {

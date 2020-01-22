@@ -27,7 +27,9 @@ $max-content-size: 1200px;
 }
 
 @keyframes bump {
-  0% { margin-right: 0; }
+  0% { margin-right: 0;}
+
   50% { margin-right: -10px; }
+
   100% { margin-right: 0; }
 }

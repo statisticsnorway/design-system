@@ -144,7 +144,7 @@ pre[class*="language-"] {
 }
 
 pre > code.highlight {
-  outline: 0.4em solid #c94922;
+  outline: .4em solid #c94922;
   outline-offset: .4em;
 }
 
@@ -163,7 +163,7 @@ pre > code.highlight {
  * http://prismjs.com/plugins/line-highlight/
  */
 .line-highlight {
-  background: rgba(107, 115, 148, 0.2);
-  background: -webkit-linear-gradient(left, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
-  background: linear-gradient(to right, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
+  background: rgba(107, 115, 148, .2);
+  background: -webkit-linear-gradient(left, rgba(107, 115, 148, .2) 70%, rgba(107, 115, 148, 0));
+  background: linear-gradient(to right, rgba(107, 115, 148, .2) 70%, rgba(107, 115, 148, 0));
 }

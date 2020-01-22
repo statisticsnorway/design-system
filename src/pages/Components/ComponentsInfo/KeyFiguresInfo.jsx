@@ -123,6 +123,32 @@ const codeSmallHtml = `
 </div>
 `;
 
+
+const codeMediumGreenbox = `
+<KeyFigures
+    title="Valgdeltagelse ved stortingsvalg"
+    numberDescription="prosent"
+    number="78,2"
+    time="2018"
+    size="medium"
+    greenBox
+/>
+`;
+
+
+const codeMediumGreenboxHtml = `
+<div class="ssb-key-figures medium green-box">
+    <div>
+        <span class="kf-title">Valgdeltagelse ved stortingsvalg</span>
+        <div class="kf-time">2018</div>
+        <div class="number-section">
+            <div class="ssb-number medium">78,2</div><span class="kf-title subtitle">prosent</span>
+        </div>
+    </div>
+</div>
+`;
+
+
 const KeyFiguresInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
@@ -268,6 +294,37 @@ const KeyFiguresInfo = () => {
 						</div>
 					</div>
 
+					<Divider className="mb-4" />
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Medium, tables and graphs</Title>
+						<div className="col-lg-6 mb-4">
+							<Paragraph>
+								Når nøkkeltall settes til tabell eller figur (graf) skal det ha farget bakgrunn i SSB Green 1.
+								Figurens tittel flyttes opp og blir nøkkeltallstittel. Tallet skal være en total av verdiene i
+								figuren. En tabell beholder tittelen, mens nøkkeltallstittelen og -tallet hentes fra
+								ønsket sted i tabellen.
+							</Paragraph>
+						</div>
+						<div className="component-example divider-left col-lg-6 mb-4">
+							<KeyFigures
+								title="Valgdeltagelse ved stortingsvalg"
+								numberDescription="prosent"
+								number="78,2"
+								time="2018"
+								size="medium"
+								greenBox
+							/>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeMediumGreenbox} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeMediumGreenboxHtml} language="html" />}
+						</div>
+					</div>
+
+
 				</div>
 			)}
 
@@ -339,6 +396,11 @@ const KeyFiguresInfo = () => {
 								<td><code>glossary</code></td>
 								<td>string</td>
 								<td>Explanation for the title</td>
+							</tr>
+							<tr>
+								<td><code>greenbox</code></td>
+								<td>bool</td>
+								<td>Display green box with arrow</td>
 							</tr>
 						</tbody>
 					</table>

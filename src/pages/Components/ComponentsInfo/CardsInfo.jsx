@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Button, Card, Divider, ImageLink, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-import { ArrowRight } from 'react-feather';
+import { Card, Divider, ImageLink, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
+import { Globe } from 'react-feather';
 import exampleImage from '../../../../public/img/card_image.png';
 import imageLinkVertical from '../../../../public/img/imageLinkVertical.png';
 import imageLinkHorizontal from '../../../../public/img/imageLinkHorizontal.png';
@@ -36,24 +36,184 @@ const tabCode = [
 	},
 ];
 
-const codeReact = `
-<Card>
-	<Title size={2}>Profiled box header</Title>
-	<Paragraph>Explain something about something with something clever.</Paragraph>
-	<Button primary>Handling</Button>
+const codeImageTop = `
+<Card
+    imagePlacement="top"
+    image={<img src=" " alt=" " />}
+    href=" "
+    subTitle="Type  /  DD. Måned ÅÅÅÅ"
+    title="Tittel"
+>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
 `;
 
-const codeHtml = `
+const codeImageTopHtml = `
 <div class="ssb-card">
-  <a class="card-content">
-    {fill with content}
-  </a>
-  /* Optional download field */
-  <a download href=" " class="download-section">
-    <i class="download-icon" size="20" />
-    <span>Last ned</span>
-  </a>
+    <a href=" " class="clickable top-orientation">
+        <div class="card-image">
+            <img src="" alt="" />
+        </div>
+        <div class="card-content with-image">
+            <div class="card-subtitle">Type  /  DD. Måned ÅÅÅÅ</div>
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+        </div>
+    </a>
+</div>
+`;
+
+const codeImageLeft = `
+<Card
+    imagePlacement="left"
+    image={<img src=" " alt=" " />}
+    href=" "
+    subTitle="Type  /  DD. Måned ÅÅÅÅ"
+    title="Tittel"
+>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+`;
+
+const codeImageLeftHtml = `
+<div class="ssb-card">
+    <a href=" " class="clickable left-orientation">
+        <div class="card-image">
+            <img src="" alt="" />
+        </div>
+        <div class="card-content with-image">
+            <div class="card-subtitle">Type  /  DD. Måned ÅÅÅÅ</div>
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+        </div>
+    </a>
+</div>
+`;
+
+const codeSimple = `
+<Card title="Tittel" href=" " hrefText="Handling" icon={<Globe size={32} />}>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+
+<Card title="Tittel" href=" " icon={<Globe size={32} />}>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+`;
+
+const codeSimpleHtml = `
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <div class="card-action">
+                <i class="arrow-icon">{feather.arrowRight 22px}</i>
+                <div class="href-text">Handling</div>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+        </div>
+    </a>
+</div>
+`;
+
+const codeProfile = `
+<Card title="Tittel" href=" " icon={<Globe size={120} />} profiled>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+
+<Card title="Tittel" fileLocation=" "  downloadText="Last ned" href=" " hrefText="Handling" icon={<Globe size={120} />} profiled>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+`;
+
+const codeProfileHtml = `
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content profiled">
+            <div class="card-icon">
+                <!-- Insert icon -->
+            </div>
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+        </div>
+    </a>
+</div>
+
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content profiled">
+            <div class="card-icon">
+                <!-- Insert icon -->
+            </div>
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <div class="card-action">
+                <i class="arrow-icon">{feather.arrowRight 22px}</i>
+                <div class="href-text">Handling</div>
+            </div>
+        </div>
+    </a>
+    <a download="" href=" " class="download-section">
+        <i class="download-icon">{feather.downLoad 22px}</i>
+        <span>Last ned</span>
+    </a>
+</div>
+`;
+
+const codeCardList = `
+<Card href=" " hrefText="Handling" title="Tittel">
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+<Card href=" " title="Tittel">
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+<Card href=" " title="Tittel">
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+`;
+
+const codeCardListHtml = `
+<div class="col-lg-12 mb-4 grid-column grid-3">
+    <div class="ssb-card">
+        <a href=" " class="clickable top-orientation">
+            <div class="card-content">
+                <div class="card-title">Tittel</div>
+                <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+                <div class="card-action">
+                    <i class="arrow-icon">{feather.arrowRight 22px}</i>
+                    <div class="href-text">Handling</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="ssb-card">
+        <a href=" " class="clickable top-orientation">
+            <div class="card-content">
+                <div class="card-title">Tittel</div>
+                <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+                <i class="arrow-icon">{feather.arrowRight 22px}</i>
+            </div>
+        </a>
+    </div>
+    <div class="ssb-card">
+        <a href=" " class="clickable top-orientation">
+            <div class="card-content">
+                <div class="card-title">Tittel</div>
+                <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+                <i class="arrow-icon">{feather.arrowRight 22px}</i>
+            </div>
+        </a>
+    </div>
 </div>
 `;
 
@@ -123,18 +283,16 @@ const CardsInfo = () => {
 								Brukes som inngang til artikler eller annet innhold hvor det er viktig at brukeren får et kort sammendrag av innholdet.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6">
-							<Card image={<img src={exampleImage} alt="example" />} imagePlacement="top">
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Button primary>Handling</Button>
+						<div className="component-example divider-left col-lg-6 mb-4">
+							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="top" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeImageTop} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeImageTopHtml} language="html" />}
 						</div>
 					</div>
 
@@ -148,17 +306,15 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-12 mb-4">
-							<Card image={<img src={exampleImage} alt="example" />} imagePlacement="left">
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Button primary>Handling</Button>
+							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="left" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeImageLeft} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeImageLeftHtml} language="html" />}
 						</div>
 					</div>
 
@@ -174,30 +330,26 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 mb-4">
-							<Card>
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Button primary>Handling</Button>
+							<Card href=" " hrefText="Handling" title="Tittel" icon={<Globe size={32} />}>
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
 						<div className="col-lg-6 mb-4">
-							<Card fileLocation="./not_a_file">
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Button primary>Handling</Button>
+							<Card href=" " title="Tittel" icon={<Globe size={32} />}>
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeSimple} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeSimpleHtml} language="html" />}
 						</div>
 					</div>
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Profiled cards</Title>
-						<div className="col-lg-6">
+						<div className="col-lg-12">
 							<Paragraph>
 								Kortene passer godt i mindre grupper, som visuelle innganger til sider med ulik innholdstype.
 								Bør aldri inneholde mer enn et par linjer forklarende tekst i tillegg til en kort tittel.
@@ -207,17 +359,20 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6">
-							<Card fileLocation="./not_a_file">
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Button primary>Handling</Button>
+							<Card href=" " title="Tittel" icon={<Globe size={120} />} profiled>
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+							</Card>
+						</div>
+						<div className="col-lg-6">
+							<Card href=" " hrefText="Handling" title="Tittel" fileLocation="./not_a_file" icon={<Globe size={120} />} profiled>
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeProfile} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeProfileHtml} language="html" />}
 						</div>
 					</div>
 
@@ -229,27 +384,21 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-12 mb-4 grid-column grid-3">
-							<Card>
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Link icon={<ArrowRight />} href=" " />
+							<Card href=" " hrefText="Handling" title="Tittel">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
-							<Card>
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Link icon={<ArrowRight />} href=" " />
+							<Card href=" " title="Tittel">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
-							<Card>
-								<Title size={2}>Card header</Title>
-								<Paragraph>Explain something about something with something clever.</Paragraph>
-								<Link icon={<ArrowRight />} href=" " />
+							<Card href=" " title="Tittel">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeCardList} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeCardListHtml} language="html" />}
 						</div>
 					</div>
 
@@ -303,43 +452,115 @@ const CardsInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2}>Props</Title>
-					<table className="col-lg-12 mb-4">
-						<thead style={{ textAlign: 'left' }}>
-							<tr>
-								<th><Title size={3}>Prop name</Title></th>
-								<th><Title size={3}>Type</Title></th>
-								<th><Title size={3}>Description</Title></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><code>centered</code></td>
-								<td>bool</td>
-								<td>Centers text</td>
-							</tr>
-							<tr>
-								<td><code>children</code></td>
-								<td>node</td>
-								<td>Required. Fills box with content</td>
-							</tr>
-							<tr>
-								<td><code>downloadText </code></td>
-								<td>string </td>
-								<td>Text download link, default: Last ned</td>
-							</tr>
-							<tr>
-								<td><code>fileLocation</code></td>
-								<td>string</td>
-								<td>Path to downloadable file. Ads the download field</td>
-							</tr>
-							<tr>
-								<td><code>onClick</code></td>
-								<td>func</td>
-								<td>Callback function</td>
-							</tr>
-						</tbody>
-					</table>
+					<div>
+						<Title size={2}>Props Card</Title>
+						<table className="col-lg-12 mb-4">
+							<thead style={{ textAlign: 'left' }}>
+								<tr>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>children</code></td>
+									<td>node</td>
+									<td>Required. Fills box with content</td>
+								</tr>
+								<tr>
+									<td><code>downloadText </code></td>
+									<td>string </td>
+									<td>Text download link, default: Last ned</td>
+								</tr>
+								<tr>
+									<td><code>fileLocation</code></td>
+									<td>string</td>
+									<td>Path to downloadable file. Ads the download field</td>
+								</tr>
+								<tr>
+									<td><code>href</code></td>
+									<td>string</td>
+									<td>Destination for navigation</td>
+								</tr>
+								<tr>
+									<td><code>hrefText</code></td>
+									<td>string</td>
+									<td>Text after arrow</td>
+								</tr>
+								<tr>
+									<td><code>icon</code></td>
+									<td>element</td>
+									<td>Icon element</td>
+								</tr>
+								<tr>
+									<td><code>image</code></td>
+									<td>element</td>
+									<td>Image element</td>
+								</tr>
+								<tr>
+									<td><code>imagePlacement</code></td>
+									<td>left or top</td>
+									<td>Position of the image, default: top</td>
+								</tr>
+								<tr>
+									<td><code>profiled</code></td>
+									<td>bool</td>
+									<td>Profiled layout</td>
+								</tr>
+								<tr>
+									<td><code>subTitle</code></td>
+									<td>string</td>
+									<td>Smaller text above title</td>
+								</tr>
+								<tr>
+									<td><code>Title</code></td>
+									<td>string</td>
+									<td>Card title</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<Divider className="mb-4" light />
+					<div>
+						<Title size={2}>Props ImageLink</Title>
+						<table className="col-lg-12 mb-4">
+							<thead style={{ textAlign: 'left' }}>
+								<tr>
+									<th><Title size={3}>Prop name</Title></th>
+									<th><Title size={3}>Type</Title></th>
+									<th><Title size={3}>Description</Title></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>image</code></td>
+									<td>node</td>
+									<td>An image to be put as background</td>
+								</tr>
+								<tr>
+									<td><code>link </code></td>
+									<td>string </td>
+									<td>Link to be navigated to</td>
+								</tr>
+								<tr>
+									<td><code>onClick</code></td>
+									<td>func</td>
+									<td>Function callback to be used instead of link</td>
+								</tr>
+								<tr>
+									<td><code>title</code></td>
+									<td>string</td>
+									<td>Title text</td>
+								</tr>
+								<tr>
+									<td><code>type</code></td>
+									<td>string</td>
+									<td>Type text</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			)}
 		</div>

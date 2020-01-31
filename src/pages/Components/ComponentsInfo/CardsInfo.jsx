@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Card, Divider, ImageLink, LeadParagraph, Link, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
+import { Card, Divider, ImageLink, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
 import { Globe } from 'react-feather';
 import exampleImage from '../../../../public/img/card_image.png';
 import imageLinkVertical from '../../../../public/img/imageLinkVertical.png';

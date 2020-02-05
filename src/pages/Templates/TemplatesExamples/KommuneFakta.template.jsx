@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Divider, LeadParagraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 import kommunefaktaDesktop from '../../../../public/templates/kommunefakta-desktop.png';
-import kommunefaktaMobile from '../../../../public/templates/kommunefakta-mobil.png';
-import kommunefaktaMobilNorge from '../../../../public/templates/kommunefakta-mobile-inngang-norge.png';
+import kommunefaktaMobile from '../../../../public/templates/Kommunefakta-mobil.png';
+import kommunefaktaMobilNorge from '../../../../public/templates/Kommunefakta-mobile-inngang-norge.png';
 import kommunefaktaMobilKommune from '../../../../public/templates/Kommunefakta-mobil-inngang-kommune.png';
 import kommunefaktaMobilSticky from '../../../../public/templates/kommunefakta-mobile-sticky.png';
 import kommunefaktaMobilStickySearch from '../../../../public/templates/kommunefakta-mobile-sticky-search.png';

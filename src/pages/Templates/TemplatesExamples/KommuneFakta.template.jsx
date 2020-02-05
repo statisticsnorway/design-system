@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Divider, LeadParagraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 import kommunefaktaDesktop from '../../../../public/templates/kommunefakta-desktop.png';
+import kommunefaktaMobile from '../../../../public/templates/kommunefakta-mobil.png';
+import kommunefaktaMobilNorge from '../../../../public/templates/kommunefakta-mobile-inngang-norge.png';
+import kommunefaktaMobilKommune from '../../../../public/templates/Kommunefakta-mobil-inngang-kommune.png';
+import kommunefaktaMobilSticky from '../../../../public/templates/kommunefakta-mobile-sticky.png';
+import kommunefaktaMobilStickySearch from '../../../../public/templates/kommunefakta-mobile-sticky-search.png';
 
 const tabItems = [
 	{
@@ -32,12 +37,37 @@ const KommuneFakta = () => {
 			{activeTab === '/desktop' && (
 				<div>
 					<Text small>v1.0.0</Text>
-					<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaDesktop} alt="kommunefakta template" />
+					<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaDesktop} alt="Template kommunefakta desktop" />
 				</div>
 			)}
 
 			{activeTab === '/mobile' && (
-				<div>Mobil</div>
+				<div>
+					<div className="col-lg-6">
+						<Title size={3}>Inngang norgeskart</Title>
+						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilNorge} alt="Template Kommunefakta mobil, inngang norgeskart" />
+					</div>
+					<Divider className="mt-4 mb-3" light />
+					<div className="col-lg-6">
+						<Title size={3}>Inngang kommunekart</Title>
+						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilKommune} alt="Template Kommunefakta mobil, inngang kommunekart" />
+					</div>
+					<Divider className="mt-4 mb-3" light />
+					<div className="col-lg-6">
+						<Title size={3}>Sticky Meny</Title>
+						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilSticky} alt="Template Kommunefakta mobil, stickymenu" />
+					</div>
+					<Divider className="mt-4 mb-3" light />
+					<div className="col-lg-6">
+						<Title size={3}>Sticky søk</Title>
+						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilStickySearch} alt="Template Kommunefakta mobil, stickymenu search" />
+					</div>
+					<Divider className="mt-4 mb-3" light />
+					<div className="col-lg-6">
+						<Title size={3}>Visning kommune</Title>
+						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobile} alt="Template Kommunefakta mobilvisning" />
+					</div>
+				</div>
 			)}
 
 			{activeTab === '/download' && (

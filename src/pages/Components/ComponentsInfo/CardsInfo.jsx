@@ -3,8 +3,8 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Card, Divider, ImageLink, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
 import { Globe } from 'react-feather';
 import exampleImage from '../../../../public/img/card_image.png';
-import imageLinkVertical from '../../../../public/img/imageLinkVertical.png';
-import imageLinkHorizontal from '../../../../public/img/imageLinkHorizontal.png';
+import imageLinkVertical from '../../../../public/img/imageLinkVertical.jpg';
+import imageLinkHorizontal from '../../../../public/img/imageLinkHorizontal.jpg';
 
 const rationaleText = `
 As can be seen between these different profiled box elements, even though these are labeled underneath the same element, 

@@ -53,7 +53,9 @@ const Welcome = () => (
 						Kontakt alltid ansvarlig designer for designsystemet dersom du ser behov som ikke er dekket, eller en komponent som må tilpasses ditt prosjekt.
 						Nye komponenter og maler skal ikke lanseres uten at de er klarert av designansvarlig for designsystemet.
 					</Paragraph>
-					<Button onClick={() => {}} icon={<Mail size={16} />}>Kontakt designansvarlig</Button>
+					<a href="mailto: designsystem@ssb.no">
+						<Button onClick={() => {}} icon={<Mail size={16} />}>Kontakt designansvarlig</Button>
+					</a>
 				</div>
 				<div className="col-lg-6 d-flex flex-column justify-content-end align-items-start">
 					<img className="paragraph-illustration" src={contactIllustration} alt="Contact" />

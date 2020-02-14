@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Divider, LeadParagraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import kommunefaktaDesktop from '../../../../public/templates/kommunefakta-desktop.png';
 import kommunefaktaMobile from '../../../../public/templates/Kommunefakta-mobil.png';
 import kommunefaktaMobilNorge from '../../../../public/templates/Kommunefakta-mobile-inngang-norge.png';
@@ -36,7 +36,6 @@ const KommuneFakta = () => {
 
 			{activeTab === '/desktop' && (
 				<div>
-					<Text small>v1.0.0</Text>
 					<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaDesktop} alt="Template kommunefakta desktop" />
 				</div>
 			)}

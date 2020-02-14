@@ -3,11 +3,16 @@ import { LeadParagraph, Title } from '@statisticsnorway/ssb-component-library';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import TreeMenu from '../../components/TreeMenu/TreeMenu';
 import KommuneFakta from './TemplatesExamples/KommuneFakta.template';
+import Faktaside from './TemplatesExamples/Faktaside.template';
+import Footer from './TemplatesExamples/Footer.template';
+import Header from './TemplatesExamples/Header.template';
 
 const sidebarMainItems = [
 	{ component: '', label: 'Artikkel', path: '/article', icon: '', comingSoon: true },
-	{ component: '', label: 'Faktaside', path: '/fact-page', icon: '', comingSoon: true },
+	{ component: Faktaside, label: 'Faktaside', path: '/faktaside', icon: '' },
 	{ component: KommuneFakta, label: 'Kommunefakta', path: '/kommunefakta', icon: '' },
+	{ component: Header, label: 'Header', path: '/header', icon: '' },
+	{ component: Footer, label: 'Footer', path: '/footer', icon: '' },
 ];
 
 const sidebarItems = [

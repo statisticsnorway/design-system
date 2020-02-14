@@ -105,9 +105,9 @@ const HeaderInfo = () => {
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Header</Title>
-			<LeadParagraph>
-				Tekst kommer
-			</LeadParagraph>
+			<Paragraph>
+        Wrapper for header
+			</Paragraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
 
@@ -115,11 +115,6 @@ const HeaderInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Header</Title>
-						<div className="col-lg-6">
-							<Paragraph>
-								Tekst kommer
-							</Paragraph>
-						</div>
 						<div className="component-example col-lg-12">
 							<Header>
 								<div className="global-links" style={{ float: 'right', marginBottom: '12px', marginTop: '10px' }}>

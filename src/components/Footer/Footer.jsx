@@ -7,7 +7,7 @@ const Footer = () => (
 		<div className="footer-content">
 			<Text small negative className="copyright-mark">© Statistisk sentralbyrå, 2020</Text>
 			<div className="interactive-elements">
-				<Link href=" " icon={<Mail />} negative>Kontakt designansvarlig</Link>
+				<Link href="mailto: designsystem@ssb.no" icon={<Mail />} negative>Kontakt designansvarlig</Link>
 				<Link href=" " icon={<GitHub />} negative>Github</Link>
 				<Button negative onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}>
 					<ArrowUp size={18} />&nbsp;Til toppen

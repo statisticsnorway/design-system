@@ -9,6 +9,9 @@ const tabItems = [
 		title: 'Oversikt',
 		path: '/oversikt',
 	}, {
+		title: 'Begrunnelse',
+		path: '/rationale',
+	}, {
 		title: 'Props',
 		path: '/props',
 	},
@@ -109,7 +112,13 @@ const FooterInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Footer</Title>
 			<LeadParagraph>
-        Wrapper for footer
+				Footer er et navigasjonselement på slutten av siden som hjelper brukeren å finne snarveier i form av linker til andre sider på nettstedet.
+				Den inneholder også nyttig informasjon av typen copyright, lenker til sosiale medier etc.
+				Footeren har også en “til toppen”-knapp som hjelper brukeren til å raskt kunne navigere seg tilbake til toppen av siden.
+				<br />
+				<br />
+				Innenfor footeren er lenkene til andre sider gruppert innenfor ulike kategorier, og de presenteres med innhold “Link with icon”.
+				Nede til venstre er copyright vist tydelig med en klikkbar lenke. Lenkene til sosiale medier presenteres med sine respektive ikoner ned til høyre i footeren.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
@@ -156,6 +165,29 @@ const FooterInfo = () => {
 
 				</div>
 			)}
+
+			{activeTab === '/rationale' && (
+				<div>
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Til toppen-knapp</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Grunnen til å ha en til toppen-knapp er å gi brukeren en rask måte å navigere seg tilbake ved behov.
+								Dette kan være spesielt nyttig på våre nettsider da mye av vårt innhold er lange artikler.
+							</Paragraph>
+						</div>
+
+						<Title size={2} className="col-lg-12">Mørk bakgrunn</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								I motsetning til resten av siten som i hovedsak vises med hvit bakgrunn, er footeren plassert på en mørk bakgrunn.
+								Dette er for å gjøre forskjellen tydelig mellom innholdet og informere brukeren om at han har nådd slutten av siden.
+							</Paragraph>
+						</div>
+					</div>
+				</div>
+			)}
+
 			{activeTab === '/props' && (
 				<div>
 					<Title size={2}>Props</Title>

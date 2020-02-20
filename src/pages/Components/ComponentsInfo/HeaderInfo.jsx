@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, Header, Input, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, Header, Input, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
 import SsbLogo from '../../../../public/ssb-logo-green.svg';
 
 const tabItems = [

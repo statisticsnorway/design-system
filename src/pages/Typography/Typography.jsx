@@ -97,7 +97,7 @@ const TypographyPage = () => {
 			{activeTab === '/oversikt' && (
 				<div>
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Headings</Title>
+						<Title size={2} className="col-lg-12">Headings - Overskrifter</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								H1 brukes på den første tittelen – ofte hovedtittel på en side. En side skal aldri ha mer enn én H1.
@@ -126,7 +126,7 @@ const TypographyPage = () => {
 					<Divider className="col-lg-12 mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Lead Paragraph</Title>
+						<Title size={2} className="col-lg-12">Lead Paragraph - Ingress</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Ingress brukes ofte mellom heading og paragraph som et kortfattet resumeé over innholdet.
@@ -152,7 +152,7 @@ const TypographyPage = () => {
 					<Divider className="mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Paragraf</Title>
+						<Title size={2} className="col-lg-12">Paragraf - Brødtekst</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Brødtekst settes i Open Sans Regular 16px, 28px linjeavstand på desktop. (Samme størrelse på mobil og desktop). Brødtekst har også en hvit versjon.
@@ -203,7 +203,7 @@ const TypographyPage = () => {
 					<Divider className="mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Small Text</Title>
+						<Title size={2} className="col-lg-12">Small Text - Mikrotekst</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Størrelsen benyttes kun i ekstra-tekst, som f.eks. ordforklaring og labels til input-felt. Desktop: Open Sans Regular 14px, 24px linjeavstand.

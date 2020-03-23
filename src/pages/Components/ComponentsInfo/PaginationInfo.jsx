@@ -145,6 +145,11 @@ const PaginationInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>items</code></td>
 								<td>arrayOf(text (string), path (string))</td>
 								<td>Required. Items for text label and path</td>

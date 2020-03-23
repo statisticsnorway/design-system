@@ -358,6 +358,11 @@ const KeyFiguresInfo = () => {
 								<td>Object with <code>changeDirection(up, down or same), changeText, changePeriod</code></td>
 							</tr>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>icon</code></td>
 								<td>node</td>
 								<td>Renders an icon</td>

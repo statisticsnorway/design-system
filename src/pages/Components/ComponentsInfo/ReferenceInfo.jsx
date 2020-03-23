@@ -299,6 +299,11 @@ const ReferenceInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>referenceList</code></td>
 								<td>arrayOf( href, label, plainText )</td>
 								<td>Required list of objects to render content</td>

@@ -81,6 +81,11 @@ const BlockContentInfo = () => {
 								<td>Content within the wrapper</td>
 							</tr>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>sectionNumber</code></td>
 								<td>Optional number or string</td>
 								<td>Optional rendering of a page number</td>

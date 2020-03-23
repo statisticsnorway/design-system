@@ -161,6 +161,11 @@ const HeaderInfo = () => {
 								<td>node</td>
 								<td>All rendered content</td>
 							</tr>
+							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>

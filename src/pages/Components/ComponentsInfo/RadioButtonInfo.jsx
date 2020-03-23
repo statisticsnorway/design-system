@@ -124,6 +124,11 @@ const RadioButtonInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>header</code></td>
 								<td>string</td>
 								<td>Renders a h6 title</td>

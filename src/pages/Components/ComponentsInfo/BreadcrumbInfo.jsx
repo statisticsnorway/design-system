@@ -130,6 +130,11 @@ const BreadcrumbInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>items</code></td>
 								<td>Required array of objects</td>
 								<td>A list of objects. Object key <code>text</code> is required, <code>link</code> is optional.</td>

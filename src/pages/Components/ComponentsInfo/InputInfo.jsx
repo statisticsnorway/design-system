@@ -372,6 +372,11 @@ const InputInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>errorMessage</code></td>
 								<td>string</td>
 								<td>Renders an error message underneath input field</td>

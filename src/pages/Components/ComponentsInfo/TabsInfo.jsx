@@ -124,6 +124,11 @@ const TabsInfo = () => {
 								<td>Will set an item to be active on init</td>
 							</tr>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>items</code></td>
 								<td>arrayOf(title, path) </td>
 								<td>Sets label and path of buttons</td>

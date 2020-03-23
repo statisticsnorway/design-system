@@ -246,6 +246,11 @@ const AccordionInfo = () => {
 								<td>Accordion content</td>
 							</tr>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>header</code></td>
 								<td>string</td>
 								<td>Header text</td>

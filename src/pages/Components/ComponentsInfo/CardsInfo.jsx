@@ -469,6 +469,11 @@ const CardsInfo = () => {
 									<td>Required. Fills box with content</td>
 								</tr>
 								<tr>
+									<td><code>className</code></td>
+									<td>string</td>
+									<td>Optional container class</td>
+								</tr>
+								<tr>
 									<td><code>downloadText </code></td>
 									<td>string </td>
 									<td>Text download link, default: Last ned</td>
@@ -533,6 +538,11 @@ const CardsInfo = () => {
 								</tr>
 							</thead>
 							<tbody>
+								<tr>
+									<td><code>className</code></td>
+									<td>string</td>
+									<td>Optional container class</td>
+								</tr>
 								<tr>
 									<td><code>image</code></td>
 									<td>node</td>

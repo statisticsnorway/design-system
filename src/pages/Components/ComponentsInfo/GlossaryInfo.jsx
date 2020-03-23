@@ -121,6 +121,11 @@ const GlossaryInfo = () => {
 								<td>Something to wrap the click event around</td>
 							</tr>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>closeText</code></td>
 								<td>string</td>
 								<td>Close button text, default: Lukk</td>

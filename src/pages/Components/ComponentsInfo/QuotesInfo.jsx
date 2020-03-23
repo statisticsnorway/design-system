@@ -108,6 +108,11 @@ const QuotesInfo = () => {
 								<td>Content within the wrapper</td>
 							</tr>
 							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
 								<td><code>negative</code></td>
 								<td>Optional boolean</td>
 								<td>Styling for dark theme</td>

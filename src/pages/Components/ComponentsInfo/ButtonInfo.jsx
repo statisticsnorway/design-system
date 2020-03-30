@@ -96,7 +96,7 @@ const ButtonInfo = () => {
 			{activeTab === '/overview' && (
 				<div>
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Primærknapp</Title>
+						<Title size={2} className="col-lg-12">Primary button</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Primærknapp brukes til handlinger som er kritisk for brukerens videre fremdrift.
@@ -125,7 +125,7 @@ const ButtonInfo = () => {
 					<Divider light className="mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Sekundærknapp</Title>
+						<Title size={2} className="col-lg-12">Secondary button</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Sekundærknapp brukes for handlinger som er viktige, men ikke kritiske, for brukerens fremdrift.
@@ -154,7 +154,7 @@ const ButtonInfo = () => {
 					<Divider light className="mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Ikke-aktiv knapp</Title>
+						<Title size={2} className="col-lg-12">Disabled button (ikke-aktiv knapp)</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								En passiv knapp skal kommunisere tydelig at den ikke har noen funksjon. Dette gjøres gjennom fravær av farge og kontrast.

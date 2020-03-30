@@ -73,7 +73,7 @@ const WarningsErrorsInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Warning Alerts</Title>
+			<Title size={1}>Warningd and Errors</Title>
 			<LeadParagraph>
 				Varsler er et type banner som brukes for å gjøre brukeren oppmerksom på spesiell informasjon.
 				Det kan være enten feilmeldinger eller informasjonvarsler. Feilmeldinger brukes når noe har blitt utført galt.

@@ -157,7 +157,7 @@ const KeyFiguresInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Nøkkeltall</Title>
+			<Title size={1}>Key figures</Title>
 			<LeadParagraph>
 				Nøkkeltall er tall vi ønsker å fremheve (hovedtall). De kommer i tre størrelser – S, M og L, og skaper spenning og dynamikk på siden.
 				Når nøkkeltall settes sammen til en gruppe er det viktig å tenke på hva du vil si. Det viktigste kommer øverst – og skal dermed være størst.

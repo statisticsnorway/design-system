@@ -3,7 +3,7 @@ import { Divider, LeadParagraph, Link, Paragraph, Title } from '@statisticsnorwa
 
 const IconInfo = () => (
 	<div className="col-lg-12">
-		<Title size={1}>Ikonografi</Title>
+		<Title size={1}>Icons (Ikonografi)</Title>
 		<LeadParagraph>
 			For å sikre konsistent design gjennom hele designsystemet, har vi valgt å bruke ikonbiblioteket “feather icon library” som leverer et sett avrundede og minimalistiske ikoner.
 			Feather har mer enn 280 ulike open source ikoner som dekker de mest brukte ikonene.<br />

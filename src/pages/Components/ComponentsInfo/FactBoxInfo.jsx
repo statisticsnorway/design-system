@@ -3,12 +3,12 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { FactBox, Divider, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-Faktabokser fungerer på samme som accordions ved at man kan åpne eller lukke dem for visning av utvalgt innhold. 
+Faktaboks fungerer på samme som accordions ved at man kan åpne eller lukke dem for visning av utvalgt innhold. 
 Men som navnet tilsier, skal faktabokser brukes bare for å vise relevant informasjon om den merkede teksten, og bare for ett emne om gangen.   
 `;
 
 const overviewTextFactbox = `
-Faktabokser har to visningsmodus.
+Faktaboks har to visningsmodus.
 Åpen og lukket. Når boksen er lukket skal den ha en informativ tittel som forteller brukeren hva innholdet i den vil være.
 Da vil brukeren kunne forvente hva som vises når boksen åpnes.
 `;
@@ -72,7 +72,7 @@ const FactBoxInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Faktabokser</Title>
+			<Title size={1}>Fact box</Title>
 			<LeadParagraph>
 				{leadParagraphText}
 			</LeadParagraph>

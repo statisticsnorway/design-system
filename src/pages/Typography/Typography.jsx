@@ -85,7 +85,7 @@ const TypographyPage = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Typografi</Title>
+			<Title size={1}>Typography</Title>
 			<LeadParagraph>
 				Typografien er en kjernekomponent i designsystemet, ettersom den bidrar til stil og tone på nettstedet og bidrar til å bygge profil.
 				SSB sitt designsystem bruker skrifttypene Roboto, Roboto condensed og Opens Sans. Disse skrifttypene har en lett avrundet form,

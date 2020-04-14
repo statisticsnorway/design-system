@@ -203,7 +203,7 @@ const DropdownInfo = () => {
 							<tr>
 								<td><code>items</code></td>
 								<td>array of objects</td>
-								<td>Object <code>title</code> and <code>id</code> is required</td>
+								<td>Object <code>title</code>, <code>id</code>  and <code>disabled</code></td>
 							</tr>
 							<tr>
 								<td><code>onSelect</code></td>

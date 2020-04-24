@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Card, Divider, ImageLink, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
+import { Card, Divider, PictureCard, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
 import { Globe } from 'react-feather';
 import exampleImage from '../../../../public/img/card_image.png';
 import imageLinkVertical from '../../../../public/img/imageLinkVertical.jpg';
@@ -218,7 +218,7 @@ const codeCardListHtml = `
 `;
 
 const imageLinkCode = `
-<ImageLink
+<PictureCard
 	image={<img src={} alt="image" />}
 	onClick={function}
 	type="Type"
@@ -227,7 +227,7 @@ const imageLinkCode = `
 `;
 
 const imageLinkCodeHtml = `
-<a class="ssb-image-link" href=" ">
+<a class="ssb-picture-card" href=" ">
 	<div class="image-background"><img src="" alt="" /></div>
 	<span class="il-type">Type</span>
 	<span class="il-title">Title</span>
@@ -236,7 +236,7 @@ const imageLinkCodeHtml = `
 `;
 
 const imageLinkHorizontalCode = `
-<ImageLink
+<PictureCard
 	horizontal
 	image={<img src={} alt="image" />}
 	onClick={function}
@@ -246,7 +246,7 @@ const imageLinkHorizontalCode = `
 `;
 
 const imageLinkHorizontalCodeHtml = `
-<a class="ssb-image-link horizontal" href=" ">
+<a class="ssb-picture-card horizontal" href=" ">
 	<div class="image-background"><img src="" alt="" /></div>
 	<span class="il-type">Type</span>
 	<span class="il-title">Title</span>
@@ -403,7 +403,7 @@ const CardsInfo = () => {
 					</div>
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Faktaside vertical card</Title>
+						<Title size={2} className="col-lg-12">Vertical picture card</Title>
 						<div className="col-lg-6 mb-4">
 							<Paragraph>
 								Kort til faktasider har fullbilde for å kommunisere at sidene er visuelle. Bildet gjør at kortene synes godt og stikker seg ut på siden.
@@ -411,7 +411,7 @@ const CardsInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="col-lg-6 mb-4">
-							<ImageLink image={<img src={imageLinkVertical} alt="example" />} type="Type" title="Tittel" />
+							<PictureCard image={<img src={imageLinkVertical} alt="example" />} type="Type" title="Tittel" />
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -422,14 +422,14 @@ const CardsInfo = () => {
 					</div>
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Faktaside horizontal card</Title>
+						<Title size={2} className="col-lg-12">Horizontal picture card</Title>
 						<div className="col-lg-12 mb-4">
 							<Paragraph>
 								Følger samme stil som vertikalt kort.
 							</Paragraph>
 						</div>
 						<div className="col-lg-12 mb-4">
-							<ImageLink orientation="horizontal" image={<img src={imageLinkHorizontal} alt="example" />} type="Type" title="Tittel" />
+							<PictureCard orientation="horizontal" image={<img src={imageLinkHorizontal} alt="example" />} type="Type" title="Tittel" />
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

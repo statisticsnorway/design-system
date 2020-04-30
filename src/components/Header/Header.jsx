@@ -44,7 +44,7 @@ const Header = () => {
 					<div className="navigation-items closed">
 						{items.map(it => (
 							<NavLink
-								className="header-navigation roboto"
+								className={`header-navigation roboto${it.path === '/get-started' && history.location.pathname === '/' ? ' active' : ''}`}
 								activeClassName="active"
 								items={items}
 								to={it.path}

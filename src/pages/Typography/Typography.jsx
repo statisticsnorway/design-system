@@ -181,28 +181,6 @@ const TypographyPage = () => {
 					<Divider className="mb-4" />
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Text</Title>
-						<div className="col-lg-6">
-							<Paragraph>
-								Open Sans brukes for andre typer tekst; brødtekst (paragraph), ingress, mikrotekst etc.
-							</Paragraph>
-						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
-							<div className="d-flex flex-wrap">
-								<Text>Vanlig tekst ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
-							</div>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeTextReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeTextHtml} language="html" />}
-						</div>
-					</div>
-
-					<Divider className="mb-4" />
-
-					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Small Text - Mikrotekst</Title>
 						<div className="col-lg-6">
 							<Paragraph>

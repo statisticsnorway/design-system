@@ -56,7 +56,7 @@ const items = [
   ...
   { text: '20', path: '/20' },
 ];
-<Pagination items={items} selectedPage={items[4]} />
+<Pagination items={items} selectedPage={items[4]} labelPrevious="Forrige" labelNext="Neste" />
 `;
 
 const codeExampleHtml = `
@@ -111,16 +111,16 @@ const PaginationInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="row mt-4">
 					<Title size={2} className="col-lg-12">Pagination</Title>
-					<div className="col-lg-6">
+					<div className="col-lg-12">
 						<Paragraph>
 							Paginering gir brukeren muligheten til å se en begrenset mengde sortert innhold om gangen.
 							Brukeren kan fortsette til neste side ved å klikke på numrene - som også viser hvor mange
 							flere sider det finnes tilgjengelig.
 						</Paragraph>
 					</div>
-					<div className="component-example col-lg-6 divider-left">
+					<div className="component-example col-lg-12">
 						<div className="component-wrapper">
-							<Pagination items={mockedItems} selectedPage={mockedItems[4]} />
+							<Pagination items={mockedItems} selectedPage={mockedItems[4]} labelPrevious="Forrige" labelNext="Neste" />
 						</div>
 					</div>
 					<div className="col-lg-12">

@@ -139,6 +139,90 @@ const ColorPage = () => {
 								</div>
 							</div>
 						</div>
+
+						<div className="col-lg-12 mb-4">
+							<Title size={2}>Figurfarger</Title>
+							<Paragraph className="mb-4">
+								Figurer er mye brukt. Det er viktig at alle følger samme mal. Om nye figurer settes opp skal de følge spesifikasjonene under.
+							</Paragraph>
+
+							<div className="mb-4">
+								<div className="color-box-grid" style={{ background: '#162327', color: '#FFFFFF' }}>
+									<div className="color-name">Dark 6</div>
+									<div className="hex-label">#162327</div>
+									<div className="color-text">Tekst</div>
+								</div>
+								<div className="color-box-grid" style={{ background: '#274247', color: '#FFFFFF' }}>
+									<div className="color-name">Dark 5</div>
+									<div className="hex-label">#274247</div>
+									<div className="color-text">Rammeverk linjer x- og y-akser</div>
+								</div>
+								<div className="color-box-grid" style={{ background: '#C3DCDC' }}>
+									<div className="color-name">Dark 2</div>
+									<div className="hex-label">#C3DCDC</div>
+									<div className="color-text">Rammeverk bodylinjer</div>
+								</div>
+								<div className="color-box-grid" style={{ background: '#FFFFFF' }}>
+									<div className="color-name">White</div>
+									<div className="hex-label">#FFFFFF</div>
+									<div className="color-text">Rammeverk bakgrunnsfarge</div>
+								</div>
+								<div className="color-box-grid" style={{ background: '#9272FC' }}>
+									<div className="color-name">Purple 3</div>
+									<div className="hex-label">#9272FC</div>
+									<div className="color-text">Markerer verdien man peker på</div>
+								</div>
+							</div>
+
+							<Paragraph className="mb-4">
+								Figurfarger (UU-godkjente, nivå AA). I prioritert rekkefølge.
+							</Paragraph>
+
+							<div className="color-palette mb-4">
+								<div className="color-box">
+									<div className="background" style={{ background: '#1A9D49' }} />
+									<div className="hex-label">#1A9D49</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#075745' }} />
+									<div className="hex-label">#075745</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#1D9DE2' }} />
+									<div className="hex-label">#1D9DE2</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#0F2080' }} />
+									<div className="hex-label">#0F2080</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#C78800' }} />
+									<div className="hex-label">#C78800</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#471F00' }} />
+									<div className="hex-label">#471F00</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#C775A7' }} />
+									<div className="hex-label">#C775A7</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#A3136C' }} />
+									<div className="hex-label">#A3136C</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#909090' }} />
+									<div className="hex-label">#909090</div>
+								</div>
+								<div className="color-box">
+									<div className="background" style={{ background: '#000000' }} />
+									<div className="hex-label">#000000</div>
+								</div>
+							</div>
+
+						</div>
+
 					</div>
 				</div>
 			)}
@@ -444,89 +528,6 @@ const ColorPage = () => {
 									<div className="color-text">Markerer hele raden når man peker på den</div>
 								</div>
 							</div>
-						</div>
-
-						<div className="col-lg-12 mb-4">
-							<Title size={3}>Figurer</Title>
-							<Paragraph className="mb-4">
-								Figurer er mye brukt. Det er viktig at alle følger samme mal. Om nye figurer settes opp skal de følge spesifikasjonene under.
-							</Paragraph>
-
-							<div className="mb-4">
-								<div className="color-box-grid" style={{ background: '#162327', color: '#FFFFFF' }}>
-									<div className="color-name">Dark 6</div>
-									<div className="hex-label">#162327</div>
-									<div className="color-text">Tekst</div>
-								</div>
-								<div className="color-box-grid" style={{ background: '#274247', color: '#FFFFFF' }}>
-									<div className="color-name">Dark 5</div>
-									<div className="hex-label">#274247</div>
-									<div className="color-text">Rammeverk linjer x- og y-akser</div>
-								</div>
-								<div className="color-box-grid" style={{ background: '#C3DCDC' }}>
-									<div className="color-name">Dark 2</div>
-									<div className="hex-label">#C3DCDC</div>
-									<div className="color-text">Rammeverk bodylinjer</div>
-								</div>
-								<div className="color-box-grid" style={{ background: '#FFFFFF' }}>
-									<div className="color-name">White</div>
-									<div className="hex-label">#FFFFFF</div>
-									<div className="color-text">Rammeverk bakgrunnsfarge</div>
-								</div>
-								<div className="color-box-grid" style={{ background: '#9272FC' }}>
-									<div className="color-name">Purple 3</div>
-									<div className="hex-label">#9272FC</div>
-									<div className="color-text">Markerer verdien man peker på</div>
-								</div>
-							</div>
-
-							<Paragraph className="mb-4">
-								Figurfarger (UU-godkjente, nivå AA). I prioritert rekkefølge.
-							</Paragraph>
-
-							<div className="color-palette mb-4">
-								<div className="color-box">
-									<div className="background" style={{ background: '#1A9D49' }} />
-									<div className="hex-label">#1A9D49</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#075745' }} />
-									<div className="hex-label">#075745</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#1D9DE2' }} />
-									<div className="hex-label">#1D9DE2</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#0F2080' }} />
-									<div className="hex-label">#0F2080</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#C78800' }} />
-									<div className="hex-label">#C78800</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#471F00' }} />
-									<div className="hex-label">#471F00</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#C775A7' }} />
-									<div className="hex-label">#C775A7</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#A3136C' }} />
-									<div className="hex-label">#A3136C</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#909090' }} />
-									<div className="hex-label">#909090</div>
-								</div>
-								<div className="color-box">
-									<div className="background" style={{ background: '#000000' }} />
-									<div className="hex-label">#000000</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>

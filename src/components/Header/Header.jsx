@@ -23,15 +23,15 @@ const Header = () => {
 		<div className={`header-component-wrapper${history.location.pathname === '/get-started' || history.location.pathname === '/' ? ' front-page' : ''}`}>
 			<div className="content-holder d-flex justify-content-between flex-wrap">
 				<div className="left-section">
-					<div className="logo-and-title">
-						<div className="home-nav" onClick={() => history.push('/')}>
+					<div className="logo-and-title" onClick={() => history.push('/')}>
+						<div className="home-nav">
 							<img className="logo-full" src={logo} alt="logo" />
 							<img className="logo-symbol" src={logoSymbol} alt="logo" />
 						</div>
 						<div className="diagonal-divider" />
 						<div className="site-title">Designsystem</div>
 						&nbsp;
-						<div className="desktop-version-number"><Text>v2.0.14</Text></div>
+						<div className="desktop-version-number"><Text>v2.0.16</Text></div>
 					</div>
 				</div>
 
@@ -44,7 +44,7 @@ const Header = () => {
 					<div className="navigation-items closed">
 						{items.map(it => (
 							<NavLink
-								className="header-navigation roboto"
+								className={`header-navigation roboto${it.path === '/get-started' && history.location.pathname === '/' ? ' active' : ''}`}
 								activeClassName="active"
 								items={items}
 								to={it.path}

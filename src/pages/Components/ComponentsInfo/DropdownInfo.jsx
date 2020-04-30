@@ -230,6 +230,11 @@ const DropdownInfo = () => {
 								<td>object</td>
 								<td>Selected element in dropdown</td>
 							</tr>
+							<tr>
+								<td><code>tabIndex</code></td>
+								<td>string</td>
+								<td>Tab index for focus</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>

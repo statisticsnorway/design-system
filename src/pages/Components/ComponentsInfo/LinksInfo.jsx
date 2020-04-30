@@ -334,6 +334,11 @@ const LinksInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>ariaLabel</code></td>
+								<td>string</td>
+								<td>Defines a string value that describe the link if no link text</td>
+							</tr>
+							<tr>
 								<td><code>children</code></td>
 								<td>node</td>
 								<td>Required. Something that renders to wrap the link around</td>
@@ -370,6 +375,16 @@ const LinksInfo = () => {
 								<td><code>negative</code></td>
 								<td>bool</td>
 								<td>Will change component style. Defaults to <code>false</code></td>
+							</tr>
+							<tr>
+								<td><code>tabIndex</code></td>
+								<td>number</td>
+								<td>Tab index for focus</td>
+							</tr>
+							<tr>
+								<td><code>title</code></td>
+								<td>string</td>
+								<td>The title attribute is used to provide additional information</td>
 							</tr>
 						</tbody>
 					</table>

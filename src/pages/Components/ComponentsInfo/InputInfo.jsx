@@ -222,6 +222,11 @@ const InputInfo = () => {
 								<td>Defines a string value that labels input element, use if label is not visible</td>
 							</tr>
 							<tr>
+								<td><code>ariaLabelSearchButton</code></td>
+								<td>string</td>
+								<td>Defines a string value that labels button element</td>
+							</tr>
+							<tr>
 								<td><code>className</code></td>
 								<td>string</td>
 								<td>Optional container class</td>

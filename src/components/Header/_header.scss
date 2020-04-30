@@ -38,6 +38,7 @@
     margin-bottom: 45px;
 
     .logo-and-title {
+      cursor: pointer;
       display: flex;
       height: 38px;
 
@@ -47,7 +48,6 @@
       }
 
       .home-nav {
-        cursor: pointer;
         width: 260px;
       }
 

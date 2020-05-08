@@ -36,21 +36,11 @@ const codeExampleHtml = `
 <h4 class="ssb-title">H4 titteleksempel</h4>
 `;
 
-const codeTextReact = `
-<Text>Default text here</Text>
-<Text negative>Negative text here</Text>
-`;
-
 const codeSmallTextReact = `
 <Text small>Small text here</Text>
 <Text negative small>Negative small text here</Text>
 `;
 
-const codeTextHtml = `
-<span class="ssb-text-wrapper">Default text here</span>
-<span class="ssb-text-wrapper small-text">Small text here</span>
-<span class="ssb-text-wrapper negative">Negative text here</span>
-`;
 
 const codeSmallTextHtml = `
 <span class="ssb-text-wrapper small-text">Small text here</span>

@@ -133,16 +133,30 @@ const linkListHtml = `
 
 const tableLink = `
 <TableLink title="Tabell 1" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+<TableLink title="Tabell 2" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
 `;
 
 const tableLinkHtml = `
 <div className="ssb-table-link">
     <a href="">
         <div className="tl-icon">
-            <i>{feather.arrowRight 22px}</i>
+            <i>{insert icon here feather.arrowRight 22px}</i>
         </div>
         <div className="tl-title">
             Tabell 1
+            <span className="tl-text">
+                Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
+            </span>
+        </div>
+    </a>
+</div>
+<div className="ssb-table-link">
+    <a href="">
+        <div className="tl-icon">
+            <i>{insert icon here feather.arrowRight 22px}</i>
+        </div>
+        <div className="tl-title">
+            Tabell 2
             <span className="tl-text">
                 Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
             </span>

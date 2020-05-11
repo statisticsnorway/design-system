@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'react-feather';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Link, Paragraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Link, Paragraph, Tabs, TableLink, Title } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -129,6 +129,40 @@ const linkListHtml = `
 <a class="ssb-link" href=" " target="" rel="">
 	<span class="link-text">This is a clickable text link in a link list</span>
 </a>
+`;
+
+const tableLink = `
+<TableLink title="Tabell 1" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+<TableLink title="Tabell 2" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+`;
+
+const tableLinkHtml = `
+<div className="ssb-table-link">
+    <a href="">
+        <div className="tl-icon">
+            <i>{insert icon here feather.arrowRight 22px}</i>
+        </div>
+        <div className="tl-title">
+            Tabell 1
+            <span className="tl-text">
+                Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
+            </span>
+        </div>
+    </a>
+</div>
+<div className="ssb-table-link">
+    <a href="">
+        <div className="tl-icon">
+            <i>{insert icon here feather.arrowRight 22px}</i>
+        </div>
+        <div className="tl-title">
+            Tabell 2
+            <span className="tl-text">
+                Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
+            </span>
+        </div>
+    </a>
+</div>
 `;
 
 const LinksInfo = () => {
@@ -304,6 +338,32 @@ const LinksInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={linkListHtml} language="html" />}
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Table link</Title>
+						<div className="col-lg-12">
+							<Paragraph>
+								Tabell-lenker brukes for å kunne lenke til et lagret søk eller til en vedleggstabell inne i en brødtekst. Disse lenkene går ut av den siden man er inne på.
+							</Paragraph>
+						</div>
+
+						<Divider light className="mb-3" />
+
+						<div className="component-example col-lg-12 mb-3">
+							<div className="component-wrapper">
+								<TableLink title="Tabell 1" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+								<TableLink title="Tabell 2" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+							</div>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={tableLink} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={tableLinkHtml} language="html" />}
+						</div>
+					</div>
 				</div>
 			)}
 
@@ -323,7 +383,7 @@ const LinksInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<Title size={2} className="mb-3">Props</Title>
+					<Title size={2} className="mb-3">Props Link</Title>
 					<table className="col-lg-12 mb-3">
 						<thead style={{ textAlign: 'left' }}>
 							<tr>
@@ -385,6 +445,56 @@ const LinksInfo = () => {
 								<td><code>title</code></td>
 								<td>string</td>
 								<td>The title attribute is used to provide additional information</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-4" light />
+
+					<Title size={2}>Props TableLink</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
+								<td><code>href</code></td>
+								<td>string</td>
+								<td>Required. Destination for navigation</td>
+							</tr>
+							<tr>
+								<td><code>hrefText</code></td>
+								<td>string</td>
+								<td>Required. Text for href</td>
+							</tr>
+							<tr>
+								<td><code>hrefTitle</code></td>
+								<td>string</td>
+								<td>The hrefTitle attribute is used to provide additional information</td>
+							</tr>
+							<tr>
+								<td><code>isExternal</code></td>
+								<td>bool</td>
+								<td>Will make the link open in new tab. Defaults to <code>false</code></td>
+							</tr>
+							<tr>
+								<td><code>tabIndex</code></td>
+								<td>number</td>
+								<td>Tab index for focus</td>
+							</tr>
+							<tr>
+								<td><code>title</code></td>
+								<td>string</td>
+								<td>title for tablelink</td>
 							</tr>
 						</tbody>
 					</table>

@@ -132,37 +132,37 @@ const linkListHtml = `
 `;
 
 const tableLink = `
-<TableLink title="Tabell 1" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
-<TableLink title="Tabell 2" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+<TableLink text="Tabell 1" href="" description="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+<TableLink text="Tabell 2" href="" description="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
 `;
 
 const tableLinkHtml = `
-<div className="ssb-table-link">
-    <a href="">
-        <div className="tl-icon">
-            <i>{insert icon here feather.arrowRight 22px}</i>
-        </div>
-        <div className="tl-title">
-            Tabell 1
-            <span className="tl-text">
-                Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
-            </span>
-        </div>
-    </a>
-</div>
-<div className="ssb-table-link">
-    <a href="">
-        <div className="tl-icon">
-            <i>{insert icon here feather.arrowRight 22px}</i>
-        </div>
-        <div className="tl-title">
+<a className="ssb-table-link" href="" target="_blank">
+	<div className="tl-icon">
+		<i>{insert icon here feather.arrowRight 22px}</i>
+	</div>
+	<div className="tl-info">
+		<span className="tl-text">
+			Tabell 1
+		</span>
+		<span className="tl-description">
+			Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
+		</span>
+	</div>
+</a>
+<a className="ssb-table-link" href="" target="_blank">
+    <div className="tl-icon">
+        <i>{insert icon here feather.arrowRight 22px}</i>
+    </div>
+    <div className="tl-info">
+        <span className="tl-text">
             Tabell 2
-            <span className="tl-text">
-                Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
-            </span>
-        </div>
-    </a>
-</div>
+        </span>
+        <span className="tl-description">
+            Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108.
+        </span>
+    </div>
+</a>
 `;
 
 const LinksInfo = () => {
@@ -353,8 +353,8 @@ const LinksInfo = () => {
 
 						<div className="component-example col-lg-12 mb-3">
 							<div className="component-wrapper">
-								<TableLink title="Tabell 1" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
-								<TableLink title="Tabell 2" href="" hrefText="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+								<TableLink text="Tabell 1" href="" description="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
+								<TableLink text="Tabell 2" href="" description="Gjennomsnittspris i fritt salg på eid tomt i 100-meterbeltet. 2015-2108." />
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -467,24 +467,19 @@ const LinksInfo = () => {
 								<td>Optional container class</td>
 							</tr>
 							<tr>
+								<td><code>description</code></td>
+								<td>string</td>
+								<td>Required. Description for tablelink</td>
+							</tr>
+							<tr>
 								<td><code>href</code></td>
 								<td>string</td>
 								<td>Required. Destination for navigation</td>
 							</tr>
 							<tr>
-								<td><code>hrefText</code></td>
-								<td>string</td>
-								<td>Required. Text for href</td>
-							</tr>
-							<tr>
-								<td><code>hrefTitle</code></td>
-								<td>string</td>
-								<td>The hrefTitle attribute is used to provide additional information</td>
-							</tr>
-							<tr>
 								<td><code>isExternal</code></td>
 								<td>bool</td>
-								<td>Will make the link open in new tab. Defaults to <code>false</code></td>
+								<td>Will make the link open in new tab. Defaults to <code>true</code></td>
 							</tr>
 							<tr>
 								<td><code>tabIndex</code></td>
@@ -492,9 +487,14 @@ const LinksInfo = () => {
 								<td>Tab index for focus</td>
 							</tr>
 							<tr>
+								<td><code>text</code></td>
+								<td>string</td>
+								<td>Required. Text for tablelink</td>
+							</tr>
+							<tr>
 								<td><code>title</code></td>
 								<td>string</td>
-								<td>title for tablelink</td>
+								<td>The title attribute is used to provide additional information</td>
 							</tr>
 						</tbody>
 					</table>

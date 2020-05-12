@@ -489,7 +489,7 @@ const LinksInfo = () => {
 							<tr>
 								<td><code>text</code></td>
 								<td>string</td>
-								<td>Required. Text for tablelink</td>
+								<td>Required. Text for tablelink, above description</td>
 							</tr>
 							<tr>
 								<td><code>title</code></td>

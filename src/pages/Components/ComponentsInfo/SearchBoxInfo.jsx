@@ -61,7 +61,7 @@ const SearchBoxInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div>
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Seach</Title>
+						<Title size={2} className="col-lg-12">Search</Title>
 						<div className="col-lg-6">
 							<Paragraph>
 								Søk er det eneste inputfeltet i designsystemet som har placeholder-tekst, fordi feltets funksjon er tydelig selv når teksten forsvinner ved klikk.

@@ -31,7 +31,7 @@ const Header = () => {
 						<div className="diagonal-divider" />
 						<div className="site-title">Designsystem</div>
 						&nbsp;
-						<div className="desktop-version-number"><Text>v2.0.24</Text></div>
+						<div className="desktop-version-number"><Text>v2.0.28</Text></div>
 					</div>
 				</div>
 

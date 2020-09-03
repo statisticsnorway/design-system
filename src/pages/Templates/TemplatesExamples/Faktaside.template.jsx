@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Divider, LeadParagraph, Tabs, Title } from '@statisticsnorway/ssb-component-library';
-import faktaside from '../../../../public/templates/faktaside-web.png';
+import faktaside from '../../../../public/templates/faktaside-desktop.png';
 import faktasideMobile from '../../../../public/templates/faktaside-mobil.png';
 
 const tabItems = [

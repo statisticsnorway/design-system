@@ -60,6 +60,8 @@ const codeExampleTextarea = `
 <TextArea label="Label" />
 
 <TextArea negative label="Label" />
+
+<TextArea label="Label" rows={20} cols={50} />
 `;
 
 const codeExampleTextareaHtml = `
@@ -74,6 +76,13 @@ const codeExampleTextareaHtml = `
     <label for="textarea1">Label</label>
     <div class="text-area-wrapper">
         <textarea id="textarea1"></textarea>
+    </div>
+</div>
+
+<div class="ssb-text-area">
+    <label for="textarea1">Label</label>
+    <div class="text-area-wrapper">
+        <textarea id="textarea1" rows="20" cols="20"></textarea>
     </div>
 </div>
 `;
@@ -360,6 +369,16 @@ const InputInfo = () => {
 								<td><code>value</code></td>
 								<td>string</td>
 								<td>Input value. Can be initiated with a value</td>
+							</tr>
+							<tr>
+								<td><code>rows</code></td>
+								<td>number</td>
+								<td>Specifies the visible height of a text area</td>
+							</tr>
+							<tr>
+								<td><code>cols</code></td>
+								<td>number</td>
+								<td>Specifies the visible width of a text area</td>
 							</tr>
 						</tbody>
 					</table>

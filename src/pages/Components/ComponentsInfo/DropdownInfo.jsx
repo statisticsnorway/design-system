@@ -87,7 +87,7 @@ const codeExampleHtml = `
 const codeExamplePreSelected = `
 <Dropdown
 	header="Menu header"
-	selectedItem={ title: 'Ocean', id: 'item3' }
+	selectedItem={{ title: 'Ocean', id: 'item3' }}
 	items={items}
 />
 `;

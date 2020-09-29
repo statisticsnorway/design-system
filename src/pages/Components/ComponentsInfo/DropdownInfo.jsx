@@ -11,8 +11,8 @@ bør du i stedet bruke søk som sorterer resultat etter brukerens input og som r
 
 const overviewText = `
 Dropdown består av en ledetekst som beskriver hva elementet består av og et input-element som brukeren kan klikke på. 
-Ved klikk åpnes en liste å velge fra. Valgt innhold blir uthevet med en mørk grønn farge, mens innhold man bare peker på blir 
-markert med en lys grønn farge.
+Ved klikk åpnes en liste å velge fra. 
+Valgt innhold blir uthevet med grønn farge, mens innhold man bare peker på blir markert med en mørk farge.
 `;
 
 const overviewTextPreSelectedValue = `

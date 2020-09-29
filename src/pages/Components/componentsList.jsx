@@ -25,6 +25,7 @@ import graphsIcon from '../../../public/customIcons/graphs.svg';
 import HeaderInfo from './ComponentsInfo/HeaderInfo';
 import headerIcon from '../../../public/customIcons/header.svg';
 import IconInfo from './ComponentsInfo/IconInfo';
+import iconsIcon from '../../../public/customIcons/icons.svg';
 import InputInfo from './ComponentsInfo/InputInfo';
 import inputIcon from '../../../public/customIcons/input.svg';
 import KeyFiguresInfo from './ComponentsInfo/KeyFiguresInfo';
@@ -56,17 +57,17 @@ const componentsList = [
 	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
 	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
 	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
-	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon, new: true },
+	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon },
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
-	{ component: FooterInfo, label: 'Footer', path: '/footer', icon: footerIcon, new: true },
+	{ component: FooterInfo, label: 'Footer', path: '/footer', icon: footerIcon },
 	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
 	{ component: GlossaryInfo, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },
 	{ component: '', label: 'Graphs', path: '/graphs', icon: graphsIcon, comingSoon: true },
 	{ component: HeaderInfo, label: 'Header', path: '/header', icon: headerIcon },
-	{ component: IconInfo, label: 'Icons', path: '/icons', new: true },
+	{ component: IconInfo, label: 'Icons', path: '/icons', icon: iconsIcon },
 	{ component: InputInfo, label: 'Input', path: '/input', icon: inputIcon },
 	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures', icon: keyfiguresIcon },
 	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },

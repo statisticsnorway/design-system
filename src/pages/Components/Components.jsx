@@ -13,7 +13,7 @@ import typographyIcon from '../../../public/customIcons/typography.svg';
 
 const sidebarMainItems = [
 	{ component: ColorPage, label: 'Farger', path: '/color', icon: colorIcon },
-	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing', icon: gridIcon, new: true },
+	{ component: GridSpacing, label: 'Grid & Spacing', path: '/grid-spacing', icon: gridIcon },
 	{ component: TypographyPage, label: 'Typography', path: '/typography-page', icon: typographyIcon },
 ];
 

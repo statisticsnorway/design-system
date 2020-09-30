@@ -4,6 +4,15 @@ object-assign
 @license MIT
 */
 
+/**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ *
+ * @license MIT <https://opensource.org/licenses/MIT>
+ * @author Lea Verou <https://lea.verou.me>
+ * @namespace
+ * @public
+ */
+
 /** @license React v16.12.0
  * react.production.min.js
  *

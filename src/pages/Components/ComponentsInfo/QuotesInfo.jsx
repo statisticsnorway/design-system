@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Paragraph, Quote, Tabs, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Paragraph, Quote, Tabs, Title, Highlight } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -43,6 +43,24 @@ const codeHtml = `
 </span>
 `;
 
+const highlightReact = `
+<p>
+Med 3,9 TWh har produksjonen av vindkraft aldri vært større enn i 2018 – en økning på 36 prosent fra året før.
+ <Highlight>Økningen fra 2017 til 2018 var på en hel terrawattime (TWh),</Highlight> 
+ifølge nye tall fra den årlige elektrisitetsstatistikken.
+Den rekordhøye produksjonen må ses i sammenheng med oppstart av flere nye vindkraftverk i 2018.
+</p>
+`;
+
+const highlightHtml = `
+<p>
+Med 3,9 TWh har produksjonen av vindkraft aldri vært større enn i 2018 – en økning på 36 prosent fra året før.
+ <mark class="ssb-highlight">Økningen fra 2017 til 2018 var på en hel terrawattime (TWh),</mark> 
+ifølge nye tall fra den årlige elektrisitetsstatistikken.
+Den rekordhøye produksjonen må ses i sammenheng med oppstart av flere nye vindkraftverk i 2018.
+</p>
+`;
+
 const QuotesInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
@@ -51,7 +69,7 @@ const QuotesInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Quote</Title>
+			<Title size={1}>Quote and Highlighting</Title>
 			<LeadParagraph>
 				Vi bruker to ulike stiler for utheving av sitat og fremheving av viktig tekst.
 				Et sitat eller en fremheving skal være kort. Vurder alltid om fremheving (highlighting) skal
@@ -86,6 +104,33 @@ const QuotesInfo = () => {
 						<Divider light />
 						{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
 						{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
+					</div>
+					<Divider className="mb-4" />
+					<Title size={2} className="col-lg-12">Highlight</Title>
+					<div className="col-lg-6">
+						<Paragraph>
+							Stilen fremhever viktig tekst i brødtekst.
+							Teksten løftes ikke ut av sammenhengen på samme måte som sitat.
+							Setningene blir markert der de står i brødteksten.
+						</Paragraph>
+					</div>
+					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+							<div className="component-wrapper">
+								<p>
+									Med 3,9 TWh har produksjonen av vindkraft aldri vært større enn i 2018 – en økning på 36 prosent fra året før.
+									 <Highlight>Økningen fra 2017 til 2018 var på en hel terrawattime (TWh),</Highlight>
+									ifølge nye tall fra den årlige elektrisitetsstatistikken.
+									Den rekordhøye produksjonen må ses i sammenheng med oppstart av flere nye vindkraftverk i 2018.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className="col-lg-12">
+						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+						<Divider light />
+						{activeCodeTab === '/react' && <CodeSnippet code={highlightReact} language="jsx" />}
+						{activeCodeTab === '/html' && <CodeSnippet code={highlightHtml} language="html" />}
 					</div>
 				</div>
 			)}

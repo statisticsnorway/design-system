@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import logoSymbol from '@public/ssb-logo-symbol.svg';
 import { Dropdown, Link, Text, Title } from '@statisticsnorway/ssb-component-library';
@@ -17,10 +17,11 @@ const listItems = componentsList.filter(c => !c.comingSoon);
 
 const Header = () => {
 	const history = useHistory();
+	const location = useLocation();
 	const [menuIsOpen, toggleMenu] = useState(false);
 
 	return (
-		<div className={`header-component-wrapper${history.location.pathname === '/get-started' || history.location.pathname === '/' ? ' front-page' : ''}`}>
+		<div className={`header-component-wrapper${location.pathname === '/get-started' || location.pathname === '/' ? ' front-page' : ''}`}>
 			<div className="content-holder d-flex justify-content-between flex-wrap">
 				<div className="left-section">
 					<div className="logo-and-title" onClick={() => history.push('/')}>
@@ -44,7 +45,7 @@ const Header = () => {
 					<div className="navigation-items closed">
 						{items.map(it => (
 							<NavLink
-								className={`header-navigation roboto${it.path === '/get-started' && history.location.pathname === '/' ? ' active' : ''}`}
+								className={`header-navigation roboto${it.path === '/get-started' && location.pathname === '/' ? ' active' : ''}`}
 								activeClassName="active"
 								items={items}
 								to={it.path}
@@ -114,7 +115,7 @@ const Header = () => {
 					</div>
 				)}
 			</div>
-			{(history.location.pathname === '/get-started' || history.location.pathname === '/') && (
+			{(location.pathname === '/get-started' || location.pathname === '/') && (
 				<div className="get-started offset-lg-1">
 					<div className="row ml-1 mr-1">
 						<img className="col-lg-11 mb-4" src={coopIllustration} alt="Usage" />

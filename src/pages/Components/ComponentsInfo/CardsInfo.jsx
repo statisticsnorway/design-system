@@ -36,7 +36,77 @@ const tabCode = [
 	},
 ];
 
-const codeImageTop = `
+const codeStandard = `
+<Card title="Tittel" href=" ">
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+
+<Card title="Tittel" href=" " icon={<Globe size={32} />}>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+`;
+
+const codeStandardHtml = `
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+        </div>
+    </a>
+</div>
+
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content">
+			<div class="card-icon">
+				<!-- Insert icon -->
+            </div>
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+        </div>
+    </a>
+</div>
+`;
+
+const codeProfile = `
+<Card title="Tittel" href=" " profiled>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+
+<Card title="Tittel" icon={<Globe size={120} />} profiled>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+`;
+
+const codeProfileHtml = `
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content profiled">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+        </div>
+    </a>
+</div>
+
+<div class="ssb-card">
+    <a href=" " class="clickable top-orientation">
+        <div class="card-content profiled">
+            <div class="card-icon">
+                <!-- Insert icon -->
+            </div>
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+        </div>
+    </a>
+</div>
+`;
+
+const codeEditorial = `
 <Card
     imagePlacement="top"
     image={<img src=" " alt=" " />}
@@ -46,9 +116,19 @@ const codeImageTop = `
 >
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
+
+<Card
+    imagePlacement="left"
+    image={<img src=" " alt=" " />}
+    href=" "
+    subTitle="Type  /  DD. Måned ÅÅÅÅ"
+    title="Tittel"
+>
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
 `;
 
-const codeImageTopHtml = `
+const codeEditorialHtml = `
 <div class="ssb-card">
     <a href=" " class="clickable top-orientation">
         <div class="card-image">
@@ -61,21 +141,7 @@ const codeImageTopHtml = `
         </div>
     </a>
 </div>
-`;
 
-const codeImageLeft = `
-<Card
-    imagePlacement="left"
-    image={<img src=" " alt=" " />}
-    href=" "
-    subTitle="Type  /  DD. Måned ÅÅÅÅ"
-    title="Tittel"
->
-    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-</Card>
-`;
-
-const codeImageLeftHtml = `
 <div class="ssb-card">
     <a href=" " class="clickable left-orientation">
         <div class="card-image">
@@ -90,94 +156,62 @@ const codeImageLeftHtml = `
 </div>
 `;
 
-const codeSimple = `
-<Card title="Tittel" href=" " hrefText="Handling" icon={<Globe size={32} />}>
-    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-</Card>
+const codePictureCard = `
+<PictureCard 
+	imageSrc={} 
+	altText="example" 
+	type="Type" 
+	title="Tittel" 
+/>
 
-<Card title="Tittel" href=" " icon={<Globe size={32} />}>
-    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-</Card>
+<PictureCard 
+	horizontal
+	imageSrc={} 
+	altText="example" 
+	type="Type" 
+	title="Tittel" 
+/>
 `;
 
-const codeSimpleHtml = `
-<div class="ssb-card">
-    <a href=" " class="clickable top-orientation">
-        <div class="card-content">
-            <div class="card-title">Tittel</div>
-            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
-            <div class="card-action">
-                <i class="arrow-icon">{feather.arrowRight 22px}</i>
-                <div class="href-text">Handling</div>
-            </div>
-        </div>
-    </a>
-</div>
+const codePictureCardHtml = `
+<a class="ssb-picture-card vertical ">
+   <div class="image-background">
+   		<img src="" alt="example">
+   </div>
+   <div class="overlay">
+      <span class="il-type">Type</span><span class="il-title">Tittel</span>
+      {feather.arrowRightCircle 32px}
+   </div>
+</a>
 
-<div class="ssb-card">
-    <a href=" " class="clickable top-orientation">
-        <div class="card-content">
-            <div class="card-title">Tittel</div>
-            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
-            <i class="arrow-icon">{feather.arrowRight 22px}</i>
-        </div>
-    </a>
-</div>
-`;
-
-const codeProfile = `
-<Card title="Tittel" href=" " icon={<Globe size={120} />} profiled>
-    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-</Card>
-
-<Card title="Tittel" fileLocation=" "  downloadText="Last ned" href=" " hrefText="Handling" icon={<Globe size={120} />} profiled>
-    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-</Card>
-`;
-
-const codeProfileHtml = `
-<div class="ssb-card">
-    <a href=" " class="clickable top-orientation">
-        <div class="card-content profiled">
-            <div class="card-icon">
-                <!-- Insert icon -->
-            </div>
-            <div class="card-title">Tittel</div>
-            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
-            <i class="arrow-icon">{feather.arrowRight 22px}</i>
-        </div>
-    </a>
-</div>
-
-<div class="ssb-card">
-    <a href=" " class="clickable top-orientation">
-        <div class="card-content profiled">
-            <div class="card-icon">
-                <!-- Insert icon -->
-            </div>
-            <div class="card-title">Tittel</div>
-            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
-            <div class="card-action">
-                <i class="arrow-icon">{feather.arrowRight 22px}</i>
-                <div class="href-text">Handling</div>
-            </div>
-        </div>
-    </a>
-    <a download="" href=" " class="download-section">
-        <i class="download-icon">{feather.downLoad 22px}</i>
-        <span>Last ned</span>
-    </a>
-</div>
+<a class="ssb-picture-card horizontal ">
+   <div class="image-background">
+   		<img src="" alt="example">
+   </div>
+   <div class="overlay">
+      <span class="il-type">Type</span><span class="il-title">Tittel</span>
+      {feather.arrowRightCircle 32px}
+   </div>
+</a>
 `;
 
 const codeCardList = `
-<Card href=" " hrefText="Handling" title="Tittel">
+<Card href=" " title="Tittel">
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+<Card href=" " title="Tittel">
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
 <Card href=" " title="Tittel">
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
-<Card href=" " title="Tittel">
+<Card className="mt-4" href=" " hrefText="Handling" title="Tittel">
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+<Card className="mt-4" href=" " title="Tittel">
+    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+<Card className="mt-4" href=" " title="Tittel">
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
 `;
@@ -217,41 +251,27 @@ const codeCardListHtml = `
 </div>
 `;
 
-const imageLinkCode = `
-<PictureCard
-	image={<img src={} alt="image" />}
-	onClick={function}
-	type="Type"
-	title="Tittel"
-/>
+const codeExtension = `
+<Card title="Tittel" href=" " fileLocation="./not_a_file.md" downloadText="Last ned filnavn.filtype">
+	<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+</Card>
+
 `;
 
-const imageLinkCodeHtml = `
-<a class="ssb-picture-card" href=" ">
-	<div class="image-background"><img src="" alt="" /></div>
-	<span class="il-type">Type</span>
-	<span class="il-title">Title</span>
-	{feather.arrowRightCircle 32px}
-</a>
-`;
-
-const imageLinkHorizontalCode = `
-<PictureCard
-	horizontal
-	image={<img src={} alt="image" />}
-	onClick={function}
-	type="Type"
-	title="Tittel"
-/>
-`;
-
-const imageLinkHorizontalCodeHtml = `
-<a class="ssb-picture-card horizontal" href=" ">
-	<div class="image-background"><img src="" alt="" /></div>
-	<span class="il-type">Type</span>
-	<span class="il-title">Title</span>
-	{feather.arrowRightCircle 32px}
-</a>
+const codeExtensionHtml = `
+<div class="ssb-card">
+   <a href=" " class="clickable top-orientation">
+      <div class="card-content">
+         <div class="card-title">Tittel</div>
+         <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+         <i class="arrow-icon">{feather.arrowRight 22px}</i>
+      </div>
+   </a>
+   <a download="" href="./not_a_file.md" class="download-section">
+      <i class="download-icon">{feather.downLoad 22px}</i>
+      <span>Last ned filnavn.filtype</span>
+   </a>
+</div>
 `;
 
 const CardsInfo = () => {
@@ -264,10 +284,10 @@ const CardsInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Cards</Title>
 			<LeadParagraph>
-				Kort er klikkbare innganger som skal promotere innhold og ta brukeren videre til annet innhold.
-				Ikke la kort ta brukeren til eksterne nettsteder – bruk i stedet lenke. Kort brukes til flere ulike innholdstyper, og må i stor grad tilpasses unike behov.
-				Sjekk alltid hvilke kort som finnes før nye lages. Det skal ikke brukes to ulike kort til samme innholdstype.
-				For å holde et konsistent uttrykk skal det alltid tas utgangspunkt i et av kortene vist nedenfor. Nye versjoner skal alltid godkjennes av ansvarlig designer for designsystemet.
+				Kort er klikkbare innganger som promoterer og tar brukeren til annet innhold.
+				Kort skal aldri ta brukeren til eksterne nettsteder – bruk lenke til dette formålet.
+				Nye kort skal ta utgangspunkt i et av kortene vist på denne siden,
+				og godkjennes av ansvarlig designer for designsystemet før utvikling/publisering.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
@@ -275,98 +295,58 @@ const CardsInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div>
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Vertical picture & text card</Title>
+						<Title size={2} className="col-lg-12">Standard card</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Brukes der flere kort kan plasseres horisontalt ved siden av hverandre. Kortet har fleksibel høyde, med lenketittel.
-								Bildet beholder dimensjonene selv om kortet blir høyere eller større.Tekstmengde i kortet bør begrenses.
-								Brukes som inngang til artikler eller annet innhold hvor det er viktig at brukeren får et kort sammendrag av innholdet.
+								Kortet brukes når inngangen er underordnet annet innhold på siden. For eksempel til å promotere/lenke til relatert innhold.
+								Teksten bør kort og konsist si noe om innholdet kortet lenker til. Versjonen brukes når et større antall kort sammenstilles til en kortliste. Kortene i listen skal,
+								som regel, lenke til samme innholdstype, men ulike sider – for eksempel ulike statistikksider. Ikon kan brukes for å differensiere.
+								Alle kort i en liste skal være like – enten har alle eller ingen ikon.
+								Ikoner hentes fra feathericons.com eller følger samme stil som feather icons.
 							</Paragraph>
 						</div>
-						<div className="component-example divider-left col-lg-6 mb-4">
-							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="top" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
-								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-							</Card>
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="mb-4">
+								<Card href=" " title="Tittel">
+									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+								</Card>
+							</div>
+							<div className="mb-4">
+								<Card href=" " title="Tittel" icon={<Globe size={32} />}>
+									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+								</Card>
+							</div>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeImageTop} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeImageTopHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeStandard} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeStandardHtml} language="html" />}
 						</div>
 					</div>
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Horisontal picture & text card</Title>
-						<div className="col-lg-12 mb-4">
-							<Paragraph>
-								Brukes der ett eller flere kort plasseres under hverandre. Kortet har fleksibel bredde, med lenketittel.
-								Bildet beholder dimensjonene selv om kortet blir høyere eller større. Tekstmengde i kortet bør begrenses.
-								Brukes som inngang til artikler eller annet innhold hvor det er viktig at brukeren får et kort sammendrag av innholdet.
-							</Paragraph>
-						</div>
-						<div className="col-lg-12 mb-4">
-							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="left" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
-								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-							</Card>
-						</div>
-						<div className="col-lg-12 mb-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeImageLeft} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeImageLeftHtml} language="html" />}
-						</div>
-					</div>
-
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Simple cards</Title>
-						<div className="col-lg-12">
-							<Paragraph>
-								Kortene passer godt i større grupper, som visuelle innganger til sider innen samme innholdstype (eksempelvis statistikksider).
-								Bør aldri inneholde mer enn et par linjer forklarende tekst i tillegg til en kort tittel.
-								Ikonene skal hjelpe brukeren til å forstå innholdet. Ikonene skal hentes fra Feather icons eller følge denne stilen.
-								Kortene kan også brukes uten ikon. Versjonen med knapp bør brukes når det er behov for tydelige innganger.
-								Ved sammenstilling av flere kort med knapp og lik verdi bør sekundærknapp eller pilikon benyttes.
-							</Paragraph>
-						</div>
-						<div className="col-lg-6 mb-4">
-							<Card href=" " hrefText="Handling" title="Tittel" icon={<Globe size={32} />}>
-								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-							</Card>
-						</div>
-						<div className="col-lg-6 mb-4">
-							<Card href=" " title="Tittel" icon={<Globe size={32} />}>
-								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-							</Card>
-						</div>
-						<div className="col-lg-12 mb-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeSimple} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeSimpleHtml} language="html" />}
-						</div>
-					</div>
-
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Profiled cards</Title>
-						<div className="col-lg-12">
-							<Paragraph>
-								Kortene passer godt i mindre grupper, som visuelle innganger til sider med ulik innholdstype.
-								Bør aldri inneholde mer enn et par linjer forklarende tekst i tillegg til en kort tittel.
-								Ikonene skal hjelpe brukeren til å forstå innholdet. Ikonene skal følge SSBs ikonstil for store ikoner.
-								Kortene kan også brukes uten ikon. Versjonen med knapp bør brukes når det er behov for tydelige innganger.
-								Ved sammenstilling av flere kort med knapp og lik verdi bør sekundærknapp eller pilikon benyttes.
-							</Paragraph>
-						</div>
+						<Title size={2} className="col-lg-12">Profiled card</Title>
 						<div className="col-lg-6">
-							<Card href=" " title="Tittel" icon={<Globe size={120} />} profiled>
-								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-							</Card>
+							<Paragraph>
+								Kortet brukes når inngangen er likestilt eller overordnet annet innhold på siden. For eksempel for å promotere ofte brukte tjenester,
+								eller for å indikere at navigasjonen er viktig for videre prosess, forståelse, opplevelse eller lignende.
+								Teksten bør kort og konsist si noe om innholdet kortet lenker til. Versjonen brukes når et mindre antall kort sammenstilles til en kortliste,
+								og som regel når kortene i listen lenker til ulike innholdstyper – for eksempel ulike tjenester eller verktøy (f.eks. navnesøk og kalkulator).
+								Ikon kan brukes for å differensiere. Alle kort i en liste skal være like – enten har alle eller ingen ikon. Ikoner skal følge SSBs ikonstil.
+							</Paragraph>
 						</div>
-						<div className="col-lg-6">
-							<Card href=" " hrefText="Handling" title="Tittel" fileLocation="./not_a_file" icon={<Globe size={120} />} profiled>
-								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-							</Card>
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="mb-4">
+								<Card href=" " title="Tittel" profiled>
+									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+								</Card>
+							</div>
+							<div className="mb-4">
+								<Card href=" " title="Tittel" icon={<Globe size={120} />} profiled>
+									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+								</Card>
+							</div>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -377,20 +357,104 @@ const CardsInfo = () => {
 					</div>
 
 					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Editorial Card</Title>
+						<div className="col-lg-6">
+							<Title size={3}>Vertical</Title>
+							<Paragraph>
+								Brukes der flere kort kan plasseres horisontalt ved siden av hverandre. Kortet har fleksibel høyde, med lenketittel.
+								Bildet beholder dimensjonene selv om kortet blir høyere eller større. Tekstmengde i kortet bør begrenses.
+								Brukes som inngang til artikler eller annet innhold hvor det er viktig at brukeren får et kort sammendrag av innholdet.
+							</Paragraph>
+							<Title size={3} className="mt-5">Horizontal</Title>
+							<Paragraph>
+								Brukes der ett eller flere kort plasseres under hverandre. Kortet har fleksibel bredde, med lenketittel.
+								Bildet beholder dimensjonene selv om kortet blir høyere eller større. Tekstmengde i kortet bør begrenses.
+								Brukes som inngang til artikler eller annet innhold hvor det er viktig at brukeren får et kort sammendrag av innholdet.
+							</Paragraph>
+							<Paragraph className="mt-5">
+								OBS!<br />
+								Horisontale og vertikale kort skal ikke kombineres i en og samme liste.
+							</Paragraph>
+						</div>
+						<div className="component-example divider-left col-lg-6 mb-4">
+							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="top" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+							</Card>
+						</div>
+						<div className="col-lg-12 mb-4">
+							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="left" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+							</Card>
+						</div>
+						<div className="col-lg-12 mb-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeEditorial} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeEditorialHtml} language="html" />}
+						</div>
+					</div>
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">Picture Card</Title>
+						<div className="col-lg-6">
+							<Title size={3}>Vertical</Title>
+							<Paragraph>
+								Kort til faktasider har fullbilde for å kommunisere at sidene er mer visuelle enn andre innholdstyper. Bildet gjør at kortene synes godt på siden.
+							</Paragraph>
+							<Title size={3} className="mt-5">Horizontal</Title>
+							<Paragraph>
+								Horisontalt kort brukes der faktasidekortene er sekundære til innholdet på siden, eller hvor primære kort blir for store og tar for mye oppmerksomhet.
+							</Paragraph>
+							<Paragraph className="mt-5">
+								OBS!<br />
+								Horisontale og vertikale kort skal ikke kombineres i en og samme liste
+							</Paragraph>
+							<Paragraph className="mt-4">
+								Horisontalt kort kan skaleres i bredde for å tilpasses ulike innholdsmaler.
+							</Paragraph>
+						</div>
+						<div className="component-example divider-left col-lg-6 mb-4">
+							<div className="float-right">
+								<PictureCard imageSrc={imageLinkVertical} altText="example" type="Type" title="Tittel" />
+							</div>
+							<div className="float-right mt-5">
+								<PictureCard imageSrc={imageLinkHorizontal} altText="example" orientation="horizontal" type="Type" title="Tittel" />
+							</div>
+						</div>
+						<div className="col-lg-12 mb-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codePictureCard} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codePictureCardHtml} language="html" />}
+						</div>
+					</div>
+
+					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Card list</Title>
 						<div className="col-lg-12 mb-4">
 							<Paragraph>
-								Når flere kort plasseres sammen til en gruppe/liste skal de følge layout-griden med 20px mellomrom til neste kort både horisontalt og vertikalt.
+								Kort i liste skal følge layoutgrid med 20px mellomrom til neste kort både horisontalt og vertikalt. Kort i samme liste bør ha lik høyde.
+								Det gir et ryddig og oversiktlig uttrykk. Kort med behov for mye tekst, primært “Editorial card”,
+								kan få ulik høyde ut fra tittel- og tekstlengde. Kortene på samme rad skal da flukte i topp. Neste rad plasseres 20px ned fra bunnen av høyeste kort i raden over.
 							</Paragraph>
 						</div>
 						<div className="col-lg-12 mb-4 grid-column grid-3">
-							<Card href=" " hrefText="Handling" title="Tittel">
+							<Card href=" " title="Tittel">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+							</Card>
+							<Card href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 							<Card href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
-							<Card href=" " title="Tittel">
+							<Card className="mt-4" href=" " hrefText="Handling" title="Tittel">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+							</Card>
+							<Card className="mt-4" href=" " title="Tittel">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+							</Card>
+							<Card className="mt-4" href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
@@ -403,39 +467,28 @@ const CardsInfo = () => {
 					</div>
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Vertical picture card</Title>
-						<div className="col-lg-6 mb-4">
+						<Title size={2} className="col-lg-12">Extension</Title>
+						<div className="col-lg-6">
 							<Paragraph>
-								Kort til faktasider har fullbilde for å kommunisere at sidene er visuelle. Bildet gjør at kortene synes godt og stikker seg ut på siden.
-								Kortene har en tydelig pil for å kommunisere at kortet er klikkbart.
+								Kort skal ikke bestå av lenke, nedlasting eller annen funksjon ut over kortets egen – som er å ta brukeren til ny side.
+								Ved behov for nedlasting i tilknytning til kort, skal et tillegg festes til bunn av kortet. Egen hover indikerer at det har en annen funksjon enn kortet.
+								Tillegget skal kun benyttes der det, ut fra et brukerperspektiv, kan effektivisere prosesser eller øke forståelse av innholdet.
+								Vurder alltid om tillegget vil forvirre mer enn det løser. Tillegget skal aldri brukes alene.
 							</Paragraph>
 						</div>
-						<div className="col-lg-6 mb-4">
-							<PictureCard image={<img src={imageLinkVertical} alt="example" />} type="Type" title="Tittel" />
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+							<Title size={3} className="col-lg-12">Eksempel</Title>
+							<div className="mb-4">
+								<Card title="Tittel" href=" " fileLocation="./not_a_file.md" downloadText="Last ned filnavn.filtype">
+									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+								</Card>
+							</div>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={imageLinkCode} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={imageLinkCodeHtml} language="html" />}
-						</div>
-					</div>
-
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Horizontal picture card</Title>
-						<div className="col-lg-12 mb-4">
-							<Paragraph>
-								Følger samme stil som vertikalt kort.
-							</Paragraph>
-						</div>
-						<div className="col-lg-12 mb-4">
-							<PictureCard orientation="horizontal" image={<img src={imageLinkHorizontal} alt="example" />} type="Type" title="Tittel" />
-						</div>
-						<div className="col-lg-12 mb-4">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={imageLinkHorizontalCode} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={imageLinkHorizontalCodeHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExtension} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExtensionHtml} language="html" />}
 						</div>
 					</div>
 

@@ -25,6 +25,10 @@
   &.grid-1 {
     grid-template-columns: repeat(1, auto);
   }
+
+  &.grid-row-gap {
+    row-gap: 20px;
+  }
 }
 
 .grid-row {

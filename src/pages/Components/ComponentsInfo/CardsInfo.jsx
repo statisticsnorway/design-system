@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Card, Divider, PictureCard, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
+import { Card, Divider, Link, PictureCard, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
 import { Globe } from 'react-feather';
-import exampleImage from '../../../../public/img/card_image.png';
+import exampleImage from '../../../../public/img/editorialCard.png';
 import pictureCardVertical from '../../../../public/img/pictureCardVertical.png';
 import pictureCardHorizontal from '../../../../public/img/pictureCardHorizontal.png';
 
@@ -107,24 +107,25 @@ const codeProfileHtml = `
 `;
 
 const codeEditorial = `
-<Card
-    imagePlacement="top"
-    image={<img src=" " alt=" " />}
-    href=" "
-    subTitle="Type  /  DD. Måned ÅÅÅÅ"
-    title="Tittel"
+<Card 
+	href=" " 
+	image={<img src={image} alt="" />} 
+	imagePlacement="top" 
+	title="Tittel" 
+	subTitle="Type  /  DD. Måned ÅÅÅÅ"
 >
-    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+	<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
 
-<Card
-    imagePlacement="left"
-    image={<img src=" " alt=" " />}
-    href=" "
-    subTitle="Type  /  DD. Måned ÅÅÅÅ"
-    title="Tittel"
+<Card 
+	href=" " 
+	image={<img src={image} 
+	alt="" />} 
+	imagePlacement="left" 
+	title="Tittel" 
+	subTitle="Type  /  DD. Måned ÅÅÅÅ"
 >
-    <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+	<Text>Tekst om innholdet skrives her for å utdype eller fortelle. Gjerne over flere linjer.</Text>
 </Card>
 `;
 
@@ -205,49 +206,73 @@ const codeCardList = `
 <Card href=" " title="Tittel">
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
-<Card className="mt-4" href=" " hrefText="Handling" title="Tittel">
+<Card title="Tittel">
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
-<Card className="mt-4" href=" " title="Tittel">
+<Card href=" " title="Tittel">
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
-<Card className="mt-4" href=" " title="Tittel">
+<Card href=" " title="Tittel">
     <Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 </Card>
 `;
 
 const codeCardListHtml = `
-<div class="col-lg-12 mb-4 grid-column grid-3">
-    <div class="ssb-card">
-        <a href=" " class="clickable top-orientation">
-            <div class="card-content">
-                <div class="card-title">Tittel</div>
-                <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
-                <div class="card-action">
-                    <i class="arrow-icon">{feather.arrowRight 22px}</i>
-                    <div class="href-text">Handling</div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="ssb-card">
-        <a href=" " class="clickable top-orientation">
-            <div class="card-content">
-                <div class="card-title">Tittel</div>
-                <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
-                <i class="arrow-icon">{feather.arrowRight 22px}</i>
-            </div>
-        </a>
-    </div>
-    <div class="ssb-card">
-        <a href=" " class="clickable top-orientation">
-            <div class="card-content">
-                <div class="card-title">Tittel</div>
-                <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
-                <i class="arrow-icon">{feather.arrowRight 22px}</i>
-            </div>
-        </a>
-    </div>
+<div class="col-lg-12 grid-column grid-3 grid-row-gap">
+   <div class="ssb-card">
+      <a href=" " class="clickable top-orientation">
+         <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+         </div>
+      </a>
+   </div>
+   <div class="ssb-card">
+      <a href=" " class="clickable top-orientation">
+         <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+         </div>
+      </a>
+   </div>
+   <div class="ssb-card">
+      <a href=" " class="clickable top-orientation">
+         <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+         </div>
+      </a>
+   </div>
+   <div class="ssb-card">
+      <a href=" " class="clickable top-orientation">
+         <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+         </div>
+      </a>
+   </div>
+   <div class="ssb-card">
+      <a href=" " class="clickable top-orientation">
+         <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+         </div>
+      </a>
+   </div>
+   <div class="ssb-card">
+      <a href=" " class="clickable top-orientation">
+         <div class="card-content">
+            <div class="card-title">Tittel</div>
+            <span class="ssb-text-wrapper">Tekst om innholdet skrives her for å utdype eller fortelle.</span>
+            <i class="arrow-icon">{feather.arrowRight 22px}</i>
+         </div>
+      </a>
+   </div>
 </div>
 `;
 
@@ -302,7 +327,7 @@ const CardsInfo = () => {
 								Teksten bør kort og konsist si noe om innholdet kortet lenker til. Versjonen brukes når et større antall kort sammenstilles til en kortliste. Kortene i listen skal,
 								som regel, lenke til samme innholdstype, men ulike sider – for eksempel ulike statistikksider. Ikon kan brukes for å differensiere.
 								Alle kort i en liste skal være like – enten har alle eller ingen ikon.
-								Ikoner hentes fra feathericons.com eller følger samme stil som feather icons.
+								Ikoner hentes fra <Link href="https://feathericons.com/" isExternal> feathericons.com</Link> eller følger samme stil som feather icons.
 							</Paragraph>
 						</div>
 						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
@@ -381,9 +406,9 @@ const CardsInfo = () => {
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
-						<div className="col-lg-12 mb-4">
+						<div className="col-lg-12 mb-4 mt-4">
 							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="left" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
-								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle. Gjerne over flere linjer.</Text>
 							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
@@ -438,7 +463,7 @@ const CardsInfo = () => {
 								kan få ulik høyde ut fra tittel- og tekstlengde. Kortene på samme rad skal da flukte i topp. Neste rad plasseres 20px ned fra bunnen av høyeste kort i raden over.
 							</Paragraph>
 						</div>
-						<div className="col-lg-12 mb-4 grid-column grid-3">
+						<div className="col-lg-12 grid-column grid-3 grid-row-gap">
 							<Card href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
@@ -448,13 +473,13 @@ const CardsInfo = () => {
 							<Card href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
-							<Card className="mt-4" href=" " hrefText="Handling" title="Tittel">
+							<Card href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
-							<Card className="mt-4" href=" " title="Tittel">
+							<Card href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
-							<Card className="mt-4" href=" " title="Tittel">
+							<Card href=" " title="Tittel">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
 						</div>
@@ -581,7 +606,7 @@ const CardsInfo = () => {
 					</div>
 					<Divider className="mb-4" light />
 					<div>
-						<Title size={2}>Props ImageLink</Title>
+						<Title size={2}>Props PictureCard</Title>
 						<table className="col-lg-12 mb-4">
 							<thead style={{ textAlign: 'left' }}>
 								<tr>
@@ -597,9 +622,14 @@ const CardsInfo = () => {
 									<td>Optional container class</td>
 								</tr>
 								<tr>
-									<td><code>image</code></td>
-									<td>node</td>
-									<td>An image to be put as background</td>
+									<td><code>imageSrc</code></td>
+									<td>required (url)</td>
+									<td>URL of the image to be used</td>
+								</tr>
+								<tr>
+									<td><code>altText</code></td>
+									<td>required string</td>
+									<td>alt text for screen readers</td>
 								</tr>
 								<tr>
 									<td><code>link </code></td>
@@ -610,6 +640,11 @@ const CardsInfo = () => {
 									<td><code>onClick</code></td>
 									<td>func</td>
 									<td>Function callback to be used instead of link</td>
+								</tr>
+								<tr>
+									<td><code>orientation</code></td>
+									<td>horizontal or vertical</td>
+									<td>Orientation of card</td>
 								</tr>
 								<tr>
 									<td><code>title</code></td>

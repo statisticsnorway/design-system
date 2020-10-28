@@ -3,8 +3,8 @@ import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { Card, Divider, PictureCard, LeadParagraph, Paragraph, Tabs, Title, Text } from '@statisticsnorway/ssb-component-library';
 import { Globe } from 'react-feather';
 import exampleImage from '../../../../public/img/card_image.png';
-import imageLinkVertical from '../../../../public/img/imageLinkVertical.jpg';
-import imageLinkHorizontal from '../../../../public/img/imageLinkHorizontal.jpg';
+import pictureCardVertical from '../../../../public/img/pictureCardVertical.png';
+import pictureCardHorizontal from '../../../../public/img/pictureCardHorizontal.png';
 
 const rationaleText = `
 As can be seen between these different profiled box elements, even though these are labeled underneath the same element, 
@@ -415,10 +415,10 @@ const CardsInfo = () => {
 						</div>
 						<div className="component-example divider-left col-lg-6 mb-4">
 							<div className="float-right">
-								<PictureCard imageSrc={imageLinkVertical} altText="example" type="Type" title="Tittel" />
+								<PictureCard imageSrc={pictureCardVertical} altText="example" type="Type" title="Tittel" />
 							</div>
 							<div className="float-right mt-5">
-								<PictureCard imageSrc={imageLinkHorizontal} altText="example" orientation="horizontal" type="Type" title="Tittel" />
+								<PictureCard imageSrc={pictureCardHorizontal} altText="example" orientation="horizontal" type="Type" title="Tittel" />
 							</div>
 						</div>
 						<div className="col-lg-12 mb-4">

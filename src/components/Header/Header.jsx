@@ -32,7 +32,7 @@ const Header = () => {
 						<div className="diagonal-divider" />
 						<div className="site-title">Designsystem</div>
 						&nbsp;
-						<div className="desktop-version-number"><Text>v2.0.33</Text></div>
+						<div className="desktop-version-number"><Text>v2.0.34</Text></div>
 					</div>
 				</div>
 
@@ -111,7 +111,7 @@ const Header = () => {
 							><GitHub size="18" />&nbsp;Github
 							</a>
 						</div>
-						<div className="version-number"><Text>v1.1.42</Text></div>
+						<div className="version-number"><Text>v2.0.34</Text></div>
 					</div>
 				)}
 			</div>

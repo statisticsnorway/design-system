@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'react-feather';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Divider, LeadParagraph, Link, Paragraph, Tabs, TableLink, Title } from '@statisticsnorway/ssb-component-library';
+import { Divider, LeadParagraph, Link, Paragraph, Tabs, TableLink, Title, CategoryLink } from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
 	{
@@ -165,6 +165,25 @@ const tableLinkHtml = `
 </a>
 `;
 
+const categoryLinks = `
+<CategoryLink href="" titleText="Category link with description" subText="Description goes here" />
+`;
+const categoryLinksHtml = `
+<a class="ssb-category-link" href=" ">
+	<div class="div-wrapper">
+		<div class="text-divs title-wrapper">
+			<span class="link-title-text">Category link with description</span>
+		</div>
+		<div class="text-divs sub-wrapper">
+			<span class="link-sub-text">Description goes here</span>
+		</div>
+		<svg class="arrow-icon">
+			{insert svg icon with same class as above}
+		</svg>
+	</div>
+</a>
+`;
+
 const LinksInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
 	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
@@ -210,7 +229,6 @@ const LinksInfo = () => {
 							{activeCodeTab === '/react' && <CodeSnippet code={ordinaryLink} language="jsx" />}
 							{activeCodeTab === '/html' && <CodeSnippet code={ordinaryLinkHtml} language="html" />}
 						</div>
-
 
 					</div>
 
@@ -379,6 +397,29 @@ const LinksInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={tableLinkHtml} language="html" />}
 						</div>
 					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Category Link</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Category link brukes for å fremheve innganger til et neste steg i navigasjonen på nettsiden. De brukes primært på veien fra et hovedemne til et delemne på ssb.no.
+							</Paragraph>
+						</div>
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<CategoryLink href="" titleText="Category link with description" subText="Description goes here" />
+							</div>
+						</div>
+						<div className="col-lg-12">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={categoryLinks} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={categoryLinksHtml} language="html" />}
+						</div>
+					</div>
+
 				</div>
 			)}
 
@@ -505,6 +546,56 @@ const LinksInfo = () => {
 								<td><code>text</code></td>
 								<td>string</td>
 								<td>Required. Text for tablelink, above description</td>
+							</tr>
+							<tr>
+								<td><code>title</code></td>
+								<td>string</td>
+								<td>The title attribute is used to provide additional information</td>
+							</tr>
+							<tr>
+								<td><code>ariaLabel</code></td>
+								<td>string</td>
+								<td>Defines a string value that describe the link</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<Divider className="mb-4" light />
+
+					<Title size={2}>Props CategoryLink</Title>
+					<table className="col-lg-12 mb-3">
+						<thead style={{ textAlign: 'left' }}>
+							<tr>
+								<th><Title size={3}>Prop name</Title></th>
+								<th><Title size={3}>Type</Title></th>
+								<th><Title size={3}>Description</Title></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>className</code></td>
+								<td>string</td>
+								<td>Optional container class</td>
+							</tr>
+							<tr>
+								<td><code>titleText</code></td>
+								<td>string</td>
+								<td>Required. main text for CategoryLink</td>
+							</tr>
+							<tr>
+								<td><code>href</code></td>
+								<td>string</td>
+								<td>Required. Destination for navigation</td>
+							</tr>
+							<tr>
+								<td><code>tabIndex</code></td>
+								<td>number</td>
+								<td>Tab index for focus</td>
+							</tr>
+							<tr>
+								<td><code>subText</code></td>
+								<td>string</td>
+								<td>Required. description text for CategoryLink, underneath titleText</td>
 							</tr>
 							<tr>
 								<td><code>title</code></td>

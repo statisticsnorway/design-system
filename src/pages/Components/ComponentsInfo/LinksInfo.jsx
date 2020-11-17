@@ -408,9 +408,7 @@ const LinksInfo = () => {
 							</Paragraph>
 						</div>
 						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
-							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<CategoryLink className="no-minwidth" href="" titleText="Category link with description" subText="Description goes here" />
-							</div>
+							<CategoryLink className="no-minwidth" href="" titleText="Category link with description" subText="Description goes here" />
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />

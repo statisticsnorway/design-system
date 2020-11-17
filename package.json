@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@statisticsnorway/ssb-component-library": "^2.0.34",
+    "@statisticsnorway/ssb-component-library": "^2.0.35",
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.5",
     "gh-pages": "^2.2.0",

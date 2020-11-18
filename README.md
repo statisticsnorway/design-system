@@ -38,7 +38,7 @@ The project is published with [Github Pages](https://pages.github.com/).
 To publish a new build, navigate to master branch and make sure you have the latest updates. 
 Make sure that the latest version of the component library is installed. Also make sure the version number in the header is correct.
 Build the latest version with `npm run build` and makes sure the build doesn't fail.
-When build is done, publish by running `gh-pages -d build`. The branch named `gh-pages` should
+When build is done, publish by running `npm run deploy`. The branch named `gh-pages` should
 update and start the build process. 
 
 #### Styling

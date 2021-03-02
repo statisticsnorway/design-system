@@ -22,7 +22,7 @@
     "core-js": "^3.6.5",
     "gh-pages": "^2.2.0",
     "history": "^4.10.1",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

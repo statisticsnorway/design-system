@@ -39,7 +39,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.2.2",
-    "babel-plugin-prismjs": "^1.1.1",
+    "babel-plugin-prismjs": "^2.0.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "brotli-webpack-plugin": "^1.1.0",
     "cross-env": "^7.0.3",

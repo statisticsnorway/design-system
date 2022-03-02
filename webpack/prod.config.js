@@ -14,7 +14,6 @@ module.exports = merge(base, {
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, '../build'),
-		publicPath: '/design-system', // To ensure proper path for GH-Pages
 	},
 	module: {
 		rules: [

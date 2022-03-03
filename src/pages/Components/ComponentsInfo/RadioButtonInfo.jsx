@@ -45,7 +45,7 @@ const codeHtml = `
     <!-- Use flex-row If horizontal layout -->
     <div class="boxes flex-column">
         <div class="ssb-radio">
-            <input tabindex="0" id="item1" name="Header" type="radio" value="item1">
+            <input tabindex="0" id="item1" name="Header" type="radio" value="item1" checked="">
             <label class="radio-label" for="item1">Item 1</label>
         </div>
         <div class="ssb-radio">

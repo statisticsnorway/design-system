@@ -175,22 +175,24 @@ const codePictureCard = `
 `;
 
 const codePictureCardHtml = `
-<a class="ssb-picture-card vertical ">
+<a class="ssb-picture-card vertical">
    <div class="image-background">
    		<img src="" alt="example">
    </div>
    <div class="overlay">
-      <span class="il-type">Type</span><span class="il-title">Tittel</span>
+      <span class="il-type">Type</span>
+	  <span class="il-title">Tittel</span>
       {feather.arrowRightCircle 32px}
    </div>
 </a>
 
-<a class="ssb-picture-card horizontal ">
+<a class="ssb-picture-card horizontal">
    <div class="image-background">
    		<img src="" alt="example">
    </div>
    <div class="overlay">
-      <span class="il-type">Type</span><span class="il-title">Tittel</span>
+      <span class="il-type">Type</span>
+	  <span class="il-title">Tittel</span>
       {feather.arrowRightCircle 32px}
    </div>
 </a>
@@ -501,13 +503,10 @@ const CardsInfo = () => {
 								Vurder alltid om tillegget vil forvirre mer enn det løser. Tillegget skal aldri brukes alene.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
-							<Title size={3} className="col-lg-12">Eksempel</Title>
-							<div className="mb-4">
-								<Card title="Tittel" href=" " fileLocation="./not_a_file.md" downloadText="Last ned filnavn.filtype">
-									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
-								</Card>
-							</div>
+						<div className="component-example col-lg-6 divider-left">
+							<Card title="Tittel" href=" " fileLocation="./not_a_file.md" downloadText="Last ned filnavn.filtype">
+								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
+							</Card>
 						</div>
 						<div className="col-lg-12 mb-4">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
@@ -597,9 +596,14 @@ const CardsInfo = () => {
 									<td>Smaller text above title</td>
 								</tr>
 								<tr>
-									<td><code>Title</code></td>
+									<td><code>title</code></td>
 									<td>string</td>
 									<td>Card title</td>
+								</tr>
+								<tr>
+									<td><code>external</code></td>
+									<td>bool</td>
+									<td>Change icon from ArrowRight to ExternalLink</td>
 								</tr>
 							</tbody>
 						</table>

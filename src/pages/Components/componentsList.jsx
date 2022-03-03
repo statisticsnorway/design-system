@@ -73,7 +73,7 @@ const componentsList = [
 	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },
 	{ component: '', label: 'Map', path: '/map', icon: mapIcon, comingSoon: true },
 	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
-	{ component: QuotesInfo, label: 'Quotes & Highlight', path: '/quotes', icon: quoteIcon },
+	{ component: QuotesInfo, label: 'Quote and Highlighting	', path: '/quotes', icon: quoteIcon },
 	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
 	{ component: '', label: 'Responsive media', path: '/responsive-media', icon: responsiveIcon, comingSoon: true },
 	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },

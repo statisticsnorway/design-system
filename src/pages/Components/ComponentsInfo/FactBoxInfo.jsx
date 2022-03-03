@@ -51,15 +51,15 @@ const codeReact = `
 const codeHtml = `
 <div class="ssb-fact-box">
 	<div class="ssb-accordion without-borders">
-			<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
-					<span class="button-grid">
-						<span class="header-text">This is a fact box header</span>
-						{20px ChevronDown icon, add class="expand-icon" }
-					</span>
-			</button>
-			<div class="accordion-body closed">
-					{insert content}
-			</div>
+		<button class="accordion-header closed" aria-expanded="false"  onclick="{toggle classname to 'open' and aria-expanded to 'true'} tabindex="0">
+			<span class="button-grid">
+				<span class="header-text">This is a fact box header</span>
+				{20px ChevronDown icon, add class="expand-icon" }
+			</span>
+		</button>
+		<div class="accordion-body closed">
+			{insert content}
+		</div>
 	</div>
 </div>
 `;

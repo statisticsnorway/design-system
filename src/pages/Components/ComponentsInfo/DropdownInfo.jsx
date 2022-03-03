@@ -99,12 +99,57 @@ const codeExamplePreSelected = `
 />
 `;
 
+const codeExamplePreSelectedHtml = `
+<div id="dropdown" class="ssb-dropdown">
+	<span id="dropdown-label">Menu header</span>
+	<div class="dropdown-interactive-area">
+		<!-- If expanded -->
+		<button class="focused opener" id="button_dropdown" tabindex="0" type="button" aria-expanded="true" aria-haspopup="listbox" aria-labelledby="dropdown-label button_dropdown">
+			Ocean
+		</button>
+		<div class="dd-icon">{24px chevronUp icon}</div>
+		<ul id="list_of_options_dropdown" class="list-of-options" role="listbox" aria-labelledby="dropdown-label" aria-activedescendant="item1" tabindex="-1">
+			<li class="option-list-element active" id="item1" role="option" aria-selected="true">Apples</li>
+			<li class="option-list-element" id="item2" role="option">Rainbows</li><li class="option-list-element selected" id="item3" role="option">Ocean</li>
+			<li class="option-list-element" id="item4" role="option">Automobiles</li>
+		</ul>
+		<!-- If closed -->
+		<button class="opener" id="button_dropdown" tabindex="0" type="button" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="dropdown-label button_dropdown">
+			Ocean
+		</button>
+		<div class="dd-icon">{24px chevronDown icon}</div>
+	</div>
+</div>
+`;
+
 const codeExampleSearchable = `
 <Dropdown 
 	header="Menu header" 
 	searchable 
 	items={items} 
 />
+`;
+
+const codeExampleSearchableHtml = `
+<div id="dropdown" class="ssb-dropdown">
+	<label for="input_dropdown">Menu header</label>
+	<div class="dropdown-interactive-area">
+		<!-- If expanded -->
+		<input class="focused" id="input_dropdown" placeholder="-- Select --" type="text" value=""
+			role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="list_of_options_dropdown" aria-activedescendant="item1">
+		<div class="dd-icon">{24px chevronUp icon}</div>
+		<ul id="list_of_options_dropdown" class="list-of-options" role="listbox" tabindex="-1">
+			<li class="option-list-element active" id="item1" role="option" aria-selected="true">Apples</li>
+			<li class="option-list-element" id="item2" role="option">Rainbows</li>
+			<li class="option-list-element" id="item3" role="option">Ocean</li>
+			<li class="option-list-element" id="item4" role="option">Automobiles</li>
+		</ul>
+		<!-- If closed -->
+		<input class="" id="input_dropdown" placeholder="-- Select --" type="text" value=""
+			role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="list_of_options_dropdown" aria-activedescendant="">
+ 		<div class="dd-icon">{24px chevronDown icon}</div>
+	</div>
+</div>
 `;
 
 const DropdownInfo = () => {
@@ -151,7 +196,10 @@ const DropdownInfo = () => {
 							<Dropdown header="Menu header" selectedItem={{ title: 'Ocean', id: 'item3' }} items={items} />
 						</div>
 						<div className="col-lg-12 mt-4">
-							<CodeSnippet code={codeExamplePreSelected} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExamplePreSelected} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExamplePreSelectedHtml} language="html" />}
 						</div>
 					</div>
 
@@ -166,7 +214,10 @@ const DropdownInfo = () => {
 							<Dropdown header="Menu header" searchable items={items} />
 						</div>
 						<div className="col-lg-12 mt-4">
-							<CodeSnippet code={codeExampleSearchable} language="jsx" />
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={codeExampleSearchable} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeExampleSearchableHtml} language="html" />}
 						</div>
 					</div>
 

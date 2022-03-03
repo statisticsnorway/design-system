@@ -37,7 +37,7 @@ const codeExample = `
 
 const codeExampleHtml = `
 <div class="ssb-accordion">
-	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
+	<button class="accordion-header closed" aria-expanded="false" onclick="{toggle classname to 'open' and aria-expanded to 'true'} tabindex="0">
 		<span class="button-grid">
 			<span class="header-text">This is a standard accordion</span>
 			{20px ChevronDown icon, add class="expand-icon" }
@@ -57,14 +57,14 @@ const codeExampleSubheader = `
 
 const codeExampleSubheaderHtml = `
 <div class="ssb-accordion with-sub-header">
-	<button class="accordion-header closed" onclick="{toggle classname to 'open'}>
-		<span class=" button-grid ">
+	<button class="accordion-header closed" aria-expanded="false" onclick="{toggle classname to 'open' and aria-expanded to 'true'} tabindex="0">
+		<span class="button-grid">
 			<span class="sub-header">Tabell 1</span>
 			<span class="header-text">This is a table accordion</span>
-			{20px ChevronDown icon, add class="expand-icon " }
+			{20px ChevronDown icon, add class="expand-icon" }
 		</span>
 	</button>
-	<div class="accordion-body closed ">
+	<div class="accordion-body closed">
 		{insert content}
 	</div>
 </div>
@@ -81,18 +81,18 @@ const nestedExample = `
 
 const nestedExampleHtml = `
 <div class="ssb-accordion">
-    <button class="accordion-header closed" onclick="{toggle classname to 'open'}" tabindex="0">
+    <button class="accordion-header closed" aria-expanded="false" onclick="{toggle classname to 'open' and aria-expanded to 'true'}" tabindex="0">
         <span class=" button-grid ">
 			<span class="header-text">This is a nested accordion</span>
             <!-- If open -->
             {20px chevronUp icon, add class="expand-icon" }
             <!-- If closed -->
             {20px chevronDown icon, add class="expand-icon" }
-      	</span>
+    	</span>
     </button>
     <div class="accordion-body open ">This is paragraph text which explains the accordion, the rest of the text is just to fill it out and show the space it takes.
         <div class="ssb-nested-accordion">
-            <button class="nested-accordion-header closed " onclick="{toggle classname to 'open'}">
+            <button class="nested-accordion-header closed" aria-expanded="false" onclick="{toggle classname to 'open' and aria-expanded to 'true'}">
                 <span class=" button-grid ">
                     <!-- If open -->
                     {16px chevronUp icon, add class="expand-icon" }
@@ -207,8 +207,6 @@ const AccordionInfo = () => {
 					</div>
 
 					<Divider light className="mb-4" />
-
-
 				</div>
 			)}
 
@@ -241,6 +239,11 @@ const AccordionInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>id</code></td>
+								<td>string</td>
+								<td>Optional id</td>
+							</tr>
+							<tr>
 								<td><code>children</code></td>
 								<td>node</td>
 								<td>Accordion content</td>
@@ -269,6 +272,11 @@ const AccordionInfo = () => {
 								<td><code>withoutBorders</code></td>
 								<td>bool</td>
 								<td>Default false, Accordion without border on top and bottom if value is true</td>
+							</tr>
+							<tr>
+								<td><code>onToggle</code></td>
+								<td>func</td>
+								<td>Callback with isOpen boolean that is triggered on open/close</td>
 							</tr>
 						</tbody>
 					</table>

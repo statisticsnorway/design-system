@@ -49,20 +49,26 @@ const codeLargeHtml = `
         <!-- Insert icon -->
     </div>
     <div>
-        <button class="ssb-glossary">
-            <div class="glossary-text-wrap">
-                <span class="kf-title">Antall husholdninger</span>
-            </div>
-            <i/>
-            <div class="glossary-animate-background"></div>
-        </button>        
+		<button class="ssb-glossary" onclick="{toggle classname for 'glossary-popup' to 'glossary-popup open' below}">
+			<div class="glossary-text-wrap">Antall husholdninger</div>
+			<i class="glossary-logo">{feather.openBook 12px}</i>
+			<div class="glossary-popup">
+				<div class="content-box">
+					<span class="info-text">{insert explanation}</span>
+					<div class="ssb-glossary-closing">
+					<i class="icon">{feather.xCircle 14px}</i>
+					<span>Lukk</span>
+					</div>
+				</div>
+			</div>
+		</button>    
         <div class="kf-time">2018</div>
         <div class="number-section">
             <div class="ssb-number large">789 398</div>
             <span class="kf-title subtitle">husholdninger</span>
         </div>
         <div class="kf-changes">
-             <i class="changes-icon">{feather.[ chevronDown | chevronUp | Minus] 20px}</i>
+            <i class="changes-icon">{feather.[ chevronDown | chevronUp | Minus] 20px}</i>
             <span class="changes-text">Opp 30 999 kroner</span>&nbsp;
             <span class="changes-periode">fra året før</span>
         </div>
@@ -86,7 +92,8 @@ const codeMediumHtml = `
     <div class="kf-icon medium">
         <!-- Insert icon -->
     </div>
-    <div><span class="kf-title">Menn</span>
+    <div>
+		<span class="kf-title">Menn</span>
         <div class="kf-time">2018</div>
         <div class="number-section">
             <div class="ssb-number medium">80,6</div>
@@ -123,7 +130,6 @@ const codeSmallHtml = `
 </div>
 `;
 
-
 const codeMediumGreenbox = `
 <KeyFigures
     title="Valgdeltagelse ved stortingsvalg"
@@ -135,19 +141,18 @@ const codeMediumGreenbox = `
 />
 `;
 
-
 const codeMediumGreenboxHtml = `
 <div class="ssb-key-figures medium green-box">
     <div>
         <span class="kf-title">Valgdeltagelse ved stortingsvalg</span>
         <div class="kf-time">2018</div>
         <div class="number-section">
-            <div class="ssb-number medium">78,2</div><span class="kf-title subtitle">prosent</span>
+            <div class="ssb-number medium">78,2</div>
+			<span class="kf-title subtitle">prosent</span>
         </div>
     </div>
 </div>
 `;
-
 
 const KeyFiguresInfo = () => {
 	const [activeTab, changeTab] = useState(tabItems[0].path);
@@ -323,7 +328,6 @@ const KeyFiguresInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={codeMediumGreenboxHtml} language="html" />}
 						</div>
 					</div>
-
 
 				</div>
 			)}

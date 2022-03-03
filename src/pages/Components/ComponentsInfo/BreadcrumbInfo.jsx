@@ -56,7 +56,7 @@ const codeExampleHtml = `
             <span class="link-text">breadcrumb 2</span>
         </a>&nbsp;/&nbsp;
     </div>
-    <span class="current-page">breadcrumb 3</span>
+    <span>breadcrumb 3</span>
 </div>
 `;
 

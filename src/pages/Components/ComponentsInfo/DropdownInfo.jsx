@@ -70,17 +70,24 @@ const codeExample = `
 `;
 
 const codeExampleHtml = `
-<div class="ssb-dropdown">
-  <label for="input-dropdown">Menu header</label>
-  <div class="dropdown-interactive-area">
-    <input class="focused" id="input-dropdown" disabled="" placeholder="Select item" value="">
-    <div class="dd-icon"><i /></div>
-    <div class="list-of-options">
-      <div class="option-list-element" value="item1" id="item1">Apples</div>
-      <div class="option-list-element selected" value="item2" id="item2">Rainbows</div>
-      <div class="option-list-element" value="item3" id="item3">Ocean</div>
-    </div>
-  </div>
+<div id="dropdown" class="ssb-dropdown">
+	<span id="dropdown-label">Menu header</span>
+	<div class="dropdown-interactive-area">
+		<!-- If expanded -->
+		<button class="focused opener" id="button_dropdown" tabindex="0" type="button" aria-expanded="true" aria-haspopup="listbox" aria-labelledby="dropdown-label button_dropdown">
+			-- Select --
+		</button>
+		<div class="dd-icon">{24px chevronUp icon}</div>
+		<ul id="list_of_options_dropdown" class="list-of-options" role="listbox" aria-labelledby="dropdown-label" tabindex="-1" aria-activedescendant="item1">
+			<li class="option-list-element active" id="item1" role="option" aria-selected="true">Apples</li>
+			<li class="option-list-element" id="item2" role="option">Rainbows</li>
+			<li class="option-list-element" id="item3" role="option">Ocean</li>
+			<li class="option-list-element" id="item4" role="option">Automobiles</li>
+		</ul>
+		<!-- If closed -->
+		<button class="opener" id="button_dropdown" tabindex="0" type="button" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="dropdown-label button_dropdown">-- Select --</button>
+		<div class="dd-icon">{24px chevronDown icon}</div>
+	</div>
 </div>
 `;
 
@@ -191,14 +198,34 @@ const DropdownInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>id</code></td>
+								<td>string</td>
+								<td>Optional id</td>
+							</tr>
+							<tr>
 								<td><code>className</code></td>
 								<td>string</td>
 								<td>Optional container class</td>
 							</tr>
 							<tr>
+								<td><code>error</code></td>
+								<td>bool</td>
+								<td>Show error message if true</td>
+							</tr>
+							<tr>
+								<td><code>errorMessage</code></td>
+								<td>string</td>
+								<td>Renders an error message underneath input field</td>
+							</tr>
+							<tr>
 								<td><code>header</code></td>
 								<td>string</td>
 								<td>Header above dropdown</td>
+							</tr>
+							<tr>
+								<td><code>icon</code></td>
+								<td>object</td>
+								<td>Alternative icon</td>
 							</tr>
 							<tr>
 								<td><code>items</code></td>
@@ -234,6 +261,16 @@ const DropdownInfo = () => {
 								<td><code>tabIndex</code></td>
 								<td>string</td>
 								<td>Tab index for focus</td>
+							</tr>
+							<tr>
+								<td><code>ariaLabel</code></td>
+								<td>string</td>
+								<td>Defines a string value that labels input or span to button element, use if not visible header</td>
+							</tr>
+							<tr>
+								<td><code>largeSize</code></td>
+								<td>bool</td>
+								<td>Change width to 100% and size of font and icon</td>
 							</tr>
 						</tbody>
 					</table>

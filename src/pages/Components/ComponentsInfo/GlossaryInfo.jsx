@@ -16,23 +16,22 @@ const tabItems = [
 ];
 
 const codeExampleJsx = `
-<Glossary explanation={placeHolder}>Explain this</Glossary>
+<Glossary explanation={placeHolder}>{insert word}</Glossary>.
 `;
 
 const codeExampleHtml = `
-<button class="ssb-glossary"><!-- click to toggle 'open' class -->
-  <div class="glossary-text-wrap">Explain this</div>
-  <i>{feather.openBook 12px}</i>
-  <div class="glossary-animate-background"></div>
-  <div class="ssb-glossary-popup {open or closed}">
-    <div class="content-box">
-      <span class="info-text">{insert explanation}</span>
-      <div class="ssb-glossary-closing">
-        <i class="icon">{feather.xCircle 14px}</i>
-        <span>Lukk</span>
-      </div>
-    </div>
-  </div>
+<button class="ssb-glossary" onclick="{toggle classname for 'glossary-popup' to 'glossary-popup open' below}">
+	<div class="glossary-text-wrap">{insert word}</div>
+	<i class="glossary-logo">{feather.openBook 12px}</i>
+	<div class="glossary-popup">
+		<div class="content-box">
+			<span class="info-text">{insert explanation}</span>
+			<div class="ssb-glossary-closing">
+			<i class="icon">{feather.xCircle 14px}</i>
+			<span>Lukk</span>
+			</div>
+		</div>
+	</div>
 </button>
 `;
 

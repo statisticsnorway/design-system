@@ -68,11 +68,11 @@ const profiledLinks = `
 `;
 
 const profiledLinksHtml = `
-<a class="ssb-link" href=" " target="" rel="">
+<a class="ssb-link profiled" href=" " target="" rel="">
   <span class="link-text">This is a profiled text link</span>
 </a>
 
-<a class="ssb-link negative" href=" " target="" rel="">
+<a class="ssb-link profiled negative" href=" " target="" rel="">
   <span class="link-text">This is a profiled text link</span>
 </a>
 `;
@@ -137,7 +137,7 @@ const tableLink = `
 `;
 
 const tableLinkHtml = `
-<a className="ssb-table-link" href="" target="_blank">
+<a className="ssb-table-link" href="" target="_blank" rel="">
 	<div className="tl-icon">
 		<i>{insert icon here feather.arrowRight 22px}</i>
 	</div>
@@ -150,7 +150,7 @@ const tableLinkHtml = `
 		</span>
 	</div>
 </a>
-<a className="ssb-table-link" href="" target="_blank">
+<a className="ssb-table-link" href="" target="_blank" rel="">
     <div className="tl-icon">
         <i>{insert icon here feather.arrowRight 22px}</i>
     </div>
@@ -169,7 +169,7 @@ const categoryLinks = `
 <CategoryLink href="" titleText="Category link with description" subText="Description goes here" />
 `;
 const categoryLinksHtml = `
-<a class="ssb-category-link" href=" ">
+<a class="ssb-category-link no-minwidth" href=" ">
 	<div class="div-wrapper">
 		<div class="text-divs title-wrapper">
 			<span class="link-title-text">Category link with description</span>
@@ -500,6 +500,11 @@ const LinksInfo = () => {
 								<td>string</td>
 								<td>The title attribute is used to provide additional information</td>
 							</tr>
+							<tr>
+								<td><code>onClick</code></td>
+								<td>function</td>
+								<td>Callback for anchor click</td>
+							</tr>
 						</tbody>
 					</table>
 
@@ -570,6 +575,11 @@ const LinksInfo = () => {
 							</tr>
 						</thead>
 						<tbody>
+							<tr>
+								<td><code>ariaLabel</code></td>
+								<td>string</td>
+								<td>Defines a string value that describe the link</td>
+							</tr>
 							<tr>
 								<td><code>className</code></td>
 								<td>string</td>

@@ -95,23 +95,23 @@ const codeExampleError = `
 `;
 
 const codeExampleErrorHtml = `
-<div class="ssb-input error ">
+<div class="ssb-input error">
     <label for="input1">Passord</label>
     <div class="input-wrapper">
-        <input id="input1" type="text" class=" with-icon" value="">
+        <input id="input1" type="text" class="with-icon" aria-describedby="error_input1" value="">
     </div>
-    <div class="ssb-input-error ">
-        <span>Skriv inn passord, minimum 6 siffer</span>
+    <div class="ssb-input-error" id="error_input1">
+        <span aria-live="assertive">Skriv inn passord, minimum 6 siffer</span>
     </div>
 </div>
 
-<div class="ssb-input negative error ">
+<div class="ssb-input negative error">
     <label for="input1">Passord</label>
     <div class="input-wrapper">
-        <input id="input1" type="text" class=" with-icon" value="">
+        <input id="input1" type="text" class="with-icon" aria-describedby="error_input1" value="">
     </div>
-    <div class="ssb-input-error negative">
-        <span>Skriv inn passord, minimum 6 siffer</span>
+    <div class="ssb-input-error negative" id="error_input1">
+        <span aria-live="assertive">Skriv inn passord, minimum 6 siffer</span>
     </div>
 </div>
 `;
@@ -226,9 +226,24 @@ const InputInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>role</code></td>
+								<td>string</td>
+								<td>Defines a string value that assigns a role type to the input element wrapper</td>
+							</tr>
+							<tr>
+								<td><code>ariaLabelWrapper</code></td>
+								<td>string</td>
+								<td>Defines a string value that labels the input element wrapper</td>
+							</tr>
+							<tr>
 								<td><code>ariaLabel</code></td>
 								<td>string</td>
 								<td>Defines a string value that labels input element, use if label is not visible</td>
+							</tr>
+							<tr>
+								<td><code>ariaLabelledBy</code></td>
+								<td>string</td>
+								<td>The ariaLabelledBy string identifies the id to the element (or elements) that labels the element it is applied to.</td>
 							</tr>
 							<tr>
 								<td><code>ariaLabelSearchButton</code></td>
@@ -261,6 +276,16 @@ const InputInfo = () => {
 								<td>Callback function</td>
 							</tr>
 							<tr>
+								<td><code>onFocus</code></td>
+								<td>func</td>
+								<td>Callback on focus</td>
+							</tr>
+							<tr>
+								<td><code>onBlur</code></td>
+								<td>func</td>
+								<td>Callback on blur</td>
+							</tr>
+							<tr>
 								<td><code>id</code></td>
 								<td>string</td>
 								<td>ID to connect label with input field</td>
@@ -284,6 +309,11 @@ const InputInfo = () => {
 								<td><code>searchField</code></td>
 								<td>bool</td>
 								<td>Ads search icon with click</td>
+							</tr>
+							<tr>
+								<td><code>size</code></td>
+								<td>string</td>
+								<td>Set inputfield size. lg is the only available option</td>
 							</tr>
 							<tr>
 								<td><code>submitCallback</code></td>
@@ -409,6 +439,11 @@ const InputInfo = () => {
 								<td><code>negative</code></td>
 								<td>bool</td>
 								<td>Changes design</td>
+							</tr>
+							<tr>
+								<td><code>id</code></td>
+								<td>string</td>
+								<td>ID to connect input field and input error</td>
 							</tr>
 						</tbody>
 					</table>

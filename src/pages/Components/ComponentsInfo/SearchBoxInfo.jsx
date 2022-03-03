@@ -33,8 +33,8 @@ const codeReact = `
 `;
 
 const codeHtml = `
-<div class="ssb-input ">
-    <div class="input-wrapper">
+<div class="ssb-input">
+    <div class="input-wrapper" role="search">
         <input id="input1" type="text" placeholder="Search text" aria-label="Input field Search" class="with-icon" value="">
         <button class="icon-wrapper search-icon">
             {insert Search icon here}
@@ -107,9 +107,29 @@ const SearchBoxInfo = () => {
 						</thead>
 						<tbody>
 							<tr>
+								<td><code>role</code></td>
+								<td>string</td>
+								<td>Defines a string value that assigns a role type to the input element wrapper</td>
+							</tr>
+							<tr>
+								<td><code>ariaLabelWrapper</code></td>
+								<td>string</td>
+								<td>Defines a string value that labels the input element wrapper</td>
+							</tr>
+							<tr>
 								<td><code>ariaLabel</code></td>
 								<td>string</td>
 								<td>Defines a string value that labels input element, use if label is not visible</td>
+							</tr>
+							<tr>
+								<td><code>ariaLabelledBy</code></td>
+								<td>string</td>
+								<td>The ariaLabelledBy string identifies the id to the element (or elements) that labels the element it is applied to.</td>
+							</tr>
+							<tr>
+								<td><code>ariaLabelSearchButton</code></td>
+								<td>string</td>
+								<td>Defines a string value that labels button element</td>
 							</tr>
 							<tr>
 								<td><code>className</code></td>
@@ -137,6 +157,16 @@ const SearchBoxInfo = () => {
 								<td>Callback function</td>
 							</tr>
 							<tr>
+								<td><code>onFocus</code></td>
+								<td>func</td>
+								<td>Callback on focus</td>
+							</tr>
+							<tr>
+								<td><code>onBlur</code></td>
+								<td>func</td>
+								<td>Callback on blur</td>
+							</tr>
+							<tr>
 								<td><code>id</code></td>
 								<td>string</td>
 								<td>ID to connect label with input field</td>
@@ -160,6 +190,11 @@ const SearchBoxInfo = () => {
 								<td><code>searchField</code></td>
 								<td>bool</td>
 								<td>Ads search icon with click</td>
+							</tr>
+							<tr>
+								<td><code>size</code></td>
+								<td>string</td>
+								<td>Set inputfield size. lg is the only available option</td>
 							</tr>
 							<tr>
 								<td><code>submitCallback</code></td>

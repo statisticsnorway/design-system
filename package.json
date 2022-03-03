@@ -16,8 +16,8 @@
     "lint:css": "stylelint '**/*.scss'"
   },
   "dependencies": {
-    "@babel/runtime": "^7.15.4",
-    "@statisticsnorway/ssb-component-library": "^2.0.50",
+    "@babel/runtime": "^7.13.9",
+    "@statisticsnorway/ssb-component-library": "^2.0.67",
     "bootstrap": "^4.6.0",
     "core-js": "^3.17.2",
     "gh-pages": "^3.2.3",

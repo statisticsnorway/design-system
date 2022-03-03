@@ -155,6 +155,16 @@ const PaginationInfo = () => {
 								<td>Required. Items for text label and path</td>
 							</tr>
 							<tr>
+								<td><code>labelNext</code></td>
+								<td>string</td>
+								<td>Label for direction-button next , default is Next</td>
+							</tr>
+							<tr>
+								<td><code>labelPrevious</code></td>
+								<td>string</td>
+								<td>Label for direction-button previous, default is Previous</td>
+							</tr>
+							<tr>
 								<td><code>onSelect</code></td>
 								<td>func</td>
 								<td>Callback function</td>

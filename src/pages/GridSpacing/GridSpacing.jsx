@@ -3,7 +3,7 @@ import { LeadParagraph, Paragraph, Title } from '@statisticsnorway/ssb-component
 
 const GridSpacing = () => (
 	<div className="col-lg-12">
-		<Title size={1}>Grid @ Spacing</Title>
+		<Title size={1}>Grid and Spacing</Title>
 		<LeadParagraph className="mb-4">
 			Et grid er et rammeverk av kolonner og rader som gjør at man kan skape konsistente og responsive oppsett og strukturer på tvers av sidemaler,
 			produkter og tjenester. Gridsystemet løfter fram sidens innhold gjennom en tydelig og strukturert oppbygging,

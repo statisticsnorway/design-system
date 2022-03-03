@@ -78,7 +78,7 @@ const CheckboxInfo = () => {
 
 			{activeTab === '/overview' && (
 				<div className="row mb-4">
-					<Title size={2} className="col-lg-12">CheckboxGroup</Title>
+					<Title size={2} className="col-lg-12">Checkbox Group</Title>
 					<div className="col-lg-6">
 						<Paragraph>
 							Avhukingsbokser har 3 ulike statuser; ikke-avhuket (ikke valgt), hover (musepeker over den)  og avhuket (valgt).

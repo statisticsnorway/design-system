@@ -7,7 +7,7 @@
     "start": "cross-env ENV=development webpack-dev-server --mode development --config webpack/dev.config.js --open",
     "build": "cross-env ENV=production webpack --mode production --config webpack/prod.config.js --progress",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "echo 'design.ssb.no' > ./build/CNAME && gh-pages -d build",
     "test": "cross-env ENV=test jest --coverage",
     "test:watch": "cross-env ENV=test jest --watch",
     "clean-test": "cross-env ENV=test jest --no-cache --updateSnapshot --coverage",

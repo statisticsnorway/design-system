@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const path = require('path');
 const sass = require('sass');
 const base = require('./base.config');
@@ -14,12 +14,15 @@ module.exports = merge(base, {
 		publicPath: '/',
 	},
 	devServer: {
-		inline: true,
-		contentBase: path.resolve(__dirname, '../build'),
+		devMiddleware: {
+			publicPath: '/',
+		},
+		static: {
+			directory: path.resolve(__dirname, '../build'),
+			watch: true,
+		},
 		historyApiFallback: true,
-		watchContentBase: true,
 		port: 3000,
-		publicPath: '/',
 	},
 
 	module: {

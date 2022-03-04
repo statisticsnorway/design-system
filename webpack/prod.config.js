@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const path = require('path');
 const sass = require('sass');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -82,7 +82,6 @@ module.exports = merge(base, {
 			new TerserPlugin({
 				test: /\.js(\?.*)?$/i,
 				extractComments: true,
-				chunkFilter: chunk => chunk.name !== 'vendor',
 			}),
 		],
 		splitChunks: {

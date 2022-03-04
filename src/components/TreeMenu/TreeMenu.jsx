@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import uuid from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 import { ChevronRight } from 'react-feather';
 import { Divider } from '@statisticsnorway/ssb-component-library';
 import { NavLink } from 'react-router-dom';
@@ -33,14 +33,14 @@ const TreeMenu = ({
 			{items && items.map(item => (
 				item.comingSoon
 					? (
-						<div key={uuid()} className="tree-node coming-soon">
+						<div key={uuidv4()} className="tree-node coming-soon">
 							{item.label}<div className="coming-soon-label">Kommer</div>
 						</div>
 					) : (
 						<NavLink
 							to={match.path + item.path}
 							onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
-							key={uuid()}
+							key={uuidv4()}
 							activeClassName="selected"
 							className={`tree-node clickable${item.path === activeItem ? ' selected' : ''}`}
 						>{item.label}<ChevronRight className="arrow-icon" size="18" />

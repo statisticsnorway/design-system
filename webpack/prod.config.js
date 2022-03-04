@@ -10,9 +10,8 @@ console.log('Starting production build');
 
 module.exports = merge(base, {
 	mode: 'production',
-	devtool: '',
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, '../build'),
 	},
 	module: {

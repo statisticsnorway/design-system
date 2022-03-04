@@ -7,9 +7,9 @@ const babelConf = path.resolve(__dirname, '../babel.config.js');
 
 module.exports = merge(base, {
 	mode: 'development',
-	devtool: 'cheap-module-eval-source-map',
+	devtool: 'eval-cheap-module-source-map',
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, '../build'),
 		publicPath: '/',
 	},

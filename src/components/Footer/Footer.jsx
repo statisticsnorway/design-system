@@ -5,7 +5,7 @@ import { ArrowUp, GitHub, Mail } from 'react-feather';
 const Footer = () => (
 	<div className="footer-wrapper">
 		<div className="footer-content">
-			<Text small negative className="copyright-mark">© Statistisk sentralbyrå, 2020</Text>
+			<Text small negative className="copyright-mark">© Statistisk sentralbyrå, 2022</Text>
 			<div className="interactive-elements">
 				<Link href="mailto: designsystem@ssb.no" icon={<Mail />} negative>Kontakt designansvarlig</Link>
 				<Link href=" " icon={<GitHub />} negative>Github</Link>

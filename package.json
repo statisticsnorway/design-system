@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://statisticsnorway.github.io/design-system/",
   "scripts": {
-    "start": "cross-env ENV=development webpack-dev-server --mode development --config webpack/dev.config.js --open",
+    "start": "cross-env ENV=development webpack serve --mode development --config webpack/dev.config.js --open",
     "build": "cross-env ENV=production webpack --mode production --config webpack/prod.config.js --progress",
     "predeploy": "npm run build",
     "deploy": "echo 'design.ssb.no' > ./build/CNAME && gh-pages -d build",

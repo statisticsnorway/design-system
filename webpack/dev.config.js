@@ -9,7 +9,7 @@ module.exports = merge(base, {
 	mode: 'development',
 	devtool: 'eval-cheap-module-source-map',
 	output: {
-		filename: '[name].js',
+		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, '../build'),
 		publicPath: '/',
 	},

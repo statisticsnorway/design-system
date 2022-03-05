@@ -13,6 +13,7 @@
     "clean-test": "cross-env ENV=test jest --no-cache --updateSnapshot --coverage",
     "clear-tests": "jest --clear-cache -- -u",
     "lint:js": "eslint src/**/*.jsx",
+    "lint:js:fix": "eslint --fix src/**/*.jsx",
     "lint:css": "stylelint '**/*.scss'"
   },
   "dependencies": {

@@ -21,7 +21,7 @@ const Footer = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Header</Title>
 			<LeadParagraph>
-        Her kan du se eksisterende mal for footer i mobil- og desktop-versjon.
+				Her kan du se eksisterende mal for footer i mobil- og desktop-versjon.
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />

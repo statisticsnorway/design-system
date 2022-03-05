@@ -41,7 +41,6 @@ const codeSmallTextReact = `
 <Text negative small>Negative small text here</Text>
 `;
 
-
 const codeSmallTextHtml = `
 <span class="ssb-text-wrapper small-text">Small text here</span>
 <span class="ssb-text-wrapper negative small-text">Negative small text here</span>

@@ -244,7 +244,6 @@ const ColorPage = () => {
 								Bakgrunnspaletten kan benyttes til differensiering og gruppering av innhold. Hovedbakgrunnsfargen i rammeverket til SSB er hvit.
 							</Paragraph>
 
-
 							<div className="mb-4">
 								<div className="color-box-grid" style={{ background: '#FFFFFF' }}>
 									<div className="color-name">White</div>

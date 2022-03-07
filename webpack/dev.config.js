@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const path = require('path');
 const sass = require('sass');
 const base = require('./base.config');
@@ -7,19 +7,22 @@ const babelConf = path.resolve(__dirname, '../babel.config.js');
 
 module.exports = merge(base, {
 	mode: 'development',
-	devtool: 'cheap-module-eval-source-map',
+	devtool: 'eval-cheap-module-source-map',
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, '../build'),
 		publicPath: '/',
 	},
 	devServer: {
-		inline: true,
-		contentBase: path.resolve(__dirname, '../build'),
+		devMiddleware: {
+			publicPath: '/',
+		},
+		static: {
+			directory: path.resolve(__dirname, '../build'),
+			watch: true,
+		},
 		historyApiFallback: true,
-		watchContentBase: true,
 		port: 3000,
-		publicPath: '/',
 	},
 
 	module: {

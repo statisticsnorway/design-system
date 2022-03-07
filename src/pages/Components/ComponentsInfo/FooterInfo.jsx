@@ -27,7 +27,6 @@ const tabCode = [
 	},
 ];
 
-
 const codeTag = `
 <Footer>
     <div className="top-row flex-row justify-space-between flex-wrap">
@@ -132,12 +131,12 @@ const FooterInfo = () => {
 								<div className="top-row flex-row justify-space-between flex-wrap">
 									<img src={ssbLogo} alt="ssb-logo" />
 									<Button negative onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}>
-                    Til Toppen
+										Til Toppen
 									</Button>
 								</div>
 
 								<div className="footer-content">
-                  Fyll med innhold
+									Fyll med innhold
 								</div>
 
 								<div className="bottom-row flex-row justify-space-between flex-wrap">

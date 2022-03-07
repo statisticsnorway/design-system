@@ -119,7 +119,7 @@ const QuotesInfo = () => {
 							<div className="component-wrapper">
 								<p>
 									Med 3,9 TWh har produksjonen av vindkraft aldri vært større enn i 2018 – en økning på 36 prosent fra året før.
-									 <Highlight>Økningen fra 2017 til 2018 var på en hel terrawattime (TWh),</Highlight>
+									<Highlight>Økningen fra 2017 til 2018 var på en hel terrawattime (TWh),</Highlight>
 									ifølge nye tall fra den årlige elektrisitetsstatistikken.
 									Den rekordhøye produksjonen må ses i sammenheng med oppstart av flere nye vindkraftverk i 2018.
 								</p>

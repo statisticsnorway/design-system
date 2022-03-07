@@ -68,7 +68,6 @@ const codeReferenceSimpleHtml = `
 </div>
 `;
 
-
 const codeReact = `
 <References
 	title="Kilde"
@@ -216,7 +215,6 @@ const ReferenceInfo = () => {
 							{activeCodeTab === '/html' && <CodeSnippet code={codeReferenceSimpleHtml} language="html" />}
 						</div>
 
-
 					</div>
 
 					<Divider light className="mb-3" />
@@ -280,7 +278,6 @@ const ReferenceInfo = () => {
 							{activeCodeTab === '/react' && <CodeSnippet code={codeReact} language="jsx" />}
 							{activeCodeTab === '/html' && <CodeSnippet code={codeHtml} language="html" />}
 						</div>
-
 
 					</div>
 				</div>

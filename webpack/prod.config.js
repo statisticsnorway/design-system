@@ -1,8 +1,9 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const path = require('path');
 const sass = require('sass');
 const TerserPlugin = require('terser-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const base = require('./base.config');
 
 const babelConf = path.resolve(__dirname, '../babel.config.js');
@@ -10,9 +11,8 @@ console.log('Starting production build');
 
 module.exports = merge(base, {
 	mode: 'production',
-	devtool: '',
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, '../build'),
 	},
 	module: {
@@ -74,6 +74,7 @@ module.exports = merge(base, {
 			minRatio: 0.8,
 			deleteOriginalAssets: false,
 		}),
+		new ESLintPlugin({extensions: ['jsx']}),
 	],
 	optimization: {
 		nodeEnv: 'production',
@@ -82,7 +83,6 @@ module.exports = merge(base, {
 			new TerserPlugin({
 				test: /\.js(\?.*)?$/i,
 				extractComments: true,
-				chunkFilter: chunk => chunk.name !== 'vendor',
 			}),
 		],
 		splitChunks: {

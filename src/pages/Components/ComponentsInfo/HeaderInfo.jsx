@@ -106,7 +106,7 @@ const HeaderInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Header</Title>
 			<Paragraph>
-        Wrapper for header
+				Wrapper for header
 			</Paragraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />

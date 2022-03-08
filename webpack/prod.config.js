@@ -2,7 +2,6 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const sass = require('sass');
 const TerserPlugin = require('terser-webpack-plugin');
-const BrotliPlugin = require('brotli-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const base = require('./base.config');
 
@@ -66,14 +65,6 @@ module.exports = merge(base, {
 		],
 	},
 	plugins: [
-		new BrotliPlugin({
-			asset: '[path].br[query]',
-			test: /\.(js|css|html|svg)$/,
-			compressionOptions: { level: 11 },
-			threshold: 10240,
-			minRatio: 0.8,
-			deleteOriginalAssets: false,
-		}),
 		new ESLintPlugin({extensions: ['jsx']}),
 	],
 	optimization: {

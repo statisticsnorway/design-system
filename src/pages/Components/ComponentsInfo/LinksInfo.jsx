@@ -43,7 +43,7 @@ const ordinaryLinkHtml = `
 
 const iconLinks = `
 <Link href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
-<Link negative href=" " icon={<ArrowRight size="20" />}>This is a link with an icont</Link>
+<Link negative href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
 `;
 
 const iconLinksHtml = `
@@ -59,6 +59,34 @@ const iconLinksHtml = `
         {insert icon here}
     </div>
     <span class="link-text">This is a link with an icon</span>
+</a>
+`;
+
+const standAloneLinks = `
+<Link href=" " standAlone>Stand-alone link</Link>
+<Link href=" " icon={<ArrowRight size="20" />} standAlone>Stand-alone link with icon</Link>
+<Link href=" " linkType="profiled" standAlone>Stand-alone link profile</Link>
+<Link href=" " negative standAlone>Stand-alone link negative</Link>
+`;
+
+const standAloneLinksHtml = `
+<a class="ssb-link stand-alone" href=" " target="" rel="">
+  <span class="link-text">Stand-alone link</span>
+</a>
+
+<a class="ssb-link with-icon stand-alone" href=" " target="" rel="">
+    <div class="icon-wrapper">
+        {insert icon here}
+    </div>
+    <span class="link-text">Stand-alone link with icon<</span>
+</a>
+
+<a class="ssb-link profiled stand-alone" href=" " target="" rel="">
+  <span class="link-text">Stand-alone link profile</span>
+</a>
+
+<a class="ssb-link negative stand-alone" href=" " target="" rel="">
+  <span class="link-text">Stand-alone link negative</span>
 </a>
 `;
 
@@ -258,6 +286,42 @@ const LinksInfo = () => {
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={iconLinks} language="jsx" />}
 							{activeCodeTab === '/html' && <CodeSnippet code={iconLinksHtml} language="html" />}
+						</div>
+					</div>
+
+					<Divider light className="mb-3" />
+
+					<div className="row mb-3">
+						<Title size={2} className="col-lg-12">Link (stand-alone)</Title>
+						<div className="col-lg-6">
+							<Paragraph>
+								Den frittstående lenken har et attributt &apos;standAlone&apos;, som kan brukes på alle lenker på denne siden.
+								Kan stå alene eller sammen med flere i en lenket liste. Bør brukes utenfor en brødtekst.
+							</Paragraph>
+							<Paragraph>
+								Denne lenken brukes til å oppfylle kravene til tilgjengelighet med et klikkområde som dekker 44px bredde og 44px høyde.
+							</Paragraph>
+						</div>
+						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<Link href=" " standAlone>Stand-alone link</Link>
+							</div>
+							<div className="pl-4 mb-4">
+								<Link href=" " icon={<ArrowRight size="20" />} standAlone>Stand-alone link with icon</Link>
+							</div>
+							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
+								<Link className="mr-4" href=" " linkType="profiled" standAlone>Stand-alone link profile</Link><br />
+							</div>
+							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
+								<Link href=" " negative standAlone>Stand-alone link negative</Link>
+							</div>
+						</div>
+
+						<div className="col-lg-12 mt-4">
+							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
+							<Divider light />
+							{activeCodeTab === '/react' && <CodeSnippet code={standAloneLinks} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={standAloneLinksHtml} language="html" />}
 						</div>
 					</div>
 
@@ -504,6 +568,11 @@ const LinksInfo = () => {
 								<td><code>onClick</code></td>
 								<td>function</td>
 								<td>Callback for anchor click</td>
+							</tr>
+							<tr>
+								<td><code>standAlone</code></td>
+								<td>bool</td>
+								<td>Resizing of a stand alone link to meet accessibility requirements</td>
 							</tr>
 						</tbody>
 					</table>

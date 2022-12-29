@@ -123,8 +123,8 @@ const ColorPage = () => {
 									<div className="name-label">Purple 3</div>
 								</div>
 								<div className="color-box">
-									<div className="background" style={{ background: '#ED5935' }} />
-									<div className="hex-label" style={{ border: '2px solid #ED5935' }}>#ED5935</div>
+									<div className="background" style={{ background: '#DC3400' }} />
+									<div className="hex-label" style={{ border: '2px solid #DC3400' }}>#DC3400</div>
 									<div className="name-label">Red 3</div>
 								</div>
 								<div className="color-box">

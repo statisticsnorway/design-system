@@ -295,9 +295,9 @@ const ColorPage = () => {
 							</Paragraph>
 
 							<div className="mb-4">
-								<div className="color-box-grid" style={{ background: '#ED5935' }}>
+								<div className="color-box-grid" style={{ background: '#DC3400' }}>
 									<div className="color-name">Red 3</div>
-									<div className="hex-label">#ED5935</div>
+									<div className="hex-label">#DC3400</div>
 									<div className="color-text">Varsler om feil globalt og lokalt</div>
 								</div>
 							</div>

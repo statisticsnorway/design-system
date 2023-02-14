@@ -254,8 +254,10 @@ const ButtonInfo = () => {
 						<Title size={2} className="col-lg-12">Tertiary button</Title>
 						<div className="col-lg-6">
 							<Paragraph>
-								Tertiærknapp brukes på steder de andre knappevariantene bruker for stor plass eller tar for mye oppmerksomhet,
-								og en mindre knapp er nødvendig. Ikon brukes til å skille knapper fra hverandre, eller for å tydeliggjøre knappens funksjonalitet.
+								Tertiærknapp brukes på steder hvor de andre knappevariantene bruker for stor plass eller tar
+								for mye oppmerksomhet,og en mindre knapp er nødvendig. Om en har enkeltstående innhold man ønsker å skjule,
+								kan tertiærknapp også brukes som et alternativ til accordions. Ikon brukes til å skille knapper fra hverandre,
+								eller for å tydeliggjøre knappens funksjonalitet.
 							</Paragraph>
 						</div>
 						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">

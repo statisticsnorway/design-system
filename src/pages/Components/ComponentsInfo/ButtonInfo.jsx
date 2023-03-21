@@ -373,6 +373,11 @@ const ButtonInfo = () => {
 									Defaults to &apos;button&apos;.
 								</td>
 							</tr>
+							<tr>
+								<td><code>onKeyDown</code></td>
+								<td>function</td>
+								<td>Callback for keyboard button click</td>
+							</tr>
 						</tbody>
 					</table>
 

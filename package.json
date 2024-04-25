@@ -30,7 +30,6 @@
     "react-dom": "~18.2.0",
     "react-feather": "~2.0.10",
     "react-router-dom": "~5.3.4",
-    "react-test-renderer": "^18.2.0",
     "regenerator-runtime": "~0.13.11",
     "uuid": "~9.0.0"
   },

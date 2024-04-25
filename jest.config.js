@@ -22,8 +22,7 @@ module.exports = {
 	modulePaths: [
 		'<rootDir>/src/scripts/atoms',
 	],
-	snapshotSerializers: ['enzyme-to-json/serializer'],
-	setupFiles: ['<rootDir>/src/setupTests.js'],
+	setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
 	testMatch: ['**/*.test.jsx'],
 	transform: { '^.+\\.jsx?$': 'babel-jest' },
 	transformIgnorePatterns: ['<rootDir>/node_modules/'],

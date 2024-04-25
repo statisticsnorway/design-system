@@ -1,4 +1,6 @@
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import '@testing-library/jest-dom';
+import util from 'util';
 
-configure({ adapter: new Adapter() });
+Object.defineProperty(global, 'TextEncoder', {
+	value: util.TextEncoder,
+});

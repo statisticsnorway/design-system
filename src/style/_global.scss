@@ -38,4 +38,9 @@ body {
   .dark-background {
     background: $ssb-dark-5;
   }
+
+  .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }

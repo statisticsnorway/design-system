@@ -221,22 +221,22 @@ const ButtonInfo = () => {
 						</div>
 						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start mb-4">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Button primary disabled className="mr-1">Disabled primary</Button>
-								<Button primary disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
+								<Button primary disabled className="me-1">Disabled primary</Button>
+								<Button primary disabled className="me-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 
 							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
-								<Button primary disabled negative className="mr-1">Disabled primary</Button>
+								<Button primary disabled negative className="me-1">Disabled primary</Button>
 								<Button primary disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>
 						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Button disabled className="mr-1">Disabled secondary</Button>
-								<Button disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
+								<Button disabled className="me-1">Disabled secondary</Button>
+								<Button disabled className="me-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
-								<Button disabled negative className="mr-1">Disabled secondary</Button>
+								<Button disabled negative className="me-1">Disabled secondary</Button>
 								<Button disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>

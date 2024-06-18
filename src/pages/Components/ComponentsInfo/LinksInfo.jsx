@@ -243,7 +243,7 @@ const LinksInfo = () => {
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" ">This is a clickable text link</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" ">This is a long clickable text link that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
@@ -274,7 +274,7 @@ const LinksInfo = () => {
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" " icon={<ArrowRight size="20" />}>This is a long link with an icon that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
@@ -306,11 +306,11 @@ const LinksInfo = () => {
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " standAlone>Stand-alone link</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" " icon={<ArrowRight size="20" />} standAlone>Stand-alone link with icon</Link>
 							</div>
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link className="mr-4" href=" " linkType="profiled" standAlone>Stand-alone link profile</Link><br />
+								<Link className="me-4" href=" " linkType="profiled" standAlone>Stand-alone link profile</Link><br />
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Link href=" " negative standAlone>Stand-alone link negative</Link>
@@ -337,13 +337,13 @@ const LinksInfo = () => {
 						</div>
 						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link className="mr-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
+								<Link className="me-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
 							</div>
-							<div className="pl-4 mb-4">
-								<Link className="mr-4" href=" " linkType="profiled">This is a long profiled text link that will go over several lines</Link>
+							<div className="ps-4 mb-4">
+								<Link className="me-4" href=" " linkType="profiled">This is a long profiled text link that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link negative className="mr-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
+								<Link negative className="me-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -366,13 +366,13 @@ const LinksInfo = () => {
 						</div>
 						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
+								<Link className="me-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
 							</div>
-							<div className="pl-4 mb-4">
-								<Link className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a long profiled link with icon that will go over several lines</Link>
+							<div className="ps-4 mb-4">
+								<Link className="me-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a long profiled link with icon that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link negative className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
+								<Link negative className="me-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -397,7 +397,7 @@ const LinksInfo = () => {
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " linkType="header">This is an header link</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" " linkType="header">This is a long header link that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">

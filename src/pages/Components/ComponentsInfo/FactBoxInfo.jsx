@@ -82,10 +82,10 @@ const FactBoxInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Faktabokser</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<p>{overviewTextFactbox}</p>
 					</div>
-					<div className="component-example col-lg-6 divider-left">
+					<div className="component-example col-lg col-md-12 divider-left">
 						<FactBox header="This is a header" text="This is paragraph text which explains the accordion" />
 					</div>
 					<div className="col-lg-12">
@@ -100,7 +100,7 @@ const FactBoxInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Boksramme</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<p>{rationaleText}</p>
 					</div>
 				</div>

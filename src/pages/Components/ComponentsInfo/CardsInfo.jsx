@@ -323,7 +323,7 @@ const CardsInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Standard card</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Kortet brukes når inngangen er underordnet annet innhold på siden. For eksempel til å promotere/lenke til relatert innhold.
 								Teksten bør kort og konsist si noe om innholdet kortet lenker til. Versjonen brukes når et større antall kort sammenstilles til en kortliste. Kortene i listen skal,
@@ -332,7 +332,7 @@ const CardsInfo = () => {
 								Ikoner hentes fra <Link href="https://feathericons.com/" isExternal> feathericons.com</Link> eller følger samme stil som feather icons.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="mb-4">
 								<Card href=" " title="Tittel">
 									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
@@ -354,7 +354,7 @@ const CardsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Profiled card</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Kortet brukes når inngangen er likestilt eller overordnet annet innhold på siden. For eksempel for å promotere ofte brukte tjenester,
 								eller for å indikere at navigasjonen er viktig for videre prosess, forståelse, opplevelse eller lignende.
@@ -363,7 +363,7 @@ const CardsInfo = () => {
 								Ikon kan brukes for å differensiere. Alle kort i en liste skal være like – enten har alle eller ingen ikon. Ikoner skal følge SSBs ikonstil.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="mb-4">
 								<Card href=" " title="Tittel" profiled>
 									<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
@@ -385,7 +385,7 @@ const CardsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Editorial Card</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Title size={3}>Vertical</Title>
 							<Paragraph>
 								Brukes der flere kort kan plasseres horisontalt ved siden av hverandre. Kortet har fleksibel høyde, med lenketittel.
@@ -403,7 +403,7 @@ const CardsInfo = () => {
 								Horisontale og vertikale kort skal ikke kombineres i en og samme liste.
 							</Paragraph>
 						</div>
-						<div className="component-example divider-left col-lg-6 mb-4">
+						<div className="component-example divider-left col-lg col-md-12 mb-4">
 							<Card href=" " image={<img src={exampleImage} alt="example" />} imagePlacement="top" title="Tittel" subTitle="Type  /  DD. Måned ÅÅÅÅ">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
@@ -423,7 +423,7 @@ const CardsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Picture Card</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Title size={3}>Vertical</Title>
 							<Paragraph>
 								Kort til faktasider har fullbilde for å kommunisere at sidene er mer visuelle enn andre innholdstyper. Bildet gjør at kortene synes godt på siden.
@@ -440,7 +440,7 @@ const CardsInfo = () => {
 								Horisontalt kort kan skaleres i bredde for å tilpasses ulike innholdsmaler.
 							</Paragraph>
 						</div>
-						<div className="component-example divider-left col-lg-6 mb-4">
+						<div className="component-example divider-left col-lg col-md-12 mb-4">
 							<div className="float-right">
 								<PictureCard imageSrc={pictureCardVertical} altText="example" type="Type" title="Tittel" />
 							</div>
@@ -495,7 +495,7 @@ const CardsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Extension</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Kort skal ikke bestå av lenke, nedlasting eller annen funksjon ut over kortets egen – som er å ta brukeren til ny side.
 								Ved behov for nedlasting i tilknytning til kort, skal et tillegg festes til bunn av kortet. Egen hover indikerer at det har en annen funksjon enn kortet.
@@ -503,7 +503,7 @@ const CardsInfo = () => {
 								Vurder alltid om tillegget vil forvirre mer enn det løser. Tillegget skal aldri brukes alene.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left">
+						<div className="component-example col-lg col-md-12 divider-left">
 							<Card title="Tittel" href=" " fileLocation="./not_a_file.md" downloadText="Last ned filnavn.filtype">
 								<Text>Tekst om innholdet skrives her for å utdype eller fortelle.</Text>
 							</Card>
@@ -521,7 +521,7 @@ const CardsInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Different designs</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>{rationaleText}</Paragraph>
 					</div>
 				</div>

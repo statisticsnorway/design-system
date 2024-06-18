@@ -33,7 +33,7 @@ const Faktaside = () => {
 			)}
 
 			{activeTab === '/mobile' && (
-				<div className="col-lg-6">
+				<div className="col-lg col-md-12">
 					<img className="mt-4 template-border" style={{ width: '100%' }} src={faktasideMobile} alt="Template faktaside mobile" />
 				</div>
 			)}

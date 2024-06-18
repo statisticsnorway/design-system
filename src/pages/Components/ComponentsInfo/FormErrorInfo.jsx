@@ -84,12 +84,12 @@ const FormErrorInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Form error</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Kommer snart
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex component-wrapper">
 								<FormError errorMessages={errorMessages} title="Some fields are not right!" />
 							</div>

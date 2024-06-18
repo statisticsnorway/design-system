@@ -66,7 +66,7 @@ const GlossaryInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="row mt-4">
 					<Title size={2} className="col-lg-12">Ordforklaring</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							Ordforklaringer markeres med to virkemidler; de skal være understreket med stiplet linje for å skille seg ut fra en vanlig lenke.
 							De har også et tilhørende grønt ikon ved slutten av ordet.
@@ -76,7 +76,7 @@ const GlossaryInfo = () => {
 							Ved klikk på ordforklaringen vises en tekstboks med selve forklaringen.
 						</Paragraph>
 					</div>
-					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+					<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center mb-4">
 						<div className="">
 							Explain this <Glossary explanation={placeHolder}>word</Glossary>.
 						</div>

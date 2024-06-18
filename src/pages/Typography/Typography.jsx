@@ -87,14 +87,14 @@ const TypographyPage = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Headings - Overskrifter</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								H1 brukes på den første tittelen – ofte hovedtittel på en side. En side skal aldri ha mer enn én H1.
 								H2 brukes i mellomtitler, mens H3 er underordnet denne igjen. H4 har samme størrelse som løpende tekst.
 								Alle titler finnes også som hvit for plassering mot mørk bakgrunn.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column flex-wrap mb-4">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column flex-wrap mb-4">
 							<Title size={1}>H1 titteleksempel</Title>
 							<Paragraph>Roboto Condensed Bold, 56px, 80px linjeavstand.<br />Mobil: 44px, 56px linjeavstand.</Paragraph>
 							<Title size={2}>H2 titteleksempel</Title>
@@ -116,14 +116,14 @@ const TypographyPage = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Lead Paragraph - Ingress</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Ingress brukes ofte mellom heading og paragraph som et kortfattet resumeé over innholdet.
 								Ingress settes i Open Sans Regular 20px, 32px linjeavstand på desktop. (Samme størrelse på mobil og desktop).
 								Ingress har også en hvit versjon.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center mb-4">
 							<div className="d-flex flex-wrap">
 								<LeadParagraph>
 									Ingress ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
@@ -142,12 +142,12 @@ const TypographyPage = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Paragraf - Brødtekst</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Brødtekst settes i Open Sans Regular 16px, 28px linjeavstand på desktop. (Samme størrelse på mobil og desktop). Brødtekst har også en hvit versjon.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center mb-4">
 							<div className="d-flex flex-wrap">
 								<Paragraph>
 									Brødtekst ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -171,13 +171,13 @@ const TypographyPage = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Small Text - Mikrotekst</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Størrelsen benyttes kun i ekstra-tekst, som f.eks. ordforklaring og labels til input-felt. Desktop: Open Sans Regular 14px, 24px linjeavstand.
 								(Samme størrelse på mobil og desktop). Liten tekst har også en hvit versjon.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center mb-4">
 							<div className="d-flex flex-wrap">
 								<Text small>Microtext og labels ser ut som dette. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
 							</div>

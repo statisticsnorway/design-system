@@ -42,27 +42,27 @@ const KommuneFakta = () => {
 
 			{activeTab === '/mobile' && (
 				<div>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Title size={3}>Inngang norgeskart</Title>
 						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilNorge} alt="Template Kommunefakta mobil, inngang norgeskart" />
 					</div>
 					<Divider className="mt-4 mb-3" light />
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Title size={3}>Inngang kommunekart</Title>
 						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilKommune} alt="Template Kommunefakta mobil, inngang kommunekart" />
 					</div>
 					<Divider className="mt-4 mb-3" light />
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Title size={3}>Sticky Meny</Title>
 						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilSticky} alt="Template Kommunefakta mobil, stickymenu" />
 					</div>
 					<Divider className="mt-4 mb-3" light />
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Title size={3}>Sticky søk</Title>
 						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobilStickySearch} alt="Template Kommunefakta mobil, stickymenu search" />
 					</div>
 					<Divider className="mt-4 mb-3" light />
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Title size={3}>Visning kommune</Title>
 						<img className="mt-4 template-border" style={{ width: '100%' }} src={kommunefaktaMobile} alt="Template Kommunefakta mobilvisning" />
 					</div>

@@ -177,12 +177,12 @@ const ReferenceInfo = () => {
 				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Reference</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Kilde-komponenten består av en tittel («Kilde») for å gjøre det enkelt for brukeren å identifisere den, og en lenke.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-start">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-start">
 							<div className="d-flex justify-content-start mb-4 flex-wrap">
 								<References
 									title="Kilde"
@@ -221,14 +221,14 @@ const ReferenceInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Reference list</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Kilde-komponenten består av en tittel («Kilde») for å gjøre det enkelt for brukeren å identifisere den, og en eller flere lenker.
 								Der innholdet har flere kilder stiles kildene som lenkeliste.
 								Ved behov kan det også skrives en beskrivende tekst til lenken. Denne settes i brødtekst-stil.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-start">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-start">
 							<div className="d-flex justify-content-start mb-4 flex-wrap">
 								<References
 									title="Kilde"

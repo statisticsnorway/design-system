@@ -81,14 +81,14 @@ const QuotesInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Quote</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							Et sitat gjengir ordrett noe som er sagt, eller er et tekstutdrag hentet fra ekstern kilde.
 							Sitat løftes ut av brødteksten, settes i større font og med innrykket venstremarg.
 							Husk å bruke riktig tegnsetting ved sitat; «norsk», “english”.
 						</Paragraph>
 					</div>
-					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+					<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 						<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 							<div className="component-wrapper">
 								<Quote>
@@ -107,14 +107,14 @@ const QuotesInfo = () => {
 					</div>
 					<Divider className="mb-4" />
 					<Title size={2} className="col-lg-12">Highlight</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							Stilen fremhever viktig tekst i brødtekst.
 							Teksten løftes ikke ut av sammenhengen på samme måte som sitat.
 							Setningene blir markert der de står i brødteksten.
 						</Paragraph>
 					</div>
-					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+					<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 						<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 							<div className="component-wrapper">
 								<p>

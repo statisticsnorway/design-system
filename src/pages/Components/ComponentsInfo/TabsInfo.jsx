@@ -70,12 +70,12 @@ const TabsInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Tabs</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Fane-tekst må være kort og konsis for at komponenten skal være enkel å navigere i. Kun ett ord – om mulig.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left">
+						<div className="component-example col-lg col-md-12 divider-left">
 							<Tabs
 								activeOnInit="category1/"
 								items={[
@@ -99,7 +99,7 @@ const TabsInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Underscore</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						By using an underscore underneath the tabs, it becomes easier for the user to separate between the content.
 						Especially using different colors between green and dark and having the underscore pop up during active hover.
 					</div>

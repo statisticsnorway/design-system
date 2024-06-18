@@ -79,7 +79,7 @@ const CheckboxInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Checkbox Group</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							Avhukingsbokser har 3 ulike statuser; ikke-avhuket (ikke valgt), hover (musepeker over den)  og avhuket (valgt).
 							Som ikke-valgt vil boksen være nøytral med en grå ramme. Når brukeren peker over en boks vil boksens ramme bli tykkere og grønn,
@@ -87,7 +87,7 @@ const CheckboxInfo = () => {
 							med et avhukingsikon.
 						</Paragraph>
 					</div>
-					<div className="component-example col-lg-6 divider-left align-items-center">
+					<div className="component-example col-lg col-md-12 divider-left align-items-center">
 						<div className="component-wrapper">
 							<CheckboxGroup
 								header="Header"

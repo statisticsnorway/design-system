@@ -169,7 +169,7 @@ const FooterInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Til toppen-knapp</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Grunnen til å ha en til toppen-knapp er å gi brukeren en rask måte å navigere seg tilbake ved behov.
 								Dette kan være spesielt nyttig på våre nettsider da mye av vårt innhold er lange artikler.
@@ -177,7 +177,7 @@ const FooterInfo = () => {
 						</div>
 
 						<Title size={2} className="col-lg-12">Mørk bakgrunn</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								I motsetning til resten av siten som i hovedsak vises med hvit bakgrunn, er footeren plassert på en mørk bakgrunn.
 								Dette er for å gjøre forskjellen tydelig mellom innholdet og informere brukeren om at han har nådd slutten av siden.

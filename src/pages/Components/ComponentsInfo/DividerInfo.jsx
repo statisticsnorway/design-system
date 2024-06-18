@@ -52,12 +52,12 @@ const DividerInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Divider</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Delestreken er alltid plassert i slutten av en innholdsgruppe og før starten av neste innholdsgruppe.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex mb-4 component-wrapper">
 								<Divider dark />
 							</div>

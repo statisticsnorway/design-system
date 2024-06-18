@@ -86,12 +86,12 @@ const WarningsErrorsInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Error warning</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Feilmeldinger er i rød farge for å indikere at noe har gått galt. De presenteres sammen med et trekantet varselsikon.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center mb-4">
 							<Dialog type="warning" title="A fitting title">
 								Insert content here
 							</Dialog>
@@ -110,12 +110,12 @@ const WarningsErrorsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Information warning</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Informasjonsvarsler er i blå farge for å skille seg fra de røde feilmeldingene. De presenteres sammen med et sirkelformet informasjonsikon.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center mb-4">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center mb-4">
 							<Dialog type="info" title="A fitting title">
 								Insert content here
 							</Dialog>
@@ -133,7 +133,7 @@ const WarningsErrorsInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Colors</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						Rød farge på feilmeldinger er valgt fordi rødt gir assosiasjoner til feil. Blå farge er valgt for å skille seg ut fra rødt og grønt.
 						Fargene har også blitt testet gjennom fargeblindhetstester slik at de tilfredsstiller forskjell i kontrast
 					</div>

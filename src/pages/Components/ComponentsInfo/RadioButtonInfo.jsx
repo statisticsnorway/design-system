@@ -81,14 +81,14 @@ const RadioButtonInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">RadioGroup</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Radioknapper har 3 ulike statuser; ikke-valgt, hover (musepeker over den) og valgt. Når knappen ikke er valgt vises den
 								nøytralt med en grå sirkel. Når brukeren peker over den med musepekeren, blir sirkelen grønn og tykkere. Samtidig vises
 								en grønn bakgrunnsstripe på hele raden for knappen. Når knappen er valgt, blir sirkelen bli fylt med en mindre sirkel i mørk farge.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left align-items-center pl-4">
+						<div className="component-example col-lg col-md-12 divider-left align-items-center pl-4">
 							<div className="component-wrapper">
 								<RadioGroup
 									header="Header"

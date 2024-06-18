@@ -33,14 +33,18 @@ body {
     > section {
       padding: 35px 5px 50px 5px;
     }
+
+    .container-fluid {
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+    }
+  
+    hr {
+      opacity: 1; // Bootstrap 5 sets divider to a lower opacity 
+    }
   }
 
   .dark-background {
     background: $ssb-dark-5;
-  }
-
-  .container-fluid {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
   }
 }

@@ -136,7 +136,7 @@ const StickyMenuInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Sticky menu</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph className="mb-4">
 								This navigation element always has the page name visible to the left of the row in order to provide a clear indication of what page the user is currently viewing.
 								As for the navigation options, there is a menu header that describes what type of content the user can be expected to view.
@@ -174,12 +174,12 @@ const StickyMenuInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Sticky menu Mobile</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph className="mb-4">
 								Mobil visning
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 p-0">
+						<div className="component-example col-lg col-md-12 p-0">
 							<StickyMenu>
 								<div style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between', width: 'auto', padding: '16px 20px 14px 20px' }}>
 									<div style={{ fontSize: '18px', fontWeight: 'bold' }}>Stordal (Møre og Romsdal)</div>

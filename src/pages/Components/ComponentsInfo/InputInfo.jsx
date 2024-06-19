@@ -137,14 +137,14 @@ const InputInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Input</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Inputfelt har tre steg; ikke-valgt, hover og valgt. Når feltet ikke er valgt har det en tynn rektangulær mørk ramme.
 								Når bruker peker over rammen med musepeker, blir rammen grønn og får en tykkere strek.
 								Ved klikk vises en blinkende strek (cursor) i rammen for å kommunisere at brukeren kan fylle inn tekst.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input label="Label" />
 							</div>
@@ -168,10 +168,10 @@ const InputInfo = () => {
 					</Paragraph>
 
 					<div className="row">
-						<div style={{ marginLeft: 0, padding: '32px 18px' }} className="d-flex col-lg-6 justify-content-center flex-wrap component-wrapper">
+						<div style={{ marginLeft: 0, padding: '32px 18px' }} className="d-flex col-lg col-md-12 justify-content-center flex-wrap component-wrapper">
 							<TextArea label="Label" />
 						</div>
-						<div style={{ marginLeft: 0 }} className="d-flex col-lg-6 justify-content-center flex-wrap negative-wrapper">
+						<div style={{ marginLeft: 0 }} className="d-flex col-lg col-md-12 justify-content-center flex-wrap negative-wrapper">
 							<TextArea negative label="Label" />
 						</div>
 						<div className="col-lg-12 mt-4">
@@ -186,7 +186,7 @@ const InputInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Error</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Når en feil oppstår i et input- eller tekstfelt felt, endret feltets utseende.
 								Rammen på feltet blir rød og tykkere for at brukeren skal se hvor det mangler noe / må rettes opp.
@@ -195,7 +195,7 @@ const InputInfo = () => {
 								Feilmeldingsboksen finner du stil og kode til her(lenke).
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Input label="Passord" error errorMessage="Skriv inn passord, minimum 6 siffer" />
 							</div>

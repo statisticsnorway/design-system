@@ -118,7 +118,7 @@ const Header = () => {
 			</div>
 			{(location.pathname === '/get-started' || location.pathname === '/') && (
 				<div className="get-started offset-lg-1">
-					<div className="row ml-1 mr-1">
+					<div className="row ms-1 me-1">
 						<img className="col-lg-11 mb-4" src={coopIllustration} alt="Usage" />
 						<Title className="get-started-title col-lg-4" size={1}>Kom i gang</Title>
 						<div className="col-lg-7">

@@ -53,7 +53,7 @@ const BlockContentInfo = () => {
 						</BlockContent>
 					</div>
 
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 						<Divider light />
 						{activeCodeTab === '/react' && <CodeSnippet code={codeExample} language="jsx" />}

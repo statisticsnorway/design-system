@@ -233,17 +233,17 @@ const LinksInfo = () => {
 				<div>
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Link</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Standard lenke følger stilen til brødtekst, men er understreket og har grønn farge for å skille den fra ikke-klikkbar tekst.
 								Kan stå alene eller sammen med flere i lenkeliste. Den kan også brukes i brødtekst.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" ">This is a clickable text link</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" ">This is a long clickable text link that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
@@ -264,17 +264,17 @@ const LinksInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Link with icon</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Lenker med ikon brukes som frittstående lenker. Flere lenker med ikon kan settes sammen til lenkeliste.
 								Ikonet brukes for å differensiere eller indikere ulik funksjonalitet. Ikonet skal alltid gi brukeren økt forståelse for lenkens funksjon.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " icon={<ArrowRight size="20" />}>This is a link with an icon</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" " icon={<ArrowRight size="20" />}>This is a long link with an icon that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
@@ -293,7 +293,7 @@ const LinksInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Link (stand-alone)</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Den frittstående lenken har et attributt &apos;standAlone&apos;, som kan brukes på alle lenker på denne siden.
 								Kan stå alene eller sammen med flere i en lenket liste. Bør brukes utenfor en brødtekst.
@@ -302,15 +302,15 @@ const LinksInfo = () => {
 								Denne lenken brukes til å oppfylle kravene til tilgjengelighet med et klikkområde som dekker 44px bredde og 44px høyde.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " standAlone>Stand-alone link</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" " icon={<ArrowRight size="20" />} standAlone>Stand-alone link with icon</Link>
 							</div>
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link className="mr-4" href=" " linkType="profiled" standAlone>Stand-alone link profile</Link><br />
+								<Link className="me-4" href=" " linkType="profiled" standAlone>Stand-alone link profile</Link><br />
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
 								<Link href=" " negative standAlone>Stand-alone link negative</Link>
@@ -329,21 +329,21 @@ const LinksInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Profiled link</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Profilerte lenker brukes der man ønsker en lenke som gjør mer ut av seg enn en standard lenke. Innholdet lenken tar deg til er av stor betydning for brukeren.
 								Profilert lenke kan brukes i kombinasjon med andre typer lenker for å skape hierarki. Skal aldri ta brukeren til ekstern side.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link className="mr-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
+								<Link className="me-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
 							</div>
-							<div className="pl-4 mb-4">
-								<Link className="mr-4" href=" " linkType="profiled">This is a long profiled text link that will go over several lines</Link>
+							<div className="ps-4 mb-4">
+								<Link className="me-4" href=" " linkType="profiled">This is a long profiled text link that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link negative className="mr-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
+								<Link negative className="me-4" href=" " linkType="profiled">This is a profiled text link</Link><br />
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -358,21 +358,21 @@ const LinksInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Profiled link with icon</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Se forklaring under «Profiled Link». Ikonet brukes for å differensiere eller indikere ulik funksjonalitet.
 								Ikonet skal alltid gi brukeren økt forståelse for lenkens funksjon. Skal aldri ta brukeren til ekstern side.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
+								<Link className="me-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
 							</div>
-							<div className="pl-4 mb-4">
-								<Link className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a long profiled link with icon that will go over several lines</Link>
+							<div className="ps-4 mb-4">
+								<Link className="me-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a long profiled link with icon that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link negative className="mr-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
+								<Link negative className="me-4" href=" " icon={<ArrowRight size="20" />} linkType="profiled">This is a profiled link with icon</Link><br />
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -387,17 +387,17 @@ const LinksInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Header link</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Tittellenke brukes der det er naturlig at tittelen er lenken. For eksempel kan dette brukes i innganger til artikler hvor titlene er beskrivende for innholdet.
 								Tittellenke kan også brukes der det er vanskelig å finne lenketekst som erstatter «Les mer».
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" " linkType="header">This is an header link</Link>
 							</div>
-							<div className="pl-4 mb-4">
+							<div className="ps-4 mb-4">
 								<Link href=" " linkType="header">This is a long header link that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
@@ -416,12 +416,12 @@ const LinksInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Link list</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Standard lenke og standard lenke med ikon kan settes sammen til lenkeliste. Lenkelister brukes uten kulepunkter.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Link href=" ">This is a clickable text link in a link list</Link>
 								<Link href=" ">This is a clickable text link in a link list</Link><br />
@@ -466,12 +466,12 @@ const LinksInfo = () => {
 
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Category Link</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Category link brukes for å fremheve innganger til et neste steg i navigasjonen på nettsiden. De brukes primært på veien fra et hovedemne til et delemne på ssb.no.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<CategoryLink className="no-minwidth" href="" titleText="Category link with description" subText="Description goes here" />
 						</div>
 						<div className="col-lg-12">
@@ -489,7 +489,7 @@ const LinksInfo = () => {
 				<div className="mt-3">
 					<div className="row mb-3">
 						<Title size={2} className="col-lg-12">Farge</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Fargen på lenker er SSB grønn 4. Denne fargen er valgt for å passe inn i helheten i  designsystemet,
 								og samtidig lære brukeren at grønn farge alltid er klikkbart på ssb.no.

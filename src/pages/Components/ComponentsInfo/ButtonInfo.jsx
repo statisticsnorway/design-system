@@ -155,14 +155,14 @@ const ButtonInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Primary button</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Primærknapp brukes til handlinger som er kritisk for brukerens videre fremdrift.
 								Eksempel på en kritisk handling er «send inn» i et skjema eller «logg inn» i en innloggingstjeneste.
 								En primærknapp bør kun brukes én gang per visning. Ikon brukes til å skille knapper fra hverandre, eller for å tydeliggjøre knappens funsjonalitet.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button primary>Primary Button</Button>
 								<Button primary icon={<Upload size={18} />}>Primary Icon</Button>
@@ -184,14 +184,14 @@ const ButtonInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Secondary button</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Sekundærknapp brukes for handlinger som er viktige, men ikke kritiske, for brukerens fremdrift.
 								En sammenstilling av sekundærknapper indikerer likestilte handlinger, mens en sekundærknapp sammen men en primærknapp skaper hierarki.
 								Ikon brukes til å skille knapper fra hverandre, eller for å tydeliggjøre knappens funsjonalitet.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<Button>Secondary button</Button>
 								<Button icon={<Upload size={18} />}>Secondary icon</Button>
@@ -213,7 +213,7 @@ const ButtonInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Disabled button (ikke-aktiv knapp)</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								En passiv knapp skal kommunisere tydelig at den ikke har noen funksjon. Dette gjøres gjennom fravær av farge og kontrast.
 								En passiv knapp kan ikke klikkes, og har heller ikke hover. Passive knapper er ikke underlagt kontrastkrav i UU.
@@ -221,22 +221,22 @@ const ButtonInfo = () => {
 						</div>
 						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start mb-4">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Button primary disabled className="mr-1">Disabled primary</Button>
-								<Button primary disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
+								<Button primary disabled className="me-1">Disabled primary</Button>
+								<Button primary disabled className="me-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 
 							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
-								<Button primary disabled negative className="mr-1">Disabled primary</Button>
+								<Button primary disabled negative className="me-1">Disabled primary</Button>
 								<Button primary disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>
 						<div className="component-example col-lg-12 d-flex flex-column flex-lg-row align-items-start">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Button disabled className="mr-1">Disabled secondary</Button>
-								<Button disabled className="mr-1" icon={<Upload size={18} />}>Disabled icon</Button>
+								<Button disabled className="me-1">Disabled secondary</Button>
+								<Button disabled className="me-1" icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 							<div className="d-flex justify-content-center mb-4 flex-wrap negative-wrapper p-1">
-								<Button disabled negative className="mr-1">Disabled secondary</Button>
+								<Button disabled negative className="me-1">Disabled secondary</Button>
 								<Button disabled negative icon={<Upload size={18} />}>Disabled icon</Button>
 							</div>
 						</div>
@@ -252,7 +252,7 @@ const ButtonInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Tertiary button</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Tertiærknapp brukes på steder hvor de andre knappevariantene bruker for stor plass eller tar
 								for mye oppmerksomhet,og en mindre knapp er nødvendig. Om en har enkeltstående innhold man ønsker å skjule,
@@ -260,7 +260,7 @@ const ButtonInfo = () => {
 								eller for å tydeliggjøre knappens funksjonalitet.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
 								<ButtonTertiary header="Tertiary button onClick" accordion={false} />
 							</div>
@@ -292,7 +292,7 @@ const ButtonInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Avrundede hjørner</Title>
-						<Paragraph className="col-lg-6">
+						<Paragraph className="col-lg col-md-12">
 							Bruk av lett avrundede hjørner er for å skape et mer åpent og vennlig uttrykk for ssb.no.
 							Det skaper også en sterkere kontrast til de mer skarpe firkantede komponentene i biblioteket, og gjør at knappene blir egenartet og står mer frem.
 						</Paragraph>
@@ -300,7 +300,7 @@ const ButtonInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Fylt bakgrunn</Title>
-						<Paragraph className="col-lg-6">
+						<Paragraph className="col-lg col-md-12">
 							For sekundærknapper er bakgrunnen på knappen alltid fylt. Dette er for å sikre at knappeteksten alltid har god kontrast og synlighet for brukeren.
 							Plassering av sekundærknapper vil dermed bli mer fleksibelt, og de vil alltid tilfredsstille UU-kravene.
 						</Paragraph>
@@ -308,7 +308,7 @@ const ButtonInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Understrek ved hoved</Title>
-						<Paragraph className="col-lg-6">
+						<Paragraph className="col-lg col-md-12">
 							Alle knappevarianter har understrek ved hover for å tilfredsstille WCAG 2.0-kravene.
 						</Paragraph>
 					</div>

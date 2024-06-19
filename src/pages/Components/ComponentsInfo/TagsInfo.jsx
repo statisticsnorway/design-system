@@ -62,12 +62,12 @@ const TagsInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Tags</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Tekst kommer
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<Tag>Tag</Tag>
 						</div>
 						<div className="col-lg-12">
@@ -82,12 +82,12 @@ const TagsInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Tags width icon</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Tekst kommer
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<Tag icon={<Star size={18} />}>Tag with icon</Tag>
 						</div>
 						<div className="col-lg-12">

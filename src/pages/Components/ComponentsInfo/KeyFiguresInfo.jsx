@@ -213,7 +213,7 @@ const KeyFiguresInfo = () => {
 								Medium nøkkeltall skal alltid være en gruppe på to. De to tallene skal alltid stå på høyde med hverandre, ikke under hverandre – bortsett fra i mobilvisning.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 mb-4">
+						<div className="component-example col-lg col-md-12 mb-4">
 							<KeyFigures
 								number="80,6"
 								title="Menn"
@@ -223,7 +223,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="component-example col-lg-6 mb-4">
+						<div className="component-example col-lg col-md-12 mb-4">
 							<KeyFigures
 								number="84,7"
 								title="Kvinner"
@@ -251,7 +251,7 @@ const KeyFiguresInfo = () => {
 								Det anbefales ikke å bruke grupper på mer enn seks small nøkkeltall.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 mb-4">
+						<div className="component-example col-lg col-md-12 mb-4">
 							<KeyFigures
 								number="80,6"
 								title="Menn"
@@ -261,7 +261,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="component-example col-lg-6 mb-4">
+						<div className="component-example col-lg col-md-12 mb-4">
 							<KeyFigures
 								number="80,6"
 								title="Menn"
@@ -271,7 +271,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="component-example col-lg-6 mb-4">
+						<div className="component-example col-lg col-md-12 mb-4">
 							<KeyFigures
 								number="84,7"
 								title="Kvinner"
@@ -281,7 +281,7 @@ const KeyFiguresInfo = () => {
 								icon={<img alt="IconExample" src={KeyFiguresExample} />}
 							/>
 						</div>
-						<div className="component-example col-lg-6 mb-4">
+						<div className="component-example col-lg col-md-12 mb-4">
 							<KeyFigures
 								number="84,7"
 								title="Kvinner"
@@ -303,7 +303,7 @@ const KeyFiguresInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Medium, tables and graphs</Title>
-						<div className="col-lg-6 mb-4">
+						<div className="col-lg col-md-12 mb-4">
 							<Paragraph>
 								Når nøkkeltall settes til tabell eller figur (graf) skal det ha farget bakgrunn i SSB Green 1.
 								Figurens tittel flyttes opp og blir nøkkeltallstittel. Tallet skal være en total av verdiene i
@@ -311,7 +311,7 @@ const KeyFiguresInfo = () => {
 								ønsket sted i tabellen.
 							</Paragraph>
 						</div>
-						<div className="component-example divider-left col-lg-6 mb-4">
+						<div className="component-example divider-left col-lg col-md-12 mb-4">
 							<KeyFigures
 								title="Valgdeltagelse ved stortingsvalg"
 								numberDescription="prosent"
@@ -335,7 +335,7 @@ const KeyFiguresInfo = () => {
 			{activeTab === '/begrunnelse' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Elementstørrelse</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							Det er bare selve tallet som endrer størrelse i de ulike visningene for nøkkeltall. De andre elementene beholder samme størrelse.
 							Dette er gjort slik at det er mulig å skape en klar og konsistent designstruktur.

@@ -79,13 +79,13 @@ const BreadcrumbInfo = () => {
 			{activeTab === '/overview' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Brødsmuler</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							Brødsmulene hjelper brukeren å se hvor de befinner seg på nettstedet. Ved å følge lenkene til tidligere sider/nivåer,
 							vil brødsmulene fungere som en enkel navigasjon til foregående sider og innhold.
 						</Paragraph>
 					</div>
-					<div className="component-example col-lg-6 divider-left d-flex flex-column align-items-center">
+					<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 						<Breadcrumb items={mockedItems} />
 					</div>
 					<div className="col-lg-12">
@@ -100,7 +100,7 @@ const BreadcrumbInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="row mb-4">
 					<Title size={3} className="col-lg-12">Location based breadcrumbs</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							We have opted for a location based breadcrumbs as it gives the user a good overview of where in the website
 							hierarchy they are currently in, instead of path based breadcrumb which only show the path that the user have browsed.
@@ -108,7 +108,7 @@ const BreadcrumbInfo = () => {
 					</div>
 
 					<Title size={3} className="col-lg-12">Simplistic design</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							As breadcrumbs are a secondary navigation, the overall design of breadcrumbs has been kept at a very simplistic level
 							to avoid it being too prominent or confused for being a main navigational element.

@@ -44,12 +44,12 @@ const Header = () => {
 
 			{activeTab === '/mobile' && (
 				<div>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Title size={3}>Header closed</Title>
 						<img className="mt-4 template-border" style={{ width: '100%' }} src={headerClosedMobile} alt="Template header closed mobile" />
 					</div>
 					<Divider className="mt-4 mb-3" light />
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Title size={3}>Header open</Title>
 						<img className="mt-4 template-border" style={{ width: '100%' }} src={headerOpenMobile} alt="Template header open mobile" />
 					</div>

@@ -171,10 +171,10 @@ const DropdownInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Dropdown</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>{overviewText}</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left">
+						<div className="component-example col-lg col-md-12 divider-left">
 							<Dropdown header="Menu header" items={items} />
 						</div>
 						<div className="col-lg-12">
@@ -189,10 +189,10 @@ const DropdownInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Dropdown med forhåndsvalgt verdi</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>{overviewTextPreSelectedValue}</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left">
+						<div className="component-example col-lg col-md-12 divider-left">
 							<Dropdown header="Menu header" selectedItem={{ title: 'Ocean', id: 'item3' }} items={items} />
 						</div>
 						<div className="col-lg-12 mt-4">
@@ -207,10 +207,10 @@ const DropdownInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Dropdown med søkemulighet</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>{overviewTextSearchable}</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left">
+						<div className="component-example col-lg col-md-12 divider-left">
 							<Dropdown header="Menu header" searchable items={items} />
 						</div>
 						<div className="col-lg-12 mt-4">
@@ -227,7 +227,7 @@ const DropdownInfo = () => {
 			{activeTab === '/rationale' && (
 				<div className="row mb-4">
 					<Title size={2} className="col-lg-12">Grønn indikator</Title>
-					<div className="col-lg-6">
+					<div className="col-lg col-md-12">
 						<Paragraph>
 							En 5px grønn rektangulær indikator vises sammen med den lyse grønne hover-fargen for å
 							gi en tydeligere indikasjon på valg for brukere med nedsatt syn.

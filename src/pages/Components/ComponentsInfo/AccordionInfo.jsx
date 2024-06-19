@@ -131,12 +131,12 @@ const AccordionInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Standard accordion</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Brukes til filtrering, lange lister med flere seksjoner, menyer, tillegg, osv.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left align-items-center">
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
 							<Accordion header="This is a standard accordion">{accordionFillerText}</Accordion>
@@ -154,13 +154,13 @@ const AccordionInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Nested accordions</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Nested accordion brukes når det er behov for flere nivåer på innholdet.
 								Versjonen organiserer komplekst innhold og gir det hierarki og struktur. Det gir en bedre brukervennlighet og dermed en bedre brukeropplevelse.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left align-items-center">
 							<Accordion header="This is a nested accordion" openByDefault>
 								<NestedAccordion header="This is a nested accordion" openByDefault>
 									{accordionFillerText}
@@ -182,12 +182,12 @@ const AccordionInfo = () => {
 
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Table accordion</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								Det er utviklet egen accordion til tabeller. Accordiontekst er tabellens tittel, nummereringen er tabellens plassering på siden.
 							</Paragraph>
 						</div>
-						<div className="component-example col-lg-6 divider-left align-items-center">
+						<div className="component-example col-lg col-md-12 divider-left align-items-center">
 							<Accordion subHeader="Tabell 1" header="This is a table accordion">
 								{accordionFillerText}
 							</Accordion>
@@ -214,7 +214,7 @@ const AccordionInfo = () => {
 				<div>
 					<div className="row mb-4">
 						<Title size={2} className="col-lg-12">Single action accordions</Title>
-						<div className="col-lg-6">
+						<div className="col-lg col-md-12">
 							<Paragraph>
 								There are other accordion elements on other sites that collapse an open accordion when another is opened.
 								This feature is not incorporated into our accordions as this behavior can be unpredictable for the users.

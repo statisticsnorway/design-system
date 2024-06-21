@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import './main.scss';
@@ -14,11 +14,11 @@ if (process.env.NODE_ENV !== 'production') {
 	console.log('Development mode detected, open webpack dev server');
 }
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
 	<Router basename={process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : ''} history={history}>
 		<App />
 	</Router>,
-	document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import AccordionInfo from './ComponentsInfo/AccordionInfo';
 import accordionIcon from '../../../public/customIcons/accordion.svg';
 import BreadcrumbInfo from './ComponentsInfo/BreadcrumbInfo';
@@ -54,36 +56,36 @@ import TagsInfo from './ComponentsInfo/TagsInfo';
 import tagsIcon from '../../../public/customIcons/tags.svg';
 
 const componentsList = [
-	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
-	{ component: BreadcrumbInfo, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
-	{ component: ButtonInfo, label: 'Button', path: '/button', icon: buttonsIcon },
-	{ component: CardsInfo, label: 'Cards', path: '/cards', icon: cardsIcon },
-	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
-	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
-	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
-	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
-	{ component: FooterInfo, label: 'Footer', path: '/footer', icon: footerIcon },
-	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
-	{ component: GlossaryInfo, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },
+	{ component: <AccordionInfo />, label: 'Accordion', path: '/accordion', icon: accordionIcon },
+	{ component: <BreadcrumbInfo />, label: 'Breadcrumb', path: '/breadcrumb', icon: breadcrumbIcon },
+	{ component: <ButtonInfo />, label: 'Button', path: '/button', icon: buttonsIcon },
+	{ component: <CardsInfo />, label: 'Cards', path: '/cards', icon: cardsIcon },
+	{ component: <CheckboxInfo />, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
+	{ component: <DividerInfo />, label: 'Divider', path: '/divider', icon: dividersIcon },
+	{ component: <DropdownInfo />, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
+	{ component: <FactBoxInfo />, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
+	{ component: <FooterInfo />, label: 'Footer', path: '/footer', icon: footerIcon },
+	{ component: <FormErrorInfo />, label: 'Form Error', path: '/form-error' },
+	{ component: <GlossaryInfo />, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },
 	{ component: '', label: 'Graphs', path: '/graphs', icon: graphsIcon, comingSoon: true },
-	{ component: HeaderInfo, label: 'Header', path: '/header', icon: headerIcon },
-	{ component: IconInfo, label: 'Icons', path: '/icons', icon: iconsIcon },
-	{ component: InputInfo, label: 'Input', path: '/input', icon: inputIcon },
-	{ component: KeyFiguresInfo, label: 'Key Figures', path: '/key-figures', icon: keyfiguresIcon },
-	{ component: LinksInfo, label: 'Links', path: '/links', icon: linksIcon },
+	{ component: <HeaderInfo />, label: 'Header', path: '/header', icon: headerIcon },
+	{ component: <IconInfo />, label: 'Icons', path: '/icons', icon: iconsIcon },
+	{ component: <InputInfo />, label: 'Input', path: '/input', icon: inputIcon },
+	{ component: <KeyFiguresInfo />, label: 'Key Figures', path: '/key-figures', icon: keyfiguresIcon },
+	{ component: <LinksInfo />, label: 'Links', path: '/links', icon: linksIcon },
 	{ component: '', label: 'Map', path: '/map', icon: mapIcon, comingSoon: true },
-	{ component: PaginationInfo, label: 'Pagination', path: '/pagination', icon: paginationIcon },
-	{ component: QuotesInfo, label: 'Quote and Highlighting	', path: '/quotes', icon: quoteIcon },
-	{ component: RadioButtonInfo, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
+	{ component: <PaginationInfo />, label: 'Pagination', path: '/pagination', icon: paginationIcon },
+	{ component: <QuotesInfo />, label: 'Quote and Highlighting	', path: '/quotes', icon: quoteIcon },
+	{ component: <RadioButtonInfo />, label: 'Radio Buttons', path: '/radiobutton', icon: radiobuttonIcon },
 	{ component: '', label: 'Responsive media', path: '/responsive-media', icon: responsiveIcon, comingSoon: true },
-	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
-	{ component: SearchBoxInfo, label: 'Search', path: '/search-box', icon: searchIcon },
+	{ component: <ReferenceInfo />, label: 'Reference', path: '/reference', icon: referenceIcon },
+	{ component: <SearchBoxInfo />, label: 'Search', path: '/search-box', icon: searchIcon },
 	{ component: '', label: 'Site navigation', path: '/site-navigation', icon: sidenavigationIcon, comingSoon: true },
-	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
+	{ component: <StickyMenuInfo />, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
 	{ component: '', label: 'Table', path: '/table', icon: tableIcon, comingSoon: true },
-	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
-	{ component: TagsInfo, label: 'Tags', path: '/tags', icon: tagsIcon },
-	{ component: WarningsErrorsInfo, label: 'Warnings and errors', path: '/warnings-errors', icon: dialogIcon },
+	{ component: <TabsInfo />, label: 'Tabs', path: '/tabs', icon: tabsIcon },
+	{ component: <TagsInfo />, label: 'Tags', path: '/tags', icon: tagsIcon },
+	{ component: <WarningsErrorsInfo />, label: 'Warnings and errors', path: '/warnings-errors', icon: dialogIcon },
 ];
 
 export default componentsList;

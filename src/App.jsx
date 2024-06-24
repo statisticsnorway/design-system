@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 import Components from '@pages/Components/Components';
@@ -15,34 +15,30 @@ const App = () => (
 			<Header />
 		</header>
 		<div className="app-content">
-			<Switch>
-				<Route exact path="/">
-					<main>
-						<Welcome />
-					</main>
-				</Route>
-				<Route path="/design-system"> {/* For GH pages */}
-					<main>
-						<Welcome />
-					</main>
-				</Route>
-				<Route path="/get-started">
-					<main>
-						<Welcome />
-					</main>
-				</Route>
-				<Route path="/components" component={Components}>
-					<main>
-						<Components />
-					</main>
-				</Route>
-				<Route path="/templates">
-					<main>
-						<Templates />
-					</main>
-				</Route>
-				<Route component={NoMatchPage} />
-			</Switch>
+			<main>
+				<Routes>
+					<Route
+						exact
+						path="/"
+						element={<Welcome />}
+					/>
+					<Route
+						path="/design-system"
+						element={<Welcome />}
+					/> {/* For GH pages */}
+					<Route
+						path="/get-started"
+						element={<Welcome />}
+					/>
+					<Route
+						path="/components"
+						element={<Components />}
+					/>
+					<Route path="/templates" element={<Templates />} />
+					<Route element={NoMatchPage} />
+				</Routes>
+			</main>
+
 		</div>
 		<footer>
 			<Footer logo={logo} />

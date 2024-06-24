@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import logo from '@public/ssb-logo-green.svg';
 import logoSymbol from '@public/ssb-logo-symbol.svg';
 import { Dropdown, Link, Text, Title } from '@statisticsnorway/ssb-component-library';
@@ -16,7 +16,7 @@ const items = [
 const listItems = componentsList.filter(c => !c.comingSoon);
 
 const Header = () => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const location = useLocation();
 	const [menuIsOpen, toggleMenu] = useState(false);
 	const version = 'v2.0.99';
@@ -25,7 +25,7 @@ const Header = () => {
 		<div className={`header-component-wrapper${location.pathname === '/get-started' || location.pathname === '/' ? ' front-page' : ''}`}>
 			<div className="content-holder d-flex justify-content-between flex-wrap">
 				<div className="left-section">
-					<div className="logo-and-title" onClick={() => history.push('/')}>
+					<div className="logo-and-title" onClick={() => navigate('/')}>
 						<div className="home-nav">
 							<img className="logo-full" src={logo} alt="logo" />
 							<img className="logo-symbol" src={logoSymbol} alt="logo" />
@@ -47,10 +47,9 @@ const Header = () => {
 						{items.map(it => (
 							<NavLink
 								className={`header-navigation roboto${it.path === '/get-started' && location.pathname === '/' ? ' active' : ''}`}
-								activeClassName="active"
 								items={items}
 								to={it.path}
-								onClick={() => history.push(it.path)}
+								onClick={() => navigate(it.path)}
 							>{it.title}
 							</NavLink>
 						))}
@@ -84,7 +83,7 @@ const Header = () => {
 								items={listItems.map(it => ({ title: it.label, id: it.path }))}
 								placeholder="Søk etter innhold"
 								onSelect={selected => {
-									history.push(`/components${selected.id}`);
+									navigate(`/components${selected.id}`);
 									toggleMenu(false);
 								}}
 								searchable
@@ -94,11 +93,10 @@ const Header = () => {
 							{items.map(it => (
 								<NavLink
 									className="header-navigation roboto"
-									activeClassName="active"
 									items={items}
 									to={it.path}
 									onClick={() => {
-										history.push(it.path);
+										navigate(it.path);
 										toggleMenu(false);
 									}}
 								>{it.title}

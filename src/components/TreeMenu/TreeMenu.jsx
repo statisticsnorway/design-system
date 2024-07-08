@@ -18,9 +18,8 @@ const TreeMenu = ({
 					</div>
 				) : (
 					<NavLink
-						to={match.path + it.path}
+						to={match.pathname + it.path}
 						key={it.path}
-						activeClassName="selected"
 						className={`tree-node clickable${it.path === activeItem ? ' selected' : ''}`}
 					>{it.label}<ChevronRight className="arrow-icon" size="18" />
 					</NavLink>
@@ -38,10 +37,9 @@ const TreeMenu = ({
 						</div>
 					) : (
 						<NavLink
-							to={match.path + item.path}
+							to={match.pathname + item.path}
 							onClick={() => window.scroll({ top: 0, behavior: 'smooth' })}
 							key={uuidv4()}
-							activeClassName="selected"
 							className={`tree-node clickable${item.path === activeItem ? ' selected' : ''}`}
 						>{item.label}<ChevronRight className="arrow-icon" size="18" />
 						</NavLink>

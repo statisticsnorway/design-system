@@ -9,10 +9,10 @@ import Header from './TemplatesExamples/Header.template';
 
 const sidebarMainItems = [
 	{ component: '', label: 'Artikkel', path: '/article', icon: '', comingSoon: true },
-	{ component: Faktaside, label: 'Faktaside', path: '/faktaside', icon: '' },
-	{ component: KommuneFakta, label: 'Kommunefakta', path: '/kommunefakta', icon: '' },
-	{ component: Header, label: 'Header', path: '/header', icon: '' },
-	{ component: Footer, label: 'Footer', path: '/footer', icon: '' },
+	{ component: <Faktaside />, label: 'Faktaside', path: '/faktaside', icon: '' },
+	{ component: <KommuneFakta />, label: 'Kommunefakta', path: '/kommunefakta', icon: '' },
+	{ component: <Header />, label: 'Header', path: '/header', icon: '' },
+	{ component: <Footer />, label: 'Footer', path: '/footer', icon: '' },
 ];
 
 const sidebarItems = [
@@ -20,7 +20,7 @@ const sidebarItems = [
 ];
 
 const Templates = () => {
-	const match = useMatch('/templates');
+	const match = useMatch('/templates/*');
 	return (
 		<div className="templates-page page-wrapper">
 			<aside>
@@ -35,7 +35,7 @@ const Templates = () => {
 			<section className="container-fluid">
 				<Routes>
 					<Route
-						path={match.pathname}
+						path="*"
 						element={(
 							<div className="col-lg-12">
 								<Title size={1}>Templates/maler</Title>
@@ -49,8 +49,8 @@ const Templates = () => {
 							</div>
 						)}
 					/>
-					{sidebarMainItems.map(it => <Route key={it.path} path={`${match.pathname}${it.path}`} element={it.component} />)}
-					{sidebarItems.map(it => <Route key={it.path} path={`${match.pathname}${it.path}`} element={it.component} />)}
+					{sidebarMainItems.map(it => <Route key={it.path} path={`${match.pathnameBase}${it.path}`} element={it.component} />)}
+					{sidebarItems.map(it => <Route key={it.path} path={`${match.pathnameBase}${it.path}`} element={it.component} />)}
 				</Routes>
 			</section>
 		</div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { FactBox, Divider, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { FactBox, Dialog, Divider, LeadParagraph, Link, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
 Faktaboks fungerer på samme som accordions ved at man kan åpne eller lukke dem for visning av utvalgt innhold. 
@@ -73,9 +73,9 @@ const FactBoxInfo = () => {
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>Fact box</Title>
-			<LeadParagraph>
-				{leadParagraphText}
-			</LeadParagraph>
+			<Dialog type="warning" title="Komponenten er utgått">
+				<span>Denne komponenten fjernes i en senere versjon, den skal erstattes med <Link href="/#/components/expansion-box">Expansion Box</Link> </span>
+			</Dialog>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />
 

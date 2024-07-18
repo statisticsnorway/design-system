@@ -52,6 +52,7 @@ import TabsInfo from './ComponentsInfo/TabsInfo';
 import tabsIcon from '../../../public/customIcons/tabs.svg';
 import TagsInfo from './ComponentsInfo/TagsInfo';
 import tagsIcon from '../../../public/customIcons/tags.svg';
+import ExpansionBoxInfo from './ComponentsInfo/ExpansionBox';
 
 const componentsList = [
 	{ component: AccordionInfo, label: 'Accordion', path: '/accordion', icon: accordionIcon },
@@ -61,7 +62,8 @@ const componentsList = [
 	{ component: CheckboxInfo, label: 'Checkbox', path: '/checkbox', icon: checkboxIcon },
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
-	{ component: FactBoxInfo, label: 'Fact Box', path: '/fact-box', icon: factboxIcon },
+	{ component: ExpansionBoxInfo, label: 'Expansion Box', path: '/expansion-box', icon: factboxIcon },
+	{ component: FactBoxInfo, label: 'Fact Box (Utgått)', path: '/fact-box', icon: factboxIcon },
 	{ component: FooterInfo, label: 'Footer', path: '/footer', icon: footerIcon },
 	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
 	{ component: GlossaryInfo, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },

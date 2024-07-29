@@ -51,7 +51,7 @@ const codeLargeHtml = `
     <div>
 		<button class="ssb-glossary" onclick="{toggle classname for 'glossary-popup' to 'glossary-popup open' below}">
 			<div class="glossary-text-wrap">Antall husholdninger</div>
-			<i class="glossary-logo">{feather.openBook 12px}</i>
+			<span class="glossary-logo" aria-hidden="true">{feather.openBook 12px}</span>
 			<div class="glossary-popup">
 				<div class="content-box">
 					<span class="info-text">{insert explanation}</span>
@@ -68,9 +68,9 @@ const codeLargeHtml = `
             <span class="kf-title subtitle">husholdninger</span>
         </div>
         <div class="kf-changes">
-            <i class="changes-icon">{feather.[ chevronDown | chevronUp | Minus] 20px}</i>
-            <span class="changes-text">Opp 30 999 kroner</span>&nbsp;
-            <span class="changes-periode">fra året før</span>
+            <span class="changes-icon" aria-hidden="true">{feather.[ chevronDown | chevronUp | Minus] 20px}</span>
+            <span class="changes-text" aria-hidden="false">Opp 30 999 kroner</span>&nbsp;
+            <span class="changes-periode" aria-hidden="false">fra året før</span>
         </div>
     </div>
 </div>
@@ -359,7 +359,7 @@ const KeyFiguresInfo = () => {
 							<tr>
 								<td><code>changes</code></td>
 								<td>object</td>
-								<td>Object with <code>changeDirection(up, down or same), changeText, changePeriod</code></td>
+								<td>Object with <code>changeDirection(up, down or same), changeText, changePeriod, srChangeText</code></td>
 							</tr>
 							<tr>
 								<td><code>className</code></td>

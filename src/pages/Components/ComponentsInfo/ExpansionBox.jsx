@@ -233,6 +233,11 @@ const ExpansionBoxInfo = () => {
 							</thead>
 							<tbody>
 								<tr>
+									<td><code>aiIcon</code></td>
+									<td>bool</td>
+									<td>Use if AI-generated content</td>
+								</tr>
+								<tr>
 									<td><code>className</code></td>
 									<td>string</td>
 									<td>Optional container class</td>
@@ -241,11 +246,6 @@ const ExpansionBoxInfo = () => {
 									<td><code>header</code></td>
 									<td>string</td>
 									<td>Header text</td>
-								</tr>
-								<tr>
-									<td><code>icon</code></td>
-									<td>node</td>
-									<td>Renders an icon to the left of header text</td>
 								</tr>
 								<tr>
 									<td><code>sneakPeek</code></td>

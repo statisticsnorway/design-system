@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Sun } from 'react-feather';
-import { ExpansionBox, Divider, LeadParagraph, Tabs, Text, Title } from '@statisticsnorway/ssb-component-library';
+import { ExpansionBox, Divider, LeadParagraph, Link, Tabs, Title, Paragraph } from '@statisticsnorway/ssb-component-library';
 
 const leadParagraphText = `
-Expansion box har 3 varianter; “standard”, “sneak peek” og “icon”. Trenger mer tekst her  
+ExpansionBox samler innhold i en boks som åpnes og lukkes ved brukerinteraksjon. Komponenten er egnet til å vise en oppsummering av informasjon, 
+samle relatert innhold på ett sted og for å spare plass på siden ved å vise informasjon når brukeren ber om det. 
+Komponenten er uegnet til store mengder innhold og innhold som bruker må få med seg. 
 `;
 
 const overviewTextExpansionBoxStandard = `
-Expansion box har tre visningsmodus. Lukket, åpen og sneak peek. Når boksen er lukket skal den ha en informativ tittel som forteller brukeren hva innholdet i den vil være. 
-Da vil brukeren kunne forvente hva som vises når boksen åpnes.
+ExpansionBox Standard brukes der innholdet i boksen kan beskrives med en kort tittel.
 `;
 
 const overviewTextExpansionBoxSneakPeek = `
-Expansion box med sneak peek vil vise starten av innholdet.
+ExpansionBox SneakPeek brukes der bruker trenger kontekst for å forstå innholdet i boksen.
 `;
 
-const overviewTextExpansionBoxIcon = `
-Expansion box med ikon vil vise ikon til venstre for tittelen.
+const overviewTextExpansionBoxAI = `
+ExpansionBox AI brukes kun til AI-generert innhold. For eksempel ved å gi bruker tilgang til en kort oppsummering av en artikkel.
+Ikonet er konvensjonen for AI og kan ikke fjernes eller byttes ut.
 `;
 
 const tabItems = [
@@ -42,86 +43,102 @@ const tabCode = [
 
 const exampleContentSneakPeek = (
 	<div>
-		<Text>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non sem nec odio posuere porta sit amet porta turpis. Morbi eu convallis purus.
-			Proin eget quam ante. Ut malesuada, elit vel fringilla laoreet, est nisi viverra ligula, eu aliquet ante est quis lorem. Nunc porta ipsum ac mi sagittis,
-			a vulputate ligula tincidunt. Nulla facilisi. Sed consectetur, nulla vel placerat elementum, augue eros ultricies odio, at condimentum dolor enim et nunc.
-			Cras posuere, justo eu semper laoreet, purus elit hendrerit mauris, vel aliquam arcu risus eu augue.
-		</Text>
-		<Title size={3}>Liste</Title>
+		<Paragraph>
+			BNP er en økonomisk størrelse som måler summen av alle varer og tjenester produsert i et land i løpet av et år, minus de varene og tjenestene som blir brukt under produksjonen.
+		</Paragraph>
+
+		<Title size={3}>Viktige tall</Title>
 		<ul>
-			<li>Lorem ipsum 1</li>
-			<li>Lorem ipsum 2</li>
-			<li>Lorem ipsum 3</li>
+			<li>I 2023 var Norges BNP på 5 129 milliarder kroner, noe som var en nedgang fra 5 708 milliarder kroner i 2022.</li>
+			<li>Volumveksten i BNP fra 2022 til 2023 var positiv, på 0,5 prosent.</li>
+			<li>BNP Fastlands-Norge beregnes uten inntekter fra utvinning av olje og gass, rørtransport, og utenriks sjøfart for å gi et mer nøyaktig bilde av økonomien ekskludert oljesektoren.</li>
+			<li>BNP per innbygger i Norge var 50 prosent over gjennomsnittet i EU i 2022, noe som plasserer Norge blant verdens rikeste land.</li>
 		</ul>
-		<Text>
-			Donec nec nisl porta, imperdiet sapien vel, auctor sem. In non leo rhoncus, finibus metus quis, consectetur diam. Integer ut sagittis velit. Quisque eget porta lacus.
-			Fusce nec egestas est. Cras venenatis sem eu ante finibus volutpat. Donec tempor eget leo ut maximus. Nunc odio ante, tincidunt at lacus vel, gravida sollicitudin arcu.
-			Vivamus ante odio, consectetur ut dolor nec, fringilla interdum nulla. Duis dapibus est ut tortor dictum vestibulum. Pellentesque dapibus ultricies diam, in suscipit dui ornare sit amet.
-		</Text>
+		<Link href="/">Se flere tall fra statistikken Nasjonalregnskap</Link>
 	</div>
 );
 
-const codeStandardReact = `
+const exampleContentAI = (
+	<div>
+		<Paragraph>
+			BNP er en økonomisk størrelse som måler summen av alle varer og tjenester produsert i et land i løpet av et år, minus de varene og tjenestene som blir brukt under produksjonen.
+		</Paragraph>
+
+		<Title size={3}>Viktige tall</Title>
+		<ul>
+			<li>I 2023 var Norges BNP på 5 129 milliarder kroner, noe som var en nedgang fra 5 708 milliarder kroner i 2022.</li>
+			<li>Volumveksten i BNP fra 2022 til 2023 var positiv, på 0,5 prosent.</li>
+			<li>BNP Fastlands-Norge beregnes uten inntekter fra utvinning av olje og gass, rørtransport, og utenriks sjøfart for å gi et mer nøyaktig bilde av økonomien ekskludert oljesektoren.</li>
+			<li>BNP per innbygger i Norge var 50 prosent over gjennomsnittet i EU i 2022, noe som plasserer Norge blant verdens rikeste land.</li>
+		</ul>
+		<Link href="/">Se flere tall fra statistikken Nasjonalregnskap</Link>
+
+		<Paragraph className="mt-3">
+			Oppsummeringen er laget ved hjelp av en KI-tjeneste fra OpenAi. Innholdet er kvalitetssikret av SSB før publisering.
+		</Paragraph>
+	</div>
+);
+
+const codeDefaultReact = `
 <ExpansionBox
-	header="Expansion box header text" 
+	header="Artikkelen oppsummert" 
 	text={insert content or text}
 />
 `;
 
-const codeStandardHtml = `
+const codeDefaultHtml = `
 <div class='ssb-expansion-box'>
   <button aria-expanded='false' class='header'>
-    <span class='header-text'>This is a ExpansionBox title</span>
+    <span class='header-text'>Artikkelen oppsummert</span>
     <div class='icon-wrapper'>
       <i class="expand-icon">{feather.chevronDown 20px}</i>
     </div>
   </button>
-  <div class='content closed'>{insert content}</div>
+  <div class='content closed'>{insert content or text}</div>
 </div>
 `;
 
 const codeSneakPeakReact = `
 <ExpansionBox 
-	header='ExpansionBox with icon and sneakpeek text' 
-	text='This is paragraph text which explains the expansionBox' 
+	header='Artikkelen oppsummert' 
+	text={insert content or text} 
 	sneakPeek />
 `;
 
 const codeSneakPeakHtml = `
 <div class="ssb-expansion-box sneak-peek">
    <button class="header" aria-expanded="false">
-      <span class="header-text">ExpansionBox with icon and sneakpeek content</span>
+      <span class="header-text">Artikkelen oppsummert</span>
       <div class="icon-wrapper">
          <i class="expand-icon">{feather.chevronDown 20px}</i>
       </div>
    </button>
    <div class="content closed">
-      {content}
+      {insert content or text}
    </div>
 </div>
 `;
 
-const codeIconReact = `
+const codeAIReact = `
 <ExpansionBox 
-	header='ExpansionBox with icon and sneakpeek' 
-	text='This is paragraph text which explains the expansionBox' 
-	icon={<Sun size={32} />} sneakPeek />
+	header='Artikkelen oppsummert' 
+	text={insert content or text}
+	aiIcon sneakPeek />
 `;
 
-const codeIconHtml = `
+const codeAIHtml = `
 <div class="ssb-expansion-box sneak-peek">
    <button class="header" aria-expanded="false">
       <div class="icon">
-        <i>{feather.sun 32px}</i>
+        <i>{sparkle 32px}</i>
       </div>
-      <span class="header-text">ExpansionBox with icon and sneakpeek content</span>
+      <span class="header-text">Artikkelen oppsummert</span>
       <div class="icon-wrapper">
          <i class="expand-icon">{feather.chevronDown 20px}</i>
       </div>
    </button>
    <div class="content closed">
-      {content}
+      {insert content or text}
    </div>
 </div>
 `;
@@ -134,7 +151,7 @@ const ExpansionBoxInfo = () => {
 
 	return (
 		<div className="col-lg-12">
-			<Title size={1}>Expansion box</Title>
+			<Title size={1}>ExpansionBox</Title>
 			<LeadParagraph>
 				{leadParagraphText}
 			</LeadParagraph>
@@ -144,36 +161,34 @@ const ExpansionBoxInfo = () => {
 			{activeTab === '/oversikt' && (
 				<div>
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Exspansion box</Title>
-						<div className="col-lg col-md-12 mb-4">
+						<Title size={2} className="col-lg-12">ExpansionBox Standard</Title>
+						<div className="col-lg col-md-12">
 							<p>{overviewTextExpansionBoxStandard}</p>
 						</div>
-						<Divider light />
-						<div className="component-example col-12 mt-4" style={{ width: '750px' }}>
-							<ExpansionBox header="This is an expansion box" text={exampleContentSneakPeek} />
+						<div className="component-example col-lg col-md-12 divider-left">
+							<ExpansionBox header="Artikkelen oppsummert" text={exampleContentSneakPeek} />
 						</div>
 						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeStandardReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeStandardHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeDefaultReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeDefaultHtml} language="html" />}
 						</div>
 					</div>
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Exspansion box with Sneak Peek</Title>
-						<div className="col-lg col-12 mb-4">
+						<Title size={2} className="col-lg-12">ExpansionBox SneakPeek</Title>
+						<div className="col-lg col-md-12">
 							{overviewTextExpansionBoxSneakPeek}
 						</div>
-						<Divider light />
-						<div className="component-example col-12 mt-4" style={{ width: '750px' }}>
+						<div className="component-example col-lg col-md-12 divider-left">
 							<ExpansionBox
-								header="This is an expansion box-sneak peek"
+								header="Artikkelen oppsummert"
 								text={exampleContentSneakPeek}
 								sneakPeek
 							/>
 						</div>
-						<div className="col-lg-12 mt-4">
+						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
 							{activeCodeTab === '/react' && <CodeSnippet code={codeSneakPeakReact} language="jsx" />}
@@ -182,24 +197,23 @@ const ExpansionBoxInfo = () => {
 					</div>
 
 					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">Exspansion box with icon</Title>
-						<div className="col-lg col-12  mb-4">
-							{overviewTextExpansionBoxIcon}
+						<Title size={2} className="col-lg-12">ExpansionBox AI</Title>
+						<div className="col-lg col-md-12">
+							{overviewTextExpansionBoxAI}
 						</div>
-						<Divider light />
-						<div className="component-example col-12 mt-4" style={{ width: '750px' }}>
+						<div className="component-example col-lg col-md-12 divider-left">
 							<ExpansionBox
-								header="This is an expansion box-icon"
-								text={exampleContentSneakPeek}
+								header="Artikkelen oppsummert"
+								text={exampleContentAI}
 								sneakPeek
-								icon={<Sun size={32} />}
+								aiIcon
 							/>
 						</div>
-						<div className="col-lg-12 mt-4">
+						<div className="col-lg-12">
 							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
 							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeIconReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeIconHtml} language="html" />}
+							{activeCodeTab === '/react' && <CodeSnippet code={codeAIReact} language="jsx" />}
+							{activeCodeTab === '/html' && <CodeSnippet code={codeAIHtml} language="html" />}
 						</div>
 					</div>
 				</div>
@@ -246,7 +260,7 @@ const ExpansionBoxInfo = () => {
 								<tr>
 									<td><code>text</code></td>
 									<td>string or element</td>
-									<td>Content in expansion box</td>
+									<td>Content in expansionBox</td>
 								</tr>
 							</tbody>
 						</table>

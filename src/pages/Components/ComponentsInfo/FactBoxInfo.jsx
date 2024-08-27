@@ -74,7 +74,7 @@ const FactBoxInfo = () => {
 		<div className="col-lg-12">
 			<Title size={1}>Fact box</Title>
 			<Dialog type="warning" title="Komponenten er utgått">
-				<span>Denne komponenten fjernes i en senere versjon, den skal erstattes med <Link href="/#/components/expansion-box">Expansion Box</Link> </span>
+				<span>Denne komponenten fjernes i en senere versjon, den skal erstattes med <Link href="/#/components/expansion-box">ExpansionBox</Link> </span>
 			</Dialog>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider className="mb-4" />

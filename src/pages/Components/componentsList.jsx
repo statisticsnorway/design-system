@@ -14,7 +14,6 @@ import DividerInfo from './ComponentsInfo/DividerInfo';
 import dividersIcon from '../../../public/customIcons/dividers.svg';
 import DropdownInfo from './ComponentsInfo/DropdownInfo';
 import dropdownIcon from '../../../public/customIcons/dropdown.svg';
-import FactBoxInfo from './ComponentsInfo/FactBoxInfo';
 import factboxIcon from '../../../public/customIcons/factbox.svg';
 import footerIcon from '../../../public/customIcons/footer.svg';
 import FooterInfo from './ComponentsInfo/FooterInfo';
@@ -59,7 +58,6 @@ const componentsList = [
 	{ component: DividerInfo, label: 'Divider', path: '/divider', icon: dividersIcon },
 	{ component: DropdownInfo, label: 'Dropdown', path: '/dropdown', icon: dropdownIcon },
 	{ component: ExpansionBoxInfo, label: 'ExpansionBox', path: '/expansion-box', icon: factboxIcon },
-	{ component: FactBoxInfo, label: 'Fact Box (Utgått)', path: '/fact-box', icon: factboxIcon },
 	{ component: FooterInfo, label: 'Footer', path: '/footer', icon: footerIcon },
 	{ component: FormErrorInfo, label: 'Form Error', path: '/form-error' },
 	{ component: GlossaryInfo, label: 'Glossary', path: '/glossary', icon: wordExplanationIcon },

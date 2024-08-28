@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../../style/_table.scss";
 import CodeSnippet from "@components/CodeSnippet/CodeSnippet";
 import {
   Divider,
@@ -23,10 +22,6 @@ const tabItems = [
     path: "/overview",
   },
   {
-    title: "Begrunnelse",
-    path: "/rationale",
-  },
-  {
     title: "Props",
     path: "/props",
   },
@@ -44,106 +39,170 @@ const tabCode = [
 ];
 
 const codeReact = `
-<FactBox
-	header="This is a header" 
-	text="This is paragraph text which explains the accordion"
-/>
+import { Table, TableHead, TableBody, TableFooter, TableRow, TableCell } from "@statisticsnorway/ssb-component-library";
+
+const SimpleTable = () => (
+  <Table>
+    <TableHead>
+      <TableRow>
+        <TableCell type="th">Header 1</TableCell>
+        <TableCell type="th">Header 2</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell>Data 1</TableCell>
+        <TableCell>Data 2</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>More Data 1</TableCell>
+        <TableCell>More Data 2</TableCell>
+      </TableRow>
+    </TableBody>
+    <TableFooter>
+      <TableRow>
+        <TableCell colSpan={2}>Footer Information</TableCell>
+      </TableRow>
+    </TableFooter>
+  </Table>
+);
+
+export default SimpleTable;
 `;
 
 const codeHtml = `
-<div class="ssb-fact-box">
-	<div class="ssb-accordion without-borders">
-		<button class="accordion-header closed" aria-expanded="false"  onclick="{toggle classname to 'open' and aria-expanded to 'true'} tabindex="0">
-			<span class="button-grid">
-				<span class="header-text">This is a fact box header</span>
-				{20px ChevronDown icon, add class="expand-icon" }
-			</span>
-		</button>
-		<div class="accordion-body closed">
-			{insert content}
-		</div>
-	</div>
-</div>
+  <Table>
+    <TableHead>
+      <TableRow>
+        <TableCell type="th">Header 1</TableCell>
+        <TableCell type="th">Header 2</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell>Data 1</TableCell>
+        <TableCell>Data 2</TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>More Data 1</TableCell>
+        <TableCell>More Data 2</TableCell>
+      </TableRow>
+    </TableBody>
+    <TableFooter>
+      <TableRow>
+        <TableCell colSpan={2}>Footer Information</TableCell>
+      </TableRow>
+    </TableFooter>
+  </Table>
 `;
 
 const overviewText = `
-Tabellkomponenten er responsiv og brukervennlig.
-Støtte for navigasjon via knapper og horisontal rulling. Når tabellen har mer innhold enn skjermen kan vise, aktiveres rullefunksjonen automatisk. Brukeren kan enkelt navigere med piltastene, slik at all informasjon er tilgjengelig, selv på mindre skjermer.
+Det er viktig å bruke rad- og kolonneoverskrifter. En celle er en overskrift hvis den beskriver innholdet i cellene under eller ved siden av. Som en hovedregel bør tall høyrejusteres for å gjøre det enklere å sammenligne de. 
 `;
 
 export const Statistics = () => (
-  <div style={{ padding: "4rem" }}>
-    <SSBTable caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non pretium felis. Aenean eu ipsum in magna auctor porta. Donec vestibulum nulla vel laoreet blandit.">
+  <div>
+    <SSBTable caption="Antall besøk og årsverk på museer og samlinger">
       <TableHead>
         <TableRow>
-          <TableCell type="th" rowSpan={2} align="right">
-            2020
-          </TableCell>
-          <TableCell type="th" colSpan={2} scope="colgroup">
-            Second level
+          <TableCell type="th" colSpan={1}></TableCell>
+          <TableCell type="th" colSpan={3} align="center">
+            Antall
           </TableCell>
         </TableRow>
         <TableRow>
-          <TableCell type="th" scope="col" align="right">
-            First level
+          <TableCell type="th">Museer og samlinger totalt</TableCell>
+          <TableCell type="th" align="center">
+            2020
           </TableCell>
-          <TableCell type="th" scope="col" align="right">
-            First level<sup>1</sup>
+          <TableCell type="th" align="center">
+            2021
+          </TableCell>
+          <TableCell type="th" align="center">
+            2022
           </TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
         <TableRow>
           <TableCell type="th" scope="row">
-            Total (with numbers)
+            Museer og samlinger totalt<sup>1</sup>
           </TableCell>
-          <TableCell align="right">1 000</TableCell>
-          <TableCell align="right">2 000</TableCell>
+          <TableCell align="center">102</TableCell>
+          <TableCell align="center">101</TableCell>
+          <TableCell align="center">104</TableCell>
         </TableRow>
         <TableRow>
           <TableCell type="th" scope="row" indentationLevel={1}>
-            First level
+            Besøk totalt
           </TableCell>
-          <TableCell align="right">50</TableCell>
-          <TableCell align="right">100</TableCell>
+          <TableCell align="center" style={{ fontWeight: "bold" }}>
+            5 134 293
+          </TableCell>
+          <TableCell align="center" style={{ fontWeight: "bold" }}>
+            6 485 173
+          </TableCell>
+          <TableCell align="center" style={{ fontWeight: "bold" }}>
+            10 321 374
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell type="th" scope="row" indentationLevel={2}>
-            Second level
+            Enkeltbesøk
           </TableCell>
-          <TableCell align="right">200</TableCell>
-          <TableCell align="right">650</TableCell>
+          <TableCell align="center">4 421 942</TableCell>
+          <TableCell align="center">5 474 120</TableCell>
+          <TableCell align="center">8 491 379</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell type="th" scope="row" indentationLevel={3}>
-            Third level
+          <TableCell type="th" scope="row" indentationLevel={2}>
+            Gruppebesøk
           </TableCell>
-          <TableCell align="right">500</TableCell>
-          <TableCell align="right">200</TableCell>
+          <TableCell align="center">712 351</TableCell>
+          <TableCell align="center">1 011 053</TableCell>
+          <TableCell align="center">1 829 995</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell type="th" scope="row" indentationLevel={2}>
+            Betalende besøkende
+          </TableCell>
+          <TableCell align="center">2 391 962</TableCell>
+          <TableCell align="center">2 774 376</TableCell>
+          <TableCell align="center">5 654 919</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell type="th" scope="row" indentationLevel={1}>
+            Årsverk
+          </TableCell>
+          <TableCell align="center"></TableCell>
+          <TableCell align="center"></TableCell>
+          <TableCell align="center"></TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell type="th" scope="row" indentationLevel={2}>
+            Lønte
+          </TableCell>
+          <TableCell align="center">4 173</TableCell>
+          <TableCell align="center">4 404</TableCell>
+          <TableCell align="center">4 645</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell type="th" scope="row" indentationLevel={2}>
+            Faste stillinger
+          </TableCell>
+          <TableCell align="center">3 359</TableCell>
+          <TableCell align="center">3 516</TableCell>
+          <TableCell align="center">3 683</TableCell>
         </TableRow>
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell type="td" colSpan={3}>
+          <TableCell type="td" colSpan={4}>
             <div>
-              <sup>1</sup> Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Mauris lacinia massa ut velit pulvinar, a ullamcorper odio
-              pulvinar. Nulla vulputate congue justo a bibendum. Maecenas
-              aliquet volutpat urna ac bibendum. Morbi at pharetra massa. Sed
-              ornare diam eleifend, semper ipsum sed, feugiat purus.
+              <sup>1</sup> Tallet på museer vil variere fra år til år. For
+              eksempel leverer noen museer tall til statistikken ett år, men
+              ikke et annet.
             </div>
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell type="td" colSpan={3}>
-            <sup>2</sup> Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Cras non pretium felis.
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell type="td" colSpan={3}>
-            <sup>3</sup> Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit.
           </TableCell>
         </TableRow>
       </TableFooter>
@@ -162,8 +221,11 @@ const TableInfo = () => {
     <div className="col-lg-12">
       <Title size={1}>Table</Title>
       <LeadParagraph>
-        Table er en komponent som brukes til å vise statistikk. Den har et
-        responsivt design som gjør at tabelldata kan leses på alle plattformer.
+        Tabeller brukes til å organisere og vise data på en strukturert måte.
+        Ulike skjermlesere håndterer tabeller litt forskjellig, men felles er at
+        bare en liten del av tabellen kan presenteres av gangen: ofte bare én
+        celle. Det er en fordel at tabellceller ikke slås sammen, og at cellene
+        ikke inneholder mer enn ett interaktivt element.
       </LeadParagraph>
       <Tabs
         activeOnInit={tabItems[0].path}
@@ -176,7 +238,7 @@ const TableInfo = () => {
       {activeTab === "/overview" && (
         <div className="row mb-4">
           <Title size={2} className="col-lg-12">
-            Tabell
+            Retningslinjer for tabell
           </Title>
           <div className="col-lg col-md-12">
             <p>{overviewText}</p>
@@ -205,12 +267,11 @@ const TableInfo = () => {
       {activeTab === "/props" && (
         <div>
           <div className="row col-lg-12">
-            <Title size={2}>Props</Title>
             <table className="col-lg-12 mb-4">
               <thead style={{ textAlign: "left" }}>
                 <tr>
                   <th>
-                    <Title size={3}>Prop name</Title>
+                    <Title size={3}>TableElementProps</Title>
                   </th>
                   <th>
                     <Title size={3}>Type</Title>
@@ -221,6 +282,7 @@ const TableInfo = () => {
                 </tr>
               </thead>
               <tbody>
+                {/* TableElementProps */}
                 <tr>
                   <td style={{ paddingLeft: "20px" }}>
                     <code>className</code>
@@ -235,6 +297,25 @@ const TableInfo = () => {
                   <td>ReactNode</td>
                   <td>Content to be displayed within the component</td>
                 </tr>
+              </tbody>
+            </table>
+
+            <Divider className="mb-4" light />
+            <table className="col-lg-12 mb-4">
+              <thead style={{ textAlign: "left" }}>
+                <tr>
+                  <th>
+                    <Title size={3}>TableProps</Title>
+                  </th>
+                  <th>
+                    <Title size={3}>Type</Title>
+                  </th>
+                  <th>
+                    <Title size={3}>Description</Title>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <td style={{ paddingLeft: "20px" }}>
                     <code>caption</code>
@@ -249,6 +330,40 @@ const TableInfo = () => {
                   <td>string</td>
                   <td>References to data notes</td>
                 </tr>
+                <tr>
+                  <td style={{ paddingLeft: "20px" }}>
+                    <code>className</code>
+                  </td>
+                  <td>string</td>
+                  <td>Optional container class</td>
+                </tr>
+                <tr>
+                  <td style={{ paddingLeft: "20px" }}>
+                    <code>children</code>
+                  </td>
+                  <td>ReactNode</td>
+                  <td>Content to be displayed within the component</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <Divider className="mb-4" light />
+
+            <table className="col-lg-12 mb-4">
+              <thead style={{ textAlign: "left" }}>
+                <tr>
+                  <th>
+                    <Title size={3}>TableCellProps</Title>
+                  </th>
+                  <th>
+                    <Title size={3}>Type</Title>
+                  </th>
+                  <th>
+                    <Title size={3}>Description</Title>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <td style={{ paddingLeft: "20px" }}>
                     <code>id</code>

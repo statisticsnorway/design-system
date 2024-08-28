@@ -241,7 +241,7 @@ const TableInfo = () => {
             Retningslinjer for tabell
           </Title>
           <div className="col-lg col-md-12">
-            <p>{overviewText}</p>
+            <Paragraph>{overviewText}</Paragraph>
           </div>
           <div className="col-lg col-md-12">
             <Statistics />

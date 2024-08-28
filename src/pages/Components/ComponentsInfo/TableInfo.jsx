@@ -26,6 +26,44 @@ const tabCode = [
 
 const overviewText = 'Rad- og kolonneoverskrifter er essensielle. En celle er en overskrift hvis den beskriver innholdet i cellene under eller ved siden av. Juster tall for enklere sammenligning.';
 
+const tableData = [
+	{
+		id: 'museer_totalt',
+		header: 'Museer og samlinger totalt',
+		data: ['102', '101', '104'],
+	},
+	{
+		id: 'besok_totalt',
+		header: 'Besøk totalt',
+		data: ['5 134 293', '6 485 173', '10 321 374'],
+		bold: true,
+	},
+	{
+		id: 'enkeltbesok',
+		header: 'Enkeltbesøk',
+		data: ['4 421 942', '5 474 120', '8 491 379'],
+	},
+	{
+		id: 'gruppebesok',
+		header: 'Gruppebesøk',
+		data: ['712 351', '1 011 053', '1 829 995'],
+	},
+	{
+		id: 'betalende',
+		header: 'Betalende besøkende',
+		data: ['2 391 962', '2 774 376', '5 654 919'],
+	},
+	{ id: 'arsverk', header: 'Årsverk', data: ['', '', ''] },
+	{ id: 'lonte', header: 'Lønte', data: ['4173', '4404', '4645'] },
+	{
+		id: 'faste_stillinger',
+		header: 'Faste stillinger',
+		data: ['3359', '3516', '3683'],
+	},
+];
+
+const generateKey = (baseKey, suffix) => `${baseKey}_${suffix}`;
+
 const Statistics = () => (
 	<SSBTable caption="Antall besøk og årsverk på museer og samlinger">
 		<TableHead>
@@ -37,88 +75,30 @@ const Statistics = () => (
 			</TableRow>
 			<TableRow>
 				<TableCell type="th">Museer og samlinger totalt</TableCell>
-				<TableCell type="th" align="center">
-					2020
-				</TableCell>
-				<TableCell type="th" align="center">
-					2021
-				</TableCell>
-				<TableCell type="th" align="center">
-					2022
-				</TableCell>
+				{['2020', '2021', '2022'].map(year => (
+					<TableCell type="th" align="right" key={`year_${year}`}>
+						{year}
+					</TableCell>
+				))}
 			</TableRow>
 		</TableHead>
 		<TableBody>
-			<TableRow>
-				<TableCell type="th" scope="row">
-					Museer og samlinger totalt<sup>1</sup>
-				</TableCell>
-				<TableCell align="center">102</TableCell>
-				<TableCell align="center">101</TableCell>
-				<TableCell align="center">104</TableCell>
-			</TableRow>
-			<TableRow>
-				<TableCell type="th" scope="row" indentationLevel={1}>
-					Besøk totalt
-				</TableCell>
-				<TableCell align="center" style={{ fontWeight: 'bold' }}>
-					5 134 293
-				</TableCell>
-				<TableCell align="center" style={{ fontWeight: 'bold' }}>
-					6 485 173
-				</TableCell>
-				<TableCell align="center" style={{ fontWeight: 'bold' }}>
-					10 321 374
-				</TableCell>
-			</TableRow>
-			<TableRow>
-				<TableCell type="th" scope="row" indentationLevel={2}>
-					Enkeltbesøk
-				</TableCell>
-				<TableCell align="center">4 421 942</TableCell>
-				<TableCell align="center">5 474 120</TableCell>
-				<TableCell align="center">8 491 379</TableCell>
-			</TableRow>
-			<TableRow>
-				<TableCell type="th" scope="row" indentationLevel={2}>
-					Gruppebesøk
-				</TableCell>
-				<TableCell align="center">712 351</TableCell>
-				<TableCell align="center">1 011 053</TableCell>
-				<TableCell align="center">1 829 995</TableCell>
-			</TableRow>
-			<TableRow>
-				<TableCell type="th" scope="row" indentationLevel={2}>
-					Betalende besøkende
-				</TableCell>
-				<TableCell align="center">2 391 962</TableCell>
-				<TableCell align="center">2 774 376</TableCell>
-				<TableCell align="center">5 654 919</TableCell>
-			</TableRow>
-			<TableRow>
-				<TableCell type="th" scope="row" indentationLevel={1}>
-					Årsverk
-				</TableCell>
-				<TableCell align="center" />
-				<TableCell align="center" />
-				<TableCell align="center" />
-			</TableRow>
-			<TableRow>
-				<TableCell type="th" scope="row" indentationLevel={2}>
-					Lønte
-				</TableCell>
-				<TableCell align="center">4 173</TableCell>
-				<TableCell align="center">4 404</TableCell>
-				<TableCell align="center">4 645</TableCell>
-			</TableRow>
-			<TableRow>
-				<TableCell type="th" scope="row" indentationLevel={2}>
-					Faste stillinger
-				</TableCell>
-				<TableCell align="center">3 359</TableCell>
-				<TableCell align="center">3 516</TableCell>
-				<TableCell align="center">3 683</TableCell>
-			</TableRow>
+			{tableData.map(row => (
+				<TableRow key={row.id}>
+					<TableCell type="th" scope="row">
+						{row.header}
+					</TableCell>
+					{row.data.map((item, idx) => (
+						<TableCell
+							align="right"
+							style={row.bold ? { fontWeight: 'bold' } : {}}
+							key={generateKey(row.id, idx)}
+						>
+							{item}
+						</TableCell>
+					))}
+				</TableRow>
+			))}
 		</TableBody>
 		<TableFooter>
 			<TableRow>

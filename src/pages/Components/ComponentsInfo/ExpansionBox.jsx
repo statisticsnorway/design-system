@@ -144,10 +144,10 @@ const codeAIHtml = `
 `;
 
 const ExpansionBoxInfo = () => {
-	const [activeTab, changeTab] = useState(tabItems[0].path);
-	const [activeCodeTab, changeCodeTab] = useState(tabCode[0].path);
-	const tabClicked = e => changeTab(e);
-	const tabCodeClicked = e => changeCodeTab(e);
+	const [activeTab, setActiveTab] = useState(tabItems[0].path);
+	const [activeCodeTab, setActiveCodeTab] = useState(tabCode[0].path);
+	const tabClicked = e => setActiveTab(e);
+	const tabCodeClicked = e => setActiveCodeTab(e);
 
 	return (
 		<div className="col-lg-12">

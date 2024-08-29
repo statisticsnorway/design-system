@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
 import { ExpansionBox, Divider, LeadParagraph, Link, Tabs, Title, Paragraph } from '@statisticsnorway/ssb-component-library';
+import ComponentExample from '../ComponentExample';
 
 const leadParagraphText = `
 ExpansionBox samler innhold i en boks som åpnes og lukkes ved brukerinteraksjon. Komponenten er egnet til å vise en oppsummering av informasjon, 
@@ -145,9 +145,7 @@ const codeAIHtml = `
 
 const ExpansionBoxInfo = () => {
 	const [activeTab, setActiveTab] = useState(tabItems[0].path);
-	const [activeCodeTab, setActiveCodeTab] = useState(tabCode[0].path);
 	const tabClicked = e => setActiveTab(e);
-	const tabCodeClicked = e => setActiveCodeTab(e);
 
 	return (
 		<div className="col-lg-12">
@@ -156,66 +154,50 @@ const ExpansionBoxInfo = () => {
 				{leadParagraphText}
 			</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
-			<Divider className="mb-4" />
+			<Divider />
 
 			{activeTab === '/oversikt' && (
 				<div>
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">ExpansionBox Standard</Title>
-						<div className="col-lg col-md-12">
-							<p>{overviewTextExpansionBoxStandard}</p>
-						</div>
-						<div className="component-example col-lg col-md-12 divider-left">
-							<ExpansionBox header="Artikkelen oppsummert" text={exampleContentSneakPeek} />
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeDefaultReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeDefaultHtml} language="html" />}
-						</div>
-					</div>
+					<ComponentExample
+						title="ExpansionBox Standard"
+						overviewText={overviewTextExpansionBoxStandard}
+						exampleContent={<ExpansionBox header="Artikkelen oppsummert" text={exampleContentSneakPeek} />}
+						codeReact={codeDefaultReact}
+						codeHtml={codeDefaultHtml}
+						tabCode={tabCode}
+					/>
 
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">ExpansionBox SneakPeek</Title>
-						<div className="col-lg col-md-12">
-							{overviewTextExpansionBoxSneakPeek}
-						</div>
-						<div className="component-example col-lg col-md-12 divider-left">
+					<ComponentExample
+						title="ExpansionBox SneakPeek"
+						overviewText={overviewTextExpansionBoxSneakPeek}
+						exampleContent={(
 							<ExpansionBox
 								header="Artikkelen oppsummert"
 								text={exampleContentSneakPeek}
 								sneakPeek
 							/>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeSneakPeakReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeSneakPeakHtml} language="html" />}
-						</div>
-					</div>
+						)}
+						codeReact={codeSneakPeakReact}
+						codeHtml={codeSneakPeakHtml}
+						tabCode={tabCode}
+					/>
 
-					<div className="row mb-4">
-						<Title size={2} className="col-lg-12">ExpansionBox AI</Title>
-						<div className="col-lg col-md-12">
-							{overviewTextExpansionBoxAI}
-						</div>
-						<div className="component-example col-lg col-md-12 divider-left">
+					<ComponentExample
+						title="ExpansionBox AI"
+						overviewText={overviewTextExpansionBoxAI}
+						exampleContent={(
 							<ExpansionBox
 								header="Artikkelen oppsummert"
 								text={exampleContentAI}
 								sneakPeek
 								aiIcon
 							/>
-						</div>
-						<div className="col-lg-12">
-							<Tabs activeOnInit={tabCode[0].path} items={tabCode} onClick={tabCodeClicked} />
-							<Divider light />
-							{activeCodeTab === '/react' && <CodeSnippet code={codeAIReact} language="jsx" />}
-							{activeCodeTab === '/html' && <CodeSnippet code={codeAIHtml} language="html" />}
-						</div>
-					</div>
+						)}
+						codeReact={codeAIReact}
+						codeHtml={codeAIHtml}
+						tabCode={tabCode}
+					/>
+
 				</div>
 			)}
 

@@ -13,7 +13,7 @@ import {
 	TableExample,
 	codeReact,
 	codeHtml,
-	PropsTableComponent,
+	PropsTable,
 } from './TableInfoContent';
 
 const tabItems = [
@@ -82,7 +82,7 @@ const TableInfo = () => {
 
 			{activeTab.contentTab === '/props' && (
 				<div>
-					<PropsTableComponent />
+					<PropsTable />
 				</div>
 			)}
 		</div>

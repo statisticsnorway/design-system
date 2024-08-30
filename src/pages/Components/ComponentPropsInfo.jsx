@@ -3,28 +3,26 @@ import PropTypes from 'prop-types';
 import { Title } from '@statisticsnorway/ssb-component-library';
 
 const ComponentPropsInfo = ({ propsInfo }) => (
-	<div>
-		<div className="row col-lg-12 ">
-			<Title size={2}>Props</Title>
-			<table className="col-lg-12 mb-4">
-				<thead style={{ textAlign: 'left' }}>
-					<tr>
-						<th><Title size={3}>Prop name</Title></th>
-						<th><Title size={3}>Type</Title></th>
-						<th><Title size={3}>Description</Title></th>
+	<div className="component-props">
+		<Title size={2}>Props</Title>
+		<table className="col-lg-12 mb-4">
+			<thead style={{ textAlign: 'left' }}>
+				<tr>
+					<th><Title size={3}>Prop name</Title></th>
+					<th><Title size={3}>Type</Title></th>
+					<th><Title size={3}>Description</Title></th>
+				</tr>
+			</thead>
+			<tbody>
+				{propsInfo.map(item => (
+					<tr key={item.name}>
+						<td><code>{item.name}</code></td>
+						<td>{item.type}</td>
+						<td>{item.description}</td>
 					</tr>
-				</thead>
-				<tbody>
-					{propsInfo.map(item => (
-						<tr key={item.name}>
-							<td><code>{item.name}</code></td>
-							<td>{item.type}</td>
-							<td>{item.description}</td>
-						</tr>
-					))}
-				</tbody>
-			</table>
-		</div>
+				))}
+			</tbody>
+		</table>
 	</div>
 );
 

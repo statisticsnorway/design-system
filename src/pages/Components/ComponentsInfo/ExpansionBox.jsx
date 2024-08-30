@@ -235,11 +235,9 @@ const ExpansionBoxInfo = () => {
 			)}
 
 			{activeTab === '/props' && (
-				<div>
-					<ComponentPropsInfo
-						propsInfo={propsInfo}
-					/>
-				</div>
+				<ComponentPropsInfo
+					propsInfo={propsInfo}
+				/>
 			)}
 		</div>
 	);

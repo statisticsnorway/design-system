@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { ExpansionBox, Divider, LeadParagraph, Link, Tabs, Title, Paragraph } from '@statisticsnorway/ssb-component-library';
+import {
+	ExpansionBox,
+	Divider,
+	LeadParagraph,
+	Link,
+	Tabs,
+	Title,
+	Paragraph,
+} from '@statisticsnorway/ssb-component-library';
 import ComponentExample from '../ComponentExample';
 import ComponentPropsInfo from '../ComponentPropsInfo';
 
@@ -26,7 +34,8 @@ const tabItems = [
 	{
 		title: 'Oversikt',
 		path: '/oversikt',
-	}, {
+	},
+	{
 		title: 'Props',
 		path: '/props',
 	},
@@ -36,7 +45,8 @@ const tabCode = [
 	{
 		title: 'React',
 		path: '/react',
-	}, {
+	},
+	{
 		title: 'Html',
 		path: '/html',
 	},
@@ -45,15 +55,24 @@ const tabCode = [
 const exampleContentSneakPeek = (
 	<div>
 		<Paragraph>
-			BNP er en økonomisk størrelse som måler summen av alle varer og tjenester produsert i et land i løpet av et år, minus de varene og tjenestene som blir brukt under produksjonen.
+			BNP er en økonomisk størrelse som måler summen av alle varer og tjenester produsert i et land i løpet av et år,
+			minus de varene og tjenestene som blir brukt under produksjonen.
 		</Paragraph>
 
 		<Title size={3}>Viktige tall</Title>
 		<ul>
-			<li>I 2023 var Norges BNP på 5 129 milliarder kroner, noe som var en nedgang fra 5 708 milliarder kroner i 2022.</li>
+			<li>
+				I 2023 var Norges BNP på 5 129 milliarder kroner, noe som var en nedgang fra 5 708 milliarder kroner i 2022.
+			</li>
 			<li>Volumveksten i BNP fra 2022 til 2023 var positiv, på 0,5 prosent.</li>
-			<li>BNP Fastlands-Norge beregnes uten inntekter fra utvinning av olje og gass, rørtransport, og utenriks sjøfart for å gi et mer nøyaktig bilde av økonomien ekskludert oljesektoren.</li>
-			<li>BNP per innbygger i Norge var 50 prosent over gjennomsnittet i EU i 2022, noe som plasserer Norge blant verdens rikeste land.</li>
+			<li>
+				BNP Fastlands-Norge beregnes uten inntekter fra utvinning av olje og gass, rørtransport, og utenriks sjøfart for
+				å gi et mer nøyaktig bilde av økonomien ekskludert oljesektoren.
+			</li>
+			<li>
+				BNP per innbygger i Norge var 50 prosent over gjennomsnittet i EU i 2022, noe som plasserer Norge blant verdens
+				rikeste land.
+			</li>
 		</ul>
 		<Link href="/">Se flere tall fra statistikken Nasjonalregnskap</Link>
 	</div>
@@ -62,20 +81,30 @@ const exampleContentSneakPeek = (
 const exampleContentAI = (
 	<div>
 		<Paragraph>
-			BNP er en økonomisk størrelse som måler summen av alle varer og tjenester produsert i et land i løpet av et år, minus de varene og tjenestene som blir brukt under produksjonen.
+			BNP er en økonomisk størrelse som måler summen av alle varer og tjenester produsert i et land i løpet av et år,
+			minus de varene og tjenestene som blir brukt under produksjonen.
 		</Paragraph>
 
 		<Title size={3}>Viktige tall</Title>
 		<ul>
-			<li>I 2023 var Norges BNP på 5 129 milliarder kroner, noe som var en nedgang fra 5 708 milliarder kroner i 2022.</li>
+			<li>
+				I 2023 var Norges BNP på 5 129 milliarder kroner, noe som var en nedgang fra 5 708 milliarder kroner i 2022.
+			</li>
 			<li>Volumveksten i BNP fra 2022 til 2023 var positiv, på 0,5 prosent.</li>
-			<li>BNP Fastlands-Norge beregnes uten inntekter fra utvinning av olje og gass, rørtransport, og utenriks sjøfart for å gi et mer nøyaktig bilde av økonomien ekskludert oljesektoren.</li>
-			<li>BNP per innbygger i Norge var 50 prosent over gjennomsnittet i EU i 2022, noe som plasserer Norge blant verdens rikeste land.</li>
+			<li>
+				BNP Fastlands-Norge beregnes uten inntekter fra utvinning av olje og gass, rørtransport, og utenriks sjøfart for
+				å gi et mer nøyaktig bilde av økonomien ekskludert oljesektoren.
+			</li>
+			<li>
+				BNP per innbygger i Norge var 50 prosent over gjennomsnittet i EU i 2022, noe som plasserer Norge blant verdens
+				rikeste land.
+			</li>
 		</ul>
 		<Link href="/">Se flere tall fra statistikken Nasjonalregnskap</Link>
 
 		<Paragraph className="mt-3">
-			Oppsummeringen er laget ved hjelp av en KI-tjeneste fra OpenAi. Innholdet er kvalitetssikret av SSB før publisering.
+			Oppsummeringen er laget ved hjelp av en KI-tjeneste fra OpenAi. Innholdet er kvalitetssikret av SSB før
+			publisering.
 		</Paragraph>
 	</div>
 );
@@ -149,7 +178,8 @@ const propsInfo = [
 		name: 'aiIcon',
 		type: 'bool',
 		description: 'Use if AI-generated content',
-	}, {
+	},
+	{
 		name: 'className',
 		type: 'string',
 		description: 'Optional container class',
@@ -183,9 +213,7 @@ const ExpansionBoxInfo = () => {
 	return (
 		<div className="col-lg-12">
 			<Title size={1}>ExpansionBox</Title>
-			<LeadParagraph>
-				{leadParagraphText}
-			</LeadParagraph>
+			<LeadParagraph>{leadParagraphText}</LeadParagraph>
 			<Tabs activeOnInit={tabItems[0].path} items={tabItems} onClick={tabClicked} />
 			<Divider />
 
@@ -203,13 +231,7 @@ const ExpansionBoxInfo = () => {
 					<ComponentExample
 						title="ExpansionBox SneakPeek"
 						overviewText={overviewTextExpansionBoxSneakPeek}
-						exampleContent={(
-							<ExpansionBox
-								header="Artikkelen oppsummert"
-								text={exampleContentSneakPeek}
-								sneakPeek
-							/>
-						)}
+						exampleContent={<ExpansionBox header="Artikkelen oppsummert" text={exampleContentSneakPeek} sneakPeek />}
 						codeReact={codeSneakPeakReact}
 						codeHtml={codeSneakPeakHtml}
 						tabCode={tabCode}
@@ -218,27 +240,15 @@ const ExpansionBoxInfo = () => {
 					<ComponentExample
 						title="ExpansionBox AI"
 						overviewText={overviewTextExpansionBoxAI}
-						exampleContent={(
-							<ExpansionBox
-								header="Artikkelen oppsummert"
-								text={exampleContentAI}
-								sneakPeek
-								aiIcon
-							/>
-						)}
+						exampleContent={<ExpansionBox header="Artikkelen oppsummert" text={exampleContentAI} sneakPeek aiIcon />}
 						codeReact={codeAIReact}
 						codeHtml={codeAIHtml}
 						tabCode={tabCode}
 					/>
-
 				</div>
 			)}
 
-			{activeTab === '/props' && (
-				<ComponentPropsInfo
-					propsInfo={propsInfo}
-				/>
-			)}
+			{activeTab === '/props' && <ComponentPropsInfo propsInfo={propsInfo} />}
 		</div>
 	);
 };

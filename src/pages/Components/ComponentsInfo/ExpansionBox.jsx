@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExpansionBox, Divider, LeadParagraph, Link, Tabs, Title, Paragraph } from '@statisticsnorway/ssb-component-library';
 import ComponentExample from '../ComponentExample';
+import ComponentPropsInfo from '../ComponentPropsInfo';
 
 const leadParagraphText = `
 ExpansionBox samler innhold i en boks som åpnes og lukkes ved brukerinteraksjon. Komponenten er egnet til å vise en oppsummering av informasjon, 
@@ -143,6 +144,38 @@ const codeAIHtml = `
 </div>
 `;
 
+const propsInfo = [
+	{
+		name: 'aiIcon',
+		type: 'bool',
+		description: 'Use if AI-generated content',
+	}, {
+		name: 'className',
+		type: 'string',
+		description: 'Optional container class',
+	},
+	{
+		name: 'header',
+		type: 'string',
+		description: 'Header text',
+	},
+	{
+		name: 'sneakPeek',
+		type: 'bool',
+		description: 'Show a sneakpeek of the text. Defaults to false',
+	},
+	{
+		name: 'openByDefault',
+		type: 'bool',
+		description: 'Open when rendered. Defaults to false',
+	},
+	{
+		name: 'text',
+		type: 'string or element',
+		description: 'Content in expansionBox',
+	},
+];
+
 const ExpansionBoxInfo = () => {
 	const [activeTab, setActiveTab] = useState(tabItems[0].path);
 	const tabClicked = e => setActiveTab(e);
@@ -203,50 +236,9 @@ const ExpansionBoxInfo = () => {
 
 			{activeTab === '/props' && (
 				<div>
-					<div className="row col-lg-12 ">
-						<Title size={2}>Props</Title>
-						<table className="col-lg-12 mb-4">
-							<thead style={{ textAlign: 'left' }}>
-								<tr>
-									<th><Title size={3}>Prop name</Title></th>
-									<th><Title size={3}>Type</Title></th>
-									<th><Title size={3}>Description</Title></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><code>aiIcon</code></td>
-									<td>bool</td>
-									<td>Use if AI-generated content</td>
-								</tr>
-								<tr>
-									<td><code>className</code></td>
-									<td>string</td>
-									<td>Optional container class</td>
-								</tr>
-								<tr>
-									<td><code>header</code></td>
-									<td>string</td>
-									<td>Header text</td>
-								</tr>
-								<tr>
-									<td><code>sneakPeek</code></td>
-									<td>bool</td>
-									<td>Show a sneakpeek of the text. Defaults to false</td>
-								</tr>
-								<tr>
-									<td><code>openByDefault</code></td>
-									<td>bool</td>
-									<td>Open when rendered. Defaults to false</td>
-								</tr>
-								<tr>
-									<td><code>text</code></td>
-									<td>string or element</td>
-									<td>Content in expansionBox</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					<ComponentPropsInfo
+						propsInfo={propsInfo}
+					/>
 				</div>
 			)}
 		</div>

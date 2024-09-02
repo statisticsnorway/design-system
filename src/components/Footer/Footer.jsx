@@ -2,10 +2,12 @@ import React from 'react';
 import { Button, Link, Text } from '@statisticsnorway/ssb-component-library';
 import { ArrowUp, GitHub, Mail } from 'react-feather';
 
+const year = new Date().getFullYear();
+
 const Footer = () => (
 	<div className="footer-wrapper">
 		<div className="footer-content">
-			<Text small negative className="copyright-mark">© Statistisk sentralbyrå, 2022</Text>
+			<Text small negative className="copyright-mark">© Statistisk sentralbyrå, {year}</Text>
 			<div className="interactive-elements">
 				<Link href="mailto: designsystem@ssb.no" icon={<Mail />} negative>Kontakt designansvarlig</Link>
 				<Link href=" " icon={<GitHub />} negative>Github</Link>

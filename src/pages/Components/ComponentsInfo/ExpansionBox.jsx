@@ -175,34 +175,38 @@ const codeAIHtml = `
 
 const propsInfo = [
 	{
-		name: 'aiIcon',
-		type: 'bool',
-		description: 'Use if AI-generated content',
-	},
-	{
-		name: 'className',
-		type: 'string',
-		description: 'Optional container class',
-	},
-	{
-		name: 'header',
-		type: 'string',
-		description: 'Header text',
-	},
-	{
-		name: 'sneakPeek',
-		type: 'bool',
-		description: 'Show a sneakpeek of the text. Defaults to false',
-	},
-	{
-		name: 'openByDefault',
-		type: 'bool',
-		description: 'Open when rendered. Defaults to false',
-	},
-	{
-		name: 'text',
-		type: 'string or element',
-		description: 'Content in expansionBox',
+		props: [
+			{
+				name: 'aiIcon',
+				type: 'bool',
+				description: 'Use if AI-generated content',
+			},
+			{
+				name: 'className',
+				type: 'string',
+				description: 'Optional container class',
+			},
+			{
+				name: 'header',
+				type: 'string',
+				description: 'Header text',
+			},
+			{
+				name: 'sneakPeek',
+				type: 'bool',
+				description: 'Show a sneakpeek of the text. Defaults to false',
+			},
+			{
+				name: 'openByDefault',
+				type: 'bool',
+				description: 'Open when rendered. Defaults to false',
+			},
+			{
+				name: 'text',
+				type: 'string or element',
+				description: 'Content in expansionBox',
+			},
+		],
 	},
 ];
 
@@ -248,7 +252,9 @@ const ExpansionBoxInfo = () => {
 				</div>
 			)}
 
-			{activeTab === '/props' && <ComponentPropsInfo propsInfo={propsInfo} />}
+			{activeTab === '/props' && (
+				<ComponentPropsInfo propsInfo={propsInfo} />
+			) }
 		</div>
 	);
 };

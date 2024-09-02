@@ -6,108 +6,8 @@ import {
 	TableFooter,
 	TableRow,
 	TableCell,
-	Title,
-	Divider,
 } from '@statisticsnorway/ssb-component-library';
 import PropTypes from 'prop-types';
-
-const propPageData = [
-	{
-		title: 'TableElementProps',
-		props: [
-			{
-				name: 'className',
-				type: 'string',
-				description: 'Optional container class',
-			},
-			{
-				name: 'children',
-				type: 'ReactNode',
-				description: 'Content to be displayed within the component',
-			},
-		],
-	},
-	{
-		title: 'TableProps',
-		props: [
-			{
-				name: 'caption',
-				type: 'string',
-				description: 'Optional caption for the table',
-			},
-			{
-				name: 'dataNoteRefs',
-				type: 'string',
-				description: 'References to data notes',
-			},
-			{
-				name: 'className',
-				type: 'string',
-				description: 'Optional container class',
-			},
-			{
-				name: 'children',
-				type: 'ReactNode',
-				description: 'Content to be displayed within the component',
-			},
-		],
-	},
-	{
-		title: 'TableCellProps',
-		props: [
-			{
-				name: 'id',
-				type: 'string',
-				description: 'Unique identifier for the table cell',
-			},
-			{
-				name: 'className',
-				type: 'string',
-				description: 'Optional container class',
-			},
-			{
-				name: 'type',
-				type: "'th' | 'td'",
-				description: 'Specifies whether the cell is a header or standard cell',
-			},
-			{
-				name: 'rowSpan',
-				type: 'number',
-				description: 'Number of rows the cell should span',
-			},
-			{
-				name: 'colSpan',
-				type: 'number',
-				description: 'Number of columns the cell should span',
-			},
-			{
-				name: 'headers',
-				type: 'string',
-				description: 'IDs of header cells this cell is related to',
-			},
-			{
-				name: 'scope',
-				type: "'col' | 'colgroup' | 'row' | 'rowgroup'",
-				description: 'Specifies the scope of the header cell',
-			},
-			{
-				name: 'align',
-				type: "'left' | 'center' | 'right'",
-				description: 'Text alignment within the cell',
-			},
-			{
-				name: 'indentationLevel',
-				type: "'1' | '2' | '3'",
-				description: 'Specifies the level of indentation',
-			},
-			{
-				name: 'children',
-				type: 'ReactNode | string | number',
-				description: 'Content to be displayed within the cell',
-			},
-		],
-	},
-];
 
 const tableData = [
 	{
@@ -216,42 +116,6 @@ export const TableExample = () => {
 	);
 };
 
-export const PropsTable = () => (
-	<div className="row col-lg-12">
-		{propPageData.map((section, index) => (
-			<React.Fragment key={section.title}>
-				{index > 0 && <Divider className="mb-4" light />}
-				<table className="col-lg-12 mb-4">
-					<thead style={{ textAlign: 'left' }}>
-						<tr>
-							<th>
-								<Title size={3}>{section.title}</Title>
-							</th>
-							<th>
-								<Title size={3}>Type</Title>
-							</th>
-							<th>
-								<Title size={3}>Description</Title>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						{section.props.map(prop => (
-							<tr key={prop.name}>
-								<td style={{ paddingLeft: '20px' }}>
-									<code>{prop.name}</code>
-								</td>
-								<td>{prop.type}</td>
-								<td>{prop.description}</td>
-							</tr>
-						))}
-					</tbody>
-				</table>
-			</React.Fragment>
-		))}
-	</div>
-);
-
 TableHeaderRow.propTypes = {
 	years: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
@@ -268,8 +132,6 @@ TableBodyRows.propTypes = {
 	years: PropTypes.arrayOf(PropTypes.string).isRequired,
 	boldStyle: PropTypes.object.isRequired,
 };
-
-PropsTable.propTypes = {}; // for EsLint
 
 export const overviewText = 'Rad- og kolonneoverskrifter er essensielle. En celle er overskrift hvis den beskriver innholdet i cellene under eller ved siden av. Juster tall for enkel sammenligning.';
 

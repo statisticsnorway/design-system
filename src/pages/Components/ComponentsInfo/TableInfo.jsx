@@ -13,7 +13,6 @@ import {
 	TableExample,
 	codeReact,
 	codeHtml,
-	PropsTable,
 } from './TableInfoContent';
 import ComponentPropsInfo from '../ComponentPropsInfo';
 
@@ -148,17 +147,17 @@ const TableInfo = () => {
 				onClick={newTabPath => handleTabClick(newTabPath, 'contentTab')}
 			/>
 
-			<Divider className="mb-4" />
+			<Divider />
 
 			{activeTab.contentTab === '/overview' && (
-				<div className="row mb-4">
+				<div className="component row mb-4">
 					<Title size={2} className="col-lg-12">
 						Retningslinjer for tabell
 					</Title>
-					<div className="col-lg col-md-12">
+					<div className="col-lg col-md-12 mb-4">
 						<Paragraph>{overviewText}</Paragraph>
 					</div>
-					<div className="col-12">
+					<div className="component-example col-12 mb-4">
 						<TableExample />
 					</div>
 					<div className="col-lg-12">

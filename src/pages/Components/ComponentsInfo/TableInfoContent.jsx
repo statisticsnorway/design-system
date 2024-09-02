@@ -133,7 +133,9 @@ TableBodyRows.propTypes = {
 	boldStyle: PropTypes.object.isRequired,
 };
 
-export const overviewText = 'Rad- og kolonneoverskrifter er essensielle. En celle er overskrift hvis den beskriver innholdet i cellene under eller ved siden av. Juster tall for enkel sammenligning.';
+export const overviewText = `
+Det er viktig å bruke rad- og kolonneoverskrifter. En celle er en overskrift hvis den beskriver innholdet i cellene under. 
+Som en hovedregel bør tall høyrejusteres for å gjøre det enkelt å sammenligne de. `;
 
 export const LeadText = `
   Tabeller brukes til å organisere og vise data på en strukturert måte.
@@ -172,31 +174,158 @@ const SimpleTable = () => (
   </Table>
 );
 
-export default SimpleTable;
+
+const StatisticTable = () => {
+	const tableData = [
+		{
+			id: 'museer_totalt',
+			header: 'Museer og samlinger totalt',
+			data: { 2020: '102', 2021: '101', 2022: '104' },
+		},
+		{
+			id: 'besok_totalt',
+			header: 'Besøk totalt',
+			data: { 2020: '5 134 293', 2021: '6 485 173', 2022: '10 321 374' },
+			bold: true,
+		},
+		{
+			id: 'enkeltbesok',
+			header: 'Enkeltbesøk',
+			data: { 2020: '4 421 942', 2021: '5 474 120', 2022: '8 491 379' },
+		},
+		{
+			id: 'gruppebesok',
+			header: 'Gruppebesøk',
+			data: { 2020: '712 351', 2021: '1 011 053', 2022: '1 829 995' },
+		}
+	];
+  const years = Object.keys(tableData[0].data)
+  const boldStyle = { fontWeight: 'bold' }
+
+  return (
+	<Table caption='Antall besøk og årsverk på museer og samlinger'>
+		<TableHead>
+			<TableRow>
+			<TableCell type='th' colSpan={1} />
+			<TableCell type='th' colSpan={years.length} align='center'>
+				Antall
+			</TableCell>
+			</TableRow>
+			<TableRow>
+			<TableCell type='th'>Museer og samlinger totalt</TableCell>
+			{years.map((year) => (
+				<TableCell type='th' align='right' key=[key]>
+				{year}
+				</TableCell>
+			))}
+			</TableRow>
+		</TableHead>
+		<TableBody>
+			{tableData.map(({ id, header, data, bold }) => (
+			<TableRow key={id}>
+				<TableCell type='th' scope='row'>
+				{header}
+				</TableCell>
+				{years.map((year) => (
+				<TableCell align='right' style={bold ? boldStyle : {}} key=[key]>
+					{data[year]}
+				</TableCell>
+				))}
+			</TableRow>
+			))}
+		</TableBody>
+		<TableFooter>
+			<TableRow>
+			<TableCell type='td' colSpan={years.length + 1}>
+				<div>
+				<sup>1</sup> Tallet på museer vil variere fra år til år. For eksempel leverer noen museer tall til
+				statistikken ett år, men ikke et annet.
+				</div>
+			</TableCell>
+			</TableRow>
+		</TableFooter>
+	</Table>
+  )
+}
 `;
 
 export const codeHtml = `
-  <table>
-    <thead>
-      <tr>
-        <th>Header 1</th>
-        <th>Header 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Data 1</td>
-        <td>Data 2</td>
-      </tr>
-      <tr>
-        <td>More Data 1</td>
-        <td>More Data 2</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="2">Footer Information</td>
-      </tr>
-    </tfoot>
-  </table>
+<div class="ssb-table-wrapper">
+   <table class="ssb-table">
+      <caption>
+         <div class="caption-wrapper single-line" style="position: relative;">
+            <div class="caption-text-wrapper">Antall besøk og årsverk på museer og samlinger</div>
+         </div>
+      </caption>
+      <thead>
+         <tr>
+            <th class="" colspan="1"></th>
+            <th class=" align-center" colspan="3">Antall</th>
+         </tr>
+         <tr>
+            <th class="">Museer og samlinger totalt</th>
+            <th class=" align-right">2020</th>
+            <th class=" align-right">2021</th>
+            <th class=" align-right">2022</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <th class="" scope="row">Museer og samlinger totalt</th>
+            <td class=" align-right">102</td>
+            <td class=" align-right">101</td>
+            <td class=" align-right">104</td>
+         </tr>
+         <tr>
+            <th class="" scope="row">Besøk totalt</th>
+            <td class=" align-right">5 134 293</td>
+            <td class=" align-right">6 485 173</td>
+            <td class=" align-right">10 321 374</td>
+         </tr>
+         <tr>
+            <th class="" scope="row">Enkeltbesøk</th>
+            <td class=" align-right">4 421 942</td>
+            <td class=" align-right">5 474 120</td>
+            <td class=" align-right">8 491 379</td>
+         </tr>
+         <tr>
+            <th class="" scope="row">Gruppebesøk</th>
+            <td class=" align-right">712 351</td>
+            <td class=" align-right">1 011 053</td>
+            <td class=" align-right">1 829 995</td>
+         </tr>
+         <tr>
+            <th class="" scope="row">Betalende besøkende</th>
+            <td class=" align-right">2 391 962</td>
+            <td class=" align-right">2 774 376</td>
+            <td class=" align-right">5 654 919</td>
+         </tr>
+         <tr>
+            <th class="" scope="row">Årsverk</th>
+            <td class=" align-right"></td>
+            <td class=" align-right"></td>
+            <td class=" align-right"></td>
+         </tr>
+         <tr>
+            <th class="" scope="row">Lønte</th>
+            <td class=" align-right">4173</td>
+            <td class=" align-right">4404</td>
+            <td class=" align-right">4645</td>
+         </tr>
+         <tr>
+            <th class="" scope="row">Faste stillinger</th>
+            <td class=" align-right">3359</td>
+            <td class=" align-right">3516</td>
+            <td class=" align-right">3683</td>
+         </tr>
+      </tbody>
+      <tfoot>
+         <tr>
+            <td class="" colspan="4">
+               <div><sup>1</sup> Tallet på museer vil variere fra år til år. For eksempel leverer noen museer tall til statistikken ett år, men ikke et annet.</div>
+            </td>
+         </tr>
+      </tfoot>
+   </table>
+</div>
 `;

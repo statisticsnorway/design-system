@@ -43,6 +43,7 @@ import searchIcon from '../../../public/customIcons/search.svg';
 import StickyMenuInfo from './ComponentsInfo/StickyMenuInfo';
 import stickymenuIcon from '../../../public/customIcons/stickymenu.svg';
 import tableIcon from '../../../public/customIcons/table.svg';
+import TableInfo from './ComponentsInfo/TableInfo';
 import TabsInfo from './ComponentsInfo/TabsInfo';
 import tabsIcon from '../../../public/customIcons/tabs.svg';
 import TagsInfo from './ComponentsInfo/TagsInfo';
@@ -72,7 +73,7 @@ const componentsList = [
 	{ component: ReferenceInfo, label: 'Reference', path: '/reference', icon: referenceIcon },
 	{ component: SearchBoxInfo, label: 'Search', path: '/search-box', icon: searchIcon },
 	{ component: StickyMenuInfo, label: 'Sticky Menu', path: '/sticky-menu', icon: stickymenuIcon },
-	{ component: '', label: 'Table', path: '/table', icon: tableIcon, comingSoon: true },
+	{ component: TableInfo, label: 'Table', path: '/table', icon: tableIcon },
 	{ component: TabsInfo, label: 'Tabs', path: '/tabs', icon: tabsIcon },
 	{ component: TagsInfo, label: 'Tags', path: '/tags', icon: tagsIcon },
 	{ component: WarningsErrorsInfo, label: 'Warnings and errors', path: '/warnings-errors', icon: dialogIcon },

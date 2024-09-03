@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Divider, Title } from '@statisticsnorway/ssb-component-library';
+import { v4 as uuidv4 } from 'uuid';
 
 const ComponentPropsInfo = ({ propsInfo }) => (
 	<div>
-		{propsInfo.map((item, index) => (
-			<div className="component-props" key={index}>
+		{propsInfo.map(item => (
+			<div className="component-props" key={uuidv4()}>
 				{item.title ? <Title size={2} className="mb-4">Props {item.title}</Title> : <Title size={2} className="mb-4">Props</Title>}
 				<table className="col-lg-12 mb-4">
 					<thead style={{ textAlign: 'left' }}>

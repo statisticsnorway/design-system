@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
-import { Title, Divider, Tabs } from '@statisticsnorway/ssb-component-library';
+import { Title, Divider, Tabs, Paragraph } from '@statisticsnorway/ssb-component-library';
 
 const ComponentExample = ({ title, overviewText, exampleContent, codeReact, codeHtml, tabCode }) => {
 	const [activeCodeTab, setActiveCodeTab] = useState('/react');
@@ -12,7 +12,7 @@ const ComponentExample = ({ title, overviewText, exampleContent, codeReact, code
 				{title}
 			</Title>
 			<div className="col-lg col-md-12">
-				<p>{overviewText}</p>
+				<Paragraph>{overviewText}</Paragraph>
 			</div>
 			<div className="component-example col-lg col-md-12 divider-left">{exampleContent}</div>
 			<div className="col-lg-12">

@@ -1,131 +1,131 @@
-import React from "react";
+import React from 'react';
 import {
-  Table as SSBTable,
-  TableHead,
-  TableBody,
-  TableFooter,
-  TableRow,
-  TableCell,
-} from "@statisticsnorway/ssb-component-library";
-import PropTypes from "prop-types";
+	Table as SSBTable,
+	TableHead,
+	TableBody,
+	TableFooter,
+	TableRow,
+	TableCell,
+} from '@statisticsnorway/ssb-component-library';
+import PropTypes from 'prop-types';
 
 const tableData = [
-  {
-    id: "museer_totalt",
-    header: "Museer og samlinger totalt",
-    data: { 2020: "102", 2021: "101", 2022: "104" },
-  },
-  {
-    id: "empty",
-    header: ".",
-    data: { 2020: "", 2021: "", 2022: "" },
-  },
-  {
-    id: "besok_totalt",
-    header: "Besøk totalt",
-    data: { 2020: "5 134 293", 2021: "6 485 173", 2022: "10 321 374" },
-  },
-  {
-    id: "enkeltbesok",
-    header: "Enkeltbesøk",
-    data: { 2020: "4 421 942", 2021: "5 474 120", 2022: "8 491 379" },
-  },
-  {
-    id: "gruppebesok",
-    header: "Gruppebesøk",
-    data: { 2020: "712 351", 2021: "1 011 053", 2022: "1 829 995" },
-  },
-  {
-    id: "betalende",
-    header: "Betalende besøkende",
-    data: { 2020: "2 391 962", 2021: "2 774 376", 2022: "5 654 919" },
-  },
-  {
-    id: "empty2",
-    header: ".",
-    data: { 2020: "", 2021: "", 2022: "" },
-  },
-  {
-    id: "arsverk",
-    header: "Årsverk",
-    data: { 2020: "", 2021: "", 2022: "" },
-  },
-  {
-    id: "lonte",
-    header: "Lønte",
-    data: { 2020: "4173", 2021: "4404", 2022: "4645" },
-  },
-  {
-    id: "faste_stillinger",
-    header: "Faste stillinger",
-    data: { 2020: "3359", 2021: "3516", 2022: "3683" },
-  },
+	{
+		id: 'museer_totalt',
+		header: 'Museer og samlinger totalt',
+		data: { 2020: '102', 2021: '101', 2022: '104' },
+	},
+	{
+		id: 'empty',
+		header: '.',
+		data: { 2020: '', 2021: '', 2022: '' },
+	},
+	{
+		id: 'besok_totalt',
+		header: 'Besøk totalt',
+		data: { 2020: '5 134 293', 2021: '6 485 173', 2022: '10 321 374' },
+	},
+	{
+		id: 'enkeltbesok',
+		header: 'Enkeltbesøk',
+		data: { 2020: '4 421 942', 2021: '5 474 120', 2022: '8 491 379' },
+	},
+	{
+		id: 'gruppebesok',
+		header: 'Gruppebesøk',
+		data: { 2020: '712 351', 2021: '1 011 053', 2022: '1 829 995' },
+	},
+	{
+		id: 'betalende',
+		header: 'Betalende besøkende',
+		data: { 2020: '2 391 962', 2021: '2 774 376', 2022: '5 654 919' },
+	},
+	{
+		id: 'empty2',
+		header: '.',
+		data: { 2020: '', 2021: '', 2022: '' },
+	},
+	{
+		id: 'arsverk',
+		header: 'Årsverk',
+		data: { 2020: '', 2021: '', 2022: '' },
+	},
+	{
+		id: 'lonte',
+		header: 'Lønte',
+		data: { 2020: '4173', 2021: '4404', 2022: '4645' },
+	},
+	{
+		id: 'faste_stillinger',
+		header: 'Faste stillinger',
+		data: { 2020: '3359', 2021: '3516', 2022: '3683' },
+	},
 ];
 
 const TableHeaderRow = ({ years }) => (
-  <TableHead>
-    <TableRow>
-      <TableCell type="th" rowSpan={2} colSpan={1} />
-      <TableCell type="th" colSpan={years.length} align="center">
-        Antall
-      </TableCell>
-    </TableRow>
-    <TableRow>
-      {years.map((year) => (
-        <TableCell
-          type="th"
-          align="right"
-          key={`year_${year}`}
-          className="align-right"
-        >
-          {year}
-        </TableCell>
-      ))}
-    </TableRow>
-  </TableHead>
+	<TableHead>
+		<TableRow>
+			<TableCell type="th" rowSpan={2} colSpan={1} />
+			<TableCell type="th" colSpan={years.length} align="center">
+				Antall
+			</TableCell>
+		</TableRow>
+		<TableRow>
+			{years.map(year => (
+				<TableCell
+					type="th"
+					align="right"
+					key={`year_${year}`}
+					className="align-right"
+				>
+					{year}
+				</TableCell>
+			))}
+		</TableRow>
+	</TableHead>
 );
 
-const getClassName = (id) => {
-  if (id === "museer_totalt" || id === "besok_totalt") {
-    return "bold-override";
-  }
-  if (id === "enkeltbesok" || id === "gruppebesok") {
-    return "level1";
-  }
-  if (id === "empty" || id === "empty2") {
-    return "hidden-content-override";
-  }
-  return "";
+const getClassName = id => {
+	if (id === 'museer_totalt' || id === 'besok_totalt') {
+		return 'bold-override';
+	}
+	if (id === 'enkeltbesok' || id === 'gruppebesok') {
+		return 'level1';
+	}
+	if (id === 'empty' || id === 'empty2') {
+		return 'hidden-content-override';
+	}
+	return '';
 };
 
 const TableBodyRows = ({ rowsData, years }) => (
-  <TableBody>
-    {rowsData.map(({ id, header, data }, rowIndex) => (
-      <TableRow key={id}>
-        <TableCell type="th" scope="row" className={getClassName(id)}>
-          {header} {rowIndex === 0 && <sup>1</sup>}
-        </TableCell>
-        {years.map((year) => (
-          <TableCell
-            align="right"
-            key={`${id}_${year}`}
-            className={getClassName(id) || "align-right"}
-          >
-            {data[year]}
-          </TableCell>
-        ))}
-      </TableRow>
-    ))}
-  </TableBody>
+	<TableBody>
+		{rowsData.map(({ id, header, data }, rowIndex) => (
+			<TableRow key={id}>
+				<TableCell type="th" scope="row" className={getClassName(id)}>
+					{header} {rowIndex === 0 && <sup>1</sup>}
+				</TableCell>
+				{years.map(year => (
+					<TableCell
+						align="right"
+						key={`${id}_${year}`}
+						className={getClassName(id) || 'align-right'}
+					>
+						{data[year]}
+					</TableCell>
+				))}
+			</TableRow>
+		))}
+	</TableBody>
 );
 
 export const TableExample = () => {
-  const years = Object.keys(tableData[0].data);
+	const years = Object.keys(tableData[0].data);
 
-  return (
-    <div>
-      <style>
-        {`
+	return (
+		<div>
+			<style>
+				{`
           .bold-override {
             font-weight: bold !important;
           }
@@ -134,41 +134,41 @@ export const TableExample = () => {
             opacity: 0;
           }
         `}
-      </style>
+			</style>
 
-      <SSBTable caption="Antall besøk og årsverk på museer og samlinger">
-        <TableHeaderRow years={years} />
-        <TableBodyRows rowsData={tableData} years={years} />
-        <TableFooter>
-          <TableRow>
-            <TableCell type="td" colSpan={years.length + 1}>
-              <div>
-                <sup>1</sup> Tallet på museer vil variere fra år til år. For
-                eksempel leverer noen museer tall til statistikken ett år, men
-                ikke et annet.
-              </div>
-            </TableCell>
-          </TableRow>
-        </TableFooter>
-      </SSBTable>
-    </div>
-  );
+			<SSBTable caption="Antall besøk og årsverk på museer og samlinger">
+				<TableHeaderRow years={years} />
+				<TableBodyRows rowsData={tableData} years={years} />
+				<TableFooter>
+					<TableRow>
+						<TableCell type="td" colSpan={years.length + 1}>
+							<div>
+								<sup>1</sup> Tallet på museer vil variere fra år til år. For
+								eksempel leverer noen museer tall til statistikken ett år, men
+								ikke et annet.
+							</div>
+						</TableCell>
+					</TableRow>
+				</TableFooter>
+			</SSBTable>
+		</div>
+	);
 };
 
 TableHeaderRow.propTypes = {
-  years: PropTypes.arrayOf(PropTypes.string).isRequired,
+	years: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 TableBodyRows.propTypes = {
-  rowsData: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      header: PropTypes.string.isRequired,
-      data: PropTypes.objectOf(PropTypes.string).isRequired,
-      bold: PropTypes.bool,
-    })
-  ).isRequired,
-  years: PropTypes.arrayOf(PropTypes.string).isRequired,
+	rowsData: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.string.isRequired,
+			header: PropTypes.string.isRequired,
+			data: PropTypes.objectOf(PropTypes.string).isRequired,
+			bold: PropTypes.bool,
+		}),
+	).isRequired,
+	years: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export const overviewText = `

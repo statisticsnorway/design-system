@@ -22,7 +22,7 @@ module.exports = merge(base, {
 			watch: true,
 		},
 		historyApiFallback: true,
-		port: 3070,
+		port: 3080,
 	},
 
 	module: {

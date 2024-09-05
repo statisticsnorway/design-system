@@ -16,10 +16,14 @@ const tableData = [
 		data: { 2020: '102', 2021: '101', 2022: '104' },
 	},
 	{
+		id: 'empty',
+		header: '.',
+		data: { 2020: '', 2021: '', 2022: '' },
+	},
+	{
 		id: 'besok_totalt',
 		header: 'Besøk totalt',
 		data: { 2020: '5 134 293', 2021: '6 485 173', 2022: '10 321 374' },
-		bold: true,
 	},
 	{
 		id: 'enkeltbesok',
@@ -35,6 +39,11 @@ const tableData = [
 		id: 'betalende',
 		header: 'Betalende besøkende',
 		data: { 2020: '2 391 962', 2021: '2 774 376', 2022: '5 654 919' },
+	},
+	{
+		id: 'empty2',
+		header: '.',
+		data: { 2020: '', 2021: '', 2022: '' },
 	},
 	{
 		id: 'arsverk',
@@ -56,15 +65,19 @@ const tableData = [
 const TableHeaderRow = ({ years }) => (
 	<TableHead>
 		<TableRow>
-			<TableCell type="th" colSpan={1} />
+			<TableCell type="th" rowSpan={2} colSpan={1} />
 			<TableCell type="th" colSpan={years.length} align="center">
 				Antall
 			</TableCell>
 		</TableRow>
 		<TableRow>
-			<TableCell type="th">Museer og samlinger totalt</TableCell>
 			{years.map(year => (
-				<TableCell type="th" align="right" key={`year_${year}`}>
+				<TableCell
+					type="th"
+					align="right"
+					key={`year_${year}`}
+					className="align-right"
+				>
 					{year}
 				</TableCell>
 			))}
@@ -72,18 +85,31 @@ const TableHeaderRow = ({ years }) => (
 	</TableHead>
 );
 
-const TableBodyRows = ({ rowsData, years, boldStyle }) => (
+const getClassName = id => {
+	if (id === 'museer_totalt' || id === 'besok_totalt') {
+		return 'bold-override';
+	}
+	if (id === 'enkeltbesok' || id === 'gruppebesok') {
+		return 'level1';
+	}
+	if (id === 'empty' || id === 'empty2') {
+		return 'hidden-content-override';
+	}
+	return '';
+};
+
+const TableBodyRows = ({ rowsData, years }) => (
 	<TableBody>
-		{rowsData.map(({ id, header, data, bold }) => (
+		{rowsData.map(({ id, header, data }, rowIndex) => (
 			<TableRow key={id}>
-				<TableCell type="th" scope="row">
-					{header}
+				<TableCell type="th" scope="row" className={getClassName(id)}>
+					{header} {rowIndex === 0 && <sup>1</sup>}
 				</TableCell>
 				{years.map(year => (
 					<TableCell
 						align="right"
-						style={bold ? boldStyle : {}}
 						key={`${id}_${year}`}
+						className={getClassName(id) || 'align-right'}
 					>
 						{data[year]}
 					</TableCell>
@@ -95,24 +121,37 @@ const TableBodyRows = ({ rowsData, years, boldStyle }) => (
 
 export const TableExample = () => {
 	const years = Object.keys(tableData[0].data);
-	const boldStyle = { fontWeight: 'bold' };
 
 	return (
-		<SSBTable caption="Antall besøk og årsverk på museer og samlinger">
-			<TableHeaderRow years={years} />
-			<TableBodyRows rowsData={tableData} years={years} boldStyle={boldStyle} />
-			<TableFooter>
-				<TableRow>
-					<TableCell type="td" colSpan={years.length + 1}>
-						<div>
-							<sup>1</sup> Tallet på museer vil variere fra år til år. For
-							eksempel leverer noen museer tall til statistikken ett år, men
-							ikke et annet.
-						</div>
-					</TableCell>
-				</TableRow>
-			</TableFooter>
-		</SSBTable>
+		<div>
+			<style>
+				{`
+          .bold-override {
+            font-weight: bold !important;
+          }
+          .hidden-content-override {
+            text-indent: -9999px;
+            opacity: 0;
+          }
+        `}
+			</style>
+
+			<SSBTable caption="Antall besøk og årsverk på museer og samlinger">
+				<TableHeaderRow years={years} />
+				<TableBodyRows rowsData={tableData} years={years} />
+				<TableFooter>
+					<TableRow>
+						<TableCell type="td" colSpan={years.length + 1}>
+							<div>
+								<sup>1</sup> Tallet på museer vil variere fra år til år. For
+								eksempel leverer noen museer tall til statistikken ett år, men
+								ikke et annet.
+							</div>
+						</TableCell>
+					</TableRow>
+				</TableFooter>
+			</SSBTable>
+		</div>
 	);
 };
 
@@ -130,7 +169,6 @@ TableBodyRows.propTypes = {
 		}),
 	).isRequired,
 	years: PropTypes.arrayOf(PropTypes.string).isRequired,
-	boldStyle: PropTypes.object.isRequired,
 };
 
 export const overviewText = `

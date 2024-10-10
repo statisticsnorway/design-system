@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: design-system
+  title: Website for the SSB Design System
+  description: |
+    Public-facing website for the SSB Design System and Component Library
+  tags:
+    - github-pages
+    - javascript
+    - react
+  annotations:
+    github.com/project-slug: statisticsnorway/design-system
+  links:
+    https://design.ssb.no
+spec:
+  type: website
+  system: SSBNO
+  owner: ssbno-developers
+  lifecycle: production
+  dependsOn:
+  - component:component-library
+---

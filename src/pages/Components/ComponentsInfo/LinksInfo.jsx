@@ -138,7 +138,7 @@ const headerLinksHtml = `
 </a>
 
 <a class="ssb-link header" href=" " target="" rel="">
-	<h3 class="link-text">This is a header link with heading 3</h3>
+  <h3 class="link-text">This is a header link with heading 3</h3>
 </a>
 
 <a class="ssb-link header negative" href=" " target="" rel="">

@@ -127,17 +127,22 @@ const profiledLinksIconHtml = `
 `;
 
 const headerLinks = `
-<Link href=" " linkType="header">This is an header link</Link>
-<Link negative href=" " linkType="header">This is an header link</Link>
+<Link href=" " linkType="header">This is a header link</Link>
+<Link href=" " linkType="header" headingSize={3}>This is a header link with heading 3</Link>
+<Link negative href=" " linkType="header">This is a header link</Link>
 `;
 
 const headerLinksHtml = `
 <a class="ssb-link header" href=" " target="" rel="">
-  <span class="link-text">This is an header link</span>
+  <span class="link-text">This is a header link</span>
+</a>
+
+<a class="ssb-link header" href=" " target="" rel="">
+  <h3 class="link-text">This is a header link with heading 3</h3>
 </a>
 
 <a class="ssb-link header negative" href=" " target="" rel="">
-  <span class="link-text">This is an header link</span>
+  <span class="link-text">This is a header link</span>
 </a>
 `;
 
@@ -395,13 +400,16 @@ const LinksInfo = () => {
 						</div>
 						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
 							<div className="d-flex justify-content-center mb-4 flex-wrap component-wrapper">
-								<Link href=" " linkType="header">This is an header link</Link>
+								<Link href=" " linkType="header">This is a header link</Link>
+							</div>
+							<div className="ps-4 mb-4">
+								<Link href=" " linkType="header" headingSize={3}>This is a header link with heading 3</Link>
 							</div>
 							<div className="ps-4 mb-4">
 								<Link href=" " linkType="header">This is a long header link that will go over several lines</Link>
 							</div>
 							<div className="d-flex justify-content-center flex-wrap negative-wrapper">
-								<Link href=" " linkType="header" negative>This is an header link</Link>
+								<Link href=" " linkType="header" negative>This is a header link</Link>
 							</div>
 						</div>
 						<div className="col-lg-12">
@@ -525,6 +533,11 @@ const LinksInfo = () => {
 								<td><code>className</code></td>
 								<td>string</td>
 								<td>Optional container class</td>
+							</tr>
+							<tr>
+								<td><code>headingSize</code></td>
+								<td>1, 2, 3, 4, 5 or 6</td>
+								<td>Changes header element size for header links</td>
 							</tr>
 							<tr>
 								<td><code>href</code></td>

@@ -5,16 +5,19 @@ metadata:
   description: This is the repository for the website used to document the SSB component library.
   links:
     - title: SSB Design System
-      url: https://design.ssb.no/#/
+      url: https://design.ssb.no
   tags:
     - typescript
     - javascript
     - react
     - scss
+    - github-pages
   annotations:
     github.com/project-slug: statisticsnorway/design-system
 spec:
   type: website
-  system: SSBNO Design System
+  system: SSBNO
   owner: ssbno-developers
   lifecycle: production
+  dependsOn:
+    - component:component-library

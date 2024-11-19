@@ -2,7 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: design-system
-  description: This is the repository for the website used to document the SSB component library.
+  description: | 
+  This is the repository for the website used to document the SSB component library.
   links:
     - title: SSB Design System
       url: https://design.ssb.no

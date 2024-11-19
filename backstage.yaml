@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: component
+kind: Component
 metadata:
   name: design-system
   description: This is the repository for the website used to document the SSB component library.

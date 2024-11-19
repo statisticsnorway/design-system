@@ -38,7 +38,7 @@ module.exports = merge(base, {
 						options: {
 							implementation: sass,
 							sassOptions: {
-								quietDeps: true,
+								silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'mixed-decls'],
 							},
 						},
 					},

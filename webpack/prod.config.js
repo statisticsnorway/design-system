@@ -37,6 +37,9 @@ module.exports = merge(base, {
 						loader: 'sass-loader',
 						options: {
 							implementation: sass,
+							sassOptions: {
+								quietDeps: true,
+							},
 						},
 					},
 				],
@@ -65,7 +68,7 @@ module.exports = merge(base, {
 		],
 	},
 	plugins: [
-		new ESLintPlugin({extensions: ['jsx']}),
+		new ESLintPlugin({ extensions: ['jsx'] }),
 	],
 	optimization: {
 		nodeEnv: 'production',

@@ -49,6 +49,9 @@ module.exports = merge(base, {
 						options: {
 							// Prefer `dart-sass`
 							implementation: sass,
+							sassOptions: {
+								quietDeps: true,
+							},
 						},
 					},
 				],

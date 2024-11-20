@@ -49,6 +49,10 @@ module.exports = merge(base, {
 						options: {
 							// Prefer `dart-sass`
 							implementation: sass,
+							sassOptions: {
+								// Silence future deprecation warnings for bootstrap from dart sass
+								silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'mixed-decls'],
+							},
 						},
 					},
 				],

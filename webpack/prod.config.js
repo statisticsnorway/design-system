@@ -37,6 +37,10 @@ module.exports = merge(base, {
 						loader: 'sass-loader',
 						options: {
 							implementation: sass,
+							sassOptions: {
+								// Silence future deprecation warnings for bootstrap from dart sass
+								silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'mixed-decls'],
+							},
 						},
 					},
 				],
@@ -65,7 +69,7 @@ module.exports = merge(base, {
 		],
 	},
 	plugins: [
-		new ESLintPlugin({extensions: ['jsx']}),
+		new ESLintPlugin({ extensions: ['jsx'] }),
 	],
 	optimization: {
 		nodeEnv: 'production',

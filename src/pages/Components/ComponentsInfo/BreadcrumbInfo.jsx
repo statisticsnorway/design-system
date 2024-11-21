@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CodeSnippet from "@components/CodeSnippet/CodeSnippet";
+import { ArrowLeft } from "react-feather";
 import {
   Breadcrumb,
   Divider,
@@ -144,10 +145,15 @@ const BreadcrumbInfo = () => {
                 Brødsmuler
               </Title>
               <div className="col-lg col-md-12">
-                <Paragraph>mobileCompressedView</Paragraph>
+                <Paragraph>
+                  The mobileCompressedView shows a compact breadcrumb on mobile,
+                  displaying the second-to-last item with a left arrow.
+                </Paragraph>
               </div>
               <div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
-                <Breadcrumb mobileCompressedView={true} items={mockedItems} />
+                <Link href=" " icon={<ArrowLeft size="20" />} standAlone>
+                  breadcrumb 2
+                </Link>
               </div>
               <div className="col-lg-12">
                 <Divider light />

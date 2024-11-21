@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import CodeSnippet from "@components/CodeSnippet/CodeSnippet";
-import { ArrowLeft } from "react-feather";
+import React, { useState } from 'react';
+import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
+import { ArrowLeft } from 'react-feather';
 import {
   Breadcrumb,
   Divider,
@@ -10,52 +10,52 @@ import {
   Tabs,
   Text,
   Title,
-} from "@statisticsnorway/ssb-component-library";
+} from '@statisticsnorway/ssb-component-library';
 
 const tabItems = [
   {
-    title: "Oversikt",
-    path: "/overview",
+    title: 'Oversikt',
+    path: '/overview',
   },
   {
-    title: "Begrunnelse",
-    path: "/rationale",
+    title: 'Begrunnelse',
+    path: '/rationale',
   },
   {
-    title: "Props",
-    path: "/props",
+    title: 'Props',
+    path: '/props',
   },
 ];
 
 const mockedItems = [
   {
-    link: " ",
-    text: "breadcrumb 1",
+    link: ' ',
+    text: 'breadcrumb 1',
   },
   {
-    link: " ",
-    text: "breadcrumb 2",
+    link: ' ',
+    text: 'breadcrumb 2',
   },
   {
-    text: "breadcrumb 3",
+    text: 'breadcrumb 3',
   },
 ];
 
 const tabCode = [
   {
-    title: "React",
-    path: "/react",
+    title: 'React',
+    path: '/react',
   },
   {
-    title: "Html",
-    path: "/html",
+    title: 'Html',
+    path: '/html',
   },
 ];
 
 const tabCodeReactOnly = [
   {
-    title: "React",
-    path: "/react",
+    title: 'React',
+    path: '/react',
   },
 ];
 
@@ -64,16 +64,16 @@ const codeExample = `
 `;
 
 const codeExampleHtml = `
-<div class="ssb-breadcrumbs">
+<div class='ssb-breadcrumbs'>
     <div>
-        <a class="ssb-link" href=" ">
-            <span class="link-text">breadcrumb 1</span>
+        <a class='ssb-link' href=' '>
+            <span class='link-text'>breadcrumb 1</span>
         </a>
         &nbsp;/&nbsp;
     </div>
     <div>
-        <a class="ssb-link" href=" ">
-            <span class="link-text">breadcrumb 2</span>
+        <a class='ssb-link' href=' '>
+            <span class='link-text'>breadcrumb 2</span>
         </a>&nbsp;/&nbsp;
     </div>
     <span>breadcrumb 3</span>
@@ -91,7 +91,7 @@ const BreadcrumbInfo = () => {
   const tabCodeClicked = (e) => changeCodeTab(e);
 
   return (
-    <div className="col-lg-12">
+    <div className='col-lg-12'>
       <Title size={1}>Breadcrumb</Title>
       <LeadParagraph>
         Brødsmuler er en navigasjonshjelp som gir brukeren informasjon om hvor
@@ -104,15 +104,15 @@ const BreadcrumbInfo = () => {
         items={tabItems}
         onClick={tabClicked}
       />
-      <Divider className="mb-4" />
+      <Divider className='mb-4' />
 
-      {activeTab === "/overview" && (
+      {activeTab === '/overview' && (
         <>
-          <div className="row mb-4">
-            <Title size={2} className="col-lg-12">
+          <div className='row mb-4'>
+            <Title size={2} className='col-lg-12'>
               Brødsmuler
             </Title>
-            <div className="col-lg col-md-12">
+            <div className='col-lg col-md-12'>
               <Paragraph>
                 Brødsmulene hjelper brukeren å se hvor de befinner seg på
                 nettstedet. Ved å følge lenkene til tidligere sider/nivåer, vil
@@ -120,47 +120,47 @@ const BreadcrumbInfo = () => {
                 og innhold.
               </Paragraph>
             </div>
-            <div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
+            <div className='component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center'>
               <Breadcrumb items={mockedItems} />
             </div>
-            <div className="col-lg-12">
+            <div className='col-lg-12'>
               <Tabs
                 activeOnInit={tabCode[0].path}
                 items={tabCode}
                 onClick={tabCodeClicked}
               />
               <Divider light />
-              {activeCodeTab === "/react" && (
-                <CodeSnippet code={codeExample} language="jsx" />
+              {activeCodeTab === '/react' && (
+                <CodeSnippet code={codeExample} language='jsx' />
               )}
-              {activeCodeTab === "/html" && (
-                <CodeSnippet code={codeExampleHtml} language="html" />
+              {activeCodeTab === '/html' && (
+                <CodeSnippet code={codeExampleHtml} language='html' />
               )}
             </div>
 
-            <Divider light className="mb-4" />
+            <Divider light className='mb-4' />
 
-            <div className="row mb-4">
-              <Title size={2} className="col-lg-12">
+            <div className='row mb-4'>
+              <Title size={2} className='col-lg-12'>
                 Brødsmuler
               </Title>
-              <div className="col-lg col-md-12">
+              <div className='col-lg col-md-12'>
                 <Paragraph>
                   The mobileCompressedView shows a compact breadcrumb on mobile,
                   displaying the second-to-last item with a left arrow.
                 </Paragraph>
               </div>
-              <div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
-                <Link href=" " icon={<ArrowLeft size="20" />} standAlone>
+              <div className='component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center'>
+                <Link href=' ' icon={<ArrowLeft size='20' />} standAlone>
                   breadcrumb 2
                 </Link>
               </div>
-              <div className="col-lg-12">
+              <div className='col-lg-12'>
                 <Divider light />
-                {activeCodeTab === "/react" && (
+                {activeCodeTab === '/react' && (
                   <CodeSnippet
                     code={mobileCompressedViewExample}
-                    language="jsx"
+                    language='jsx'
                   />
                 )}
               </div>
@@ -169,12 +169,12 @@ const BreadcrumbInfo = () => {
         </>
       )}
 
-      {activeTab === "/rationale" && (
-        <div className="row mb-4">
-          <Title size={3} className="col-lg-12">
+      {activeTab === '/rationale' && (
+        <div className='row mb-4'>
+          <Title size={3} className='col-lg-12'>
             Location based breadcrumbs
           </Title>
-          <div className="col-lg col-md-12">
+          <div className='col-lg col-md-12'>
             <Paragraph>
               We have opted for a location based breadcrumbs as it gives the
               user a good overview of where in the website hierarchy they are
@@ -183,10 +183,10 @@ const BreadcrumbInfo = () => {
             </Paragraph>
           </div>
 
-          <Title size={3} className="col-lg-12">
+          <Title size={3} className='col-lg-12'>
             Simplistic design
           </Title>
-          <div className="col-lg col-md-12">
+          <div className='col-lg col-md-12'>
             <Paragraph>
               As breadcrumbs are a secondary navigation, the overall design of
               breadcrumbs has been kept at a very simplistic level to avoid it
@@ -197,13 +197,13 @@ const BreadcrumbInfo = () => {
         </div>
       )}
 
-      {activeTab === "/props" && (
+      {activeTab === '/props' && (
         <div>
-          <Title size={2} className="mt-4 mb-4">
+          <Title size={2} className='mt-4 mb-4'>
             Props
           </Title>
-          <table className="col-lg-12 mb-4">
-            <thead style={{ textAlign: "left" }}>
+          <table className='col-lg-12 mb-4'>
+            <thead style={{ textAlign: 'left' }}>
               <tr>
                 <th>
                   <Title size={3}>Prop name</Title>
@@ -230,7 +230,7 @@ const BreadcrumbInfo = () => {
                 </td>
                 <td>Required array of objects</td>
                 <td>
-                  A list of objects. Object key <code>text</code> is required,{" "}
+                  A list of objects. Object key <code>text</code> is required,{' '}
                   <code>link</code> is optional.
                 </td>
               </tr>
@@ -246,14 +246,14 @@ const BreadcrumbInfo = () => {
             </tbody>
           </table>
 
-          <Divider className="mb-4" light />
+          <Divider className='mb-4' light />
 
           <div>
             <Text>Depends on</Text>
             <ul>
               <li>
                 <Link
-                  href="https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link"
+                  href='https://github.com/statisticsnorway/ssb-component-library/tree/master/src/components/Link'
                   isExternal
                 >
                   Link

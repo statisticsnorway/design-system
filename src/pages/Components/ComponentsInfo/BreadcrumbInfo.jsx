@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CodeSnippet from '@components/CodeSnippet/CodeSnippet';
+import { ArrowLeft } from 'react-feather';
 import {
 	Breadcrumb,
 	Divider,
@@ -56,20 +57,24 @@ const codeExample = `
 `;
 
 const codeExampleHtml = `
-<div class="ssb-breadcrumbs">
+<div class='ssb-breadcrumbs'>
     <div>
-        <a class="ssb-link" href=" ">
-            <span class="link-text">breadcrumb 1</span>
+        <a class='ssb-link' href=' '>
+            <span class='link-text'>breadcrumb 1</span>
         </a>
         &nbsp;/&nbsp;
     </div>
     <div>
-        <a class="ssb-link" href=" ">
-            <span class="link-text">breadcrumb 2</span>
+        <a class='ssb-link' href=' '>
+            <span class='link-text'>breadcrumb 2</span>
         </a>&nbsp;/&nbsp;
     </div>
     <span>breadcrumb 3</span>
 </div>
+`;
+
+const mobileCompressedViewExample = `
+<Breadcrumb mobileCompressedView={true} items={items} />
 `;
 
 const BreadcrumbInfo = () => {
@@ -123,6 +128,34 @@ const BreadcrumbInfo = () => {
 						{activeCodeTab === '/html' && (
 							<CodeSnippet code={codeExampleHtml} language="html" />
 						)}
+					</div>
+
+					<Divider light className="mb-4" />
+
+					<div className="row mb-4">
+						<Title size={2} className="col-lg-12">
+							Brødsmuler
+						</Title>
+						<div className="col-lg col-md-12">
+							<Paragraph>
+								The mobileCompressedView shows a compact breadcrumb on mobile,
+								displaying the second-to-last item with a left arrow.
+							</Paragraph>
+						</div>
+						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">
+							<Link href=" " icon={<ArrowLeft size="20" />} standAlone>
+								breadcrumb 2
+							</Link>
+						</div>
+						<div className="col-lg-12">
+							<Divider light />
+							{activeCodeTab === '/react' && (
+								<CodeSnippet
+									code={mobileCompressedViewExample}
+									language="jsx"
+								/>
+							)}
+						</div>
 					</div>
 				</div>
 			)}

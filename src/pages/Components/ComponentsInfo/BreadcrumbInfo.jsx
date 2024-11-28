@@ -138,8 +138,8 @@ const BreadcrumbInfo = () => {
 						</Title>
 						<div className="col-lg col-md-12">
 							<Paragraph>
-								The mobileCompressedView shows a compact breadcrumb on mobile,
-								displaying the second-to-last item with a left arrow.
+								mobileCompressedView viser en kompakt brødsmulevisning på mobil,
+								der den nest siste elementet vises med en venstre pil.
 							</Paragraph>
 						</div>
 						<div className="component-example col-lg col-md-12 divider-left d-flex flex-column align-items-center">

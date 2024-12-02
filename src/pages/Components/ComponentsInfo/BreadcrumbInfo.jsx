@@ -74,7 +74,7 @@ const codeExampleHtml = `
 `;
 
 const mobileCompressedViewExample = `
-<Breadcrumb mobileCompressedView={true} items={items} />
+<Breadcrumb mobileCompressedView items={items} />
 `;
 
 const BreadcrumbInfo = () => {

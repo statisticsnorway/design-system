@@ -51,8 +51,6 @@ const TreeMenu = ({
 	</div>
 );
 
-TreeMenu.defaultProps = {};
-
 TreeMenu.propTypes = {
 	activeItem: PropTypes.string,
 	items: PropTypes.arrayOf(PropTypes.object),

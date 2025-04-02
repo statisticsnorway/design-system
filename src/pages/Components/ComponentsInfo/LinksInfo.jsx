@@ -701,8 +701,6 @@ const LinksInfo = () => {
 	);
 };
 
-LinksInfo.defaultProps = {};
-
 LinksInfo.propTypes = {};
 
 export default LinksInfo;

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Prism from 'prismjs';
 
-const CodeSnippet = ({ code, language, lineNumbers }) => {
+const CodeSnippet = ({ code, language = 'jsx', lineNumbers = false }) => {
 	const node = useRef();
 
 	useEffect(() => {
@@ -19,11 +19,6 @@ const CodeSnippet = ({ code, language, lineNumbers }) => {
 			</pre>
 		</div>
 	);
-};
-
-CodeSnippet.defaultProps = {
-	language: 'jsx',
-	lineNumbers: false,
 };
 
 CodeSnippet.propTypes = {

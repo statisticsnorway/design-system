@@ -42,7 +42,7 @@
     "babel-jest": "~30.0.0",
     "babel-loader": "~10.0.0",
     "babel-plugin-prismjs": "~2.1.0",
-    "cross-env": "~7.0.3",
+    "cross-env": "~10.0.0",
     "css-loader": "~7.1.2",
     "dotenv": "~16.5.0",
     "eslint": "~8.57.1",

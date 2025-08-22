@@ -33,7 +33,7 @@
     "uuid": "~11.1.0"
   },
   "devDependencies": {
-    "@babel/cli": "~7.27.1",
+    "@babel/cli": "~7.28.3",
     "@babel/core": "~7.27.7",
     "@babel/preset-env": "~7.28.3",
     "@babel/preset-react": "~7.27.1",

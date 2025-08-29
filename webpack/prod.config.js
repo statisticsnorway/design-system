@@ -69,7 +69,7 @@ module.exports = merge(base, {
 		],
 	},
 	plugins: [
-		new ESLintPlugin({ extensions: ['jsx'] }),
+		new ESLintPlugin({ configType: 'eslintrc', extensions: ['jsx'] }),
 	],
 	optimization: {
 		nodeEnv: 'production',

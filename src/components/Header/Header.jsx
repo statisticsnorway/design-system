@@ -19,7 +19,7 @@ const Header = () => {
 	const history = useHistory();
 	const location = useLocation();
 	const [menuIsOpen, toggleMenu] = useState(false);
-	const version = 'v2.4.9';
+	const version = 'v2.5.0';
 
 	return (
 		<div className={`header-component-wrapper${location.pathname === '/get-started' || location.pathname === '/' ? ' front-page' : ''}`}>

@@ -17,7 +17,7 @@
     "lint:css": "stylelint '**/*.scss'"
   },
   "dependencies": {
-    "@babel/runtime": "~7.28.3",
+    "@babel/runtime": "~7.28.4",
     "@statisticsnorway/ssb-component-library": "~2.5.0",
     "bootstrap": "~5.3.8",
     "core-js": "~3.45.1",

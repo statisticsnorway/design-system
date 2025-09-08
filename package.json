@@ -44,7 +44,7 @@
     "babel-plugin-prismjs": "~2.1.0",
     "cross-env": "~10.0.0",
     "css-loader": "~7.1.2",
-    "dotenv": "~17.2.1",
+    "dotenv": "~17.2.2",
     "eslint": "~8.57.1",
     "eslint-config-airbnb": "~19.0.4",
     "eslint-plugin-jsx-a11y": "~6.10.2",

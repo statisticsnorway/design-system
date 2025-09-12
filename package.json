@@ -30,7 +30,7 @@
     "react-feather": "~2.0.10",
     "react-router-dom": "~5.3.4",
     "regenerator-runtime": "~0.14.1",
-    "uuid": "~11.1.0"
+    "uuid": "~13.0.0"
   },
   "devDependencies": {
     "@babel/cli": "~7.28.3",

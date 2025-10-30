@@ -30,7 +30,7 @@ const codeExample = `
 	header="Header"
 	onChange={() => callback}
 	orientation="column"
-	selectedValue="item2"
+	selectedValues={['checkbox2']}
 	items={[
 		{ label: 'Checkbox 1', value: 'checkbox1' },
 		{ label: 'Checkbox 2', value: 'checkbox2' },
@@ -49,7 +49,7 @@ const codeExampleHtml = `
             <label class="checkbox-label" for="item1">Item 1</label>
         </div>
         <div class="ssb-checkbox">
-            <input tabindex="0" id="item2" type="checkbox" value="item2">
+            <input tabindex="0" id="item2" type="checkbox" value="item2" checked>
             <label class="checkbox-label" for="item2">Item 2</label>
         </div>
         <div class="ssb-checkbox">
@@ -146,9 +146,9 @@ const CheckboxInfo = () => {
 								<td>Vertical og horizontal layout</td>
 							</tr>
 							<tr>
-								<td><code>selectedValue</code></td>
-								<td>string</td>
-								<td>Pre selected value</td>
+								<td><code>selectedValues</code></td>
+								<td>array of string</td>
+								<td>Pre selected values</td>
 							</tr>
 						</tbody>
 					</table>

@@ -11,15 +11,17 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 10
     # Grouping patch updates and minor updates into two pull requests for all packages
     groups:
       dependencies-patch-updates:
         update-types:
-        - "patch"
+          - "patch"
       dependencies-minor-updates:
         update-types:
-        - "minor"
+          - "minor"
     versioning-strategy: "increase"
 
   - package-ecosystem: "github-actions"
